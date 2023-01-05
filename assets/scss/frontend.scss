@@ -1,0 +1,62 @@
+/*!
+* Last modified: 2022/05/17 15:21:37
+* Part of the WordPress plugin Tag Groups
+* Plugin URI: https://chattymango.com/tag-groups/
+* Author: Christoph Amthor
+* License: GNU GENERAL PUBLIC LICENSE, Version 3
+*/
+.tag-groups-tag-list h3,
+.tag-groups-alphabetical-index h3 {
+  margin: 0 !important;
+}
+
+.tag-groups-tag-list-tags,
+.tag-groups-alphabetical-index-tags {
+  margin: 10px 0 20px;
+  overflow: hidden;
+}
+
+.tag-groups-keep-together {
+  overflow: hidden; /* fix for Firefox */
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+/* fixing next tab moving up when selecting last in first row */
+
+.tag-groups-tag-list .tag-groups-tag, .tag-groups-alphabetical-index .tag-groups-tag {
+	display: block;
+}
+.tag-groups-tag-list h3, .tag-groups-alphabetical-index h3 {
+	margin: 0 ;
+}
+.tag-groups-tag-list-tags, .tag-groups-alphabetical-index-tags {
+	margin: 10px 0 20px;
+	overflow: hidden;
+}
+.tag-groups-keep-together {
+	overflow: hidden;
+	break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+}
+.ui-tabs .ui-tabs-nav li {
+	margin-bottom: 1px !important;
+	&.ui-tabs-active {
+		margin-bottom: 0 ;
+	}
+}
+.tag-groups-cloud-hidden {
+	opacity: 0;
+}
+.tg-box-shadow {
+	-webkit-box-shadow: 10px 10px 20px 0px rgba(181, 181, 181, 1);
+	-moz-box-shadow: 10px 10px 20px 0px rgba(181, 181, 181, 1);
+	box-shadow: 10px 10px 20px 0px rgba(181, 181, 181, 1);
+}
+.tg-border-radius-10 {
+	border-radius: 10px;
+	overflow: hidden;
+}
+.SumoSelect {
+	width: auto;
+}
