@@ -1,0 +1,1021 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tag Groups 0.19\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
+"POT-Creation-Date: 2018-01-26 17:15+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Plugin Name of the plugin/theme
+#: include/class.admin.php:186 include/class.admin.php:262 
+#: include/class.admin.php:3232
+msgid "Tag Groups"
+msgstr ""
+
+#: include/class.admin.php:196 include/class.admin.php:267 
+#: include/class.admin.php:737 include/class.group.php:131
+msgid "not assigned"
+msgstr ""
+
+#: include/class.admin.php:234
+msgid "Edit tag groups"
+msgstr ""
+
+#: include/class.admin.php:236
+msgid "Clicking will leave this page without saving."
+msgstr ""
+
+#: include/class.admin.php:326
+msgid "Tag Group"
+msgstr ""
+
+#: include/class.admin.php:561
+msgid "The term has been removed from all groups."
+msgstr ""
+
+#: include/class.admin.php:623
+msgid "Edit this item inline"
+msgstr ""
+
+#: include/class.admin.php:627
+msgid "Quick&nbsp;Edit"
+msgstr ""
+
+#: include/class.admin.php:731
+msgid "Groups"
+msgstr ""
+
+#: include/class.admin.php:986 include/class.admin.php:989
+msgid "Assign to"
+msgstr ""
+
+#: include/class.admin.php:1044
+msgid "Filter off"
+msgstr ""
+
+#: include/class.admin.php:1086
+msgid "Filter by tag group "
+msgstr ""
+
+#: include/class.admin.php:1380 include/class.admin.php:1406
+msgid "The label cannot be empty."
+msgstr ""
+
+#: include/class.admin.php:1385
+#, php-format
+msgid ""
+"A tag group with the label '%s' already exists, or the label has not changed."
+" Please choose another one or go back."
+msgstr ""
+
+#: include/class.admin.php:1392
+#, php-format
+msgid "A new tag group with the label '%s' has been created!"
+msgstr ""
+
+#: include/class.admin.php:1416
+#, php-format
+msgid "A tag group with the label '%s' already exists."
+msgstr ""
+
+#: include/class.admin.php:1436
+#, php-format
+msgid "The tag group with the label '%s' has been saved!"
+msgstr ""
+
+#: include/class.admin.php:1446
+#, php-format
+msgid "A tag group with the id %s and the label '%s' has been deleted."
+msgstr ""
+
+#: include/class.admin.php:1508
+msgid "New order saved."
+msgstr ""
+
+#: include/class.admin.php:1693
+msgid "Your settings have been saved."
+msgstr ""
+
+#: include/class.admin.php:1721
+msgid "All groups have been deleted and assignments reset."
+msgstr ""
+
+#: include/class.admin.php:1763
+msgid "All labels were registered."
+msgstr ""
+
+#: include/class.admin.php:1804
+msgid "Your tag cloud theme settings have been saved."
+msgstr ""
+
+#: include/class.admin.php:1835
+msgid "Your tag taxonomy settings have been saved."
+msgstr ""
+
+#: include/class.admin.php:1858
+msgid "Your back end settings have been saved."
+msgstr ""
+
+#: include/class.admin.php:1955
+msgid ""
+"Your settings/groups and your terms have been exported. Please download the "
+"resulting files with right-click or ctrl-click:"
+msgstr ""
+
+#: include/class.admin.php:1969
+msgid "Writing of the exported settings failed."
+msgstr ""
+
+#: include/class.admin.php:2011 include/class.admin.php:2065
+msgid "Error reading the file."
+msgstr ""
+
+#: include/class.admin.php:2023 include/class.admin.php:2077
+msgid "Error parsing the file."
+msgstr ""
+
+#: include/class.admin.php:2044 include/class.admin.php:2120
+msgid "date unknown"
+msgstr ""
+
+#: include/class.admin.php:2049
+#, php-format
+msgid ""
+"Your settings and groups have been imported from the file %s (created with "
+"plugin version %s on %s)."
+msgstr ""
+
+#: include/class.admin.php:2050
+#, php-format
+msgid "%d option was added or changed."
+msgid_plural "%d options were added or changed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: include/class.admin.php:2125
+#, php-format
+msgid ""
+"Your terms have been imported from the file %s (created with plugin version "
+"%s on %s)."
+msgstr ""
+
+#: include/class.admin.php:2126
+#, php-format
+msgid "%d term was added or updated."
+msgid_plural "%d terms were added or updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: include/class.admin.php:2148
+msgid "Error uploading the file."
+msgstr ""
+
+#: include/class.admin.php:2227
+msgid "Basics"
+msgstr ""
+
+#: include/class.admin.php:2228
+msgid "Theme"
+msgstr ""
+
+#: include/class.admin.php:2232
+msgid "WPML"
+msgstr ""
+
+#: include/class.admin.php:2236
+msgid "Tag Cloud"
+msgstr ""
+
+#: include/class.admin.php:2237
+msgid "Export/Import"
+msgstr ""
+
+#: include/class.admin.php:2238
+msgid "Reset"
+msgstr ""
+
+#: include/class.admin.php:2242
+msgid "Premium"
+msgstr ""
+
+#: include/class.admin.php:2284
+msgid "Taxonomies"
+msgstr ""
+
+#: include/class.admin.php:2285
+msgid ""
+"Choose the taxonomies for which you want to use tag groups. Default is <b>"
+"post_tag</b>. Please note that the tag cloud might not work with all "
+"taxonomies and that some taxonomies listed here may not be accessible in the "
+"admin backend. If you don't understand what is going on here, just leave the "
+"default."
+msgstr ""
+
+#: include/class.admin.php:2286
+msgid ""
+"<b>Please deselect taxonomies that you don't use. Using several taxonomies "
+"for the same post type or hierarchical taxonomies (like categories) is "
+"experimental and not supported.</b>"
+msgstr ""
+
+#: include/class.admin.php:2287
+msgid "To see the post type, hover you mouse over the option."
+msgstr ""
+
+#: include/class.admin.php:2317
+msgid "Save Taxonomy"
+msgstr ""
+
+#: include/class.admin.php:2324
+msgid "Back End Settings"
+msgstr ""
+
+#: include/class.admin.php:2325
+msgid ""
+"You can add a pull-down menu to the filters above the list of posts. If you "
+"filter posts by tag groups, then only items will be shown that have tags "
+"(terms) in that particular group. This feature can be turned off so that the "
+"menu won't obstruct your screen if you use a high number of groups. May not "
+"work with all taxonomies."
+msgstr ""
+
+#: include/class.admin.php:2334
+msgid "Display filter on post admin"
+msgstr ""
+
+#: include/class.admin.php:2338
+msgid ""
+"Here you can deactivate the filter on the list of tags if it conflicts with "
+"other plugins or themes."
+msgstr ""
+
+#: include/class.admin.php:2348
+msgid "Display filter on tag admin"
+msgstr ""
+
+#: include/class.admin.php:2353
+msgid "Save Back End Settings"
+msgstr ""
+
+#: include/class.admin.php:2363
+msgid ""
+"Here you can choose a theme for the tag cloud. The path to own themes is "
+"relative to the <i>uploads</i> folder of your WordPress installation. Leave "
+"empty if you don't use any.</p><p>New themes can be created with the <a "
+"href=\"http://jqueryui.com/themeroller/\" target=\"_blank\">jQuery UI "
+"ThemeRoller</a>:\n"
+"            <ol>\n"
+"            <li>On the page \"Theme Roller\" you can customize all features "
+"or pick one set from the gallery. Finish with the \"download\" button.</li>\n"
+"            <li>On the next page (\"Download Builder\") you will need to "
+"select the version 1.11.x and the components \"Core\", \"Widget\", "
+"\"Accordion\" and \"Tabs\". Make sure that before downloading you enter at "
+"the bottom as \"CSS Scope\" <b>.tag-groups-cloud-tabs</b> (including the dot)"
+".</li>\n"
+"            <li>Then you unpack the downloaded zip file. You will need the "
+"\"images\" folder and the \"jquery-ui.theme.min.css\" file.</li>\n"
+"            <li>Create a new folder inside your <i>wp-content/uploads</i> "
+"folder (for example \"my-theme\") and copy there these two items.</li>\n"
+"            <li>Enter the name of this new folder (for example \"my-theme\") "
+"below.</li>\n"
+"            </ol>"
+msgstr ""
+
+#: include/class.admin.php:2413
+msgid ""
+"Use jQuery.  (Default is on. Other plugins might override this setting.)"
+msgstr ""
+
+#: include/class.admin.php:2419
+msgid "Further options"
+msgstr ""
+
+#: include/class.admin.php:2427
+msgid "Tabs triggered by hovering mouse pointer (without clicking)."
+msgstr ""
+
+#: include/class.admin.php:2435
+msgid "Collapsible tabs (toggle open/close)."
+msgstr ""
+
+#: include/class.admin.php:2442
+msgid "Allow HTML in tag description."
+msgstr ""
+
+#: include/class.admin.php:2449
+msgid "Save Theme Options"
+msgstr ""
+
+#: include/class.admin.php:2461
+msgid "Register group labels with WPML"
+msgstr ""
+
+#: include/class.admin.php:2464
+msgid ""
+"Use this button to register all existing group labels with WPML for string "
+"translation. This is only necessary if labels have existed before you "
+"installed WPML."
+msgstr ""
+
+#: include/class.admin.php:2468
+msgid "Register Labels"
+msgstr ""
+
+#: include/class.admin.php:2476
+msgid ""
+"You can use a shortcode to embed the tag cloud directly in a post, page or "
+"widget or you call the function in the PHP code of your theme."
+msgstr ""
+
+#: include/class.admin.php:2483
+msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
+msgstr ""
+
+#: include/class.admin.php:2486
+msgid ""
+"Always load shortcode scripts. (Otherwise only if shortcode appears in a "
+"post or page. Turn on if you use these shortcodes in widgets.)"
+msgstr ""
+
+#: include/class.admin.php:2491 include/class.admin.php:3006
+msgid "Save"
+msgstr ""
+
+#: include/class.admin.php:2495
+msgid "Click for more information."
+msgstr ""
+
+#: include/class.admin.php:2496
+msgid "Shortcodes"
+msgstr ""
+
+#: include/class.admin.php:2499
+msgid "Tabbed Tag Cloud"
+msgstr ""
+
+#: include/class.admin.php:2503
+msgid "Display the tags in a tabbed tag cloud."
+msgstr ""
+
+#: include/class.admin.php:2504 include/class.admin.php:2701 
+#: include/class.admin.php:2912 include/class.admin.php:2919
+msgid "Example"
+msgstr ""
+
+#: include/class.admin.php:2506 include/class.admin.php:2703
+msgid "Parameters"
+msgstr ""
+
+#: include/class.admin.php:2510 include/class.admin.php:2708
+msgid "<b>Tags or Terms:</b>"
+msgstr ""
+
+#: include/class.admin.php:2515 include/class.admin.php:2713
+msgid ""
+"<b>taxonomy=\"x,y,...\"</b> Restrict the tags only to these taxonomies. "
+"Default: empty (= no restriction)"
+msgstr ""
+
+#: include/class.admin.php:2520 include/class.admin.php:2718
+msgid ""
+"<b>include_terms=\"x,y,...\"</b> Comma-/Space-separated list of tag/term IDs "
+"that alone should be included. Default: empty (= no restriction)"
+msgstr ""
+
+#: include/class.admin.php:2525 include/class.admin.php:2723
+msgid ""
+"<b>exclude_terms=\"x,y,...\"</b> Comma-/Space-separated list of tag/term IDs "
+"that should be excluded. <b>exclude_terms</b> is ignored if you use <b>"
+"include_terms</b>. Default: empty (= no restriction)"
+msgstr ""
+
+#: include/class.admin.php:2530 include/class.admin.php:2728
+msgid "<b>smallest=x</b> Font-size in pt of the smallest tags. Default: 12"
+msgstr ""
+
+#: include/class.admin.php:2535 include/class.admin.php:2733
+msgid "<b>largest=x</b> Font-size in pt of the largest tags. Default: 22"
+msgstr ""
+
+#: include/class.admin.php:2540 include/class.admin.php:2738
+msgid ""
+"<b>orderby=abc</b> Which field to use for sorting, e.g. count. Use "
+"\"natural\" for natural sorting and \"random\" for random sorting (Disable "
+"caching!). Default: name"
+msgstr ""
+
+#: include/class.admin.php:2545 include/class.admin.php:2743
+msgid ""
+"<b>order=ASC or =DESC</b> Whether to sort the tags in ascending or "
+"descending order. Default: ASC"
+msgstr ""
+
+#: include/class.admin.php:2550 include/class.admin.php:2748
+msgid ""
+"<b>amount=x</b> Maximum amount of tags in one cloud (per group). Default: 0 "
+"(unlimited)"
+msgstr ""
+
+#: include/class.admin.php:2555 include/class.admin.php:2753
+msgid ""
+"<b>hide_empty=1 or =0</b> Whether to hide or show also tags that are not "
+"assigned to any post. Default: 1 (hide empty)"
+msgstr ""
+
+#: include/class.admin.php:2560 include/class.admin.php:2758
+msgid ""
+"<b>tags_post_id=x</b> Display only tags that are assigned to the post (or "
+"page) with the ID x. If set to 0, it will try to retrieve the current post "
+"ID. Default: -1 (all tags displayed)"
+msgstr ""
+
+#: include/class.admin.php:2565 include/class.admin.php:2763
+msgid ""
+"<b>assigned_class=\"something\"</b> A modification of the tags_post_id "
+"parameter: Rather than hiding tags that are not assigned to the post (or "
+"page), they can be styled differently. Tags will receive this class name "
+"with appended _1 or _0. (If you output the tags as an array, a new element "
+"with the key \"assigned\" will be true or false.)"
+msgstr ""
+
+#: include/class.admin.php:2570 include/class.admin.php:2768
+msgid "<b>separator=\"•\"</b> A separator between the tags. Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2575 include/class.admin.php:2773
+msgid "<b>separator_size=12</b> The size of the separator. Default: 12"
+msgstr ""
+
+#: include/class.admin.php:2580 include/class.admin.php:2778
+msgid ""
+"<b>adjust_separator_size=1 or =0</b> Whether to adjust the separator's size "
+"to the size of the following tag. Default: 0"
+msgstr ""
+
+#: include/class.admin.php:2585 include/class.admin.php:2783
+msgid "<b>prepend=\"#\"</b> Prepend to each tag label. Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2590
+msgid "<b>append=\"#\"</b> Append to each tag label. Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2595 include/class.admin.php:2793
+msgid ""
+"<b>link_target=\"_blank\"</b> Set the \"target\" attribute for the links of "
+"the tags. Possible values: _blank, _self, _parent, _top, or the name of a "
+"frame. Default: empty (= opens in the same window, same as using _self)"
+msgstr ""
+
+#: include/class.admin.php:2600
+msgid ""
+"<b>link_append=\"abc\"</b> Adds something to the link of the tags. Enter "
+"without the starting \"?\". Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2605 include/class.admin.php:2803
+msgid ""
+"<b>show_tag_count=1 or =0</b> Whether to show the number of posts as tooltip "
+"(behind the tag description) when hovering the mouse over the tag. Default: "
+"1 (show)"
+msgstr ""
+
+#: include/class.admin.php:2610 include/class.admin.php:2808
+msgid ""
+"<b>custom_title=\"abc\"</b> Custom title shown as tooltip. No HTML, but you "
+"can use {count} and {description} as placeholders. Default: empty (using the "
+"description, see also <b>show_tag_count</b>)"
+msgstr ""
+
+#: include/class.admin.php:2616
+msgid "<b>Groups and Tabs:</b>"
+msgstr ""
+
+#: include/class.admin.php:2621 include/class.admin.php:2819
+msgid ""
+"<b>include=\"x,y,...\"</b> IDs of tag groups (left column in list of groups) "
+"that will be considered in the tag cloud. Empty or not used means that all "
+"tag groups will be used. Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2626 include/class.admin.php:2824
+msgid ""
+"<b>groups_post_id=x</b> Display only groups of which at least one assigned "
+"tag is also assigned to the post (or page) with the ID x. If set to 0, it "
+"will try to retrieve the current post ID. Default: -1 (all groups displayed)."
+" Matching groups will be added to the list specified by the parameter <b>"
+"include</b>."
+msgstr ""
+
+#: include/class.admin.php:2631
+msgid "<b>show_tabs=1 or =0</b> Whether to show the tabs. Default: 1"
+msgstr ""
+
+#: include/class.admin.php:2636
+msgid ""
+"<b>hide_empty_tabs=1 or =0</b> Whether to hide tabs without tags. Default: 0 "
+"(Not implemented for PHP function with second parameter set to 'true'. Not "
+"effective with <b>groups_post_id</b>.)"
+msgstr ""
+
+#: include/class.admin.php:2641 include/class.admin.php:2839
+msgid ""
+"<b>show_all_groups=1 or =0</b> Whether to force showing all groups. Useful "
+"with the parameters <b>tags_post_id</b> and <b>assigned_class</b>. Default: 0"
+msgstr ""
+
+#: include/class.admin.php:2646 include/class.admin.php:2844
+msgid ""
+"<b>show_not_assigned=1 or =0</b> Whether to show a group with not-assigned "
+"tags. Default: 0"
+msgstr ""
+
+#: include/class.admin.php:2651 include/class.admin.php:2849
+msgid ""
+"<b>not_assigned_name=\"abc\"</b> The name used in the tab of not-assigned "
+"tags. Default: \"not assigned\""
+msgstr ""
+
+#: include/class.admin.php:2656
+msgid ""
+"<b>collapsible=1 or =0</b> Whether tabs are collapsible (toggle open/close). "
+"Default: general settings in the back end"
+msgstr ""
+
+#: include/class.admin.php:2661
+msgid ""
+"<b>mouseover=1 or =0</b> Whether tabs can be selected by hovering over with "
+"the mouse pointer (without clicking). Default: general settings in the back "
+"end"
+msgstr ""
+
+#: include/class.admin.php:2666
+msgid ""
+"<b>active=1 or =0</b> Whether tabs are initially expanded or collapsed. "
+"Useful in connection with the parameter <b>collapsible</b>. Default: 1"
+msgstr ""
+
+#: include/class.admin.php:2673 include/class.admin.php:2875
+msgid "<b>Advanced Styling:</b>"
+msgstr ""
+
+#: include/class.admin.php:2678
+msgid ""
+"<b>div_id=abc</b> Define an id for the enclosing &lt;div&gt;. You need to "
+"define different values if you use more than one cloud on one page. Make "
+"sure this id has not yet been used - including the active theme and other "
+"plugins. Recommended are non-standard values to avoid collisions of names, "
+"replace spaces by underscores or hyphens, or use \"camelCase\". Default: tag-"
+"groups-cloud-tabs"
+msgstr ""
+
+#: include/class.admin.php:2683
+msgid ""
+"<b>div_class=abc</b> Define a class for the enclosing &lt;div&gt;. Default: "
+"tag-groups-cloud-tabs"
+msgstr ""
+
+#: include/class.admin.php:2688
+msgid ""
+"<b>ul_class=abc</b> Define a class for the &lt;div&gt; that generates the "
+"tabs with the group labels. Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2696
+msgid "Accordion"
+msgstr ""
+
+#: include/class.admin.php:2700
+msgid "Display the tags in an accordion."
+msgstr ""
+
+#: include/class.admin.php:2788
+msgid "<b>append=\"something\"</b> Append to each tag label. Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2798
+msgid ""
+"<b>link_append=\"abc\"</b> Appends queries to the link of the tags. Default: "
+"empty"
+msgstr ""
+
+#: include/class.admin.php:2814
+msgid "<b>Groups and Accordions:</b>"
+msgstr ""
+
+#: include/class.admin.php:2829
+msgid "<b>show_accordion=1 or =0</b> Whether to show the accordion. Default: 1"
+msgstr ""
+
+#: include/class.admin.php:2834
+msgid ""
+"<b>hide_empty_content=1 or =0</b> Whether to hide content without tags. "
+"Default: 0 Not effective with <b>groups_post_id</b>.)"
+msgstr ""
+
+#: include/class.admin.php:2854
+msgid ""
+"<b>collapsible=1 or =0</b> Whether accordion content is collapsible (toggle "
+"open/close). Default: general settings in the back end"
+msgstr ""
+
+#: include/class.admin.php:2859
+msgid ""
+"<b>mouseover=1 or =0</b> Whether accordion headers can be selected by "
+"hovering over with the mouse pointer (without clicking). Default: general "
+"settings in the back end"
+msgstr ""
+
+#: include/class.admin.php:2864
+msgid ""
+"<b>active=1 or =0</b> Whether the accordion is initially expanded or "
+"collapsed. Useful in connection with the parameter <b>collapsible</b>. "
+"Default: 1"
+msgstr ""
+
+#: include/class.admin.php:2869
+#, php-format
+msgid ""
+"<b>heightstyle=\"abc\"</b> Value for the parameter \"heightStyle\" - see <a "
+"%s>jQuery UI documentation</a>. Possible values: \"auto\", \"content\", "
+"\"fill\" . Default: empty (auto)"
+msgstr ""
+
+#: include/class.admin.php:2880
+msgid ""
+"<b>div_id=abc</b> Define an id for the enclosing &lt;div&gt;. You need to "
+"define different values if you use more than one accordion on one page. Make "
+"sure this id has not yet been used - including the active theme and other "
+"plugins. Recommended are non-standard values to avoid collisions of names, "
+"replace spaces by underscores or hyphens, or use \"camelCase\". Default: tag-"
+"groups-cloud-accordion"
+msgstr ""
+
+#: include/class.admin.php:2885
+msgid ""
+"<b>div_class=abc</b> Define a class for the enclosing &lt;div&gt;. Default: "
+"tag-groups-cloud-accordion"
+msgstr ""
+
+#: include/class.admin.php:2890
+msgid ""
+"<b>header_class=abc</b> Define a class for the &lt;h3&gt; that contains the "
+"headers. Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2895
+msgid ""
+"<b>inner_div_class=abc</b> Define a class for the &lt;div&gt; that contains "
+"the tags. Default: empty"
+msgstr ""
+
+#: include/class.admin.php:2906
+msgid "PHP"
+msgstr ""
+
+#: include/class.admin.php:2910
+msgid ""
+"The function <b>tag_groups_cloud</b> accepts the same parameters as the "
+"[tag_groups_cloud] shortcode, except for those that determine tabs and "
+"styling."
+msgstr ""
+
+#: include/class.admin.php:2911
+msgid "By default it returns a string with the html for a tabbed tag cloud."
+msgstr ""
+
+#: include/class.admin.php:2918
+msgid ""
+"If the optional second parameter is set to 'true', the function returns a "
+"multidimensional array containing tag groups and tags."
+msgstr ""
+
+#: include/class.admin.php:2933
+msgid "Export"
+msgstr ""
+
+#: include/class.admin.php:2938
+msgid ""
+"Use this button to export all Tag Groups settings and groups and all terms "
+"that are assigned to a group into files."
+msgstr ""
+
+#: include/class.admin.php:2941
+msgid ""
+"You can import both files separately. Category hierarchy won't be saved. "
+"When you restore terms that were deleted, they receive new IDs and you must "
+"assign them to posts again. Exporting cannot substitute a backup."
+msgstr ""
+
+#: include/class.admin.php:2945
+msgid "Export Files"
+msgstr ""
+
+#: include/class.admin.php:2952
+msgid "Import"
+msgstr ""
+
+#: include/class.admin.php:2957
+msgid ""
+"Below you can import previously exported settings/groups or terms from a "
+"file."
+msgstr ""
+
+#: include/class.admin.php:2960
+msgid ""
+"It is recommended to back up the database of your blog before proceeding."
+msgstr ""
+
+#: include/class.admin.php:2965
+msgid "Import File"
+msgstr ""
+
+#: include/class.admin.php:2974
+msgid ""
+"Use this button to delete all tag groups and assignments. Your tags will not "
+"be changed. Check the checkbox to confirm."
+msgstr ""
+
+#: include/class.admin.php:2977
+msgid ""
+"(Please keep in mind that the tag assignments cannot be recovered by the "
+"export/import function.)"
+msgstr ""
+
+#: include/class.admin.php:2981
+msgid "I know what I am doing."
+msgstr ""
+
+#: include/class.admin.php:2985
+msgid "Delete Groups"
+msgstr ""
+
+#: include/class.admin.php:2989
+msgid "Delete Settings and Groups"
+msgstr ""
+
+#: include/class.admin.php:3001
+msgid "Delete all groups and settings when uninstalling the plugin."
+msgstr ""
+
+#: include/class.admin.php:3018
+msgid "Get More Features"
+msgstr ""
+
+#: include/class.admin.php:3019
+#, php-format
+msgid ""
+"The <b>Tag Groups</b> plugin can be extended by <a %s>Tag Groups Premium</a>,"
+" which offers you many more useful features to take your tags to the next "
+"level:"
+msgstr ""
+
+#: include/class.admin.php:3030
+#, php-format
+msgid ""
+"See the complete <a %s>feature comparison</a> or check out the <a %s>"
+"demos</a>."
+msgstr ""
+
+#: include/class.admin.php:3046
+msgid "Support"
+msgstr ""
+
+#: include/class.admin.php:3055
+#, php-format
+msgid ""
+"If you need help, please make sure to read the <a %s>instructions and "
+"troubleshooting information</a> or visit the official <a %s>support forum</a>"
+"."
+msgstr ""
+
+#: include/class.admin.php:3065
+msgid "Donations"
+msgstr ""
+
+#: include/class.admin.php:3068
+msgid ""
+"This plugin is the result of many years of development, adding new features, "
+"fixing bugs and answering to support questions."
+msgstr ""
+
+#: include/class.admin.php:3071
+msgid ""
+"If you find <b>Tag Groups</b> useful or use it to make money, I would "
+"appreciate a donation:"
+msgstr ""
+
+#: include/class.admin.php:3075
+#, php-format
+msgid ""
+"If you travel a lot, you can <a %s>use this affiliate link to book a "
+"hotel</a> so that I get a percentage of the sales."
+msgstr ""
+
+#: include/class.admin.php:3077
+#, php-format
+msgid "You can also <a %s>donate to my favourite charity</a>."
+msgstr ""
+
+#: include/class.admin.php:3079
+#, php-format
+msgid ""
+"I would be glad if you could give my plugin a <a %s>five-star rating</a>."
+msgstr ""
+
+#: include/class.admin.php:3089
+msgid "Thanks!"
+msgstr ""
+
+#: include/class.admin.php:3094
+msgid "Credits and 3rd-party licences"
+msgstr ""
+
+#: include/class.admin.php:3097
+#, php-format
+msgid ""
+"These plugins use css and images by <a %s>jQuery UI</a>. (bundled with "
+"WordPress)"
+msgstr ""
+
+#: include/class.admin.php:3098
+#, php-format
+msgid ""
+"jQuery plugin <a %s>SumoSelect</a>: <a %s>MIT License</a>. Copyright (c) "
+"2016 Hemant Negi"
+msgstr ""
+
+#: include/class.admin.php:3107
+msgid "Latest Development News"
+msgstr ""
+
+#: include/class.admin.php:3117
+msgid "Loading..."
+msgstr ""
+
+#: include/class.admin.php:3235
+msgid ""
+"On this page you can define tag groups. Tags (or terms) can be assigned to "
+"these groups on the page where you edit the tags (terms)."
+msgstr ""
+
+#: include/class.admin.php:3236
+msgid ""
+"Change the order by drag and drop or with the up/down icons. Click into a "
+"labels for editing."
+msgstr ""
+
+#: include/class.admin.php:3245 include/class.admin.php:3264
+msgid "Group ID"
+msgstr ""
+
+#: include/class.admin.php:3248 include/class.admin.php:3267
+msgid "Label displayed on the frontend"
+msgstr ""
+
+#: include/class.admin.php:3251 include/class.admin.php:3270
+msgid "Number of assigned tags"
+msgstr ""
+
+#: include/class.admin.php:3254 include/class.admin.php:3273
+msgid "Action"
+msgstr ""
+
+#: include/class.admin.php:3257 include/class.admin.php:3276
+msgid "Change sort order"
+msgstr ""
+
+#: include/class.admin.php:3299
+msgid "Edit"
+msgstr ""
+
+#: include/class.admin.php:3302
+msgid "Create"
+msgstr ""
+
+#: include/class.admin.php:3305
+msgid "new"
+msgstr ""
+
+#: include/class.admin.php:3308
+msgid "label"
+msgstr ""
+
+#: include/class.admin.php:3311
+msgid "Delete this group."
+msgstr ""
+
+#: include/class.admin.php:3314
+msgid "Create a new group below."
+msgstr ""
+
+#: include/class.admin.php:3317
+msgid "move up"
+msgstr ""
+
+#: include/class.admin.php:3320
+msgid "move down"
+msgstr ""
+
+#: include/class.admin.php:3323
+msgid "reload"
+msgstr ""
+
+#: include/class.admin.php:3326
+msgid "Show posts"
+msgstr ""
+
+#: include/class.admin.php:3329
+msgid "Show tags"
+msgstr ""
+
+#: include/class.admin.php:3417
+msgid "Do you really want to delete this tag group?"
+msgstr ""
+
+#: include/class.admin.php:3483
+msgid "Go to the settings."
+msgstr ""
+
+#: include/class.admin.php:3710
+msgid "Settings"
+msgstr ""
+
+#: include/class.base.php:110
+#, php-format
+msgid "The plugin %s requires WordPress %s to function properly. "
+msgstr ""
+
+#: include/class.base.php:111
+msgid "Please upgrade WordPress and then try again."
+msgstr ""
+
+#: include/class.base.php:154
+msgid "Thank you for installing Tag Groups!"
+msgstr ""
+
+#: include/class.base.php:155
+msgid "Get started in 3 easy steps:"
+msgstr ""
+
+#: include/class.base.php:157
+#, php-format
+msgid ""
+"Go to the <span class=\"dashicons dashicons-admin-settings\"></span>&nbsp;<a "
+"%s>settings</a> and select the <b>taxonomy</b> of your tags. In most cases "
+"just leave the default: post_tag."
+msgstr ""
+
+#: include/class.base.php:158
+msgid ""
+"Go to the <b>Tag Groups</b> page and create some groups. The default "
+"location of this page is under <span class=\"dashicons dashicons-admin-"
+"post\"></span>Posts."
+msgstr ""
+
+#: include/class.base.php:159
+msgid "Go to your <b>tags</b> and assign them to these groups."
+msgstr ""
+
+#: include/class.base.php:161
+#, php-format
+msgid ""
+"Now your tags are organized in groups. You can use them, for example, in a "
+"tag cloud. Just insert a shortcode into a page or post - try: "
+"[tag_groups_cloud]. You find all shortcodes and <a %s>links to the "
+"documentation</a> in the <span class=\"dashicons dashicons-admin-settings\">"
+"</span> settings."
+msgstr ""
+
+#: include/class.base.php:162
+msgid "Happy tagging!"
+msgstr ""
+
+#: include/class.feed.php:300
+#, php-format
+msgid "Please visit <a %s>%s</a>."
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Assign tags to groups and display them in a tabbed tag cloud"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://chattymango.com/tag-groups/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Chatty Mango"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://chattymango.com/about/"
+msgstr ""
