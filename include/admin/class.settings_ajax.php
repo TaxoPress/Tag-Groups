@@ -24,7 +24,7 @@ if ( !class_exists( 'TagGroups_Settings_Ajax' ) ) {
             if ( !isset( $_POST['task'] ) ) {
                 return;
             }
-            global  $tag_groups_premium_fs_sdk ;
+            
             $benchmark = array();
             switch ( $_POST['task'] ) {
                 case "cache":
@@ -33,6 +33,6 @@ if ( !class_exists( 'TagGroups_Settings_Ajax' ) ) {
             echo  json_encode( $benchmark ) ;
             wp_die();
         }
-    
+
     }
 }

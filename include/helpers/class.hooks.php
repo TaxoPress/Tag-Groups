@@ -180,7 +180,6 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
          */
         public function admin_init()
         {
-            global  $tag_groups_premium_fs_sdk ;
             $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
             $tag_group_role_edit_tags = 'edit_pages';
             $tag_group_role_edit_groups = 'edit_pages';
@@ -246,7 +245,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
              * Add fall-back button to reset the group filter for tags
              */
             add_filter( 'admin_footer_text', array( 'TagGroups_Admin', 'add_admin_footer_text' ), 100 );
-            if ( $tag_groups_premium_fs_sdk->is_free_plan() ) {
+            if ( TagGroups_Utilities::is_free_plan()) {
                 /**
                  * Add the request to rate the plugin
                  */

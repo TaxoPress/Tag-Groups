@@ -7,16 +7,6 @@
   <h1>Get more features</h1>
   <p>Upgrade <b>Tag Groups</b> and take your tags to the next level!</p>
   <div style="clear:both;"></div>
-  
-  <?php if ( ! $tag_groups_premium_fs_sdk->is_paying() ): ?>
-  <div class="tg_premium_backend_call_to_action">
-    <span style="float:right; margin: 0 10px;"><a href="<?php echo admin_url( 'admin.php?page=tag-groups-settings-pricing&trial=true' ) ?>" class="tg_premium_backend_call_to_action_button">Try Premium</a></span>
-    <h3>
-      Start your 7-day free trial!<br/>
-      All features. Cancel anytime.
-    </h3>
-  </div>
-  <?php endif;?>
 
   <p>&nbsp;</p>
 
@@ -96,15 +86,5 @@
   <div style="clear:both;"></div>
 
   <p>The complete set of features is available with the "Premium" plan. <?php printf( 'See the <a %1$s>feature comparison and plans</a> or check out the <a %2$s>demos</a>.', 'href="https://chattymango.com/tag-groups-plans-and-pricing/?pk_campaign=tg&pk_kwd=dashboard" target="_blank"', 'href="https://demo.chattymango.com/tag-groups-premium-demo-page/?pk_campaign=tg&pk_kwd=dashboard" target="_blank"' )?></p>
-
-  <?php if ( ! $tag_groups_premium_fs_sdk->is_paying() ): ?>
-  <div class="tg_premium_backend_call_to_action">
-    <span style="float:right; margin: 0 10px;"><a href="<?php echo admin_url( 'admin.php?page=tag-groups-settings-pricing&trial=true' ) ?>" class="tg_premium_backend_call_to_action_button">Try Premium</a></span>
-    <h3>
-      Start your 7-day free trial!<br/>
-      All features. Cancel anytime.
-    </h3>
-  </div>
-  <?php endif;?>
 
 </div>

@@ -70,7 +70,7 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          */
         public static function get_taxonomies_for_metabox( $intersect_taxonomy_slugs = null )
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             return array();
         }
         
@@ -181,7 +181,7 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          */
         public static function update_enabled( $taxonomies )
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             if ( TagGroups_Options::update_option( 'tag_group_taxonomy', $taxonomies ) ) {
                 // trigger actions
                 do_action( 'tag_groups_taxonomies_saved', $taxonomies );

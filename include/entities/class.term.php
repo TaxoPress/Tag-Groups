@@ -158,7 +158,7 @@ if ( !class_exists( 'TagGroups_Term' ) ) {
          */
         public function save( $override_permission_check = false )
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             if ( empty($this->term_id) ) {
                 return $this;
             }
@@ -456,7 +456,7 @@ if ( !class_exists( 'TagGroups_Term' ) ) {
          */
         function get_post_count( $group_id = 0 )
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             if ( 0 == $group_id ) {
                 return $this->count;
             }

@@ -237,7 +237,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
             $this->cache_key = md5( 'tag_list' . serialize( $atts ) . serialize( $this->attributes->tags_post_id ) . serialize( $this->attributes->groups_post_id ) );
             // check for a cached version (premium plugin)
             $html = apply_filters( 'tag_groups_hook_cache_get', false, $this->cache_key );
-            
+
             if ( $html ) {
                 $html = $this->finalize_html(
                     $html,
@@ -248,7 +248,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                 );
                 return $html;
             }
-            
+
             $this->check_attributes();
             $this->get_taxonomies();
             $this->get_tags();
@@ -268,7 +268,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
             );
             return $html;
         }
-        
+
         /**
          * Creates the HTML
          *
@@ -276,7 +276,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
          */
         function make_html()
         {
-            global  $tag_group_groups, $tag_group_premium_terms, $tag_groups_premium_fs_sdk ;
+            global  $tag_group_groups, $tag_group_premium_terms ;
             $html = '';
             $tags_div_class_output = ( $this->attributes->tags_div_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->tags_div_class ) . '"' : '' );
             $this->post_counts = array();
@@ -295,23 +295,23 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                 /*
                  *  headers
                  */
-                
+
                 if ( $i == 0 ) {
                     $group_name = $this->attributes->not_assigned_name;
                 } else {
                     $group_name = $this->tag_group_data[$i]['label'];
                 }
-                
+
                 $header_class_group = $this->attributes->header_class;
                 if ( !empty($this->attributes->group_in_class) ) {
                     $header_class_group .= ' ' . sanitize_html_class( ' tg_header_group_id_' . $this->tag_group_data[$i]['term_group'] ) . ' ' . sanitize_html_class( 'tg_header_group_label_' . strtolower( $this->tag_group_data[$i]['label'] ) );
                 }
-                
+
                 if ( $first ) {
                     $header_class_group .= ' tag-groups-first-group';
                     $first = false;
                 }
-                
+
                 $header_class_output = ( $header_class_group ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $header_class_group ) . '"' : '' );
                 $html_header .= '<h' . $this->attributes->h_level . $header_class_output . '>' . htmlentities( $group_name, ENT_QUOTES, "UTF-8" ) . '</h' . $this->attributes->h_level . '>';
                 /*
@@ -330,25 +330,25 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                         continue;
                     }
                     // check if tag has posts for this particular group
-                    
+
                     if ( !empty($this->post_counts) && isset( $this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']] ) ) {
                         $post_count = $this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']];
                     } else {
                         $post_count = $tag->count;
                     }
-                    
-                    
+
+
                     if ( !$this->attributes->hide_empty || $post_count > 0 ) {
                         $tag_link = $this->get_tag_link( $tag, $i );
                         $font_size = $this->font_size( $post_count, $this->min_max[$this->tag_group_data[$i]['term_group']]['min'], $this->min_max[$this->tag_group_data[$i]['term_group']]['max'] );
                         if ( !empty($this->attributes->assigned_class) ) {
-                            
+
                             if ( !empty($this->assigned_terms[$tag->term_id]) ) {
                                 $other_tag_classes = ' ' . $this->attributes->assigned_class . '_1';
                             } else {
                                 $other_tag_classes = ' ' . $this->attributes->assigned_class . '_0';
                             }
-                        
+
                         }
                         $title = $this->get_title( $tag, $post_count );
                         $title = $this->maybe_filter_title( $title, $tag->description, $post_count );
@@ -364,16 +364,16 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                         }
                         // assembling a tag
                         $html_tags .= '<span class="tag-groups-tag' . $other_tag_classes . '" style="font-size:' . $font_size . 'px"><a href="' . $tag_link . '" ' . $link_target_html . '' . $title_html . '  class="' . $tag->slug . '">';
-                        
+
                         if ( '' != $prepend_output ) {
                             $prepend_html = '<span class="tag-groups-prepend" style="font-size:' . $font_size . 'px">' . htmlentities( $prepend_output, ENT_QUOTES, "UTF-8" ) . '</span>';
                         } else {
                             $prepend_html = '';
                         }
-                        
+
                         /**
                          * Hook to filter the prepended HTML
-                         * 
+                         *
                          * @param string $prepend_html
                          * @param int $tag->term_id
                          * @param int $font_size
@@ -391,7 +391,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                         );
                         /**
                          * Hook to filter inner HTML
-                         * 
+                         *
                          * @param string $tag->name
                          * @param int $tag->term_id
                          * @param string $this->shortcode_id
@@ -405,7 +405,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                         );
                         /**
                          * Hook to filter outer HTML
-                         * 
+                         *
                          * @param string HTML
                          * @param int $tag->term_id
                          * @param string $this->shortcode_id
@@ -417,16 +417,16 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                             $tag->term_id,
                             $this->shortcode_id
                         );
-                        
+
                         if ( '' != $append_output ) {
                             $append_html = '<span class="tag-groups-append" style="font-size:' . $font_size . 'px">' . htmlentities( $append_output, ENT_QUOTES, "UTF-8" ) . '</span>';
                         } else {
                             $append_html = '';
                         }
-                        
+
                         /**
                          * Hook to filter the appended HTML
-                         * 
+                         *
                          * @param string $append_html
                          * @param int $tag->term_id
                          * @param int $font_size
@@ -445,16 +445,16 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                         $html_tags .= '</a></span> ';
                         $count_amount++;
                     }
-                
+
                 }
                 if ( !empty($html_header) && (!$this->attributes->hide_empty_content || $count_amount) ) {
-                    
+
                     if ( $this->attributes->keep_together ) {
                         $html .= '<div class="tag-groups-keep-together">' . $html_header . '<div' . $tags_div_class_output . '>' . $html_tags . '</div></div>' . "\n";
                     } else {
                         $html .= $html_header . '<div' . $tags_div_class_output . '>' . $html_tags . '</div>' . "\n";
                     }
-                
+
                 }
             }
             if ( !empty($this->post_counts) && !$this->attributes->do_not_cache ) {
@@ -464,7 +464,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
             }
             return $html;
         }
-        
+
         /**
          * wrap the HTML in code that is independent of caching
          *
@@ -485,7 +485,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
             $html = '<div' . $div_id_output . $div_class_output . $div_column_output . '>' . $html . '</div>';
             /**
              * Hook to filter final HTML
-             * 
+             *
              * @param string $html
              * @param string $this->shortcode_id
              * @param array $atts
@@ -499,7 +499,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
             );
             return $html;
         }
-    
+
     }
     // class
 }

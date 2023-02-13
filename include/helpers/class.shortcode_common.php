@@ -421,7 +421,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          */
         function add_groups_of_post()
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             $post_id_terms = array();
             /*
              *  get all tags of this post
@@ -452,7 +452,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          */
         function add_tags_of_post()
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             $post_id_terms = array();
             $this->include_tags_post_id_groups = array();
             /*

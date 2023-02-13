@@ -41,7 +41,7 @@ if ( !class_exists( 'TagGroups_Export' ) ) {
         {
             $this->error = false;
         }
-        
+
         /**
          * Create an array of all options that should be exported
          *
@@ -49,7 +49,6 @@ if ( !class_exists( 'TagGroups_Export' ) ) {
          */
         function process_options_for_export()
         {
-            global  $tag_groups_premium_fs_sdk ;
             $this->options = array(
                 'name'    => 'tag_groups_options',
                 'version' => TAG_GROUPS_VERSION,
@@ -64,7 +63,7 @@ if ( !class_exists( 'TagGroups_Export' ) ) {
                 }
             }
         }
-        
+
         /**
          * Create an array of all terms that should be exported
          *
@@ -97,7 +96,7 @@ if ( !class_exists( 'TagGroups_Export' ) ) {
                 );
             }
         }
-        
+
         /**
          * Writes options and terms into files
          *
@@ -121,7 +120,7 @@ if ( !class_exists( 'TagGroups_Export' ) ) {
                 $this->error = true;
             }
         }
-        
+
         /**
          * Displays the links to download the exported files, or an error message
          *
@@ -129,7 +128,7 @@ if ( !class_exists( 'TagGroups_Export' ) ) {
          */
         function show_download_links()
         {
-            
+
             if ( !$this->error ) {
                 TagGroups_Admin_Notice::add( 'success', __( 'Your settings/groups and your terms have been exported. Please download the resulting files with right-click or ctrl-click:', 'tag-groups' ) . '  <p>
         <a href="' . get_bloginfo( 'wpurl' ) . '/wp-content/uploads/tag_groups_settings-' . $this->hash . '.json" target="_blank">tag_groups_settings-' . $this->hash . '.json</a>
@@ -140,8 +139,8 @@ if ( !class_exists( 'TagGroups_Export' ) ) {
                 TagGroups_Error::log( '[Tag Groups] Error writing files' );
                 TagGroups_Admin_Notice::add( 'error', __( 'Writing of the exported settings failed.', 'tag-groups' ) );
             }
-        
+
         }
-    
+
     }
 }

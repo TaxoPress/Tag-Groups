@@ -24,13 +24,13 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
             if ( !current_user_can( 'manage_options' ) ) {
                 return;
             }
-            global  $tag_groups_premium_fs_sdk ;
+
             self::add_header();
             $settings_taxonomy_link = admin_url( 'admin.php?page=tag-groups-settings-taxonomies' );
             $settings_home_link = admin_url( 'admin.php?page=tag-groups-settings' );
             $settings_premium_link = admin_url( 'admin.php?page=tag-groups-settings-premium' );
             $settings_setup_wizard_link = admin_url( 'admin.php?page=tag-groups-settings-setup-wizard' );
-            
+
             if ( defined( 'TAG_GROUPS_PLUGIN_IS_FREE' ) && TAG_GROUPS_PLUGIN_IS_FREE ) {
                 $title = 'Tag Groups';
                 $documentation_link = 'https://documentation.chattymango.com/documentation/tag-groups/';
@@ -40,7 +40,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                 $documentation_link = 'https://documentation.chattymango.com/documentation/tag-groups-premium/';
                 $logo = '<img src="' . TAG_GROUPS_PLUGIN_URL . '/assets/images/cm-tgp-icon-64x64.png" alt="Tag Groups Premium logo" class="tg_onboarding_logo"/>';
             }
-            
+
             $view = new TagGroups_View( 'admin/onboarding' );
             $view->set( array(
                 'logo'                       => $logo,
@@ -54,7 +54,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
             $view->render();
             self::add_footer();
         }
-        
+
         /**
          * renders a menu-less settings page: onboarding
          *
@@ -67,11 +67,11 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
             if ( !current_user_can( 'manage_options' ) ) {
                 return;
             }
-            global  $tag_groups_premium_fs_sdk, $tag_group_groups ;
+            global $tag_group_groups ;
             self::add_header();
             $step = ( isset( $_GET['step'] ) && $_GET['step'] > 0 ? (int) $_GET['step'] : 1 );
             $setup_wizard_next_link = add_query_arg( 'step', $step + 1, admin_url( 'admin.php?page=tag-groups-settings-setup-wizard' ) );
-            
+
             if ( defined( 'TAG_GROUPS_PLUGIN_IS_FREE' ) && TAG_GROUPS_PLUGIN_IS_FREE ) {
                 $title = 'Tag Groups';
                 $is_premium = false;
@@ -81,9 +81,9 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                 $is_premium = true;
                 $documentation_link = 'https://documentation.chattymango.com/documentation/tag-groups-premium/';
             }
-            
-            
-            if ( $is_premium && $tag_groups_premium_fs_sdk->is_plan_or_trial( 'premium' ) && class_exists( 'TagGroups_Premium_View' ) ) {
+
+
+            if ( $is_premium && TagGroups_Utilities::is_premium_plan() && class_exists( 'TagGroups_Premium_View' ) ) {
             } else {
                 $steps = array(
                     1 => array(
@@ -104,7 +104,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                 ),
                 );
             }
-            
+
             $view = new TagGroups_View( 'admin/setup_wizard_header' );
             $view->set( array(
                 'title' => $title,
@@ -144,13 +144,13 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                         }
                         return $name;
                     }, $tag_names );
-                    
+
                     if ( TagGroups_Gutenberg::is_gutenberg_active() ) {
                         $create_sample_page_label = __( 'Create a draft sample page with Gutenberg blocks.', 'tag-groups' );
                     } else {
                         $create_sample_page_label = __( 'Create a draft sample page with shortcodes.', 'tag-groups' );
                     }
-                    
+
                     $view->set( array(
                         'title'                    => $title,
                         'group_names'              => $group_names,
@@ -199,7 +199,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
             $view->render();
             self::add_footer();
         }
-        
+
         /**
          * Processes form submissions from the settings page
          *
@@ -208,7 +208,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
          */
         static function settings_page_actions_wizard()
         {
-            global  $tag_group_groups, $tag_groups_premium_fs_sdk ;
+            global  $tag_group_groups ;
             if ( empty($_REQUEST['tg_action_wizard']) ) {
                 return;
             }
@@ -223,21 +223,21 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
             $taxonomy = array_shift( $enabled_taxonomies );
             switch ( $_REQUEST['tg_action_wizard'] ) {
                 case 'taxonomy':
-                    
+
                     if ( isset( $_POST['taxonomies'] ) ) {
                         $taxonomies = $_POST['taxonomies'];
-                        
+
                         if ( is_array( $taxonomies ) ) {
                             $taxonomies = array_map( 'sanitize_text_field', $taxonomies );
                             $taxonomies = array_map( 'stripslashes', $taxonomies );
                         } else {
                             $taxonomies = array( 'post_tag' );
                         }
-                    
+
                     } else {
                         $taxonomies = array( 'post_tag' );
                     }
-                    
+
                     $public_taxonomies = TagGroups_Taxonomy::get_public_taxonomies();
                     foreach ( $taxonomies as $taxonomy_item ) {
                         if ( !in_array( $taxonomy_item, $public_taxonomies ) ) {
@@ -264,37 +264,37 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                     if ( isset( $_POST['tag-groups-create-sample-tags'] ) && $_POST['tag-groups-create-sample-tags'] ) {
                         foreach ( $_POST['tag_groups_tag_names'] as $tag_name ) {
                             $tag_name = sanitize_text_field( $tag_name );
-                            
+
                             if ( !term_exists( $tag_name, $taxonomy ) ) {
                                 $term_array = wp_insert_term( $tag_name, $taxonomy );
                                 $tg_term = new TagGroups_Term( $term_array['term_id'] );
-                                
+
                                 if ( empty($created_groups) ) {
                                     $group_ids = $tag_group_groups->get_group_ids();
                                     unset( $group_ids[0] );
                                 } else {
                                     $group_ids = $created_groups;
                                 }
-                                
+
                                 // add one group
                                 $amount = 1;
-                                
+
                                 if ( 1 == $amount ) {
                                     $random_group_ids = $group_ids[array_rand( $group_ids )];
                                 } else {
                                     $random_group_ids = array_intersect_key( $group_ids, array_rand( $group_ids, $amount ) );
                                 }
-                                
+
                                 $tg_term->add_group( $random_group_ids )->save();
                             }
-                        
+
                         }
                     }
                     $tpf_include = $tag_group_groups->get_group_ids();
                     unset( $tpf_include[0] );
-                    
+
                     if ( isset( $_POST['tag-groups-create-sample-page'] ) && $_POST['tag-groups-create-sample-page'] ) {
-                        
+
                         if ( TagGroups_Gutenberg::is_gutenberg_active() ) {
                             $view = new TagGroups_View( 'admin/sample_page_gutenberg' );
                             $sample_page_title = 'Tag Groups (Free) Sample Page - Gutenberg Editor';
@@ -302,14 +302,13 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                             $view = new TagGroups_View( 'admin/sample_page' );
                             $sample_page_title = 'Tag Groups (Free) Sample Page - Classic Editor';
                         }
-                        
+
                         $tag_groups_settings_link = admin_url( 'admin.php?page=tag-groups-settings' );
                         $current_user = wp_get_current_user();
                         $view->set( array(
                             'enabled_taxonomies'        => $enabled_taxonomies,
                             'author_display_name'       => $current_user->display_name,
                             'tag_groups_settings_link'  => $tag_groups_settings_link,
-                            'tag_groups_premium_fs_sdk' => $tag_groups_premium_fs_sdk,
                             'tpf_include_csv'           => implode( ',', $tpf_include ),
                         ) );
                         $content = $view->return_html();
@@ -325,10 +324,10 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                     } else {
                         delete_option( 'tag_group_sample_page_id' );
                     }
-                    
+
                     break;
             }
         }
-    
+
     }
 }

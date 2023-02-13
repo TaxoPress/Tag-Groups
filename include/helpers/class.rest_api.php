@@ -18,7 +18,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
         public function __construct()
         {
         }
-        
+
         /**
          * Register the REST API endpoints and schemata
          *
@@ -35,10 +35,10 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             }
             add_action( 'rest_api_init', array( 'TagGroups_REST_API', 'register_routes' ) );
         }
-        
+
         public static function register_routes()
         {
-            global  $tag_groups_current_user_id, $tag_groups_premium_fs_sdk ;
+            global  $tag_groups_current_user_id ;
             /**
              * Make the current user ID that we retrieved from application password available in permission callbacks
              * (workaround for a suspected bug in 5.6-RC1
@@ -126,7 +126,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                 'permission_callback' => array( 'TagGroups_REST_API', 'current_user_can_manage_options' ),
             ) ) );
         }
-        
+
         /**
          * Get one or more groups
          *
@@ -143,7 +143,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
          */
         public static function get_groups( WP_REST_Request $request )
         {
-            global  $tag_group_groups, $tag_groups_premium_fs_sdk ;
+            global  $tag_group_groups;
             $id = $request->get_param( 'id' );
             // don't sanitize here so that we can detect NULL
             $taxonomy = sanitize_title( $request->get_param( 'taxonomy' ) );
@@ -151,7 +151,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             $fields = sanitize_title( $request->get_param( 'fields' ) );
             $orderby = sanitize_title( $request->get_param( 'orderby' ) );
             $order = sanitize_title( $request->get_param( 'order' ) );
-            
+
             if ( isset( $id ) ) {
                 $id = (int) $id;
                 // particular group
@@ -169,7 +169,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                     $order
                 );
             }
-            
+
             $groups = $tag_group_groups->get_info_of_all(
                 $taxonomy,
                 $hide_empty,
@@ -179,7 +179,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             );
             return $groups;
         }
-        
+
         /**
          * Delete a group
          *
@@ -189,7 +189,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
         public static function delete_group( WP_REST_Request $request )
         {
             $id = (int) $request->get_param( 'id' );
-            
+
             if ( 0 == $id ) {
                 return new WP_Error( 'wrong_id', 'You cannot delete this groups', array(
                     'status' => 400,
@@ -208,9 +208,9 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                     ) );
                 }
             }
-        
+
         }
-        
+
         /**
          * Edit a group or create a new group
          *
@@ -229,7 +229,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             $id = (int) $request->get_param( 'id' );
             $label = sanitize_text_field( $request->get_param( 'label' ) );
             $position = (int) $request->get_param( 'position' );
-            
+
             if ( 0 == $id ) {
                 // create
                 if ( '' == $label ) {
@@ -261,14 +261,14 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                 }
                 $tg_group->save();
             }
-            
+
             if ( !empty($tg_group->error) ) {
                 return new WP_Error( 'error', $tg_group->error, array(
                     'status' => 400,
                 ) );
             }
         }
-        
+
         /**
          * Get one or more terms
          *
@@ -285,7 +285,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             global  $tag_group_premium_terms ;
             $term_o = new TagGroups_Term();
             $id = (int) $request->get_param( 'id' );
-            
+
             if ( !empty($id) ) {
                 $term_o = new TagGroups_Term( $id );
                 return array(
@@ -305,7 +305,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                     $order = 'ASC';
                 }
                 $taxonomy = sanitize_title( $request->get_param( 'taxonomy' ) );
-                
+
                 if ( empty($taxonomy) ) {
                     $taxonomy = TagGroups_Taxonomy::get_enabled_taxonomies();
                 } elseif ( 'public' == strtolower( $taxonomy ) ) {
@@ -313,7 +313,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                         'public' => true,
                     ), 'names' ) );
                 }
-                
+
                 $hide_empty = ( $request->get_param( 'hide_empty' ) ? true : false );
                 $short = ( $request->get_param( 'short' ) ? true : false );
                 $lang = sanitize_title( $request->get_param( 'lang' ) );
@@ -327,7 +327,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                     'order'      => $order,
                 );
                 $group = $request->get_param( 'group' );
-                
+
                 if ( isset( $group ) ) {
                     $group = (int) $group;
                     $tg_group = new TagGroups_Group( $group );
@@ -344,14 +344,14 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                     }
                     $args['include'] = $group_terms;
                 }
-                
+
                 $terms = get_terms( $args );
                 if ( class_exists( 'TagGroups_Premium_Term' ) ) {
                     $post_counts = $tag_group_premium_terms->get_post_counts( $lang );
                 }
                 $result = array();
                 foreach ( $terms as $term ) {
-                    
+
                     if ( is_object( $term ) ) {
                         $term_o = new TagGroups_Term( $term );
                         $info = array(
@@ -361,33 +361,33 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                             'taxonomy'    => $term->taxonomy,
                             'description' => $term->description,
                         );
-                        
+
                         if ( !$short ) {
                             $info['groups'] = $term_o->get_groups();
-                            
+
                             if ( isset( $post_counts ) && isset( $post_counts[$term->term_id] ) ) {
                                 $info['post_count'] = $post_counts[$term->term_id];
                             } else {
                                 $info['post_count'] = $term->count;
                             }
-                        
+
                         }
-                        
+
                         $result[] = $info;
                     }
-                
+
                 }
                 return $result;
             }
-        
+
         }
-        
+
         /**
          * Set the groups of a term
          *
          * Arguments:
          *      groups: comma-separated list of group IDs
-         * 
+         *
          * @param  object $request
          * @return void
          */
@@ -395,7 +395,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
         {
             $id = (int) $request->get_param( 'id' );
             $groups = array_map( 'intval', explode( ',', $request->get_param( 'groups' ) ) );
-            
+
             if ( 0 == count( $groups ) ) {
                 return new WP_Error( 'no_groups', 'You have to supply a comma-separated list of groups', array(
                     'status' => 400,
@@ -414,9 +414,9 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                     ) );
                 }
             }
-        
+
         }
-        
+
         /**
          * Get taxonomies, enabled for tag groups or for the metabox
          *
@@ -447,7 +447,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             }
             return $result;
         }
-        
+
         /**
          * Set taxonomies
          *
@@ -462,7 +462,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
         {
             $enabled = array_map( 'sanitize_title', explode( ',', $request->get_param( 'enabled' ) ) );
             $metabox = array_map( 'sanitize_title', explode( ',', $request->get_param( 'metabox' ) ) );
-            
+
             if ( count( $enabled ) && $enabled[0] ) {
                 foreach ( $enabled as $taxonomy ) {
                     if ( !taxonomy_exists( $taxonomy ) ) {
@@ -473,8 +473,8 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                 }
                 TagGroups_Taxonomy::update_enabled( $enabled );
             }
-            
-            
+
+
             if ( count( $metabox ) && $metabox[0] ) {
                 $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
                 foreach ( $metabox as $taxonomy ) {
@@ -491,15 +491,15 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                 }
                 TagGroups_Options::update_option( 'tag_group_meta_box_taxonomy', $metabox );
             }
-        
+
         }
-        
+
         /**
          * Get one or more posts
          *
          * Arguments:
          *      post_type
-         * 
+         *
          * @param WP_REST_Request $request
          * @return array|object
          */
@@ -508,7 +508,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             $id = $request->get_param( 'id' );
             // don't sanitize here so that we can detect NULL
             $post_type = sanitize_title( $request->get_param( 'post_type' ) );
-            
+
             if ( !empty($id) ) {
                 $id = (int) $id;
                 $post = get_post( $id );
@@ -520,7 +520,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                 /**
                  * check persmission
                  */
-                
+
                 if ( get_current_user_id() ) {
                     $post_type_object = get_post_type_object( $post->post_type );
                     if ( !is_object( $post_type_object ) || !is_object( $post_type_object->cap ) || !current_user_can( $post_type_object->cap->read, $post_id ) ) {
@@ -535,7 +535,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                         ) );
                     }
                 }
-                
+
                 $tg_post = new TagGroups_Premium_Post( $id );
                 return array(
                     'id'    => $id,
@@ -564,7 +564,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                     /**
                      * check persmission
                      */
-                    
+
                     if ( get_current_user_id() ) {
                         $post_type_object = get_post_type_object( $post->post_type );
                         if ( !is_object( $post_type_object ) || !is_object( $post_type_object->cap ) || !current_user_can( $post_type_object->cap->read, $post_id ) ) {
@@ -575,7 +575,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                             continue;
                         }
                     }
-                    
+
                     $tg_post = new TagGroups_Premium_Post( $post_id );
                     $return_data[] = array(
                         'id'    => $post_id,
@@ -584,13 +584,13 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                 }
                 return $return_data;
             }
-        
+
         }
-        
+
         /**
          * get taxonomies
          *
-         * Arguments: 
+         * Arguments:
          *  terms   JSON-encoded array of group IDs as keys and an array of term IDs as each value
          *  taxonomy The taxonomy slug
          *
@@ -649,7 +649,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                         ) );
                     }
                     $tg_term = new TagGroups_Term( $term_id );
-                    
+
                     if ( 0 == $group_id ) {
                         $unassigned_post_terms[] = $term_id;
                         if ( !$tg_term->has_exactly_groups( 0 ) ) {
@@ -665,13 +665,13 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                             $tg_term->add_group( $group_id )->save();
                         }
                     }
-                
+
                 }
             }
             $tg_post = new TagGroups_Premium_Post( $id );
             $tg_post->set_terms( $post_terms, $unassigned_post_terms, 'term_id' )->save();
         }
-        
+
         /**
          *
          */
@@ -703,7 +703,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             );
             return $schema;
         }
-        
+
         /**
          *
          */
@@ -747,7 +747,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             );
             return $schema;
         }
-        
+
         /**
          *
          */
@@ -766,7 +766,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             );
             return $schema;
         }
-        
+
         /**
          *
          */
@@ -790,7 +790,7 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             );
             return $schema;
         }
-        
+
         /**
          * Determines whether the current user is allowed to edit tag groups
          *
@@ -801,20 +801,20 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             /**
              * editable REST API is opt-in
              */
-            
+
             if ( !defined( 'TAG_GROUPS_REST_API_EDITABLE' ) || !TAG_GROUPS_REST_API_EDITABLE ) {
                 TagGroups_Error::verbose_log( '[Tag Groups] REST API is not editable. Add to wp-config.php: define( "TAG_GROUPS_REST_API_EDITABLE", true );' );
                 return false;
             }
-            
-            global  $tag_groups_premium_fs_sdk, $tag_groups_current_user_id ;
+
+            global $tag_groups_current_user_id ;
             $tag_group_role_edit_groups = 'edit_pages';
             if ( !get_current_user_id() && $tag_groups_current_user_id ) {
                 wp_set_current_user( $tag_groups_current_user_id );
             }
             return current_user_can( $tag_group_role_edit_groups );
         }
-        
+
         /**
          * Determines whether the current user is allowed to edit the groups of tags
          *
@@ -825,20 +825,20 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             /**
              * editable REST API is opt-in
              */
-            
+
             if ( !defined( 'TAG_GROUPS_REST_API_EDITABLE' ) || !TAG_GROUPS_REST_API_EDITABLE ) {
                 TagGroups_Error::verbose_log( '[Tag Groups] REST API is not editable. Add to wp-config.php: define( "TAG_GROUPS_REST_API_EDITABLE", true );' );
                 return false;
             }
-            
-            global  $tag_groups_premium_fs_sdk, $tag_groups_current_user_id ;
+
+            global $tag_groups_current_user_id ;
             $tag_group_role_edit_tags = 'edit_pages';
             if ( !get_current_user_id() && $tag_groups_current_user_id ) {
                 wp_set_current_user( $tag_groups_current_user_id );
             }
             return current_user_can( $tag_group_role_edit_tags );
         }
-        
+
         /**
          * Determines whether the current user is allowed to manage options
          *
@@ -849,19 +849,19 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             /**
              * editable REST API is opt-in
              */
-            
+
             if ( !defined( 'TAG_GROUPS_REST_API_EDITABLE' ) || !TAG_GROUPS_REST_API_EDITABLE ) {
                 TagGroups_Error::verbose_log( '[Tag Groups] REST API is not editable. Add to wp-config.php: define( "TAG_GROUPS_REST_API_EDITABLE", true );' );
                 return false;
             }
-            
+
             global  $tag_groups_current_user_id ;
             if ( !get_current_user_id() && $tag_groups_current_user_id ) {
                 wp_set_current_user( $tag_groups_current_user_id );
             }
             return current_user_can( 'manage_options' );
         }
-        
+
         /**
          * Determines whether the current user is allowed to manage post tags
          *
@@ -872,15 +872,15 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
             /**
              * editable REST API is opt-in
              */
-            
+
             if ( !defined( 'TAG_GROUPS_REST_API_EDITABLE' ) || !TAG_GROUPS_REST_API_EDITABLE ) {
                 TagGroups_Error::verbose_log( '[Tag Groups] REST API is not editable. Add to wp-config.php: define( "TAG_GROUPS_REST_API_EDITABLE", true );' );
                 return false;
             }
-            
-            global  $tag_groups_premium_fs_sdk, $tag_groups_current_user_id ;
+
+            global $tag_groups_current_user_id ;
             return false;
         }
-    
+
     }
 }

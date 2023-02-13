@@ -24,7 +24,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $view->set( 'admin_page_title', get_admin_page_title() );
             $view->render();
         }
-        
+
         /**
          * renders the bottom of all settings pages
          *
@@ -36,7 +36,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $view = new TagGroups_View( 'admin/settings_footer' );
             $view->render();
         }
-        
+
         /**
          * gets the slug of the currently selected tab
          *
@@ -45,16 +45,16 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
          */
         public static function get_active_tab( $tabs )
         {
-            
+
             if ( isset( $_GET['active-tab'] ) ) {
                 return sanitize_title( $_GET['active-tab'] );
             } else {
                 $keys = array_keys( $tabs );
                 return reset( $keys );
             }
-        
+
         }
-        
+
         /**
          * gets the HTML of the header of tabbed view
          *
@@ -74,7 +74,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             ) );
             $view->render();
         }
-        
+
         /**
          * renders a settings page: home
          *
@@ -98,30 +98,30 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $absolute_first_activation_time = ( $tag_group_base_first_activation_time < $tag_group_premium_first_activation_time ? $tag_group_base_first_activation_time : $tag_group_premium_first_activation_time );
             self::add_settings_help();
             $alerts = array();
-            
+
             if ( 'all' == TagGroups_WPML::get_current_language() ) {
                 $view = new TagGroups_View( 'partials/language_notice' );
                 $view->render();
             }
-            
+
             if ( time() - $absolute_first_activation_time < 60 * 60 * 24 * 7 || $group_count < 1 ) {
                 $alerts[] = sprintf( __( 'See the <a %s>First Steps</a> for some basic instructions on how to get started.', 'tag-groups' ), 'href="' . menu_page_url( 'tag-groups-settings-first-steps', false ) . '"' );
             }
-            
+
             if ( function_exists( 'pll_get_post_language' ) ) {
                 $alerts[] = __( 'We detected Polylang. Your tag group names are translatable.', 'tag-groups' );
             } elseif ( defined( 'ICL_LANGUAGE_CODE' ) ) {
                 $alerts[] = __( 'We detected WPML. Your tag group names are translatable.', 'tag-groups' );
             }
-            
+
             $alerts = apply_filters( 'tag_groups_settings_alerts', $alerts );
-            
+
             if ( !empty($alerts) ) {
                 $view = new TagGroups_View( 'partials/settings_alerts' );
                 $view->set( 'alerts', $alerts );
                 $view->render();
             }
-            
+
             $taxonomy_infos = array();
             foreach ( $enabled_taxonomies as $taxonomy ) {
                 /**
@@ -156,7 +156,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $view->render();
             self::add_footer();
         }
-        
+
         /**
          * renders a settings page: taxonomies
          *
@@ -196,7 +196,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             }
             self::add_footer();
         }
-        
+
         /**
          * renders a settings page: back end
          *
@@ -263,7 +263,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             }
             self::add_footer();
         }
-        
+
         /**
          * renders a settings page: front end
          *
@@ -272,7 +272,6 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
          */
         public static function settings_page_front_end()
         {
-            global  $tag_groups_premium_fs_sdk ;
             // Make very sure that only administrators can access this page
             if ( !current_user_can( 'manage_options' ) ) {
                 wp_die( "Capability check failed" );
@@ -335,7 +334,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             }
             self::add_footer();
         }
-        
+
         /**
          * renders a settings page: tools
          *
@@ -375,7 +374,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             }
             self::add_footer();
         }
-        
+
         /**
          * renders a settings page: troubleshooting
          *
@@ -384,7 +383,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
          */
         public static function settings_page_troubleshooting()
         {
-            global  $tag_group_groups, $tag_groups_premium_fs_sdk ;
+            global  $tag_group_groups;
             // Make very sure that only administrators can access this page
             if ( !current_user_can( 'manage_options' ) ) {
                 wp_die( "Capability check failed" );
@@ -403,7 +402,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             self::add_tabs( 'tag-groups-settings-troubleshooting', $tabs, $active_tab );
             switch ( $active_tab ) {
                 case 'first-aid':
-                    
+
                     if ( !empty($_GET['process-tasks']) ) {
                         self::add_html_process();
                     } else {
@@ -413,7 +412,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                         $view->set( 'tag_group_show_filter_tags', TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 ) );
                         $view->render();
                     }
-                    
+
                     break;
                 case 'faq':
                     $view = new TagGroups_View( 'admin/settings_troubleshooting_faq' );
@@ -429,13 +428,13 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     break;
                 case 'system':
                     $phpversion = phpversion();
-                    
+
                     if ( version_compare( $phpversion, '7.0.0', '<' ) ) {
                         $php_upgrade_recommendation = true;
                     } else {
                         $php_upgrade_recommendation = false;
                     }
-                    
+
                     $active_theme = wp_get_theme();
                     $protocol = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' );
                     $ajax_test_url = admin_url( 'admin-ajax.php', $protocol );
@@ -508,8 +507,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                         'constants'                  => $constants,
                         'ajax_test_url'              => $ajax_test_url,
                         'active_theme'               => $active_theme,
-                        'benchmarks'                 => $benchmarks,
-                        'tag_groups_premium_fs_sdk'  => $tag_groups_premium_fs_sdk,
+                        'benchmarks'                 => $benchmarks
                     ) );
                     $view->render();
                     break;
@@ -534,7 +532,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             }
             self::add_footer();
         }
-        
+
         /**
          * renders a settings page: premium
          *
@@ -543,18 +541,16 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
          */
         public static function settings_page_premium()
         {
-            // global $tag_groups_premium_fs_sdk;
             // // Make very sure that only administrators can access this page
             // if ( ! current_user_can( 'manage_options' ) ) {
             //   wp_die( "Capability check failed" );
             // }
             // self::add_header();
             // $view = new TagGroups_View( 'admin/settings_premium' );
-            // $view->set( 'tag_groups_premium_fs_sdk', $tag_groups_premium_fs_sdk );
             // $view->render();
             // self::add_footer();
         }
-        
+
         /**
          * renders a settings page: about
          *
@@ -600,7 +596,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             }
             self::add_footer();
         }
-        
+
         /**
          * Processes form submissions from the settings page
          *
@@ -610,24 +606,24 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
         static function settings_page_actions()
         {
             global  $tag_group_groups ;
-            
+
             if ( !empty($_REQUEST['tg_action']) ) {
                 $tg_action = $_REQUEST['tg_action'];
             } else {
                 return;
             }
-            
+
             // Make very sure that only administrators can do actions
             if ( !current_user_can( 'manage_options' ) ) {
                 wp_die( "Capability check failed" );
             }
-            
+
             if ( isset( $_POST['ok'] ) ) {
                 $ok = $_POST['ok'];
             } else {
                 $ok = '';
             }
-            
+
             switch ( $tg_action ) {
                 case 'shortcode':
                     if ( !isset( $_POST['tag-groups-shortcode-nonce'] ) || !wp_verify_nonce( $_POST['tag-groups-shortcode-nonce'], 'tag-groups-shortcode' ) ) {
@@ -637,20 +633,20 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     if ( !current_user_can( 'manage_options' ) ) {
                         wp_die( "Capability check failed" );
                     }
-                    
+
                     if ( isset( $_POST['widget'] ) && $_POST['widget'] == '1' ) {
                         update_option( 'tag_group_shortcode_widget', 1 );
                     } else {
                         update_option( 'tag_group_shortcode_widget', 0 );
                     }
-                    
-                    
+
+
                     if ( isset( $_POST['enqueue'] ) && $_POST['enqueue'] == '1' ) {
                         update_option( 'tag_group_shortcode_enqueue_always', 1 );
                     } else {
                         update_option( 'tag_group_shortcode_enqueue_always', 0 );
                     }
-                    
+
                     TagGroups_Admin_Notice::add( 'success', __( 'Your settings have been saved.', 'tag-groups' ) );
                     break;
                 case 'reset':
@@ -661,7 +657,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     if ( !current_user_can( 'manage_options' ) ) {
                         wp_die( "Capability check failed" );
                     }
-                    
+
                     if ( $ok == 'yes' ) {
                         $tag_group_groups->reset_groups();
                         /**
@@ -670,7 +666,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                         delete_option( 'tag_group_tags_filter' );
                         TagGroups_Admin_Notice::add( 'success', __( 'All groups have been deleted and assignments reset.', 'tag-groups' ) );
                     }
-                    
+
                     break;
                 case 'uninstall':
                     if ( !isset( $_POST['tag-groups-uninstall-nonce'] ) || !wp_verify_nonce( $_POST['tag-groups-uninstall-nonce'], 'tag-groups-uninstall' ) ) {
@@ -680,13 +676,13 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     if ( !current_user_can( 'manage_options' ) ) {
                         wp_die( "Capability check failed" );
                     }
-                    
+
                     if ( $ok == 'yes' ) {
                         update_option( 'tag_group_reset_when_uninstall', 1 );
                     } else {
                         update_option( 'tag_group_reset_when_uninstall', 0 );
                     }
-                    
+
                     TagGroups_Admin_Notice::add( 'success', __( 'Your settings have been saved.', 'tag-groups' ) );
                     break;
                 case 'theme':
@@ -734,21 +730,21 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     if ( !current_user_can( 'manage_options' ) ) {
                         wp_die( "Capability check failed" );
                     }
-                    
+
                     if ( isset( $_POST['taxonomies'] ) ) {
                         $taxonomies = $_POST['taxonomies'];
-                        
+
                         if ( is_array( $taxonomies ) ) {
                             $taxonomies = array_map( 'sanitize_text_field', $taxonomies );
                             $taxonomies = array_map( 'stripslashes', $taxonomies );
                         } else {
                             $taxonomies = array( 'post_tag' );
                         }
-                    
+
                     } else {
                         $taxonomies = array( 'post_tag' );
                     }
-                    
+
                     $public_taxonomies = TagGroups_Taxonomy::get_public_taxonomies();
                     foreach ( $taxonomies as $taxonomy_item ) {
                         if ( !in_array( $taxonomy_item, $public_taxonomies ) ) {
@@ -851,13 +847,13 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     }
                     $verbose_debug = ( '1' == $_POST['verbose_debug'] ? 1 : 0 );
                     TagGroups_Options::update_option( 'tag_group_verbose_debug', $verbose_debug );
-                    
+
                     if ( $verbose_debug ) {
                         TagGroups_Error::log( '[Tag Groups] Verbose logging has been turned on.' );
                     } else {
                         TagGroups_Error::log( '[Tag Groups] Verbose logging has been turned off.' );
                     }
-                    
+
                     TagGroups_Admin_Notice::add( 'success', __( 'Your settings have been saved.', 'tag-groups' ) );
                     break;
                 default:
@@ -866,7 +862,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     break;
             }
         }
-        
+
         /**
          * Prepares variable for echoing as string
          *
@@ -876,7 +872,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
          */
         private static function echo_var( $var = null )
         {
-            
+
             if ( is_bool( $var ) ) {
                 return ( $var ? 'true' : 'false' );
             } elseif ( is_array( $var ) ) {
@@ -884,9 +880,9 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             } else {
                 return (string) $var;
             }
-        
+
         }
-        
+
         /**
          * Returns an array that contains topics covered in the settings
          *
@@ -1085,7 +1081,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $topics = apply_filters( 'tag_groups_setting_topics', $topics );
             return $topics;
         }
-        
+
         /**
          * Renders the widget where you can search for help
          *
@@ -1100,7 +1096,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $view->set( 'topics', $topics );
             $view->render();
         }
-        
+
         /**
          * adds the processing of tasks
          *
@@ -1121,13 +1117,13 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $tasks = explode( ',', $_GET['process-tasks'] );
             $tasks = array_map( 'sanitize_title', $tasks );
             $tasks = array_intersect( $tasks, array_keys( $tasks_whitelist ) );
-            
+
             if ( !empty($_GET['task-set-name']) ) {
                 $task_set_name = sanitize_text_field( $_GET['task-set-name'] );
             } else {
                 $task_set_name = '';
             }
-            
+
             $task_html = '';
             foreach ( $tasks as $key => $task ) {
                 $totals[$task] = TagGroups_Process::get_task_total( $task );
@@ -1146,29 +1142,29 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
              */
             $protocol = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' );
             $ajax_link = admin_url( 'admin-ajax.php', $protocol );
-            
+
             if ( defined( 'TAG_GROUPS_CHUNK_SIZE' ) ) {
                 $chunk_length = (int) TAG_GROUPS_CHUNK_SIZE;
             } else {
                 $chunk_length = 30;
             }
-            
-            
+
+
             if ( defined( 'TAG_GROUPS_CHUNK_TIMEOUT' ) ) {
                 $timeout_chunk = (int) TAG_GROUPS_CHUNK_TIMEOUT;
             } else {
                 $timeout_chunk = 10 * 1000;
                 // 10 seconds - for really slow networks
             }
-            
-            
+
+
             if ( defined( 'TAG_GROUPS_TASK_TIMEOUT' ) ) {
                 $timeout_task = (int) TAG_GROUPS_TASK_TIMEOUT;
             } else {
                 $timeout_task = 5 * 60 * 1000;
                 // 5 minutes - can be long, but user needs to keep window open
             }
-            
+
             /**
              * The result messages will be revealed by the Javascript routine
              */
@@ -1186,6 +1182,6 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             ) );
             $view->render();
         }
-    
+
     }
 }
