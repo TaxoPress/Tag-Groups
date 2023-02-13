@@ -46,14 +46,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 */
 function chatty_mango_tag_groups_editor_assets() {
 
-	global $tag_groups_premium_fs_sdk;
-
 	$screen = get_current_screen();
 
 	if ( is_object( $screen ) && property_exists( $screen, 'base' ) && 'post' != $screen->base ) {
 
 		$server_side_render = false;
-	
+
 	} else {
 
 		$server_side_render = !!TagGroups_Options::get_option( 'tag_group_server_side_render', 1 );
@@ -65,7 +63,7 @@ function chatty_mango_tag_groups_editor_assets() {
 		'siteUrl' 			=> get_option( 'siteurl' ),
 		'siteLang'			=> '',	// for future use
 		'pluginUrl'			=> TAG_GROUPS_PLUGIN_URL,
-		'hasPremium'		=> $tag_groups_premium_fs_sdk->can_use_premium_code(),
+		'hasPremium'		=> TagGroups_Utilities::is_premium_plan(),
 		'serverSideRender'	=> $server_side_render,
 		'collapsible'		=> TagGroups_Options::get_option( 'tag_group_collapsible', 0 ),
 		'mouseover'			=> TagGroups_Options::get_option( 'tag_group_mouseover', 0 ),
@@ -89,7 +87,7 @@ function chatty_mango_tag_groups_editor_assets() {
 			plugins_url( 'build/index.js', dirname( __FILE__ ) ),
 			array( 'lodash', 'react', 'react-dom', 'wp-api-fetch', 'wp-components', 'wp-element', 'wp-polyfill', 'wp-url', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor' )
 		);
-		
+
 	}
 
 	wp_localize_script( 'chatty-mango_tag-groups-block-js', 'ChattyMangoTagGroupsGlobal', $args );

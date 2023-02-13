@@ -117,7 +117,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
             $link_pattern
         )
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             $output = '<table' . $id_string . $class_string . '>';
             foreach ( $term_groups as $term_group ) {
                 $tg_group = new TagGroups_Group( $term_group );
@@ -174,7 +174,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
             $link_pattern
         )
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             $output = '';
             $tg_group = new TagGroups_Group( $group_id );
             

@@ -98,7 +98,7 @@ if ( !class_exists( 'TagGroups_Cron_Handlers' ) ) {
          */
         public static function tag_groups_check_if_migrations_done()
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
             TagGroups_Error::verbose_log( '[Tag Groups] Checking if we should migrate terms.' );
             $convert_term_count = TagGroups_Term_Meta_Tools::convert_to_term_meta( true );
             $recommend_post_migration = false;

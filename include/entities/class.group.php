@@ -67,7 +67,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function __construct( $group_id = null )
         {
-            global  $tag_group_groups, $tag_groups_premium_fs_sdk ;
+            global  $tag_group_groups ;
             $this->tg_groups = $tag_group_groups;
             $this->is_parent = false;
             if ( isset( $group_id ) ) {
@@ -76,7 +76,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             $this->load();
             return $this;
         }
-        
+
         /**
          * Load data from database
          *
@@ -85,26 +85,26 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function load()
         {
-            global  $tag_groups_premium_fs_sdk ;
+
             $labels = $this->tg_groups->get_labels();
-            
+
             if ( isset( $labels[$this->group_id] ) ) {
                 $this->label = $labels[$this->group_id];
             } else {
                 $this->label = '';
             }
-            
+
             $positions = $this->tg_groups->get_positions();
-            
+
             if ( isset( $positions[$this->group_id] ) ) {
                 $this->position = $positions[$this->group_id];
             } else {
                 $this->position = 1;
             }
-            
+
             return $this;
         }
-        
+
         /**
          * checks whether this group exists, identified by its ID
          *
@@ -119,7 +119,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             return isset( $this->group_id ) && in_array( $this->group_id, $this->tg_groups->get_group_ids() );
         }
-        
+
         /**
          * Saves this group to the database
          *
@@ -129,13 +129,13 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function save()
         {
-            global  $tag_groups_premium_fs_sdk ;
-            
+
+
             if ( empty($this->group_id) ) {
                 $this->error = TagGroups_Group::WRONG_ID;
                 return $this;
             }
-            
+
             $labels = $this->tg_groups->get_labels();
             $positions = $this->tg_groups->get_positions();
             $labels[$this->group_id] = $this->label;
@@ -145,7 +145,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             $this->tg_groups->save();
             return $this;
         }
-        
+
         /**
          * getter for the term_group value
          *
@@ -160,7 +160,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             return $this->group_id;
         }
-        
+
         /**
          * setter for the term_group value
          *
@@ -169,11 +169,11 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function set_group_id( $group_id )
         {
-            global  $tag_groups_premium_fs_sdk ;
+
             $this->group_id = (int) $group_id;
             return $this;
         }
-        
+
         /**
          * adds a new group and saves it
          *
@@ -197,7 +197,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             return $this;
         }
-        
+
         /**
          * returns all terms that are associated with this term group
          *
@@ -218,7 +218,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             $order = 'ASC'
         )
         {
-            global  $tag_group_terms, $tag_groups_premium_fs_sdk ;
+            global  $tag_group_terms ;
             if ( !isset( $this->group_id ) ) {
                 return array();
             }
@@ -231,7 +231,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
              * In case we use the Polylang plugin: get the terms for the language of that post.
              * Polylang needs extra query parameter
              */
-            
+
             if ( function_exists( 'pll_get_post_language' ) && $post_id ) {
                 /**
                  * Better sanitize what we get from other plugins
@@ -240,24 +240,24 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             } else {
                 $pll_post_language = '';
             }
-            
+
             /**
              * In case we use the WPML plugin: consider the language
              */
             $current_language = TagGroups_WPML::get_current_language();
-            
+
             if ( $current_language ) {
                 $wpml_language = (string) ICL_LANGUAGE_CODE;
             } else {
                 $wpml_language = '';
             }
-            
+
             /**
              * try to get cached version
              *
              * We need to supply the language parameters
              */
-            
+
             if ( "count" == $fields ) {
                 $cache_key = md5( 'count-' . serialize( $taxonomy ) . '-' . serialize( $hide_empty ) . '-ids-' . $pll_post_language . '-' . $wpml_language );
                 $count_transient_name = TagGroups_WPML::get_tag_groups_group_terms_transient_name() . '-' . $cache_key;
@@ -273,7 +273,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                     return $transient_value;
                 }
             }
-            
+
             $orderby_query = $orderby;
             if ( 'natural' == $orderby ) {
                 $orderby_query = 'name';
@@ -289,7 +289,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                 'term_order',
                 'count'
             );
-            
+
             if ( !in_array( $orderby_query, $default_orderby ) ) {
                 // order by a custom meta field
                 $additional_args = array(
@@ -298,8 +298,8 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                 );
                 $orderby_query = 'meta_value_num';
             }
-            
-            
+
+
             if ( 0 == $this->group_id ) {
                 $args = array(
                     'taxonomy'   => $taxonomy,
@@ -334,7 +334,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                 ) ),
                 );
             }
-            
+
             if ( isset( $additional_args ) ) {
                 $args = array_merge( $args, $additional_args );
             }
@@ -363,7 +363,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             /**
              * Filters the terms of a group before it's returned or saved to the transient
-             * 
+             *
              * @param WP_Term[]|int[]|string[]|string|WP_Error $terms Return type depends on $fields
              * @param int $this->group_id ID of this group
              * @param string|string[] $taxonomy
@@ -375,7 +375,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
              * @param string include
              * @param string exclude
              * @param int threshold
-             * 
+             *
              * @return mixed $terms Must be the same type as the input $terms
              */
             $terms = apply_filters(
@@ -392,7 +392,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                 '',
                 0
             );
-            
+
             if ( "count" == $fields ) {
                 if ( !is_array( $count_transient_value ) ) {
                     $count_transient_value = array();
@@ -402,10 +402,10 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             } else {
                 TagGroups_Transients::set_transient( $transient_name, $terms, 1 * HOUR_IN_SECONDS );
             }
-            
+
             return $terms;
         }
-        
+
         /**
          * adds terms to this group
          *
@@ -424,7 +424,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             return $this;
         }
-        
+
         /**
          * removes terms from this group
          *
@@ -443,7 +443,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             return $this;
         }
-        
+
         /**
          * deletes this group
          *
@@ -452,14 +452,14 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function delete()
         {
-            global  $tag_groups_premium_fs_sdk ;
+
             $group_ids = $this->tg_groups->get_group_ids();
-            
+
             if ( ($key = array_search( $this->group_id, $group_ids )) === false ) {
                 $this->error = TagGroups_Group::WRONG_ID;
                 return $this;
             }
-            
+
             $labels = $this->tg_groups->get_labels();
             $positions = $this->tg_groups->get_positions();
             unset( $group_ids[$key] );
@@ -469,12 +469,12 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             if ( !empty($tag_group_group_languages) ) {
                 foreach ( $tag_group_group_languages as $language ) {
                     $translated_labels = TagGroups_Options::get_option( 'term_group_labels_' . $language, array() );
-                    
+
                     if ( is_array( $translated_labels ) ) {
                         unset( $translated_labels[$this->group_id] );
                         TagGroups_Options::update_option( 'term_group_labels_' . $language, $translated_labels );
                     }
-                
+
                 }
             }
             unset( $positions[$this->group_id] );
@@ -491,7 +491,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             unset( $this->group_id );
             return $this;
         }
-        
+
         /**
          * returns the position of this group
          *
@@ -502,7 +502,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
         {
             return $this->position;
         }
-        
+
         /**
          * sets the position of this group
          *
@@ -511,16 +511,16 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function set_position( $position )
         {
-            
+
             if ( $position < 1 || $position > $this->tg_groups->get_max_position() + 1 ) {
                 $this->error = TagGroups_Group::WRONG_POSITION;
                 return $this;
             }
-            
+
             $this->position = $position;
             return $this;
         }
-        
+
         /**
          * sets the position of this group
          *
@@ -529,18 +529,18 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function move_to_position( $new_position )
         {
-            
+
             if ( empty($this->group_id) ) {
                 $this->error = TagGroups_Group::WRONG_ID;
                 return $this;
             }
-            
-            
+
+
             if ( $new_position < 1 || $new_position > $this->tg_groups->get_max_position() + 1 ) {
                 $this->error = TagGroups_Group::WRONG_POSITION;
                 return $this;
             }
-            
+
             $old_position = $this->get_position();
             $positions = $this->tg_groups->get_positions();
             /**
@@ -568,7 +568,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             $this->tg_groups->reindex_positions();
             return $this;
         }
-        
+
         /**
          * returns the label of this group
          *
@@ -583,7 +583,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             return $this->label;
         }
-        
+
         /**
          * sets the label of this group
          *
@@ -592,16 +592,16 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function set_label( $label )
         {
-            
+
             if ( empty($this->group_id) ) {
                 $this->error = TagGroups_Group::WRONG_ID;
                 return $this;
             }
-            
+
             $this->label = $label;
             return $this;
         }
-        
+
         /**
          * returns the number of terms associated with this group
          *
@@ -624,7 +624,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             $taxonomies = TagGroups_Taxonomy::remove_invalid( $taxonomies );
             return $this->get_group_terms( $taxonomies, false, 'count' );
         }
-        
+
         /**
          * sets $this->group_id by label
          *
@@ -634,7 +634,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
         public function find_by_label( $label )
         {
             $labels = $this->tg_groups->get_labels();
-            
+
             if ( in_array( $label, $labels ) ) {
                 $this->set_group_id( array_search( $label, $labels ) );
                 $this->load();
@@ -642,9 +642,9 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             } else {
                 return false;
             }
-        
+
         }
-        
+
         /**
          * sets $this->group_id by position
          *
@@ -655,7 +655,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
         public function find_by_position( $position )
         {
             $positions = $this->tg_groups->get_positions();
-            
+
             if ( in_array( $position, $positions ) ) {
                 $this->set_group_id( array_search( $position, $positions ) );
                 $this->load();
@@ -664,9 +664,9 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                 $this->set_group_id( 0 );
                 return false;
             }
-        
+
         }
-        
+
         /**
          * returns an array of group properties as values
          *
@@ -699,12 +699,12 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                 $orderby,
                 $order
             );
-            
+
             if ( !is_array( $terms ) ) {
                 $terms = array();
                 TagGroups_Error::log( '[Tag Groups] Error retrieving terms in get_info().' );
             }
-            
+
             return array(
                 'term_group' => (int) $this->group_id,
                 'label'      => $this->label,
@@ -712,7 +712,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                 'terms'      => $terms,
             );
         }
-        
+
         /**
          * Returns pieces for for terms_clauses(), enabled for multiple groups
          *
@@ -721,8 +721,8 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         public function terms_clauses()
         {
-            global  $tag_groups_premium_fs_sdk, $tag_group_groups ;
-            
+            global $tag_group_groups ;
+
             if ( 0 == $this->group_id ) {
                 /**
                  * We are searching for unassigned terms.
@@ -744,7 +744,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                  * We are searching for terms assigned to a group with $this->group_id.
                  */
                 $group_ids = array( $this->group_id );
-                
+
                 if ( count( $group_ids ) > 1 ) {
                     $meta_query_args = array(
                         'relation' => 'OR',
@@ -766,16 +766,16 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                         ),
                     );
                 }
-            
+
             }
-            
+
             /**
              * Convert the arguments to SQL pieces
              */
             $meta_query = new WP_Meta_Query( $meta_query_args );
             return $meta_query->get_sql( 'term', 't', 'term_id' );
         }
-        
+
         /**
          * removes terms that have post count == 0
          *
@@ -809,12 +809,12 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                         return $terms;
                         break;
                 }
-                
+
                 if ( false === $wp_term || is_wp_error( $wp_term ) ) {
                     TagGroups_Error::log( '[Tag Groups] Cannot remove empty terms in remove_empty_terms' );
                     return $terms;
                 }
-                
+
                 $tg_term = new TagGroups_Term( $wp_term );
                 if ( !$tg_term->get_post_count( $this->group_id ) ) {
                     unset( $terms[$key] );
@@ -822,7 +822,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             return $terms;
         }
-        
+
         /**
          * Returns the ID of the parent group or 0 if no parent
          *
@@ -830,7 +830,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         function get_parent()
         {
-            global  $tag_groups_premium_fs_sdk ;
+
             if ( $this->is_parent ) {
                 return 0;
             }
@@ -842,7 +842,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             }
             return 0;
         }
-        
+
         /**
          * Returns the label of the parent, if it exists, or a default string
          *
@@ -850,9 +850,9 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
          */
         function get_parent_label()
         {
-            global  $tag_groups_premium_fs_sdk ;
+
             return '';
         }
-    
+
     }
 }

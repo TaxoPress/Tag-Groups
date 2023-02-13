@@ -61,7 +61,6 @@ if ( !function_exists( 'post_in_tag_group' ) ) {
      */
     function post_in_tag_group( $post_id, $tag_group_id )
     {
-        global  $tag_groups_premium_fs_sdk ;
         $tag_group_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
         $tags = array();
         foreach ( $tag_group_taxonomies as $tag_group_taxonomy ) {

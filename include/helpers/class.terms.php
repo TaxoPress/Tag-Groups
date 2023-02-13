@@ -46,7 +46,7 @@ if ( !class_exists( 'TagGroups_Terms' ) ) {
          */
         public function clear_post_count_transient( $rebuild_in_seconds = 5 )
         {
-            global  $tag_groups_premium_fs_sdk ;
+            
         }
         
         /**

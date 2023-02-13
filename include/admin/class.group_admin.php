@@ -17,7 +17,7 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
          */
         static function render_group_administration()
         {
-            global  $tag_groups_premium_fs_sdk, $tag_group_groups ;
+            global  $tag_group_groups ;
             $tag_group_show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 );
             //tags
             $tag_group_show_filter = TagGroups_Options::get_option( 'tag_group_show_filter', 1 );
@@ -80,7 +80,7 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
             $view = new TagGroups_View( 'admin/tag_groups_admin' );
             $view->set( array(
                 'tag_group_show_filter' => $tag_group_show_filter || $tag_group_show_filter_tags,
-                'show_parents'          => $tag_groups_premium_fs_sdk->is_plan_or_trial( 'premium' ),
+                'show_parents'          => TagGroups_Utilities::is_premium_plan(),
                 'post_url'              => $post_url,
                 'tags_url'              => $tags_url,
                 'items_per_page'        => $items_per_page,
@@ -96,11 +96,11 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
          */
         static function ajax_manage_groups()
         {
-            global  $tag_groups_premium_fs_sdk, $tag_group_groups ;
+            global  $tag_group_groups ;
             /**
              * default: We allow duplicate group names if we have parents
              */
-            $allow_duplicate_group_name = $tag_groups_premium_fs_sdk->is_plan_or_trial( 'premium' ) && !empty($tag_group_groups->get_parents());
+            $allow_duplicate_group_name = TagGroups_Utilities::is_premium_plan() && !empty($tag_group_groups->get_parents());
             /**
              * Here we can programmatically allow duplicate group names
              * 
@@ -305,8 +305,8 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
                 $tag_group_groups_filtered
             ),
                 'max_number'        => $number_of_filtered_term_groups,
-                'parents_available' => $tag_groups_premium_fs_sdk->is_plan_or_trial( 'premium' ) && !empty($tag_group_groups->get_parents()),
-                'only_parents'      => $tag_groups_premium_fs_sdk->is_plan_or_trial( 'premium' ) && $tag_group_groups->is_only_parents(),
+                'parents_available' => TagGroups_Utilities::is_premium_plan() && !empty($tag_group_groups->get_parents()),
+                'only_parents'      => TagGroups_Utilities::is_premium_plan() && $tag_group_groups->is_only_parents(),
                 'is_filtered'       => !empty($tag_groups_filter_label),
             ),
             ) ) ;
@@ -369,7 +369,6 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
          */
         public static function get_items_per_page()
         {
-            global  $tag_groups_premium_fs_sdk ;
             $items_per_page = TAG_GROUPS_ITEMS_PER_PAGE;
             return $items_per_page;
         }
