@@ -77,6 +77,11 @@ if ( !defined( 'TAG_GROUPS_PLUGIN_BASENAME' ) ) {
     define( "TAG_GROUPS_UPDATES_RSS_URL", "https://chattymango.com/category/updates/tag-groups-free/feed/" );
 }
 
+$autoloadPath = TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/vendor/autoload.php';
+if (file_exists($autoloadPath)) {
+    require_once $autoloadPath;
+}
+
 /**
  * Make scope of $tag_groups_loader global for wp-cli
  */
@@ -135,6 +140,11 @@ if ( !function_exists( 'tag_groups_init' ) ) {
             $tag_groups_loader->register_shortcodes_and_blocks();
             $tag_groups_loader->register_REST_API();
             $tag_groups_loader->register_CRON();
+
+            if (is_admin()) {
+                require_once(TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/includes-core/TagGroupsCoreAdmin.php');
+                new \TaxoPress\TagGroups\TagGroupsCoreAdmin(); 
+            }
         }
 
     }
