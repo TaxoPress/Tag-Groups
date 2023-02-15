@@ -77,6 +77,11 @@ if ( !defined( 'TAG_GROUPS_PLUGIN_BASENAME' ) ) {
     define( "TAG_GROUPS_UPDATES_RSS_URL", "https://chattymango.com/category/updates/tag-groups-free/feed/" );
 }
 
+$autoloadPath = TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/vendor/autoload.php';
+if (file_exists($autoloadPath)) {
+    require_once $autoloadPath;
+}
+
 /**
  * Make scope of $tag_groups_loader global for wp-cli
  */

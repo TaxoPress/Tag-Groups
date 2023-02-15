@@ -6,10 +6,6 @@ class TagGroupsCoreAdmin {
 
         if ( current_user_can( 'manage_options' ) ) {
         if (is_admin()) {
-            $autoloadPath = TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/vendor/autoload.php';
-			if (file_exists($autoloadPath)) {
-				require_once $autoloadPath;
-			}
 
             require_once TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/vendor/publishpress/wordpress-version-notices/includes.php';
             add_filter(
