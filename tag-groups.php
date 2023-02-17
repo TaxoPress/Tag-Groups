@@ -66,15 +66,6 @@ if ( !defined( 'TAG_GROUPS_PLUGIN_BASENAME' ) ) {
      * This plugin's absolute path on this server - starting from root.
      */
     define( "TAG_GROUPS_PLUGIN_ABSOLUTE_PATH", dirname( __FILE__ ) );
-    /**
-     * The path to the premium plugin main file.
-     * Codester-default was tag-groups-premium.php, Freemium-generated is tag-groups.php
-     */
-    // use: WP_PLUGIN_DIR . '/' . TAG_GROUPS_PLUGIN_BASENAME
-    /**
-     * The full URL (including protocol) of the RSS channel that informas about updates.
-     */
-    define( "TAG_GROUPS_UPDATES_RSS_URL", "https://chattymango.com/category/updates/tag-groups-free/feed/" );
 }
 
 $autoloadPath = TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/vendor/autoload.php';
