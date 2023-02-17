@@ -1,13 +1,11 @@
 <div class="tg_settings_tabs_content">
 
-  <img src="<?php echo TAG_GROUPS_PLUGIN_URL ?>/assets/images/tabbed-tag-cloud-block-inspector.png" style="float:right; margin:0 10px;" />
   <p>
     <?php _e('You can use a shortcode to embed the tag cloud directly in a post, page or widget or you call the function in the PHP code of your theme.', 'tag-groups') ?>
   </p>
   <p>
     <?php _e('Most features are also available as blocks for the Gutenberg editor.', 'tag-groups') ?>
     <?php _e("If you don't feel comfortable with shortcode parameters, you should give the Gutenberg blocks a try.", 'tag-groups') ?>
-    <a href="<?php echo $gutenberg_documentation_link ?>" target="_blank"><?php _e("How to use Gutenberg blocks.", 'tag-groups') ?></a>
   </p>
 
   <p>&nbsp;</p>
