@@ -69,13 +69,6 @@ if (!class_exists('TagGroups_Admin')) {
                 'user_can' => 'manage_options',
                 'function' => array( 'TagGroups_Settings', 'settings_page_troubleshooting' ),
             ),
-                8  => array(
-                'title'    => __('About', 'tag-groups'),
-                'slug'     => 'tag-groups-settings-about',
-                'parent'   => 'tag-groups-settings',
-                'user_can' => 'manage_options',
-                'function' => array( 'TagGroups_Settings', 'settings_page_about' ),
-            ),
                 9  => array(
                 'title'    => __('First Steps', 'tag-groups'),
                 'slug'     => 'tag-groups-settings-first-steps',
