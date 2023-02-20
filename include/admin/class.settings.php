@@ -392,9 +392,6 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             self::add_settings_help();
             $tabs = array();
             $tabs['first-aid'] = __( 'First Aid', 'tag-groups' );
-            $tabs['faq'] = __( 'FAQ and Common Issues', 'tag-groups' );
-            $tabs['documentation'] = __( 'Documentation', 'tag-groups' );
-            $tabs['support'] = __( 'Get Support', 'tag-groups' );
             $tabs['system'] = __( 'System Information', 'tag-groups' );
             $tabs['debug'] = __( 'Debugging', 'tag-groups' );
             $tabs = apply_filters( 'tag_groups_settings_troubleshooting_tabs', $tabs );
@@ -413,18 +410,6 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                         $view->render();
                     }
 
-                    break;
-                case 'faq':
-                    $view = new TagGroups_View( 'admin/settings_troubleshooting_faq' );
-                    $view->render();
-                    break;
-                case 'documentation':
-                    $view = new TagGroups_View( 'admin/settings_troubleshooting_documentation' );
-                    $view->render();
-                    break;
-                case 'support':
-                    $view = new TagGroups_View( 'admin/settings_troubleshooting_support' );
-                    $view->render();
                     break;
                 case 'system':
                     $phpversion = phpversion();
