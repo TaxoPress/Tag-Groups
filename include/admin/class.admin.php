@@ -62,13 +62,6 @@ if (!class_exists('TagGroups_Admin')) {
                 'user_can' => 'manage_options',
                 'function' => array( 'TagGroups_Settings', 'settings_page_tools' ),
             ),
-                6  => array(
-                'title'    => __('Troubleshooting', 'tag-groups'),
-                'slug'     => 'tag-groups-settings-troubleshooting',
-                'parent'   => 'tag-groups-settings',
-                'user_can' => 'manage_options',
-                'function' => array( 'TagGroups_Settings', 'settings_page_troubleshooting' ),
-            ),
                 9  => array(
                 'title'    => __('First Steps', 'tag-groups'),
                 'slug'     => 'tag-groups-settings-first-steps',
@@ -109,7 +102,7 @@ if (!class_exists('TagGroups_Admin')) {
                 } else {
                     $post_type_query = '?post_type=' . $post_type;
                 }
-                
+
                 $submenu_page = add_submenu_page(
                     'edit.php' . $post_type_query,
                     'Tag Group Admin',
@@ -120,7 +113,7 @@ if (!class_exists('TagGroups_Admin')) {
                 );
             }
         }
-        
+
         /**
          * Remove one of the Freemius submenus
          *
@@ -128,14 +121,14 @@ if (!class_exists('TagGroups_Admin')) {
          */
         public static function remove_submenus()
         {
-            
+
             if (TagGroups_Utilities::is_free_plan()) {
                 remove_submenu_page('tag-groups-settings', 'tag-groups-settings-contact');
             } else {
                 remove_submenu_page('tag-groups-settings', 'tag-groups-settings-wp-support-forum');
             }
         }
-        
+
         /**
          * Create the html to add tags to tag groups on single tag view (after clicking tag for editing)
          *
@@ -145,13 +138,13 @@ if (!class_exists('TagGroups_Admin')) {
         {
             global $tag_group_groups ;
             $screen = get_current_screen();
-            
+
             if ('post' == $screen->post_type) {
                 $url_post_type = '';
             } else {
                 $url_post_type = '&post_type=' . $screen->post_type;
             }
-            
+
             $tag_group_admin_url = admin_url('edit.php?page=tag-groups_' . $screen->post_type . $url_post_type);
             $term_groups = $tag_group_groups->get_all_with_position_as_key();
             unset($term_groups[0]);
@@ -167,7 +160,7 @@ if (!class_exists('TagGroups_Admin')) {
             );
             $view->render();
         }
-        
+
         /**
          * Create the html to assign tags to tag groups upon new tag creation (left of the table)
          *
@@ -180,7 +173,7 @@ if (!class_exists('TagGroups_Admin')) {
             $term_groups = $tag_group_groups->get_all_with_position_as_key();
             unset($term_groups[0]);
             $new_tag_initial_groups = array();
-            
+
             if (empty($new_tag_initial_groups) && TagGroups_WPML::is_multilingual() && isset($_GET['trid']) && !empty($_GET['taxonomy'])) {
                 $trid = (int) $_GET['trid'];
                 $taxonomy = sanitize_title($_GET['taxonomy']);
@@ -191,20 +184,20 @@ if (!class_exists('TagGroups_Admin')) {
                     "tax_{$taxonomy}"
                 );
                 $default_lang = apply_filters('wpml_default_language', null);
-                
+
                 if (!empty($default_lang) && is_array($translations) && isset($translations[$default_lang])) {
                     $original_translation = $translations[$default_lang];
                 } else {
                     $original_translation = TagGroups_Utilities::get_first_element($translations);
                 }
-                
-                
+
+
                 if (!empty($original_translation)) {
                     $tg_original_term = new TagGroups_Term($original_translation->element_id);
                     $new_tag_initial_groups = $tg_original_term->get_groups();
                 }
             }
-            
+
             $view = new TagGroups_View('admin/new_tag_from_list');
             $view->set(
                 array(
@@ -215,7 +208,7 @@ if (!class_exists('TagGroups_Admin')) {
             );
             $view->render();
         }
-        
+
         /**
          * adds a custom column to the table of tags/terms
          * thanks to http://coderrr.com/add-columns-to-a-taxonomy-terms-table/
@@ -229,7 +222,7 @@ if (!class_exists('TagGroups_Admin')) {
             global  $wp ;
             $new_order = (isset($_GET['order']) && 'asc' == $_GET['order'] && isset($_GET['orderby']) && 'term_group' == $_GET['orderby'] ? 'desc' : 'asc');
             $screen = get_current_screen();
-            
+
             if (!empty($screen)) {
                 $taxonomy = $screen->taxonomy;
                 $link = add_query_arg(
@@ -244,10 +237,10 @@ if (!class_exists('TagGroups_Admin')) {
             } else {
                 $columns['term_group'] = '';
             }
-            
+
             return $columns;
         }
-        
+
         /**
          * adds data into custom column of the table for each row
          * thanks to http://coderrr.com/add-columns-to-a-taxonomy-terms-table/
@@ -263,15 +256,15 @@ if (!class_exists('TagGroups_Admin')) {
             if ('term_group' != $column_name) {
                 return $content;
             }
-            
+
             if (!empty($_REQUEST['taxonomy'])) {
                 $taxonomy = sanitize_title($_REQUEST['taxonomy']);
             } else {
                 return '';
             }
-            
+
             $term = get_term($term_id, $taxonomy);
-            
+
             if (isset($term)) {
                 $term_o = new TagGroups_Term($term);
                 return implode(', ', $tag_group_groups->get_labels_by_position($term_o->get_groups()));
@@ -279,7 +272,7 @@ if (!class_exists('TagGroups_Admin')) {
                 return '';
             }
         }
-        
+
         /**
          * Modify the term query so that we can sort by the term meta
          *
@@ -299,20 +292,20 @@ if (!class_exists('TagGroups_Admin')) {
             if (empty($_GET['orderby']) || 'term_group' != $_GET['orderby']) {
                 return $pieces;
             }
-            
+
             if (isset($_GET['order']) && strtoupper($_GET['order']) == 'DESC') {
                 $order = "DESC";
             } else {
                 $order = 'ASC';
             }
-            
+
             $pieces['join'] .= ' INNER JOIN ' . $wpdb->termmeta . ' AS tm ON t.term_id = tm.term_id ';
             $pieces['where'] .= ' AND tm.meta_key = "_cm_term_group_array"';
             $pieces['orderby'] = ' ORDER BY tm.meta_value ';
             $pieces['order'] = $order;
             return $pieces;
         }
-        
+
         /**
          * processing actions defined in bulk_admin_footer()
          * credits http://www.foxrunsoftware.net
@@ -330,14 +323,14 @@ if (!class_exists('TagGroups_Admin')) {
                 return;
             }
             $show_filter_tags = TagGroups_Options::get_option('tag_group_show_filter_tags', 1);
-            
+
             if ($show_filter_tags) {
                 $tag_group_tags_filter = TagGroups_Options::get_option('tag_group_tags_filter', array());
                 /**
                  * Processing the filter
                  * Values come as POST (via menu, precedence) or GET (via link from group admin)
                  */
-                
+
                 if (isset($_POST['term-filter'])) {
                     $term_filter = (int) $_POST['term-filter'];
                 } elseif (isset($_GET['term-filter'])) {
@@ -345,8 +338,8 @@ if (!class_exists('TagGroups_Admin')) {
                     // We need to remove the term-filter piece, or it will stay forever
                     $sendback = remove_query_arg(array( 'term-filter' ), $_SERVER['REQUEST_URI']);
                 }
-                
-                
+
+
                 if (isset($term_filter)) {
                     if ('-1' == $term_filter) {
                         unset($tag_group_tags_filter[$taxonomy]);
@@ -364,8 +357,8 @@ if (!class_exists('TagGroups_Admin')) {
                             3
                         );
                     }
-                    
-                    
+
+
                     if (isset($sendback)) {
                         // remove filter that destroys WPML's "&lang="
                         remove_all_filters('wp_redirect');
@@ -387,7 +380,7 @@ if (!class_exists('TagGroups_Admin')) {
                     }
                 }
             }
-            
+
             $wp_list_table = _get_list_table('WP_Terms_List_Table');
             $action = $wp_list_table->current_action();
             $allowed_actions = array( 'assign' );
@@ -397,18 +390,18 @@ if (!class_exists('TagGroups_Admin')) {
             if (isset($_REQUEST['delete_tags'])) {
                 $term_ids = $_REQUEST['delete_tags'];
             }
-            
+
             if (isset($_REQUEST['term-group-top'])) {
                 $term_group = (int) $_REQUEST['term-group-top'];
             } else {
                 return;
             }
-            
+
             $sendback = remove_query_arg(array( 'assigned', 'deleted' ), wp_get_referer());
             if (!$sendback) {
                 $sendback = admin_url('edit-tags.php?taxonomy=' . $taxonomy);
             }
-            
+
             if (empty($term_ids)) {
                 $sendback = add_query_arg(
                     array(
@@ -434,7 +427,7 @@ if (!class_exists('TagGroups_Admin')) {
                 wp_redirect(esc_url_raw($sendback));
                 exit;
             }
-            
+
             $pagenum = $wp_list_table->get_pagenum();
             $sendback = add_query_arg('paged', $pagenum, $sendback);
             $tg_update_edit_term_group_called = true;
@@ -446,7 +439,7 @@ if (!class_exists('TagGroups_Admin')) {
                 $assigned = 0;
                 foreach ($term_ids as $term_id) {
                     $term = new TagGroups_Term($term_id);
-                        
+
                     if (false !== $term) {
                         if (0 == $term_group) {
                             if ($term->get_groups() != array( 0 )) {
@@ -457,11 +450,11 @@ if (!class_exists('TagGroups_Admin')) {
                                 $term->add_group($term_group)->save();
                             }
                         }
-                            
+
                         $assigned++;
                     }
                 }
-                    
+
                 if (0 == $term_group) {
                     $message = _n(
                         'The term has been removed from all groups.',
@@ -478,7 +471,7 @@ if (!class_exists('TagGroups_Admin')) {
                         'tag-groups'
                     );
                 }
-                    
+
                 break;
             default:
                 // Need to show a message?
@@ -503,7 +496,7 @@ if (!class_exists('TagGroups_Admin')) {
             wp_redirect(esc_url_raw($sendback));
             exit;
         }
-        
+
         /**
          * Filter the tags on the tag page
          *
@@ -526,14 +519,14 @@ if (!class_exists('TagGroups_Admin')) {
              * Processing the filter
              * Values come as POST (via menu, precedence) or GET (via link from group admin)
              */
-            
+
             if (isset($_POST['term-filter'])) {
                 $term_filter = (int) $_POST['term-filter'];
             } elseif (isset($_GET['term-filter'])) {
                 $term_filter = (int) $_GET['term-filter'];
             }
-            
-            
+
+
             if (isset($term_filter)) {
                 if ('-1' == $term_filter) {
                     unset($tag_group_tags_filter[$taxonomy]);
@@ -551,8 +544,8 @@ if (!class_exists('TagGroups_Admin')) {
                         3
                     );
                 }
-                
-                
+
+
                 if (isset($sendback)) {
                     /**
                      * We need to remove the term-filter piece, or it will stay forever
@@ -584,7 +577,7 @@ if (!class_exists('TagGroups_Admin')) {
                 }
             }
         }
-        
+
         /**
          * modifies Quick Edit link to call JS when clicked
          * thanks to http://shibashake.com/WordPress-theme/expand-the-WordPress-quick-edit-menu
@@ -610,7 +603,7 @@ if (!class_exists('TagGroups_Admin')) {
             $actions['inline hide-if-no-js'] .= '</a>';
             return $actions;
         }
-        
+
         /**
          * adds JS function that sets the saved tag group for a given element when it's opened in quick edit
          * thanks to http://shibashake.com/WordPress-theme/expand-the-WordPress-quick-edit-menu
@@ -627,7 +620,7 @@ if (!class_exists('TagGroups_Admin')) {
             $view = new TagGroups_View('partials/quick_edit_javascript');
             $view->render();
         }
-        
+
         /**
          * Create the html to assign tags to tag groups directly in tag table ('quick edit')
          *
@@ -656,7 +649,7 @@ if (!class_exists('TagGroups_Admin')) {
             );
             $view->render();
         }
-        
+
         /**
          * Adds a bulk action menu to a term list page
          * credits http://www.foxrunsoftware.net
@@ -680,7 +673,7 @@ if (!class_exists('TagGroups_Admin')) {
             );
             $view->render();
         }
-        
+
         /**
          * Adds a filter menu to a term list page
          *
@@ -699,10 +692,10 @@ if (!class_exists('TagGroups_Admin')) {
             }
             $term_groups = $tag_group_groups->get_all_with_position_as_key(true);
             $tag_group_tags_filter = TagGroups_Options::get_option('tag_group_tags_filter', array());
-            
+
             if (isset($tag_group_tags_filter[$screen->taxonomy])) {
                 $tag_filter = $tag_group_tags_filter[$screen->taxonomy];
-                
+
                 if ($tag_filter > 0) {
                     // check if group exists (could be deleted since last time the filter was set)
                     $tg_group = new TagGroups_Group($tag_filter);
@@ -713,7 +706,7 @@ if (!class_exists('TagGroups_Admin')) {
             } else {
                 $tag_filter = -1;
             }
-            
+
             $view = new TagGroups_View('partials/filter_admin_footer');
             $view->set(
                 array(
@@ -724,7 +717,7 @@ if (!class_exists('TagGroups_Admin')) {
             );
             $view->render();
         }
-        
+
         /**
          * Adds a button to reset the filter on the tags page, in case JavaScript breaks
          *
@@ -737,16 +730,16 @@ if (!class_exists('TagGroups_Admin')) {
         {
             $screen = get_current_screen();
             $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
-            
+
             if (!empty($screen) && 'edit-tags' == $screen->base && TagGroups_Options::get_option('tag_group_show_filter_tags', 1) && in_array($screen->taxonomy, $enabled_taxonomies)) {
                 $view = new TagGroups_View('partials/admin_footer');
                 $view->set('reset_url', esc_url(add_query_arg('term-filter', -1)));
                 return $view->return_html() . $text;
             }
-            
+
             return $text;
         }
-        
+
         /**
          * Adds a button to reset the filter on the tags page, in case JavaScript breaks
          *
@@ -763,7 +756,7 @@ if (!class_exists('TagGroups_Admin')) {
             $view = new TagGroups_View('partials/admin_footer_rating');
             return $view->return_html();
         }
-        
+
         /**
          * Adds JS to the footer for nicer tooltips in the backend
          *
@@ -784,7 +777,7 @@ if (!class_exists('TagGroups_Admin')) {
             $view = new TagGroups_View('partials/admin_footer_tooltip');
             return $text . $view->return_html();
         }
-        
+
         /**
          * Adds a pull-down menu to the filters above the posts.
          * Based on the code by Ohad Raz, http://wordpress.stackexchange.com/q/45436/2487
@@ -800,7 +793,7 @@ if (!class_exists('TagGroups_Admin')) {
             }
             $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
             $post_type = (isset($_GET['post_type']) ? sanitize_title($_GET['post_type']) : 'post');
-            
+
             if (count(array_intersect($enabled_taxonomies, get_object_taxonomies($post_type)))) {
                 $term_groups = $tag_group_groups->get_all_term_group_label();
                 $current_term_group = (isset($_GET['tg_filter_posts_value']) ? sanitize_text_field($_GET['tg_filter_posts_value']) : '');
@@ -815,7 +808,7 @@ if (!class_exists('TagGroups_Admin')) {
                 $view->render();
             }
         }
-        
+
         /**
          * Applies the filter, if used.
          * Based on the code by Ohad Raz, http://wordpress.stackexchange.com/q/45436/2487
@@ -835,13 +828,13 @@ if (!class_exists('TagGroups_Admin')) {
             if (!$show_filter_posts) {
                 return $query;
             }
-            
+
             if (isset($_GET['post_type'])) {
                 $post_type = sanitize_title($_GET['post_type']);
             } else {
                 $post_type = 'post';
             }
-            
+
             /**
              * Losing here the filter by language from Polylang, but currently no other way to show any posts when combining tax_query and meta_query
              */
@@ -849,12 +842,12 @@ if (!class_exists('TagGroups_Admin')) {
             $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
             // note: removed restriction count( $tg_taxonomy ) <= 1 - rather let user figure out if the result works
             $taxonomy_intersect = array_intersect($enabled_taxonomies, get_object_taxonomies($post_type));
-            
+
             if (count($taxonomy_intersect) && isset($_GET['tg_filter_posts_value']) && '' !== $_GET['tg_filter_posts_value']) {
                 $group_id = (int) $_GET['tg_filter_posts_value'];
                 $tg_group = new TagGroups_Group($group_id);
                 $tags = $tg_group->get_group_terms($taxonomy_intersect, true, 'ids');
-                
+
                 if (empty($tags)) {
                     /**
                      * We use a workaround to render an empty list
@@ -864,10 +857,10 @@ if (!class_exists('TagGroups_Admin')) {
                     $query->query_vars['tag__in'] = $tags;
                 }
             }
-            
+
             return $query;
         }
-        
+
         /**
          * AJAX handler to get a feed
          */
@@ -878,20 +871,20 @@ if (!class_exists('TagGroups_Admin')) {
             } else {
                 $url = '';
             }
-            
-            
+
+
             if (strpos($url, 'https://chattymango.com/') !== 0) {
                 TagGroups_Error::log('[Tag Groups] Wrong feed URL: ' . $url);
                 TagGroups_Utilities::die();
             }
-            
-            
+
+
             if (isset($_REQUEST['amount'])) {
                 $amount = (int) $_REQUEST['amount'];
             } else {
                 $amount = 5;
             }
-            
+
             /**
              * Assuming that the posts URL is the $url minus the trailing /feed
              */
@@ -904,7 +897,7 @@ if (!class_exists('TagGroups_Admin')) {
             echo  json_encode($rss->get_html());
             TagGroups_Utilities::die();
         }
-        
+
         /**
          * Modifies the query to retrieve tags for filtering in the backend.
          *
@@ -924,10 +917,10 @@ if (!class_exists('TagGroups_Admin')) {
                 return $pieces;
             }
             $tag_group_tags_filter = TagGroups_Options::get_option('tag_group_tags_filter', array());
-            
+
             if (isset($tag_group_tags_filter[$taxonomy])) {
                 $group_id = $tag_group_tags_filter[$taxonomy];
-                
+
                 if ($group_id > 0) {
                     // check if group exists (could be deleted since last time the filter was set)
                     $tg_group = new TagGroups_Group($group_id);
@@ -938,29 +931,29 @@ if (!class_exists('TagGroups_Admin')) {
             } else {
                 $group_id = -1;
             }
-            
-            
+
+
             if ($group_id > -1) {
                 $tg_group = new TagGroups_Group($group_id);
                 $mq_sql = $tg_group->terms_clauses();
-                
+
                 if (!empty($pieces['join'])) {
                     $pieces['join'] .= $mq_sql['join'];
                 } else {
                     $pieces['join'] = $mq_sql['join'];
                 }
-                
-                
+
+
                 if (!empty($pieces['where'])) {
                     $pieces['where'] .= $mq_sql['where'];
                 } else {
                     $pieces['where'] = $mq_sql['where'];
                 }
             }
-            
+
             return $pieces;
         }
-        
+
         /**
          * Adds Settings link to plugin list
          *
@@ -971,15 +964,15 @@ if (!class_exists('TagGroups_Admin')) {
         {
             // $settings_link = '<a href="' . admin_url( 'admin.php?page=tag-groups-settings' ) . '">' . __( 'Settings', 'tag-groups' ) . '</a>';
             // array_unshift( $links, $settings_link );
-            
+
             // if ( defined( 'TAG_GROUPS_PLUGIN_IS_FREE' ) && TAG_GROUPS_PLUGIN_IS_FREE ) {
             //     $settings_link = '<a href="' . admin_url( 'admin.php?page=tag-groups-settings-premium' ) . '"><span style="color:#3A0;">' . __( 'Try Premium', 'tag-groups' ) . '</span></a>';
             //     array_unshift( $links, $settings_link );
             // }
-            
+
             return $links;
         }
-        
+
         /**
          * Add a warning if the WPML/Polylang language switch is set to "all"
          *
@@ -996,13 +989,13 @@ if (!class_exists('TagGroups_Admin')) {
             if (!in_array($screen->taxonomy, $enabled_taxonomies)) {
                 return;
             }
-            
+
             if ('all' == TagGroups_WPML::get_current_language()) {
                 $view = new TagGroups_View('partials/language_notice');
                 $view->render();
             }
         }
-        
+
         /**
          * Add inline styling to the tags page
          *
@@ -1014,7 +1007,7 @@ if (!class_exists('TagGroups_Admin')) {
             $view = new TagGroups_View('partials/tag_page_inline_style');
             $view->render();
         }
-        
+
         /**
          * Recommend to run the migration
          *
@@ -1025,7 +1018,7 @@ if (!class_exists('TagGroups_Admin')) {
          */
         public static function recommend_to_run_migration()
         {
-            TagGroups_Admin_Notice::add('info', sprintf(__('Please <a %s>click here to run the migration routines</a> to make sure we have migrated all tags.', 'tag-groups'), 'href="' . admin_url('admin.php?page=tag-groups-settings-troubleshooting&process-tasks=migratetermmeta&task-set-name=Migration') . '"'));
+            TagGroups_Admin_Notice::add('info', sprintf(__('Please <a %s>click here to run the migration routines</a> to make sure we have migrated all tags.', 'tag-groups'), 'href="' . admin_url('admin.php?page=tag-groups-settings-tools&process-tasks=migratetermmeta&task-set-name=Migration') . '"'));
         }
     }
     // class
