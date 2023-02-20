@@ -20,7 +20,6 @@ class TagGroupsCoreAdmin {
                                     ['base' => 'tag-groups_page_tag-groups-settings-front-end',     'id'   => 'tag-groups_page_tag-groups-settings-front-end'],
                                     ['base' => 'tag-groups_page_tag-groups-settings-back-end',       'id'   => 'tag-groups_page_tag-groups-settings-back-end'],
                                     ['base' => 'tag-groups_page_tag-groups-settings-tools',     'id'   => 'tag-groups_page_tag-groups-settings-tools'],
-                                    ['base' => 'tag-groups_page_tag-groups-settings-troubleshooting','id' => 'tag-groups_page_tag-groups-settings-troubleshooting'],
                                     ['base' => 'tag-groups_page_tag-groups-settings-about',   'id'  => 'tag-groups_page_tag-groups-settings-about'],
                                     ['base' => 'posts_page_tag-groups_post','id' => 'posts_page_tag-groups_post'],
                                     ['base' => 'admin_page_tag-groups-settings-first-steps',   'id'  => 'admin_page_tag-groups-settings-first-steps'],

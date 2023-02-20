@@ -343,6 +343,8 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
          */
         public static function settings_page_tools()
         {
+            global  $tag_group_groups;
+            
             // Make very sure that only administrators can access this page
             if ( !current_user_can( 'manage_options' ) ) {
                 wp_die( "Capability check failed" );
@@ -351,53 +353,16 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             self::add_header();
             self::add_settings_help();
             $tabs = array();
+            $tabs['first-aid'] = __( 'First Aid', 'tag-groups' );
+            $tabs['system'] = __( 'System Information', 'tag-groups' );
+            $tabs['debug'] = __( 'Debugging', 'tag-groups' );
             $tabs['export_import'] = __( 'Export/Import', 'tag-groups' );
             $tabs['reset'] = __( 'Reset', 'tag-groups' );
             $tabs = apply_filters( 'tag_groups_settings_tools_tabs', $tabs );
             $active_tab = self::get_active_tab( $tabs );
             self::add_tabs( 'tag-groups-settings-tools', $tabs, $active_tab );
             switch ( $active_tab ) {
-                case 'export_import':
-                    $view = new TagGroups_View( 'admin/settings_tools_export_import' );
-                    $view->render();
-                    break;
-                case 'reset':
-                    $view = new TagGroups_View( 'admin/settings_tools_reset' );
-                    $view->set( 'tag_group_reset_when_uninstall', $tag_group_reset_when_uninstall );
-                    $view->render();
-                    break;
-                default:
-                    if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
-                        TagGroups_Premium_Settings::get_content( $active_tab );
-                    }
-                    break;
-            }
-            self::add_footer();
-        }
 
-        /**
-         * renders a settings page: troubleshooting
-         *
-         * @param void
-         * @return void
-         */
-        public static function settings_page_troubleshooting()
-        {
-            global  $tag_group_groups;
-            // Make very sure that only administrators can access this page
-            if ( !current_user_can( 'manage_options' ) ) {
-                wp_die( "Capability check failed" );
-            }
-            self::add_header();
-            self::add_settings_help();
-            $tabs = array();
-            $tabs['first-aid'] = __( 'First Aid', 'tag-groups' );
-            $tabs['system'] = __( 'System Information', 'tag-groups' );
-            $tabs['debug'] = __( 'Debugging', 'tag-groups' );
-            $tabs = apply_filters( 'tag_groups_settings_troubleshooting_tabs', $tabs );
-            $active_tab = self::get_active_tab( $tabs );
-            self::add_tabs( 'tag-groups-settings-troubleshooting', $tabs, $active_tab );
-            switch ( $active_tab ) {
                 case 'first-aid':
 
                     if ( !empty($_GET['process-tasks']) ) {
@@ -507,6 +472,15 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                         'help_url'                => $help_url,
                         'verbose_is_on_hardcoded' => $verbose_is_on_hardcoded,
                     ) );
+                    $view->render();
+                    break;
+                case 'export_import':
+                    $view = new TagGroups_View( 'admin/settings_tools_export_import' );
+                    $view->render();
+                    break;
+                case 'reset':
+                    $view = new TagGroups_View( 'admin/settings_tools_reset' );
+                    $view->set( 'tag_group_reset_when_uninstall', $tag_group_reset_when_uninstall );
                     $view->render();
                     break;
                 default:
@@ -861,49 +835,9 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                 'page'     => 'tag-groups-settings-tools',
                 'keywords' => array( __( 'remove plugin', 'tag-groups' ), __( 'remove data', 'tag-groups' ), __( 'delete groups', 'tag-groups' ) ),
             ),
-                'faq'             => array(
-                'title'    => __( 'FAQ and Common Issues', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-troubleshooting',
-                'keywords' => array(
-                __( 'frequently asked questions', 'tag-groups' ),
-                __( 'help', 'tag-groups' ),
-                __( 'bug', 'tag-groups' ),
-                __( 'problem', 'tag-groups' ),
-                __( 'troubleshooting', 'tag-groups' ),
-                __( 'support', 'tag-groups' )
-            ),
-            ),
-                'documentation'   => array(
-                'title'    => __( 'Documentation', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-troubleshooting',
-                'keywords' => array(
-                __( 'instructions', 'tag-groups' ),
-                __( 'help', 'tag-groups' ),
-                __( 'problem', 'tag-groups' ),
-                __( 'troubleshooting', 'tag-groups' ),
-                __( 'support', 'tag-groups' ),
-                'Gutenberg',
-                'CSS',
-                'style',
-                'PHP',
-                'REST API'
-            ),
-            ),
-                'support'         => array(
-                'title'    => __( 'Get Support', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-troubleshooting',
-                'keywords' => array(
-                __( 'support', 'tag-groups' ),
-                __( 'contact', 'tag-groups' ),
-                __( 'forum', 'tag-groups' ),
-                __( 'bug', 'tag-groups' ),
-                __( 'problem', 'tag-groups' ),
-                __( 'help', 'tag-groups' )
-            ),
-            ),
                 'system'          => array(
                 'title'    => __( 'System Information', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-troubleshooting',
+                'page'     => 'tag-groups-settings-tools',
                 'keywords' => array(
                 __( 'debugging', 'tag-groups' ),
                 __( 'PHP Version', 'tag-groups' ),
@@ -917,7 +851,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             ),
                 'debug'           => array(
                 'title'    => __( 'Debugging', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-troubleshooting',
+                'page'     => 'tag-groups-settings-tools',
                 'keywords' => array(
                 __( 'debugging', 'tag-groups' ),
                 __( 'troubleshooting', 'tag-groups' ),
@@ -975,7 +909,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             ),
                 'first-aid'       => array(
                 'title'    => __( 'First Aid', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-troubleshooting',
+                'page'     => 'tag-groups-settings-tools',
                 'keywords' => array(
                 __( 'troubleshooting', 'tag-groups' ),
                 __( 'migrate', 'tag-groups' ),
