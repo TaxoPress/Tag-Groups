@@ -19,6 +19,10 @@ const tagGroupsHelp = (props) => {
     href += '#' + props.topic;
   }
 
+  if (props.url || props.url !== '') {
+    return '';
+  }
+
   return (
     <div>
       <a
