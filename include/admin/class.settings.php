@@ -462,7 +462,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     $view->render();
                     break;
                 case 'debug':
-                    $help_url = 'https://documentation.chattymango.com/documentation/tag-groups/troubleshooting/how-to-use-the-debug-log-2/?pk_campaign=tg&pk_kwd=settings';
+                    $help_url = 'https://taxopress.com/docs/how-to-use-the-debug-log/';
                     $view = new TagGroups_View( 'admin/settings_troubleshooting_debug' );
                     $verbose_is_on_hardcoded = defined( 'CM_DEBUG' ) && strtolower( CM_DEBUG ) == 'verbose';
                     $verbose_is_on_option = (bool) TagGroups_Options::get_option( 'tag_group_verbose_debug', 0 );
