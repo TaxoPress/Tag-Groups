@@ -965,10 +965,6 @@ if (!class_exists('TagGroups_Admin')) {
             // $settings_link = '<a href="' . admin_url( 'admin.php?page=tag-groups-settings' ) . '">' . __( 'Settings', 'tag-groups' ) . '</a>';
             // array_unshift( $links, $settings_link );
 
-            // if ( defined( 'TAG_GROUPS_PLUGIN_IS_FREE' ) && TAG_GROUPS_PLUGIN_IS_FREE ) {
-            //     $settings_link = '<a href="' . admin_url( 'admin.php?page=tag-groups-settings-premium' ) . '"><span style="color:#3A0;">' . __( 'Try Premium', 'tag-groups' ) . '</span></a>';
-            //     array_unshift( $links, $settings_link );
-            // }
 
             return $links;
         }
