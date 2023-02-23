@@ -41,7 +41,7 @@
       <h4><?php _e('Example', 'tag-groups') ?></h4>
       <p>[tag_groups_cloud smallest=9 largest=30 include=1,2,10]</p>
       <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://documentation.chattymango.com/documentation/tag-groups/tabbed-tag-cloud-tag-clouds-and-groups-info/tabbed-tag-cloud-shortcode-parameters/?pk_campaign=tg&pk_kwd=documentation" target="_blank"') ?></p>
+      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tabbed-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
     </div>
 
     <h4><?php _e('Accordion', 'tag-groups') ?></h4>
@@ -52,7 +52,7 @@
       <h4><?php _e('Example', 'tag-groups') ?></h4>
       <p>[tag_groups_accordion smallest=9 largest=30 include=1,2,10]</p>
       <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://documentation.chattymango.com/documentation/tag-groups/accordion-tag-cloud-tag-clouds-and-groups-info/accordion-tag-cloud-shortcode-parameters/?pk_campaign=tg&pk_kwd=documentation" target="_blank"') ?></p>
+      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/accordion-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
     </div>
 
     <h4><?php _e('Tag List', 'tag-groups') ?></h4>
@@ -63,7 +63,7 @@
       <h4><?php _e('Example', 'tag-groups') ?></h4>
       <p>[tag_groups_tag_list column_count=2 keep_together=0 include=1,2,10]</p>
       <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://documentation.chattymango.com/documentation/tag-groups/tag-list-tag-clouds-and-groups-info/tag-list-shortcode-parameters/?pk_campaign=tg&pk_kwd=documentation" target="_blank"') ?></p>
+      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tag-list-shortcode-parameters/" target="_blank"') ?></p>
     </div>
 
     <h4><?php _e('Alphabetical Tag Cloud', 'tag-groups') ?></h4>
@@ -74,7 +74,7 @@
       <h4><?php _e('Example', 'tag-groups') ?></h4>
       <p>[tag_groups_alphabet_tabs exclude_letters="äöü"]</p>
       <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://documentation.chattymango.com/documentation/tag-groups/alphabetical-tag-cloud-tag-clouds-and-groups-info/alphabetical-tag-cloud-shortcode-parameters/?pk_campaign=tg&pk_kwd=documentation" target="_blank"') ?></p>
+      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/alphabetical-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
     </div>
 
     <h4><?php _e('Alphabetical Tag Index', 'tag-groups') ?></h4>
@@ -85,7 +85,7 @@
       <h4><?php _e('Example', 'tag-groups') ?></h4>
       <p>[tag_groups_alphabetical_index column_count=2 keep_together=0]</p>
       <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://documentation.chattymango.com/documentation/tag-groups/alphabetical-tag-index-tag-clouds-and-groups-info/alphabetical-tag-index-shortcode-parameters/?pk_campaign=tg&pk_kwd=documentation" target="_blank"') ?></p>
+      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/alphabetical-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
     </div>
     <?php echo $premium_shortcode_info ?>
 
@@ -96,7 +96,7 @@
       <h4><?php _e('Example', 'tag-groups') ?></h4>
       <p>[tag_groups_info group_id="all"]</p>
       <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://documentation.chattymango.com/documentation/tag-groups/tag-groups-info-tag-clouds-and-groups-info/tag-groups-info-shortcode-parameters/?pk_campaign=tg&pk_kwd=documentation" target="_blank"') ?></p>
+      <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tag-groups-info-shortcode-parameters/" target="_blank"') ?></p>
     </div>
   </div>
 

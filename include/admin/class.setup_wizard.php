@@ -174,7 +174,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                     break;
                 case 'finished':
                     $view = new TagGroups_View( 'admin/setup_wizard_finished' );
-                    $documentation_link = ( $is_premium ? 'https://documentation.chattymango.com/documentation/tag-groups-premium/?pk_campaign=tgp&pk_kwd=wizard' : 'https://documentation.chattymango.com/documentation/tag-groups/?pk_campaign=tg&pk_kwd=wizard' );
+                    $documentation_link = ( $is_premium ? 'https://documentation.chattymango.com/documentation/tag-groups-premium/?pk_campaign=tgp&pk_kwd=wizard' : 'https://taxopress.com/docs/how-do-i-change-the-styling-of-the-post-tags-under-the-posts/' );
                     $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
                     $taxonomy = array_shift( $enabled_taxonomies );
                     $view->set( array(
