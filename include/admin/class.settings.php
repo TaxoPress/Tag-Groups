@@ -6,6 +6,7 @@
 * @copyright   2018 Christoph Amthor (@ Chatty Mango, chattymango.com)
 * @license     GPL-3.0+
 */
+
 if ( !class_exists( 'TagGroups_Settings' ) ) {
     /**
      *
@@ -97,6 +98,11 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $tag_group_premium_first_activation_time = TagGroups_Options::get_option( 'tag_group_base_first_activation_time', 0 );
             $absolute_first_activation_time = ( $tag_group_base_first_activation_time < $tag_group_premium_first_activation_time ? $tag_group_base_first_activation_time : $tag_group_premium_first_activation_time );
             self::add_settings_help();
+            ?>
+            <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
+                <div class="pp-column-left">
+            <?php
+
             $alerts = array();
 
             if ( 'all' == TagGroups_WPML::get_current_language() ) {
@@ -154,6 +160,15 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                 'taxonomy_infos' => $taxonomy_infos,
             ) );
             $view->render();
+            ?>
+            </div>
+            <?php if (!TagGroups_Utilities::is_premium_plan()) : ?>
+                <div class="pp-column-right">
+                    <?php do_action('tag_groups_settings_right_sidebar'); ?>
+                </div>
+            <?php endif; ?>
+          </div>
+          <?php
             self::add_footer();
         }
 
@@ -178,22 +193,35 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $tabs['taxonomies'] = '';
             $tabs = apply_filters( 'tag_groups_settings_taxonomies_tabs', $tabs );
             $active_tab = self::get_active_tab( $tabs );
-            self::add_tabs( 'tag-groups-settings-taxonomies', $tabs, $active_tab );
-            switch ( $active_tab ) {
-                case 'taxonomies':
-                    $view = new TagGroups_View( 'admin/settings_taxonomies' );
-                    $view->set( array(
-                        'public_taxonomies'  => $public_taxonomies,
-                        'enabled_taxonomies' => $enabled_taxonomies,
-                    ) );
-                    $view->render();
-                    break;
-                default:
-                    if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
-                        TagGroups_Premium_Settings::get_content( $active_tab );
+            ?>
+            <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
+                <div class="pp-column-left">
+                    <?php
+                    self::add_tabs( 'tag-groups-settings-taxonomies', $tabs, $active_tab );
+                    switch ( $active_tab ) {
+                        case 'taxonomies':
+                            $view = new TagGroups_View( 'admin/settings_taxonomies' );
+                            $view->set( array(
+                                'public_taxonomies'  => $public_taxonomies,
+                                'enabled_taxonomies' => $enabled_taxonomies,
+                            ) );
+                            $view->render();
+                            break;
+                        default:
+                            if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
+                                TagGroups_Premium_Settings::get_content( $active_tab );
+                            }
+                            break;
                     }
-                    break;
-            }
+                    ?>
+                </div>
+                <?php if (!TagGroups_Utilities::is_premium_plan()) : ?>
+                    <div class="pp-column-right">
+                        <?php do_action('tag_groups_settings_right_sidebar'); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <?php
             self::add_footer();
         }
 
@@ -221,46 +249,59 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             }
             $tabs = apply_filters( 'tag_groups_settings_back_end_tabs', $tabs );
             $active_tab = self::get_active_tab( $tabs );
-            self::add_tabs( 'tag-groups-settings-back-end', $tabs, $active_tab );
-            switch ( $active_tab ) {
-                case 'filters':
-                    $show_filter_posts = TagGroups_Options::get_option( 'tag_group_show_filter', 1 );
-                    $show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 );
-                    $view = new TagGroups_View( 'admin/settings_back_end_filters' );
-                    $view->set( array(
-                        'show_filter_posts' => $show_filter_posts,
-                        'show_filter_tags'  => $show_filter_tags,
-                    ) );
-                    $view->render();
-                    break;
-                    // filters
-                // filters
-                case 'gutenberg':
-                    $tag_group_server_side_render = TagGroups_Options::get_option( 'tag_group_server_side_render', 1 );
-                    $view = new TagGroups_View( 'admin/settings_back_end_gutenberg' );
-                    $view->set( array(
-                        'tag_group_server_side_render' => $tag_group_server_side_render,
-                    ) );
-                    $view->render();
-                    break;
-                    // gutenberg
-                // gutenberg
-                case 'multilingual':
-                    $tag_group_multilingual_sync_groups = TagGroups_Options::get_option( 'tag_group_multilingual_sync_groups', 1 );
-                    $view = new TagGroups_View( 'admin/settings_back_end_multilingual' );
-                    $view->set( array(
-                        'tag_group_multilingual_sync_groups' => $tag_group_multilingual_sync_groups,
-                    ) );
-                    $view->render();
-                    break;
-                    // gutenberg
-                // gutenberg
-                default:
-                    if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
-                        TagGroups_Premium_Settings::get_content( $active_tab );
+            ?>
+            <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
+                <div class="pp-column-left">
+                    <?php
+                    self::add_tabs( 'tag-groups-settings-back-end', $tabs, $active_tab );
+                    switch ( $active_tab ) {
+                        case 'filters':
+                            $show_filter_posts = TagGroups_Options::get_option( 'tag_group_show_filter', 1 );
+                            $show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 );
+                            $view = new TagGroups_View( 'admin/settings_back_end_filters' );
+                            $view->set( array(
+                                'show_filter_posts' => $show_filter_posts,
+                                'show_filter_tags'  => $show_filter_tags,
+                            ) );
+                            $view->render();
+                            break;
+                            // filters
+                        // filters
+                        case 'gutenberg':
+                            $tag_group_server_side_render = TagGroups_Options::get_option( 'tag_group_server_side_render', 1 );
+                            $view = new TagGroups_View( 'admin/settings_back_end_gutenberg' );
+                            $view->set( array(
+                                'tag_group_server_side_render' => $tag_group_server_side_render,
+                            ) );
+                            $view->render();
+                            break;
+                            // gutenberg
+                        // gutenberg
+                        case 'multilingual':
+                            $tag_group_multilingual_sync_groups = TagGroups_Options::get_option( 'tag_group_multilingual_sync_groups', 1 );
+                            $view = new TagGroups_View( 'admin/settings_back_end_multilingual' );
+                            $view->set( array(
+                                'tag_group_multilingual_sync_groups' => $tag_group_multilingual_sync_groups,
+                            ) );
+                            $view->render();
+                            break;
+                            // gutenberg
+                        // gutenberg
+                        default:
+                            if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
+                                TagGroups_Premium_Settings::get_content( $active_tab );
+                            }
+                            break;
                     }
-                    break;
-            }
+                    ?>
+                </div>
+                <?php if (!TagGroups_Utilities::is_premium_plan()) : ?>
+                    <div class="pp-column-right">
+                        <?php do_action('tag_groups_settings_right_sidebar'); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <?php
             self::add_footer();
         }
 
@@ -291,47 +332,60 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $tabs['themes'] = __( 'Themes and Appearance', 'tag-groups' );
             $tabs = apply_filters( 'tag_groups_settings_front_end_tabs', $tabs );
             $active_tab = self::get_active_tab( $tabs );
-            self::add_tabs( 'tag-groups-settings-front-end', $tabs, $active_tab );
-            switch ( $active_tab ) {
-                case 'shortcodes':
-                    /**
-                     * Let the premium plugin add own shortcode information.
-                     */
-                    $premium_shortcode_info = apply_filters( 'tag_groups_hook_shortcodes', '' );
-                    $view = new TagGroups_View( 'admin/settings_front_end_shortcodes' );
-                    $gutenberg_documentation_link = 'https://documentation.chattymango.com/documentation/tag-groups/tag-clouds-and-groups-info/using-gutenberg/?pk_campaign=tg&pk_kwd=settings';
-                    $view->set( array(
-                        'premium_shortcode_info'             => $premium_shortcode_info,
-                        'tag_group_shortcode_enqueue_always' => $tag_group_shortcode_enqueue_always,
-                        'tag_group_shortcode_widget'         => $tag_group_shortcode_widget,
-                        'gutenberg_documentation_link'       => $gutenberg_documentation_link,
-                    ) );
-                    $view->render();
-                    break;
-                case 'themes':
-                    $tag_group_html_description_options = array(
-                        0 => __( 'remove', 'tag-groups' ) . ' ' . __( '(recommended)', 'tag-groups' ),
-                        1 => __( 'keep', 'tag-groups' ),
-                        2 => __( 'use unfiltered_html filter', 'tag-groups' ),
-                    );
-                    $view = new TagGroups_View( 'admin/settings_front_end_themes' );
-                    $view->set( array(
-                        'default_themes'                     => $default_themes,
-                        'tag_group_theme'                    => $tag_group_theme,
-                        'tag_group_enqueue_jquery'           => $tag_group_enqueue_jquery,
-                        'tag_group_mouseover'                => $tag_group_mouseover,
-                        'tag_group_collapsible'              => $tag_group_collapsible,
-                        'tag_group_html_description'         => $tag_group_html_description,
-                        'tag_group_html_description_options' => $tag_group_html_description_options,
-                    ) );
-                    $view->render();
-                    break;
-                default:
-                    if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
-                        TagGroups_Premium_Settings::get_content( $active_tab );
+            ?>
+            <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
+                <div class="pp-column-left">
+                    <?php
+                    self::add_tabs( 'tag-groups-settings-front-end', $tabs, $active_tab );
+                    switch ( $active_tab ) {
+                        case 'shortcodes':
+                            /**
+                             * Let the premium plugin add own shortcode information.
+                             */
+                            $premium_shortcode_info = apply_filters( 'tag_groups_hook_shortcodes', '' );
+                            $view = new TagGroups_View( 'admin/settings_front_end_shortcodes' );
+                            $gutenberg_documentation_link = 'https://documentation.chattymango.com/documentation/tag-groups/tag-clouds-and-groups-info/using-gutenberg/?pk_campaign=tg&pk_kwd=settings';
+                            $view->set( array(
+                                'premium_shortcode_info'             => $premium_shortcode_info,
+                                'tag_group_shortcode_enqueue_always' => $tag_group_shortcode_enqueue_always,
+                                'tag_group_shortcode_widget'         => $tag_group_shortcode_widget,
+                                'gutenberg_documentation_link'       => $gutenberg_documentation_link,
+                            ) );
+                            $view->render();
+                            break;
+                        case 'themes':
+                            $tag_group_html_description_options = array(
+                                0 => __( 'remove', 'tag-groups' ) . ' ' . __( '(recommended)', 'tag-groups' ),
+                                1 => __( 'keep', 'tag-groups' ),
+                                2 => __( 'use unfiltered_html filter', 'tag-groups' ),
+                            );
+                            $view = new TagGroups_View( 'admin/settings_front_end_themes' );
+                            $view->set( array(
+                                'default_themes'                     => $default_themes,
+                                'tag_group_theme'                    => $tag_group_theme,
+                                'tag_group_enqueue_jquery'           => $tag_group_enqueue_jquery,
+                                'tag_group_mouseover'                => $tag_group_mouseover,
+                                'tag_group_collapsible'              => $tag_group_collapsible,
+                                'tag_group_html_description'         => $tag_group_html_description,
+                                'tag_group_html_description_options' => $tag_group_html_description_options,
+                            ) );
+                            $view->render();
+                            break;
+                        default:
+                            if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
+                                TagGroups_Premium_Settings::get_content( $active_tab );
+                            }
+                            break;
                     }
-                    break;
-            }
+                    ?>
+                </div>
+                <?php if (!TagGroups_Utilities::is_premium_plan()) : ?>
+                    <div class="pp-column-right">
+                        <?php do_action('tag_groups_settings_right_sidebar'); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <?php
             self::add_footer();
         }
 
@@ -360,135 +414,148 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $tabs['reset'] = __( 'Reset', 'tag-groups' );
             $tabs = apply_filters( 'tag_groups_settings_tools_tabs', $tabs );
             $active_tab = self::get_active_tab( $tabs );
-            self::add_tabs( 'tag-groups-settings-tools', $tabs, $active_tab );
-            switch ( $active_tab ) {
+            ?>
+            <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
+                <div class="pp-column-left">
+                    <?php
+                    self::add_tabs( 'tag-groups-settings-tools', $tabs, $active_tab );
+                    switch ( $active_tab ) {
 
-                case 'first-aid':
+                        case 'first-aid':
 
-                    if ( !empty($_GET['process-tasks']) ) {
-                        self::add_html_process();
-                    } else {
-                        $view = new TagGroups_View( 'admin/settings_troubleshooting_first_aid' );
-                        $view->set( 'tasks_migration', 'migratetermmeta' );
-                        $view->set( 'tasks_maintenance', 'fixgroups,fixmissinggroups,sortgroups' );
-                        $view->set( 'tag_group_show_filter_tags', TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 ) );
-                        $view->render();
-                    }
+                            if ( !empty($_GET['process-tasks']) ) {
+                                self::add_html_process();
+                            } else {
+                                $view = new TagGroups_View( 'admin/settings_troubleshooting_first_aid' );
+                                $view->set( 'tasks_migration', 'migratetermmeta' );
+                                $view->set( 'tasks_maintenance', 'fixgroups,fixmissinggroups,sortgroups' );
+                                $view->set( 'tag_group_show_filter_tags', TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 ) );
+                                $view->render();
+                            }
 
-                    break;
-                case 'system':
-                    $phpversion = phpversion();
+                            break;
+                        case 'system':
+                            $phpversion = phpversion();
 
-                    if ( version_compare( $phpversion, '7.0.0', '<' ) ) {
-                        $php_upgrade_recommendation = true;
-                    } else {
-                        $php_upgrade_recommendation = false;
-                    }
+                            if ( version_compare( $phpversion, '7.0.0', '<' ) ) {
+                                $php_upgrade_recommendation = true;
+                            } else {
+                                $php_upgrade_recommendation = false;
+                            }
 
-                    $active_theme = wp_get_theme();
-                    $protocol = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' );
-                    $ajax_test_url = admin_url( 'admin-ajax.php', $protocol );
-                    /* constants */
-                    $wp_constants = array(
-                        'WP_DEBUG',
-                        'WP_DEBUG_DISPLAY',
-                        'WP_DEBUG_LOG',
-                        'ABSPATH',
-                        // 'WP_HOME',
-                        'MULTISITE',
-                        'WP_CACHE',
-                        'COMPRESS_SCRIPTS',
-                        // 'FS_CHMOD_DIR',
-                        // 'FS_CHMOD_FILE',
-                        'FORCE_SSL_ADMIN',
-                        'CM_UPDATE_CHECK',
-                        'WP_MEMORY_LIMIT',
-                        'WP_MAX_MEMORY_LIMIT',
-                    );
-                    sort( $wp_constants );
-                    $constants = get_defined_constants();
-                    foreach ( $constants as &$constant ) {
-                        if ( isset( $constant ) ) {
-                            $constant = self::echo_var( $constant );
-                        }
+                            $active_theme = wp_get_theme();
+                            $protocol = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' );
+                            $ajax_test_url = admin_url( 'admin-ajax.php', $protocol );
+                            /* constants */
+                            $wp_constants = array(
+                                'WP_DEBUG',
+                                'WP_DEBUG_DISPLAY',
+                                'WP_DEBUG_LOG',
+                                'ABSPATH',
+                                // 'WP_HOME',
+                                'MULTISITE',
+                                'WP_CACHE',
+                                'COMPRESS_SCRIPTS',
+                                // 'FS_CHMOD_DIR',
+                                // 'FS_CHMOD_FILE',
+                                'FORCE_SSL_ADMIN',
+                                'CM_UPDATE_CHECK',
+                                'WP_MEMORY_LIMIT',
+                                'WP_MAX_MEMORY_LIMIT',
+                            );
+                            sort( $wp_constants );
+                            $constants = get_defined_constants();
+                            foreach ( $constants as &$constant ) {
+                                if ( isset( $constant ) ) {
+                                    $constant = self::echo_var( $constant );
+                                }
+                            }
+                            ksort( $constants );
+                            $benchmarks = array();
+                            $benchmark['name'] = 'Database: tags (1000x read)';
+                            $group_ids = $tag_group_groups->get_group_ids();
+                            $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
+                            $start_time = microtime( TRUE );
+                            for ( $i = 0 ;  $i < 1000 ;  $i++ ) {
+                                $group_id = $group_ids[array_rand( $group_ids )];
+                                $tg_group = new TagGroups_Group( $group_id );
+                                $group_terms_ids_dummy = $tg_group->get_group_terms( $enabled_taxonomies, false, 'ids' );
+                            }
+                            $benchmark['value'] = sprintf( '%d ms', 1000 * (microtime( TRUE ) - $start_time) );
+                            $benchmarks[] = $benchmark;
+                            /**
+                             * Prepare the cache here so that we can test if it persists beyond seesions
+                             */
+                            $tag_group_object_cache = TagGroups_Options::get_option( 'tag_group_object_cache', TagGroups_Object_Cache::WP_TRANSIENTS );
+                            $object_cache_options = array(
+                                1 => __( 'Transients', 'tag-groups' ),
+                                2 => __( 'Database', 'tag-groups' ),
+                                3 => __( 'Filesystem', 'tag-groups' ),
+                                9 => __( 'WP Object Cache', 'tag-groups' ),
+                            );
+                            $cache_key = md5( 'benchmark' );
+                            foreach ( $object_cache_options as $object_cache_option_id => $object_cache_option_name ) {
+                                TagGroups_Options::update_option( 'tag_group_object_cache', $object_cache_option_id );
+                                do_action( 'tag_groups_hook_cache_set', $cache_key . '-efficacy-test', '' );
+                            }
+                            TagGroups_Options::update_option( 'tag_group_object_cache', $tag_group_object_cache );
+                            if ( !defined( 'TAG_GROUPS_PLUGIN_IS_FREE' ) || !TAG_GROUPS_PLUGIN_IS_FREE ) {
+                            }
+                            global  $wpdb ;
+                            $db_info = $wpdb->db_server_info();
+                            if ( empty($db_info) ) {
+                                $db_info = 'unknown';
+                            }
+                            $view = new TagGroups_View( 'admin/settings_troubleshooting_system' );
+                            $view->set( array(
+                                'phpversion'                 => $phpversion,
+                                'php_upgrade_recommendation' => $php_upgrade_recommendation,
+                                'db_info'                    => $db_info,
+                                'wp_constants'               => $wp_constants,
+                                'constants'                  => $constants,
+                                'ajax_test_url'              => $ajax_test_url,
+                                'active_theme'               => $active_theme,
+                                'benchmarks'                 => $benchmarks
+                            ) );
+                            $view->render();
+                            break;
+                        case 'debug':
+                            $help_url = 'https://taxopress.com/docs/how-to-use-the-debug-log/';
+                            $view = new TagGroups_View( 'admin/settings_troubleshooting_debug' );
+                            $verbose_is_on_hardcoded = defined( 'CM_DEBUG' ) && strtolower( CM_DEBUG ) == 'verbose';
+                            $verbose_is_on_option = (bool) TagGroups_Options::get_option( 'tag_group_verbose_debug', 0 );
+                            $view->set( array(
+                                'debug_is_on'             => defined( 'WP_DEBUG' ) && WP_DEBUG,
+                                'verbose_is_on'           => defined( 'CM_DEBUG' ) && $verbose_is_on_hardcoded || $verbose_is_on_option,
+                                'help_url'                => $help_url,
+                                'verbose_is_on_hardcoded' => $verbose_is_on_hardcoded,
+                            ) );
+                            $view->render();
+                            break;
+                        case 'export_import':
+                            $view = new TagGroups_View( 'admin/settings_tools_export_import' );
+                            $view->render();
+                            break;
+                        case 'reset':
+                            $view = new TagGroups_View( 'admin/settings_tools_reset' );
+                            $view->set( 'tag_group_reset_when_uninstall', $tag_group_reset_when_uninstall );
+                            $view->render();
+                            break;
+                        default:
+                            if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
+                                TagGroups_Premium_Settings::get_content( $active_tab );
+                            }
+                            break;
                     }
-                    ksort( $constants );
-                    $benchmarks = array();
-                    $benchmark['name'] = 'Database: tags (1000x read)';
-                    $group_ids = $tag_group_groups->get_group_ids();
-                    $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
-                    $start_time = microtime( TRUE );
-                    for ( $i = 0 ;  $i < 1000 ;  $i++ ) {
-                        $group_id = $group_ids[array_rand( $group_ids )];
-                        $tg_group = new TagGroups_Group( $group_id );
-                        $group_terms_ids_dummy = $tg_group->get_group_terms( $enabled_taxonomies, false, 'ids' );
-                    }
-                    $benchmark['value'] = sprintf( '%d ms', 1000 * (microtime( TRUE ) - $start_time) );
-                    $benchmarks[] = $benchmark;
-                    /**
-                     * Prepare the cache here so that we can test if it persists beyond seesions
-                     */
-                    $tag_group_object_cache = TagGroups_Options::get_option( 'tag_group_object_cache', TagGroups_Object_Cache::WP_TRANSIENTS );
-                    $object_cache_options = array(
-                        1 => __( 'Transients', 'tag-groups' ),
-                        2 => __( 'Database', 'tag-groups' ),
-                        3 => __( 'Filesystem', 'tag-groups' ),
-                        9 => __( 'WP Object Cache', 'tag-groups' ),
-                    );
-                    $cache_key = md5( 'benchmark' );
-                    foreach ( $object_cache_options as $object_cache_option_id => $object_cache_option_name ) {
-                        TagGroups_Options::update_option( 'tag_group_object_cache', $object_cache_option_id );
-                        do_action( 'tag_groups_hook_cache_set', $cache_key . '-efficacy-test', '' );
-                    }
-                    TagGroups_Options::update_option( 'tag_group_object_cache', $tag_group_object_cache );
-                    if ( !defined( 'TAG_GROUPS_PLUGIN_IS_FREE' ) || !TAG_GROUPS_PLUGIN_IS_FREE ) {
-                    }
-                    global  $wpdb ;
-                    $db_info = $wpdb->db_server_info();
-                    if ( empty($db_info) ) {
-                        $db_info = 'unknown';
-                    }
-                    $view = new TagGroups_View( 'admin/settings_troubleshooting_system' );
-                    $view->set( array(
-                        'phpversion'                 => $phpversion,
-                        'php_upgrade_recommendation' => $php_upgrade_recommendation,
-                        'db_info'                    => $db_info,
-                        'wp_constants'               => $wp_constants,
-                        'constants'                  => $constants,
-                        'ajax_test_url'              => $ajax_test_url,
-                        'active_theme'               => $active_theme,
-                        'benchmarks'                 => $benchmarks
-                    ) );
-                    $view->render();
-                    break;
-                case 'debug':
-                    $help_url = 'https://taxopress.com/docs/how-to-use-the-debug-log/';
-                    $view = new TagGroups_View( 'admin/settings_troubleshooting_debug' );
-                    $verbose_is_on_hardcoded = defined( 'CM_DEBUG' ) && strtolower( CM_DEBUG ) == 'verbose';
-                    $verbose_is_on_option = (bool) TagGroups_Options::get_option( 'tag_group_verbose_debug', 0 );
-                    $view->set( array(
-                        'debug_is_on'             => defined( 'WP_DEBUG' ) && WP_DEBUG,
-                        'verbose_is_on'           => defined( 'CM_DEBUG' ) && $verbose_is_on_hardcoded || $verbose_is_on_option,
-                        'help_url'                => $help_url,
-                        'verbose_is_on_hardcoded' => $verbose_is_on_hardcoded,
-                    ) );
-                    $view->render();
-                    break;
-                case 'export_import':
-                    $view = new TagGroups_View( 'admin/settings_tools_export_import' );
-                    $view->render();
-                    break;
-                case 'reset':
-                    $view = new TagGroups_View( 'admin/settings_tools_reset' );
-                    $view->set( 'tag_group_reset_when_uninstall', $tag_group_reset_when_uninstall );
-                    $view->render();
-                    break;
-                default:
-                    if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
-                        TagGroups_Premium_Settings::get_content( $active_tab );
-                    }
-                    break;
-            }
+                    ?>
+                </div>
+                <?php if (!TagGroups_Utilities::is_premium_plan()) : ?>
+                    <div class="pp-column-right">
+                        <?php do_action('tag_groups_settings_right_sidebar'); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <?php
             self::add_footer();
         }
 
