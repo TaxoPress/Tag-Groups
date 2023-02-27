@@ -1,7 +1,8 @@
 {
     "name": "taxopress/tag-groups",
     "require": {
-        "publishpress/wordpress-version-notices": "^1.1"
+        "publishpress/wordpress-version-notices": "^1.1",
+        "publishpress/wordpress-banners": "^1.2"
     },
     "scripts": {
       "build": "builder/docker/scripts/build build",

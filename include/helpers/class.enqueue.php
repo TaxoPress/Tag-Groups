@@ -143,6 +143,8 @@ if ( ! class_exists( 'TagGroups_Enqueue' ) ) {
 
         wp_enqueue_script( 'tag-groups-sumoselect-js' );
 
+        wp_enqueue_style( 'pp-wordpress-banners-style', TAG_GROUPS_PLUGIN_URL . '/vendor/publishpress/wordpress-banners/assets/css/style.css', false, TAG_GROUPS_VERSION );
+
         
         $this->load_sumoselect_css();
       
