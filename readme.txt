@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=ZNEH34AN2TLUS
 Tags: alphabet, tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce, first letter, initials
 Requires at least: 4.9
 Tested up to: 6.0.1
-Stable tag: 1.44.3
+Stable tag: 2.0.0
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -157,6 +157,16 @@ This plugin does not collect or process any personal user data unless you expres
 
 == Changelog ==
 
+= [2.0.0] - 28 Feb 2023 =
+* Update: TaxoPress Move and General cleanup
+* Update: Added Pro sidebar, #24
+* Update: Documentation link updates, #22
+* Update: Remove the icons in Gutenberg blocks, #15
+* Update: Merge the Tools and Troubleshooting tabs, #12
+* Update: Remove 3 tabs from Troubleshooting, #11
+* Update: Remove the "About" menu, #10
+* Update: Remove freemius dependency, #8
+
 
 ### 1.44.3 ###
 
@@ -179,12 +189,6 @@ This plugin does not collect or process any personal user data unless you expres
 = Bug Fixes =
 
 * Fixing parameter "header_class" of Alphabetical Tag Index.
-
-= Older Versions =
-
-The complete changelog is available [here](https://chattymango.com/changelog/tag-groups-free/?pk_campaign=tg&pk_kwd=readme).
-
-
 
 == Upgrade Notice ==
 
