@@ -1,0 +1,16 @@
+{
+    "name": "taxopress/tag-groups",
+    "require": {
+        "publishpress/wordpress-version-notices": "^1.1",
+        "publishpress/wordpress-banners": "^1.2"
+    },
+    "scripts": {
+      "build": "builder/docker/scripts/build build",
+      "build-unpacked": "builder/docker/scripts/build build-dir"
+    },
+    "extra": {
+      "plugin-name": "tag-groups",
+      "plugin-slug": "tag-groups",
+      "plugin-folder": "tag-groups"
+    }
+}

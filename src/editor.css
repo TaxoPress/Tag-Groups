@@ -1,0 +1,112 @@
+/** Editor Styles */
+.chatty-mango-help-icon {
+  margin-left: 5px;
+}
+.chatty-mango-inspector-control .blocks-plain-text {
+  margin-bottom: 10px;
+}
+.chatty-mango-inspector-control .block-editor-plain-text {
+  border: 1px solid #666;
+  background: #eee;
+  padding: 1px;
+  margin-bottom: 10px;
+}
+.chatty-mango-inspector-control .Select-control {
+  margin-bottom: 10px;
+}
+.chatty-mango-inspector-control .Select-menu-outer {
+  z-index: 99999;
+}
+.chatty-mango-inspector-control .tg_space_below {
+  margin-bottom: 10px;
+}
+.chatty-mango-editor {
+  clear: both;
+}
+.chatty-mango-editor .cm-gutenberg.dashicons-before::before {
+  line-height: 30px;
+  margin-right: 5px;
+}
+.chatty-mango-help-transform {
+  background-color: #edeff0;
+  padding: 7px;
+}
+.chatty-mango-editor {
+  font-size: 16px;
+  font-family: arial, helvetica;
+  line-height: 1.5em;
+}
+.chatty-mango-editor-title {
+  font-size: 20px !important;
+  font-family: arial, helvetica;
+  margin: 0 0 10px !important;
+}
+.cm-three-line-input {
+  min-height: 50px;
+  padding: 5px;
+}
+.chatty-mango-editor-block {
+  display: inline-block;
+  max-width: 80%;
+}
+.chatty-mango-inspector-control .cm-border {
+  border: 1px solid #555 !important;
+}
+.chatty-mango-inspector-control label {
+  padding-bottom: 10px;
+}
+.chatty-mango-not-active-all,
+.chatty-mango-not-active .ui-tabs-panel,
+.chatty-mango-not-active .ui-accordion-content,
+.chatty-mango-not-active .tag-groups-alphabetical-index,
+.chatty-mango-not-active .tag-groups-tag-list,
+.chatty-mango-not-active .tg_dpf_menu_item,
+.chatty-mango-not-active .tg_group_dpf_toggle_group_container,
+.chatty-mango-not-active .tg_dpf_text_search_container {
+  pointer-events: none;
+  cursor: default;
+}
+.chatty-mango-alert {
+  background-color: #feb;
+}
+.chatty-mango-inspector-help {
+  background-color: #edeff0;
+  padding: 7px;
+}
+.ui-accordion .editor-styles-wrapper .wp-block h3 {
+  margin-top: 0;
+  margin-bottom: 9;
+}
+.chatty-mango-overflow-auto {
+  overflow: auto;
+}
+.chatty-mango-watermark {
+  position: absolute;
+  top: 50px;
+  left: 10%;
+  font-weight: bold;
+  font-size: 72px;
+  opacity: 0.1;
+  font-family: Verdana, Geneva, sans-serif;
+}
+/* fix Twenty Twenty weirdness */
+.ui-accordion h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+/* fix Twenty Eleven weirdness */
+.ui-tabs ul {
+  margin-bottom: 0 !important;
+}
+/* fix Twenty Sixteen weirdness */
+.ui-tabs .ui-tabs-nav li {
+  margin-bottom: 1px !important;
+}
+.chatty-mango-faded {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #999;
+  margin: 5px;
+  color: #999;
+  font-size: 16px;
+}
