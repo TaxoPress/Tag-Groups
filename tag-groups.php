@@ -6,7 +6,7 @@
  * Description: Organize your tags in groups or by alphabet. Show tag clouds with many options in posts, pages or widgets (tabs, accordion or list).
  * Author: TaxoPress
  * Author URI: https://taxopress.com
- * Version: 1.44.3
+ * Version: 2.0.0
  * License: GNU GENERAL PUBLIC LICENSE, Version 3
  * Text Domain: tag-groups
  * Domain Path: /languages
