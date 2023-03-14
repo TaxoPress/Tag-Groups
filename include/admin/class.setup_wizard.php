@@ -34,11 +34,11 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
             if ( defined( 'TAG_GROUPS_PLUGIN_IS_FREE' ) && TAG_GROUPS_PLUGIN_IS_FREE ) {
                 $title = 'Tag Groups';
                 $documentation_link = 'https://documentation.chattymango.com/documentation/tag-groups/';
-                $logo = '<img src="' . TAG_GROUPS_PLUGIN_URL . '/assets/images/cm-tg-icon-64x64.png" alt="Tag Groups logo" class="tg_onboarding_logo"/>';
+                $logo = '';
             } else {
                 $title = 'Tag Groups Premium';
                 $documentation_link = 'https://documentation.chattymango.com/documentation/tag-groups-premium/';
-                $logo = '<img src="' . TAG_GROUPS_PLUGIN_URL . '/assets/images/cm-tgp-icon-64x64.png" alt="Tag Groups Premium logo" class="tg_onboarding_logo"/>';
+                $logo = '';
             }
 
             $view = new TagGroups_View( 'admin/onboarding' );
