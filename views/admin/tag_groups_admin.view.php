@@ -61,6 +61,7 @@
   tagGroupsLabels.placeholder_new = '<?php _e( 'label', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_delete = '<?php _e( 'Delete this group.', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_newbelow = '<?php _e( 'Create a new group below.', 'tag-groups' ) ?>';
+  tagGroupsLabels.tooltip_addnew = '<?php _e( 'Add New', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_move_up = '<?php _e( 'move up', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_move_down = '<?php _e( 'move down', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_reload = '<?php _e( 'reload', 'tag-groups' ) ?>';
