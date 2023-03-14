@@ -184,12 +184,20 @@ function tg_do_ajax(tg_params, send_data, labels) {
                 labels.tooltip_delete +
                 '"></span>';
               if (!showParents || !data_set.is_parent) {
+                output += '<span title="' +
+                labels.tooltip_newbelow +
+                '">';
                 output +=
-                  '<span class="tg_pointer dashicons dashicons-plus-alt" title="' +
-                  labels.tooltip_newbelow +
-                  '" onclick="tg_toggle_clear(' +
+                  '<span class="tg_pointer dashicons dashicons-plus-alt" onclick="tg_toggle_clear(' +
                   data_set.position +
                   ')" style="margin-left:5px;"></span>';
+                  output +=
+                    '<span class="tg_pointer" onclick="tg_toggle_clear(' +
+                    data_set.position +
+                    ')" style="margin-left:5px;">' +
+                    labels.tooltip_addnew +
+                    '</span>';
+                  output += '</span>';
               }
               output += '</td>\n';
               output += '<td class="tg_hide_when_drag">';
