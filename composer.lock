@@ -62,27 +62,22 @@
         },
         {
             "name": "psr/container",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.2.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -95,7 +90,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common Container Interface (PHP FIG PSR-11)",
@@ -109,9 +104,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/master"
+                "source": "https://github.com/php-fig/container/tree/1.1.1"
             },
-            "time": "2017-02-14T16:28:37+00:00"
+            "time": "2021-03-05T17:36:06+00:00"
         },
         {
             "name": "publishpress/wordpress-banners",
@@ -156,22 +151,22 @@
         },
         {
             "name": "publishpress/wordpress-version-notices",
-            "version": "1.1.4",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/publishpress/WordPress-Version-Notices.git",
-                "reference": "a46b552ac4cbec26d743307611e5dd8d56f80a57"
+                "reference": "d6cf043f550ff9ec5a8d767f26b6a78ffec05141"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/publishpress/WordPress-Version-Notices/zipball/a46b552ac4cbec26d743307611e5dd8d56f80a57",
-                "reference": "a46b552ac4cbec26d743307611e5dd8d56f80a57",
+                "url": "https://api.github.com/repos/publishpress/WordPress-Version-Notices/zipball/d6cf043f550ff9ec5a8d767f26b6a78ffec05141",
+                "reference": "d6cf043f550ff9ec5a8d767f26b6a78ffec05141",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6.20",
+                "php": ">=7.2",
                 "pimple/pimple": "~3.2.0",
-                "psr/container": "~1.0.0"
+                "psr/container": "1.1.1"
             },
             "require-dev": {
                 "codeception/module-asserts": "^1.0",
@@ -207,9 +202,9 @@
             "description": "Library for displaying version notices for Pro plugins in WordPress.",
             "support": {
                 "issues": "https://github.com/publishpress/WordPress-Version-Notices/issues",
-                "source": "https://github.com/publishpress/WordPress-Version-Notices/tree/1.1.4"
+                "source": "https://github.com/publishpress/WordPress-Version-Notices/tree/1.2.0"
             },
-            "time": "2022-06-06T15:45:54+00:00"
+            "time": "2023-03-03T04:19:54+00:00"
         }
     ],
     "packages-dev": [],
