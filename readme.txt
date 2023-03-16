@@ -1,45 +1,93 @@
-=== WordPress Tag Cloud Plugin - Tag Groups ===
-Contributors: camthor
-Donate link: https://www.paypal.com/donate/?hosted_button_id=ZNEH34AN2TLUS
-Tags: alphabet, tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce, first letter, initials
+=== Tag Groups is the Advanced Way to Display Your Taxonomy Terms===
+Contributors: stevejburge, andergmartins, olatechpro, ojopaul
+Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
-Tested up to: 6.0.1
+Tested up to: 6.1.1
 Stable tag: 2.0.0
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
-The best WordPress plugin to organize your tags and display them in highly customizable tag clouds.
+Tag Groups allows you to organize your WordPress taxonomy terms and show them in clouds, tabs, accordions, tables, lists and much more.
 
 == Description ==
 
-Tag Groups lets you organize your WordPress tags in groups or by alphabet and display them in tag clouds (tabs or accordion) or tag lists. You can customize them with a huge number of options and use them in posts, pages or widgets.
+The Tag Groups plugin allows you to organize your WordPress taxonomy terms and show them in clouds, tabs, accordions, tables, lists and much more. You can customize your term displays with a huge number of options and use them in posts, pages, blocks, or shortcodes.
 
-## <a href="https://demo.chattymango.com/tag-groups-free-demo-page/?pk_campaign=tg&pk_kwd=readme" target="_blank">★ Try The Demo ★</a> ##
+== All the Features in Tag Groups ==
 
-<a href="https://chattymango.com/tag-groups/?pk_campaign=tg&pk_kwd=readme" target="_blank">Features</a> | <a href="https://documentation.chattymango.com/documentation/tag-groups/?pk_campaign=tg&pk_kwd=readme" target="_blank">Documentation</a> | <a href="https://chattymango.com/?redirect_to=latest&cat=3&pk_campaign=tg&pk_kwd=readme" target="_blank">Latest Development Blog Post</a>
+The Free version of the Tag Groups plugin comes with the following features. All of these features are available as both shortcodes and also Gutenberg blocks.
 
-== Finally, the end of messy tags ==
+* **Tag List:** Tags appear in columns, sorted into groups. [View demos](https://demo.taxopress.com/tag-list/).
+* **Tabbed Tag Cloud:** A tag cloud where tags are sorted into groups that appear in tabs. [View demos](https://demo.taxopress.com/tabbed-tag-cloud/).
+* **Accordion Tag Cloud:** A tag cloud where tags are sorted into vertically stacked accordion groups. [View demos](https://demo.taxopress.com/accordion-tab-cloud/).
+* **Alphabetical Tag Cloud:** Tags are sorted alphabetically by first letter under tabs. [View demos](https://demo.taxopress.com/alphabetical-tabs/).
+* **Alphabetical Tag Index:** Tag appear in columns, sorted alphabetically by first letter. [View demos](https://demo.taxopress.com/alphabetical-index/).
+* **Post List:** Display posts with a specific tag or in a particular tag group. [View demos](https://demo.taxopress.com/post-list/).
 
-This plugin comes with the following features:
+The Pro version of the Tag Groups plugin also has these extra features:
 
-* **Tabbed Tag Cloud:** A tag cloud where tags are sorted into groups that appear in tabs.
-* **Accordion Tag Cloud:** A tag cloud where tags are sorted into vertically stacked groups.
-* **Tag List:** Tags are appear in columns, sorted into groups.
-* **Alphabetical Tag Cloud:** Tag are sorted alphabetically by first letter under tabs.
-* **Alphabetical Tag Index:** Tag appear in columns, sorted alphabetically by first letter.
+* **Tag Cloud:** This is an advanced version of a traditional Tag Cloud, with many customization options. [View demos](https://demo.taxopress.com/cloud/).
+* **Table Tag Cloud:** This feature organizes tags in a table, with groups as headers. [View demos](https://demo.taxopress.com/table-tag-cloud/).
+* **Shuffle Box:** This is a tag cloud that allows you to filter the tags by their names or by their tag groups. [View demos](https://demo.taxopress.com/shuffle-box/).
+* **Tag Cloud Search**: Add a search box to any of our static tag displays: Cloud, Tabs, Accordion, or Table. [View demos](https://demo.taxopress.com/tag-cloud-search/).
+* **Toggle Post Filter**: This allows users to dynamically search for posts that have tags they choose. [View demos](https://demo.taxopress.com/post-filter-tags-menu/).
+* **Dynamic Post Filter**: This aallows users to dynamically search for posts via a dropdown menu showing tags. [View demos](https://demo.taxopress.com/post-filter-dropdown-menu/).
 
-All features are available as **shortcodes** and as **Gutenberg blocks**. Choose whatever suits you best!
+## Tag Groups Pro ##
 
-Tag clouds and lists work out of the box, but you can also customize them, append or prepend something to each tag, set a separator, set the link target, set the smallest and the largest font size, display the post count and much more.
+> <strong>Upgrade to Tag Groups Pro</strong><br />
+> This plugin is the free version of TaxoPress. The Pro version of Tag Groups has extra features and expert support. <a href="https://taxopress.com/tag-groups" title="Tag Groups Pro">Click here to organize your terms with the Tag Groups Pro plugin now!</a>
 
-== Why your web site will benefit from organizing your tags into groups ==
+== Why Organize Terms Into Groups? ==
 
-Most WordPress sites mix up tags that should actually be separated by topics: places, people, features, years and more.
+Most WordPress sites mix up terms into one big messy group. In most cases, terms should actually be separated by topics: places, people, features, years and more.
 
-Your tags, however, will become much more useful if you organize them in groups. Imagine a tag cloud where all places appear in a "Places" group, all names under "Names" and all years under "Years". The Tag Groups plugin lets you do exactly that.
+Your term however, will become much more useful if you organize them in groups. Imagine a tag cloud where all places appear in a "Places" group, all names under "Names" and all years under "Years". The Tag Groups plugin lets you do exactly that.
 
-== How to use tag groups ==
+The plugin gives you many term displays. You can also customize them, append or prepend something to each tag. You can add separators, choose the link target, set the smallest and the largest font size, display the post count and much more.
+
+== Does Tag Groups Only Work With Tags? ==
+
+No. Tag Groups works also great with most other (flat) taxonomies, such as WooCommerce product tags.
+
+The plugin does not support hierarchical taxonomies like categories.
+
+== Does Tag Groups Work with Multilingual Websites? ==
+
+Yes, this plugin is officially compatible with **WPML**, the WordPress Multilingual plugin. This means you can use a different tag group name for each language.
+
+## Tag Groups Pro ##
+
+> <strong>Upgrade to Tag Groups Pro</strong><br />
+> This plugin is the free version of TaxoPress. The Pro version of TaxoPress has extra features and expert support. <a href="https://taxopress.com/pro" title="TaxoPress Pro">Click here to organize, optimize and showcase your content with TaxoPress now!</a>
+
+## The TaxoPress and Tag Groups plugins ##
+
+TaxoPress is developed by the same team that support the popular [TaxoPress plugin](https://wordpress.org/plugins/simple-tags/). Together Tag Groups and TaxoPress are an excellent solution for organizing and displaying your site’s content.
+
+## Tag Groups Bug Reports ##
+
+Bug reports for Tag Groups are welcomed in our [repository on GitHub](https://github.com/taxopress/tag-groups). Please note that GitHub is not a support forum, but a place to report bugs in the plugn that can be replicated outside of a single site.
+
+## Follow the TaxoPress team ##
+
+Follow TaxoPress on [Facebook](https://www.facebook.com/taxopress), [Twitter](https://www.twitter.com/taxopress) and [YouTube](https://www.youtube.com/@taxopress).
+
+== Installation ==
+
+1. Find the plugin in the list at the backend and click to install it. Or, upload the ZIP file through the admin backend. Or, upload the unzipped tag-groups folder to the /wp-content/plugins/ directory.
+
+2. Activate the plugin through the ‘Plugins’ menu in WordPress.
+
+The plugin will create a new menu "Tag Groups" and a submenu "Tag Group Admin" in the Post section (depending on the chosen taxonomy) where you find the tag groups. After you have created some groups, you can edit your tags (or other terms) and assign them to one of these groups. A filter and a bulk action menu are available on the Tags page and you also find a filter on the Posts pages.
+
+The tabbed tag cloud (or an accordion containing the tags) can be inserted with a shortcode or a Gutenberg block. Options are listed under the "Tag Groups" main menu.
+
+
+== Frequently Asked Questions ==
+
+= How Can I Start Using Tag Groups? =
 
 After activating the plugin, you will be guided by an optional **setup wizard**.
 
@@ -47,14 +95,7 @@ First you create groups that will contain your tags. Then you sort your tags int
 
 Filters and bulk actions make your work with tags much easier, and you can even filter the list of posts in your backend by the groups that their tags belong to.
 
-== Not only tags ==
-
-Tag Groups works also great with most other (flat) taxonomies, like WooCommerce product tags.
-
-The plugin does not support hierarchical taxonomies like categories.
-
-
-== Possible applications ==
+= What are Possible Applications of Tag Groups? =
 
 * Display your tags grouped by language or by topic.
 * Create an alphabetical index of your tags - think of a phone book for your tags.
@@ -67,93 +108,21 @@ The plugin does not support hierarchical taxonomies like categories.
 * Easily manage huge amounts of tags or posts in the backend by dividing them into groups.
 * Add a parent level to tags and make them hierarchical.
 
-
-== Multilingual websites ==
-
-This plugin is officially compatible with **WPML** (WordPress Multilingual). That means you can use a different tag group name for each language.
-
-Please find more information on the [plugin website](https://documentation.chattymango.com/documentation/tag-groups-premium/getting-started/translating-tag-group-names-with-wpml-2/?pk_campaign=tg&pk_kwd=readme "plugin website").
-
-== Video: Installation and first steps ==
-
-https://www.youtube.com/watch?v=iHaWq6Gi0cA
-
-
-**If you find this plugin useful, please give it a [5-star rating](https://wordpress.org/support/plugin/tag-groups/reviews/?filter=5 "reviews"). Thank you!**
-
-
-
-
-= Other Notes =
-
-Find the licenses of 3rd party software in the About section.
-
-= Check out my other plugins =
-
-* [Redirect URL to Post](https://wordpress.org/plugins/redirect-url-to-post/)
-
-== Installation ==
-
-1. Find the plugin in the list at the backend and click to install it. Or, upload the ZIP file through the admin backend. Or, upload the unzipped tag-groups folder to the /wp-content/plugins/ directory.
-
-2. Activate the plugin through the ‘Plugins’ menu in WordPress.
-
-The plugin will create a new menu "Tag Groups" and a submenu "Tag Group Admin" in the Post section (depending on the chosen taxonomy) where you find the tag groups. After you have created some groups, you can edit your tags (or other terms) and assign them to one of these groups. A filter and a bulk action menu are available on the Tags page and you also find a filter on the Posts pages.
-
-The tabbed tag cloud (or an accordion containing the tags) can be inserted with a shortcode or a Gutenberg block. Options are listed under the "Tag Groups" main menu.
-
-Extensive information, examples and help for troubleshooting are listed [here](https://chattymango.com/tag-groups/?pk_campaign=tg&pk_kwd=readme "plugin website").
-
-
-== Frequently Asked Questions ==
-
-= How can I show the tags of each post sorted into groups? =
+= How Can I Show the Tags of Each Post Sorted into Groups? =
 
 Please use one of the shortcodes or Gutenberg blocks that come with the Tag Groups plugin. Since we cannot change the code of templates or other plugins, there is no possibility to make them aware of the new structure where tags are organized in groups.
 
-= Do I need to opt-in to Freemius? =
-
-No. You can safely skip it and it doesn't affect the features of the free plugin version.
-
-= How can I use one of these tag clouds in a widget? =
-
-Please use a text widget and insert the shortcode.
-
-= Does this plugin support tags for pages? =
-
-No. Although it might work (with additional 3rd-party plugins), it is not an officially supported feature.
-
-= Does this plugin work with categories? =
-
-No. Hierarchical taxonomies such as categories are not officially supported.
-
-= Does this plugin work with my special custom taxonomy XY? =
-
-They only way to find out is to install the plugin and try.
-
-= I need the plugin for a very special purpose - can you help? =
-
-Please check first if the [premium plugin](https://chattymango.com/tag-groups-premium/?pk_campaign=tg&pk_kwd=readme "Tag Groups Premium") can help. If not, you can ask for [support here](https://wordpress.org/support/plugin/tag-groups).
-
-= I am desperately missing my language. But, wait.. is this actually a "frequently asked question"? =
-
-No, unfortunately it isn't. But, nevertheless, I'm glad you asked! You are warmly invited to [help us translate](https://translate.wordpress.org/projects/wp-plugins/tag-groups).
-
 == Screenshots ==
 
-1. Tag cloud ("Blitzer" theme)
-2. Accordion ("Blitzer" theme)
-3. Alphabetical tag cloud with first letters of tags as tabs
-4. Tag list
-5. Alphabetical tag index
-6. Group administration
-7. Assigning tags to groups
-8. Settings
-9. Configuring a tag cloud in Gutenberg
+1. This is an advanced version of a traditional Tag Cloud, with many customization options.
+2. The Alphabetical Tag Index shows tag in columns, sorted alphabetically by first letter. 
+3. The Accordion Tag Cloud is tag cloud where tags are sorted into vertically stacked accordion groups.
+4. The Tabbed Tag Cloud is tag cloud where tags are sorted into groups that appear in tabs.
+5. The Tag Groups plugin allows you to organize terms in groups.
+6. The Toggle Post Filter allows users to dynamically search for posts that have tags they choose.
+7. The Tag List allows you to show Tags in columns, sorted into groups.
+8. Tag Groups has a custom metabox so you can add terms into specific groups.
 
-== Privacy ==
-
-This plugin does not collect or process any personal user data unless you expressively opt-in.
 
 == Changelog ==
 
