@@ -61,7 +61,7 @@ const {
   gutenbergSettings,
 } = ChattyMangoTagGroupsGlobal;
 
-const helpUrl = 'https://documentation.chattymango.com/documentation/';
+const helpUrl = '';
 
 class editFunction extends Component {
   // Method for setting the initial state.

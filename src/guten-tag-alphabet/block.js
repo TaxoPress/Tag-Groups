@@ -63,7 +63,7 @@ const {
   gutenbergSettings,
 } = ChattyMangoTagGroupsGlobal;
 
-const helpUrl = 'https://documentation.chattymango.com/documentation/';
+const helpUrl = '';
 
 class tagGroupsAlphabeticalCloudParameters extends Component {
   // Method for setting the initial state.
