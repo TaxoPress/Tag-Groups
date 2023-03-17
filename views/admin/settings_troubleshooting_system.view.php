@@ -93,7 +93,7 @@ _e( 'passed', 'tag-groups' );
 
     jQuery("#chatty-mango-help-button-ajax").show();
 
-    let learnHowToFixLink = " <a href=\"https://taxopress.com/docs/troubleshooting/\" target=\”_blank\">Learn more</a>";
+    let learnHowToFixLink = " <a href=\"https://taxopress.com/docs/debugging-a-wordpress-ajax-error/\" target=\”_blank\">Learn more</a>";
 
     jQuery("#ajax_test_field").html("<span class=\"dashicons dashicons-no\" style=\"color:red;\" title=\"<?php
 _e( 'failed', 'tag-groups' );
