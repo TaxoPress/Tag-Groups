@@ -344,7 +344,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                              */
                             $premium_shortcode_info = apply_filters( 'tag_groups_hook_shortcodes', '' );
                             $view = new TagGroups_View( 'admin/settings_front_end_shortcodes' );
-                            $gutenberg_documentation_link = 'https://documentation.chattymango.com/documentation/tag-groups/tag-clouds-and-groups-info/using-gutenberg/?pk_campaign=tg&pk_kwd=settings';
+                            $gutenberg_documentation_link = '';
                             $view->set( array(
                                 'premium_shortcode_info'             => $premium_shortcode_info,
                                 'tag_group_shortcode_enqueue_always' => $tag_group_shortcode_enqueue_always,
@@ -398,7 +398,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
         public static function settings_page_tools()
         {
             global  $tag_group_groups;
-            
+
             // Make very sure that only administrators can access this page
             if ( !current_user_can( 'manage_options' ) ) {
                 wp_die( "Capability check failed" );
