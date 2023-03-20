@@ -126,7 +126,7 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
-= [2.0.1] - 16 Mar 2023 =
+= [2.0.1] - 20 Mar 2023 =
 * Update: Accessibility Improvements for settings area, #35
 * Update: Update title icons, #31
 * Update: Include an "Add New" button for taxonomy groups #34
