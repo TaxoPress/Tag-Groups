@@ -70,7 +70,7 @@ function tg_do_ajax(tg_params, send_data, labels) {
 
         var max_number = dataParsed.supplemental.max_number;
         var output = '';
-        
+
         // disable sorting by drag and drop if the list is not complete
         if (dataParsed.supplemental.is_filtered) {
           jQuery('#tg_groups_container')
@@ -103,7 +103,7 @@ function tg_do_ajax(tg_params, send_data, labels) {
                 output += '<td>' + data_set.id + '</td>\n';
                 output +=
                   '<td class="tg_label_column">';
-                output += '<span class="dashicons dashicons-networking" title="' + labels.tooltip_parent + '"></span> ';  
+                output += '<span class="dashicons dashicons-networking" title="' + labels.tooltip_parent + '"></span> ';
                 output += '<div style="display:inline-block" class="tg_edit_label tg_text tg_truncate" data-position="' +
                   data_set.position +
                   '" data-label="' +
@@ -184,12 +184,20 @@ function tg_do_ajax(tg_params, send_data, labels) {
                 labels.tooltip_delete +
                 '"></span>';
               if (!showParents || !data_set.is_parent) {
+                output += '<span title="' +
+                labels.tooltip_newbelow +
+                '">';
                 output +=
-                  '<span class="tg_pointer dashicons dashicons-plus-alt" title="' +
-                  labels.tooltip_newbelow +
-                  '" onclick="tg_toggle_clear(' +
+                  '<span class="tg_pointer dashicons dashicons-plus-alt" onclick="tg_toggle_clear(' +
                   data_set.position +
                   ')" style="margin-left:5px;"></span>';
+                  output +=
+                    '<span class="tg_pointer" onclick="tg_toggle_clear(' +
+                    data_set.position +
+                    ')" style="margin-left:5px;">' +
+                    labels.tooltip_addnew +
+                    '</span>';
+                  output += '</span>';
               }
               output += '</td>\n';
               output += '<td class="tg_hide_when_drag">';
@@ -370,10 +378,10 @@ function tg_display_error(message, isPremium) {
   let url;
   if (isPremium) {
     url =
-      'https://documentation.chattymango.com/documentation/tag-groups-premium/maintenance-and-troubleshooting/the-list-on-the-tag-groups-page-doesnt-load-i-only-see-the-wheel-spinning-forever-2';
+      'https://taxopress.com/docs/list-not-loading-tag-groups/';
   } else {
     url =
-      'https://documentation.chattymango.com/documentation/tag-groups/troubleshooting/the-list-on-the-tag-groups-page-doesnt-load-i-only-see-the-wheel-spinning-forever/';
+      'https://taxopress.com/docs/list-not-loading-tag-groups/';
   }
 
   message = message.replace(/\n/g, '<br>');

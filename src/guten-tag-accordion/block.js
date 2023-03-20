@@ -67,8 +67,7 @@ const {
   gutenbergSettings,
 } = ChattyMangoTagGroupsGlobal;
 
-const helpUrl = 'https://documentation.chattymango.com/documentation/';
-const logoUrl = pluginUrl + '/assets/images/cm-tg-icon-64x64.png';
+const helpUrl = '';
 
 class tagGroupsAccordionCloudParameters extends Component {
   // Method for setting the initial state.
@@ -934,11 +933,6 @@ class tagGroupsAccordionCloudParameters extends Component {
         {!cover && !serverSideRender && (
           <div className='chatty-mango-editor'>
             <div className='chatty-mango-editor-block'>
-              <img
-                src={logoUrl}
-                alt='logo'
-                style={{ float: 'left', margin: 15 }}
-              />
             </div>
             <div className='chatty-mango-editor-block'>
               <h3 className='chatty-mango-editor-title'>
