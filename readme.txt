@@ -37,7 +37,7 @@ The Pro version of the Tag Groups plugin also has these extra features:
 ## Tag Groups Pro ##
 
 > <strong>Upgrade to Tag Groups Pro</strong><br />
-> This plugin is the free version of TaxoPress. The Pro version of Tag Groups has extra features and expert support. <a href="https://taxopress.com/tag-groups" title="Tag Groups Pro">Click here to organize your terms with the Tag Groups Pro plugin now!</a>
+> This plugin is the free version of TaxoPress. The Pro version of Tag Groups has extra features and expert support. [Click here to organize your terms with the Tag Groups Pro plugin now!](https://taxopress.com/tag-groups)
 
 == Why Organize Terms Into Groups? ==
 
@@ -60,7 +60,7 @@ Yes, this plugin is officially compatible with **WPML**, the WordPress Multiling
 ## Tag Groups Pro ##
 
 > <strong>Upgrade to Tag Groups Pro</strong><br />
-> This plugin is the free version of TaxoPress. The Pro version of TaxoPress has extra features and expert support. <a href="https://taxopress.com/pro" title="TaxoPress Pro">Click here to organize, optimize and showcase your content with TaxoPress now!</a>
+> This plugin is the free version of TaxoPress. The Pro version of TaxoPress has extra features and expert support. [Click here to organize, optimize and showcase your content with TaxoPress now!](https://taxopress.com/tag-groups)
 
 ## The TaxoPress and Tag Groups plugins ##
 
