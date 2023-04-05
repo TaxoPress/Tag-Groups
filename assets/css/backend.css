@@ -661,7 +661,10 @@
   border: 1px solid #1F48AC;
 }
 
-
+body[class*=' toplevel_page_tag-groups-settings'] .pp-version-notice-bold-purple,
+body[class*=' tag-groups_page'] .pp-version-notice-bold-purple {
+  background: #1F48AC;
+}
 
 @media only screen and (min-width: 1075px) {
   .tag-groups-advertisement-right-sidebar-message,
