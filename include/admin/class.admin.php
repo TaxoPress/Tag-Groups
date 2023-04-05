@@ -753,8 +753,12 @@ if (!class_exists('TagGroups_Admin')) {
             if (empty($_GET['page']) || strpos($_GET['page'], 'tag-groups') !== 0) {
                 return $text;
             }
-            $view = new TagGroups_View('partials/admin_footer_rating');
-            return $view->return_html();
+
+            $view = new TagGroups_View( 'partials/admin_footer_rating' );
+      
+            $text = $view->return_html() . $text; 
+            
+            return $text;
         }
 
         /**

@@ -43,7 +43,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
             }
             $this->enqueue = new TagGroups_Enqueue();
         }
-        
+
         /**
          * Runs when plugin is launched
          *
@@ -73,7 +73,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
                 3
             );
         }
-        
+
         /**
          * Runs when plugin is launched and is_admin()
          *
@@ -160,7 +160,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
              */
             // add_action('wp_ajax_tg_render_shortcode', array('TagGroups_Shortcode_Common', 'render'));
         }
-        
+
         /**
          * Runs when plugin is launched and ! is_admin()
          *
@@ -172,7 +172,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
             add_action( 'wp_enqueue_scripts', array( $this->enqueue, 'wp_enqueue_scripts' ) );
             add_action( 'init', array( 'TagGroups_Shortcode_Statics', 'maybe_do_shortcode_in_widgets' ) );
         }
-        
+
         /**
          * Runs if is_admin() && on admin_init
          *
@@ -245,18 +245,18 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
              * Add fall-back button to reset the group filter for tags
              */
             add_filter( 'admin_footer_text', array( 'TagGroups_Admin', 'add_admin_footer_text' ), 100 );
-            if ( TagGroups_Utilities::is_free_plan()) {
-                /**
-                 * Add the request to rate the plugin
-                 */
-                add_filter( 'admin_footer_text', array( 'TagGroups_Admin', 'add_admin_footer_rating_text' ), 101 );
-            }
+
+            /**
+             * Add the request to rate the plugin
+             */
+            add_filter( 'admin_footer_text', array( 'TagGroups_Admin', 'add_admin_footer_rating_text' ), 101 );
+
             /**
              * Add the script for the jQuery tooltip plugin
              */
             add_filter( 'admin_footer_text', array( 'TagGroups_Admin', 'add_admin_footer_tooltip_script' ), 102 );
         }
-        
+
         /**
          * Functions that require permission tag_group_role_edit_tags
          *
@@ -309,7 +309,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
              */
             add_action( 'edit_term', array( 'TagGroups_Term_Save_Handlers', 'save_term_group_with_tag_info' ) );
         }
-        
+
         /**
          * Functions that require permission tag_group_role_edit_groups
          *
@@ -323,7 +323,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
             add_action( 'wp_ajax_tg_ajax_manage_groups', array( 'TagGroups_Group_Admin', 'ajax_manage_groups' ) );
             add_action( 'wp_ajax_tg_ajax_benchmark', array( 'TagGroups_Settings_Ajax', 'ajax_benchmark' ) );
         }
-        
+
         /**
          * Wrapper for remove_all_filters(), returning previously registered functions
          *
@@ -347,7 +347,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
                 remove_all_filters( $hook_name );
             }
         }
-        
+
         /**
          * Restores all hook from remove_all_filters()
          *
@@ -370,7 +370,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
                 }
             }
         }
-        
+
         /**
          * List all hooks
          *
@@ -383,7 +383,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
         {
             global  $wp_filter ;
             $hooks = array();
-            
+
             if ( isset( $wp_filter[$hook]->callbacks ) ) {
                 array_walk( $wp_filter[$hook]->callbacks, function ( $callbacks, $priority ) use( &$hooks ) {
                     foreach ( $callbacks as $id => $callback ) {
@@ -396,7 +396,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
             } else {
                 return [];
             }
-            
+
             foreach ( $hooks as &$item ) {
                 /**
                  * skip if callback does not exist
@@ -409,7 +409,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
                  * function name as string or static class method eg. 'Foo::Bar'
                  *
                  */
-                
+
                 if ( is_string( $item['function'] ) ) {
                     $ref = ( strpos( $item['function'], '::' ) ? new ReflectionClass( strstr( $item['function'], '::', true ) ) : new ReflectionFunction( $item['function'] ) );
                     $item['file'] = $ref->getFileName();
@@ -427,10 +427,10 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
                     $item['file'] = $ref->getFileName();
                     $item['line'] = $ref->getStartLine();
                 }
-            
+
             }
             return $hooks;
         }
-    
+
     }
 }

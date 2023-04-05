@@ -1,1 +1,6 @@
-<?php printf( __( 'If you like <strong>Tag Groups</strong>, I would be very happy if you could give it a <a %s>★★★★★</a> rating. Thank you very much in advance!', 'tag-groups' ), 'href="https://wordpress.org/support/plugin/tag-groups/reviews?filter=5&rate=5#new-post" target="_blank" title="click to rate"' ) ?>
+<p class="footer_st">
+    <?php
+    // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+    printf( __('Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s', 'tag-groups'), '<a target="_blank" href="https://taxopress.com/">', '</a>', esc_html(TAG_GROUPS_VERSION) ); 
+    ?>
+</p>
