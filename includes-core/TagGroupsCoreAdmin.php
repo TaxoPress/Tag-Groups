@@ -73,7 +73,7 @@ class TagGroupsCoreAdmin {
                             <li><?php echo esc_html__('21 Shortcodes', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('18 Gutenberg Blocks', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('Table Tag Cloud', 'tag-groups'); ?></li>
-                            <li><?php echo esc_html__('Simple Tag Cloud”', 'tag-groups'); ?></li>
+                            <li><?php echo esc_html__('Simple Tag Cloud', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('Shuffle Box', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('Caching', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('Multiple Groups Per Tag', 'tag-groups'); ?></li>
