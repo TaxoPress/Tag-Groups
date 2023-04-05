@@ -329,9 +329,9 @@ function tg_do_ajax(tg_params, send_data, labels) {
           message_output +=
             '<div class="notice notice-success"><p>' +
             message +
-            '</p></div><br clear="all" />';
+            '</p></div>';
         } else {
-          message_output += '<div><p>&nbsp;</p></div><br clear="all" />';
+          message_output += '';
         }
         jQuery('#tg_message_container').fadeTo(200, 0, function () {
           jQuery(this).html(message_output).fadeTo(400, 1);
@@ -345,7 +345,7 @@ function tg_do_ajax(tg_params, send_data, labels) {
         message_output +=
           '<div class="notice notice-error"><p>' +
           message +
-          '</p></div><br clear="all" />';
+          '</p></div>';
 
         jQuery('#tg_message_container').fadeTo(200, 0, function () {
           jQuery(this).html(message_output).fadeTo(400, 1);

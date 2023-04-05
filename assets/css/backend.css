@@ -248,7 +248,6 @@
 }
 
 #tg_message_container {
-  min-height: 76px;
   width: 100%;
   display: inline-block;
   margin: 0;
