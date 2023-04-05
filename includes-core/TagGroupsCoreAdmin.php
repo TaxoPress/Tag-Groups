@@ -13,7 +13,7 @@ class TagGroupsCoreAdmin {
                         function ($settings) {
                             $settings['taxopress-tag_groups'] = [
                                 'message' => 'You\'re using Tag Groups Free. The Pro version has more features and support. %sUpgrade to Pro%s',
-                                'link'    => 'https://taxopress.com/pro',
+                                'link'    => 'https://taxopress.com/tag-groups/',
                                 'screens' => [
                                     ['base' => 'toplevel_page_tag-groups-settings', 'id'   => 'toplevel_page_tag-groups-settings'],
                                     ['base' => 'tag-groups_page_tag-groups-settings-taxonomies', 'id'   => 'tag-groups_page_tag-groups-settings-taxonomies'],
@@ -41,7 +41,7 @@ class TagGroupsCoreAdmin {
                             $settings['taxopress-tag_groups'] = [
                                 'parent' => 'tag-groups-settings',
                                 'label'  => 'Upgrade to Pro',
-                                'link'   => 'https://taxopress.com/pro',
+                                'link'   => 'https://taxopress.com/tag-groups/',
                             ];
 
                             return $settings;
@@ -89,7 +89,7 @@ class TagGroupsCoreAdmin {
                             <li><?php echo esc_html__('Parent Group Level', 'tag-groups'); ?></li>
                         </ul>
                         <div class="upgrade-btn">
-                            <a href="https://taxopress.com/pro" target="__blank"><?php echo esc_html__('Upgrade to Pro', 'tag-groups'); ?></a>
+                            <a href="https://taxopress.com/tag-groups/" target="__blank"><?php echo esc_html__('Upgrade to Pro', 'tag-groups'); ?></a>
                         </div>
                     </div>
                 </div>
