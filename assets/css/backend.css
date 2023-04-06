@@ -670,6 +670,23 @@ body[class*=' tag-groups_page'] .pp-version-notice-bold-purple {
   font-size: 14px !important;
 }
 
+.tg-settings-search-area {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tg-settings-search-area input {
+  box-shadow: 0 0 0 transparent;
+  border-radius: 4px;
+  border: 1px solid #8c8f94;
+  background-color: #fff;
+  color: #2c3338;
+  padding: 0 8px;
+  line-height: 2;
+  min-height: 30px;
+  width: 18%;
+}
+
 @media only screen and (min-width: 1075px) {
   .tag-groups-advertisement-right-sidebar-message,
   .upgrade-btn {

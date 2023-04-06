@@ -1,6 +1,6 @@
 <div id="tg_setting_help_search">
-  <div style="float:right;" title="<?php _e( 'Search for setting pages. Type a space to show all settings.', 'tag-groups' ) ?>">
-    <label for="tg_setting_help_search_field"><span class="dashicons dashicons-search tg_setting_help_search_icon"></span></label><input id="tg_setting_help_search_field" placeholder="<?php _e( 'Search for settings', 'tag-groups' ) ?>" autocomplete="off">
+  <div class="tg-settings-search-area">
+    <label for="tg_setting_help_search_field"></label><input id="tg_setting_help_search_field" placeholder="<?php _e( 'Search for settings', 'tag-groups' ) ?>" autocomplete="off"  title="<?php _e( 'Search for setting pages. Type a space to show all settings.', 'tag-groups' ) ?>">
   </div>
   <div id="tg_setting_help_search_results" style="display:none;">
     <h2><?php _e( 'Search Results', 'tag-groups' ) ?></h2>
