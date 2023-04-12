@@ -184,20 +184,12 @@ function tg_do_ajax(tg_params, send_data, labels) {
                 labels.tooltip_delete +
                 '"></span>';
               if (!showParents || !data_set.is_parent) {
-                output += '<span title="' +
-                labels.tooltip_newbelow +
-                '">';
-                output +=
-                  '<span class="tg_pointer dashicons dashicons-plus-alt" onclick="tg_toggle_clear(' +
-                  data_set.position +
-                  ')" style="margin-left:5px;"></span>';
                   output +=
-                    '<span class="tg_pointer" onclick="tg_toggle_clear(' +
+                    '<span class="tg_pointer button" onclick="tg_toggle_clear(' +
                     data_set.position +
-                    ')" style="margin-left:5px;">' +
+                    ')" style="margin-left:20px;">' +
                     labels.tooltip_addnew +
                     '</span>';
-                  output += '</span>';
               }
               output += '</td>\n';
               output += '<td class="tg_hide_when_drag">';
@@ -329,9 +321,9 @@ function tg_do_ajax(tg_params, send_data, labels) {
           message_output +=
             '<div class="notice notice-success"><p>' +
             message +
-            '</p></div><br clear="all" />';
+            '</p></div>';
         } else {
-          message_output += '<div><p>&nbsp;</p></div><br clear="all" />';
+          message_output += '';
         }
         jQuery('#tg_message_container').fadeTo(200, 0, function () {
           jQuery(this).html(message_output).fadeTo(400, 1);
@@ -345,7 +337,7 @@ function tg_do_ajax(tg_params, send_data, labels) {
         message_output +=
           '<div class="notice notice-error"><p>' +
           message +
-          '</p></div><br clear="all" />';
+          '</p></div>';
 
         jQuery('#tg_message_container').fadeTo(200, 0, function () {
           jQuery(this).html(message_output).fadeTo(400, 1);

@@ -95,7 +95,7 @@ if ( ! class_exists( 'TagGroups_Term_Meta_Tools' ) ) {
 
             $groups_a = array( 0 );
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] We remove an empty group from the term meta of term ID %d.', $term_id );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] We remove an empty group from the term meta of term ID %d.', $term_id );
 
             $changed = true;
 
@@ -112,7 +112,7 @@ if ( ! class_exists( 'TagGroups_Term_Meta_Tools' ) ) {
 
                 // This group id doesn't exist -> we remove it from the term meta
 
-                TagGroups_Error::verbose_log( '[Tag Groups Premium] We remove a non-existent group ID %d from the term meta of term ID %d.', $group, $term_id );
+                TagGroups_Error::verbose_log( '[Tag Groups Pro] We remove a non-existent group ID %d from the term meta of term ID %d.', $group, $term_id );
 
                 unset( $groups_a[$key] );
 
@@ -352,7 +352,7 @@ if ( ! class_exists( 'TagGroups_Term_Meta_Tools' ) ) {
 
         foreach ( $terms as $term ) {
 
-          TagGroups_Error::verbose_log( '[Tag Groups Premium] Migrating term meta for term ID %d.', $term->term_id );
+          TagGroups_Error::verbose_log( '[Tag Groups Pro] Migrating term meta for term ID %d.', $term->term_id );
 
           /**
            *  Fast way of saving: not necessary to use method save()
@@ -479,7 +479,7 @@ if ( ! class_exists( 'TagGroups_Term_Meta_Tools' ) ) {
           if ( $groups_sorted !== $groups_a ) {
             // comparing order
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Group order changed in meta of term %d.', $term_id );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Group order changed in meta of term %d.', $term_id );
 
             if ( count( $groups_sorted ) == 0 ) {
 

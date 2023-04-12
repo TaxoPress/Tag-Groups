@@ -47,7 +47,7 @@ if ( ! class_exists('TagGroups_Gutenberg') ) {
       $use_block_editor = ( get_option( 'classic-editor-replace' ) === 'no-replace' );
 
       return $use_block_editor;
-      
+
     }
 
 
@@ -66,7 +66,7 @@ if ( ! class_exists('TagGroups_Gutenberg') ) {
           array(
               array(
                   'slug'  => 'chatty-mango',
-                  'title' => 'Chatty Mango',
+                  'title' => 'Tag Groups',
                   'icon'  => null, //'admin-plugins', // icons might be removed in future
               ),
           )

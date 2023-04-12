@@ -12,8 +12,8 @@ class TagGroupsCoreAdmin {
                         \PPVersionNotices\Module\TopNotice\Module::SETTINGS_FILTER,
                         function ($settings) {
                             $settings['taxopress-tag_groups'] = [
-                                'message' => 'You\'re using Tag Groups Free. The Pro version has more features and support. %sUpgrade to Pro%s',
-                                'link'    => 'https://taxopress.com/pro',
+                                'message' => __('You\'re using Tag Groups Free. The Pro version has more features and support. %sUpgrade to Pro%s', 'tag-groups'),
+                                'link'    => 'https://taxopress.com/tag-groups/',
                                 'screens' => [
                                     ['base' => 'toplevel_page_tag-groups-settings', 'id'   => 'toplevel_page_tag-groups-settings'],
                                     ['base' => 'tag-groups_page_tag-groups-settings-taxonomies', 'id'   => 'tag-groups_page_tag-groups-settings-taxonomies'],
@@ -40,8 +40,8 @@ class TagGroupsCoreAdmin {
                         function ($settings) {
                             $settings['taxopress-tag_groups'] = [
                                 'parent' => 'tag-groups-settings',
-                                'label'  => 'Upgrade to Pro',
-                                'link'   => 'https://taxopress.com/pro',
+                                'label'  => __('Upgrade to Pro', 'tag-groups'),
+                                'link'   => 'https://taxopress.com/tag-groups/',
                             ];
 
                             return $settings;
@@ -73,7 +73,7 @@ class TagGroupsCoreAdmin {
                             <li><?php echo esc_html__('21 Shortcodes', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('18 Gutenberg Blocks', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('Table Tag Cloud', 'tag-groups'); ?></li>
-                            <li><?php echo esc_html__('Simple Tag Cloud”', 'tag-groups'); ?></li>
+                            <li><?php echo esc_html__('Simple Tag Cloud', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('Shuffle Box', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('Caching', 'tag-groups'); ?></li>
                             <li><?php echo esc_html__('Multiple Groups Per Tag', 'tag-groups'); ?></li>
@@ -89,7 +89,7 @@ class TagGroupsCoreAdmin {
                             <li><?php echo esc_html__('Parent Group Level', 'tag-groups'); ?></li>
                         </ul>
                         <div class="upgrade-btn">
-                            <a href="https://taxopress.com/pro" target="__blank"><?php echo esc_html__('Upgrade to Pro', 'tag-groups'); ?></a>
+                            <a href="https://taxopress.com/tag-groups/" target="__blank"><?php echo esc_html__('Upgrade to Pro', 'tag-groups'); ?></a>
                         </div>
                     </div>
                 </div>

@@ -740,7 +740,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                 $this->taxonomies = array_intersect( $this->taxonomies, $requested_taxonomies );
                 
                 if ( empty($this->taxonomies) ) {
-                    TagGroups_Error::log( '[Tag Groups Premium] Wrong taxonomy or taxonomies (%s) in shortcode %s', implode( ',', $requested_taxonomies ), $this->shortcode_id );
+                    TagGroups_Error::log( '[Tag Groups Pro] Wrong taxonomy or taxonomies (%s) in shortcode %s', implode( ',', $requested_taxonomies ), $this->shortcode_id );
                     // return ''; // We are forgiving and let the shortcode work with any taxonomy
                     $this->taxonomies = $requested_taxonomies;
                 }
@@ -791,7 +791,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                 if ( false !== $post_id ) {
                     $this->attributes->tags_post_id = $post_id;
                 } else {
-                    TagGroups_Error::verbose_log( '[Tag Groups Premium] Cannot get the post ID' );
+                    TagGroups_Error::verbose_log( '[Tag Groups Pro] Cannot get the post ID' );
                     $this->attributes->do_not_cache = true;
                 }
             
@@ -804,7 +804,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                 if ( false !== $post_id ) {
                     $this->attributes->groups_post_id = $post_id;
                 } else {
-                    TagGroups_Error::verbose_log( '[Tag Groups Premium] Cannot get the post ID' );
+                    TagGroups_Error::verbose_log( '[Tag Groups Pro] Cannot get the post ID' );
                     $this->attributes->do_not_cache = true;
                 }
             

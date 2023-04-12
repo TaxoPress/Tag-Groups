@@ -9,7 +9,7 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- * @package     Tag Groups Premium
+ * @package     Tag Groups Pro
  *
  * @author      Christoph Amthor
  * @copyright   2017 Christoph Amthor (@ Chatty Mango, chattymango.com)

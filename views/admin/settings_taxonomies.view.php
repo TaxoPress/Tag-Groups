@@ -1,5 +1,5 @@
 <div class="tg_settings_tabs_content">
-  <p><?php _e('Choose the taxonomies for which you want to use tag groups.', 'tag-groups') ?><span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="taxonomies" title="<?php _e('Click for more information', 'tag-groups-premium') ?>"></span></p>
+  <p><?php _e('Choose the taxonomies for which you want to use tag groups.', 'tag-groups') ?><span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="taxonomies" title="<?php _e('Click for more information', 'tag-groups') ?>"></span></p>
 
   <div class="chatty-mango-help-container chatty-mango-help-container-taxonomies" style="display:none;">
     <p><?php _e("The default texonomy is <b>Tags (post_tag)</b>. Please note that the tag clouds might not work with all taxonomies and that some taxonomies listed here may not be accessible in the admin backend. If you don't understand what is going on here, just leave the default.", 'tag-groups') ?></p>

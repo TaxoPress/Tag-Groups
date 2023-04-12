@@ -73,7 +73,7 @@ if ( ! class_exists( 'TagGroups_Group_Tools' ) ) {
 
           if ( ! in_array( $id, $group_ids_all ) ) {
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Removing orphaned group position for ID %d.', $id );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Removing orphaned group position for ID %d.', $id );
 
             unset( $positions[$id] );
 
@@ -98,7 +98,7 @@ if ( ! class_exists( 'TagGroups_Group_Tools' ) ) {
 
           if ( ! in_array( $id, $group_ids_all ) ) {
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Removing orphaned group label for ID %d.', $id );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Removing orphaned group label for ID %d.', $id );
 
             unset( $labels[$id] );
 
@@ -131,7 +131,7 @@ if ( ! class_exists( 'TagGroups_Group_Tools' ) ) {
 
             $tg_group->set_position( 0 );
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Fixing position for group ID 0.' );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Fixing position for group ID 0.' );
 
             $need_to_save = true;
 
@@ -146,7 +146,7 @@ if ( ! class_exists( 'TagGroups_Group_Tools' ) ) {
 
           if ( '' == trim( $tg_group->get_label() ) ) {
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Fixing label for group ID 0.' );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Fixing label for group ID 0.' );
 
             $tg_group->set_label( 'unassigned' );
 
@@ -165,7 +165,7 @@ if ( ! class_exists( 'TagGroups_Group_Tools' ) ) {
 
           if ( 0 == $tg_group->get_position() ) {
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Fixing position for group ID %d.', $group_id );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Fixing position for group ID %d.', $group_id );
 
             $tg_group->set_position( $tag_group_groups->get_max_position() + 1 );
 
@@ -182,7 +182,7 @@ if ( ! class_exists( 'TagGroups_Group_Tools' ) ) {
 
           if ( '' == trim( $tg_group->get_label() ) ) {
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Fixing label for group ID %d.', $group_id );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Fixing label for group ID %d.', $group_id );
 
             $tg_group->set_label( 'empty!' );
 
@@ -204,7 +204,7 @@ if ( ! class_exists( 'TagGroups_Group_Tools' ) ) {
 
           if ( $tg_group->get_position() == $position && $group_id != $term_group ) {
 
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Fixing duplicate position for group ID %d.', $group_id );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Fixing duplicate position for group ID %d.', $group_id );
 
             // move to the end
             $tg_group->set_position( $tag_group_groups->get_max_position() + 1 );

@@ -90,13 +90,13 @@ if ( ! class_exists( 'TagGroups_Cron' ) ) {
 
       if ( false === $cron_result ) {
 
-        TagGroups_Error::log( '[Tag Groups Premium] Error scheduling single event %s', $identifier );
+        TagGroups_Error::log( '[Tag Groups Pro] Error scheduling single event %s', $identifier );
 
         return false;
 
       }
 
-      TagGroups_Error::verbose_log( '[Tag Groups Premium] Successfully scheduled single event %s after %d seconds', $identifier, $seconds_from_now );
+      TagGroups_Error::verbose_log( '[Tag Groups Pro] Successfully scheduled single event %s after %d seconds', $identifier, $seconds_from_now );
 
       return true;
 
@@ -121,13 +121,13 @@ if ( ! class_exists( 'TagGroups_Cron' ) ) {
 
       if ( false === $cron_result ) {
 
-        TagGroups_Error::log( '[Tag Groups Premium] Error scheduling regular event %s', $identifier );
+        TagGroups_Error::log( '[Tag Groups Pro] Error scheduling regular event %s', $identifier );
 
         return false;
 
       }
 
-      TagGroups_Error::verbose_log( '[Tag Groups Premium] Successfully scheduled regular event %s with recurrence %s', $identifier, $recurrence );
+      TagGroups_Error::verbose_log( '[Tag Groups Pro] Successfully scheduled regular event %s with recurrence %s', $identifier, $recurrence );
 
       return true;
 

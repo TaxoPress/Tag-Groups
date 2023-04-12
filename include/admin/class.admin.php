@@ -105,8 +105,8 @@ if (!class_exists('TagGroups_Admin')) {
 
                 $submenu_page = add_submenu_page(
                     'edit.php' . $post_type_query,
-                    'Tag Group Admin',
-                    'Tag Group Admin',
+                    __('Tag Group Admin', 'tag-groups'),
+                    __('Tag Group Admin', 'tag-groups'),
                     $tag_group_role_edit_groups,
                     'tag-groups_' . $post_type,
                     array( 'TagGroups_Group_Admin', 'render_group_administration' )
@@ -753,8 +753,12 @@ if (!class_exists('TagGroups_Admin')) {
             if (empty($_GET['page']) || strpos($_GET['page'], 'tag-groups') !== 0) {
                 return $text;
             }
-            $view = new TagGroups_View('partials/admin_footer_rating');
-            return $view->return_html();
+
+            $view = new TagGroups_View( 'partials/admin_footer_rating' );
+      
+            $text = $view->return_html() . $text; 
+            
+            return $text;
         }
 
         /**
