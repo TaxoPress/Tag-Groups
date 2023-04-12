@@ -218,7 +218,20 @@ if (!class_exists('TagGroups_Loader')) {
          */
         public function register_textdomain()
         {
-            load_plugin_textdomain('tag-groups', false, TAG_GROUPS_PLUGIN_RELATIVE_PATH . '/languages/');
+            $domain       = 'tag-groups';
+            $mofile_custom = sprintf('%s-%s.mo', $domain, get_user_locale());
+            $locations = [
+                trailingslashit( WP_LANG_DIR . '/' . $domain ),
+                trailingslashit( WP_LANG_DIR . '/loco/plugins/'),
+                trailingslashit( WP_LANG_DIR ),
+                trailingslashit( plugin_dir_path(TAG_GROUPS_FILE) . 'languages' ),
+            ];
+            // Try custom locations in WP_LANG_DIR.
+            foreach ($locations as $location) {
+                if (load_textdomain($domain, $location . $mofile_custom)) {
+                    return true;
+                }
+            }
         }
         
         /**

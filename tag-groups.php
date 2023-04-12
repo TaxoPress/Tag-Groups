@@ -38,6 +38,9 @@ if ( !defined( 'TAG_GROUPS_PLUGIN_IS_KERNL' ) ) {
 }
 
 if ( !defined( 'TAG_GROUPS_PLUGIN_BASENAME' ) ) {
+
+    define ('TAG_GROUPS_FILE', __FILE__);
+    
     /**
      * The plugin's relative path (starting below the plugin directory), including the name of this file.
      */

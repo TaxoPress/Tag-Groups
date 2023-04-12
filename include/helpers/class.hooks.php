@@ -56,7 +56,7 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
              * enable internationalization
              */
             if ( !empty($this->loader) ) {
-                add_action( 'plugins_loaded', array( $this->loader, 'register_textdomain' ) );
+                add_action( 'init', array( $this->loader, 'register_textdomain' ) );
             }
             /**
              * Filter that allows to modify the term query and search for terms that have tags in the specified tag groups
