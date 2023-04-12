@@ -126,7 +126,7 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
-= [2.0.2] - 10 Apr 2023 =
+= [2.0.2] - 12 Apr 2023 =
 * Update: Update Tag group admin sorting method, #52
 * Update: Move "search for settings" on settings screens, #47
 * Update: Update footer credit, #50
