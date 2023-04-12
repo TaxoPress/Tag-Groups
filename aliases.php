@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Tag Groups Premium
+ * Tag Groups Pro
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -10,7 +10,7 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- * @package    Tag Groups Premium
+ * @package    Tag Groups Pro
  *
  * @author     Christoph Amthor
  * @copyright  2019 Christoph Amthor (@ Chatty Mango, chattymango.com)

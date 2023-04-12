@@ -6,9 +6,9 @@
       <div style="width:48%;min-width:500px;float:left;padding-right:20px;">
         <p>
           <?php _e( "Here you can choose a theme for the tabbed and the accordion tag cloud. The path to own themes is relative to the <i>uploads</i> folder of your WordPress installation. Leave empty if you don't use any.", 'tag-groups' )?>
-          <span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="themes" title="<?php _e('Click for more information', 'tag-groups-premium') ?>"></span>
+          <span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="themes" title="<?php _e('Click for more information', 'tag-groups') ?>"></span>
         </p>
-    
+
         <div class="chatty-mango-help-container chatty-mango-help-container-themes" style="display:none;">
           <p>
             <?php _e( 'New themes can be created with the <a href="http://jqueryui.com/themeroller/" target="_blank">jQuery UI ThemeRoller</a>:', 'tag-groups' )?>

@@ -14,7 +14,7 @@ if ( !class_exists( 'TagGroups_Cron_Handlers' ) ) {
     class TagGroups_Cron_Handlers
     {
         /**
-         * Retrieves all transients created by Tag Groups Premium and deletes what is expired
+         * Retrieves all transients created by Tag Groups Pro and deletes what is expired
          *
          * @param  void
          * @return int
@@ -22,9 +22,9 @@ if ( !class_exists( 'TagGroups_Cron_Handlers' ) ) {
         public static function purge_expired_transients()
         {
             $count = 0;
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Purging expired transients.' );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Purging expired transients.' );
             $count += TagGroups_Transients::delete_all_expired_transients();
-            TagGroups_Error::verbose_log( '[Tag Groups Premium] Purged %d expired transients.', $count );
+            TagGroups_Error::verbose_log( '[Tag Groups Pro] Purged %d expired transients.', $count );
             return $count;
         }
         
@@ -55,11 +55,11 @@ if ( !class_exists( 'TagGroups_Cron_Handlers' ) ) {
             
             if ( $term_count === false ) {
                 TagGroups_Options::update_option( 'tag_group_run_term_migration_offset', 0 );
-                TagGroups_Error::verbose_log( '[Tag Groups Premium] tag_groups_run_term_migration done.' );
+                TagGroups_Error::verbose_log( '[Tag Groups Pro] tag_groups_run_term_migration done.' );
             } else {
                 TagGroups_Options::update_option( 'tag_group_run_term_migration_offset', $offset + $length );
                 TagGroups_Cron::schedule_in_secs( 1, 'tag_groups_run_term_migration' );
-                TagGroups_Error::verbose_log( '[Tag Groups Premium] Rescheduled tag_groups_run_term_migration from offset %d.', $offset + $length );
+                TagGroups_Error::verbose_log( '[Tag Groups Pro] Rescheduled tag_groups_run_term_migration from offset %d.', $offset + $length );
             }
             
             if ( false === $term_count || empty($length) && $term_count > 0 ) {

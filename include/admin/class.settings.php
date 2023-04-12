@@ -928,7 +928,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             ),
             ),
                 'premium'         => array(
-                'title'    => __( 'Premium', 'tag-groups' ),
+                'title'    => __( 'Tag Groups Pro', 'tag-groups' ),
                 'page'     => 'tag-groups-settings-premium',
                 'keywords' => array(
                 __( 'upgrade', 'tag-groups' ),

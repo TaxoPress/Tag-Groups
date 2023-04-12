@@ -129,7 +129,7 @@ if ( !empty($benchmarks) ) {
       <tr><td id="cache_benchmark_name"><?php
 _e( 'Cache', 'tag-groups' );
 ?></td><td id="cache_benchmark_value"><?php
-_e( 'premium only', 'tag-groups' );
+_e( 'Tag groups pro only', 'tag-groups' );
 ?></td></tr>
     </table>
     <script>

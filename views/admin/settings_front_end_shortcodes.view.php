@@ -19,7 +19,7 @@
     <p>
       <input type="checkbox" name="enqueue" id="tg_enqueue" autocomplete="off" value="1" <?php if ($tag_group_shortcode_enqueue_always) : ?> checked<?php endif; ?>>&nbsp;
       <label for="tg_enqueue"><?php _e('Always load shortcode scripts.', 'tag-groups') ?></label>
-      <span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="load-scripts" title="<?php _e('Click for more information', 'tag-groups-premium') ?>"></span>
+      <span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="load-scripts" title="<?php _e('Click for more information', 'tag-groups') ?>"></span>
     </p>
     <div class="chatty-mango-help-container chatty-mango-help-container-load-scripts" style="display:none; max-width:60%; clear:none;">
       <p><?php _e('Turn off to load the scripts only on posts and pages where a shortcode appears.', 'tag-groups') ?></p>

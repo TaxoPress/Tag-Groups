@@ -6,7 +6,7 @@
  * Description: Organize your tags in groups or by alphabet. Show tag clouds with many options in posts, pages or widgets (tabs, accordion or list).
  * Author: TaxoPress
  * Author URI: https://taxopress.com
- * Version: 2.0.1
+ * Version: 2.0.2
  * License: GNU GENERAL PUBLIC LICENSE, Version 3
  * Text Domain: tag-groups
  * Domain Path: /languages
@@ -38,6 +38,9 @@ if ( !defined( 'TAG_GROUPS_PLUGIN_IS_KERNL' ) ) {
 }
 
 if ( !defined( 'TAG_GROUPS_PLUGIN_BASENAME' ) ) {
+
+    define ('TAG_GROUPS_FILE', __FILE__);
+    
     /**
      * The plugin's relative path (starting below the plugin directory), including the name of this file.
      */
@@ -110,7 +113,7 @@ if ( !function_exists( 'tag_groups_init' ) ) {
                 deactivate_plugins( 'tag-groups/tag-groups.php', true );
                 // add the hook directly
                 add_action( 'admin_notices', function () {
-                    echo  '<div class="notice notice-info is-dismissible"><p>' . __( 'The free Tag Groups plugin cannot be active together with Tag Groups Premium.', 'tag-groups' ) . ' <a href="https://taxopress.com/docs/tag-groups/" target="_blank" style="text-decoration: none;" title="' . __( 'more information', 'tag-groups' ) . '"><span class="dashicons dashicons-editor-help"></span></a></p></div><div clear="all" /></div>' ;
+                    echo  '<div class="notice notice-info is-dismissible"><p>' . __( 'The free Tag Groups plugin cannot be active together with Tag Groups Pro.', 'tag-groups' ) . ' <a href="https://taxopress.com/docs/tag-groups/" target="_blank" style="text-decoration: none;" title="' . __( 'more information', 'tag-groups' ) . '"><span class="dashicons dashicons-editor-help"></span></a></p></div><div clear="all" /></div>' ;
                 } );
                 /**
                  * Remove the misleading "Plugin activated" messaage

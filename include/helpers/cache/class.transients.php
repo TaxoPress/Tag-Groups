@@ -32,7 +32,7 @@ if ( ! class_exists( 'TagGroups_Transients' ) ) {
     const TRANSIENT_NAMES = 'tag_group_used_transient_names';
 
     /**
-     * Retrieves all transients created by Tag Groups Premium and deletes them
+     * Retrieves all transients created by Tag Groups Pro and deletes them
      *
      * @param  void
      * @return int
@@ -41,11 +41,11 @@ if ( ! class_exists( 'TagGroups_Transients' ) ) {
 
       $count = 0;
 
-      TagGroups_Error::verbose_log( '[Tag Groups Premium] Purging all transients.' );
+      TagGroups_Error::verbose_log( '[Tag Groups Pro] Purging all transients.' );
 
       $count += self::delete_all_transients();
 
-      TagGroups_Error::verbose_log( '[Tag Groups Premium] Purged %d transients.', $count );
+      TagGroups_Error::verbose_log( '[Tag Groups Pro] Purged %d transients.', $count );
 
       return $count;
 
@@ -344,7 +344,7 @@ if ( ! class_exists( 'TagGroups_Transients' ) ) {
 
       $count = 0;
 
-      TagGroups_Error::verbose_log( '[Tag Groups Premium] Purging post transients.' );
+      TagGroups_Error::verbose_log( '[Tag Groups Pro] Purging post transients.' );
 
       // Toggle Post Filter
       $count += self::delete_all_transients('tpf_result_');
@@ -356,7 +356,7 @@ if ( ! class_exists( 'TagGroups_Transients' ) ) {
       $count += self::delete_all_transients('post_list_result_');
 
 
-      TagGroups_Error::verbose_log( '[Tag Groups Premium] Purged %d post transient(s).', $count );
+      TagGroups_Error::verbose_log( '[Tag Groups Pro] Purged %d post transient(s).', $count );
 
       return $count;
 

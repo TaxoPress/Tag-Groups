@@ -1,8 +1,8 @@
 <?php
 /**
-* Tag Groups Premium
+* Tag Groups Pro
 *
-* @package     Tag Groups Premium
+* @package     Tag Groups Pro
 * @author      Christoph Amthor
 * @copyright   2017 Christoph Amthor (@ Chatty Mango, chattymango.com)
 * @license     see official vendor website

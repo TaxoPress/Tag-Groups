@@ -151,7 +151,7 @@ function tagGroupsTaskAjax(task,offset,length) {
         var data = JSON.parse(rawData.trim());
       } catch (e) {
         console.log(
-          '[Tag Groups Premium] Error parsing data from server',
+          '[Tag Groups Pro] Error parsing data from server',
           e.message,
           ', data:"'+rawData.toString()+'"'
         );
@@ -164,7 +164,7 @@ function tagGroupsTaskAjax(task,offset,length) {
 
       if ( typeof done === "undefined" || done !== 1 ) {
         tagGroupsTaskError = true;
-        console.log("[Tag Groups Premium] Error processing task.", task);
+        console.log("[Tag Groups Pro] Error processing task.", task);
         return;
       }
 
