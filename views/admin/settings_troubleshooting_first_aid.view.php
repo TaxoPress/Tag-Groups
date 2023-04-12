@@ -15,7 +15,7 @@
   <?php if ( $tag_group_show_filter_tags ): ?>
     <p>&nbsp;</p>
     <form method="POST" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>">
-      <p><?php _e( "Reset the filter on the tags page to show all tags.", 'tag-groups-premium' ) ?><span class="dashicons dashicons-editor-help chatty-mango-help-icon" title="<?php _e( 'Use it if a JavaScript error disables the filter menu. Note that it is still recommended to find out the cause of the error.', 'tag-groups' ) ?>"></span></p>
+      <p><?php _e( "Reset the filter on the tags page to show all tags.", 'tag-groups' ) ?><span class="dashicons dashicons-editor-help chatty-mango-help-icon" title="<?php _e( 'Use it if a JavaScript error disables the filter menu. Note that it is still recommended to find out the cause of the error.', 'tag-groups' ) ?>"></span></p>
       <?php echo wp_nonce_field( 'tag-groups-reset-tag-filter', 'tag-groups-reset-tag-filter-nonce', true, false ) ?>
       <input type="hidden" name="tg_action" value="reset-tag-filter">
       <input class="button-primary" type="submit" name="reset" value="<?php _e( 'Reset Tag Filter', 'tag-groups' ) ?>" id="submitbutton" />

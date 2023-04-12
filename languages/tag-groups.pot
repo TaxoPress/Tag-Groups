@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2023-04-10 08:21+0000\n"
+"POT-Creation-Date: 2023-04-12 16:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -235,6 +235,14 @@ msgstr ""
 #: views/admin/setup_wizard_taxonomies.view.php:2
 #: views/admin/settings_taxonomies.view.php:2
 msgid "Choose the taxonomies for which you want to use tag groups."
+msgstr ""
+
+#: views/admin/settings_front_end_themes.view.php:9
+#: views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/settings_taxonomies.view.php:2
+#: views/admin/settings_front_end_shortcodes.view.php:22
+#: views/admin/settings_home.view.php:8
+msgid "Click for more information"
 msgstr ""
 
 #: views/admin/settings_front_end_shortcodes.view.php:33
@@ -665,13 +673,6 @@ msgid ""
 "to give the unfiltered_html capability only to users you trust."
 msgstr ""
 
-#: views/partials/admin_footer_rating.view.php:1
-#, php-format
-msgid ""
-"If you like <strong>Tag Groups</strong>, I would be very happy if you could "
-"give it a <a %s>★★★★★</a> rating. Thank you very much in advance!"
-msgstr ""
-
 #: includes-core/TagGroupsCoreAdmin.php:104
 msgid "If you need help or have a new feature request, let us know."
 msgstr ""
@@ -768,7 +769,7 @@ msgstr ""
 msgid "more groups"
 msgstr ""
 
-#: tag-groups.php:113
+#: tag-groups.php:116
 msgid "more information"
 msgstr ""
 
@@ -927,7 +928,7 @@ msgstr ""
 msgid "PHP Version"
 msgstr ""
 
-#: include/admin/class.admin.php:1017
+#: include/admin/class.admin.php:1021
 #, php-format
 msgid ""
 "Please <a %s>click here to run the migration routines</a> to make sure we "
@@ -1003,14 +1004,6 @@ msgstr ""
 msgid "posts"
 msgstr ""
 
-#: include/admin/class.settings.php:931
-msgid "Premium"
-msgstr ""
-
-#: views/admin/settings_troubleshooting_system.view.php:132
-msgid "premium only"
-msgstr ""
-
 #: views/admin/tag_groups_admin.view.php:69
 msgid "previous page"
 msgstr ""
@@ -1056,6 +1049,10 @@ msgstr ""
 msgid "Reset Tag Filter"
 msgstr ""
 
+#: views/admin/settings_troubleshooting_first_aid.view.php:18
+msgid "Reset the filter on the tags page to show all tags."
+msgstr ""
+
 #: views/admin/settings_troubleshooting_first_aid.view.php:11
 msgid ""
 "Running the maintenance can solve issues that you encounter during filtering "
@@ -1082,7 +1079,7 @@ msgstr ""
 msgid "Save Theme Options"
 msgstr ""
 
-#: views/admin/settings_help.view.php:2
+#: views/admin/settings_help.view.php:3
 msgid "Search for setting pages. Type a space to show all settings."
 msgstr ""
 
@@ -1211,6 +1208,10 @@ msgstr ""
 msgid "tag filter"
 msgstr ""
 
+#: include/admin/class.admin.php:108 include/admin/class.admin.php:109
+msgid "Tag Group Admin"
+msgstr ""
+
 #: views/admin/tag_groups_admin.view.php:3
 msgid "Tag Group Administration"
 msgstr ""
@@ -1223,6 +1224,14 @@ msgstr ""
 
 #: include/admin/class.settings.php:862
 msgid "tag groups"
+msgstr ""
+
+#: include/admin/class.settings.php:931
+msgid "Tag Groups Pro"
+msgstr ""
+
+#: views/admin/settings_troubleshooting_system.view.php:132
+msgid "Tag groups pro only"
 msgstr ""
 
 #: views/admin/setup_wizard_header.view.php:1
@@ -1249,6 +1258,11 @@ msgstr ""
 
 #: include/admin/class.settings.php:916 include/admin/class.settings.php:926
 msgid "testing"
+msgstr ""
+
+#: views/partials/admin_footer_rating.view.php:4
+#, php-format
+msgid "Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s"
 msgstr ""
 
 #: views/admin/setup_wizard_taxonomies.view.php:5
@@ -1282,9 +1296,9 @@ msgstr ""
 msgid "The following terms cannot be used:"
 msgstr ""
 
-#: tag-groups.php:113
+#: tag-groups.php:116
 msgid ""
-"The free Tag Groups plugin cannot be active together with Tag Groups Premium."
+"The free Tag Groups plugin cannot be active together with Tag Groups Pro."
 msgstr ""
 
 #: views/admin/settings_front_end_shortcodes.view.php:107
@@ -1414,6 +1428,7 @@ msgstr ""
 msgid "upgrade"
 msgstr ""
 
+#: includes-core/TagGroupsCoreAdmin.php:43
 #: includes-core/TagGroupsCoreAdmin.php:92
 msgid "Upgrade to Pro"
 msgstr ""
@@ -1534,6 +1549,13 @@ msgstr ""
 msgid ""
 "You can use a shortcode to embed the tag cloud directly in a post, page or "
 "widget or you call the function in the PHP code of your theme."
+msgstr ""
+
+#: includes-core/TagGroupsCoreAdmin.php:15
+#, php-format
+msgid ""
+"You're using Tag Groups Free. The Pro version has more features and support. "
+"%sUpgrade to Pro%s"
 msgstr ""
 
 #: include/admin/class.import.php:201

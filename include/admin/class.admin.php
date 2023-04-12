@@ -105,8 +105,8 @@ if (!class_exists('TagGroups_Admin')) {
 
                 $submenu_page = add_submenu_page(
                     'edit.php' . $post_type_query,
-                    'Tag Group Admin',
-                    'Tag Group Admin',
+                    __('Tag Group Admin', 'tag-groups'),
+                    __('Tag Group Admin', 'tag-groups'),
                     $tag_group_role_edit_groups,
                     'tag-groups_' . $post_type,
                     array( 'TagGroups_Group_Admin', 'render_group_administration' )

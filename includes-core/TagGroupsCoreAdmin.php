@@ -12,7 +12,7 @@ class TagGroupsCoreAdmin {
                         \PPVersionNotices\Module\TopNotice\Module::SETTINGS_FILTER,
                         function ($settings) {
                             $settings['taxopress-tag_groups'] = [
-                                'message' => 'You\'re using Tag Groups Free. The Pro version has more features and support. %sUpgrade to Pro%s',
+                                'message' => __('You\'re using Tag Groups Free. The Pro version has more features and support. %sUpgrade to Pro%s', 'tag-groups'),
                                 'link'    => 'https://taxopress.com/tag-groups/',
                                 'screens' => [
                                     ['base' => 'toplevel_page_tag-groups-settings', 'id'   => 'toplevel_page_tag-groups-settings'],
@@ -40,7 +40,7 @@ class TagGroupsCoreAdmin {
                         function ($settings) {
                             $settings['taxopress-tag_groups'] = [
                                 'parent' => 'tag-groups-settings',
-                                'label'  => 'Upgrade to Pro',
+                                'label'  => __('Upgrade to Pro', 'tag-groups'),
                                 'link'   => 'https://taxopress.com/tag-groups/',
                             ];
 

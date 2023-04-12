@@ -36,7 +36,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                 $documentation_link = 'https://taxopress.com/docs/tag-groups/';
                 $logo = '';
             } else {
-                $title = 'Tag Groups Premium';
+                $title = 'Tag Groups Pro';
                 $documentation_link = 'https://taxopress.com/docs/tag-groups/';
                 $logo = '';
             }
@@ -77,7 +77,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                 $is_premium = false;
                 $documentation_link = 'https://taxopress.com/docs/tag-groups/';
             } else {
-                $title = 'Tag Groups Premium';
+                $title = 'Tag Groups Pro';
                 $is_premium = true;
                 $documentation_link = 'https://taxopress.com/docs/tag-groups/';
             }

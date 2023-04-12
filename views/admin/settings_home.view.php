@@ -5,7 +5,7 @@
       <tr>
         <td>
           <div class="tg_admin_accordion">
-            <h4><span title="<?php _e('Click for more information', 'tag-groups-premium') ?>"><?php echo $taxonomy_info['name'] ?> (<?php echo $taxonomy_info['slug'] ?>)</span></h4>
+            <h4><span title="<?php _e('Click for more information', 'tag-groups') ?>"><?php echo $taxonomy_info['name'] ?> (<?php echo $taxonomy_info['slug'] ?>)</span></h4>
             <div style="display:none;">
               <?php if ( $group_count < 100 && $taxonomy_info['term_count'] < 10000 ) : ?>
                 <h4><?php _e( 'Group Statistics', 'tag-groups' ) ?>
