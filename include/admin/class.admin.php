@@ -966,8 +966,9 @@ if (!class_exists('TagGroups_Admin')) {
          */
         public static function add_plugin_settings_link($links)
         {
-            // $settings_link = '<a href="' . admin_url( 'admin.php?page=tag-groups-settings' ) . '">' . __( 'Settings', 'tag-groups' ) . '</a>';
-            // array_unshift( $links, $settings_link );
+            $settings_link = '<a href="' . admin_url( 'admin.php?page=tag-groups-settings' ) . '">' . __( 'Settings', 'tag-groups' ) . '</a>';
+
+            array_unshift( $links, $settings_link );
 
 
             return $links;
