@@ -3,7 +3,7 @@ Contributors: stevejburge, andergmartins, olatechpro, ojopaul
 Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
 Tested up to: 6.1.1
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -125,6 +125,15 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 
 == Changelog ==
+
+= [2.0.3] - 24 May 2023 =
+* Fixed: [tag_groups_post_list] shortcode tag parameter not working with custom taxonomy tags, #86
+* Fixed: Fatal error with post count, #69
+* Fixed: Tag groups shortcode causing fatal error, #85
+* Fixed: Remove Broken documentation links in Gutenberg blocks, #88
+* Fixed: Remove "Try Premium" link, #76
+* Updated: TAG GROUPS Spanish translation April 2023 update, #70
+* Updated: TAG GROUPS French translation April 2023 update, #74
 
 = [2.0.2] - 12 Apr 2023 =
 * Update: Update Tag group admin sorting method, #52
