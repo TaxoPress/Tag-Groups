@@ -408,6 +408,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             self::add_settings_help();
             $tabs = array();
             $tabs['first-aid'] = __( 'First Aid', 'tag-groups' );
+            $tabs['rest-api'] = __( 'REST API', 'tag-groups' );
             $tabs['system'] = __( 'System Information', 'tag-groups' );
             $tabs['debug'] = __( 'Debugging', 'tag-groups' );
             $tabs['export_import'] = __( 'Export/Import', 'tag-groups' );
@@ -432,6 +433,15 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                                 $view->set( 'tag_group_show_filter_tags', TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 ) );
                                 $view->render();
                             }
+
+                            break;
+
+                        case 'rest-api':
+
+                            $view = new TagGroups_View( 'admin/settings_rest_api' );
+                            $view->set( 'group_public_api_access', TagGroups_Options::get_option( 'tag_group_enable_group_public_api_access', 0 ) );
+                            $view->set( 'terms_public_api_access', TagGroups_Options::get_option( 'tag_group_enable_terms_public_api_access', 0 ) );
+                            $view->render();
 
                             break;
                         case 'system':
@@ -610,6 +620,23 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     }
 
                     TagGroups_Admin_Notice::add( 'success', __( 'Your settings have been saved.', 'tag-groups' ) );
+                    break;
+                case 'rest_api':
+                    if ( !isset( $_POST['tag-groups-rest-api-nonce'] ) || !wp_verify_nonce( $_POST['tag-groups-rest-api-nonce'], 'tag-groups-rest-api' ) ) {
+                        die( "Security check" );
+                    }
+                    // Make sure that only administrators can save settings
+                    if ( !current_user_can( 'manage_options' ) ) {
+                        wp_die( "Capability check failed" );
+                    }
+                    
+                    $group_public_api_access = ( isset( $_POST['group_public_api_access'] ) ? 1 : 0 );
+                    TagGroups_Options::update_option( 'tag_group_enable_group_public_api_access', $group_public_api_access );
+
+                    $terms_public_api_access = ( isset( $_POST['terms_public_api_access'] ) ? 1 : 0 );
+                    TagGroups_Options::update_option( 'tag_group_enable_terms_public_api_access', $terms_public_api_access );
+
+                    TagGroups_Admin_Notice::add( 'success', __( 'Your settings has been saved.', 'tag-groups' ) );
                     break;
                 case 'reset':
                     if ( !isset( $_POST['tag-groups-reset-nonce'] ) || !wp_verify_nonce( $_POST['tag-groups-reset-nonce'], 'tag-groups-reset' ) ) {
