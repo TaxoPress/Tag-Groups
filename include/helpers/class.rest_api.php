@@ -38,94 +38,124 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
 
         public static function register_routes()
         {
-            global  $tag_groups_current_user_id ;
+            global $tag_groups_current_user_id;
             /**
              * Make the current user ID that we retrieved from application password available in permission callbacks
              * (workaround for a suspected bug in 5.6-RC1
              */
             $tag_groups_current_user_id = get_current_user_id();
-            register_rest_route( 'tag-groups/v1', '/groups/(?P<id>\\d+)', array( array(
+        
+            register_rest_route('tag-groups/v1', '/groups/(?P<id>\\d+)', 
+                array(
+                    array(
+                        'methods'             => WP_REST_Server::READABLE,
+                        'callback'            => array('TagGroups_REST_API', 'get_groups'),
+                        'args'                => array(
+                            'id' => array(
+                                'validate_callback' => function ($param, $request, $key) {
+                                    return is_numeric($param);
+                                },
+                            ),
+                        ),
+                        'schema'              => array('TagGroups_REST_API', 'get_group_schema'),
+                        'permission_callback' => function($request) {
+                            return TagGroups_REST_API::current_user_can_access_endoint('groups');
+                        },
+                    ),
+                    array(
+                        'methods'             => WP_REST_Server::EDITABLE,
+                        'callback'            => array('TagGroups_REST_API', 'edit_group'),
+                        'args'                => array(
+                            'id' => array(
+                                'validate_callback' => function ($param, $request, $key) {
+                                    return is_numeric($param);
+                                },
+                            ),
+                        ),
+                        'permission_callback' => array('TagGroups_REST_API', 'current_user_can_edit_groups'),
+                    ),
+                    array(
+                        'methods'             => WP_REST_Server::DELETABLE,
+                        'callback'            => array('TagGroups_REST_API', 'delete_group'),
+                        'args'                => array(
+                            'id' => array(
+                                'validate_callback' => function ($param, $request, $key) {
+                                    return is_numeric($param);
+                                },
+                            ),
+                        ),
+                        'permission_callback' => array('TagGroups_REST_API', 'current_user_can_edit_groups'),
+                    )
+                )
+            );
+        
+            register_rest_route('tag-groups/v1', '/groups/', array(
                 'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'get_groups' ),
-                'args'                => array(
-                'id' => array(
-                'validate_callback' => function ( $param, $request, $key ) {
-                return is_numeric( $param );
-            },
-            ),
-            ),
-                'schema'              => array( 'TagGroups_REST_API', 'get_group_schema' ),
-                'permission_callback' => '__return_true',
-            ), array(
-                'methods'             => WP_REST_Server::EDITABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'edit_group' ),
-                'args'                => array(
-                'id' => array(
-                'validate_callback' => function ( $param, $request, $key ) {
-                return is_numeric( $param );
-            },
-            ),
-            ),
-                'permission_callback' => array( 'TagGroups_REST_API', 'current_user_can_edit_groups' ),
-            ), array(
-                'methods'             => WP_REST_Server::DELETABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'delete_group' ),
-                'args'                => array(
-                'id' => array(
-                'validate_callback' => function ( $param, $request, $key ) {
-                return is_numeric( $param );
-            },
-            ),
-            ),
-                'permission_callback' => array( 'TagGroups_REST_API', 'current_user_can_edit_groups' ),
-            ) ) );
-            register_rest_route( 'tag-groups/v1', '/groups/', array(
+                'callback'            => array('TagGroups_REST_API', 'get_groups'),
+                'schema'              => array('TagGroups_REST_API', 'get_group_schema'),
+                'permission_callback' => function($request) {
+                    return TagGroups_REST_API::current_user_can_access_endoint('groups');
+                },
+            ));
+        
+            register_rest_route('tag-groups/v1', '/terms/(?P<id>\\d+)', 
+                array(
+                    array(
+                        'methods'             => WP_REST_Server::READABLE,
+                        'callback'            => array('TagGroups_REST_API', 'get_terms'),
+                        'args'                => array(
+                            'id' => array(
+                                'validate_callback' => function ($param, $request, $key) {
+                                    return is_numeric($param);
+                                },
+                            ),
+                        ),
+                        'schema'              => array('TagGroups_REST_API', 'get_term_schema'),
+                        'permission_callback' => function($request) {
+                            return TagGroups_REST_API::current_user_can_access_endoint('terms');
+                        },
+                    ),
+                    array(
+                        'methods'             => WP_REST_Server::EDITABLE,
+                        'callback'            => array('TagGroups_REST_API', 'edit_term'),
+                        'args'                => array(
+                            'id' => array(
+                                'validate_callback' => function ($param, $request, $key) {
+                                    return is_numeric($param);
+                                },
+                            ),
+                        ),
+                        'permission_callback' => array('TagGroups_REST_API', 'current_user_can_edit_tags'),
+                    )
+                )
+            );
+        
+            register_rest_route('tag-groups/v1', '/terms/', array(
                 'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'get_groups' ),
-                'schema'              => array( 'TagGroups_REST_API', 'get_group_schema' ),
-                'permission_callback' => '__return_true',
-            ) );
-            register_rest_route( 'tag-groups/v1', '/terms/(?P<id>\\d+)', array( array(
-                'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'get_terms' ),
-                'args'                => array(
-                'id' => array(
-                'validate_callback' => function ( $param, $request, $key ) {
-                return is_numeric( $param );
-            },
-            ),
-            ),
-                'schema'              => array( 'TagGroups_REST_API', 'get_term_schema' ),
-                'permission_callback' => '__return_true',
-            ), array(
-                'methods'             => WP_REST_Server::EDITABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'edit_term' ),
-                'args'                => array(
-                'id' => array(
-                'validate_callback' => function ( $param, $request, $key ) {
-                return is_numeric( $param );
-            },
-            ),
-            ),
-                'permission_callback' => array( 'TagGroups_REST_API', 'current_user_can_edit_tags' ),
-            ) ) );
-            register_rest_route( 'tag-groups/v1', '/terms/', array(
-                'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'get_terms' ),
-                'schema'              => array( 'TagGroups_REST_API', 'get_term_schema' ),
-                'permission_callback' => '__return_true',
-            ) );
-            register_rest_route( 'tag-groups/v1', '/taxonomies/', array( array(
-                'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'get_taxonomies' ),
-                'schema'              => array( 'TagGroups_REST_API', 'get_taxonomy_schema' ),
-                'permission_callback' => '__return_true',
-            ), array(
-                'methods'             => WP_REST_Server::EDITABLE,
-                'callback'            => array( 'TagGroups_REST_API', 'edit_taxonomies' ),
-                'permission_callback' => array( 'TagGroups_REST_API', 'current_user_can_manage_options' ),
-            ) ) );
-        }
+                'callback'            => array('TagGroups_REST_API', 'get_terms'),
+                'schema'              => array('TagGroups_REST_API', 'get_term_schema'),
+                'permission_callback' => function($request) {
+                    return TagGroups_REST_API::current_user_can_access_endoint('terms');
+                },
+            ));
+        
+            register_rest_route('tag-groups/v1', '/taxonomies/', 
+                array(
+                    array(
+                        'methods'             => WP_REST_Server::READABLE,
+                        'callback'            => array('TagGroups_REST_API', 'get_taxonomies'),
+                        'schema'              => array('TagGroups_REST_API', 'get_taxonomy_schema'),
+                        'permission_callback' => '__return_true',
+                    ),
+                    array(
+                        'methods'             => WP_REST_Server::EDITABLE,
+                        'callback'            => array('TagGroups_REST_API', 'edit_taxonomies'),
+                        'permission_callback' => array('TagGroups_REST_API', 'current_user_can_manage_options'),
+                    )
+                )
+            );
+        }        
+
 
         /**
          * Get one or more groups
@@ -860,6 +890,32 @@ if ( !class_exists( 'TagGroups_REST_API' ) ) {
                 wp_set_current_user( $tag_groups_current_user_id );
             }
             return current_user_can( 'manage_options' );
+        }
+
+        /**
+         * Determines whether the current user/guest is allowed to access endpoint
+         *
+         * @return boolean
+         */
+        public static function current_user_can_access_endoint($option = 'groups')
+        {
+            global  $tag_groups_current_user_id ;
+            $can_access = false;
+
+            if ( !get_current_user_id() && $tag_groups_current_user_id ) {
+                wp_set_current_user( $tag_groups_current_user_id );
+            }
+            
+            //enable admin by default
+            if (current_user_can( 'manage_options' )) {
+                $can_access = true;
+            } else if ($option == 'groups' && !empty(TagGroups_Options::get_option( 'tag_group_enable_group_public_api_access', 0 ))) {
+                $can_access = true;
+            } else if ($option == 'terms' && !empty(TagGroups_Options::get_option( 'tag_group_enable_terms_public_api_access', 0 ))) {
+                $can_access = true;
+            }
+
+            return $can_access;
         }
 
         /**
