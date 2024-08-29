@@ -84,7 +84,7 @@ if (!class_exists('TagGroups_Admin')) {
             // register the menus and pages
             foreach ($tag_groups_admin_structure as $tag_groups_admin_page) {
                 add_submenu_page(
-                    $tag_groups_admin_page['parent'],
+                    !empty($tag_groups_admin_page['parent']) ? $tag_groups_admin_page['parent'] : '',
                     $tag_groups_admin_page['title'],
                     $tag_groups_admin_page['title'],
                     $tag_groups_admin_page['user_can'],
