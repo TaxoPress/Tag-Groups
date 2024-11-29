@@ -12,5 +12,6 @@
       "plugin-name": "tag-groups",
       "plugin-slug": "tag-groups",
       "plugin-folder": "tag-groups"
-    }
+    },
+    "license": "MIT"
 }
