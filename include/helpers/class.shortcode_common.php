@@ -8,6 +8,7 @@
 */
 
 if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
+    #[\AllowDynamicProperties]
     class TagGroups_Shortcode_Common
     {
         public  $attributes ;
@@ -28,6 +29,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
         public  $tags ;
         public  $taxonomies ;
         public  $wpml_language ;
+        public  $remove_filters ;
         /**
          * loads commonly required data
          *
