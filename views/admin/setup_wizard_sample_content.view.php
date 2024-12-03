@@ -31,7 +31,7 @@
       <input type="hidden" name="tag_groups_tag_names[]" value='<?php echo $tag_name ?>'>
     <?php endforeach; ?>
     <input type="hidden" name="tg_action_wizard" value="sample-content">
-    <input type="submit" value="<?php _e( 'Next Step' ) ?>" class="button button-primary tag-groups-wizard-submit">
+    <input type="submit" value="<?php _e( 'Next Step', 'tag-groups' ) ?>" class="button button-primary tag-groups-wizard-submit">
     <input type="hidden" name="tag-groups-setup-wizard-nonce" id="tag-groups-setup-wizard-nonce" value="<?php echo wp_create_nonce( 'tag-groups-setup-wizard-nonce' ) ?>" />
   </form>
 </div>

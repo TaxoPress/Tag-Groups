@@ -23,10 +23,10 @@
       </ul>
 
       <p>&nbsp;</p>
-      <h4><span class="dashicons dashicons-lightbulb"></span>&nbsp;<?php _e( 'You will find more options in the Tag Groups settings.' ) ?></h4>
+      <h4><span class="dashicons dashicons-lightbulb"></span>&nbsp;<?php _e( 'You will find more options in the Tag Groups settings.', 'tag-groups' ) ?></h4>
 
       <input type="hidden" name="tg_action_wizard" value="taxonomy">
-      <input type="submit" value="<?php _e( 'Next Step' ) ?>" class="button button-primary tag-groups-wizard-submit">
+      <input type="submit" value="<?php _e( 'Next Step', 'tag-groups' ) ?>" class="button button-primary tag-groups-wizard-submit">
       <input type="hidden" name="tag-groups-setup-wizard-nonce" id="tag-groups-setup-wizard-nonce" value="<?php echo wp_create_nonce( 'tag-groups-setup-wizard-nonce' ) ?>" />
     </form>
   </div>
