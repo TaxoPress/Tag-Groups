@@ -256,8 +256,8 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     self::add_tabs( 'tag-groups-settings-back-end', $tabs, $active_tab );
                     switch ( $active_tab ) {
                         case 'filters':
-                            $show_filter_posts = TagGroups_Options::get_option( 'tag_group_show_filter', 1 );
-                            $show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 );
+                            $show_filter_posts = TagGroups_Options::get_option( 'tag_group_show_filter', 0 );
+                            $show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 0 );
                             $view = new TagGroups_View( 'admin/settings_back_end_filters' );
                             $view->set( array(
                                 'show_filter_posts' => $show_filter_posts,
@@ -430,7 +430,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                                 $view = new TagGroups_View( 'admin/settings_troubleshooting_first_aid' );
                                 $view->set( 'tasks_migration', 'migratetermmeta' );
                                 $view->set( 'tasks_maintenance', 'fixgroups,fixmissinggroups,sortgroups' );
-                                $view->set( 'tag_group_show_filter_tags', TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 ) );
+                                $view->set( 'tag_group_show_filter_tags', TagGroups_Options::get_option( 'tag_group_show_filter_tags', 0 ) );
                                 $view->render();
                             }
 
