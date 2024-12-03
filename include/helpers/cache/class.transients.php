@@ -58,19 +58,20 @@ if ( ! class_exists( 'TagGroups_Transients' ) ) {
      */
     static function get_used_names() {
 
-      if ( self::TRANSIENT_NAMES ) {
-
-        return get_option( self::TRANSIENT_NAMES, array() );
-
-      } else {
-
-        TagGroups_Error::log( '[Tag Groups] Error retrieving array of transient names' );
-
-        return array();
-
+      if ( empty(self::TRANSIENT_NAMES) ) {
+          TagGroups_Error::log('[Tag Groups] Error: TRANSIENT_NAMES is empty or undefined.');
+          return array();
       }
-
-    }
+  
+      $used_transient_names = get_option(self::TRANSIENT_NAMES, array());
+  
+      if ( !is_array($used_transient_names) ) {
+          TagGroups_Error::log('[Tag Groups] Retrieved transient names are not an array.');
+          $used_transient_names = array();
+      }
+  
+      return $used_transient_names;
+  }
 
     /**
      * set the array of all transient names that were used
@@ -107,9 +108,15 @@ if ( ! class_exists( 'TagGroups_Transients' ) ) {
 
         $used_transient_names = self::get_used_names();
 
+        if (!is_array($used_transient_names)) {
+          $used_transient_names = array();
+        }
+
         $key = array_search( $transient, $used_transient_names );
 
-        unset( $used_transient_names[ $key ] );
+        if ($key !== false) {
+          unset( $used_transient_names[ $key ] );
+        }
 
         self::set_used_names( $used_transient_names );
 
