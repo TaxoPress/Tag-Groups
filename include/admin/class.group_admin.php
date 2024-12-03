@@ -20,7 +20,7 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
             global  $tag_group_groups ;
             $tag_group_show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 0 );
             //tags
-            $tag_group_show_filter = TagGroups_Options::get_option( 'tag_group_show_filter', 1 );
+            $tag_group_show_filter = TagGroups_Options::get_option( 'tag_group_show_filter', 0 );
             // posts
             $this_post_type = preg_replace( '/tag-groups_(.+)/', '$1', sanitize_title( $_GET['page'] ) );
             $post_type_taxonomies = get_object_taxonomies( $this_post_type );
