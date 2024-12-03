@@ -18,7 +18,7 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
         static function render_group_administration()
         {
             global  $tag_group_groups ;
-            $tag_group_show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 );
+            $tag_group_show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 0 );
             //tags
             $tag_group_show_filter = TagGroups_Options::get_option( 'tag_group_show_filter', 1 );
             // posts
