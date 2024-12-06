@@ -1,6 +1,6 @@
 <div class="tg_settings_tabs_content">
   
-  <h2><?php echo $task_set_name ?></h2>
+  <h2><?php echo esc_html($task_set_name) ?></h2>
 
   <p><?php _e( "Please stay on this page until all processes have finished.", 'tag-groups' ) ?></p>
 
