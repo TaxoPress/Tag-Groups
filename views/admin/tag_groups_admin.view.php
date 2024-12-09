@@ -239,22 +239,3 @@
     } );
   });
 </script>
-
-<div id="tg_tools_accordion">
-<h3 class="tg_pointer"><span title="<?php _e( 'Click to open', 'tag-groups' )?>"><?php _e( 'Tools', 'tag-groups' )?> <span class="dashicons dashicons-menu"></span></span></h3>
-  <div class="tg_tools_accordion_container">
-    <div class="tg_tools_accordion_content">
-      <?php _e( 'Sort by alphabet:', 'tag-groups' )?>
-      <span id="tg_groups_sort_up" class="tg_pointer dashicons dashicons-arrow-up" title="<?php _e( 'A-Z', 'tag-groups' )?>"></span>
-      <span id="tg_groups_sort_down" class="tg_pointer dashicons dashicons-arrow-down" title="<?php _e( 'Z-A', 'tag-groups' )?>"></span>
-    </div>
-    <?php if ( current_user_can( 'manage_options' ) ) : ?>
-      <div class="tg_tools_accordion_content">
-        <a href="<?php echo $settings_url ?>" class="dashicons-before dashicons-admin-settings tg_no_underline">&nbsp;<?php
-        _e( 'Go to the settings.', 'tag-groups' )
-        ?></a>
-      </div>
-    <?php endif; ?>
-
-  </div>
-</div>
