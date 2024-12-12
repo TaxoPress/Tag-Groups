@@ -183,14 +183,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
                 '" title="' +
                 labels.tooltip_delete +
                 '"></span>';
-              if (!showParents || !data_set.is_parent) {
-                  output +=
-                    '<span class="tg_pointer button" onclick="tg_toggle_clear(' +
-                    data_set.position +
-                    ')" style="margin-left:20px;">' +
-                    labels.tooltip_addnew +
-                    '</span>';
-              }
               output += '</td>\n';
               output += '<td class="tg_hide_when_drag">';
 
@@ -250,6 +242,32 @@ function tg_do_ajax(tg_params, send_data, labels) {
           // no tag groups yet
           output += tg_html_first_group(labels);
         }
+
+                /*
+        * Adds a new group button to the new group container
+        */
+                function addNewGroupButton(labels) {
+                  const $newGroupContainer = jQuery('#new_group');
+                  if ($newGroupContainer.length) {
+                    if (!$newGroupContainer.find('.new_group_pointer.button').length) {
+                      const $addNewGroupButton = jQuery('<span>', {
+                        class: 'new_group_pointer button',
+                        text: labels.tooltip_addnew,
+                        click: function () {
+                          tg_toggle_clear(data_set.position);
+                        }
+                      });
+        
+                      $newGroupContainer.append($addNewGroupButton);
+                    }
+                  }
+                }
+        
+                // Call the function after the DOM is ready
+                jQuery(document).ready(function () {
+                  const position = data_set.position;
+                  addNewGroupButton(labels, position);
+                });
 
         // write table of groups
         jQuery('#tg_groups_container').html(output);
