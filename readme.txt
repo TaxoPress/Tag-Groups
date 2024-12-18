@@ -2,8 +2,8 @@
 Contributors: stevejburge, andergmartins, olatechpro, ojopaul
 Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
-Tested up to: 6.3
-Stable tag: 2.0.4
+Tested up to: 6.7
+Stable tag: 2.0.5
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -125,6 +125,15 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 
 == Changelog ==
+
+= [2.0.5] - 18 Dec 2024 =
+* Update: Update the Migrate and Maintenace feature in Tag Groups form to $_POST and sanitize url, #134
+* Removed: Remove the Tools area, #96
+* Fixed: PHP Error in class.transients.php, #125
+* Update: Disable filters by default, #121
+* Fixed: "Tag Colors" screen is broken in 2.0.4, #119
+* Fixed: Deprecated shortcode error, #126
+* Update: New plugin description, #67
 
 = [2.0.4] - 29 Aug 2024 =
 * Update: Add settings to enable Tag Groups and Terms endpoint for public access, #114

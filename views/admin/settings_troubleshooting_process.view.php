@@ -1,6 +1,6 @@
 <div class="tg_settings_tabs_content">
   
-  <h2><?php echo $task_set_name ?></h2>
+  <h2><?php echo esc_html($task_set_name) ?></h2>
 
   <p><?php _e( "Please stay on this page until all processes have finished.", 'tag-groups' ) ?></p>
 
@@ -9,14 +9,14 @@
   <div id="tag_groups_tasks_final_words_error" style="display: none;">
     <h3><?php _e( 'There have been errors.', 'tag-groups' ) ?></h3>
     <span>
-      <a class="button button-primary" href="<?php echo remove_query_arg( 'process-tasks', wp_get_referer() ) ?>"><?php _e( 'Continue', 'tag-groups' ) ?></a>
+      <a class="button button-primary" href="<?php echo esc_url(remove_query_arg( 'process-tasks' )) ?>"><?php _e( 'Continue', 'tag-groups' ) ?></a>
     </span>
   </div>
 
   <div id="tag_groups_tasks_final_words_success" style="display: none;">
     <h3><?php _e( 'Finished!', 'tag-groups' ) ?></h3>
     <span>
-      <a class="button button-primary" href="<?php echo remove_query_arg( 'process-tasks', wp_get_referer() ) ?>"><?php _e( 'Continue', 'tag-groups' ) ?></a>
+      <a class="button button-primary" href="<?php echo esc_url(remove_query_arg( 'process-tasks' )) ?>"><?php _e( 'Continue', 'tag-groups' ) ?></a>
     </span>
   </div>
 

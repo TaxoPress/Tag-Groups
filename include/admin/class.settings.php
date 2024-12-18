@@ -256,8 +256,8 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                     self::add_tabs( 'tag-groups-settings-back-end', $tabs, $active_tab );
                     switch ( $active_tab ) {
                         case 'filters':
-                            $show_filter_posts = TagGroups_Options::get_option( 'tag_group_show_filter', 1 );
-                            $show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 );
+                            $show_filter_posts = TagGroups_Options::get_option( 'tag_group_show_filter', 0 );
+                            $show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 0 );
                             $view = new TagGroups_View( 'admin/settings_back_end_filters' );
                             $view->set( array(
                                 'show_filter_posts' => $show_filter_posts,
@@ -424,13 +424,17 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
 
                         case 'first-aid':
 
-                            if ( !empty($_GET['process-tasks']) ) {
+                            if (
+                                !empty($_POST['process-tasks']) &&
+                                !empty($_POST['nonce']) 
+                                && wp_verify_nonce(sanitize_key($_POST['nonce']), 'tag-groups-first-aid-nonce')
+                              ) {
                                 self::add_html_process();
                             } else {
                                 $view = new TagGroups_View( 'admin/settings_troubleshooting_first_aid' );
                                 $view->set( 'tasks_migration', 'migratetermmeta' );
                                 $view->set( 'tasks_maintenance', 'fixgroups,fixmissinggroups,sortgroups' );
-                                $view->set( 'tag_group_show_filter_tags', TagGroups_Options::get_option( 'tag_group_show_filter_tags', 1 ) );
+                                $view->set( 'tag_group_show_filter_tags', TagGroups_Options::get_option( 'tag_group_show_filter_tags', 0 ) );
                                 $view->render();
                             }
 
@@ -1063,12 +1067,12 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             );
             $totals = array();
             $languages = array();
-            $tasks = explode( ',', $_GET['process-tasks'] );
+            $tasks = explode( ',', $_POST['process-tasks'] );
             $tasks = array_map( 'sanitize_title', $tasks );
             $tasks = array_intersect( $tasks, array_keys( $tasks_whitelist ) );
 
-            if ( !empty($_GET['task-set-name']) ) {
-                $task_set_name = sanitize_text_field( $_GET['task-set-name'] );
+            if ( !empty($_POST['task-set-name']) ) {
+                $task_set_name = sanitize_text_field( $_POST['task-set-name'] );
             } else {
                 $task_set_name = '';
             }

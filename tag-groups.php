@@ -3,10 +3,10 @@
  *
  * Plugin Name: Tag Groups
  * Plugin URI: https://wordpress.org/plugins/tag-groups/
- * Description: Organize your tags in groups or by alphabet. Show tag clouds with many options in posts, pages or widgets (tabs, accordion or list).
+ * Description: Tag Groups allows you to organize your WordPress taxonomy terms and show them in clouds, tabs, accordions, tables, lists and much more.
  * Author: TaxoPress
  * Author URI: https://taxopress.com
- * Version: 2.0.4
+ * Version: 2.0.5
  * License: GNU GENERAL PUBLIC LICENSE, Version 3
  * Text Domain: tag-groups
  * Domain Path: /languages

@@ -322,7 +322,7 @@ if (!class_exists('TagGroups_Admin')) {
             if (is_object($screen) && !in_array($taxonomy, $enabled_taxonomies)) {
                 return;
             }
-            $show_filter_tags = TagGroups_Options::get_option('tag_group_show_filter_tags', 1);
+            $show_filter_tags = TagGroups_Options::get_option('tag_group_show_filter_tags', 0);
 
             if ($show_filter_tags) {
                 $tag_group_tags_filter = TagGroups_Options::get_option('tag_group_tags_filter', array());
@@ -510,7 +510,7 @@ if (!class_exists('TagGroups_Admin')) {
             if (is_object($screen) && !in_array($taxonomy, $enabled_taxonomies)) {
                 return;
             }
-            $show_filter_tags = TagGroups_Options::get_option('tag_group_show_filter_tags', 1);
+            $show_filter_tags = TagGroups_Options::get_option('tag_group_show_filter_tags', 0);
             if (!$show_filter_tags) {
                 return;
             }
@@ -687,7 +687,7 @@ if (!class_exists('TagGroups_Admin')) {
             if (is_object($screen) && !in_array($screen->taxonomy, $enabled_taxonomies)) {
                 return;
             }
-            if (!TagGroups_Options::get_option('tag_group_show_filter_tags', 1)) {
+            if (!TagGroups_Options::get_option('tag_group_show_filter_tags', 0)) {
                 return;
             }
             $term_groups = $tag_group_groups->get_all_with_position_as_key(true);
@@ -731,7 +731,7 @@ if (!class_exists('TagGroups_Admin')) {
             $screen = get_current_screen();
             $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
 
-            if (!empty($screen) && 'edit-tags' == $screen->base && TagGroups_Options::get_option('tag_group_show_filter_tags', 1) && in_array($screen->taxonomy, $enabled_taxonomies)) {
+            if (!empty($screen) && 'edit-tags' == $screen->base && TagGroups_Options::get_option('tag_group_show_filter_tags', 0) && in_array($screen->taxonomy, $enabled_taxonomies)) {
                 $view = new TagGroups_View('partials/admin_footer');
                 $view->set('reset_url', esc_url(add_query_arg('term-filter', -1)));
                 return $view->return_html() . $text;
@@ -828,7 +828,7 @@ if (!class_exists('TagGroups_Admin')) {
             if ('edit.php' != $pagenow) {
                 return $query;
             }
-            $show_filter_posts = TagGroups_Options::get_option('tag_group_show_filter', 1);
+            $show_filter_posts = TagGroups_Options::get_option('tag_group_show_filter', 0);
             if (!$show_filter_posts) {
                 return $query;
             }
@@ -916,7 +916,7 @@ if (!class_exists('TagGroups_Admin')) {
             if (empty($taxonomy) || is_array($taxonomy)) {
                 $taxonomy = 'post_tag';
             }
-            $show_filter_tags = TagGroups_Options::get_option('tag_group_show_filter_tags', 1);
+            $show_filter_tags = TagGroups_Options::get_option('tag_group_show_filter_tags', 0);
             if (!$show_filter_tags) {
                 return $pieces;
             }
