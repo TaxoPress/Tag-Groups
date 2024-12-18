@@ -424,7 +424,11 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
 
                         case 'first-aid':
 
-                            if ( !empty($_GET['process-tasks']) ) {
+                            if (
+                                !empty($_POST['process-tasks']) &&
+                                !empty($_POST['nonce']) 
+                                && wp_verify_nonce(sanitize_key($_POST['nonce']), 'tag-groups-first-aid-nonce')
+                              ) {
                                 self::add_html_process();
                             } else {
                                 $view = new TagGroups_View( 'admin/settings_troubleshooting_first_aid' );
@@ -1063,12 +1067,12 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             );
             $totals = array();
             $languages = array();
-            $tasks = explode( ',', $_GET['process-tasks'] );
+            $tasks = explode( ',', $_POST['process-tasks'] );
             $tasks = array_map( 'sanitize_title', $tasks );
             $tasks = array_intersect( $tasks, array_keys( $tasks_whitelist ) );
 
-            if ( !empty($_GET['task-set-name']) ) {
-                $task_set_name = sanitize_text_field( $_GET['task-set-name'] );
+            if ( !empty($_POST['task-set-name']) ) {
+                $task_set_name = sanitize_text_field( $_POST['task-set-name'] );
             } else {
                 $task_set_name = '';
             }
