@@ -126,6 +126,15 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
+= [2.0.6] - 15 Jan 2025 =
+* Improved: Added Filter Button to the Tags screen, #138 
+* Update: Update buttons on Tags Groups Admin screen, #133
+* Update: Replace X icon in metabox screen, #104
+* Feature: Add a "Remove all from group", #105
+* Fixed: Deprecated shortcode error with shuffle box shortcode, #150
+* Fixed: Possible issue with Tag Groups shortcode, #140
+* Fixed: Allow users to disable large modal from metabox, #100
+
 = [2.0.5] - 18 Dec 2024 =
 * Update: Update the Migrate and Maintenace feature in Tag Groups form to $_POST and sanitize url, #134
 * Removed: Remove the Tools area, #96
