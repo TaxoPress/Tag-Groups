@@ -19,7 +19,7 @@ To release the Pro plugin please make sure to check all the checkboxes below.
 - [ ] Update the Version number to the next stable version in tag-groups-pro.php
 - [ ] Update the changelog - make sure all the changes are there with a user-friendly description and that the release date is correct
 - [ ] Commit the changes to the release branch
-- [ ] Build the zip package
+- [ ] Build the zip package using `$ composer build`. It should create a package in the `./dist` dir.
 - [ ] Send to the team for testing
 
 ### Release Checklist
