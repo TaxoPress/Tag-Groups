@@ -14,11 +14,12 @@ To release the Free plugin please make sure to check all the checkboxes below.
 - [ ] Create the release branch as `release-<version>` based on the development branch
 - [ ] Make sure to directly merge or use Pull Requests to merge hotfixes or features branches into the release branch
 - [ ] Run `composer update` and check if there is any relevant update. Check if you need to lock the current version for any dependency. The `--no-dev` argument is optional here, since the build script will make sure to run the build with that argument.
-- [ ] Refresh language .pot file to update new string
+- [ ] Refresh language .pot file to update new string. You can use loco translate plugin and go to Loco Translate > Plugins > Tag Groups > Edit template > Sync > Save. Copy languages folder to repository after process is complete to update the language
+- [ ] Update the Version number to the next stable version in readme.txt
+- [ ] Update the Version number to the next stable version in tag-groups-pro.php
 - [ ] Update the changelog - make sure all the changes are there with a user-friendly description and that the release date is correct
-- [ ] Update the version number to the next stable version. Use `$ vendor/bin/robo version <version-number>`
 - [ ] Commit the changes to the release branch
-- [ ] Build the zip package using `$ vendor/bin/robo build`. It should create a package in the `./dist` dir.
+- [ ] Build the zip package.
 - [ ] Send to the team for testing
 
 ### Release Checklist
