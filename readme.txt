@@ -3,7 +3,7 @@ Contributors: stevejburge, andergmartins, olatechpro, ojopaul
 Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
 Tested up to: 6.7
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -125,6 +125,15 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 
 == Changelog ==
+
+= [2.0.6] - 16 Jan 2025 =
+* Improved: Added Filter Button to the Tags screen, #138 
+* Improved: Allow users to disable large modal from metabox, #100
+* Update: Update buttons on Tags Groups Admin screen, #133
+* Update: Replace X icon in metabox screen, #104
+* Feature: Add a "Remove all from group", #105
+* Fixed: Deprecated shortcode error with shuffle box shortcode, #150
+* Fixed: Possible issue with Tag Groups shortcode, #140
 
 = [2.0.5] - 18 Dec 2024 =
 * Update: Update the Migrate and Maintenace feature in Tag Groups form to $_POST and sanitize url, #134
