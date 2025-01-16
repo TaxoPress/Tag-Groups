@@ -222,7 +222,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
             if ( !isset( $this->group_id ) ) {
                 return array();
             }
-            $orderby = strtolower( $orderby );
+            $orderby = is_string($orderby) ? strtolower($orderby) : 'name';
             /**
              * Remove invalid taxonomies
              */
@@ -266,7 +266,7 @@ if ( !class_exists( 'TagGroups_Group' ) ) {
                     return $count_transient_value[$this->group_id];
                 }
             } else {
-                $cache_key = md5( $this->group_id . '-' . serialize( $taxonomy ) . '-' . serialize( $hide_empty ) . '-' . strtolower( $fields ) . '-' . $orderby . '-' . strtolower( $order ) . '-' . $pll_post_language . '-' . $wpml_language );
+                $cache_key = md5( $this->group_id . '-' . serialize( $taxonomy ) . '-' . serialize( $hide_empty ) . '-' . (is_string($fields) ? strtolower($fields) : 'all') . '-' . $orderby . '-' . (is_string($order) ? strtolower($order) : 'asc') . '-' . $pll_post_language . '-' . $wpml_language );
                 $transient_name = TagGroups_WPML::get_tag_groups_group_terms_transient_name() . '-' . $cache_key;
                 $transient_value = TagGroups_Transients::get_transient( $transient_name );
                 if ( false !== $transient_value ) {

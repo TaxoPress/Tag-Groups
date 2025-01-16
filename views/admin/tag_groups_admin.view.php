@@ -9,6 +9,11 @@
     <div style="float:left; margin: 10px 50px 10px 0;">
       <input type="text" id="filter_label" placeholder="<?php _e( 'Filter by label', 'tag-groups' ) ?>"/>
     </div>
+
+    <div style="float: left; margin: 5px 0;">
+      <div id="new_group" style="margin:5px;" title="<?php _e( 'Add new group', 'tag-groups' ) ?>" class="new_group_pointer">
+      </div>
+    </div>
   </p>
 
   <table class="widefat tg_groups_table">
@@ -61,7 +66,7 @@
   tagGroupsLabels.placeholder_new = '<?php _e( 'label', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_delete = '<?php _e( 'Delete this group.', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_newbelow = '<?php _e( 'Create a new group below.', 'tag-groups' ) ?>';
-  tagGroupsLabels.tooltip_addnew = '<?php _e( 'Add New', 'tag-groups' ) ?>';
+  tagGroupsLabels.tooltip_addnew = '<?php _e( 'Add New Group', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_move_up = '<?php _e( 'move up', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_move_down = '<?php _e( 'move down', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_reload = '<?php _e( 'reload', 'tag-groups' ) ?>';
