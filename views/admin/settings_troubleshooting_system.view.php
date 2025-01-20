@@ -2,23 +2,23 @@
   <div class="tg_admin_accordion" >
     <h3>WordPress</h3>
     <table class="widefat fixed">
-      <tr><td>WordPress Version</td><td><?php
+      <tr><td><?php _e( 'WordPress Version', 'tag-groups' ); ?></td><td><?php
 echo  get_bloginfo( 'version' ) ;
 ?></td></tr>
-      <tr><td>Site URL</td><td><?php
+      <tr><td><?php _e( 'Site URL', 'tag-groups' ); ?></td><td><?php
 echo  site_url() ;
 ?></td></tr>
-      <tr><td>Home URL</td><td><?php
+      <tr><td><?php _e( 'Home URL', 'tag-groups' ); ?></td><td><?php
 echo  home_url() ;
 ?></td></tr>
 
-      <tr><td>Active Theme</td><td><?php
+      <tr><td><?php _e( 'Active Theme', 'tag-groups' ); ?></td><td><?php
 echo  $active_theme->get( 'Name' ) ;
-?> (Version <?php
+?> (<?php _e( 'Version', 'tag-groups' ); ?> <?php
 echo  $active_theme->get( 'Version' ) ;
 ?>)</td></tr>
 
-      <tr><td>Ajax Test</td><td>
+      <tr><td><?php _e( 'Ajax Test', 'tag-groups' ); ?></td><td>
         <span id="ajax_test_field"><?php
 _e( 'Checking...', 'tag-groups' );
 ?></span>
