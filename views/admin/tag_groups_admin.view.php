@@ -20,7 +20,7 @@
     <thead>
       <tr>
         <th style="min-width:30px;"><?php _e( 'Group ID', 'tag-groups' ) ?></th>
-        <th><?php _e( 'Label displayed on the frontend', 'tag-groups' ) ?></th>
+        <th><?php _e( 'Tag Group name', 'tag-groups' ) ?></th>
         <th class="tg_group_admin_parent" style="display:none;"></th>
         <th><?php _e( 'Number of assigned tags', 'tag-groups' ) ?></th>
         <?php if ( $tag_group_show_filter ) : ?>
@@ -33,7 +33,7 @@
     <tfoot>
       <tr>
         <th><?php _e( 'Group ID', 'tag-groups' ) ?></th>
-        <th><?php _e( 'Label displayed on the frontend', 'tag-groups' ) ?></th>
+        <th><?php _e( 'Tag Group name', 'tag-groups' ) ?></th>
         <th class="tg_group_admin_parent" style="display:none;"></th>
         <th><?php _e( 'Number of assigned tags', 'tag-groups' ) ?></th>
         <?php if ( $tag_group_show_filter ) : ?>
@@ -66,7 +66,7 @@
   tagGroupsLabels.placeholder_new = '<?php _e( 'label', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_delete = '<?php _e( 'Delete this group.', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_newbelow = '<?php _e( 'Create a new group below.', 'tag-groups' ) ?>';
-  tagGroupsLabels.tooltip_addnew = '<?php _e( 'Add New Group', 'tag-groups' ) ?>';
+  tagGroupsLabels.tooltip_addnew = '<?php _e( 'Add New Tag Group', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_move_up = '<?php _e( 'move up', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_move_down = '<?php _e( 'move down', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_reload = '<?php _e( 'reload', 'tag-groups' ) ?>';
