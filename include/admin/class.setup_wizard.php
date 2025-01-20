@@ -88,15 +88,15 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                 $steps = array(
                     1 => array(
                     'id'    => 'start',
-                    'title' => 'Start',
+                    'title' => __('Start', 'tag-groups'),
                 ),
                     2 => array(
                     'id'    => 'taxonomies',
-                    'title' => 'Taxonomies',
+                    'title' => __('Taxonomies', 'tag-groups'),
                 ),
                     3 => array(
                     'id'    => 'sample_content',
-                    'title' => 'Sample Content',
+                    'title' => __('Sample Content', 'tag-groups'),
                 ),
                     4 => array(
                     'id'    => 'finished',
@@ -115,7 +115,11 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
             switch ( $steps[$step]['id'] ) {
                 case 'sample_content':
                     $view = new TagGroups_View( 'admin/setup_wizard_sample_content' );
-                    $group_names = array( 'Sample Group A', 'Sample Group B', 'Sample Group C' );
+                    $group_names = array( 
+                        __('Sample Group A', 'tag-groups'), 
+                        __('Sample Group B', 'tag-groups'), 
+                        __('Sample Group C', 'tag-groups') 
+                    );
                     /**
                      * Make sure they don't yet exist
                      */
@@ -129,7 +133,11 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
                         }
                         return $name;
                     }, $group_names );
-                    $tag_names = array( 'First Sample Tag', 'Second Sample Tag', 'Third Sample Tag' );
+                    $tag_names = array( 
+                        __('First Sample Tag', 'tag-groups'), 
+                        __('Second Sample Tag', 'tag-groups'), 
+                        __('Third Sample Tag', 'tag-groups') 
+                    );
                     $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
                     $taxonomy = array_shift( $enabled_taxonomies );
                     /**
