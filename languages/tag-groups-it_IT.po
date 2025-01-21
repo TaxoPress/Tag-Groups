@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2024-12-18 15:23+0000\n"
-"PO-Revision-Date: 2024-12-18 21:18+0100\n"
+"POT-Creation-Date: 2025-01-16 08:04+0000\n"
+"PO-Revision-Date: 2025-01-20 19:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -102,8 +102,8 @@ msgstr "fisarmonica"
 msgid "Accordion Tag Cloud"
 msgstr "Nuvola di tag a fisarmonica"
 
-#: views/admin/tag_groups_admin.view.php:24
-#: views/admin/tag_groups_admin.view.php:37
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
 msgid "Actions"
 msgstr "Azioni"
 
@@ -134,9 +134,13 @@ msgstr ""
 "utilizza un numero elevato di gruppi. Potrebbe non funzionare con tutte le "
 "tassonomie."
 
-#: views/admin/tag_groups_admin.view.php:64
-msgid "Add New"
-msgstr "Aggiungi nuovo"
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Group"
+msgstr "Aggiungi nuovo gruppo"
+
+#: views/admin/tag_groups_admin.view.php:14
+msgid "Add new group"
+msgstr "Aggiungi nuovo gruppo"
 
 #: include/admin/class.settings.php:942
 msgid "Ajax Test"
@@ -229,8 +233,8 @@ msgstr "Cache"
 msgid "Caching"
 msgstr "Caching"
 
-#: views/admin/tag_groups_admin.view.php:25
-#: views/admin/tag_groups_admin.view.php:38
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
 msgid "Change order"
 msgstr "Modifica ordine"
 
@@ -292,7 +296,7 @@ msgstr "contatto"
 msgid "Continue"
 msgstr "Continua"
 
-#: views/admin/tag_groups_admin.view.php:59
+#: views/admin/tag_groups_admin.view.php:64
 msgid "Create"
 msgstr "Crea"
 
@@ -312,7 +316,7 @@ msgstr ""
 "Crea una nuova cartella all'interno della tua cartella <i>wp-content/"
 "uploads</i> (per esempio \"miei-temi\") e copia in essa questi due elementi."
 
-#: views/admin/tag_groups_admin.view.php:63
+#: views/admin/tag_groups_admin.view.php:68
 msgid "Create a new group below."
 msgstr "Crea un nuovo gruppo sotto."
 
@@ -373,7 +377,7 @@ msgstr "elimina gruppi"
 msgid "Delete Settings and Groups"
 msgstr "Elimina impostazioni e gruppi"
 
-#: views/admin/tag_groups_admin.view.php:62
+#: views/admin/tag_groups_admin.view.php:67
 msgid "Delete this group."
 msgstr "Elimina questo gruppo."
 
@@ -421,7 +425,7 @@ msgstr ""
 "Visualizza i tag in una nuvola di tag a schede con le prime lettere come "
 "schede."
 
-#: views/admin/tag_groups_admin.view.php:162
+#: views/admin/tag_groups_admin.view.php:167
 msgid "Do you really want to delete this tag group?"
 msgstr "Sei certo di voler eliminare questo gruppo di tag?"
 
@@ -433,7 +437,7 @@ msgstr "Non caricare un tema."
 msgid "Dynamic Post Filter"
 msgstr "Filtro articoli dinamico"
 
-#: views/admin/tag_groups_admin.view.php:58
+#: views/admin/tag_groups_admin.view.php:63
 msgid "Edit"
 msgstr "Modifica"
 
@@ -548,13 +552,13 @@ msgstr "Filtra per etichetta"
 msgid "Filter by tag group"
 msgstr "Filtra per gruppo di tag"
 
-#: views/partials/filter_admin_footer.view.php:16
+#: views/partials/filter_admin_footer.view.php:21
 msgid "Filter off"
 msgstr "Disattiva filtro"
 
 #: include/admin/class.settings.php:243 include/admin/class.settings.php:922
-#: views/admin/tag_groups_admin.view.php:22
-#: views/admin/tag_groups_admin.view.php:35
+#: views/admin/tag_groups_admin.view.php:27
+#: views/admin/tag_groups_admin.view.php:40
 msgid "Filters"
 msgstr "Filtri"
 
@@ -595,7 +599,7 @@ msgstr "Altre opzioni"
 msgid "getting started"
 msgstr "per iniziare"
 
-#: views/admin/tag_groups_admin.view.php:70
+#: views/admin/tag_groups_admin.view.php:75
 msgid "go to page:"
 msgstr "vai a pagina:"
 
@@ -626,8 +630,8 @@ msgstr ""
 msgid "Go to your tags and <b>assign them to these groups</b>."
 msgstr "Vai nei tuoi tag e <b>assegnali a questi gruppi</b>."
 
-#: views/admin/tag_groups_admin.view.php:17
-#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
 msgid "Group ID"
 msgstr "ID gruppo"
 
@@ -797,12 +801,12 @@ msgstr "mantieni"
 msgid "Keep groups of translations in sync"
 msgstr "Mantieni sincronizzati i gruppi di traduzioni"
 
-#: views/admin/tag_groups_admin.view.php:61
+#: views/admin/tag_groups_admin.view.php:66
 msgid "label"
 msgstr "etichetta"
 
-#: views/admin/tag_groups_admin.view.php:18
-#: views/admin/tag_groups_admin.view.php:31
+#: views/admin/tag_groups_admin.view.php:23
+#: views/admin/tag_groups_admin.view.php:36
 msgid "Label displayed on the frontend"
 msgstr "Etichetta visualizzata nel frontend"
 
@@ -853,11 +857,11 @@ msgstr ""
 "Molte caratteristiche sono anche disponibili come blocchi per l'editor "
 "Gutenberg."
 
-#: views/admin/tag_groups_admin.view.php:66
+#: views/admin/tag_groups_admin.view.php:71
 msgid "move down"
 msgstr "sposta in basso"
 
-#: views/admin/tag_groups_admin.view.php:65
+#: views/admin/tag_groups_admin.view.php:70
 msgid "move up"
 msgstr "sposta in alto"
 
@@ -873,7 +877,7 @@ msgstr "Gruppi multipli per tag"
 msgid "Need Tag Groups Support?"
 msgstr "Hai bisogno del supporto di Tag Groups?"
 
-#: views/admin/tag_groups_admin.view.php:60
+#: views/admin/tag_groups_admin.view.php:65
 msgid "new"
 msgstr "nuovo"
 
@@ -885,7 +889,7 @@ msgstr ""
 "Nuovi temi possono essere creati con <a href=\"http://jqueryui.com/"
 "themeroller/\" target=\"_blank\">jQuery UI ThemeRoller</a>:"
 
-#: views/admin/tag_groups_admin.view.php:68
+#: views/admin/tag_groups_admin.view.php:73
 msgid "next page"
 msgstr "pagina successiva"
 
@@ -927,8 +931,8 @@ msgstr ""
 "esempio, creeremo per te tre gruppi e tre tag. Puoi sperimentare con loro, "
 "rinominarli o eliminarli."
 
-#: views/admin/tag_groups_admin.view.php:20
-#: views/admin/tag_groups_admin.view.php:33
+#: views/admin/tag_groups_admin.view.php:25
+#: views/admin/tag_groups_admin.view.php:38
 msgid "Number of assigned tags"
 msgstr "Numero di tag assegnati"
 
@@ -1106,7 +1110,7 @@ msgstr "tipo contenuto"
 msgid "posts"
 msgstr "articoli"
 
-#: views/admin/tag_groups_admin.view.php:69
+#: views/admin/tag_groups_admin.view.php:74
 msgid "previous page"
 msgstr "pagina precedente"
 
@@ -1122,7 +1126,7 @@ msgstr "Modifica&nbsp;rapida"
 msgid "Read more"
 msgstr "Approfondisci"
 
-#: views/admin/tag_groups_admin.view.php:67
+#: views/admin/tag_groups_admin.view.php:72
 msgid "reload"
 msgstr "ricarica"
 
@@ -1237,11 +1241,11 @@ msgstr "Shortcode"
 msgid "Show hierarchical taxonomies"
 msgstr "Mostra tassonomia gerarchica"
 
-#: views/admin/tag_groups_admin.view.php:71
+#: views/admin/tag_groups_admin.view.php:76
 msgid "Show posts"
 msgstr "Mostra articoli"
 
-#: views/admin/tag_groups_admin.view.php:72
+#: views/admin/tag_groups_admin.view.php:77
 msgid "Show tags"
 msgstr "Mostra i tag"
 
