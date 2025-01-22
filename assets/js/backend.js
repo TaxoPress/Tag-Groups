@@ -141,8 +141,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
                     tg_params.tagsurl +
                     '&term-filter=' +
                     data_set.id +
-                    '" title="' +
-                    labels.tooltip_showtags +
                     '">' +
                     data_set.amount +
                     '</a>';
@@ -159,8 +157,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
                   tg_params.tagsurl +
                   '&term-filter=' +
                   data_set.id +
-                  '" title="' +
-                  labels.tooltip_showtags +
                   '"><span class="tg_pointer dashicons dashicons-tag"></span></a> ';
               }
               if (tg_params.postsurl !== '') {
@@ -180,8 +176,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
               output +=
                 '<span class="tg_delete tg_pointer dashicons dashicons-trash" data-position="' +
                 data_set.position +
-                '" title="' +
-                labels.tooltip_delete +
                 '"></span>';
               output += '</td>\n';
               output += '<td class="tg_hide_when_drag">';
@@ -192,8 +186,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
                 output +=
                   '<span class="tg_up tg_pointer dashicons dashicons-arrow-up" data-position="' +
                   data_set.position +
-                  '" title="' +
-                  labels.tooltip_move_up +
                   '"></span>';
               }
               output += '</div>';
@@ -204,8 +196,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
                 output +=
                   '<span class="tg_down tg_pointer dashicons dashicons-arrow-down" data-position="' +
                   data_set.position +
-                  '" title="' +
-                  labels.tooltip_move_down +
                   '"></span>';
               }
               output += '</div>';
@@ -292,9 +282,7 @@ function tg_do_ajax(tg_params, send_data, labels) {
           page = Math.floor(i / items_per_page) + 1;
           if (page == current_page) {
             pager_output +=
-              '<button class="tg_reload_button tg_pointer button-secondary" id="tg_groups_reload" title="' +
-              labels.tooltip_reload +
-              '"><span class="dashicons dashicons-update"></span></button>';
+              '<button class="tg_reload_button tg_pointer button-secondary" id="tg_groups_reload"><span class="dashicons dashicons-update"></span></button>';
           } else {
             pager_output +=
               '<button class="button-secondary tg_pager_button" data-page="' +
