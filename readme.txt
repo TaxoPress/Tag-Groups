@@ -126,7 +126,7 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
-= [2.0.7] - 2 Jan 2025 =
+= [2.0.7] - 22 Jan 2025 =
 * Improved: Improve handling of Parent Groups, #120
 * Update: New text for Tag Group admin, #157
 * Fixed: Missing translation strings in Free, #122
