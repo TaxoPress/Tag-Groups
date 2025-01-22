@@ -1,6 +1,6 @@
 
 <div class='wrap tag-groups-tooltips-enabled' id="tag_group_administration">
-  <h2><?php _e( 'Tag Group Administration', 'tag-groups' ) ?> <span class="dashicons dashicons-editor-help chatty-mango-help-icon" title="<?php _e( 'On this page you can create and edit tag groups. Tags can be assigned to these groups on the page where you edit the tags.', 'tag-groups' ) ?> <?php _e( 'Change the order by drag and drop or with the up/down icons. Click into a label for editing.', 'tag-groups' ) ?>"></span></h2>
+  <h2><?php _e( 'Tag Group Administration', 'tag-groups' ) ?></h2>
 
   <div id="tg_message_container">
   </div>
@@ -11,7 +11,7 @@
     </div>
 
     <div style="float: left; margin: 5px 0;">
-      <div id="new_group" style="margin:5px;" title="<?php _e( 'Add new group', 'tag-groups' ) ?>" class="new_group_pointer">
+      <div id="new_group" style="margin:5px;" class="new_group_pointer">
       </div>
     </div>
   </p>
@@ -20,7 +20,7 @@
     <thead>
       <tr>
         <th style="min-width:30px;"><?php _e( 'Group ID', 'tag-groups' ) ?></th>
-        <th><?php _e( 'Label displayed on the frontend', 'tag-groups' ) ?></th>
+        <th><?php _e( 'Tag Group name', 'tag-groups' ) ?></th>
         <th class="tg_group_admin_parent" style="display:none;"></th>
         <th><?php _e( 'Number of assigned tags', 'tag-groups' ) ?></th>
         <?php if ( $tag_group_show_filter ) : ?>
@@ -33,7 +33,7 @@
     <tfoot>
       <tr>
         <th><?php _e( 'Group ID', 'tag-groups' ) ?></th>
-        <th><?php _e( 'Label displayed on the frontend', 'tag-groups' ) ?></th>
+        <th><?php _e( 'Tag Group name', 'tag-groups' ) ?></th>
         <th class="tg_group_admin_parent" style="display:none;"></th>
         <th><?php _e( 'Number of assigned tags', 'tag-groups' ) ?></th>
         <?php if ( $tag_group_show_filter ) : ?>
@@ -66,7 +66,7 @@
   tagGroupsLabels.placeholder_new = '<?php _e( 'label', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_delete = '<?php _e( 'Delete this group.', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_newbelow = '<?php _e( 'Create a new group below.', 'tag-groups' ) ?>';
-  tagGroupsLabels.tooltip_addnew = '<?php _e( 'Add New Group', 'tag-groups' ) ?>';
+  tagGroupsLabels.tooltip_addnew = '<?php _e( 'Add New Tag Group', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_move_up = '<?php _e( 'move up', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_move_down = '<?php _e( 'move down', 'tag-groups' ) ?>';
   tagGroupsLabels.tooltip_reload = '<?php _e( 'reload', 'tag-groups' ) ?>';

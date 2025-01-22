@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2023-04-10 08:29+0000\n"
-"PO-Revision-Date: 2023-04-15 18:24+0200\n"
+"POT-Creation-Date: 2025-01-16 08:04+0000\n"
+"PO-Revision-Date: 2025-01-20 19:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: Angeloo Giammarresi . info@wocmultimedia.com\n"
 "Language: es_ES\n"
@@ -11,17 +11,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: include/admin/class.import.php:202
-#, php-format
 msgid "%d option was added or changed."
 msgid_plural "%d options were added or changed."
 msgstr[0] "Se ha añadido o cambiado %d opción."
 msgstr[1] "Se han añadido o cambiado %d opciones."
 
-#: views/admin/sample_page_gutenberg.view.php:3
 #: views/admin/sample_page.view.php:2
+#: views/admin/sample_page_gutenberg.view.php:3
 #, php-format
 msgid ""
 "%s created this sample page in the Setup Wizard of the <b>Tag Groups</b> "
@@ -87,11 +86,7 @@ msgstr ""
 msgid "A tag group with the label '%s' already exists."
 msgstr "Ya existe un grupo de etiquetas con la etiqueta «%s»."
 
-#: views/admin/tag_groups_admin.view.php:248
-msgid "A-Z"
-msgstr "A-Z"
-
-#: include/admin/class.settings.php:954
+#: include/admin/class.settings.php:985
 msgid "about"
 msgstr "acerca de"
 
@@ -99,17 +94,17 @@ msgstr "acerca de"
 msgid "Accordion"
 msgstr "Acordeón"
 
-#: include/admin/class.settings.php:871
+#: include/admin/class.settings.php:902
 msgid "accordion"
 msgstr "acordeón"
 
-#: views/admin/sample_page_gutenberg.view.php:40
 #: views/admin/sample_page.view.php:20
+#: views/admin/sample_page_gutenberg.view.php:40
 msgid "Accordion Tag Cloud"
 msgstr "Nube de etiquetas en acordeón"
 
-#: views/admin/tag_groups_admin.view.php:24
-#: views/admin/tag_groups_admin.view.php:37
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
 msgid "Actions"
 msgstr "Acciones"
 
@@ -140,31 +135,35 @@ msgstr ""
 "si utilizas un número elevado de grupos. Puede que no funcione con todas las "
 "taxonomías."
 
-#: views/admin/tag_groups_admin.view.php:64
-msgid "Add New"
-msgstr "Añadir nuevo"
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Group"
+msgstr "Añadir nuevo grupo"
 
-#: include/admin/class.settings.php:911
+#: views/admin/tag_groups_admin.view.php:14
+msgid "Add new group"
+msgstr "Añadir nuevo grupo"
+
+#: include/admin/class.settings.php:942
 msgid "Ajax Test"
 msgstr "Prueba Ajax"
 
-#: include/admin/class.settings.php:629
+#: include/admin/class.settings.php:660
 msgid "All groups have been deleted and assignments reset."
 msgstr ""
 "Se han borrado todos los grupos y se han restablecido las asignaciones."
 
-#: include/admin/class.settings.php:873
+#: include/admin/class.settings.php:904
 msgid "alphabetical"
 msgstr "alfabético"
 
-#: views/admin/sample_page_gutenberg.view.php:50
 #: views/admin/sample_page.view.php:26
+#: views/admin/sample_page_gutenberg.view.php:50
 #: views/admin/settings_front_end_shortcodes.view.php:69
 msgid "Alphabetical Tag Cloud"
 msgstr "Nube de etiquetas alfabéticas"
 
-#: views/admin/sample_page_gutenberg.view.php:70
 #: views/admin/sample_page.view.php:38
+#: views/admin/sample_page_gutenberg.view.php:70
 #: views/admin/settings_front_end_shortcodes.view.php:80
 msgid "Alphabetical Tag Index"
 msgstr "Índice alfabético de etiquetas"
@@ -173,7 +172,7 @@ msgstr "Índice alfabético de etiquetas"
 msgid "Always load shortcode scripts."
 msgstr "Cargar siempre los scripts de los shortcodes."
 
-#: include/admin/class.settings.php:939
+#: include/admin/class.settings.php:970
 msgid "animated"
 msgstr "animado"
 
@@ -182,7 +181,7 @@ msgstr "animado"
 msgid "Assign to"
 msgstr "Asignar a"
 
-#: include/admin/class.settings.php:951
+#: include/admin/class.settings.php:982
 msgid "author"
 msgstr "autor"
 
@@ -190,7 +189,7 @@ msgstr "autor"
 msgid "Back End"
 msgstr "Administración"
 
-#: include/admin/class.settings.php:898
+#: include/admin/class.settings.php:929
 msgid "backup"
 msgstr "copia de seguridad"
 
@@ -206,11 +205,11 @@ msgstr ""
 msgid "Benchmarks"
 msgstr "Benchmarks"
 
-#: include/admin/class.settings.php:913
+#: include/admin/class.settings.php:944
 msgid "benchmarks"
 msgstr "benchmarks"
 
-#: include/admin/class.settings.php:965
+#: include/admin/class.settings.php:996
 msgid "blog"
 msgstr "blog"
 
@@ -236,8 +235,8 @@ msgstr "Caché"
 msgid "Caching"
 msgstr "Almacenando en la caché"
 
-#: views/admin/tag_groups_admin.view.php:25
-#: views/admin/tag_groups_admin.view.php:38
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
 msgid "Change order"
 msgstr "Cambiar orden"
 
@@ -249,7 +248,7 @@ msgstr ""
 "Cambia el orden arrastrando y soltando o con los iconos arriba/abajo. Haz "
 "clic en una etiqueta para editarla."
 
-#: include/admin/class.settings.php:1035
+#: include/admin/class.settings.php:1066
 msgid "Checking the tag names"
 msgstr "Comprobación de los nombres de las etiquetas"
 
@@ -257,26 +256,22 @@ msgstr "Comprobación de los nombres de las etiquetas"
 msgid "Checking..."
 msgstr "Comprobando…"
 
-#: views/admin/setup_wizard_taxonomies.view.php:2
 #: views/admin/settings_taxonomies.view.php:2
+#: views/admin/setup_wizard_taxonomies.view.php:2
 msgid "Choose the taxonomies for which you want to use tag groups."
 msgstr "Elige las taxonomías para las que deseas utilizar grupos de etiquetas."
 
-#: views/admin/settings_front_end_themes.view.php:9
-#: views/admin/setup_wizard_taxonomies.view.php:2
-#: views/admin/settings_taxonomies.view.php:2
 #: views/admin/settings_front_end_shortcodes.view.php:22
+#: views/admin/settings_front_end_themes.view.php:9
 #: views/admin/settings_home.view.php:8
+#: views/admin/settings_taxonomies.view.php:2
+#: views/admin/setup_wizard_taxonomies.view.php:2
 msgid "Click for more information"
 msgstr "Haz clic para más información"
 
 #: views/admin/settings_front_end_shortcodes.view.php:33
 msgid "Click on the features for more information."
 msgstr "Haz clic en las características para obtener más información."
-
-#: views/admin/tag_groups_admin.view.php:244
-msgid "Click to open"
-msgstr "Haz clic por abrir"
 
 #: views/admin/edit_tag_main.view.php:31
 msgid "Clicking will leave this page without saving."
@@ -286,7 +281,7 @@ msgstr "Al hacer clic saldrás de esta página sin guardar."
 msgid "Collapsible tabs (toggle open/close)."
 msgstr "Pestañas plegables (abrir/cerrar)."
 
-#: include/admin/class.settings.php:886
+#: include/admin/class.settings.php:917
 msgid "colors"
 msgstr "colores"
 
@@ -294,7 +289,7 @@ msgstr "colores"
 msgid "Constants"
 msgstr "Constantes"
 
-#: include/admin/class.settings.php:953
+#: include/admin/class.settings.php:984
 msgid "contact"
 msgstr "contacto"
 
@@ -303,7 +298,7 @@ msgstr "contacto"
 msgid "Continue"
 msgstr "Continuar"
 
-#: views/admin/tag_groups_admin.view.php:59
+#: views/admin/tag_groups_admin.view.php:64
 msgid "Create"
 msgstr "Crear"
 
@@ -323,7 +318,7 @@ msgstr ""
 "Crea una nueva carpeta dentro de tu carpeta <i>wp-content/uploads</i> (por "
 "ejemplo «mi-tema») y copia allí estos dos elementos."
 
-#: views/admin/tag_groups_admin.view.php:63
+#: views/admin/tag_groups_admin.view.php:68
 msgid "Create a new group below."
 msgstr "Crea un nuevo grupo debajo."
 
@@ -335,11 +330,11 @@ msgstr "Crea grupos de muestra:"
 msgid "Create sample tags in these groups:"
 msgstr "Crea etiquetas de muestra en estos grupos:"
 
-#: include/admin/class.settings.php:960
+#: include/admin/class.settings.php:991
 msgid "Credits"
 msgstr "Agradecimientos"
 
-#: include/admin/class.settings.php:492
+#: include/admin/class.settings.php:506
 msgid "Database"
 msgstr "Base de datos"
 
@@ -355,11 +350,11 @@ msgstr "El modo depuración está desactivado."
 msgid "Debug mode is on."
 msgstr "El modo depuración está activado."
 
-#: include/admin/class.settings.php:412 include/admin/class.settings.php:920
+#: include/admin/class.settings.php:413 include/admin/class.settings.php:951
 msgid "Debugging"
 msgstr "Depuración"
 
-#: include/admin/class.settings.php:909 include/admin/class.settings.php:923
+#: include/admin/class.settings.php:940 include/admin/class.settings.php:954
 msgid "debugging"
 msgstr "depuración"
 
@@ -375,7 +370,7 @@ msgstr "Borra todos los grupos y ajustes al desinstalar el plugin."
 msgid "Delete Groups"
 msgstr "Borrar los grupos"
 
-#: include/admin/class.settings.php:903
+#: include/admin/class.settings.php:934
 msgid "delete groups"
 msgstr "borrar los grupos"
 
@@ -383,7 +378,7 @@ msgstr "borrar los grupos"
 msgid "Delete Settings and Groups"
 msgstr "Borrar ajustes y grupos"
 
-#: views/admin/tag_groups_admin.view.php:62
+#: views/admin/tag_groups_admin.view.php:67
 msgid "Delete this group."
 msgstr "Borra este grupo."
 
@@ -392,7 +387,7 @@ msgid "Detailed documentation is also available on the plugin website."
 msgstr ""
 "También hay disponible una documentación detallada en la web del plugin."
 
-#: include/admin/class.settings.php:963
+#: include/admin/class.settings.php:994
 msgid "Development News"
 msgstr "Noticias de desarrollo"
 
@@ -432,7 +427,7 @@ msgstr ""
 "Muestra las etiquetas en una nube de etiquetas con pestañas con las primeras "
 "letras como pestañas."
 
-#: views/admin/tag_groups_admin.view.php:162
+#: views/admin/tag_groups_admin.view.php:167
 msgid "Do you really want to delete this tag group?"
 msgstr "¿Realmente quieres borrar este grupo de etiquetas?"
 
@@ -444,7 +439,7 @@ msgstr "No cargues un tema."
 msgid "Dynamic Post Filter"
 msgstr "Filtro dinámico de entradas"
 
-#: views/admin/tag_groups_admin.view.php:58
+#: views/admin/tag_groups_admin.view.php:63
 msgid "Edit"
 msgstr "Editar"
 
@@ -456,11 +451,32 @@ msgstr "Editar grupos de etiquetas"
 msgid "Edit this item inline"
 msgstr "Editar este elemento integrado"
 
+#: views/admin/settings_rest_api.view.php:8
+msgid ""
+"Enable public access to tag groups endpoint /wp-json/tag-groups/v1/groups/."
+msgstr ""
+"Activar el acceso público a la variable de tag groups /wp-json/tag-groups/v1/"
+"groups/."
+
+#: views/admin/settings_rest_api.view.php:14
+msgid "Enable public access to terms endpoint /wp-json/tag-groups/v1/terms/."
+msgstr ""
+"Activar el acceso público a la variable de términos /wp-json/tag-groups/v1/"
+"terms/."
+
 #: views/admin/settings_front_end_shortcodes.view.php:17
 msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
 msgstr ""
 "Activa el shortcode en los widgets de la barra lateral (si no está visible "
 "de todos modos)."
+
+#: views/admin/settings_rest_api.view.php:7
+msgid "Enable Tag Groups Public API Access"
+msgstr "Activar el acceso público a la API de Tag Groups"
+
+#: views/admin/settings_rest_api.view.php:13
+msgid "Enable Terms Public API Access"
+msgstr "Activar el acceso público a la API de términos"
 
 #: includes-core/TagGroupsCoreAdmin.php:70
 msgid "Enhance the power of Tag Groups with the Pro version:"
@@ -471,7 +487,7 @@ msgid "Enter the name of this new folder (for example \"my-theme\") below."
 msgstr ""
 "Introduce debajo el nombre de esta nueva carpeta (por ejemplo «mi-tema»)."
 
-#: include/admin/class.settings.php:915 include/admin/class.settings.php:925
+#: include/admin/class.settings.php:946 include/admin/class.settings.php:956
 msgid "error"
 msgstr "error"
 
@@ -506,7 +522,7 @@ msgstr "Exportar"
 msgid "Export Files"
 msgstr "Exportar archivos"
 
-#: include/admin/class.settings.php:413 include/admin/class.settings.php:896
+#: include/admin/class.settings.php:414 include/admin/class.settings.php:927
 msgid "Export/Import"
 msgstr "Exportar/Importar"
 
@@ -522,11 +538,11 @@ msgstr ""
 "Puedes abortar el Asistente de configuración en cualquier momento y seguir "
 "tu propio camino. También puedes volver a iniciarlo más adelante."
 
-#: include/admin/class.settings.php:493
+#: include/admin/class.settings.php:507
 msgid "Filesystem"
 msgstr "Sistema de archivos"
 
-#: include/admin/class.settings.php:938
+#: include/admin/class.settings.php:969
 msgid "filter"
 msgstr "filtro"
 
@@ -538,13 +554,13 @@ msgstr "Filtrar por etiqueta"
 msgid "Filter by tag group"
 msgstr "Filtrar por grupo de etiquetaa"
 
-#: views/partials/filter_admin_footer.view.php:16
+#: views/partials/filter_admin_footer.view.php:21
 msgid "Filter off"
 msgstr "Filtro desactivado"
 
-#: include/admin/class.settings.php:243 include/admin/class.settings.php:891
-#: views/admin/tag_groups_admin.view.php:22
-#: views/admin/tag_groups_admin.view.php:35
+#: include/admin/class.settings.php:243 include/admin/class.settings.php:922
+#: views/admin/tag_groups_admin.view.php:27
+#: views/admin/tag_groups_admin.view.php:40
 msgid "Filters"
 msgstr "Filtros"
 
@@ -552,20 +568,20 @@ msgstr "Filtros"
 msgid "Finished!"
 msgstr "¡Finalizado!"
 
-#: include/admin/class.settings.php:410 include/admin/class.settings.php:978
+#: include/admin/class.settings.php:410 include/admin/class.settings.php:1009
 msgid "First Aid"
 msgstr "Primeros auxilios"
 
-#: include/admin/class.admin.php:66 include/admin/class.settings.php:968
+#: include/admin/class.admin.php:66 include/admin/class.settings.php:999
 #: views/admin/onboarding.view.php:1
 msgid "First Steps"
 msgstr "Primeros pasos"
 
-#: include/admin/class.settings.php:1033
+#: include/admin/class.settings.php:1064
 msgid "Fixing incorrect groups in term meta"
 msgstr "Corrección de grupos incorrectos en la meta de términos"
 
-#: include/admin/class.settings.php:1032
+#: include/admin/class.settings.php:1063
 msgid "Fixing incorrect tag groups"
 msgstr "Corrección de las etiquestas de grupos incorrectas"
 
@@ -581,16 +597,16 @@ msgstr "Portada"
 msgid "Further options"
 msgstr "Más opciones"
 
-#: include/admin/class.settings.php:970 include/admin/class.settings.php:975
+#: include/admin/class.settings.php:1001 include/admin/class.settings.php:1006
 msgid "getting started"
 msgstr "primeros pasos"
 
-#: views/admin/tag_groups_admin.view.php:70
+#: views/admin/tag_groups_admin.view.php:75
 msgid "go to page:"
 msgstr "ve a la página:"
 
-#: views/admin/settings_taxonomies.view.php:30
 #: views/admin/settings_home.view.php:23
+#: views/admin/settings_taxonomies.view.php:30
 msgid "go to tag group administration"
 msgstr "ve a la administración de grupos de etiquetas"
 
@@ -606,10 +622,6 @@ msgstr ""
 "etiqueta) de tus etiquetas. En la mayoría de los casos simplemente deja el "
 "valor por defecto: Etiquetas (post_tag)."
 
-#: views/admin/tag_groups_admin.view.php:254
-msgid "Go to the settings."
-msgstr "Ve a los ajustes."
-
 #: views/admin/onboarding.view.php:14
 msgid "Go to the tag groups admin page and <b>create some groups</b>."
 msgstr ""
@@ -620,12 +632,12 @@ msgstr ""
 msgid "Go to your tags and <b>assign them to these groups</b>."
 msgstr "Ve a tus etiquetas y <b>asígnalas a estos grupos</b>."
 
-#: views/admin/tag_groups_admin.view.php:17
-#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
 msgid "Group ID"
 msgstr "ID del grupo"
 
-#: include/admin/class.settings.php:869
+#: include/admin/class.settings.php:900
 msgid "group info"
 msgstr "información del grupo"
 
@@ -641,7 +653,7 @@ msgstr "Estadísticas de los grupos"
 msgid "Groups"
 msgstr "Grupos"
 
-#: include/admin/class.settings.php:245 include/admin/class.settings.php:991
+#: include/admin/class.settings.php:245 include/admin/class.settings.php:1022
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
@@ -653,8 +665,8 @@ msgstr "Vista previa del bloque Gutenberg"
 msgid "Happy tagging!"
 msgstr "¡Feliz etiquetaje!"
 
-#: include/admin/class.settings.php:927 include/admin/class.settings.php:970
-#: include/admin/class.settings.php:983
+#: include/admin/class.settings.php:958 include/admin/class.settings.php:1001
+#: include/admin/class.settings.php:1014
 msgid "help"
 msgstr "ayuda"
 
@@ -769,11 +781,11 @@ msgstr ""
 "En la mayoría de los casos la taxonomía por defecto <b>Etiquetas (post_tag)</"
 "b> será suficiente."
 
-#: include/admin/class.settings.php:948
+#: include/admin/class.settings.php:979
 msgid "Info"
 msgstr "Información"
 
-#: include/admin/class.settings.php:970 include/admin/class.settings.php:975
+#: include/admin/class.settings.php:1001 include/admin/class.settings.php:1006
 msgid "introduction"
 msgstr "introducción"
 
@@ -792,12 +804,12 @@ msgstr "mantener"
 msgid "Keep groups of translations in sync"
 msgstr "Mantén sincronizados los grupos de traducciones"
 
-#: views/admin/tag_groups_admin.view.php:61
+#: views/admin/tag_groups_admin.view.php:66
 msgid "label"
 msgstr "etiqueta"
 
-#: views/admin/tag_groups_admin.view.php:18
-#: views/admin/tag_groups_admin.view.php:31
+#: views/admin/tag_groups_admin.view.php:23
+#: views/admin/tag_groups_admin.view.php:36
 msgid "Label displayed on the frontend"
 msgstr "Etiqueta mostrada en la portada"
 
@@ -806,35 +818,35 @@ msgstr "Etiqueta mostrada en la portada"
 msgid "Learn more <a %s>about debugging</a>."
 msgstr "Saber más <a %s>acerca de la depuración</a>."
 
-#: include/admin/class.settings.php:958
+#: include/admin/class.settings.php:989
 msgid "Licenses"
 msgstr "Licencias"
 
-#: include/admin/class.settings.php:993
+#: include/admin/class.settings.php:1024
 msgid "live block preview"
 msgstr "vista previa del bloque en vivo"
 
-#: views/admin/settings_troubleshooting_first_aid.view.php:12
+#: views/admin/settings_troubleshooting_first_aid.view.php:18
 msgid "Maintenance"
 msgstr "Mantenimiento"
 
-#: views/admin/settings_troubleshooting_first_aid.view.php:6
+#: views/admin/settings_troubleshooting_first_aid.view.php:9
 msgid "Migrate"
 msgstr "Migrar"
 
-#: include/admin/class.settings.php:982
+#: include/admin/class.settings.php:1013
 msgid "migrate"
 msgstr "migrar"
 
-#: views/admin/settings_troubleshooting_first_aid.view.php:5
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
 msgid "Migrate tags to the new format of Tag Groups."
 msgstr "Migra las etiquetas al nuevo formato de Tag Groups."
 
-#: include/admin/class.settings.php:1031
+#: include/admin/class.settings.php:1062
 msgid "Migrating the term meta"
 msgstr "Migración de la meta de términos"
 
-#: include/admin/class.settings.php:935
+#: include/admin/class.settings.php:966
 msgid "more groups"
 msgstr "más grupos"
 
@@ -848,15 +860,15 @@ msgstr ""
 "La mayoría de las características también están disponibles como bloques "
 "para el editor Gutenberg."
 
-#: views/admin/tag_groups_admin.view.php:66
+#: views/admin/tag_groups_admin.view.php:71
 msgid "move down"
 msgstr "mover abajo"
 
-#: views/admin/tag_groups_admin.view.php:65
+#: views/admin/tag_groups_admin.view.php:70
 msgid "move up"
 msgstr "mover arriba"
 
-#: include/admin/class.settings.php:248 include/admin/class.settings.php:998
+#: include/admin/class.settings.php:248 include/admin/class.settings.php:1029
 msgid "Multilingual"
 msgstr "Multilingüe"
 
@@ -868,7 +880,7 @@ msgstr "Múltiples grupos por etiqueta"
 msgid "Need Tag Groups Support?"
 msgstr "¿Necesitas ayuda para Tag Groups?"
 
-#: views/admin/tag_groups_admin.view.php:60
+#: views/admin/tag_groups_admin.view.php:65
 msgid "new"
 msgstr "nuevo"
 
@@ -880,9 +892,14 @@ msgstr ""
 "Puedes crear nuevos temas con <a href=\"http://jqueryui.com/themeroller/\" "
 "target=\"_blank\">jQuery UI ThemeRoller</a>:"
 
-#: views/admin/tag_groups_admin.view.php:68
+#: views/admin/tag_groups_admin.view.php:73
 msgid "next page"
 msgstr "página siguiente"
+
+#: views/admin/setup_wizard_sample_content.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:29
+msgid "Next Step"
+msgstr "Siguiente paso"
 
 #: include/helpers/class.groups.php:181 views/admin/edit_tag_main.view.php:8
 #: views/admin/new_tag_from_list.view.php:5
@@ -917,8 +934,8 @@ msgstr ""
 "partir de una muestra, crearemos para ti tres grupos y tres etiquetas. "
 "Puedes jugar con ellas, cambiarles el nombre o borrarlas."
 
-#: views/admin/tag_groups_admin.view.php:20
-#: views/admin/tag_groups_admin.view.php:33
+#: views/admin/tag_groups_admin.view.php:25
+#: views/admin/tag_groups_admin.view.php:38
 msgid "Number of assigned tags"
 msgstr "Número de etiquetas asignadas"
 
@@ -983,15 +1000,6 @@ msgstr ""
 msgid "Or preview the sample page here."
 msgstr "O previsualice la página de muestra aquí."
 
-#. Description of the plugin
-msgid ""
-"Organize your tags in groups or by alphabet. Show tag clouds with many "
-"options in posts, pages or widgets (tabs, accordion or list)."
-msgstr ""
-"Organiza tus etiquetas en grupos o por alfabeto. Muestra nubes de etiquetas "
-"con muchas opciones en entradas, páginas o widgets (pestañas, acordeón o "
-"lista)."
-
 #: views/admin/settings_front_end_themes.view.php:38
 msgid "own theme"
 msgstr "tema propio"
@@ -1017,11 +1025,11 @@ msgstr "aprobado"
 msgid "Permissions"
 msgstr "Permisos"
 
-#: include/admin/class.settings.php:910
+#: include/admin/class.settings.php:941
 msgid "PHP Version"
 msgstr "Versión de PHP"
 
-#: include/admin/class.admin.php:1021
+#: include/admin/class.admin.php:1022
 #, php-format
 msgid ""
 "Please <a %s>click here to run the migration routines</a> to make sure we "
@@ -1030,8 +1038,8 @@ msgstr ""
 "Por favor, <a %s>haz clic aquí para ejecutar las rutinas de migración</a> y "
 "asegurarte de que hemos migrado todas las etiquetas."
 
-#: views/admin/sample_page_gutenberg.view.php:21
 #: views/admin/sample_page.view.php:10
+#: views/admin/sample_page_gutenberg.view.php:21
 #, php-format
 msgid ""
 "Please find links to the documentation in the <a %s>Tag Groups settings</a>."
@@ -1082,7 +1090,7 @@ msgstr "Por favor, actualiza WordPress e inténtalo de nuevo."
 msgid "Please visit <a %s>%s</a>."
 msgstr "Por favor, visita <a %s>%s</a>."
 
-#: include/admin/class.settings.php:893
+#: include/admin/class.settings.php:924
 msgid "post filter"
 msgstr "filtro de entradas"
 
@@ -1090,7 +1098,7 @@ msgstr "filtro de entradas"
 msgid "Post List"
 msgstr "Lista de entradas"
 
-#: include/admin/class.settings.php:874
+#: include/admin/class.settings.php:905
 msgid "post list"
 msgstr "lista de entradas"
 
@@ -1098,20 +1106,20 @@ msgstr "lista de entradas"
 msgid "Post Tags in Groups"
 msgstr "Etiquetas de entradas en grupos"
 
-#: views/admin/setup_wizard_taxonomies.view.php:18
 #: views/admin/settings_taxonomies.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:18
 msgid "post type"
 msgstr "tipo de contenido"
 
-#: include/admin/class.settings.php:936
+#: include/admin/class.settings.php:967
 msgid "posts"
 msgstr "entradas"
 
-#: views/admin/tag_groups_admin.view.php:69
+#: views/admin/tag_groups_admin.view.php:74
 msgid "previous page"
 msgstr "página anterior"
 
-#: include/admin/class.settings.php:984
+#: include/admin/class.settings.php:1015
 msgid "problem"
 msgstr "problema"
 
@@ -1123,7 +1131,7 @@ msgstr "Edición&nbsp;rápida"
 msgid "Read more"
 msgstr "Leer más"
 
-#: views/admin/tag_groups_admin.view.php:67
+#: views/admin/tag_groups_admin.view.php:72
 msgid "reload"
 msgstr "recargar"
 
@@ -1131,11 +1139,11 @@ msgstr "recargar"
 msgid "remove"
 msgstr "borrar"
 
-#: include/admin/class.settings.php:903
+#: include/admin/class.settings.php:934
 msgid "remove data"
 msgstr "borrar los datos"
 
-#: include/admin/class.settings.php:903
+#: include/admin/class.settings.php:934
 msgid "remove plugin"
 msgstr "borrar el plugin"
 
@@ -1143,22 +1151,26 @@ msgstr "borrar el plugin"
 msgid "Request Support"
 msgstr "Solicitar soporte"
 
-#: include/admin/class.settings.php:414 include/admin/class.settings.php:901
+#: include/admin/class.settings.php:415 include/admin/class.settings.php:932
 msgid "Reset"
 msgstr "Restablecer"
 
-#: views/admin/settings_troubleshooting_first_aid.view.php:21
+#: views/admin/settings_troubleshooting_first_aid.view.php:27
 #: views/partials/admin_footer.view.php:3
 msgid "Reset Tag Filter"
 msgstr "Restablecer el filtro de etiquetas"
 
-#: views/admin/settings_troubleshooting_first_aid.view.php:18
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
 msgid "Reset the filter on the tags page to show all tags."
 msgstr ""
 "Restablece el filtro de la página de etiquetas para mostrar todas las "
 "etiquetas."
 
-#: views/admin/settings_troubleshooting_first_aid.view.php:11
+#: include/admin/class.settings.php:411
+msgid "REST API"
+msgstr "API REST"
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:17
 msgid ""
 "Running the maintenance can solve issues that you encounter during filtering "
 "by tag groups."
@@ -1166,15 +1178,16 @@ msgstr ""
 "Ejecutar el mantenimiento puede resolver los problemas que surjan al filtrar "
 "por grupos de etiquetas."
 
-#: include/admin/class.settings.php:975
+#: include/admin/class.settings.php:1006
 msgid "sample"
 msgstr "ejemplo"
 
-#: views/admin/settings_tools_reset.view.php:22
 #: views/admin/settings_back_end_filters.view.php:19
-#: views/admin/settings_front_end_shortcodes.view.php:29
 #: views/admin/settings_back_end_gutenberg.view.php:13
 #: views/admin/settings_back_end_multilingual.view.php:13
+#: views/admin/settings_front_end_shortcodes.view.php:29
+#: views/admin/settings_rest_api.view.php:19
+#: views/admin/settings_tools_reset.view.php:22
 msgid "Save Settings"
 msgstr "Guardar ajustes"
 
@@ -1199,7 +1212,7 @@ msgstr "Buscar ajustes"
 msgid "Search Results"
 msgstr "Resultados de la búsqueda"
 
-#: include/admin/class.settings.php:940
+#: include/admin/class.settings.php:971
 msgid "searchable"
 msgstr "buscable"
 
@@ -1216,15 +1229,16 @@ msgstr ""
 msgid "Server"
 msgstr "Servidor"
 
+#: include/admin/class.admin.php:969
 #: views/admin/settings_front_end_shortcodes.view.php:12
 msgid "Settings"
 msgstr "Ajustes"
 
-#: include/admin/class.admin.php:73 include/admin/class.settings.php:973
+#: include/admin/class.admin.php:73 include/admin/class.settings.php:1004
 msgid "Setup Wizard"
 msgstr "Asistente de configuración"
 
-#: include/admin/class.settings.php:331 include/admin/class.settings.php:865
+#: include/admin/class.settings.php:331 include/admin/class.settings.php:896
 #: views/admin/settings_front_end_shortcodes.view.php:34
 msgid "Shortcodes"
 msgstr "Shortcodes"
@@ -1233,11 +1247,11 @@ msgstr "Shortcodes"
 msgid "Show hierarchical taxonomies"
 msgstr "Muestra taxonomías jerárquicas"
 
-#: views/admin/tag_groups_admin.view.php:71
+#: views/admin/tag_groups_admin.view.php:76
 msgid "Show posts"
 msgstr "Muestra entradas"
 
-#: views/admin/tag_groups_admin.view.php:72
+#: views/admin/tag_groups_admin.view.php:77
 msgid "Show tags"
 msgstr "Muestra etiquetas"
 
@@ -1249,7 +1263,7 @@ msgstr "Muestra la respuesta"
 msgid "Shuffle Box"
 msgstr "Caja aleatoria"
 
-#: include/admin/class.settings.php:870
+#: include/admin/class.settings.php:901
 msgid "sidebar widget"
 msgstr "widget de barra lateral"
 
@@ -1266,28 +1280,28 @@ msgstr ""
 "Gutenberg. Si desactivas esta opción, todos los bloques mostrarán un icono "
 "estático con texto."
 
-#: views/admin/tag_groups_admin.view.php:247
-msgid "Sort by alphabet:"
-msgstr "Ordenar por alfabeto:"
-
-#: include/admin/class.settings.php:1034
+#: include/admin/class.settings.php:1065
 msgid "Sorting groups in term meta"
 msgstr "Ordenación de grupos en meta términos"
 
-#: include/admin/class.settings.php:914
+#: include/admin/class.settings.php:945
 msgid "speed test"
 msgstr "prueba de velocidad"
+
+#: views/admin/setup_wizard_start.view.php:12
+msgid "Start"
+msgstr "Inicio"
 
 #: views/admin/onboarding.view.php:6
 msgid "Start the Setup Wizard"
 msgstr "Comenzar con el asistente de configuración"
 
-#: include/admin/class.settings.php:411 include/admin/class.settings.php:906
+#: include/admin/class.settings.php:412 include/admin/class.settings.php:937
 msgid "System Information"
 msgstr "Información del sistema"
 
-#: views/admin/sample_page_gutenberg.view.php:30
 #: views/admin/sample_page.view.php:14
+#: views/admin/sample_page_gutenberg.view.php:30
 #: views/admin/settings_front_end_shortcodes.view.php:36
 msgid "Tabbed Tag Cloud"
 msgstr "Nube de etiquetas con pestañas"
@@ -1296,7 +1310,7 @@ msgstr "Nube de etiquetas con pestañas"
 msgid "Table Tag Cloud"
 msgstr "Nube de etiquetas en tabla"
 
-#: include/admin/class.settings.php:872
+#: include/admin/class.settings.php:903
 msgid "tabs"
 msgstr "pestañas"
 
@@ -1305,8 +1319,8 @@ msgid "Tabs triggered by hovering mouse pointer (without clicking)."
 msgstr ""
 "Pestañas que se activan al pasar el puntero del ratón (sin hacer clic)."
 
-#: include/admin/class.settings.php:868 include/admin/class.settings.php:882
-#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:899 include/admin/class.settings.php:913
+#: include/admin/class.settings.php:968
 msgid "tag cloud"
 msgstr "nube de etiquetas"
 
@@ -1314,11 +1328,11 @@ msgstr "nube de etiquetas"
 msgid "Tag Cloud Search"
 msgstr "Buscar en la nube de etiquetas"
 
-#: include/admin/class.settings.php:887
+#: include/admin/class.settings.php:918
 msgid "tag description"
 msgstr "descripción de la etiqueta"
 
-#: include/admin/class.settings.php:893 include/admin/class.settings.php:985
+#: include/admin/class.settings.php:924 include/admin/class.settings.php:1016
 msgid "tag filter"
 msgstr "filtro de etiquetas"
 
@@ -1336,11 +1350,19 @@ msgstr "Administración de Tag Group"
 msgid "Tag Groups"
 msgstr "Grupos de etiquetas"
 
-#: include/admin/class.settings.php:862
+#: include/admin/class.settings.php:893
 msgid "tag groups"
 msgstr "grupos de etiquetas"
 
-#: include/admin/class.settings.php:931
+#. Description of the plugin
+msgid ""
+"Tag Groups allows you to organize your WordPress taxonomy terms and show "
+"them in clouds, tabs, accordions, tables, lists and much more."
+msgstr ""
+"Tag Groups te permite organizar los términos de tu taxonomía WordPress y "
+"mostrarlos en nubes, pestañas, acordeones, tablas, listas y mucho más."
+
+#: include/admin/class.settings.php:962
 msgid "Tag Groups Pro"
 msgstr "Tag Groups Pro"
 
@@ -1352,8 +1374,8 @@ msgstr "Solo Tag Groups Pro"
 msgid "Tag Groups Setup Wizard"
 msgstr "Asistente de configuración de Tag Groups"
 
-#: views/admin/sample_page_gutenberg.view.php:60
 #: views/admin/sample_page.view.php:32
+#: views/admin/sample_page_gutenberg.view.php:60
 #: views/admin/settings_front_end_shortcodes.view.php:58
 msgid "Tag List"
 msgstr "Lista de etiquetas"
@@ -1362,7 +1384,7 @@ msgstr "Lista de etiquetas"
 msgid "Tag Meta Box"
 msgstr "Caja meta de etiquetas"
 
-#: include/admin/class.admin.php:38 include/admin/class.settings.php:860
+#: include/admin/class.admin.php:38 include/admin/class.settings.php:891
 msgid "Taxonomies"
 msgstr "Taxonomías"
 
@@ -1370,7 +1392,7 @@ msgstr "Taxonomías"
 msgid "TaxoPress"
 msgstr "TaxoPress"
 
-#: include/admin/class.settings.php:916 include/admin/class.settings.php:926
+#: include/admin/class.settings.php:947 include/admin/class.settings.php:957
 msgid "testing"
 msgstr "probando"
 
@@ -1379,8 +1401,8 @@ msgstr "probando"
 msgid "Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s"
 msgstr "Gracias por utilizar Tag Groups | %1sTaxoPress.com%2s | Versión %3s"
 
-#: views/admin/setup_wizard_taxonomies.view.php:5
 #: views/admin/settings_taxonomies.view.php:5
+#: views/admin/setup_wizard_taxonomies.view.php:5
 msgid ""
 "The default texonomy is <b>Tags (post_tag)</b>. Please note that the tag "
 "clouds might not work with all taxonomies and that some taxonomies listed "
@@ -1393,7 +1415,7 @@ msgstr ""
 "administración. Si no entiendes lo que está pasando aquí, simplemente deja "
 "el valor por defecto."
 
-#: include/admin/class.settings.php:770
+#: include/admin/class.settings.php:801
 msgid "The filter on the tags page has been reset to show all tags."
 msgstr ""
 "El filtro de la página de etiquetas se ha restablecido para mostrar todas "
@@ -1440,7 +1462,6 @@ msgstr ""
 "estilo."
 
 #: include/admin/class.import.php:338
-#, php-format
 msgid "The group info of %d term was updated."
 msgid_plural "The group info of %d terms was updated."
 msgstr[0] "Se ha actualizado la información de grupo de %d término."
@@ -1461,7 +1482,7 @@ msgstr "La etiqueta no puede estar vacía."
 msgid "The plugin %1$s requires WordPress %2$s to function properly."
 msgstr "El plugin %1$s requiere WordPress %2$s para funcionar correctamente."
 
-#: views/admin/settings_troubleshooting_first_aid.view.php:5
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
 msgid ""
 "The plugin automatically migrates tags to the new format and tries to keep "
 "track of changes. There may, however, be cases where other components made "
@@ -1495,7 +1516,7 @@ msgstr "El término ha sido eliminado de todos los grupos."
 msgid "The wizard will offer more options after upgrading to premium."
 msgstr "El asistente ofrecerá más opciones después de actualizar a Premium."
 
-#: include/admin/class.settings.php:332 include/admin/class.settings.php:879
+#: include/admin/class.settings.php:332 include/admin/class.settings.php:910
 msgid "Themes and Appearance"
 msgstr "Temas y apariencia"
 
@@ -1527,20 +1548,20 @@ msgstr "Para ver el tipo de entrada, pasa el ratón por encima de la opción."
 msgid "Toggle Post Filter"
 msgstr "Commutador del filtro de entradas"
 
-#: include/admin/class.admin.php:59 views/admin/tag_groups_admin.view.php:244
+#: include/admin/class.admin.php:59
 msgid "Tools"
 msgstr "Herramientas"
 
-#: include/admin/class.settings.php:491
+#: include/admin/class.settings.php:505
 msgid "Transients"
 msgstr "Datos transitorios"
 
-#: include/admin/class.settings.php:1000
+#: include/admin/class.settings.php:1031
 msgid "translation"
 msgstr "traducción"
 
-#: include/admin/class.settings.php:912 include/admin/class.settings.php:924
-#: include/admin/class.settings.php:981
+#: include/admin/class.settings.php:943 include/admin/class.settings.php:955
+#: include/admin/class.settings.php:1012
 msgid "troubleshooting"
 msgstr "solución de problemas"
 
@@ -1564,11 +1585,11 @@ msgstr "Activar"
 msgid "Turn on if you use these shortcodes in widgets."
 msgstr "Activar si utilizas estos shortcodes en widgets."
 
-#: include/admin/class.settings.php:965
+#: include/admin/class.settings.php:996
 msgid "updates"
 msgstr "actualizaciones"
 
-#: include/admin/class.settings.php:934
+#: include/admin/class.settings.php:965
 msgid "upgrade"
 msgstr "actualizar"
 
@@ -1581,7 +1602,7 @@ msgstr "Actualizar a Pro"
 msgid "Upgrade to Tag Groups Pro"
 msgstr "Actualizar a Tag Groups Pro"
 
-#: views/admin/settings_troubleshooting_first_aid.view.php:18
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
 msgid ""
 "Use it if a JavaScript error disables the filter menu. Note that it is still "
 "recommended to find out the cause of the error."
@@ -1629,7 +1650,7 @@ msgstr "El registro detallado está desactivado."
 msgid "Verbose logging is on."
 msgstr "El registro detallado está activado."
 
-#: include/admin/class.settings.php:952
+#: include/admin/class.settings.php:983
 msgid "version"
 msgstr "versión"
 
@@ -1649,14 +1670,12 @@ msgstr ""
 "Hemos detectado WPML. Los nombres de tus grupos de etiquetas son traducibles."
 
 #: include/admin/class.import.php:336
-#, php-format
 msgid "We processed %d term."
 msgid_plural "We processed %d terms."
 msgstr[0] "Se ha procesado %d término."
 msgstr[1] "Se han procesado %d términos."
 
 #: include/admin/class.import.php:337
-#, php-format
 msgid "We saved %d term."
 msgid_plural "We saved %d terms."
 msgstr[0] "Se ha guardado %d término."
@@ -1675,7 +1694,7 @@ msgstr "¡Bien hecho!"
 msgid "WooCommerce Attributes"
 msgstr "Atributos WooCommerce"
 
-#: include/admin/class.settings.php:494
+#: include/admin/class.settings.php:508
 msgid "WP Object Cache"
 msgstr "WP Object Cache"
 
@@ -1718,6 +1737,10 @@ msgstr ""
 "directamente en una entrada, página o widget o llamar a la función en el "
 "código PHP de tu tema."
 
+#: views/admin/setup_wizard_taxonomies.view.php:26
+msgid "You will find more options in the Tag Groups settings."
+msgstr "Encontrarás más opciones en los ajustes de Tag Groups."
+
 #: includes-core/TagGroupsCoreAdmin.php:15
 #, php-format
 msgid ""
@@ -1736,10 +1759,14 @@ msgstr ""
 "Tus ajustes y grupos se han importado desde el archivo %1$s (creado con la "
 "versión del plugin %2$s el %3$s)."
 
-#: include/admin/class.settings.php:612 include/admin/class.settings.php:648
-#: include/admin/class.settings.php:684 include/admin/class.settings.php:717
-#: include/admin/class.settings.php:731 include/admin/class.settings.php:743
-#: include/admin/class.settings.php:755 include/admin/class.settings.php:819
+#: include/admin/class.settings.php:643
+msgid "Your settings has been saved."
+msgstr "Tus ajustes han sido guardados."
+
+#: include/admin/class.settings.php:626 include/admin/class.settings.php:679
+#: include/admin/class.settings.php:715 include/admin/class.settings.php:748
+#: include/admin/class.settings.php:762 include/admin/class.settings.php:774
+#: include/admin/class.settings.php:786 include/admin/class.settings.php:850
 msgid "Your settings have been saved."
 msgstr "Tus ajustes han sido guardados."
 
@@ -1760,6 +1787,25 @@ msgstr ""
 "Tus términos se han importado desde el archivo %1$s (creado con la versión "
 "del plugin %2$s el %3$s)."
 
-#: views/admin/tag_groups_admin.view.php:249
-msgid "Z-A"
-msgstr "Z-A"
+#~ msgid "A-Z"
+#~ msgstr "A-Z"
+
+#~ msgid "Click to open"
+#~ msgstr "Haz clic por abrir"
+
+#~ msgid "Go to the settings."
+#~ msgstr "Ve a los ajustes."
+
+#~ msgid ""
+#~ "Organize your tags in groups or by alphabet. Show tag clouds with many "
+#~ "options in posts, pages or widgets (tabs, accordion or list)."
+#~ msgstr ""
+#~ "Organiza tus etiquetas en grupos o por alfabeto. Muestra nubes de "
+#~ "etiquetas con muchas opciones en entradas, páginas o widgets (pestañas, "
+#~ "acordeón o lista)."
+
+#~ msgid "Sort by alphabet:"
+#~ msgstr "Ordenar por alfabeto:"
+
+#~ msgid "Z-A"
+#~ msgstr "Z-A"

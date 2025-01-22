@@ -33,6 +33,6 @@ jQuery(document).ready(function () {
 
   jQuery("#tag_filter option[value=<?php echo $tag_filter; ?>]").prop("selected", true);
 
-  jQuery("#tg_reset_filter_button").hide();
+  jQuery("#tg_reset_filter_button").show();
 });
 </script>
