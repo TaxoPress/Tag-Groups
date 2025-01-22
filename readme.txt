@@ -126,6 +126,16 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
+= [2.0.7] - 2 Jan 2025 =
+* Improved: Improve handling of Parent Groups, #120
+* Update: New text for Tag Group admin, #157
+* Fixed: Missing translation strings in Free, #122
+* Fixed: Remove orange pop-ups on Tag Group Admin screen #156
+* Fixed: Add back reset tag filter button, #165
+* Update: Translation Updates for Tag-Groups FREE v2.0.5 ES-FR-IT, #145
+* Update: Translation Updates for Tag Groups FREE v2.0.6 ES-FR-IT, #163
+* Update: Translation Updates for Tag Groups PRO v2.0.6 ES-FR-IT, #164
+
 = [2.0.6] - 16 Jan 2025 =
 * Improved: Added Filter Button to the Tags screen, #138 
 * Improved: Allow users to disable large modal from metabox, #100
