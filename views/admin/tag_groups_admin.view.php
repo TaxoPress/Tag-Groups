@@ -19,7 +19,6 @@
   <table class="widefat tg_groups_table">
     <thead>
       <tr>
-        <th style="min-width:30px;"><?php _e( 'Group ID', 'tag-groups' ) ?></th>
         <th><?php _e( 'Tag Group name', 'tag-groups' ) ?></th>
         <th class="tg_group_admin_parent" style="display:none;"></th>
         <th><?php _e( 'Number of assigned tags', 'tag-groups' ) ?></th>
@@ -28,11 +27,11 @@
         <?php endif; ?>
         <th><?php _e( 'Actions', 'tag-groups' ) ?></th>
         <th><?php _e( 'Change order', 'tag-groups' ) ?></th>
+        <th style="min-width:30px;"><?php _e( 'Group ID', 'tag-groups' ) ?></th>
       </tr>
     </thead>
     <tfoot>
       <tr>
-        <th><?php _e( 'Group ID', 'tag-groups' ) ?></th>
         <th><?php _e( 'Tag Group name', 'tag-groups' ) ?></th>
         <th class="tg_group_admin_parent" style="display:none;"></th>
         <th><?php _e( 'Number of assigned tags', 'tag-groups' ) ?></th>
@@ -41,6 +40,7 @@
         <?php endif; ?>
         <th><?php _e( 'Actions', 'tag-groups' ) ?></th>
         <th><?php _e( 'Change order', 'tag-groups' ) ?></th>
+        <th><?php _e( 'Group ID', 'tag-groups' ) ?></th>
       </tr>
     </tfoot>
     <tbody id="tg_groups_container">
