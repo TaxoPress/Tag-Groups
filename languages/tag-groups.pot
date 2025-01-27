@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2025-01-22 08:09+0000\n"
+"POT-Creation-Date: 2025-01-27 09:44+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "(Not tested with right-to-left languages.)"
 msgstr ""
 
-#: include/admin/class.settings.php:358
+#: include/admin/class.settings.php:305
 msgid "(recommended)"
 msgstr ""
 
@@ -78,7 +78,7 @@ msgstr ""
 msgid "A tag group with the label '%s' already exists."
 msgstr ""
 
-#: include/admin/class.settings.php:985
+#: include/admin/class.settings.php:958
 msgid "about"
 msgstr ""
 
@@ -86,7 +86,7 @@ msgstr ""
 msgid "Accordion"
 msgstr ""
 
-#: include/admin/class.settings.php:902
+#: include/admin/class.settings.php:875
 msgid "accordion"
 msgstr ""
 
@@ -127,16 +127,16 @@ msgstr ""
 msgid "Add New Tag Group"
 msgstr ""
 
-#: include/admin/class.settings.php:942
+#: include/admin/class.settings.php:915
 #: views/admin/settings_troubleshooting_system.view.php:21
 msgid "Ajax Test"
 msgstr ""
 
-#: include/admin/class.settings.php:660
+#: include/admin/class.settings.php:633
 msgid "All groups have been deleted and assignments reset."
 msgstr ""
 
-#: include/admin/class.settings.php:904
+#: include/admin/class.settings.php:877
 msgid "alphabetical"
 msgstr ""
 
@@ -156,7 +156,7 @@ msgstr ""
 msgid "Always load shortcode scripts."
 msgstr ""
 
-#: include/admin/class.settings.php:970
+#: include/admin/class.settings.php:943
 msgid "animated"
 msgstr ""
 
@@ -165,15 +165,15 @@ msgstr ""
 msgid "Assign to"
 msgstr ""
 
-#: include/admin/class.settings.php:982
+#: include/admin/class.settings.php:955
 msgid "author"
 msgstr ""
 
-#: include/admin/class.admin.php:52
+#: include/admin/class.admin.php:45
 msgid "Back End"
 msgstr ""
 
-#: include/admin/class.settings.php:929
+#: include/admin/class.settings.php:902
 msgid "backup"
 msgstr ""
 
@@ -187,11 +187,11 @@ msgstr ""
 msgid "Benchmarks"
 msgstr ""
 
-#: include/admin/class.settings.php:944
+#: include/admin/class.settings.php:917
 msgid "benchmarks"
 msgstr ""
 
-#: include/admin/class.settings.php:996
+#: include/admin/class.settings.php:969
 msgid "blog"
 msgstr ""
 
@@ -218,7 +218,7 @@ msgstr ""
 msgid "Change order"
 msgstr ""
 
-#: include/admin/class.settings.php:1066
+#: include/admin/class.settings.php:1039
 msgid "Checking the tag names"
 msgstr ""
 
@@ -251,7 +251,7 @@ msgstr ""
 msgid "Collapsible tabs (toggle open/close)."
 msgstr ""
 
-#: include/admin/class.settings.php:917
+#: include/admin/class.settings.php:890
 msgid "colors"
 msgstr ""
 
@@ -259,7 +259,7 @@ msgstr ""
 msgid "Constants"
 msgstr ""
 
-#: include/admin/class.settings.php:984
+#: include/admin/class.settings.php:957
 msgid "contact"
 msgstr ""
 
@@ -298,11 +298,11 @@ msgstr ""
 msgid "Create sample tags in these groups:"
 msgstr ""
 
-#: include/admin/class.settings.php:991
+#: include/admin/class.settings.php:964
 msgid "Credits"
 msgstr ""
 
-#: include/admin/class.settings.php:506
+#: include/admin/class.settings.php:479
 msgid "Database"
 msgstr ""
 
@@ -318,11 +318,11 @@ msgstr ""
 msgid "Debug mode is on."
 msgstr ""
 
-#: include/admin/class.settings.php:413 include/admin/class.settings.php:951
+#: include/admin/class.settings.php:360 include/admin/class.settings.php:924
 msgid "Debugging"
 msgstr ""
 
-#: include/admin/class.settings.php:940 include/admin/class.settings.php:954
+#: include/admin/class.settings.php:913 include/admin/class.settings.php:927
 msgid "debugging"
 msgstr ""
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "Delete Groups"
 msgstr ""
 
-#: include/admin/class.settings.php:934
+#: include/admin/class.settings.php:907
 msgid "delete groups"
 msgstr ""
 
@@ -354,7 +354,7 @@ msgstr ""
 msgid "Detailed documentation is also available on the plugin website."
 msgstr ""
 
-#: include/admin/class.settings.php:994
+#: include/admin/class.settings.php:967
 msgid "Development News"
 msgstr ""
 
@@ -410,7 +410,7 @@ msgstr ""
 msgid "Edit tag groups"
 msgstr ""
 
-#: include/admin/class.admin.php:600
+#: include/admin/class.admin.php:593
 msgid "Edit this item inline"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgstr ""
 msgid "Enter the name of this new folder (for example \"my-theme\") below."
 msgstr ""
 
-#: include/admin/class.settings.php:946 include/admin/class.settings.php:956
+#: include/admin/class.settings.php:919 include/admin/class.settings.php:929
 msgid "error"
 msgstr ""
 
@@ -478,7 +478,7 @@ msgstr ""
 msgid "Export Files"
 msgstr ""
 
-#: include/admin/class.settings.php:414 include/admin/class.settings.php:927
+#: include/admin/class.settings.php:361 include/admin/class.settings.php:900
 msgid "Export/Import"
 msgstr ""
 
@@ -492,11 +492,11 @@ msgid ""
 "You can also launch it again at a later time."
 msgstr ""
 
-#: include/admin/class.settings.php:507
+#: include/admin/class.settings.php:480
 msgid "Filesystem"
 msgstr ""
 
-#: include/admin/class.settings.php:969
+#: include/admin/class.settings.php:942
 msgid "filter"
 msgstr ""
 
@@ -512,7 +512,7 @@ msgstr ""
 msgid "Filter off"
 msgstr ""
 
-#: include/admin/class.settings.php:243 include/admin/class.settings.php:922
+#: include/admin/class.settings.php:190 include/admin/class.settings.php:895
 #: views/admin/tag_groups_admin.view.php:27
 #: views/admin/tag_groups_admin.view.php:40
 msgid "Filters"
@@ -522,7 +522,7 @@ msgstr ""
 msgid "Finished!"
 msgstr ""
 
-#: include/admin/class.settings.php:410 include/admin/class.settings.php:1009
+#: include/admin/class.settings.php:357 include/admin/class.settings.php:982
 msgid "First Aid"
 msgstr ""
 
@@ -530,16 +530,16 @@ msgstr ""
 msgid "First Sample Tag"
 msgstr ""
 
-#: include/admin/class.admin.php:66 include/admin/class.settings.php:999
+#: include/admin/class.admin.php:52 include/admin/class.settings.php:972
 #: views/admin/onboarding.view.php:1
 msgid "First Steps"
 msgstr ""
 
-#: include/admin/class.settings.php:1064
+#: include/admin/class.settings.php:1037
 msgid "Fixing incorrect groups in term meta"
 msgstr ""
 
-#: include/admin/class.settings.php:1063
+#: include/admin/class.settings.php:1036
 msgid "Fixing incorrect tag groups"
 msgstr ""
 
@@ -547,7 +547,7 @@ msgstr ""
 msgid "for the selected language"
 msgstr ""
 
-#: include/admin/class.admin.php:45
+#: include/admin/class.admin.php:38
 msgid "Front End"
 msgstr ""
 
@@ -555,7 +555,7 @@ msgstr ""
 msgid "Further options"
 msgstr ""
 
-#: include/admin/class.settings.php:1001 include/admin/class.settings.php:1006
+#: include/admin/class.settings.php:974 include/admin/class.settings.php:979
 msgid "getting started"
 msgstr ""
 
@@ -589,7 +589,7 @@ msgstr ""
 msgid "Group ID"
 msgstr ""
 
-#: include/admin/class.settings.php:900
+#: include/admin/class.settings.php:873
 msgid "group info"
 msgstr ""
 
@@ -605,7 +605,7 @@ msgstr ""
 msgid "Groups"
 msgstr ""
 
-#: include/admin/class.settings.php:245 include/admin/class.settings.php:1022
+#: include/admin/class.settings.php:192 include/admin/class.settings.php:995
 msgid "Gutenberg"
 msgstr ""
 
@@ -617,16 +617,15 @@ msgstr ""
 msgid "Happy tagging!"
 msgstr ""
 
-#: include/admin/class.settings.php:958 include/admin/class.settings.php:1001
-#: include/admin/class.settings.php:1014
+#: include/admin/class.settings.php:931 include/admin/class.settings.php:974
+#: include/admin/class.settings.php:987
 msgid "help"
 msgstr ""
 
 #: views/admin/settings_front_end_themes.view.php:8
 msgid ""
-"Here you can choose a theme for the tabbed and the accordion tag cloud. The "
-"path to own themes is relative to the <i>uploads</i> folder of your "
-"WordPress installation. Leave empty if you don't use any."
+"Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
+"Cloud"
 msgstr ""
 
 #: views/admin/settings_front_end_themes.view.php:44
@@ -713,11 +712,11 @@ msgid ""
 "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
 msgstr ""
 
-#: include/admin/class.settings.php:979
+#: include/admin/class.settings.php:952
 msgid "Info"
 msgstr ""
 
-#: include/admin/class.settings.php:1001 include/admin/class.settings.php:1006
+#: include/admin/class.settings.php:974 include/admin/class.settings.php:979
 msgid "introduction"
 msgstr ""
 
@@ -726,7 +725,7 @@ msgid ""
 "It is recommended to back up the database of your site before proceeding."
 msgstr ""
 
-#: include/admin/class.settings.php:359
+#: include/admin/class.settings.php:306
 msgid "keep"
 msgstr ""
 
@@ -743,11 +742,15 @@ msgstr ""
 msgid "Learn more <a %s>about debugging</a>."
 msgstr ""
 
-#: include/admin/class.settings.php:989
+#: include/admin/class.settings.php:365
+msgid "Licences"
+msgstr ""
+
+#: include/admin/class.settings.php:962
 msgid "Licenses"
 msgstr ""
 
-#: include/admin/class.settings.php:1024
+#: include/admin/class.settings.php:997
 msgid "live block preview"
 msgstr ""
 
@@ -759,7 +762,7 @@ msgstr ""
 msgid "Migrate"
 msgstr ""
 
-#: include/admin/class.settings.php:1013
+#: include/admin/class.settings.php:986
 msgid "migrate"
 msgstr ""
 
@@ -767,11 +770,11 @@ msgstr ""
 msgid "Migrate tags to the new format of Tag Groups."
 msgstr ""
 
-#: include/admin/class.settings.php:1062
+#: include/admin/class.settings.php:1035
 msgid "Migrating the term meta"
 msgstr ""
 
-#: include/admin/class.settings.php:966
+#: include/admin/class.settings.php:939
 msgid "more groups"
 msgstr ""
 
@@ -791,7 +794,7 @@ msgstr ""
 msgid "move up"
 msgstr ""
 
-#: include/admin/class.settings.php:248 include/admin/class.settings.php:1029
+#: include/admin/class.settings.php:195 include/admin/class.settings.php:1002
 msgid "Multilingual"
 msgstr ""
 
@@ -923,11 +926,11 @@ msgstr ""
 msgid "Permissions"
 msgstr ""
 
-#: include/admin/class.settings.php:941
+#: include/admin/class.settings.php:914
 msgid "PHP Version"
 msgstr ""
 
-#: include/admin/class.admin.php:1022
+#: include/admin/class.admin.php:1015
 #, php-format
 msgid ""
 "Please <a %s>click here to run the migration routines</a> to make sure we "
@@ -978,7 +981,7 @@ msgstr ""
 msgid "Please visit <a %s>%s</a>."
 msgstr ""
 
-#: include/admin/class.settings.php:924
+#: include/admin/class.settings.php:897
 msgid "post filter"
 msgstr ""
 
@@ -986,7 +989,7 @@ msgstr ""
 msgid "Post List"
 msgstr ""
 
-#: include/admin/class.settings.php:905
+#: include/admin/class.settings.php:878
 msgid "post list"
 msgstr ""
 
@@ -999,7 +1002,7 @@ msgstr ""
 msgid "post type"
 msgstr ""
 
-#: include/admin/class.settings.php:967
+#: include/admin/class.settings.php:940
 msgid "posts"
 msgstr ""
 
@@ -1007,11 +1010,11 @@ msgstr ""
 msgid "previous page"
 msgstr ""
 
-#: include/admin/class.settings.php:1015
+#: include/admin/class.settings.php:988
 msgid "problem"
 msgstr ""
 
-#: include/admin/class.admin.php:602
+#: include/admin/class.admin.php:595
 msgid "Quick&nbsp;Edit"
 msgstr ""
 
@@ -1023,15 +1026,15 @@ msgstr ""
 msgid "reload"
 msgstr ""
 
-#: include/admin/class.settings.php:358
+#: include/admin/class.settings.php:305
 msgid "remove"
 msgstr ""
 
-#: include/admin/class.settings.php:934
+#: include/admin/class.settings.php:907
 msgid "remove data"
 msgstr ""
 
-#: include/admin/class.settings.php:934
+#: include/admin/class.settings.php:907
 msgid "remove plugin"
 msgstr ""
 
@@ -1039,7 +1042,7 @@ msgstr ""
 msgid "Request Support"
 msgstr ""
 
-#: include/admin/class.settings.php:415 include/admin/class.settings.php:932
+#: include/admin/class.settings.php:362 include/admin/class.settings.php:905
 msgid "Reset"
 msgstr ""
 
@@ -1052,7 +1055,7 @@ msgstr ""
 msgid "Reset the filter on the tags page to show all tags."
 msgstr ""
 
-#: include/admin/class.settings.php:411
+#: include/admin/class.settings.php:358
 msgid "REST API"
 msgstr ""
 
@@ -1062,7 +1065,7 @@ msgid ""
 "by tag groups."
 msgstr ""
 
-#: include/admin/class.settings.php:1006
+#: include/admin/class.settings.php:979
 msgid "sample"
 msgstr ""
 
@@ -1111,7 +1114,7 @@ msgstr ""
 msgid "Search Results"
 msgstr ""
 
-#: include/admin/class.settings.php:971
+#: include/admin/class.settings.php:944
 msgid "searchable"
 msgstr ""
 
@@ -1130,16 +1133,16 @@ msgstr ""
 msgid "Server"
 msgstr ""
 
-#: include/admin/class.admin.php:969
+#: include/admin/class.admin.php:66 include/admin/class.admin.php:962
 #: views/admin/settings_front_end_shortcodes.view.php:12
 msgid "Settings"
 msgstr ""
 
-#: include/admin/class.admin.php:73 include/admin/class.settings.php:1004
+#: include/admin/class.admin.php:59 include/admin/class.settings.php:977
 msgid "Setup Wizard"
 msgstr ""
 
-#: include/admin/class.settings.php:331 include/admin/class.settings.php:896
+#: include/admin/class.settings.php:278 include/admin/class.settings.php:869
 #: views/admin/settings_front_end_shortcodes.view.php:34
 msgid "Shortcodes"
 msgstr ""
@@ -1164,7 +1167,7 @@ msgstr ""
 msgid "Shuffle Box"
 msgstr ""
 
-#: include/admin/class.settings.php:901
+#: include/admin/class.settings.php:874
 msgid "sidebar widget"
 msgstr ""
 
@@ -1182,11 +1185,11 @@ msgid ""
 "deactivate this option, then all blocks will show a static icon with text."
 msgstr ""
 
-#: include/admin/class.settings.php:1065
+#: include/admin/class.settings.php:1038
 msgid "Sorting groups in term meta"
 msgstr ""
 
-#: include/admin/class.settings.php:945
+#: include/admin/class.settings.php:918
 msgid "speed test"
 msgstr ""
 
@@ -1199,7 +1202,7 @@ msgstr ""
 msgid "Start the Setup Wizard"
 msgstr ""
 
-#: include/admin/class.settings.php:412 include/admin/class.settings.php:937
+#: include/admin/class.settings.php:359 include/admin/class.settings.php:910
 msgid "System Information"
 msgstr ""
 
@@ -1213,7 +1216,7 @@ msgstr ""
 msgid "Table Tag Cloud"
 msgstr ""
 
-#: include/admin/class.settings.php:903
+#: include/admin/class.settings.php:876
 msgid "tabs"
 msgstr ""
 
@@ -1221,8 +1224,8 @@ msgstr ""
 msgid "Tabs triggered by hovering mouse pointer (without clicking)."
 msgstr ""
 
-#: include/admin/class.settings.php:899 include/admin/class.settings.php:913
-#: include/admin/class.settings.php:968
+#: include/admin/class.settings.php:872 include/admin/class.settings.php:886
+#: include/admin/class.settings.php:941
 msgid "tag cloud"
 msgstr ""
 
@@ -1230,15 +1233,15 @@ msgstr ""
 msgid "Tag Cloud Search"
 msgstr ""
 
-#: include/admin/class.settings.php:918
+#: include/admin/class.settings.php:891
 msgid "tag description"
 msgstr ""
 
-#: include/admin/class.settings.php:924 include/admin/class.settings.php:1016
+#: include/admin/class.settings.php:897 include/admin/class.settings.php:989
 msgid "tag filter"
 msgstr ""
 
-#: include/admin/class.admin.php:108 include/admin/class.admin.php:109
+#: include/admin/class.admin.php:101 include/admin/class.admin.php:102
 msgid "Tag Group Admin"
 msgstr ""
 
@@ -1252,12 +1255,12 @@ msgid "Tag Group name"
 msgstr ""
 
 #. Name of the plugin
-#: include/admin/class.admin.php:236 views/admin/edit_tag_main.view.php:2
+#: include/admin/class.admin.php:229 views/admin/edit_tag_main.view.php:2
 #: views/admin/new_tag_from_list.view.php:2
 msgid "Tag Groups"
 msgstr ""
 
-#: include/admin/class.settings.php:893
+#: include/admin/class.settings.php:866
 msgid "tag groups"
 msgstr ""
 
@@ -1267,7 +1270,7 @@ msgid ""
 "them in clouds, tabs, accordions, tables, lists and much more."
 msgstr ""
 
-#: include/admin/class.settings.php:962
+#: include/admin/class.settings.php:935
 msgid "Tag Groups Pro"
 msgstr ""
 
@@ -1289,7 +1292,7 @@ msgstr ""
 msgid "Tag Meta Box"
 msgstr ""
 
-#: include/admin/class.admin.php:38 include/admin/class.settings.php:891
+#: include/admin/class.settings.php:363 include/admin/class.settings.php:864
 #: include/admin/class.setup_wizard.php:95
 msgid "Taxonomies"
 msgstr ""
@@ -1298,7 +1301,7 @@ msgstr ""
 msgid "TaxoPress"
 msgstr ""
 
-#: include/admin/class.settings.php:947 include/admin/class.settings.php:957
+#: include/admin/class.settings.php:920 include/admin/class.settings.php:930
 msgid "testing"
 msgstr ""
 
@@ -1316,7 +1319,7 @@ msgid ""
 "what is going on here, just leave the default."
 msgstr ""
 
-#: include/admin/class.settings.php:801
+#: include/admin/class.settings.php:774
 msgid "The filter on the tags page has been reset to show all tags."
 msgstr ""
 
@@ -1390,7 +1393,7 @@ msgstr ""
 msgid "The tag group with the label '%s' has been saved!"
 msgstr ""
 
-#: include/admin/class.admin.php:459
+#: include/admin/class.admin.php:452
 msgid "The term has been removed from all groups."
 msgstr ""
 
@@ -1398,7 +1401,7 @@ msgstr ""
 msgid "The wizard will offer more options after upgrading to premium."
 msgstr ""
 
-#: include/admin/class.settings.php:332 include/admin/class.settings.php:910
+#: include/admin/class.settings.php:279 include/admin/class.settings.php:883
 msgid "Themes and Appearance"
 msgstr ""
 
@@ -1430,20 +1433,16 @@ msgstr ""
 msgid "Toggle Post Filter"
 msgstr ""
 
-#: include/admin/class.admin.php:59
-msgid "Tools"
-msgstr ""
-
-#: include/admin/class.settings.php:505
+#: include/admin/class.settings.php:478
 msgid "Transients"
 msgstr ""
 
-#: include/admin/class.settings.php:1031
+#: include/admin/class.settings.php:1004
 msgid "translation"
 msgstr ""
 
-#: include/admin/class.settings.php:943 include/admin/class.settings.php:955
-#: include/admin/class.settings.php:1012
+#: include/admin/class.settings.php:916 include/admin/class.settings.php:928
+#: include/admin/class.settings.php:985
 msgid "troubleshooting"
 msgstr ""
 
@@ -1465,11 +1464,11 @@ msgstr ""
 msgid "Turn on if you use these shortcodes in widgets."
 msgstr ""
 
-#: include/admin/class.settings.php:996
+#: include/admin/class.settings.php:969
 msgid "updates"
 msgstr ""
 
-#: include/admin/class.settings.php:965
+#: include/admin/class.settings.php:938
 msgid "upgrade"
 msgstr ""
 
@@ -1505,7 +1504,7 @@ msgid ""
 "that are assigned to a group into files."
 msgstr ""
 
-#: include/admin/class.settings.php:360
+#: include/admin/class.settings.php:307
 msgid "use unfiltered_html filter"
 msgstr ""
 
@@ -1525,7 +1524,7 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: include/admin/class.settings.php:983
+#: include/admin/class.settings.php:956
 msgid "version"
 msgstr ""
 
@@ -1570,7 +1569,7 @@ msgstr ""
 msgid "WordPress Version"
 msgstr ""
 
-#: include/admin/class.settings.php:508
+#: include/admin/class.settings.php:481
 msgid "WP Object Cache"
 msgstr ""
 
@@ -1620,14 +1619,14 @@ msgid ""
 "plugin version %2$s on %3$s)."
 msgstr ""
 
-#: include/admin/class.settings.php:643
+#: include/admin/class.settings.php:616
 msgid "Your settings has been saved."
 msgstr ""
 
-#: include/admin/class.settings.php:626 include/admin/class.settings.php:679
-#: include/admin/class.settings.php:715 include/admin/class.settings.php:748
-#: include/admin/class.settings.php:762 include/admin/class.settings.php:774
-#: include/admin/class.settings.php:786 include/admin/class.settings.php:850
+#: include/admin/class.settings.php:599 include/admin/class.settings.php:652
+#: include/admin/class.settings.php:688 include/admin/class.settings.php:721
+#: include/admin/class.settings.php:735 include/admin/class.settings.php:747
+#: include/admin/class.settings.php:759 include/admin/class.settings.php:823
 msgid "Your settings have been saved."
 msgstr ""
 
