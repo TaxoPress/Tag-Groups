@@ -100,7 +100,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
                   '<tr class="tg_sort_tr tg_is_parent" data-position="' +
                   data_set.position +
                   '">\n';
-                output += '<td>' + data_set.id + '</td>\n';
                 output +=
                   '<td class="tg_label_column">';
                 output += '<span class="dashicons dashicons-networking" title="' + labels.tooltip_parent + '"></span> ';
@@ -116,7 +115,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
               } else {
                 output +=
                   '<tr class="tg_sort_tr" data-position="' + data_set.position + '">\n';
-                output += '<td>' + data_set.id + '</td>\n';
 
                 output +=
                   '<td class="tg_label_column"><div class="tg_edit_label tg_text tg_truncate tg_child_label" data-position="' +
@@ -199,6 +197,7 @@ function tg_do_ajax(tg_params, send_data, labels) {
                   '"></span>';
               }
               output += '</div>';
+              output += '<td>' + data_set.id + '</td>\n';
 
               output += '</td>\n';
               output += '</tr>\n';
