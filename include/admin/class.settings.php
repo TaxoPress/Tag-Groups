@@ -173,59 +173,6 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
         }
 
         /**
-         * renders a settings page: taxonomies
-         *
-         * @param void
-         * @return void
-         */
-        public static function settings_page_taxonomies()
-        {
-            // Make very sure that only administrators can access this page
-            if ( !current_user_can( 'manage_options' ) ) {
-                wp_die( "Capability check failed" );
-            }
-            $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
-            $public_taxonomies = TagGroups_Taxonomy::get_public_taxonomies();
-            self::add_header();
-            $html = '';
-            self::add_settings_help();
-            $tabs = array();
-            $tabs['taxonomies'] = '';
-            $tabs = apply_filters( 'tag_groups_settings_taxonomies_tabs', $tabs );
-            $active_tab = self::get_active_tab( $tabs );
-            ?>
-            <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
-                <div class="pp-column-left">
-                    <?php
-                    self::add_tabs( 'tag-groups-settings-taxonomies', $tabs, $active_tab );
-                    switch ( $active_tab ) {
-                        case 'taxonomies':
-                            $view = new TagGroups_View( 'admin/settings_taxonomies' );
-                            $view->set( array(
-                                'public_taxonomies'  => $public_taxonomies,
-                                'enabled_taxonomies' => $enabled_taxonomies,
-                            ) );
-                            $view->render();
-                            break;
-                        default:
-                            if ( class_exists( 'TagGroups_Premium_Settings' ) ) {
-                                TagGroups_Premium_Settings::get_content( $active_tab );
-                            }
-                            break;
-                    }
-                    ?>
-                </div>
-                <?php if (!TagGroups_Utilities::is_premium_plan()) : ?>
-                    <div class="pp-column-right">
-                        <?php do_action('tag_groups_settings_right_sidebar'); ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <?php
-            self::add_footer();
-        }
-
-        /**
          * renders a settings page: back end
          *
          * @param void
@@ -390,12 +337,12 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
         }
 
         /**
-         * renders a settings page: tools
+         * renders a settings page: general
          *
          * @param void
          * @return void
          */
-        public static function settings_page_tools()
+        public static function settings_page_general()
         {
             global  $tag_group_groups;
 
@@ -413,13 +360,19 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $tabs['debug'] = __( 'Debugging', 'tag-groups' );
             $tabs['export_import'] = __( 'Export/Import', 'tag-groups' );
             $tabs['reset'] = __( 'Reset', 'tag-groups' );
-            $tabs = apply_filters( 'tag_groups_settings_tools_tabs', $tabs );
+            $tabs['taxonomies'] = __( 'Taxonomies', 'tag-groups' );
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $tabs['licences'] = __('Licences', 'tag-groups');
+            }
+            $tabs = apply_filters( 'tag_groups_settings_general_tabs', $tabs );
             $active_tab = self::get_active_tab( $tabs );
+            $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
+            $public_taxonomies = TagGroups_Taxonomy::get_public_taxonomies();
             ?>
             <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
                 <div class="pp-column-left">
                     <?php
-                    self::add_tabs( 'tag-groups-settings-tools', $tabs, $active_tab );
+                    self::add_tabs( 'tag-groups-settings-general', $tabs, $active_tab );
                     switch ( $active_tab ) {
 
                         case 'first-aid':
@@ -438,6 +391,26 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
                                 $view->render();
                             }
 
+                            break;
+
+                        case 'taxonomies':
+
+                            $view = new TagGroups_View( 'admin/settings_taxonomies' );
+                            $view->set( array(
+                                'public_taxonomies'  => $public_taxonomies,
+                                'enabled_taxonomies' => $enabled_taxonomies,
+                            ) );
+                            $view->render();
+                
+                            break;
+                
+                        case 'licences';
+                
+                        if (class_exists('TagGroups_Premium_Settings') && method_exists('TagGroups_Premium_Settings', 'settings_page_licence')) {
+                        TagGroups_Premium_Settings::settings_page_licence();
+                        }
+                
+                
                             break;
 
                         case 'rest-api':
@@ -889,7 +862,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             $topics = array(
                 'taxonomies'      => array(
                 'title'    => __( 'Taxonomies', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-taxonomies',
+                'page'     => 'tag-groups-settings-general',
                 'keywords' => array_merge( array_keys( $public_taxonomies_names ), array_values( $public_taxonomies_names ), array( __( 'tag groups', 'tag-groups' ) ) ),
             ),
                 'shortcodes'      => array(
@@ -925,17 +898,17 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             ),
                 'export_import'   => array(
                 'title'    => __( 'Export/Import', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-tools',
+                'page'     => 'tag-groups-settings-general',
                 'keywords' => array( __( 'backup', 'tag-groups' ) ),
             ),
                 'reset'           => array(
                 'title'    => __( 'Reset', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-tools',
+                'page'     => 'tag-groups-settings-general',
                 'keywords' => array( __( 'remove plugin', 'tag-groups' ), __( 'remove data', 'tag-groups' ), __( 'delete groups', 'tag-groups' ) ),
             ),
                 'system'          => array(
                 'title'    => __( 'System Information', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-tools',
+                'page'     => 'tag-groups-settings-general',
                 'keywords' => array(
                 __( 'debugging', 'tag-groups' ),
                 __( 'PHP Version', 'tag-groups' ),
@@ -949,7 +922,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             ),
                 'debug'           => array(
                 'title'    => __( 'Debugging', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-tools',
+                'page'     => 'tag-groups-settings-general',
                 'keywords' => array(
                 __( 'debugging', 'tag-groups' ),
                 __( 'troubleshooting', 'tag-groups' ),
@@ -1007,7 +980,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             ),
                 'first-aid'       => array(
                 'title'    => __( 'First Aid', 'tag-groups' ),
-                'page'     => 'tag-groups-settings-tools',
+                'page'     => 'tag-groups-settings-general',
                 'keywords' => array(
                 __( 'troubleshooting', 'tag-groups' ),
                 __( 'migrate', 'tag-groups' ),

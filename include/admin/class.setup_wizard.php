@@ -26,7 +26,7 @@ if ( !class_exists( 'TagGroups_Setup_Wizard' ) ) {
             }
 
             self::add_header();
-            $settings_taxonomy_link = admin_url( 'admin.php?page=tag-groups-settings-taxonomies' );
+            $settings_taxonomy_link = admin_url( 'admin.php?page=tag-groups-settings-general' );
             $settings_home_link = admin_url( 'admin.php?page=tag-groups-settings' );
             $settings_premium_link = admin_url( 'admin.php?page=tag-groups-settings-premium' );
             $settings_setup_wizard_link = admin_url( 'admin.php?page=tag-groups-settings-setup-wizard' );
