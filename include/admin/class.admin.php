@@ -28,7 +28,7 @@ if (!class_exists('TagGroups_Admin')) {
             // Define the menu structure
             $tag_groups_admin_structure = array(
                 0  => array(
-                'title'    => __('Home', 'tag-groups'),
+                'title'    => __('Taxonomies', 'tag-groups'),
                 'slug'     => 'tag-groups-settings',
                 'parent'   => 'tag-groups-settings',
                 'user_can' => 'manage_options',
@@ -76,20 +76,6 @@ if (!class_exists('TagGroups_Admin')) {
             ksort($tag_groups_admin_structure);
             // register the menus and pages
             foreach ($tag_groups_admin_structure as $tag_groups_admin_page) {
-
-                 //remove duplicate top-level menu
-                 if ( $tag_groups_admin_page['slug'] === 'tag-groups-settings' ) {
-                    add_submenu_page(
-                        'tag-groups-settings',
-                        '',
-                        '', 
-                        'manage_options',
-                        'tag-groups-settings',
-                        '__return_null'
-                    );
-                    continue;
-                }
-                
                 add_submenu_page(
                     !empty($tag_groups_admin_page['parent']) ? $tag_groups_admin_page['parent'] : '',
                     $tag_groups_admin_page['title'],
