@@ -97,13 +97,13 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             self::add_settings_help();
             $tabs = array();
             $tabs['taxonomies'] = '';
-            $tabs = apply_filters( 'tag_groups_settings_taxonomies_tabs', $tabs );
+            $tabs = apply_filters( 'tag_groups_settings', $tabs );
             $active_tab = self::get_active_tab( $tabs );
             ?>
             <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
                 <div class="pp-column-left">
                     <?php
-                    self::add_tabs( 'tag-groups-settings-taxonomies', $tabs, $active_tab );
+                    self::add_tabs( 'tag-groups-settings', $tabs, $active_tab );
                     switch ( $active_tab ) {
                         case 'taxonomies':
                             $view = new TagGroups_View( 'admin/settings_taxonomies' );
