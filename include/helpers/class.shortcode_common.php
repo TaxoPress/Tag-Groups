@@ -1046,8 +1046,11 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
             /**
              * Don't test for empty() because the user might need to display an empty title
              */
-            
-            if ( !is_null( $this->attributes->custom_title ) ) {
+            if (
+                ( property_exists( $this->attributes, 'custom_title' ) && ! is_null( $this->attributes->custom_title ) ) ||
+                ( property_exists( $this->attributes, 'custom_title_zero' ) && ! is_null( $this->attributes->custom_title_zero ) ) ||
+                ( property_exists( $this->attributes, 'custom_title_plural' ) && ! is_null( $this->attributes->custom_title_plural ) )
+            ) {
                 
                 if ( 0 == $post_count && property_exists( $this->attributes, 'custom_title_zero' ) && !is_null( $this->attributes->custom_title_zero ) ) {
                     $title = $this->attributes->custom_title_zero;
@@ -1066,6 +1069,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                  * 
                  * @return string
                  */
+                $title = (string) $title;
                 $title = apply_filters(
                     'tag_groups_custom_title',
                     $title,
@@ -1077,7 +1081,13 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                 $title = preg_replace( "/(\\{description\\})/", $description, $title );
                 $name = ( !empty($tag->name) ? esc_html( $tag->name ) : '' );
                 $title = preg_replace( "/(\\{name\\})/", $name, $title );
-                return preg_replace( "/(\\{count\\})/", $post_count, $title );
+                $title = preg_replace( "/(\\{count\\})/", $post_count, $title );
+                if ( trim($title) === '' ) {
+                    $tag_count_brackets = $this->attributes->show_tag_count ? '(' . $post_count . ')' : '';
+                    return $description . $tag_count_brackets;
+                  }
+          
+                  return $title;
             } else {
                 // use just description and number
                 $description = ( !empty($tag->description) ? esc_html( $tag->description ) . ' ' : '' );
