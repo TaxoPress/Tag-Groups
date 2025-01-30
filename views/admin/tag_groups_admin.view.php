@@ -94,7 +94,8 @@
       var element = jQuery(this);
       var position = element.attr("data-position");
       var label = escape_html(element.attr("data-label"));
-      element.replaceWith('<span class="tg_edit_label_active"><input data-position="' + position + '" data-label="' + label + '" value="' + label + '"> <span class="tg_edit_label_yes dashicons dashicons-yes tg_pointer" ></span> <span class="tg_edit_label_no dashicons dashicons-no-alt tg_pointer"></span></span>');
+      element.replaceWith('<span class="tg_edit_label_active"><input data-position="' + position + '" data-label="' + label + '" value="' + label + '"> <span class="tg_edit_label_yes dashicons dashicons-yes tg_pointer" ></span> </span>');
+      jQuery('.tg_edit_label_yes').css('font-size', '30px');
     });
 
     jQuery('#tag_group_administration').on('keypress', '.tg_edit_label_active', function (e) {
