@@ -124,8 +124,51 @@
   text-decoration: none;
 }
 
+.box-tg-accordion .tg_admin_accordion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box-tg-accordion .tg_admin_accordion > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
 .tg_admin_accordion .ui-accordion-content {
   background-color: #fff;
+}
+
+.box-tg-accordion .tg_admin_accordion .ui-accordion-content{
+  grid-column: 1 / -1;
+}
+
+.box-tg-accordion .tg_admin_accordion h4 {
+  display: flex !important;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.box-tg-accordion .tg_admin_accordion h4:hover {
+  background-color: #e0e0e0;
+}
+
+.box-tg-accordion .tg_admin_accordion h4 span.dashicons {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+@media (max-width: 480px) {
+  .box-tg-accordion .tg_admin_accordion {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 

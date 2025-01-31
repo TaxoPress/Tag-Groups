@@ -1,39 +1,14 @@
-<div class="tg_settings_tabs_content">
+<div class="tg_settings_tabs_content box-tg-accordion">
 
   <p>
-    <?php _e('You can use a shortcode to embed the tag cloud directly in a post, page or widget or you call the function in the PHP code of your theme.', 'tag-groups') ?>
+    <?php _e('All Tag Groups features are available as Gutenberg blocks. You can also use shortcodes.', 'tag-groups') ?>
   </p>
-  <p>
-    <?php _e('Most features are also available as blocks for the Gutenberg editor.', 'tag-groups') ?>
-    <?php _e("If you don't feel comfortable with shortcode parameters, you should give the Gutenberg blocks a try.", 'tag-groups') ?>
-  </p>
-
-  <p>&nbsp;</p>
-  <h3><?php _e('Settings', 'tag-groups') ?></h3>
-  <form method="POST" action="<?php echo esc_url($_SERVER['REQUEST_URI']) ?>">
-    <input type="hidden" name="tag-groups-shortcode-nonce" id="tag-groups-shortcode-nonce" value="<?php echo wp_create_nonce('tag-groups-shortcode') ?>" />
-    <p>
-      <input type="checkbox" name="widget" autocomplete="off" id="tg_widget" value="1" <?php if ($tag_group_shortcode_widget) : ?> checked<?php endif; ?>>&nbsp;
-      <label for="tg_widget"><?php _e('Enable shortcode in sidebar widgets (if not visible anyway).', 'tag-groups') ?></label>
-    </p>
-    <p>
-      <input type="checkbox" name="enqueue" id="tg_enqueue" autocomplete="off" value="1" <?php if ($tag_group_shortcode_enqueue_always) : ?> checked<?php endif; ?>>&nbsp;
-      <label for="tg_enqueue"><?php _e('Always load shortcode scripts.', 'tag-groups') ?></label>
-      <span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="load-scripts" title="<?php _e('Click for more information', 'tag-groups') ?>"></span>
-    </p>
-    <div class="chatty-mango-help-container chatty-mango-help-container-load-scripts" style="display:none; max-width:60%; clear:none;">
-      <p><?php _e('Turn off to load the scripts only on posts and pages where a shortcode appears.', 'tag-groups') ?></p>
-      <p><span class="dashicons dashicons-warning"></span><?php _e('Turn on if you use these shortcodes in widgets.', 'tag-groups') ?></p>
-    </div>
-    <input type="hidden" id="action" name="tg_action" value="shortcode">
-    <input class="button-primary" type="submit" name="save" value="<?php _e('Save Settings', 'tag-groups') ?>" id="submitbutton" />
-  </form>
 
   <p>&nbsp;</p>
   <p><?php _e('Click on the features for more information.', 'tag-groups') ?></p>
   <h3><?php _e('Shortcodes', 'tag-groups') ?></h3>
   <div class="tg_admin_accordion">
-    <h4><?php _e('Tabbed Tag Cloud', 'tag-groups') ?></h4>
+  <h4><span class="dashicons dashicons-visibility"></span> <?php _e('Tabbed Tag Cloud', 'tag-groups') ?></h4>
     <div>
       <img src="<?php echo TAG_GROUPS_PLUGIN_URL ?>/assets/images/features/tabbed-tag-cloud.png" style="float:right">
       <h4>[tag_groups_cloud]</h4>
@@ -44,7 +19,7 @@
       <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tabbed-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
     </div>
 
-    <h4><?php _e('Accordion', 'tag-groups') ?></h4>
+    <h4><span class="dashicons dashicons-menu"></span> <?php _e('Accordion', 'tag-groups') ?></h4>
     <div>
       <img src="<?php echo TAG_GROUPS_PLUGIN_URL ?>/assets/images/features/accordion-tag-cloud.png" style="float:right">
       <h4>[tag_groups_accordion]</h4>
@@ -55,7 +30,7 @@
       <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/accordion-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
     </div>
 
-    <h4><?php _e('Tag List', 'tag-groups') ?></h4>
+    <h4><span class="dashicons dashicons-tag"></span> <?php _e('Tag List', 'tag-groups') ?></h4>
     <div>
       <img src="<?php echo TAG_GROUPS_PLUGIN_URL ?>/assets/images/features/tag-list.png" style="float:right">
       <h4>[tag_groups_tag_list]</h4>
@@ -66,7 +41,7 @@
       <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tag-list-shortcode-parameters/" target="_blank"') ?></p>
     </div>
 
-    <h4><?php _e('Alphabetical Tag Cloud', 'tag-groups') ?></h4>
+    <h4><span class="dashicons dashicons-text"></span> <?php _e('Alphabetical Tag Cloud', 'tag-groups') ?></h4>
     <div>
       <img src="<?php echo TAG_GROUPS_PLUGIN_URL ?>/assets/images/features/alphabetical-tag-cloud.png" style="float:right">
       <h4>[tag_groups_alphabet_tabs]</h4>
@@ -77,7 +52,7 @@
       <p><?php printf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/alphabetical-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
     </div>
 
-    <h4><?php _e('Alphabetical Tag Index', 'tag-groups') ?></h4>
+    <h4><span class="dashicons dashicons-text"></span> <?php _e('Alphabetical Tag Index', 'tag-groups') ?></h4>
     <div>
       <img src="<?php echo TAG_GROUPS_PLUGIN_URL ?>/assets/images/features/alphabetical-tag-index.png" style="float:right">
       <h4>[tag_groups_alphabetical_index]</h4>
@@ -89,7 +64,7 @@
     </div>
     <?php echo $premium_shortcode_info ?>
 
-    <h4><?php _e('Group Information', 'tag-groups') ?></h4>
+    <h4><span class="dashicons dashicons-info"></span> <?php _e('Group Information', 'tag-groups') ?></h4>
     <div>
       <h4>[tag_groups_info]</h4>
       <p><?php _e('Display information about tag groups.', 'tag-groups') ?></p>
@@ -102,7 +77,7 @@
 
   <h3>PHP</h3>
   <div class="tg_admin_accordion">
-    <h4>tag_groups_cloud()</h4>
+  <h4><span class="dashicons dashicons-cloud"></span> tag_groups_cloud()</h4>
     <div>
       <p><?php _e('The function <b>tag_groups_cloud</b> accepts the same parameters as the [tag_groups_cloud] shortcode, except for those that determine tabs and styling.', 'tag-groups') ?></p>
       <p><?php _e('By default it returns a string with the html for a tabbed tag cloud.', 'tag-groups') ?></p>
@@ -116,6 +91,27 @@
     </div>
   </div>
 
+  <p>&nbsp;</p>
+  <h3><?php _e('Settings', 'tag-groups') ?></h3>
+  <form method="POST" action="<?php echo esc_url($_SERVER['REQUEST_URI']) ?>">
+    <input type="hidden" name="tag-groups-shortcode-nonce" id="tag-groups-shortcode-nonce" value="<?php echo wp_create_nonce('tag-groups-shortcode') ?>" />
+    <p>
+      <input type="checkbox" name="widget" autocomplete="off" id="tg_widget" value="1" <?php if ($tag_group_shortcode_widget) : ?> checked<?php endif; ?>>&nbsp;
+      <label for="tg_widget"><?php _e('Enable shortcode in sidebar widgets (if not visible anyway).', 'tag-groups') ?></label>
+    </p>
+    <p>
+      <input type="checkbox" name="enqueue" id="tg_enqueue" autocomplete="off" value="1" <?php if ($tag_group_shortcode_enqueue_always) : ?> checked<?php endif; ?>>&nbsp;
+      <label for="tg_enqueue"><?php _e('Always load shortcode scripts.', 'tag-groups') ?></label>
+      <span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="load-scripts" title="<?php _e('Click for more information', 'tag-groups-premium') ?>"></span>
+    </p>
+    <div class="chatty-mango-help-container chatty-mango-help-container-load-scripts" style="display:none; max-width:60%; clear:none;">
+      <p><?php _e('Turn off to load the scripts only on posts and pages where a shortcode appears.', 'tag-groups') ?></p>
+      <p><span class="dashicons dashicons-warning"></span><?php _e('Turn on if you use these shortcodes in widgets.', 'tag-groups') ?></p>
+    </div>
+    <input type="hidden" id="action" name="tg_action" value="shortcode">
+    <input class="button-primary" type="submit" name="save" value="<?php _e('Save Settings', 'tag-groups') ?>" id="submitbutton" />
+  </form>
+
   <!-- begin Tag Groups plugin -->
   <script>
     jQuery(function() {
@@ -123,7 +119,7 @@
         header: "dashicons dashicons-arrow-right",
         activeHeader: "dashicons dashicons-arrow-down"
       };
-      jQuery(".tg_admin_accordion").accordion({
+      jQuery(".box-tg-accordion .tg_admin_accordion").accordion({
         icons: icons,
         collapsible: true,
         active: false,
