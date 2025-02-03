@@ -3,7 +3,7 @@ Contributors: stevejburge, andergmartins, olatechpro, ojopaul
 Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
 Tested up to: 6.7
-Stable tag: 2.0.7
+Stable tag: 2.0.8
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -125,6 +125,21 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 
 == Changelog ==
+
+= [2.0.8] - 03 Feb 2025 =
+* Improved: Improve the save icon, #188
+* Improved: Improve "Theme and Appearance" tab, #176
+* Removed: Remove the "Home" screen, #187
+* Fixed: Missing translation strings in Pro, #123
+* Fixed: Tooltips not working with the shortcodes, #102
+* Update: Text update for "Taxonomies" screen, #186
+* Update: New text for Tag Colors tab, #177
+* Update: Update "Shortcodes" tab, #175
+* Update: Combine settings screen: Tools & License, #174
+* Removed: Remove the "Home" link, #173
+* Update: Move the Group ID column, #172
+* Update: Translation Updates for Tag Groups FREE v2.0.7 ES-FR-IT, #180
+* Update: Translation Updates for Tag Groups PRO v2.0.7 ES-FR-IT, #179
 
 = [2.0.7] - 22 Jan 2025 =
 * Improved: Improve handling of Parent Groups, #120
