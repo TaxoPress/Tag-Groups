@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2025-01-16 08:04+0000\n"
-"PO-Revision-Date: 2025-01-20 19:44+0100\n"
+"POT-Creation-Date: 2025-01-22 08:09+0000\n"
+"PO-Revision-Date: 2025-01-23 12:29+0100\n"
 "Last-Translator: \n"
 "Language-Team: Angeloo Giammarresi . info@wocmultimedia.com\n"
 "Language: es_ES\n"
@@ -112,6 +112,10 @@ msgstr "Acciones"
 msgid "Active Taxonomies"
 msgstr "Taxonomías activas"
 
+#: views/admin/settings_troubleshooting_system.view.php:15
+msgid "Active Theme"
+msgstr "Tema activo"
+
 #: views/admin/settings_back_end_filters.view.php:14
 msgid ""
 "Add a filter to the list of tags. Disable it here if it conflicts with other "
@@ -136,14 +140,11 @@ msgstr ""
 "taxonomías."
 
 #: views/admin/tag_groups_admin.view.php:69
-msgid "Add New Group"
-msgstr "Añadir nuevo grupo"
-
-#: views/admin/tag_groups_admin.view.php:14
-msgid "Add new group"
-msgstr "Añadir nuevo grupo"
+msgid "Add New Tag Group"
+msgstr "Añadir nuevo grupo de etiquetas"
 
 #: include/admin/class.settings.php:942
+#: views/admin/settings_troubleshooting_system.view.php:21
 msgid "Ajax Test"
 msgstr "Prueba Ajax"
 
@@ -240,14 +241,6 @@ msgstr "Almacenando en la caché"
 msgid "Change order"
 msgstr "Cambiar orden"
 
-#: views/admin/tag_groups_admin.view.php:3
-msgid ""
-"Change the order by drag and drop or with the up/down icons. Click into a "
-"label for editing."
-msgstr ""
-"Cambia el orden arrastrando y soltando o con los iconos arriba/abajo. Haz "
-"clic en una etiqueta para editarla."
-
 #: include/admin/class.settings.php:1066
 msgid "Checking the tag names"
 msgstr "Comprobación de los nombres de las etiquetas"
@@ -302,11 +295,11 @@ msgstr "Continuar"
 msgid "Create"
 msgstr "Crear"
 
-#: include/admin/class.setup_wizard.php:149
+#: include/admin/class.setup_wizard.php:157
 msgid "Create a draft sample page with Gutenberg blocks."
 msgstr "Crea un borrador de página de muestra con bloques Gutenberg."
 
-#: include/admin/class.setup_wizard.php:151
+#: include/admin/class.setup_wizard.php:159
 msgid "Create a draft sample page with shortcodes."
 msgstr "Crea un borrador de página de muestra con shortcodes."
 
@@ -572,6 +565,10 @@ msgstr "¡Finalizado!"
 msgid "First Aid"
 msgstr "Primeros auxilios"
 
+#: include/admin/class.setup_wizard.php:137
+msgid "First Sample Tag"
+msgstr "Primer ejemplo de etiqueta"
+
 #: include/admin/class.admin.php:66 include/admin/class.settings.php:999
 #: views/admin/onboarding.view.php:1
 msgid "First Steps"
@@ -692,6 +689,10 @@ msgstr ""
 msgid "Home"
 msgstr "Inicio"
 
+#: views/admin/settings_troubleshooting_system.view.php:11
+msgid "Home URL"
+msgstr "URL de inicio"
+
 #: views/admin/settings_front_end_themes.view.php:69
 msgid "HTML in tag description:"
 msgstr "HTML en la descripción de la etiqueta:"
@@ -807,11 +808,6 @@ msgstr "Mantén sincronizados los grupos de traducciones"
 #: views/admin/tag_groups_admin.view.php:66
 msgid "label"
 msgstr "etiqueta"
-
-#: views/admin/tag_groups_admin.view.php:23
-#: views/admin/tag_groups_admin.view.php:36
-msgid "Label displayed on the frontend"
-msgstr "Etiqueta mostrada en la portada"
 
 #: views/admin/settings_troubleshooting_debug.view.php:40
 #, php-format
@@ -974,14 +970,6 @@ msgid ""
 msgstr ""
 "En la página «Theme Roller» puedes personalizar todas las características o "
 "elegir un conjunto de la galería. Termina con el botón «Descargar»."
-
-#: views/admin/tag_groups_admin.view.php:3
-msgid ""
-"On this page you can create and edit tag groups. Tags can be assigned to "
-"these groups on the page where you edit the tags."
-msgstr ""
-"En esta página puedes crear y editar grupos de etiquetas. Las etiquetas se "
-"pueden asignar a estos grupos en la página donde se editan las etiquetas."
 
 #: views/admin/onboarding.view.php:10
 msgid "Or click here if you prefer to do it on your own."
@@ -1182,6 +1170,22 @@ msgstr ""
 msgid "sample"
 msgstr "ejemplo"
 
+#: include/admin/class.setup_wizard.php:99
+msgid "Sample Content"
+msgstr "Ejemplo de contenido"
+
+#: include/admin/class.setup_wizard.php:119
+msgid "Sample Group A"
+msgstr "Ejemplo de grupo A"
+
+#: include/admin/class.setup_wizard.php:120
+msgid "Sample Group B"
+msgstr "Ejemplo de grupo B"
+
+#: include/admin/class.setup_wizard.php:121
+msgid "Sample Group C"
+msgstr "Ejemplo de grupo C"
+
 #: views/admin/settings_back_end_filters.view.php:19
 #: views/admin/settings_back_end_gutenberg.view.php:13
 #: views/admin/settings_back_end_multilingual.view.php:13
@@ -1215,6 +1219,10 @@ msgstr "Resultados de la búsqueda"
 #: include/admin/class.settings.php:971
 msgid "searchable"
 msgstr "buscable"
+
+#: include/admin/class.setup_wizard.php:138
+msgid "Second Sample Tag"
+msgstr "Segundo ejemplo de etiqueta"
 
 #: include/admin/class.settings.php:114
 #, php-format
@@ -1271,6 +1279,10 @@ msgstr "widget de barra lateral"
 msgid "Simple Tag Cloud"
 msgstr "Nube de etiquetas simple"
 
+#: views/admin/settings_troubleshooting_system.view.php:8
+msgid "Site URL"
+msgstr "URL del sitio"
+
 #: views/admin/settings_back_end_gutenberg.view.php:8
 msgid ""
 "Some blocks can show an approximate preview in the Gutenberg editor. If you "
@@ -1288,6 +1300,7 @@ msgstr "Ordenación de grupos en meta términos"
 msgid "speed test"
 msgstr "prueba de velocidad"
 
+#: include/admin/class.setup_wizard.php:91
 #: views/admin/setup_wizard_start.view.php:12
 msgid "Start"
 msgstr "Inicio"
@@ -1344,6 +1357,11 @@ msgstr "Administración de Tag Group"
 msgid "Tag Group Administration"
 msgstr "Administración de Tag Group"
 
+#: views/admin/tag_groups_admin.view.php:23
+#: views/admin/tag_groups_admin.view.php:36
+msgid "Tag Group name"
+msgstr "Nombre del grupo de etiquetas"
+
 #. Name of the plugin
 #: include/admin/class.admin.php:236 views/admin/edit_tag_main.view.php:2
 #: views/admin/new_tag_from_list.view.php:2
@@ -1385,6 +1403,7 @@ msgid "Tag Meta Box"
 msgstr "Caja meta de etiquetas"
 
 #: include/admin/class.admin.php:38 include/admin/class.settings.php:891
+#: include/admin/class.setup_wizard.php:95
 msgid "Taxonomies"
 msgstr "Taxonomías"
 
@@ -1532,6 +1551,10 @@ msgstr ""
 msgid "There have been errors."
 msgstr "Se han producido errores."
 
+#: include/admin/class.setup_wizard.php:139
+msgid "Third Sample Tag"
+msgstr "Tercer ejemplo de eitqueta"
+
 #: views/admin/sample_page_gutenberg.view.php:15
 msgid ""
 "This page was created while you had the Gutenberg editor enabled. Therefore "
@@ -1650,6 +1673,10 @@ msgstr "El registro detallado está desactivado."
 msgid "Verbose logging is on."
 msgstr "El registro detallado está activado."
 
+#: views/admin/settings_troubleshooting_system.view.php:17
+msgid "Version"
+msgstr "Versión"
+
 #: include/admin/class.settings.php:983
 msgid "version"
 msgstr "versión"
@@ -1693,6 +1720,10 @@ msgstr "¡Bien hecho!"
 #: includes-core/TagGroupsCoreAdmin.php:88
 msgid "WooCommerce Attributes"
 msgstr "Atributos WooCommerce"
+
+#: views/admin/settings_troubleshooting_system.view.php:5
+msgid "WordPress Version"
+msgstr "Versión de WordPress"
 
 #: include/admin/class.settings.php:508
 msgid "WP Object Cache"
@@ -1786,6 +1817,27 @@ msgid ""
 msgstr ""
 "Tus términos se han importado desde el archivo %1$s (creado con la versión "
 "del plugin %2$s el %3$s)."
+
+#~ msgid "Add new group"
+#~ msgstr "Añadir nuevo grupo"
+
+#~ msgid ""
+#~ "Change the order by drag and drop or with the up/down icons. Click into a "
+#~ "label for editing."
+#~ msgstr ""
+#~ "Cambia el orden arrastrando y soltando o con los iconos arriba/abajo. Haz "
+#~ "clic en una etiqueta para editarla."
+
+#~ msgid "Label displayed on the frontend"
+#~ msgstr "Etiqueta mostrada en la portada"
+
+#~ msgid ""
+#~ "On this page you can create and edit tag groups. Tags can be assigned to "
+#~ "these groups on the page where you edit the tags."
+#~ msgstr ""
+#~ "En esta página puedes crear y editar grupos de etiquetas. Las etiquetas "
+#~ "se pueden asignar a estos grupos en la página donde se editan las "
+#~ "etiquetas."
 
 #~ msgid "A-Z"
 #~ msgstr "A-Z"

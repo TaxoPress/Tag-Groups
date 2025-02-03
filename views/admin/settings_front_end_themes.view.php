@@ -3,9 +3,9 @@
   <form method="POST" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>">
     <?php echo wp_nonce_field( 'tag-groups-settings', 'tag-groups-settings-nonce', true, false ) ?>
     <div class="chatty-mango-settings-container">
-      <div style="width:48%;min-width:500px;float:left;padding-right:20px;">
+      <div style="min-width:500px;padding-right:20px;">
         <p>
-          <?php _e( "Here you can choose a theme for the tabbed and the accordion tag cloud. The path to own themes is relative to the <i>uploads</i> folder of your WordPress installation. Leave empty if you don't use any.", 'tag-groups' )?>
+          <?php _e( "Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag Cloud.", 'tag-groups' )?>
           <span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="themes" title="<?php _e('Click for more information', 'tag-groups') ?>"></span>
         </p>
 
@@ -45,7 +45,7 @@
           </li>
         </ul>
       </div>
-      <div style="width: 50%; min-width: 500px; float: left">
+      <div style="min-width: 500px;">
         <h4><?php _e( 'Further options', 'tag-groups' )?></h4>
         <ul>
           <li>

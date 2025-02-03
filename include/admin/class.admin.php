@@ -28,18 +28,11 @@ if (!class_exists('TagGroups_Admin')) {
             // Define the menu structure
             $tag_groups_admin_structure = array(
                 0  => array(
-                'title'    => __('Home', 'tag-groups'),
+                'title'    => __('Taxonomies', 'tag-groups'),
                 'slug'     => 'tag-groups-settings',
                 'parent'   => 'tag-groups-settings',
                 'user_can' => 'manage_options',
                 'function' => array( 'TagGroups_Settings', 'settings_page_home' ),
-            ),
-                1  => array(
-                'title'    => __('Taxonomies', 'tag-groups'),
-                'slug'     => 'tag-groups-settings-taxonomies',
-                'parent'   => 'tag-groups-settings',
-                'user_can' => 'manage_options',
-                'function' => array( 'TagGroups_Settings', 'settings_page_taxonomies' ),
             ),
                 3  => array(
                 'title'    => __('Front End', 'tag-groups'),
@@ -55,13 +48,6 @@ if (!class_exists('TagGroups_Admin')) {
                 'user_can' => 'manage_options',
                 'function' => array( 'TagGroups_Settings', 'settings_page_back_end' ),
             ),
-                5  => array(
-                'title'    => __('Tools', 'tag-groups'),
-                'slug'     => 'tag-groups-settings-tools',
-                'parent'   => 'tag-groups-settings',
-                'user_can' => 'manage_options',
-                'function' => array( 'TagGroups_Settings', 'settings_page_tools' ),
-            ),
                 9  => array(
                 'title'    => __('First Steps', 'tag-groups'),
                 'slug'     => 'tag-groups-settings-first-steps',
@@ -75,6 +61,13 @@ if (!class_exists('TagGroups_Admin')) {
                 'parent'   => null,
                 'user_can' => 'manage_options',
                 'function' => array( 'TagGroups_Setup_Wizard', 'settings_page_setup_wizard' ),
+            ),
+                11  => array(
+                    'title'    => __( 'Settings', 'tag-groups' ),
+                    'slug'     => 'tag-groups-settings-general',
+                    'parent'   => 'tag-groups-settings',
+                    'user_can' => 'manage_options',
+                    'function' => array( 'TagGroups_Settings', 'settings_page_general' ),
             ),
             );
             // hook for premium plugin to modify the menu
@@ -1019,7 +1012,7 @@ if (!class_exists('TagGroups_Admin')) {
          */
         public static function recommend_to_run_migration()
         {
-            TagGroups_Admin_Notice::add('info', sprintf(__('Please <a %s>click here to run the migration routines</a> to make sure we have migrated all tags.', 'tag-groups'), 'href="' . admin_url('admin.php?page=tag-groups-settings-tools&process-tasks=migratetermmeta&task-set-name=Migration') . '"'));
+            TagGroups_Admin_Notice::add('info', sprintf(__('Please <a %s>click here to run the migration routines</a> to make sure we have migrated all tags.', 'tag-groups'), 'href="' . admin_url('admin.php?page=tag-groups-settings-general&process-tasks=migratetermmeta&task-set-name=Migration') . '"'));
         }
     }
     // class
