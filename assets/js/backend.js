@@ -208,7 +208,6 @@ function tg_do_ajax(tg_params, send_data, labels) {
               '<td style="display:none;">' + labels.newgroup + '</td>\n' +
               '<td colspan="5"><input placeholder="' + labels.placeholder_new + '">' +
               '<span class="tg_new_yes dashicons dashicons-yes tg_pointer" style="font-size: 30px; line-height: 1;"></span>' +
-              '<span class="tg_new_no dashicons dashicons-no-alt tg_pointer" style="font-size: 30px; line-height: 1;" onclick="tg_toggle_clear()"></span>' +
               '</td>\n' +
               '</tr>\n';
 
