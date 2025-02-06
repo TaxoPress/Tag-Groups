@@ -145,6 +145,7 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             self::add_header();
             self::add_settings_help();
             $tabs = array();
+            $tabs = apply_filters( 'tag_groups_settings_back_end_tabs', $tabs );
             $tabs['filters'] = __( 'Filters', 'tag-groups' );
             if ( TagGroups_Gutenberg::is_gutenberg_active() ) {
                 $tabs['gutenberg'] = __( 'Gutenberg', 'tag-groups' );
@@ -152,7 +153,6 @@ if ( !class_exists( 'TagGroups_Settings' ) ) {
             if ( TagGroups_WPML::is_multilingual() ) {
                 $tabs['multilingual'] = __( 'Multilingual', 'tag-groups' );
             }
-            $tabs = apply_filters( 'tag_groups_settings_back_end_tabs', $tabs );
             $active_tab = self::get_active_tab( $tabs );
             ?>
             <div class="pp-columns-wrapper<?php echo (!TagGroups_Utilities::is_premium_plan()) ? ' pp-enable-sidebar' : '' ?>">
