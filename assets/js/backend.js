@@ -203,28 +203,16 @@ function tg_do_ajax(tg_params, send_data, labels) {
               output += '</tr>\n';
 
               // hidden row for adding a new group
-              output +=
-                '<tr class="tg_new_group_row" style="display:none;" id="tg_new_' +
-                data_set.position +
-                '">\n';
-              output +=
-                '<td style="display:none;">' + labels.newgroup + '</td>\n';
-              output +=
-                '<td colspan="5" style="display:none;"><input data-position="' +
-                data_set.position +
-                '"  placeholder="' +
-                labels.placeholder_new +
-                '">';
-              output +=
-                '<span class="tg_new_yes dashicons dashicons-yes tg_pointer" data-position="' +
-                data_set.position +
-                '"></span> <span class="tg_new_no dashicons dashicons-no-alt tg_pointer" data-position="' +
-                data_set.position +
-                '" onclick="tg_toggle_clear(' +
-                data_set.position +
-                ')"></span>';
-              output += '</td>\n';
-              output += '</tr>\n';
+              var newGroupRow =
+              '<tr class="tg_new_group_row" style="display:none;" id="tg_new_group">\n' +
+              '<td style="display:none;">' + labels.newgroup + '</td>\n' +
+              '<td colspan="5"><input placeholder="' + labels.placeholder_new + '">' +
+              '<span class="tg_new_yes dashicons dashicons-yes tg_pointer" style="font-size: 30px; line-height: 1;"></span>' +
+              '</td>\n' +
+              '</tr>\n';
+
+              // Prepend new group row before existing groups
+              output = newGroupRow + output;
             }
           }
         } else {
@@ -245,7 +233,18 @@ function tg_do_ajax(tg_params, send_data, labels) {
             });
 
             $addTagGroupButton.on('click', function () {
-              tg_toggle_clear(data_set.position);
+              var $row = jQuery('#tg_new_group');
+                    
+                // Ensure the row is fully removed and re-added
+                if ($row.length) {
+                  $row.remove();
+                }
+              
+                // Append a fresh new row
+                jQuery('#tg_new_group').fadeIn();
+                
+                jQuery('#tg_groups_container table').prepend(newGroupRow);
+                jQuery('#tg_new_group input').val('').show().trigger('focus');
             });
 
             $tagGroupContainer.append($addTagGroupButton);
@@ -429,10 +428,10 @@ function tg_close_textfield(element, saved) {
 /*
  * Toggling the "new group" boxes
  */
-function tg_toggle_clear(position) {
-  var row = jQuery('#tg_new_' + position);
+function tg_toggle_clear() {
+  var row = jQuery('#tg_new_');
   if (row.is(':visible')) {
-    jQuery('[data-position=' + position + ']').val('');
+    row.find('input').val('');
     row.children().fadeOut(300, function () {
       row.slideUp(600);
     });
@@ -444,7 +443,7 @@ function tg_toggle_clear(position) {
       });
     row.delay(200).slideDown(400, function () {
       row.children().fadeIn(300);
-      jQuery('[data-position=' + position + ']').trigger('focus');
+      row.find('input').val('').show().trigger('focus');
     });
   }
 }
