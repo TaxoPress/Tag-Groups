@@ -100,14 +100,18 @@ function chatty_mango_tag_groups_editor_assets() {
 		// , $dependencies['version']
 	);
 
-	if ( function_exists( 'gutenberg_get_jed_locale_data' ) ) {
-
-		wp_add_inline_script(
-			'wp-i18n',
-			'wp.i18n.setLocaleData(' . json_encode( gutenberg_get_jed_locale_data('tag-groups') ) . ');'
-		);
-
+	if ( function_exists( 'wp_get_jed_locale_data' ) ) {
+		$locale_data = wp_get_jed_locale_data( 'tag-groups' );
+	} elseif ( function_exists( 'gutenberg_get_jed_locale_data' ) ) {
+		$locale_data = gutenberg_get_jed_locale_data( 'tag-groups' );
+	} else {
+		$locale_data = []; // Ensure it doesn't break if neither function exists
 	}
+	
+	wp_add_inline_script(
+		'wp-i18n',
+		'wp.i18n.setLocaleData( ' . json_encode( $locale_data ) . ' );'
+	);
 
 } // End function chatty_mango_tag_groups_editor_assets().
 
