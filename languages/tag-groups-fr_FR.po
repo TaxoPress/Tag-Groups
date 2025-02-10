@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2025-01-22 08:09+0000\n"
-"PO-Revision-Date: 2025-01-23 12:26+0100\n"
+"POT-Creation-Date: 2025-02-03 06:51+0000\n"
+"PO-Revision-Date: 2025-02-04 11:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: Angeloo Giammarresi . info@wocmultimedia.com\n"
 "Language: fr_FR\n"
@@ -30,12 +30,12 @@ msgstr ""
 "l’extension <b>Tag Groups</b>. Vous pouvez la modifier et la supprimer en "
 "toute sécurité ou la garder pour référence à venir."
 
-#: views/admin/settings_front_end_shortcodes.view.php:73
-#: views/admin/settings_front_end_shortcodes.view.php:84
+#: views/admin/settings_front_end_shortcodes.view.php:48
+#: views/admin/settings_front_end_shortcodes.view.php:59
 msgid "(Not tested with right-to-left languages.)"
 msgstr "(Non testée avec les langues allant de la droite à la gauche)."
 
-#: include/admin/class.settings.php:358
+#: include/admin/class.settings.php:263
 msgid "(recommended)"
 msgstr "(recommandé)"
 
@@ -88,15 +88,15 @@ msgstr ""
 msgid "A tag group with the label '%s' already exists."
 msgstr "Un groupe d’étiquettes avec le libellé « %s » existe déjà."
 
-#: include/admin/class.settings.php:985
+#: include/admin/class.settings.php:902
 msgid "about"
 msgstr "à propos de"
 
-#: views/admin/settings_front_end_shortcodes.view.php:47
+#: views/admin/settings_front_end_shortcodes.view.php:22
 msgid "Accordion"
 msgstr "Accordéon"
 
-#: include/admin/class.settings.php:902
+#: include/admin/class.settings.php:819
 msgid "accordion"
 msgstr "accordéon"
 
@@ -105,8 +105,8 @@ msgstr "accordéon"
 msgid "Accordion Tag Cloud"
 msgstr "Nuage d’étiquettes en accordéon"
 
-#: views/admin/tag_groups_admin.view.php:29
-#: views/admin/tag_groups_admin.view.php:42
+#: views/admin/tag_groups_admin.view.php:28
+#: views/admin/tag_groups_admin.view.php:41
 msgid "Actions"
 msgstr "Actions"
 
@@ -145,36 +145,44 @@ msgstr ""
 msgid "Add New Tag Group"
 msgstr "Ajouter un nouveau groupe d’étiquettes"
 
-#: include/admin/class.settings.php:942
+#: include/admin/class.settings.php:859
 #: views/admin/settings_troubleshooting_system.view.php:21
 msgid "Ajax Test"
 msgstr "Test Ajax"
 
-#: include/admin/class.settings.php:660
+#: include/admin/class.settings.php:577
 msgid "All groups have been deleted and assignments reset."
 msgstr "Tous les groupes ont été supprimés et les assignations réinitialisées."
 
-#: include/admin/class.settings.php:904
+#: views/admin/settings_front_end_shortcodes.view.php:4
+msgid ""
+"All Tag Groups features are available as Gutenberg blocks. You can also use "
+"shortcodes."
+msgstr ""
+"Toutes les fonctionnalités de Tag Groups sont disponibles sous forme de "
+"blocs Gutenberg. Vous pouvez également utiliser des codes courts."
+
+#: include/admin/class.settings.php:821
 msgid "alphabetical"
 msgstr "alphabétique"
 
 #: views/admin/sample_page.view.php:26
 #: views/admin/sample_page_gutenberg.view.php:50
-#: views/admin/settings_front_end_shortcodes.view.php:69
+#: views/admin/settings_front_end_shortcodes.view.php:44
 msgid "Alphabetical Tag Cloud"
 msgstr "Nuage d’étiquettes alphabétiques"
 
 #: views/admin/sample_page.view.php:38
 #: views/admin/sample_page_gutenberg.view.php:70
-#: views/admin/settings_front_end_shortcodes.view.php:80
+#: views/admin/settings_front_end_shortcodes.view.php:55
 msgid "Alphabetical Tag Index"
 msgstr "Index alphabétique des étiquettes"
 
-#: views/admin/settings_front_end_shortcodes.view.php:21
+#: views/admin/settings_front_end_shortcodes.view.php:104
 msgid "Always load shortcode scripts."
 msgstr "Chargez toujours les scripts des codes courts."
 
-#: include/admin/class.settings.php:970
+#: include/admin/class.settings.php:887
 msgid "animated"
 msgstr "animé"
 
@@ -183,15 +191,15 @@ msgstr "animé"
 msgid "Assign to"
 msgstr "Assigner à"
 
-#: include/admin/class.settings.php:982
+#: include/admin/class.settings.php:899
 msgid "author"
 msgstr "auteur/autrice"
 
-#: include/admin/class.admin.php:52
+#: include/admin/class.admin.php:45
 msgid "Back End"
 msgstr "Interface d’administration"
 
-#: include/admin/class.settings.php:929
+#: include/admin/class.settings.php:846
 msgid "backup"
 msgstr "sauvegarde"
 
@@ -207,15 +215,15 @@ msgstr ""
 msgid "Benchmarks"
 msgstr "Points de repère"
 
-#: include/admin/class.settings.php:944
+#: include/admin/class.settings.php:861
 msgid "benchmarks"
 msgstr "points de repère"
 
-#: include/admin/class.settings.php:996
+#: include/admin/class.settings.php:913
 msgid "blog"
 msgstr "blog"
 
-#: views/admin/settings_front_end_shortcodes.view.php:108
+#: views/admin/settings_front_end_shortcodes.view.php:83
 msgid "By default it returns a string with the html for a tabbed tag cloud."
 msgstr ""
 "Par défaut, il renvoie une chaîne contenant le code html d’un nuage "
@@ -237,12 +245,12 @@ msgstr "Cache"
 msgid "Caching"
 msgstr "Mise en cache"
 
-#: views/admin/tag_groups_admin.view.php:30
-#: views/admin/tag_groups_admin.view.php:43
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
 msgid "Change order"
 msgstr "Modifier l’ordre"
 
-#: include/admin/class.settings.php:1066
+#: include/admin/class.settings.php:983
 msgid "Checking the tag names"
 msgstr "Vérification des noms d’étiquettes"
 
@@ -250,22 +258,24 @@ msgstr "Vérification des noms d’étiquettes"
 msgid "Checking..."
 msgstr "Vérification…"
 
-#: views/admin/settings_taxonomies.view.php:2
 #: views/admin/setup_wizard_taxonomies.view.php:2
 msgid "Choose the taxonomies for which you want to use tag groups."
 msgstr ""
 "Choisissez les taxonomies pour lesquelles vous souhaitez utiliser des "
 "groupes d’étiquettes."
 
-#: views/admin/settings_front_end_shortcodes.view.php:22
+#: views/admin/settings_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use Tag Groups:"
+msgstr ""
+"Choisir les taxonomies pour lesquelles vous souhaitez utiliser Tag Groups :"
+
 #: views/admin/settings_front_end_themes.view.php:9
 #: views/admin/settings_home.view.php:8
-#: views/admin/settings_taxonomies.view.php:2
 #: views/admin/setup_wizard_taxonomies.view.php:2
 msgid "Click for more information"
 msgstr "Cliquez pour plus d’informations"
 
-#: views/admin/settings_front_end_shortcodes.view.php:33
+#: views/admin/settings_front_end_shortcodes.view.php:8
 msgid "Click on the features for more information."
 msgstr "Cliquez sur les caractéristiques pour plus d’informations."
 
@@ -277,7 +287,7 @@ msgstr "En cliquant, vous quitterez cette page sans l’enregistrer."
 msgid "Collapsible tabs (toggle open/close)."
 msgstr "Onglets repliables (ouvrir/fermer à bascule)."
 
-#: include/admin/class.settings.php:917
+#: include/admin/class.settings.php:834
 msgid "colors"
 msgstr "couleurs"
 
@@ -285,7 +295,7 @@ msgstr "couleurs"
 msgid "Constants"
 msgstr "Constantes"
 
-#: include/admin/class.settings.php:984
+#: include/admin/class.settings.php:901
 msgid "contact"
 msgstr "contact"
 
@@ -326,11 +336,11 @@ msgstr "Créez des groupes d’exemples :"
 msgid "Create sample tags in these groups:"
 msgstr "Créez des étiquettes d’exemple dans ces groupes :"
 
-#: include/admin/class.settings.php:991
+#: include/admin/class.settings.php:908
 msgid "Credits"
 msgstr "Crédits"
 
-#: include/admin/class.settings.php:506
+#: include/admin/class.settings.php:423
 msgid "Database"
 msgstr "Base de données"
 
@@ -346,11 +356,11 @@ msgstr "Le mode débogage est désactivé."
 msgid "Debug mode is on."
 msgstr "Le mode débogage est activé."
 
-#: include/admin/class.settings.php:413 include/admin/class.settings.php:951
+#: include/admin/class.settings.php:318 include/admin/class.settings.php:868
 msgid "Debugging"
 msgstr "Débogage"
 
-#: include/admin/class.settings.php:940 include/admin/class.settings.php:954
+#: include/admin/class.settings.php:857 include/admin/class.settings.php:871
 msgid "debugging"
 msgstr "débogage"
 
@@ -368,7 +378,7 @@ msgstr ""
 msgid "Delete Groups"
 msgstr "Supprimer les groupes"
 
-#: include/admin/class.settings.php:934
+#: include/admin/class.settings.php:851
 msgid "delete groups"
 msgstr "supprimer les groupes"
 
@@ -386,7 +396,7 @@ msgstr ""
 "Une documentation détaillée est également disponible sur le site de "
 "l’extension."
 
-#: include/admin/class.settings.php:994
+#: include/admin/class.settings.php:911
 msgid "Development News"
 msgstr "Actualités sur le développement"
 
@@ -398,35 +408,35 @@ msgstr "Afficher un filtre sur l’administration des publications"
 msgid "Display filter on tag admin"
 msgstr "Afficher un filtre sur l’administration des étiquettes"
 
-#: views/admin/settings_front_end_shortcodes.view.php:95
+#: views/admin/settings_front_end_shortcodes.view.php:70
 msgid "Display information about tag groups."
 msgstr "Afficher des informations sur les groupes d’étiquettes."
 
-#: views/admin/settings_front_end_shortcodes.view.php:84
+#: views/admin/settings_front_end_shortcodes.view.php:59
 msgid "Display the tags in a list with first letters as heading."
 msgstr ""
 "Afficher les étiquettes dans une liste avec les premières lettres comme "
 "titre."
 
-#: views/admin/settings_front_end_shortcodes.view.php:40
+#: views/admin/settings_front_end_shortcodes.view.php:15
 msgid "Display the tags in a tabbed tag cloud."
 msgstr "Afficher les étiquettes dans un nuage d’étiquettes à onglets."
 
-#: views/admin/settings_front_end_shortcodes.view.php:51
+#: views/admin/settings_front_end_shortcodes.view.php:26
 msgid "Display the tags in an accordion."
 msgstr "Afficher les étiquettes en accordéon."
 
-#: views/admin/settings_front_end_shortcodes.view.php:62
+#: views/admin/settings_front_end_shortcodes.view.php:37
 msgid "Display the tags in lists under tag groups."
 msgstr "Afficher les étiquettes dans des listes sous les groupes d’étiquettes."
 
-#: views/admin/settings_front_end_shortcodes.view.php:73
+#: views/admin/settings_front_end_shortcodes.view.php:48
 msgid "Display the tags in tabbed tag cloud with first letters as tabs."
 msgstr ""
 "Afficher les étiquettes dans des nuages d’étiquettes à onglets avec les "
 "premières lettres sous forme d’onglets."
 
-#: views/admin/tag_groups_admin.view.php:167
+#: views/admin/tag_groups_admin.view.php:168
 msgid "Do you really want to delete this tag group?"
 msgstr "Confirmez-vous votre intention de supprimer ce groupe d’étiquettes ?"
 
@@ -446,7 +456,7 @@ msgstr "Modifier"
 msgid "Edit tag groups"
 msgstr "Modifier les groupes d’étiquettes"
 
-#: include/admin/class.admin.php:600
+#: include/admin/class.admin.php:593
 msgid "Edit this item inline"
 msgstr "Modifier cet élément en ligne"
 
@@ -463,7 +473,7 @@ msgstr ""
 "Activer l’accès public au point de terminaison des termes /wp-json/tag-"
 "groups/v1/terms/."
 
-#: views/admin/settings_front_end_shortcodes.view.php:17
+#: views/admin/settings_front_end_shortcodes.view.php:100
 msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
 msgstr ""
 "Activez le code court dans les widgets de la barre latérale (s’il n’est pas "
@@ -487,7 +497,7 @@ msgstr ""
 "Saisissez le nom de ce nouveau dossier (par exemple « mon-thème ») ci-"
 "dessous."
 
-#: include/admin/class.settings.php:946 include/admin/class.settings.php:956
+#: include/admin/class.settings.php:863 include/admin/class.settings.php:873
 msgid "error"
 msgstr "erreur"
 
@@ -503,14 +513,14 @@ msgstr "Une erreur s’est produite lors de la lecture du fichier."
 msgid "Error uploading the file."
 msgstr "Une erreur s’est produite lors du téléversement du fichier."
 
-#: views/admin/settings_front_end_shortcodes.view.php:41
-#: views/admin/settings_front_end_shortcodes.view.php:52
-#: views/admin/settings_front_end_shortcodes.view.php:63
-#: views/admin/settings_front_end_shortcodes.view.php:74
-#: views/admin/settings_front_end_shortcodes.view.php:85
-#: views/admin/settings_front_end_shortcodes.view.php:96
-#: views/admin/settings_front_end_shortcodes.view.php:109
-#: views/admin/settings_front_end_shortcodes.view.php:114
+#: views/admin/settings_front_end_shortcodes.view.php:16
+#: views/admin/settings_front_end_shortcodes.view.php:27
+#: views/admin/settings_front_end_shortcodes.view.php:38
+#: views/admin/settings_front_end_shortcodes.view.php:49
+#: views/admin/settings_front_end_shortcodes.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:71
+#: views/admin/settings_front_end_shortcodes.view.php:84
+#: views/admin/settings_front_end_shortcodes.view.php:89
 msgid "Example"
 msgstr "Exemple"
 
@@ -522,7 +532,7 @@ msgstr "Exportation"
 msgid "Export Files"
 msgstr "Exporter les fichiers"
 
-#: include/admin/class.settings.php:414 include/admin/class.settings.php:927
+#: include/admin/class.settings.php:319 include/admin/class.settings.php:844
 msgid "Export/Import"
 msgstr "Exporter/Importer"
 
@@ -538,11 +548,11 @@ msgstr ""
 "N’hésitez pas à interrompre l’assistant d’installation à tout moment et à "
 "poursuivre votre chemin. Vous pouvez également le relancer ultérieurement."
 
-#: include/admin/class.settings.php:507
+#: include/admin/class.settings.php:424
 msgid "Filesystem"
 msgstr "Système de fichiers"
 
-#: include/admin/class.settings.php:969
+#: include/admin/class.settings.php:886
 msgid "filter"
 msgstr "filtre"
 
@@ -558,9 +568,9 @@ msgstr "Filtrer par groupe d’étiquettes"
 msgid "Filter off"
 msgstr "Filtre désactivé"
 
-#: include/admin/class.settings.php:243 include/admin/class.settings.php:922
-#: views/admin/tag_groups_admin.view.php:27
-#: views/admin/tag_groups_admin.view.php:40
+#: include/admin/class.settings.php:148 include/admin/class.settings.php:839
+#: views/admin/tag_groups_admin.view.php:26
+#: views/admin/tag_groups_admin.view.php:39
 msgid "Filters"
 msgstr "Filtres"
 
@@ -568,7 +578,7 @@ msgstr "Filtres"
 msgid "Finished!"
 msgstr "Terminé !"
 
-#: include/admin/class.settings.php:410 include/admin/class.settings.php:1009
+#: include/admin/class.settings.php:315 include/admin/class.settings.php:926
 msgid "First Aid"
 msgstr "Premiers secours"
 
@@ -576,16 +586,16 @@ msgstr "Premiers secours"
 msgid "First Sample Tag"
 msgstr "Premier exemple d’étiquette"
 
-#: include/admin/class.admin.php:66 include/admin/class.settings.php:999
+#: include/admin/class.admin.php:52 include/admin/class.settings.php:916
 #: views/admin/onboarding.view.php:1
 msgid "First Steps"
 msgstr "Premiers pas"
 
-#: include/admin/class.settings.php:1064
+#: include/admin/class.settings.php:981
 msgid "Fixing incorrect groups in term meta"
 msgstr "Correction des groupes incorrects dans le méta terme"
 
-#: include/admin/class.settings.php:1063
+#: include/admin/class.settings.php:980
 msgid "Fixing incorrect tag groups"
 msgstr "Correction des groupes d’étiquettes incorrects"
 
@@ -593,7 +603,7 @@ msgstr "Correction des groupes d’étiquettes incorrects"
 msgid "for the selected language"
 msgstr "pour la langue sélectionnée"
 
-#: include/admin/class.admin.php:45
+#: include/admin/class.admin.php:38
 msgid "Front End"
 msgstr "Interface publique"
 
@@ -601,7 +611,7 @@ msgstr "Interface publique"
 msgid "Further options"
 msgstr "Options supplémentaires"
 
-#: include/admin/class.settings.php:1001 include/admin/class.settings.php:1006
+#: include/admin/class.settings.php:918 include/admin/class.settings.php:923
 msgid "getting started"
 msgstr "pour commencer"
 
@@ -636,16 +646,16 @@ msgstr ""
 msgid "Go to your tags and <b>assign them to these groups</b>."
 msgstr "Allez dans vos étiquettes et <b>assignez-les à ces groupes</b>."
 
-#: views/admin/tag_groups_admin.view.php:22
-#: views/admin/tag_groups_admin.view.php:35
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
 msgid "Group ID"
 msgstr "ID du groupe"
 
-#: include/admin/class.settings.php:900
+#: include/admin/class.settings.php:817
 msgid "group info"
 msgstr "informations sur le groupe"
 
-#: views/admin/settings_front_end_shortcodes.view.php:92
+#: views/admin/settings_front_end_shortcodes.view.php:67
 msgid "Group Information"
 msgstr "Informations sur le groupe"
 
@@ -657,7 +667,7 @@ msgstr "Statistiques du groupe"
 msgid "Groups"
 msgstr "Groupes"
 
-#: include/admin/class.settings.php:245 include/admin/class.settings.php:1022
+#: include/admin/class.settings.php:150 include/admin/class.settings.php:939
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
@@ -669,21 +679,18 @@ msgstr "Aperçu des blocs Gutenberg"
 msgid "Happy tagging!"
 msgstr "Joyeux étiquetage !"
 
-#: include/admin/class.settings.php:958 include/admin/class.settings.php:1001
-#: include/admin/class.settings.php:1014
+#: include/admin/class.settings.php:875 include/admin/class.settings.php:918
+#: include/admin/class.settings.php:931
 msgid "help"
 msgstr "aide"
 
 #: views/admin/settings_front_end_themes.view.php:8
 msgid ""
-"Here you can choose a theme for the tabbed and the accordion tag cloud. The "
-"path to own themes is relative to the <i>uploads</i> folder of your "
-"WordPress installation. Leave empty if you don't use any."
+"Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
+"Cloud."
 msgstr ""
 "Ici, vous pouvez choisir un thème pour le nuage d’étiquettes à onglets et le "
-"nuage d’étiquettes en accordéon. Le chemin d’accès à vos propres thèmes est "
-"relatif au dossier <i>uploads</i> de votre installation WordPress. Laissez-"
-"le vide si vous n’en utilisez pas."
+"nuage d’étiquettes en accordéon."
 
 #: views/admin/settings_front_end_themes.view.php:44
 msgid ""
@@ -693,7 +700,7 @@ msgstr ""
 "Ici, vous pouvez désactiver les thèmes jQuery UI si votre thème WordPress "
 "apporte son propre thème jQuery UI, afin d’éviter les conflits."
 
-#: include/admin/class.admin.php:20 include/admin/class.admin.php:31
+#: include/admin/class.admin.php:20
 msgid "Home"
 msgstr "Accueil"
 
@@ -717,7 +724,7 @@ msgstr "https://wordpress.org/plugins/tag-groups/"
 msgid "I know what I am doing."
 msgstr "Je sais ce que je fais."
 
-#: views/admin/settings_front_end_shortcodes.view.php:113
+#: views/admin/settings_front_end_shortcodes.view.php:88
 msgid ""
 "If the optional second parameter is set to 'true', the function returns a "
 "multidimensional array containing tag groups and tags."
@@ -736,14 +743,6 @@ msgstr ""
 "toutes les versions linguistiques d’une étiquette lorsque vous "
 "l’enregistrez. Désactivez-la pour définir les groupes de manière "
 "indépendante."
-
-#: views/admin/settings_front_end_shortcodes.view.php:8
-msgid ""
-"If you don't feel comfortable with shortcode parameters, you should give the "
-"Gutenberg blocks a try."
-msgstr ""
-"Si vous ne vous sentez pas à l’aise avec les paramètres des codes courts, "
-"vous devriez essayer les blocs Gutenberg."
 
 #: views/admin/settings_front_end_themes.view.php:75
 msgid ""
@@ -792,11 +791,11 @@ msgstr ""
 "Dans la plupart des cas, la taxonomie par défaut <b>Étiquettes (post_tag)</"
 "b> fera l’affaire."
 
-#: include/admin/class.settings.php:979
+#: include/admin/class.settings.php:896
 msgid "Info"
 msgstr "Information"
 
-#: include/admin/class.settings.php:1001 include/admin/class.settings.php:1006
+#: include/admin/class.settings.php:918 include/admin/class.settings.php:923
 msgid "introduction"
 msgstr "introduction"
 
@@ -807,7 +806,7 @@ msgstr ""
 "Il est recommandé de faire une sauvegarde de la base de données de votre "
 "site avant de procéder."
 
-#: include/admin/class.settings.php:359
+#: include/admin/class.settings.php:264
 msgid "keep"
 msgstr "garder"
 
@@ -824,11 +823,15 @@ msgstr "libellé"
 msgid "Learn more <a %s>about debugging</a>."
 msgstr "En savoir plus <a %s>sur le débogage</a>."
 
-#: include/admin/class.settings.php:989
+#: include/admin/class.settings.php:322
+msgid "Licences"
+msgstr "Licences"
+
+#: include/admin/class.settings.php:906
 msgid "Licenses"
 msgstr "Licences"
 
-#: include/admin/class.settings.php:1024
+#: include/admin/class.settings.php:941
 msgid "live block preview"
 msgstr "aperçu du bloc en direct"
 
@@ -840,7 +843,7 @@ msgstr "Maintenance"
 msgid "Migrate"
 msgstr "Migrer"
 
-#: include/admin/class.settings.php:1013
+#: include/admin/class.settings.php:930
 msgid "migrate"
 msgstr "migrer"
 
@@ -848,23 +851,17 @@ msgstr "migrer"
 msgid "Migrate tags to the new format of Tag Groups."
 msgstr "Migrez les étiquettes vers le nouveau format de Tag Groups."
 
-#: include/admin/class.settings.php:1062
+#: include/admin/class.settings.php:979
 msgid "Migrating the term meta"
 msgstr "Migration des méta termes"
 
-#: include/admin/class.settings.php:966
+#: include/admin/class.settings.php:883
 msgid "more groups"
 msgstr "autres groupes"
 
 #: tag-groups.php:116
 msgid "more information"
 msgstr "plus d’informations"
-
-#: views/admin/settings_front_end_shortcodes.view.php:7
-msgid "Most features are also available as blocks for the Gutenberg editor."
-msgstr ""
-"La plupart des fonctionnalités sont également disponibles sous forme de "
-"blocs pour l’éditeur Gutenberg."
 
 #: views/admin/tag_groups_admin.view.php:71
 msgid "move down"
@@ -874,7 +871,7 @@ msgstr "descendre"
 msgid "move up"
 msgstr "monter"
 
-#: include/admin/class.settings.php:248 include/admin/class.settings.php:1029
+#: include/admin/class.settings.php:153 include/admin/class.settings.php:946
 msgid "Multilingual"
 msgstr "Multilingue"
 
@@ -940,8 +937,8 @@ msgstr ""
 "préférez partir d’un exemple, nous allons créer pour vous trois groupes et "
 "trois étiquettes. Vous pouvez jouer avec eux, les renommer ou les supprimer."
 
-#: views/admin/tag_groups_admin.view.php:25
-#: views/admin/tag_groups_admin.view.php:38
+#: views/admin/tag_groups_admin.view.php:24
+#: views/admin/tag_groups_admin.view.php:37
 msgid "Number of assigned tags"
 msgstr "Nombre d’étiquettes assignées"
 
@@ -1003,12 +1000,12 @@ msgstr "Vous pouvez également prévisualiser la page d’exemple ici."
 msgid "own theme"
 msgstr "propre thème"
 
-#: views/admin/settings_front_end_shortcodes.view.php:43
-#: views/admin/settings_front_end_shortcodes.view.php:54
-#: views/admin/settings_front_end_shortcodes.view.php:65
-#: views/admin/settings_front_end_shortcodes.view.php:76
-#: views/admin/settings_front_end_shortcodes.view.php:87
-#: views/admin/settings_front_end_shortcodes.view.php:98
+#: views/admin/settings_front_end_shortcodes.view.php:18
+#: views/admin/settings_front_end_shortcodes.view.php:29
+#: views/admin/settings_front_end_shortcodes.view.php:40
+#: views/admin/settings_front_end_shortcodes.view.php:51
+#: views/admin/settings_front_end_shortcodes.view.php:62
+#: views/admin/settings_front_end_shortcodes.view.php:73
 msgid "Parameters"
 msgstr "Paramètres"
 
@@ -1024,11 +1021,11 @@ msgstr "réussi"
 msgid "Permissions"
 msgstr "Droits"
 
-#: include/admin/class.settings.php:941
+#: include/admin/class.settings.php:858
 msgid "PHP Version"
 msgstr "Version de PHP"
 
-#: include/admin/class.admin.php:1022
+#: include/admin/class.admin.php:1015
 #, php-format
 msgid ""
 "Please <a %s>click here to run the migration routines</a> to make sure we "
@@ -1046,12 +1043,12 @@ msgstr ""
 "Vous trouverez des liens vers la documentation dans les <a %s>réglages de "
 "Tag Groups</a>."
 
-#: views/admin/settings_front_end_shortcodes.view.php:44
-#: views/admin/settings_front_end_shortcodes.view.php:55
-#: views/admin/settings_front_end_shortcodes.view.php:66
-#: views/admin/settings_front_end_shortcodes.view.php:77
-#: views/admin/settings_front_end_shortcodes.view.php:88
-#: views/admin/settings_front_end_shortcodes.view.php:99
+#: views/admin/settings_front_end_shortcodes.view.php:19
+#: views/admin/settings_front_end_shortcodes.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:41
+#: views/admin/settings_front_end_shortcodes.view.php:52
+#: views/admin/settings_front_end_shortcodes.view.php:63
+#: views/admin/settings_front_end_shortcodes.view.php:74
 #, php-format
 msgid "Please find the parameters in the <a %s>documentation</a>."
 msgstr "Vous trouverez les paramètres dans la <a %s>documentation</a>."
@@ -1089,7 +1086,7 @@ msgstr "Veuillez mettre à niveau WordPress et réessayer."
 msgid "Please visit <a %s>%s</a>."
 msgstr "Veuillez visiter <a %s>%s</a>."
 
-#: include/admin/class.settings.php:924
+#: include/admin/class.settings.php:841
 msgid "post filter"
 msgstr "filtre de publications"
 
@@ -1097,7 +1094,7 @@ msgstr "filtre de publications"
 msgid "Post List"
 msgstr "Liste des publications"
 
-#: include/admin/class.settings.php:905
+#: include/admin/class.settings.php:822
 msgid "post list"
 msgstr "liste des publications"
 
@@ -1105,12 +1102,11 @@ msgstr "liste des publications"
 msgid "Post Tags in Groups"
 msgstr "Étiquettes de publication dans les groupes"
 
-#: views/admin/settings_taxonomies.view.php:34
 #: views/admin/setup_wizard_taxonomies.view.php:18
 msgid "post type"
 msgstr "type de publication"
 
-#: include/admin/class.settings.php:967
+#: include/admin/class.settings.php:884
 msgid "posts"
 msgstr "publications"
 
@@ -1118,11 +1114,11 @@ msgstr "publications"
 msgid "previous page"
 msgstr "page précedente"
 
-#: include/admin/class.settings.php:1015
+#: include/admin/class.settings.php:932
 msgid "problem"
 msgstr "problème"
 
-#: include/admin/class.admin.php:602
+#: include/admin/class.admin.php:595
 msgid "Quick&nbsp;Edit"
 msgstr "Modification&nbsp;rapide"
 
@@ -1134,15 +1130,15 @@ msgstr "Lire la suite"
 msgid "reload"
 msgstr "recharger"
 
-#: include/admin/class.settings.php:358
+#: include/admin/class.settings.php:263
 msgid "remove"
 msgstr "supprimer"
 
-#: include/admin/class.settings.php:934
+#: include/admin/class.settings.php:851
 msgid "remove data"
 msgstr "retirer les données"
 
-#: include/admin/class.settings.php:934
+#: include/admin/class.settings.php:851
 msgid "remove plugin"
 msgstr "supprimer l’extension"
 
@@ -1150,7 +1146,7 @@ msgstr "supprimer l’extension"
 msgid "Request Support"
 msgstr "Demande de support"
 
-#: include/admin/class.settings.php:415 include/admin/class.settings.php:932
+#: include/admin/class.settings.php:320 include/admin/class.settings.php:849
 msgid "Reset"
 msgstr "Réinitialiser"
 
@@ -1165,7 +1161,7 @@ msgstr ""
 "Réinitialisez le filtre sur la page des étiquettes pour afficher toutes les "
 "étiquettes."
 
-#: include/admin/class.settings.php:411
+#: include/admin/class.settings.php:316
 msgid "REST API"
 msgstr "API REST"
 
@@ -1177,7 +1173,7 @@ msgstr ""
 "L’exécution de la maintenance peut résoudre les problèmes rencontrés lors du "
 "filtrage par groupes d’étiquettes."
 
-#: include/admin/class.settings.php:1006
+#: include/admin/class.settings.php:923
 msgid "sample"
 msgstr "exemple"
 
@@ -1200,7 +1196,7 @@ msgstr "Exemple de groupe C"
 #: views/admin/settings_back_end_filters.view.php:19
 #: views/admin/settings_back_end_gutenberg.view.php:13
 #: views/admin/settings_back_end_multilingual.view.php:13
-#: views/admin/settings_front_end_shortcodes.view.php:29
+#: views/admin/settings_front_end_shortcodes.view.php:112
 #: views/admin/settings_rest_api.view.php:19
 #: views/admin/settings_tools_reset.view.php:22
 msgid "Save Settings"
@@ -1228,7 +1224,7 @@ msgstr "Recherche de réglages"
 msgid "Search Results"
 msgstr "Résultats de la recherche"
 
-#: include/admin/class.settings.php:971
+#: include/admin/class.settings.php:888
 msgid "searchable"
 msgstr "recherchable"
 
@@ -1236,36 +1232,31 @@ msgstr "recherchable"
 msgid "Second Sample Tag"
 msgstr "Deuxième exemple d’étiquette"
 
-#: include/admin/class.settings.php:114
-#, php-format
-msgid ""
-"See the <a %s>First Steps</a> for some basic instructions on how to get "
-"started."
-msgstr ""
-"Voir les <a %s>Premiers pas</a> pour des instructions de base sur comment "
-"démarrer."
-
 #: views/admin/settings_troubleshooting_system.view.php:158
 msgid "Server"
 msgstr "Serveur"
 
-#: include/admin/class.admin.php:969
-#: views/admin/settings_front_end_shortcodes.view.php:12
+#: include/admin/class.admin.php:66 include/admin/class.admin.php:962
+#: views/admin/settings_front_end_shortcodes.view.php:95
 msgid "Settings"
 msgstr "Réglages"
 
-#: include/admin/class.admin.php:73 include/admin/class.settings.php:1004
+#: include/admin/class.admin.php:59 include/admin/class.settings.php:921
 msgid "Setup Wizard"
 msgstr "Assistant de configuration"
 
-#: include/admin/class.settings.php:331 include/admin/class.settings.php:896
-#: views/admin/settings_front_end_shortcodes.view.php:34
+#: include/admin/class.settings.php:236 include/admin/class.settings.php:813
+#: views/admin/settings_front_end_shortcodes.view.php:9
 msgid "Shortcodes"
 msgstr "Codes courts"
 
 #: views/admin/settings_taxonomies.view.php:15
-msgid "Show hierarchical taxonomies"
-msgstr "Afficher les taxonomies hiérarchiques"
+msgid ""
+"Show hierarchical taxonomies. Not all Tag Groups features will work with "
+"these taxonomies."
+msgstr ""
+"Afficher les taxonomies hiérarchiques. Toutes les fonctionnalités de Tag "
+"Groups ne fonctionneront pas avec ces taxonomies."
 
 #: views/admin/tag_groups_admin.view.php:76
 msgid "Show posts"
@@ -1283,7 +1274,7 @@ msgstr "Afficher la réponse"
 msgid "Shuffle Box"
 msgstr "Boîte aléatoire"
 
-#: include/admin/class.settings.php:901
+#: include/admin/class.settings.php:818
 msgid "sidebar widget"
 msgstr "widget de barre latérale"
 
@@ -1304,11 +1295,11 @@ msgstr ""
 "Gutenberg. Si vous désactivez cette option, tous les blocs afficheront une "
 "icône statique avec du texte."
 
-#: include/admin/class.settings.php:1065
+#: include/admin/class.settings.php:982
 msgid "Sorting groups in term meta"
 msgstr "Trier les groupes dans les méta-termes"
 
-#: include/admin/class.settings.php:945
+#: include/admin/class.settings.php:862
 msgid "speed test"
 msgstr "test de vitesse"
 
@@ -1321,13 +1312,13 @@ msgstr "Démarrer"
 msgid "Start the Setup Wizard"
 msgstr "Démarrer l’assistant de configuration"
 
-#: include/admin/class.settings.php:412 include/admin/class.settings.php:937
+#: include/admin/class.settings.php:317 include/admin/class.settings.php:854
 msgid "System Information"
 msgstr "Informations sur le système"
 
 #: views/admin/sample_page.view.php:14
 #: views/admin/sample_page_gutenberg.view.php:30
-#: views/admin/settings_front_end_shortcodes.view.php:36
+#: views/admin/settings_front_end_shortcodes.view.php:11
 msgid "Tabbed Tag Cloud"
 msgstr "Nuage d’étiquettes à onglet"
 
@@ -1335,7 +1326,7 @@ msgstr "Nuage d’étiquettes à onglet"
 msgid "Table Tag Cloud"
 msgstr "Nuage d’étiquettes en tableau"
 
-#: include/admin/class.settings.php:903
+#: include/admin/class.settings.php:820
 msgid "tabs"
 msgstr "onglets"
 
@@ -1343,8 +1334,8 @@ msgstr "onglets"
 msgid "Tabs triggered by hovering mouse pointer (without clicking)."
 msgstr "Onglets déclenchés par le survol du pointeur de la souris (sans clic)."
 
-#: include/admin/class.settings.php:899 include/admin/class.settings.php:913
-#: include/admin/class.settings.php:968
+#: include/admin/class.settings.php:816 include/admin/class.settings.php:830
+#: include/admin/class.settings.php:885
 msgid "tag cloud"
 msgstr "nuage d’étiquettes"
 
@@ -1352,15 +1343,15 @@ msgstr "nuage d’étiquettes"
 msgid "Tag Cloud Search"
 msgstr "Rechercher dans les nuages d’étiquettes"
 
-#: include/admin/class.settings.php:918
+#: include/admin/class.settings.php:835
 msgid "tag description"
 msgstr "description de l’étiquette"
 
-#: include/admin/class.settings.php:924 include/admin/class.settings.php:1016
+#: include/admin/class.settings.php:841 include/admin/class.settings.php:933
 msgid "tag filter"
 msgstr "filtre de l’étiquette"
 
-#: include/admin/class.admin.php:108 include/admin/class.admin.php:109
+#: include/admin/class.admin.php:101 include/admin/class.admin.php:102
 msgid "Tag Group Admin"
 msgstr "Administration du groupe d’étiquettes"
 
@@ -1368,18 +1359,18 @@ msgstr "Administration du groupe d’étiquettes"
 msgid "Tag Group Administration"
 msgstr "Administration du groupe d’étiquettes"
 
-#: views/admin/tag_groups_admin.view.php:23
-#: views/admin/tag_groups_admin.view.php:36
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
 msgid "Tag Group name"
 msgstr "Nom du groupe d’étiquettes"
 
 #. Name of the plugin
-#: include/admin/class.admin.php:236 views/admin/edit_tag_main.view.php:2
+#: include/admin/class.admin.php:229 views/admin/edit_tag_main.view.php:2
 #: views/admin/new_tag_from_list.view.php:2
 msgid "Tag Groups"
 msgstr "Groupe d’étiquettes"
 
-#: include/admin/class.settings.php:893
+#: include/admin/class.settings.php:810
 msgid "tag groups"
 msgstr "groupe d’étiquettes"
 
@@ -1392,7 +1383,7 @@ msgstr ""
 "et de les afficher dans des nuages, des onglets, des accordéons, des "
 "tableaux, des listes et bien plus encore."
 
-#: include/admin/class.settings.php:962
+#: include/admin/class.settings.php:879
 msgid "Tag Groups Pro"
 msgstr "Tag Groups Pro"
 
@@ -1406,7 +1397,7 @@ msgstr "Assistant de configuration de Tag Groups"
 
 #: views/admin/sample_page.view.php:32
 #: views/admin/sample_page_gutenberg.view.php:60
-#: views/admin/settings_front_end_shortcodes.view.php:58
+#: views/admin/settings_front_end_shortcodes.view.php:33
 msgid "Tag List"
 msgstr "Liste d’étiquettes"
 
@@ -1414,7 +1405,7 @@ msgstr "Liste d’étiquettes"
 msgid "Tag Meta Box"
 msgstr "Boîte méta des étiquettes"
 
-#: include/admin/class.admin.php:38 include/admin/class.settings.php:891
+#: include/admin/class.admin.php:31 include/admin/class.settings.php:808
 #: include/admin/class.setup_wizard.php:95
 msgid "Taxonomies"
 msgstr "Taxonomies"
@@ -1423,7 +1414,7 @@ msgstr "Taxonomies"
 msgid "TaxoPress"
 msgstr "TaxoPress"
 
-#: include/admin/class.settings.php:947 include/admin/class.settings.php:957
+#: include/admin/class.settings.php:864 include/admin/class.settings.php:874
 msgid "testing"
 msgstr "test en cours"
 
@@ -1445,7 +1436,7 @@ msgstr ""
 "here may not be accessible in the admin backend. If you don’t understand "
 "what is going on here, just leave the default."
 
-#: include/admin/class.settings.php:801
+#: include/admin/class.settings.php:718
 msgid "The filter on the tags page has been reset to show all tags."
 msgstr ""
 "Le filtre de la page des étiquettes a été réinitialisé pour afficher toutes "
@@ -1484,7 +1475,7 @@ msgstr ""
 "L’extension gratuite Tag Groups ne peut pas être active en même temps que "
 "Tag Groups Pro."
 
-#: views/admin/settings_front_end_shortcodes.view.php:107
+#: views/admin/settings_front_end_shortcodes.view.php:82
 msgid ""
 "The function <b>tag_groups_cloud</b> accepts the same parameters as the "
 "[tag_groups_cloud] shortcode, except for those that determine tabs and "
@@ -1544,7 +1535,7 @@ msgstr ""
 msgid "The tag group with the label '%s' has been saved!"
 msgstr "Le groupe d’étiquettes avec le libellé « %s » a été enregistré !"
 
-#: include/admin/class.admin.php:459
+#: include/admin/class.admin.php:452
 msgid "The term has been removed from all groups."
 msgstr "Le terme a été retiré de tous les groupes."
 
@@ -1554,7 +1545,7 @@ msgstr ""
 "L’assistant proposera plus d’options après la mise à niveau vers la version "
 "premium."
 
-#: include/admin/class.settings.php:332 include/admin/class.settings.php:910
+#: include/admin/class.settings.php:237 include/admin/class.settings.php:827
 msgid "Themes and Appearance"
 msgstr "Thèmes et apparence"
 
@@ -1591,20 +1582,16 @@ msgstr "Pour voir le type de publication, passez votre souris sur l’option."
 msgid "Toggle Post Filter"
 msgstr "Filtre des publications à permuter"
 
-#: include/admin/class.admin.php:59
-msgid "Tools"
-msgstr "Outils"
-
-#: include/admin/class.settings.php:505
+#: include/admin/class.settings.php:422
 msgid "Transients"
 msgstr "Transitoires"
 
-#: include/admin/class.settings.php:1031
+#: include/admin/class.settings.php:948
 msgid "translation"
 msgstr "traductions"
 
-#: include/admin/class.settings.php:943 include/admin/class.settings.php:955
-#: include/admin/class.settings.php:1012
+#: include/admin/class.settings.php:860 include/admin/class.settings.php:872
+#: include/admin/class.settings.php:929
 msgid "troubleshooting"
 msgstr "dépannage"
 
@@ -1612,7 +1599,7 @@ msgstr "dépannage"
 msgid "Turn off "
 msgstr "Désactiver "
 
-#: views/admin/settings_front_end_shortcodes.view.php:25
+#: views/admin/settings_front_end_shortcodes.view.php:108
 msgid ""
 "Turn off to load the scripts only on posts and pages where a shortcode "
 "appears."
@@ -1624,15 +1611,15 @@ msgstr ""
 msgid "Turn on"
 msgstr "Activer"
 
-#: views/admin/settings_front_end_shortcodes.view.php:26
+#: views/admin/settings_front_end_shortcodes.view.php:109
 msgid "Turn on if you use these shortcodes in widgets."
 msgstr "Activez cette option si vous utilisez ces codes dans des widgets."
 
-#: include/admin/class.settings.php:996
+#: include/admin/class.settings.php:913
 msgid "updates"
 msgstr "mises à jour"
 
-#: include/admin/class.settings.php:965
+#: include/admin/class.settings.php:882
 msgid "upgrade"
 msgstr "mettre à niveau"
 
@@ -1677,7 +1664,7 @@ msgstr ""
 "Utilisez ce bouton pour exporter tous les réglages des groupes d’étiquettes, "
 "les groupes et tous les termes assignés à un groupe dans des fichiers."
 
-#: include/admin/class.settings.php:360
+#: include/admin/class.settings.php:265
 msgid "use unfiltered_html filter"
 msgstr "utiliser le filtre unfiltered_html"
 
@@ -1697,25 +1684,13 @@ msgstr "La journalisation verbeuse est activée."
 msgid "Version"
 msgstr "Version"
 
-#: include/admin/class.settings.php:983
+#: include/admin/class.settings.php:900
 msgid "version"
 msgstr "version"
 
 #: includes-core/TagGroupsCoreAdmin.php:117
 msgid "View Knowledge Base"
 msgstr "Voir la base de connaissances"
-
-#: include/admin/class.settings.php:118
-msgid "We detected Polylang. Your tag group names are translatable."
-msgstr ""
-"Nous avons détecté le Polylang. Les noms de vos groupes d’étiquettes sont "
-"traduisibles."
-
-#: include/admin/class.settings.php:120
-msgid "We detected WPML. Your tag group names are translatable."
-msgstr ""
-"Nous avons détecté le WPML. Les noms de vos groupes d’étiquettes sont "
-"traduisibles."
 
 #: include/admin/class.import.php:336
 msgid "We processed %d term."
@@ -1746,7 +1721,7 @@ msgstr "Attributs WooCommerce"
 msgid "WordPress Version"
 msgstr "Version de WordPress"
 
-#: include/admin/class.settings.php:508
+#: include/admin/class.settings.php:425
 msgid "WP Object Cache"
 msgstr "WP Object Cache"
 
@@ -1781,15 +1756,6 @@ msgstr ""
 "Vous pouvez ultérieurement apporter des modifications ou affiner les détails "
 "dans les réglages de Tag Groups."
 
-#: views/admin/settings_front_end_shortcodes.view.php:4
-msgid ""
-"You can use a shortcode to embed the tag cloud directly in a post, page or "
-"widget or you call the function in the PHP code of your theme."
-msgstr ""
-"Vous pouvez utiliser un code court pour intégrer le nuage d’étiquettes "
-"directement dans une publication, une page ou un widget ou vous pouvez "
-"appeler la fonction dans le code PHP de votre thème."
-
 #: views/admin/setup_wizard_taxonomies.view.php:26
 msgid "You will find more options in the Tag Groups settings."
 msgstr "Vous trouverez d’autres options dans les réglages de Tag Groups."
@@ -1812,14 +1778,14 @@ msgstr ""
 "Vos réglages et groupes ont été importés du fichier %1$s (créé avec la "
 "version de l’extension %2$s le %3$s)."
 
-#: include/admin/class.settings.php:643
+#: include/admin/class.settings.php:560
 msgid "Your settings has been saved."
 msgstr "Vos réglages ont été enregistrés."
 
-#: include/admin/class.settings.php:626 include/admin/class.settings.php:679
-#: include/admin/class.settings.php:715 include/admin/class.settings.php:748
-#: include/admin/class.settings.php:762 include/admin/class.settings.php:774
-#: include/admin/class.settings.php:786 include/admin/class.settings.php:850
+#: include/admin/class.settings.php:543 include/admin/class.settings.php:596
+#: include/admin/class.settings.php:632 include/admin/class.settings.php:665
+#: include/admin/class.settings.php:679 include/admin/class.settings.php:691
+#: include/admin/class.settings.php:703 include/admin/class.settings.php:767
 msgid "Your settings have been saved."
 msgstr "Vos réglages ont bien été enregistrés."
 
@@ -1840,6 +1806,60 @@ msgid ""
 msgstr ""
 "Vos termes ont été importés du fichier %1$s (créé avec la version de "
 "l’extension %2$s le %3$s)."
+
+#~ msgid ""
+#~ "Here you can choose a theme for the tabbed and the accordion tag cloud. "
+#~ "The path to own themes is relative to the <i>uploads</i> folder of your "
+#~ "WordPress installation. Leave empty if you don't use any."
+#~ msgstr ""
+#~ "Ici, vous pouvez choisir un thème pour le nuage d’étiquettes à onglets et "
+#~ "le nuage d’étiquettes en accordéon. Le chemin d’accès à vos propres "
+#~ "thèmes est relatif au dossier <i>uploads</i> de votre installation "
+#~ "WordPress. Laissez-le vide si vous n’en utilisez pas."
+
+#~ msgid ""
+#~ "If you don't feel comfortable with shortcode parameters, you should give "
+#~ "the Gutenberg blocks a try."
+#~ msgstr ""
+#~ "Si vous ne vous sentez pas à l’aise avec les paramètres des codes courts, "
+#~ "vous devriez essayer les blocs Gutenberg."
+
+#~ msgid "Most features are also available as blocks for the Gutenberg editor."
+#~ msgstr ""
+#~ "La plupart des fonctionnalités sont également disponibles sous forme de "
+#~ "blocs pour l’éditeur Gutenberg."
+
+#, php-format
+#~ msgid ""
+#~ "See the <a %s>First Steps</a> for some basic instructions on how to get "
+#~ "started."
+#~ msgstr ""
+#~ "Voir les <a %s>Premiers pas</a> pour des instructions de base sur comment "
+#~ "démarrer."
+
+#~ msgid "Show hierarchical taxonomies"
+#~ msgstr "Afficher les taxonomies hiérarchiques"
+
+#~ msgid "Tools"
+#~ msgstr "Outils"
+
+#~ msgid "We detected Polylang. Your tag group names are translatable."
+#~ msgstr ""
+#~ "Nous avons détecté le Polylang. Les noms de vos groupes d’étiquettes sont "
+#~ "traduisibles."
+
+#~ msgid "We detected WPML. Your tag group names are translatable."
+#~ msgstr ""
+#~ "Nous avons détecté le WPML. Les noms de vos groupes d’étiquettes sont "
+#~ "traduisibles."
+
+#~ msgid ""
+#~ "You can use a shortcode to embed the tag cloud directly in a post, page "
+#~ "or widget or you call the function in the PHP code of your theme."
+#~ msgstr ""
+#~ "Vous pouvez utiliser un code court pour intégrer le nuage d’étiquettes "
+#~ "directement dans une publication, une page ou un widget ou vous pouvez "
+#~ "appeler la fonction dans le code PHP de votre thème."
 
 #~ msgid "Add new group"
 #~ msgstr "Ajouter un nouveau groupe"

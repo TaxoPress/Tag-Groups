@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2025-02-03 06:51+0000\n"
+"POT-Creation-Date: 2025-02-09 20:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -366,11 +366,11 @@ msgid "Development News"
 msgstr ""
 
 #: views/admin/settings_back_end_filters.view.php:7
-msgid "Display filter on post admin"
+msgid "Display filter on the \"Posts\" screen."
 msgstr ""
 
 #: views/admin/settings_back_end_filters.view.php:13
-msgid "Display filter on tag admin"
+msgid "Display filter on the \"Tags\" screen."
 msgstr ""
 
 #: views/admin/settings_front_end_shortcodes.view.php:70
@@ -519,7 +519,7 @@ msgstr ""
 msgid "Filter off"
 msgstr ""
 
-#: include/admin/class.settings.php:148 include/admin/class.settings.php:839
+#: include/admin/class.settings.php:149 include/admin/class.settings.php:839
 #: views/admin/tag_groups_admin.view.php:26
 #: views/admin/tag_groups_admin.view.php:39
 msgid "Filters"
@@ -612,7 +612,7 @@ msgstr ""
 msgid "Groups"
 msgstr ""
 
-#: include/admin/class.settings.php:150 include/admin/class.settings.php:939
+#: include/admin/class.settings.php:151 include/admin/class.settings.php:939
 msgid "Gutenberg"
 msgstr ""
 
@@ -791,7 +791,7 @@ msgstr ""
 msgid "move up"
 msgstr ""
 
-#: include/admin/class.settings.php:153 include/admin/class.settings.php:946
+#: include/admin/class.settings.php:154 include/admin/class.settings.php:946
 msgid "Multilingual"
 msgstr ""
 
