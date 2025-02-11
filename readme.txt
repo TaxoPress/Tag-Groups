@@ -126,6 +126,18 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
+= [2.0.9] - 11 Feb 2025 =
+* Removed: Remove the metabox setting link, #206
+* Fixed: Behavior when adding Tag Groups, #205
+* Update: Update the shortcode screenshots, #203
+* Update: Update text for "Filters" tab, #202
+* Update: Move the order of the tabs, #201
+* Update: Update the "Permisisons" tab, #200
+* Update: Update the "Tag Meta Box" tab, #199
+* Update: Update the experience when adding new tags, #198
+* Update: Update translation to modernize locale data retrieval, #111
+* Update: Tag Groups FREE v2.0.8 Translation Updates-ES-FR-IT, #207
+
 = [2.0.8] - 03 Feb 2025 =
 * Improved: Improve the save icon, #188
 * Improved: Improve "Theme and Appearance" tab, #176
