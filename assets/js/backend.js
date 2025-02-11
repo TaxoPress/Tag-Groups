@@ -236,8 +236,9 @@ function tg_do_ajax(tg_params, send_data, labels) {
               var $row = jQuery('#tg_new_group');
                     
                 // Ensure the row is fully removed and re-added
-                if ($row.length) {
-                  $row.remove();
+                if (!$row.length) {
+                  jQuery('#tg_groups_container table').prepend(newGroupRow);
+                  $row = jQuery('#tg_new_group'); // Re-select the newly added row
                 }
               
                 // Append a fresh new row
