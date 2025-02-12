@@ -352,14 +352,13 @@ function tg_do_ajax(tg_params, send_data, labels) {
 
 function tg_html_first_group(labels) {
   let output = '<tr id="tg_new_1">\n';
-  output += '<td ></td>\n';
   output +=
-    '<td colspan="4"><input data-position="0" placeholder="' +
-    labels.newgroup +
-    '">';
-  output +=
-    '<span class="tg_new_yes dashicons dashicons-yes tg_pointer" data-id="1"></span></span>';
-  output += '</td>\n';
+    '<td colspan="2" style="text-align: left;">' + 
+    '<span style="display: flex; align-items: center; gap: 10px;">' + 
+    '<input data-position="0" placeholder="' + labels.newgroup + '">' +
+    '<span class="tg_new_yes dashicons dashicons-yes tg_pointer" data-id="1" style="font-size: 30px; line-height: 1;"></span>' +
+    '</span>' +
+    '</td>\n';
   output += '</tr>\n';
   return output;
 }
