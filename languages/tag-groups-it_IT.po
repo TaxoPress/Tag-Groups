@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2025-02-03 06:51+0000\n"
-"PO-Revision-Date: 2025-02-04 11:44+0100\n"
+"POT-Creation-Date: 2025-02-09 20:06+0000\n"
+"PO-Revision-Date: 2025-02-12 19:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: Italiano\n"
 "Language: it_IT\n"
@@ -396,12 +396,12 @@ msgid "Development News"
 msgstr "Note di sviluppo"
 
 #: views/admin/settings_back_end_filters.view.php:7
-msgid "Display filter on post admin"
-msgstr "Visualizza il filtro sull'amministrazione degli articoli"
+msgid "Display filter on the \"Posts\" screen."
+msgstr "Visualizza il filtro nella schermata \"Articoli\"."
 
 #: views/admin/settings_back_end_filters.view.php:13
-msgid "Display filter on tag admin"
-msgstr "Visualizza il filtro sull'amministrazione dei tag"
+msgid "Display filter on the \"Tags\" screen."
+msgstr "Visualizza il filtro nella schermata \"Tag\"."
 
 #: views/admin/settings_front_end_shortcodes.view.php:70
 msgid "Display information about tag groups."
@@ -560,7 +560,7 @@ msgstr "Filtra per gruppo di tag"
 msgid "Filter off"
 msgstr "Disattiva filtro"
 
-#: include/admin/class.settings.php:148 include/admin/class.settings.php:839
+#: include/admin/class.settings.php:149 include/admin/class.settings.php:839
 #: views/admin/tag_groups_admin.view.php:26
 #: views/admin/tag_groups_admin.view.php:39
 msgid "Filters"
@@ -659,7 +659,7 @@ msgstr "Statistiche gruppo"
 msgid "Groups"
 msgstr "Gruppi"
 
-#: include/admin/class.settings.php:150 include/admin/class.settings.php:939
+#: include/admin/class.settings.php:151 include/admin/class.settings.php:939
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
@@ -860,7 +860,7 @@ msgstr "sposta in basso"
 msgid "move up"
 msgstr "sposta in alto"
 
-#: include/admin/class.settings.php:153 include/admin/class.settings.php:946
+#: include/admin/class.settings.php:154 include/admin/class.settings.php:946
 msgid "Multilingual"
 msgstr "Multilingue"
 

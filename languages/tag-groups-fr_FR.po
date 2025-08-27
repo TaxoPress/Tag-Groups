@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tag Groups 0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tag-groups\n"
-"POT-Creation-Date: 2025-02-03 06:51+0000\n"
-"PO-Revision-Date: 2025-02-04 11:58+0100\n"
+"POT-Creation-Date: 2025-02-09 20:06+0000\n"
+"PO-Revision-Date: 2025-02-12 19:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: Angeloo Giammarresi . info@wocmultimedia.com\n"
 "Language: fr_FR\n"
@@ -401,12 +401,12 @@ msgid "Development News"
 msgstr "Actualités sur le développement"
 
 #: views/admin/settings_back_end_filters.view.php:7
-msgid "Display filter on post admin"
-msgstr "Afficher un filtre sur l’administration des publications"
+msgid "Display filter on the \"Posts\" screen."
+msgstr "Afficher un filtre dans l’écran « Publications »."
 
 #: views/admin/settings_back_end_filters.view.php:13
-msgid "Display filter on tag admin"
-msgstr "Afficher un filtre sur l’administration des étiquettes"
+msgid "Display filter on the \"Tags\" screen."
+msgstr "Afficher un filtre dans l’écran « Étiquettes »."
 
 #: views/admin/settings_front_end_shortcodes.view.php:70
 msgid "Display information about tag groups."
@@ -568,7 +568,7 @@ msgstr "Filtrer par groupe d’étiquettes"
 msgid "Filter off"
 msgstr "Filtre désactivé"
 
-#: include/admin/class.settings.php:148 include/admin/class.settings.php:839
+#: include/admin/class.settings.php:149 include/admin/class.settings.php:839
 #: views/admin/tag_groups_admin.view.php:26
 #: views/admin/tag_groups_admin.view.php:39
 msgid "Filters"
@@ -667,7 +667,7 @@ msgstr "Statistiques du groupe"
 msgid "Groups"
 msgstr "Groupes"
 
-#: include/admin/class.settings.php:150 include/admin/class.settings.php:939
+#: include/admin/class.settings.php:151 include/admin/class.settings.php:939
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
@@ -871,7 +871,7 @@ msgstr "descendre"
 msgid "move up"
 msgstr "monter"
 
-#: include/admin/class.settings.php:153 include/admin/class.settings.php:946
+#: include/admin/class.settings.php:154 include/admin/class.settings.php:946
 msgid "Multilingual"
 msgstr "Multilingue"
 
