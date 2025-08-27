@@ -71,6 +71,16 @@ function tg_do_ajax(tg_params, send_data, labels) {
         var max_number = dataParsed.supplemental.max_number;
         var output = '';
 
+        var newGroupRow =
+        '<tr class="tg_new_group_row" style="display:none;" id="tg_new_group">\n' +
+        '<td style="display:none;">' + labels.newgroup + '</td>\n' +
+        '<td colspan="5"><input placeholder="' + labels.placeholder_new + '">' +
+        '<span class="tg_new_yes dashicons dashicons-yes tg_pointer" style="font-size: 30px; line-height: 1;"></span>' +
+        '</td>\n' +
+        '</tr>\n';
+
+        output += newGroupRow;
+
         // disable sorting by drag and drop if the list is not complete
         if (dataParsed.supplemental.is_filtered) {
           jQuery('#tg_groups_container')
@@ -88,7 +98,7 @@ function tg_do_ajax(tg_params, send_data, labels) {
           } else {
             jQuery('.tg_group_admin_parent').css('display', 'none');
           }
-          if (dataParsed.supplemental.only_parents && !dataParsed.supplemental.is_filtered) {
+          if ((dataParsed.supplemental.only_parents && !dataParsed.supplemental.is_filtered) || max_number === 0) {
             output += tg_html_first_group(labels);
           }
 
