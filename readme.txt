@@ -126,6 +126,11 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
+= [2.1.0] - 27 Aug 2025 =
+* Fixed: "Add New Tag Group" button not working in pro #222
+* Update: Tag Groups FREE v2.0.9 Translation Updates-ES-FR-IT #219
+* Update: Tag Groups PRO 2.0.9 Translation Updates ES-FR-IT #220
+
 = [2.0.9] - 12 Feb 2025 =
 * Removed: Remove the metabox setting link, #206
 * Fixed: Behavior when adding Tag Groups, #205
