@@ -3,7 +3,7 @@ Contributors: stevejburge, andergmartins, olatechpro, ojopaul
 Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
 Tested up to: 6.7
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -125,6 +125,10 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 
 == Changelog ==
+
+= [2.1.1] - 21 Oct 2025 =
+* Fixed: Broken dropdowns in Gutenberg, #234
+* Update: Tag Groups PRO 2.1.0 Translation Updates ES-FR-IT #229
 
 = [2.1.0] - 27 Aug 2025 =
 * Fixed: "Add New Tag Group" button not working in pro #222
