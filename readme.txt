@@ -126,6 +126,10 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
+= [2.1.1] - 21 Oct 2025 =
+* Fixed: Broken dropdowns in Gutenberg, #234
+* Update: Tag Groups PRO 2.1.0 Translation Updates ES-FR-IT #229
+
 = [2.1.0] - 27 Aug 2025 =
 * Fixed: "Add New Tag Group" button not working in pro #222
 * Update: Tag Groups FREE v2.0.9 Translation Updates-ES-FR-IT #219
