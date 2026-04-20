@@ -126,6 +126,10 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 == Changelog ==
 
+= [2.1.2] - 21 April 2026 =
+* Fixed: call_user_func_array(): Argument #1 ($callback) must be a valid callback #241
+* Fixed: Caching issue with meta box #240
+
 = [2.1.1] - 21 Oct 2025 =
 * Fixed: Broken dropdowns in Gutenberg, #234
 * Update: Tag Groups PRO 2.1.0 Translation Updates ES-FR-IT #229
