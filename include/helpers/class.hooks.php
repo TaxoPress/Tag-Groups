@@ -423,7 +423,6 @@ if ( !class_exists( 'TagGroups_Hooks' ) ) {
                     // closures
                 } elseif ( is_callable( $item['function'] ) ) {
                     $ref = new ReflectionFunction( $item['function'] );
-                    $item['function'] = get_class( $item['function'] );
                     $item['file'] = $ref->getFileName();
                     $item['line'] = $ref->getStartLine();
                 }
