@@ -3,7 +3,7 @@ Contributors: stevejburge, andergmartins, olatechpro, ojopaul
 Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
 Tested up to: 6.7
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -125,6 +125,10 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 
 == Changelog ==
+
+= [2.1.2] - 21 April 2026 =
+* Fixed: call_user_func_array(): Argument #1 ($callback) must be a valid callback #241
+* Fixed: Caching issue with meta box #240
 
 = [2.1.1] - 21 Oct 2025 =
 * Fixed: Broken dropdowns in Gutenberg, #234
