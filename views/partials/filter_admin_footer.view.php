@@ -1,7 +1,9 @@
 <?php
+
 /**
 *   Using .html() instead of .text() to avoid ampersands displaying
 */
+
 ?>
 <script>
 jQuery(document).ready(function () {
@@ -21,13 +23,14 @@ jQuery(document).ready(function () {
        _e('Filter off', 'tag-groups'); ?>")
   );
 
-  <?php foreach ($term_groups as $term_group): 
-    $bg_color = in_array($term_group['term_group'], $parents) ? '#dfdfdf' : 'transparent';
-    $prefix = empty($parents) || in_array($term_group['term_group'], $parents) ? '' : '&nbsp;&nbsp;';
-  ?>
+  <?php foreach ($term_groups as $term_group) :
+        $bg_color = in_array($term_group['term_group'], $parents) ? '#dfdfdf' : 'transparent';
+        $prefix = empty($parents) || in_array($term_group['term_group'], $parents) ? '' : '&nbsp;&nbsp;';
+        ?>
   sel_filter.append(jQuery("<option>").attr("value", "<?php echo $term_group['term_group']; ?>").css("background-color", "<?php echo $bg_color; ?>").html("<?php echo $prefix . htmlentities($term_group['label'], ENT_QUOTES, 'UTF-8'); ?>")
     );
-  <?php endforeach; ?>
+        <?php 
+  endforeach; ?>
 
   var filterButton = jQuery("<button>").attr("id", "apply_filter_button").attr("class", "button button-primary").html("Filter").appendTo(container);
 

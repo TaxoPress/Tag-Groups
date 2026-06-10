@@ -755,3 +755,54 @@ body[class*=' tag-groups_page'] .pp-version-notice-bold-purple {
       max-width: 170px;
   }
 }
+
+.pp-version-notice-bold-purple.publishpress-tag-groups,
+body.toplevel_page_tag-groups-settings .pp-version-notice-bold-purple,
+body[class*="tag-groups_page_"] .pp-version-notice-bold-purple,
+body[class*="tag-groups-settings"] .pp-version-notice-bold-purple {
+    background: #1F48AC !important;
+}
+
+body.toplevel_page_tag-groups-settings .pp-version-notice-bold-purple-button,
+body[class*="tag-groups_page_"] .pp-version-notice-bold-purple-button,
+body[class*="tag-groups-settings"] .pp-version-notice-bold-purple-button {
+    background: #F7A827 !important;
+    border-color: #d4900d !important;
+}
+
+body.toplevel_page_tag-groups-settings .pp-version-notice-bold-purple-button:hover,
+body[class*="tag-groups_page_"] .pp-version-notice-bold-purple-button:hover,
+body[class*="tag-groups-settings"] .pp-version-notice-bold-purple-button:hover {
+    background: #fcca46 !important;
+}
+
+#adminmenu .publishpress-tag-groups.pp-version-notice-upgrade-menu-item {
+    color: #F7A827 !important;
+}
+
+#adminmenu .publishpress-tag-groups.pp-version-notice-upgrade-menu-item:hover {
+    color: #fcca46 !important;
+}
+
+.tag-groups-wp-reviews-notice .button.button-primary {
+    background-color: #1F48AC !important;
+    border-color: #1a3d91 !important;
+    color: #fff !important;
+}
+
+.tag-groups-wp-reviews-notice .button.button-primary:hover,
+.tag-groups-wp-reviews-notice .button.button-primary:focus {
+    background-color: #1a3d91 !important;
+    border-color: #153278 !important;
+}
+
+.tag-groups-wp-reviews-notice .button:not(.button-primary) {
+    border-color: #1F48AC !important;
+    color: #1F48AC !important;
+}
+
+.tag-groups-wp-reviews-notice .button:not(.button-primary):hover,
+.tag-groups-wp-reviews-notice .button:not(.button-primary):focus {
+    border-color: #1a3d91 !important;
+    color: #1a3d91 !important;
+}

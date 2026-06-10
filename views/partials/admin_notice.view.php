@@ -2,7 +2,7 @@
   <?php echo $notice['content'] ?>
   <div style="clear:both;"></div>
 </div>
-<?php if ( '' != $ajax_link ) : ?>
+<?php if ('' != $ajax_link) : ?>
   <script>
   jQuery(document).ready(function(){
     jQuery("#tag_groups_premium_clear_cache").on('click', function(){

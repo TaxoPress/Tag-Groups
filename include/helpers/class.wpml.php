@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Tag Groups
  *
@@ -16,207 +17,162 @@
  * @license     see official vendor website
  */
 
-if ( ! class_exists( 'TagGroups_WPML' ) ) {
+if (! class_exists('TagGroups_WPML')) {
+    class TagGroups_WPML
+    {
+          /**
+           * Whether this is a multilingual site
+           *
+           * checking for:
+           * - WPML
+           * - Polylang
+           *
+           * @return boolean
+           */
+        static function is_multilingual()
+        {
 
-  class TagGroups_WPML {
+            if (defined('ICL_LANGUAGE_CODE')) {
+                return true;
+            }
 
-    /**
-     * Whether this is a multilingual site
-     *
-     * checking for:
-     * - WPML
-     * - Polylang
-     *
-     * @return boolean
-     */
-    static function is_multilingual() {
+            if (function_exists('pll_current_language')) {
+                return true;
+            }
 
-      if ( defined( 'ICL_LANGUAGE_CODE' ) ) {
+        // if ( ! empty( $_GET[ 'lang' ] ) ) {
 
-        return true;
+        //   return true;
 
-      }
+        // }
 
-      if ( function_exists( 'pll_current_language' ) ) {
-
-        return true;
-
-      }
-
-      // if ( ! empty( $_GET[ 'lang' ] ) ) {
-
-      //   return true;
-
-      // }
-
-      return false;
-
-    }
-
-    /**
-     * Returns the language code (by default ICL_LANGUAGE_CODE)
-     *
-     * @return string
-     */
-    static function get_current_language() {
-
-      if ( defined( 'ICL_LANGUAGE_CODE' ) ) {
-
-        return (string) ICL_LANGUAGE_CODE;
-
-      }
-
-      if ( function_exists( 'pll_current_language' ) ) {
-
-        $current_language = pll_current_language();
-
-        if ( $current_language ) {
-
-          return (string) $current_language;
-
+            return false;
         }
 
-        if ( isset( $_GET['lang'] ) ) {
+      /**
+       * Returns the language code (by default ICL_LANGUAGE_CODE)
+       *
+       * @return string
+       */
+        static function get_current_language()
+        {
 
-          return sanitize_key( $_GET['lang'] );
+            if (defined('ICL_LANGUAGE_CODE')) {
+                return (string) ICL_LANGUAGE_CODE;
+            }
 
+            if (function_exists('pll_current_language')) {
+                $current_language = pll_current_language();
+                if ($current_language) {
+                    return (string) $current_language;
+                }
+
+                if (isset($_GET['lang'])) {
+                    return sanitize_key($_GET['lang']);
+                }
+            }
+
+            return '';
         }
 
-      }
-
-      return '';
-
-    }
-
-
-    /**
-     * Get the transient name for tag_groups_group_terms
-     *
-     * In case we use the WPML plugin: consider the language
-     *
-     * @param  void
-     * @return string
-     */
-    public static function get_tag_groups_group_terms_transient_name() {
-
-      $current_language = self::get_current_language();
-
-      if ( $current_language ) {
-
-        return 'tag_groups_group_terms-' . $current_language;
-
-      } else {
-
-        return 'tag_groups_group_terms';
-
-      }
-
-    }
-
-
-    /**
-     * Get the transient name for tag_groups_post_counts
-     *
-     * In case we use the WPML plugin: consider the language
-     * Use $language if provided, else use current language
-     *
-     * @param  string   $language
-     * @return string
-     */
-    public static function get_tag_groups_post_counts_transient_name( $language_code = null ) {
-
-      if ( ! empty( $language_code ) ) {
-
-        return 'tag_groups_post_counts-' . (string) $language_code;
-
-      }
-
-      $current_language = self::get_current_language();
-
-      if ( $current_language ) {
-
-        return 'tag_groups_post_counts-' . $current_language;
-
-      } else {
-
-        return 'tag_groups_post_counts';
-
-      }
-
-    }
-
-
-    /**
-     * Sync the group(s) of a tag to all translations of this tag
-     *
-     * @param int $term_id
-     * @param int $tt_id
-     * @param string $taxonomy
-     * @return void
-     */
-    static function sync_groups( $term_id, $tt_id, $taxonomy ) {
 
       /**
-       * Test for is_multilingual only here because we don't yet know when adding hooks
+       * Get the transient name for tag_groups_group_terms
+       *
+       * In case we use the WPML plugin: consider the language
+       *
+       * @param  void
+       * @return string
        */
-      if ( ! TagGroups_WPML::is_multilingual() ) {
+        public static function get_tag_groups_group_terms_transient_name()
+        {
 
-        return;
+            $current_language = self::get_current_language();
+            if ($current_language) {
+                return 'tag_groups_group_terms-' . $current_language;
+            } else {
+                return 'tag_groups_group_terms';
+            }
+        }
 
-      }
-
-      if ( ! in_array( $taxonomy, TagGroups_Taxonomy::get_enabled_taxonomies() ) ) {
-
-        return;
-
-      }
-
-      TagGroups_Error::verbose_log( '[Tag Groups] Syncing groups of term ID %d', $term_id );
 
       /**
-       * get translations
+       * Get the transient name for tag_groups_post_counts
+       *
+       * In case we use the WPML plugin: consider the language
+       * Use $language if provided, else use current language
+       *
+       * @param  string   $language
+       * @return string
        */
-      $trid = apply_filters( 'wpml_element_trid', null, $tt_id, "tax_{$taxonomy}" );
+        public static function get_tag_groups_post_counts_transient_name($language_code = null)
+        {
 
-      $translations = apply_filters( 'wpml_get_element_translations', null, $trid, "tax_{$taxonomy}" );
+            if (! empty($language_code)) {
+                return 'tag_groups_post_counts-' . (string) $language_code;
+            }
 
+            $current_language = self::get_current_language();
+            if ($current_language) {
+                return 'tag_groups_post_counts-' . $current_language;
+            } else {
+                return 'tag_groups_post_counts';
+            }
+        }
 
-      if ( empty( $translations ) || ! is_array( $translations ) ) {
-
-        TagGroups_Error::verbose_log( '[Tag Groups] Cannot get translations for term ID %d', $term_id );
-
-        return;
-
-      }
 
       /**
-       * get groups of saved term
+       * Sync the group(s) of a tag to all translations of this tag
+       *
+       * @param int $term_id
+       * @param int $tt_id
+       * @param string $taxonomy
+       * @return void
        */
-      $tg_term = new TagGroups_Term( $term_id );
+        static function sync_groups($term_id, $tt_id, $taxonomy)
+        {
 
-      $groups = $tg_term->get_groups();
+            /**
+             * Test for is_multilingual only here because we don't yet know when adding hooks
+             */
+            if (! TagGroups_WPML::is_multilingual()) {
+                return;
+            }
 
-      foreach ( $translations as $language => $translation ) {
+            if (! in_array($taxonomy, TagGroups_Taxonomy::get_enabled_taxonomies())) {
+                return;
+            }
+
+            TagGroups_Error::verbose_log('[Tag Groups] Syncing groups of term ID %d', $term_id);
+    /**
+             * get translations
+             */
+            $trid = apply_filters('wpml_element_trid', null, $tt_id, "tax_{$taxonomy}");
+            $translations = apply_filters('wpml_get_element_translations', null, $trid, "tax_{$taxonomy}");
+            if (empty($translations) || ! is_array($translations)) {
+                TagGroups_Error::verbose_log('[Tag Groups] Cannot get translations for term ID %d', $term_id);
+                return;
+            }
+
+            /**
+             * get groups of saved term
+             */
+            $tg_term = new TagGroups_Term($term_id);
+            $groups = $tg_term->get_groups();
+            foreach ($translations as $language => $translation) {
+                if ($translation->element_id == $term_id) {
+                    continue;
+                }
         
-        if ( $translation->element_id == $term_id ) {
-          
-          continue;
-          
+              /**
+               * do the sync
+               */
+                $tg_translated_term = new TagGroups_Term($translation->element_id);
+                $tg_translated_term->set_group($groups)->save();
+                TagGroups_Error::verbose_log('[Tag Groups] Groups synced of term ID %d for language %s', $translation->element_id, $language);
+            }
         }
-        
-        /**
-         * do the sync
-         */
-        $tg_translated_term = new TagGroups_Term( $translation->element_id );
-
-        $tg_translated_term->set_group( $groups )->save();
-
-        TagGroups_Error::verbose_log( '[Tag Groups] Groups synced of term ID %d for language %s', $translation->element_id, $language );
-
-      }
-
     }
 
-  }
 
 }

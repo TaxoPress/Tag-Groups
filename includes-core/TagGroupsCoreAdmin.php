@@ -1,59 +1,82 @@
 <?php
+
 namespace TaxoPress\TagGroups;
 
-class TagGroupsCoreAdmin {
-    function __construct() {
-
-        if ( current_user_can( 'manage_options' ) ) {
+/**
+ * Class TagGroupsCoreAdmin
+ *
+ * @package TaxoPress\TagGroups
+ */
+// phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- WordPress naming conventions for hook callbacks
+class TagGroupsCoreAdmin
+{
+    public function __construct()
+    {
         if (is_admin()) {
+            if (class_exists('PublishPress\WordpressVersionNotices\Module\TopNotice\Module')) {
+                add_filter(
+                    \PublishPress\WordpressVersionNotices\Module\TopNotice\Module::SETTINGS_FILTER,
+                    [$this, 'configure_top_notice']
+                );
+            }
 
-            require_once TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/vendor/publishpress/wordpress-version-notices/includes.php';
-            add_filter(
-                        \PPVersionNotices\Module\TopNotice\Module::SETTINGS_FILTER,
-                        function ($settings) {
-                            $settings['taxopress-tag_groups'] = [
-                                'message' => __('You\'re using Tag Groups Free. The Pro version has more features and support. %sUpgrade to Pro%s', 'tag-groups'),
-                                'link'    => 'https://taxopress.com/tag-groups/',
-                                'screens' => [
-                                    ['base' => 'toplevel_page_tag-groups-settings', 'id'   => 'toplevel_page_tag-groups-settings'],
-                                    ['base' => 'tag-groups_page_tag-groups-settings-taxonomies', 'id'   => 'tag-groups_page_tag-groups-settings-taxonomies'],
-                                    ['base' => 'tag-groups_page_tag-groups-settings-front-end',     'id'   => 'tag-groups_page_tag-groups-settings-front-end'],
-                                    ['base' => 'tag-groups_page_tag-groups-settings-back-end',       'id'   => 'tag-groups_page_tag-groups-settings-back-end'],
-                                    ['base' => 'tag-groups_page_tag-groups-settings-tools',     'id'   => 'tag-groups_page_tag-groups-settings-tools'],
-                                    ['base' => 'tag-groups_page_tag-groups-settings-about',   'id'  => 'tag-groups_page_tag-groups-settings-about'],
-                                    ['base' => 'posts_page_tag-groups_post','id' => 'posts_page_tag-groups_post'],
-                                    ['base' => 'admin_page_tag-groups-settings-first-steps',   'id'  => 'admin_page_tag-groups-settings-first-steps'],
-                                    ['base' => 'admin_page_tag-groups-settings-setup-wizard',   'id'  => 'admin_page_tag-groups-settings-setup-wizard'],
-                                    ['base' => 'taxopress_page_st_suggestterms','id'  => 'taxopress_page_st_suggestterms'],
-                                    ['base' => 'taxopress_page_st_terms',       'id'  => 'taxopress_page_st_terms']
-                                ]
-                            ];
-
-                            return $settings;
-                        }
-                    );
-
-
-        }
-                    add_filter(
-                        \PPVersionNotices\Module\MenuLink\Module::SETTINGS_FILTER,
-                        function ($settings) {
-                            $settings['taxopress-tag_groups'] = [
-                                'parent' => 'tag-groups-settings',
-                                'label'  => __('Upgrade to Pro', 'tag-groups'),
-                                'link'   => 'https://taxopress.com/tag-groups/',
-                            ];
-
-                            return $settings;
-                        });
-
+            if (class_exists('PublishPress\WordpressVersionNotices\Module\MenuLink\Module')) {
+                add_filter(
+                    \PublishPress\WordpressVersionNotices\Module\MenuLink\Module::SETTINGS_FILTER,
+                    [$this, 'configure_menu_link']
+                );
+            }
         }
 
         add_action('tag_groups_settings_right_sidebar', [$this, 'tag_groups_admin_advertising_sidebar_banner']);
     }
 
+    /**
+     * Configure the top notice banner settings
+     *
+     * @param array $settings Existing settings
+     * @return array Modified settings
+     */
+    public function configure_top_notice($settings)
+    {
+        $settings['publishpress-tag-groups'] = [
+            'message' => esc_html__("You're using Tag Groups Free. The Pro version has more features and support. %sUpgrade to Pro%s", 'tag-groups'),
+            'link'    => 'https://taxopress.com/tag-groups/',
+            'screens' => [
+                ['base' => 'toplevel_page_tag-groups-settings', 'id' => 'toplevel_page_tag-groups-settings'],
+                ['base' => 'tag-groups_page_tag-groups-settings-taxonomies', 'id' => 'tag-groups_page_tag-groups-settings-taxonomies'],
+                ['base' => 'tag-groups_page_tag-groups-settings-front-end', 'id' => 'tag-groups_page_tag-groups-settings-front-end'],
+                ['base' => 'tag-groups_page_tag-groups-settings-back-end', 'id' => 'tag-groups_page_tag-groups-settings-back-end'],
+                ['base' => 'tag-groups_page_tag-groups-settings-tools', 'id' => 'tag-groups_page_tag-groups-settings-tools'],
+                ['base' => 'tag-groups_page_tag-groups-settings-about', 'id' => 'tag-groups_page_tag-groups-settings-about'],
+                ['base' => 'posts_page_tag-groups_post', 'id' => 'posts_page_tag-groups_post'],
+                ['base' => 'admin_page_tag-groups-settings-first-steps', 'id' => 'admin_page_tag-groups-settings-first-steps'],
+                ['base' => 'admin_page_tag-groups-settings-setup-wizard', 'id' => 'admin_page_tag-groups-settings-setup-wizard'],
+            ]
+        ];
 
-    function tag_groups_admin_advertising_sidebar_banner(){
+        return $settings;
+    }
+
+    /**
+     * Configure the menu link settings
+     *
+     * @param array $settings Existing settings
+     * @return array Modified settings
+     */
+    public function configure_menu_link($settings)
+    {
+        $settings['publishpress-tag-groups'] = [
+            'parent' => 'tag-groups-settings',
+            'label'  => __('Upgrade to Pro', 'tag-groups'),
+            'link'   => 'https://taxopress.com/tag-groups/',
+        ];
+
+        return $settings;
+    }
+
+    function tag_groups_admin_advertising_sidebar_banner()
+    {
         ?>
 
         <div class="tag-groups-advertisement-right-sidebar">
@@ -130,6 +153,4 @@ class TagGroupsCoreAdmin {
 
         <?php
     }
-
-
 }

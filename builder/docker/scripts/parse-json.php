@@ -1,15 +1,15 @@
 <?php
+
 $path = $argv[1];
 $property = $argv[2];
-
 /**
  * Parse a json file and returns the content as a string.
  */
 function parseJson(string $jsonFilePath): array
 {
+    // phpcs:ignore WordPressVIPMinimum.Performance.FetchingRemoteData.FileGetContentsUnknown
     $jsonContent = trim(file_get_contents($jsonFilePath));
     $jsonContent = (array)json_decode($jsonContent);
-
     return $jsonContent;
 }
 
@@ -22,10 +22,8 @@ function getProperty(array $data, string $property): string
     $property = array_shift($propertyList);
     $nextProperties = implode('.', $propertyList);
     $value = 'null';
-
     if (isset($data[$property])) {
         $value = $data[$property];
-
         if (is_object($value)) {
             $value = (array)$value;
         }
@@ -45,4 +43,5 @@ function getProperty(array $data, string $property): string
 }
 
 $jsonContent = parseJson($path, $property);
+// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- CLI script, not WordPress context
 echo getProperty($jsonContent, $property);

@@ -26,13 +26,16 @@
         </script>
         <p>&nbsp;</p>
         <?php foreach ($public_taxonomies as $taxonomy) : ?>
-          <li<?php if (is_taxonomy_hierarchical($taxonomy)) : ?> class="tg_advanced_options_items" style="display:none;" <?php endif; ?>>
-            <input type="checkbox" name="taxonomies[]" autocomplete="off" id="<?php echo $taxonomy ?>" value="<?php echo $taxonomy ?>" <?php if (in_array($taxonomy, $enabled_taxonomies)) : ?> checked />&nbsp;<a href="<?php echo TagGroups_Taxonomy::get_tag_group_admin_url($taxonomy) ?>" title="<?php _e('go to tag group administration', 'tag-groups') ?>"><span class="dashicons dashicons-index-card tg_no_underline"></span></a>
-          <?php else : ?>
+          <li<?php if (is_taxonomy_hierarchical($taxonomy)) :
+                ?> class="tg_advanced_options_items" style="display:none;" <?php 
+             endif; ?>>
+            <input type="checkbox" name="taxonomies[]" autocomplete="off" id="<?php echo $taxonomy ?>" value="<?php echo $taxonomy ?>" <?php if (in_array($taxonomy, $enabled_taxonomies)) :
+                ?> checked />&nbsp;<a href="<?php echo TagGroups_Taxonomy::get_tag_group_admin_url($taxonomy) ?>" title="<?php _e('go to tag group administration', 'tag-groups') ?>"><span class="dashicons dashicons-index-card tg_no_underline"></span></a>
+                                                                              <?php else : ?>
             />&nbsp;<span class="dashicons dashicons-index-card tg_no_underline tg_faded"></span>
-          <?php endif; ?>
+                                                                              <?php endif; ?>
           <label for="<?php echo $taxonomy ?>" class="tg_unhide_trigger">
-              <?php echo TagGroups_Taxonomy::get_name_from_slug( $taxonomy ) ?> (<?php echo $taxonomy ?>)
+              <?php echo TagGroups_Taxonomy::get_name_from_slug($taxonomy) ?> (<?php echo $taxonomy ?>)
             </label>
           </li>
         <?php endforeach; ?>

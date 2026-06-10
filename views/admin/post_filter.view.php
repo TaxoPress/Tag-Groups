@@ -1,13 +1,13 @@
 <select name="tg_filter_posts_value" onchange="tagGroupsGroupFilterChanged()">
   <option value=""><?php
-  _e( 'Filter by tag group', 'tag-groups' ); ?></option>
+  _e('Filter by tag group', 'tag-groups'); ?></option>
   <?php
-  foreach ( $term_groups as $term_group => $label ) {
-    $style = in_array( $term_group, $parents ) ? 'style="background-color:#dfdfdf"' : '';
-    $prefix = empty( $parents ) || in_array( $term_group, $parents ) ? '' : '&nbsp;&nbsp;';
-    printf( '<option value="%s"%s %s>%s</option>', $term_group, ( '' != $current_term_group && $term_group == $current_term_group ) ? ' selected="selected"' : '', $style, $prefix . htmlentities( $label, ENT_QUOTES, "UTF-8" ) );
-  }
-  ?>
+    foreach ($term_groups as $term_group => $label) {
+        $style = in_array($term_group, $parents) ? 'style="background-color:#dfdfdf"' : '';
+        $prefix = empty($parents) || in_array($term_group, $parents) ? '' : '&nbsp;&nbsp;';
+        printf('<option value="%s"%s %s>%s</option>', $term_group, ( '' != $current_term_group && $term_group == $current_term_group ) ? ' selected="selected"' : '', $style, $prefix . htmlentities($label, ENT_QUOTES, "UTF-8"));
+    }
+    ?>
 </select>
 <script>
 

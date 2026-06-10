@@ -1,4 +1,5 @@
 <?php
+
 /**
 * Tag Groups Pro
 *
@@ -18,108 +19,82 @@
 *
 */
 
-if ( ! class_exists( 'TagGroups_Admin_Notice' ) ) {
-
-  class TagGroups_Admin_Notice {
-
-    public function __construct() {
-    }
-
-    /**
-     * Add an admin notice to the queue
-     *
-     * @param string $type One of: error, info
-     * @param string $content with HTML
-     * @return void
-     */
-    public static function add( $type, $content )
+if (! class_exists('TagGroups_Admin_Notice')) {
+    // phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps -- Legacy class structure
+    class TagGroups_Admin_Notice
     {
-
-      $notices = TagGroups_Options::get_option( 'tag_group_admin_notice', array() );
+        public function __construct()
+        {
+        }
 
       /**
-      * Avoid duplicate entries
-      */
-      $found = false;
+       * Add an admin notice to the queue
+       *
+       * @param string $type One of: error, info
+       * @param string $content with HTML
+       * @return void
+       */
+        public static function add($type, $content)
+        {
 
-      foreach ( $notices as $notice ) {
-
-        if ( $notice['type'] == $type && $notice['content'] == $content ) {
-
-          $found = true;
-
-          break;
-
-        }
-
-      }
-
-      if ( ! $found ) {
-
-        $notices[] = array(
-          'type' => $type,
-          'content' => $content
-        );
-
-        TagGroups_Options::update_option( 'tag_group_admin_notice', $notices );
-
-      }
-
-    }
-
-
+            $notices = TagGroups_Options::get_option('tag_group_admin_notice', array());
     /**
-     * Check if an admin notice is pending and, if necessary, display it
-     *
-     * @param void
-     * @return void
-     */
-    public static function display() {
+            * Avoid duplicate entries
+            */
+            $found = false;
+            foreach ($notices as $notice) {
+                if ($notice['type'] == $type && $notice['content'] == $content) {
+                    $found = true;
+                    break;
+                }
+            }
 
-      $notices = TagGroups_Options::get_option( 'tag_group_admin_notice', array() );
-
-
-      if ( ! empty( $notices ) ) {
-
-        foreach ( $notices as $notice ) {
-
-          if ( 'cache' == $notice['type'] ) {
-
-            $notice['type'] = 'info';
-
-            $protocol = isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://';
-
-            $ajax_link = admin_url( 'admin-ajax.php?', $protocol );
-
-          } else {
-
-            $ajax_link = '';
-
-          }
-
-          // wrap the message in <p></p> if not already a complex formatting
-          if ( strpos( '<p>', $notice['content'] ) === false ) {
-
-            $notice['content'] = '<p>' . $notice['content'] . '</p>';
-
-          }
-
-          $view = new TagGroups_View( 'partials/admin_notice' );
-
-          $view->set( array(
-            'ajax_link' => $ajax_link,
-            'notice'    => $notice,
-          ) );
-
-          $view->render();
-
+            if (! $found) {
+                $notices[] = array(
+                'type' => $type,
+                'content' => $content
+                );
+                TagGroups_Options::update_option('tag_group_admin_notice', $notices);
+            }
         }
 
-        update_option( 'tag_group_admin_notice', array() );
 
-      }
+      /**
+       * Check if an admin notice is pending and, if necessary, display it
+       *
+       * @param void
+       * @return void
+       */
+        public static function display()
+        {
 
+            $notices = TagGroups_Options::get_option('tag_group_admin_notice', array());
+            if (! empty($notices)) {
+                foreach ($notices as $notice) {
+                    if ('cache' == $notice['type']) {
+                        $notice['type'] = 'info';
+                        $protocol = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+                        $ajax_link = admin_url('admin-ajax.php?', $protocol);
+                    } else {
+                            $ajax_link = '';
+                    }
+
+              // wrap the message in <p></p> if not already a complex formatting
+                    if (strpos('<p>', $notice['content']) === false) {
+                        $notice['content'] = '<p>' . $notice['content'] . '</p>';
+                    }
+
+                    $view = new TagGroups_View('partials/admin_notice');
+                    $view->set(array(
+                    'ajax_link' => $ajax_link,
+                    'notice'    => $notice,
+                    ));
+                    $view->render();
+                }
+
+                update_option('tag_group_admin_notice', array());
+            }
+        }
     }
 
-  }
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     Tag Groups
  *
@@ -7,39 +8,37 @@
  * @license     GPL-3.0+
  */
 
-if ( ! class_exists( 'TagGroups_Utilities' ) ) {
-
-    /**
+if (! class_exists('TagGroups_Utilities')) {
+/**
      *
      */
-    class TagGroups_Utilities {
-
+    class TagGroups_Utilities
+    {
         /**
          * Returns the first element of an array without changing the original array
          *
          * @param  array   $array
          * @return mixed
          */
-        public static function get_first_element( $array = array() ) {
+        public static function get_first_element($array = array())
+        {
 
-            if ( ! is_array( $array ) ) {
-
+            if (! is_array($array)) {
                 TagGroups_Error::log('[Tag Groups] Parameter supplied to get_first_element() must be an array.');
-
                 return;
-
             }
 
-            return reset( $array );
-
+            return reset($array);
         }
 
-        public static function is_free_plan() {
+        public static function is_free_plan()
+        {
             
             return !self::is_premium_plan();
         }
 
-        public static function is_premium_plan() {
+        public static function is_premium_plan()
+        {
             
             return file_exists(TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/premium/tag-groups-premium.php');
         }
@@ -53,10 +52,10 @@ if ( ! class_exists( 'TagGroups_Utilities' ) ) {
          * @param  string   $raw
          * @return string
          */
-        static function create_js_fn_name( $raw ) {
+        static function create_js_fn_name($raw)
+        {
 
-            return str_replace( '-', '', sanitize_html_class( $raw ) );
-
+            return str_replace('-', '', sanitize_html_class($raw));
         }
 
 
@@ -66,21 +65,16 @@ if ( ! class_exists( 'TagGroups_Utilities' ) ) {
          *
          * @return void
          */
-        static function die() {
+        static function die()
+        {
 
-            if ( defined( 'CM_UNIT_TESTING' ) ) {
-      
+            if (defined('CM_UNIT_TESTING')) {
                 wp_die();
-            
             } else {
-    
                 die();
-    
             }
-
         }
-
-
     } // class
+
 
 }

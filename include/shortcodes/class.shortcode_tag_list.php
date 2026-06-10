@@ -7,7 +7,7 @@
 * @license     GPL-3.0+
 */
 
-if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
+if (!class_exists('TagGroups_Shortcode_Tag_List')) {
     class TagGroups_Shortcode_Tag_List extends TagGroups_Shortcode_Common
     {
         /**
@@ -15,7 +15,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
          *
          * @var array
          */
-        public static  $serverside_render_attributes = array(
+        public static $serverside_render_attributes = array(
             'source'              => array(
             'type'    => 'string',
             'default' => '',
@@ -172,11 +172,11 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
          * @param array $atts
          * @return string
          */
-        function tag_groups_tag_list( $atts = array() )
+        function tag_groups_tag_list($atts = array())
         {
             $this->init();
             $this->shortcode_id = 'tag_groups_tag_list';
-            $this->set_attributes( shortcode_atts( array(
+            $this->set_attributes(shortcode_atts(array(
                 'add_premium_filter'  => 0,
                 'amount'              => 0,
                 'append'              => '',
@@ -215,30 +215,30 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                 'source'              => 'shortcode',
                 'tags_div_class'      => 'tag-groups-tag-list-tags',
                 'tags_post_id'        => -1,
-                'taxonomy'            => implode( ',', TagGroups_Taxonomy::get_enabled_taxonomies() ),
+                'taxonomy'            => implode(',', TagGroups_Taxonomy::get_enabled_taxonomies()),
                 'threshold'           => 0,
-            ), $atts ) );
+            ), $atts));
             /**
              * Don't set it as default in extract( shortcode_atts() ) because the block sends an empty string
              */
-            if ( empty($this->attributes->html_id) ) {
+            if (empty($this->attributes->html_id)) {
                 $this->attributes->html_id = 'tag-groups-tag-list-' . uniqid();
             }
-            $div_id_output = ( $this->attributes->html_id ? ' id="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->html_id ) . '"' : '' );
-            $div_class_output = ( $this->attributes->div_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->div_class ) . '"' : '' );
+            $div_id_output = ( $this->attributes->html_id ? ' id="' . TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->html_id) . '"' : '' );
+            $div_class_output = ( $this->attributes->div_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->div_class) . '"' : '' );
             $div_column_output = ( empty($this->attributes->column_count) ? '' : ' style="column-count:' . (int) $this->attributes->column_count . '; column-gap:' . $this->attributes->column_gap . '"' );
-            if ( is_array( $atts ) ) {
-                asort( $atts );
+            if (is_array($atts)) {
+                asort($atts);
             }
             /**
              * Call this before creating the cache key
              */
             $this->get_post_id();
-            $this->cache_key = md5( 'tag_list' . serialize( $atts ) . serialize( $this->attributes->tags_post_id ) . serialize( $this->attributes->groups_post_id ) );
+            $this->cache_key = md5('tag_list' . serialize($atts) . serialize($this->attributes->tags_post_id) . serialize($this->attributes->groups_post_id));
             // check for a cached version (premium plugin)
-            $html = apply_filters( 'tag_groups_hook_cache_get', false, $this->cache_key );
+            $html = apply_filters('tag_groups_hook_cache_get', false, $this->cache_key);
 
-            if ( $html ) {
+            if ($html) {
                 $html = $this->finalize_html(
                     $html,
                     $div_id_output,
@@ -255,7 +255,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
             $this->make_include_array();
             $this->maybe_add_post_tags_or_groups();
             // apply sorting that cannot be done on database level
-            if ( 'natural' == $this->attributes->orderby || 'random' == $this->attributes->orderby || $this->attributes->threshold ) {
+            if ('natural' == $this->attributes->orderby || 'random' == $this->attributes->orderby || $this->attributes->threshold) {
                 $this->sort();
             }
             $html = $this->make_html();
@@ -278,95 +278,93 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
         {
             global  $tag_group_groups, $tag_group_premium_terms ;
             $html = '';
-            $tags_div_class_output = ( $this->attributes->tags_div_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->tags_div_class ) . '"' : '' );
+            $tags_div_class_output = ( $this->attributes->tags_div_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->tags_div_class) . '"' : '' );
             $this->post_counts = array();
             $this->determine_min_max();
             $first = true;
-            for ( $i = $this->start_group ;  $i <= $tag_group_groups->get_max_position() ;  $i++ ) {
-                if ( !isset( $this->tag_group_data[$i] ) ) {
+            for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
+                if (!isset($this->tag_group_data[$i])) {
                     continue;
                 }
                 $html_header = '';
                 $html_tags = '';
                 $count_amount = 0;
-                if ( !$this->attributes->show_all_groups && !empty($this->include_array) && !in_array( $this->tag_group_data[$i]['term_group'], $this->include_array ) ) {
+                if (!$this->attributes->show_all_groups && !empty($this->include_array) && !in_array($this->tag_group_data[$i]['term_group'], $this->include_array)) {
                     continue;
                 }
                 /*
                  *  headers
                  */
 
-                if ( $i == 0 ) {
+                if ($i == 0) {
                     $group_name = $this->attributes->not_assigned_name;
                 } else {
                     $group_name = $this->tag_group_data[$i]['label'];
                 }
 
                 $header_class_group = $this->attributes->header_class;
-                if ( !empty($this->attributes->group_in_class) ) {
-                    $header_class_group .= ' ' . sanitize_html_class( ' tg_header_group_id_' . $this->tag_group_data[$i]['term_group'] ) . ' ' . sanitize_html_class( 'tg_header_group_label_' . strtolower( $this->tag_group_data[$i]['label'] ) );
+                if (!empty($this->attributes->group_in_class)) {
+                    $header_class_group .= ' ' . sanitize_html_class(' tg_header_group_id_' . $this->tag_group_data[$i]['term_group']) . ' ' . sanitize_html_class('tg_header_group_label_' . strtolower($this->tag_group_data[$i]['label']));
                 }
 
-                if ( $first ) {
+                if ($first) {
                     $header_class_group .= ' tag-groups-first-group';
                     $first = false;
                 }
 
-                $header_class_output = ( $header_class_group ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $header_class_group ) . '"' : '' );
-                $html_header .= '<h' . $this->attributes->h_level . $header_class_output . '>' . htmlentities( $group_name, ENT_QUOTES, "UTF-8" ) . '</h' . $this->attributes->h_level . '>';
+                $header_class_output = ( $header_class_group ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes($header_class_group) . '"' : '' );
+                $html_header .= '<h' . $this->attributes->h_level . $header_class_output . '>' . htmlentities($group_name, ENT_QUOTES, "UTF-8") . '</h' . $this->attributes->h_level . '>';
                 /*
                  *  render the content
                  */
-                foreach ( $this->tags as $tag ) {
+                foreach ($this->tags as $tag) {
                     $other_tag_classes = '';
-                    if ( !empty($this->attributes->amount) && $count_amount >= $this->attributes->amount ) {
+                    if (!empty($this->attributes->amount) && $count_amount >= $this->attributes->amount) {
                         break;
                     }
-                    $term_o = new TagGroups_Term( $tag );
-                    if ( !$term_o->has_group( $this->tag_group_data[$i]['term_group'] ) ) {
+                    $term_o = new TagGroups_Term($tag);
+                    if (!$term_o->has_group($this->tag_group_data[$i]['term_group'])) {
                         continue;
                     }
-                    if ( !empty($this->include_tags_post_id_groups) && !in_array( $tag->term_id, $this->include_tags_post_id_groups[$this->tag_group_data[$i]['term_group']] ) ) {
+                    if (!empty($this->include_tags_post_id_groups) && !in_array($tag->term_id, $this->include_tags_post_id_groups[$this->tag_group_data[$i]['term_group']])) {
                         continue;
                     }
                     // check if tag has posts for this particular group
 
-                    if ( !empty($this->post_counts) && isset( $this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']] ) ) {
+                    if (!empty($this->post_counts) && isset($this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']])) {
                         $post_count = $this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']];
                     } else {
                         $post_count = $tag->count;
                     }
 
 
-                    if ( !$this->attributes->hide_empty || $post_count > 0 ) {
-                        $tag_link = $this->get_tag_link( $tag, $i );
-                        $font_size = $this->font_size( $post_count, $this->min_max[$this->tag_group_data[$i]['term_group']]['min'], $this->min_max[$this->tag_group_data[$i]['term_group']]['max'] );
-                        if ( !empty($this->attributes->assigned_class) ) {
-
-                            if ( !empty($this->assigned_terms[$tag->term_id]) ) {
+                    if (!$this->attributes->hide_empty || $post_count > 0) {
+                        $tag_link = $this->get_tag_link($tag, $i);
+                        $font_size = $this->font_size($post_count, $this->min_max[$this->tag_group_data[$i]['term_group']]['min'], $this->min_max[$this->tag_group_data[$i]['term_group']]['max']);
+                        if (!empty($this->attributes->assigned_class)) {
+                            if (!empty($this->assigned_terms[$tag->term_id])) {
                                 $other_tag_classes = ' ' . $this->attributes->assigned_class . '_1';
                             } else {
                                 $other_tag_classes = ' ' . $this->attributes->assigned_class . '_0';
                             }
-
                         }
-                        $title = $this->get_title( $tag, $post_count );
-                        $title = $this->maybe_filter_title( $title, $tag->description, $post_count );
+                        $title = $this->get_title($tag, $post_count);
+                        $title = $this->maybe_filter_title($title, $tag->description, $post_count);
                         $title_html = ( $title == '' ? '' : ' title="' . $title . '"' );
                         // replace placeholders in prepend and append
-                        $prepend_output = $this->get_prepend_output( $post_count );
-                        $append_output = $this->get_append_output( $post_count );
+                        $prepend_output = $this->get_prepend_output($post_count);
+                        $append_output = $this->get_append_output($post_count);
                         // adding link target
                         $link_target_html = ( !empty($this->attributes->link_target) ? 'target="' . $this->attributes->link_target . '"' : '' );
                         // adding class for group
-                        if ( !empty($this->attributes->group_in_class) ) {
-                            $other_tag_classes .= ' ' . sanitize_html_class( ' tg_tag_group_id_' . $this->tag_group_data[$i]['term_group'] ) . ' ' . sanitize_html_class( 'tg_tag_group_label_' . strtolower( $this->tag_group_data[$i]['label'] ) );
+                        if (!empty($this->attributes->group_in_class)) {
+                            $other_tag_classes .= ' ' . sanitize_html_class(' tg_tag_group_id_' . $this->tag_group_data[$i]['term_group']) . ' ' . sanitize_html_class('tg_tag_group_label_' . strtolower($this->tag_group_data[$i]['label']));
                         }
                         // assembling a tag
                         $html_tags .= '<span class="tag-groups-tag' . $other_tag_classes . '" style="font-size:' . $font_size . 'px"><a href="' . $tag_link . '" ' . $link_target_html . '' . $title_html . '  class="' . $tag->slug . '">';
 
-                        if ( '' != $prepend_output ) {
-                            $prepend_html = '<span class="tag-groups-prepend" style="font-size:' . $font_size . 'px">' . htmlentities( $prepend_output, ENT_QUOTES, "UTF-8" ) . '</span>';
+                        if ('' != $prepend_output) {
+                            $prepend_html = '<span class="tag-groups-prepend" style="font-size:' . $font_size . 'px">' . htmlentities($prepend_output, ENT_QUOTES, "UTF-8") . '</span>';
                         } else {
                             $prepend_html = '';
                         }
@@ -418,8 +416,8 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                             $this->shortcode_id
                         );
 
-                        if ( '' != $append_output ) {
-                            $append_html = '<span class="tag-groups-append" style="font-size:' . $font_size . 'px">' . htmlentities( $append_output, ENT_QUOTES, "UTF-8" ) . '</span>';
+                        if ('' != $append_output) {
+                            $append_html = '<span class="tag-groups-append" style="font-size:' . $font_size . 'px">' . htmlentities($append_output, ENT_QUOTES, "UTF-8") . '</span>';
                         } else {
                             $append_html = '';
                         }
@@ -445,22 +443,19 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
                         $html_tags .= '</a></span> ';
                         $count_amount++;
                     }
-
                 }
-                if ( !empty($html_header) && (!$this->attributes->hide_empty_content || $count_amount) ) {
-
-                    if ( $this->attributes->keep_together ) {
+                if (!empty($html_header) && (!$this->attributes->hide_empty_content || $count_amount)) {
+                    if ($this->attributes->keep_together) {
                         $html .= '<div class="tag-groups-keep-together">' . $html_header . '<div' . $tags_div_class_output . '>' . $html_tags . '</div></div>' . "\n";
                     } else {
                         $html .= $html_header . '<div' . $tags_div_class_output . '>' . $html_tags . '</div>' . "\n";
                     }
-
                 }
             }
-            if ( !empty($this->post_counts) && !$this->attributes->do_not_cache ) {
+            if (!empty($this->post_counts) && !$this->attributes->do_not_cache) {
                 // we don't cache if we used a preliminary post count
                 // create a cached version (premium plugin)
-                do_action( 'tag_groups_hook_cache_set', $this->cache_key, $html );
+                do_action('tag_groups_hook_cache_set', $this->cache_key, $html);
             }
             return $html;
         }
@@ -480,8 +475,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
             $div_class_output,
             $div_column_output,
             $atts
-        )
-        {
+        ) {
             $html = '<div' . $div_id_output . $div_class_output . $div_column_output . '>' . $html . '</div>';
             /**
              * Hook to filter final HTML
@@ -499,7 +493,6 @@ if ( !class_exists( 'TagGroups_Shortcode_Tag_List' ) ) {
             );
             return $html;
         }
-
     }
     // class
 }

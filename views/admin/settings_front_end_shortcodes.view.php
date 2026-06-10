@@ -96,11 +96,15 @@
   <form method="POST" action="<?php echo esc_url($_SERVER['REQUEST_URI']) ?>">
     <input type="hidden" name="tag-groups-shortcode-nonce" id="tag-groups-shortcode-nonce" value="<?php echo wp_create_nonce('tag-groups-shortcode') ?>" />
     <p>
-      <input type="checkbox" name="widget" autocomplete="off" id="tg_widget" value="1" <?php if ($tag_group_shortcode_widget) : ?> checked<?php endif; ?>>&nbsp;
+      <input type="checkbox" name="widget" autocomplete="off" id="tg_widget" value="1" <?php if ($tag_group_shortcode_widget) :
+            ?> checked<?php 
+                                                                                       endif; ?>>&nbsp;
       <label for="tg_widget"><?php _e('Enable shortcode in sidebar widgets (if not visible anyway).', 'tag-groups') ?></label>
     </p>
     <p>
-      <input type="checkbox" name="enqueue" id="tg_enqueue" autocomplete="off" value="1" <?php if ($tag_group_shortcode_enqueue_always) : ?> checked<?php endif; ?>>&nbsp;
+      <input type="checkbox" name="enqueue" id="tg_enqueue" autocomplete="off" value="1" <?php if ($tag_group_shortcode_enqueue_always) :
+            ?> checked<?php 
+                                                                                         endif; ?>>&nbsp;
       <label for="tg_enqueue"><?php _e('Always load shortcode scripts.', 'tag-groups') ?></label>
       <span class="dashicons dashicons-editor-help chatty-mango-help-icon" data-topic="load-scripts" title="<?php _e('Click for more information', 'tag-groups') ?>"></span>
     </p>
