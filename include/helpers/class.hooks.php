@@ -8,6 +8,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Hooks')) {
     /**
      *
@@ -37,7 +38,7 @@ if (!class_exists('TagGroups_Hooks')) {
          *
          * @param object $loader
          */
-        function __construct($loader = null)
+        public function __construct($loader = null)
         {
             if (!empty($loader)) {
                 $this->loader = $loader;
@@ -159,6 +160,7 @@ if (!class_exists('TagGroups_Hooks')) {
             /**
              * Rendering a shortcode for the Gutenberg block editor
              */
+            // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
             // add_action('wp_ajax_tg_render_shortcode', array('TagGroups_Shortcode_Common', 'render'));
         }
 
@@ -331,7 +333,7 @@ if (!class_exists('TagGroups_Hooks')) {
          * @param  array|string $hook_names (array of comma-separated list)
          * @return void
          */
-        function remove_all_filters($hook_names)
+        public function remove_all_filters($hook_names)
         {
             if (empty($hook_names)) {
                 return array();
@@ -355,7 +357,7 @@ if (!class_exists('TagGroups_Hooks')) {
          * @param  array  $hook_array
          * @return void
          */
-        function restore_hooks()
+        public function restore_hooks()
         {
             if (empty($this->hooks)) {
                 return;
@@ -380,7 +382,7 @@ if (!class_exists('TagGroups_Hooks')) {
          * @param  string  $hook
          * @return array
          */
-        function get_all_hooks($hook = '')
+        public function get_all_hooks($hook = '')
         {
             global  $wp_filter ;
             $hooks = array();

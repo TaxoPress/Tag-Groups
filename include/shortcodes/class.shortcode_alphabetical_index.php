@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (! class_exists('TagGroups_Shortcode_Alphabetical_Index')) {
     class TagGroups_Shortcode_Alphabetical_Index extends TagGroups_Shortcode_Common
     {
@@ -61,6 +62,7 @@ if (! class_exists('TagGroups_Shortcode_Alphabetical_Index')) {
         'type' => 'string',
         'default' => '',
         ),
+        // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
         'exclude' => array(
         'type' => 'string',
         'default' => '',
@@ -181,12 +183,14 @@ if (! class_exists('TagGroups_Shortcode_Alphabetical_Index')) {
             'custom_title_plural' => null,
             'div_class' => 'tag-groups-alphabetical-index',
             'div_id' => '',
+            // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
             'exclude' => '',
             'exclude_letters' => '',
             'exclude_terms' => '',
             'h_level' => 3,
             'header_class' => '',
             'hide_empty' => true,
+            // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
             // 'hide_empty_content' => false, // doesn't make sense here
             'ignore_accents' => false,
             'include' => '',
@@ -228,6 +232,7 @@ if (! class_exists('TagGroups_Shortcode_Alphabetical_Index')) {
            * Call this before creating the cache key
            */
             $this->get_post_id();
+            // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
             $this->cache_key = md5('tag_alphabetical_index' . serialize($atts) . serialize($this->attributes->tags_post_id));
     // check for a cached version (premium plugin)
             $html = apply_filters('tag_groups_hook_cache_get', false, $this->cache_key);
@@ -446,7 +451,7 @@ if (! class_exists('TagGroups_Shortcode_Alphabetical_Index')) {
             $html = apply_filters('tag_groups_cloud_html', $html, $this->shortcode_id, $atts);
             return $html;
         }
-    } // class
+    }
 
 
 }

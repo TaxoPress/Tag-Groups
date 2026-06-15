@@ -118,13 +118,13 @@ if (!class_exists('TagGroups_Export')) {
                  */
                 // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- Export functionality
                 $fp = fopen(WP_CONTENT_DIR . '/uploads/tag_groups_settings-' . $this->hash . '.json', 'w');
-                // phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.file_ops_fwrite, WordPress.WP.AlternativeFunctions.json_encode_json_encode -- Export functionality
-                fwrite($fp, json_encode($this->options));
+                // phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.file_ops_fwrite -- Export functionality
+                fwrite($fp, wp_json_encode($this->options));
                 fclose($fp);
                 // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- Export functionality
                 $fp = fopen(WP_CONTENT_DIR . '/uploads/tag_groups_terms-' . $this->hash . '.json', 'w');
-                // phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.file_ops_fwrite, WordPress.WP.AlternativeFunctions.json_encode_json_encode -- Export functionality
-                fwrite($fp, json_encode($this->terms));
+                // phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.file_ops_fwrite -- Export functionality
+                fwrite($fp, wp_json_encode($this->terms));
                 fclose($fp);
             } catch (Exception $e) {
                 $this->error = true;

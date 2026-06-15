@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps, WordPressVIPMinimum.Functions.RestrictedFunctions
 if (! class_exists('TagGroups_Activation_Deactivation')) {
 /**
   *
@@ -20,7 +21,7 @@ if (! class_exists('TagGroups_Activation_Deactivation')) {
       * @param void
       * @return void
       */
-        static function on_activation()
+        public static function on_activation()
         {
 
             if (! current_user_can('activate_plugins')) {

@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Shortcode_Common')) {
     #[\AllowDynamicProperties]
     class TagGroups_Shortcode_Common
@@ -66,7 +67,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param array $atts
          * @return void
          */
-        function set_attributes($atts)
+        public function set_attributes($atts)
         {
             foreach ($atts as $key => $value) {
                 if ('div_id' == $key || 'table_id' == $key) {
@@ -93,7 +94,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param int $max Largest post count
          * @return int
          */
-        function font_size($count, $min, $max)
+        public function font_size($count, $min, $max)
         {
             
             if ($max > $min) {
@@ -110,7 +111,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          *
          * @return string
          */
-        function custom_js_tabs()
+        public function custom_js_tabs()
         {
             $options = array();
             
@@ -152,7 +153,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
             $view = new TagGroups_View('shortcodes/js_tabs_snippet');
             $view->set(array(
                 'id'                => $this->attributes->html_id,
-                'options_js_object' => json_encode((object) $options),
+                'options_js_object' => wp_json_encode((object) $options),
                 'delay'             => $this->attributes->delay,
             ));
             return $view->return_html();
@@ -163,7 +164,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          *
          * @return string
          */
-        function custom_js_accordion()
+        public function custom_js_accordion()
         {
             $options = array();
             
@@ -208,7 +209,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
             $view = new TagGroups_View('shortcodes/js_accordion_snippet');
             $view->set(array(
                 'id'                => $this->attributes->html_id,
-                'options_js_object' => json_encode((object) $options),
+                'options_js_object' => wp_json_encode((object) $options),
                 'delay'             => $this->attributes->delay,
             ));
             return $view->return_html();
@@ -220,7 +221,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param void
          * @return void
          */
-        function determine_min_max()
+        public function determine_min_max()
         {
             $this->min_max = array();
             $count_amount = array();
@@ -291,7 +292,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param void
          * @return void
          */
-        function natural_sorting()
+        public function natural_sorting()
         {
             $factor = ( 'desc' == strtolower($this->final_order) ? -1 : 1 );
             uasort($this->tags, function ($a, $b) use ($factor) {
@@ -306,9 +307,10 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param void
          * @return void
          */
-        function random_sorting()
+        public function random_sorting()
         {
             uasort($this->tags, function ($a, $b) {
+                // phpcs:ignore WordPress.WP.AlternativeFunctions.rand_mt_rand
                 return 2 * mt_rand(0, 1) - 1;
             });
             $this->tags = array_values($this->tags);
@@ -319,7 +321,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          *
          * @return void
          */
-        function sort()
+        public function sort()
         {
             if (count($this->tags) == 0) {
                 return $this->tags;
@@ -384,7 +386,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          *
          * @return void
          */
-        function maybe_add_post_tags_or_groups()
+        public function maybe_add_post_tags_or_groups()
         {
             /*
              *  applying parameter tags_post_id
@@ -411,7 +413,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param void
          * @return void
          */
-        function add_groups_of_post()
+        public function add_groups_of_post()
         {
             
             $post_id_terms = array();
@@ -442,7 +444,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param void
          * @return void
          */
-        function add_tags_of_post()
+        public function add_tags_of_post()
         {
             
             $post_id_terms = array();
@@ -636,7 +638,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * 
          * @return void
          */
-        function determine_min_max_alphabet()
+        public function determine_min_max_alphabet()
         {
             $this->min_max = array();
             $count_amount = array();
@@ -710,7 +712,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param void
          * @return void
          */
-        function get_taxonomies()
+        public function get_taxonomies()
         {
             $requested_taxonomies = array();
             if (!empty($this->attributes->taxonomy)) {
@@ -723,6 +725,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
                 
                 if (empty($this->taxonomies)) {
                     TagGroups_Error::log('[Tag Groups Pro] Wrong taxonomy or taxonomies (%s) in shortcode %s', implode(',', $requested_taxonomies), $this->shortcode_id);
+                    // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                     // return ''; // We are forgiving and let the shortcode work with any taxonomy
                     $this->taxonomies = $requested_taxonomies;
                 }
@@ -734,12 +737,13 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          *
          * @return void
          */
-        function maybe_enable_terms_order()
+        public function maybe_enable_terms_order()
         {
             global  $tag_group_terms, $wpdb ;
             
             if ('term_order' == $this->final_orderby) {
                 $tables = $wpdb->tables();
+                // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
                 $columns = $wpdb->get_col("DESC {$tables['terms']}", 0);
                 
                 if (!in_array('term_order', $columns)) {
@@ -761,7 +765,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          *
          * @return void
          */
-        function get_post_id()
+        public function get_post_id()
         {
             
             if (property_exists($this->attributes, 'tags_post_id') && 0 == $this->attributes->tags_post_id) {
@@ -793,7 +797,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          *
          * @return void
          */
-        function check_attributes()
+        public function check_attributes()
         {
             
             if ('shortcode' == $this->attributes->source) {
@@ -871,7 +875,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          *
          * @return void
          */
-        function get_tags()
+        public function get_tags()
         {
             $tag_groups_hooks = new TagGroups_Hooks();
             /**
@@ -893,6 +897,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
                 'orderby'    => $this->attributes->orderby,
                 'order'      => $this->attributes->order,
                 'include'    => $this->attributes->include_terms,
+                // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
                 'exclude'    => $this->attributes->exclude_terms,
                 'threshold'  => $this->attributes->threshold,
             ));
@@ -945,7 +950,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param void
          * @return void
          */
-        function make_include_array()
+        public function make_include_array()
         {
             global  $tag_group_groups ;
             
@@ -972,7 +977,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param int $post_count
          * @return string
          */
-        function get_prepend_output($post_count)
+        public function get_prepend_output($post_count)
         {
             
             if (!empty($this->attributes->prepend)) {
@@ -988,7 +993,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param int $post_count
          * @return string
          */
-        function get_append_output($post_count)
+        public function get_append_output($post_count)
         {
             
             if (!empty($this->attributes->append)) {
@@ -1005,7 +1010,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param int $post_count
          * @return string
          */
-        function get_title($tag, $post_count)
+        public function get_title($tag, $post_count)
         {
             /**
              * Don't test for empty() because the user might need to display an empty title
@@ -1065,7 +1070,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param object $tag
          * @return string
          */
-        function get_tag_link($tag, $i = null)
+        public function get_tag_link($tag, $i = null)
         {
             $tag_link = get_term_link($tag);
             if (!empty($this->attributes->link_append)) {
@@ -1097,7 +1102,7 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          * @param integer $post_count
          * @return string
          */
-        function maybe_filter_title($title, $description, $post_count)
+        public function maybe_filter_title($title, $description, $post_count)
         {
             $tag_group_html_description = TagGroups_Options::get_option('tag_group_html_description', 0);
             switch ($tag_group_html_description) {

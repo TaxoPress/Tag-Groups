@@ -8,7 +8,7 @@
     <?php endif; ?>
   </ul>
   <div class="chatty-mango-settings-container">
-    <form method="POST" action="<?php echo $setup_wizard_next_link ?>">
+    <form method="POST" action="<?php echo esc_url($setup_wizard_next_link) ?>">
       <input type="submit" value="<?php _e('Start', 'tag-groups') ?>" class="button button-primary tag-groups-wizard-submit">
     </form>
   </div>

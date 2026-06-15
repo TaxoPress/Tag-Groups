@@ -10,6 +10,7 @@
  * @since       0.37.0
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_REST_API')) {
     /**
      *   Adds endpoints to the WordPress REST API
@@ -30,7 +31,9 @@ if (!class_exists('TagGroups_REST_API')) {
         public static function register_hook()
         {
             if (defined('CM_DEBUG')) {
+                // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                 // development
+                // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                 // error_log( 'register_routes(), nonce: ' . wp_create_nonce( 'wp_rest' ) );
                 add_filter('wp_is_application_passwords_available', '__return_true');
             }

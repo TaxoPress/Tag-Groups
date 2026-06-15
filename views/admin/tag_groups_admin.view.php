@@ -46,7 +46,7 @@
     <tbody id="tg_groups_container">
       <tr>
         <td colspan="6" style="padding: 50px; text-align: center;">
-          <img src="<?php echo admin_url('images/spinner.gif') ?>" />
+          <img src="<?php echo esc_url(admin_url('images/spinner.gif')) ?>" />
         </td>
       </tr>
     </tbody>
@@ -76,9 +76,9 @@
   tagGroupsLabels.tooltip_showposts = '<?php _e('Show posts', 'tag-groups') ?>';
   tagGroupsLabels.tooltip_showtags = '<?php _e('Show tags', 'tag-groups') ?>';
 
-  var tagGroupsAjaxParameters = {"ajaxurl": "<?php echo $admin_url ?>", "postsurl": "<?php echo $post_url ?>", "tagsurl": "<?php echo $tags_url ?>", "items_per_page": "<?php echo $items_per_page ?>", "show_parents": false, "isPremium": false};
+  var tagGroupsAjaxParameters = {"ajaxurl": "<?php echo esc_url($admin_url) ?>", "postsurl": "<?php echo esc_url($post_url) ?>", "tagsurl": "<?php echo esc_url($tags_url) ?>", "items_per_page": "<?php echo esc_attr($items_per_page) ?>", "show_parents": false, "isPremium": false};
   var tagGroupsData = {
-    tag_groups_taxonomy: JSON.parse('<?php echo json_encode($taxonomies) ?>'),
+    tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
   };
 
   jQuery(document).ready(function () {
@@ -106,7 +106,7 @@
           tag_groups_task: 'update',
           tag_groups_position: input.attr('data-position'),
           tag_groups_label: input.val(),
-          tag_groups_taxonomy: JSON.parse('<?php echo json_encode($taxonomies) ?>'),
+          tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
         };
         tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
         return false;
@@ -126,7 +126,7 @@
         tag_groups_task: 'update',
         tag_groups_position: input.attr('data-position'),
         tag_groups_label: input.val(),
-        tag_groups_taxonomy: JSON.parse('<?php echo json_encode($taxonomies) ?>'),
+        tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
       };
       tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
     });
@@ -143,7 +143,7 @@
           tag_groups_task: 'new',
           tag_groups_position: input.attr('data-position'),
           tag_groups_label: input.val(),
-          tag_groups_taxonomy: JSON.parse('<?php echo json_encode($taxonomies) ?>'),
+          tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
         };
         tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
       }
@@ -155,7 +155,7 @@
         tag_groups_task: 'new',
         tag_groups_position: input.attr('data-position'),
         tag_groups_label: input.val(),
-        tag_groups_taxonomy: JSON.parse('<?php echo json_encode($taxonomies) ?>'),
+        tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
       };
       tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
     });
@@ -171,7 +171,7 @@
           var tagGroupsData = {
             tag_groups_task: 'delete',
             tag_groups_position: position,
-            tag_groups_taxonomy: JSON.parse('<?php echo json_encode($taxonomies) ?>'),
+            tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
           };
           tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
 
@@ -191,7 +191,7 @@
 
     jQuery('#tag_group_administration').on('click', '.tg_pager_button' ,function () {
       var page = jQuery(this).attr('data-page');
-      jQuery("#tg_start_position").val((page - 1) * <?php echo $items_per_page ?> + 1);
+      jQuery("#tg_start_position").val((page - 1) * <?php echo intval($items_per_page) ?> + 1);
       tagGroupsData.tag_groups_task = "refresh";
       tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
     });

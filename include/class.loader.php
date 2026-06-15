@@ -10,6 +10,7 @@
  * @license   GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Loader')) {
     class TagGroups_Loader
     {

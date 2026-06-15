@@ -8,6 +8,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Cron_Handlers')) {
     /**
      *
@@ -83,6 +84,7 @@ if (!class_exists('TagGroups_Cron_Handlers')) {
             
             if ($convert_term_count) {
                 TagGroups_Error::verbose_log('[Tag Groups] %d terms should be migrated.', $convert_term_count);
+                // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                 // TagGroups_Term_Meta_Tools::convert_to_term_meta();
                 TagGroups_Cron::schedule_in_secs(2, 'tag_groups_run_term_migration');
             }

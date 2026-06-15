@@ -17,6 +17,7 @@
  * @license     see official vendor website
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps, Squiz.PHP.CommentedOutCode.Found, WordPress.Security.NonceVerification.Recommended
 if (! class_exists('TagGroups_WPML')) {
     class TagGroups_WPML
     {

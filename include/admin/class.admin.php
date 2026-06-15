@@ -149,7 +149,9 @@ if (!class_exists('TagGroups_Admin')) {
             $new_tag_initial_groups = array();
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for WPML translation context
             if (empty($new_tag_initial_groups) && TagGroups_WPML::is_multilingual() && isset($_GET['trid']) && !empty($_GET['taxonomy'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for WPML translation context
                 $trid = (int) $_GET['trid'];
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for WPML translation context
                 $taxonomy = sanitize_title($_GET['taxonomy']);
                 $translations = apply_filters('wpml_get_element_translations', null, $trid, "tax_{$taxonomy}");
                 $default_lang = apply_filters('wpml_default_language', null);
@@ -228,6 +230,7 @@ if (!class_exists('TagGroups_Admin')) {
 
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for taxonomy display
             if (!empty($_REQUEST['taxonomy'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for taxonomy display
                 $taxonomy = sanitize_title($_REQUEST['taxonomy']);
             } else {
                 return '';
@@ -305,9 +308,11 @@ if (!class_exists('TagGroups_Admin')) {
 
                 // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Filter operation
                 if (isset($_POST['term-filter'])) {
+                    // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Filter operation
                     $term_filter = (int) $_POST['term-filter'];
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Filter operation
                 } elseif (isset($_GET['term-filter'])) {
+                    // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Filter operation
                     $term_filter = (int) $_GET['term-filter'];
         // We need to remove the term-filter piece, or it will stay forever
                     // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- URL manipulation
@@ -354,12 +359,13 @@ if (!class_exists('TagGroups_Admin')) {
             }
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Bulk action processing
             if (isset($_REQUEST['delete_tags'])) {
-                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized below
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended -- Sanitized below
                 $term_ids = $_REQUEST['delete_tags'];
             }
 
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Bulk action processing
             if (isset($_REQUEST['term-group-top'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Bulk action processing
                 $term_group = (int) $_REQUEST['term-group-top'];
             } else {
                 return;
@@ -486,9 +492,11 @@ if (!class_exists('TagGroups_Admin')) {
 
             // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Filter operation
             if (isset($_POST['term-filter'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Filter operation
                 $term_filter = (int) $_POST['term-filter'];
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Filter operation
             } elseif (isset($_GET['term-filter'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Filter operation
                 $term_filter = (int) $_GET['term-filter'];
             }
 
@@ -551,8 +559,7 @@ if (!class_exists('TagGroups_Admin')) {
                 return $actions;
             }
             $term_o = new TagGroups_Term($tag);
-            // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode -- Used in HTML attribute
-            $groups = htmlspecialchars(json_encode($term_o->get_groups()));
+            $groups = htmlspecialchars(wp_json_encode($term_o->get_groups()));
             $nonce = wp_create_nonce('tag-groups-nonce');
             $actions['inline hide-if-no-js'] = '<a href="javascript:void(0)" class="editinline" title="';
             $actions['inline hide-if-no-js'] .= esc_attr(__('Edit this item inline', 'tag-groups')) . '" ';
@@ -730,6 +737,7 @@ if (!class_exists('TagGroups_Admin')) {
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Read-only check for admin page
             if (empty($_GET['page']) || strpos($_GET['page'], 'tag-groups') !== 0) {
             /* Tooltip doesn't work well in Gutenberg sidebar */
+                // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                 // if ( ( empty( $_GET['page'] ) || strpos( $_GET['page'], 'tag-groups' ) !== 0 ) &&
                 // ( ! is_object( $screen ) || ! property_exists( $screen, 'base' ) || 'post' != $screen->base ) ) {
                 return $text;
@@ -792,6 +800,7 @@ if (!class_exists('TagGroups_Admin')) {
 
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter application
             if (isset($_GET['post_type'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter application
                 $post_type = sanitize_title($_GET['post_type']);
             } else {
                 $post_type = 'post';
@@ -806,6 +815,7 @@ if (!class_exists('TagGroups_Admin')) {
             $taxonomy_intersect = array_intersect($enabled_taxonomies, get_object_taxonomies($post_type));
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter application
             if (count($taxonomy_intersect) && isset($_GET['tg_filter_posts_value']) && '' !== $_GET['tg_filter_posts_value']) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter application
                 $group_id = (int) $_GET['tg_filter_posts_value'];
                 $tg_group = new TagGroups_Group($group_id);
                 $tags = $tg_group->get_group_terms($taxonomy_intersect, true, 'ids');
@@ -830,6 +840,7 @@ if (!class_exists('TagGroups_Admin')) {
         {
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- AJAX handler
             if (isset($_REQUEST['url'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- AJAX handler
                 $url = esc_url_raw($_REQUEST['url']);
             } else {
                 $url = '';
@@ -844,6 +855,7 @@ if (!class_exists('TagGroups_Admin')) {
 
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- AJAX handler
             if (isset($_REQUEST['amount'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- AJAX handler
                 $amount = (int) $_REQUEST['amount'];
             } else {
                 $amount = 5;
@@ -858,8 +870,7 @@ if (!class_exists('TagGroups_Admin')) {
                 $rss->set_debug(WP_DEBUG);
             }
             $rss->set_url($url)->set_posts_url($posts_url)->set_amount($amount);
-            // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode -- AJAX response
-            echo  json_encode($rss->get_html());
+            echo  wp_json_encode($rss->get_html());
             TagGroups_Utilities::die();
         }
 

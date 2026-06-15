@@ -9,7 +9,7 @@
       <?php if ($slug == $active_tab) : ?>
         nav-tab-active
       <?php endif; ?>
-      "><?php echo $label ?>
+      "><?php echo esc_html($label) ?>
     </a>
   <?php endforeach; ?>
 </h2>

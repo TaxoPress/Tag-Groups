@@ -1,5 +1,5 @@
-<div class="notice notice-<?php echo $notice['type'] ?> is-dismissible" style="clear:both;">
-  <?php echo $notice['content'] ?>
+<div class="notice notice-<?php echo esc_attr($notice['type']) ?> is-dismissible" style="clear:both;">
+  <?php echo wp_kses_post($notice['content']) ?>
   <div style="clear:both;"></div>
 </div>
 <?php if ('' != $ajax_link) : ?>
@@ -8,7 +8,7 @@
     jQuery("#tag_groups_premium_clear_cache").on('click', function(){
       jQuery("#tag_groups_premium_clear_cache").attr("disabled", "disabled");
       jQuery.ajax({
-        url: "<?php echo $ajax_link ?>",
+        url: "<?php echo esc_url($ajax_link) ?>",
         data: {
           action: "tg_ajax_clear_object_cache",
         },

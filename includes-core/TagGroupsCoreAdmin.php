@@ -75,7 +75,7 @@ class TagGroupsCoreAdmin
         return $settings;
     }
 
-    function tag_groups_admin_advertising_sidebar_banner()
+    public function tag_groups_admin_advertising_sidebar_banner()
     {
         ?>
 

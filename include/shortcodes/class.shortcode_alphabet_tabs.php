@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (! class_exists('TagGroups_Shortcode_Alphabet_Tabs')) {
     class TagGroups_Shortcode_Alphabet_Tabs extends TagGroups_Shortcode_Common
     {
@@ -68,6 +69,7 @@ if (! class_exists('TagGroups_Shortcode_Alphabet_Tabs')) {
         'type' => 'string',
         'default' => '',
         ),
+        // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
         'exclude' => array(
         'type' => 'string',
         'default' => '',
@@ -191,9 +193,11 @@ if (! class_exists('TagGroups_Shortcode_Alphabet_Tabs')) {
             'delay' => true,
             'div_class' => 'tag-groups-cloud',  // tag-groups-cloud preserved to create tab functionality
             'div_id' => '',
+            // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
             'exclude' => '',
             'exclude_letters' => '',
             'exclude_terms' => '',
+            // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
             // 'hide_empty_tabs' => false, // doesn't make sense here
             'hide_empty' => true,
             'ignore_accents' => false,
@@ -248,6 +252,7 @@ if (! class_exists('TagGroups_Shortcode_Alphabet_Tabs')) {
        * Call this before creating the cache key
        */
             $this->get_post_id();
+            // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
             $this->cache_key = md5('alphabet_tabs' . serialize($atts) . serialize($this->attributes->tags_post_id));
     // check for a cached version (premium plugin)
             $html = apply_filters('tag_groups_hook_cache_get', false, $this->cache_key);
@@ -479,7 +484,7 @@ if (! class_exists('TagGroups_Shortcode_Alphabet_Tabs')) {
             $html = apply_filters('tag_groups_cloud_html', $html, $this->shortcode_id, $atts);
             return $html;
         }
-    } // class
+    }
 
 
 }

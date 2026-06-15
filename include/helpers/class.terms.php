@@ -10,6 +10,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Terms')) {
     class TagGroups_Terms
     {
@@ -93,8 +94,8 @@ if (!class_exists('TagGroups_Terms')) {
             /**
              * searching for not-assigned terms
              */
-            
             if (in_array(0, $group_ids)) {
+                // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
                 $args['meta_query'] = array(
                     'relation' => 'OR',
                     array(
@@ -130,7 +131,7 @@ if (!class_exists('TagGroups_Terms')) {
                     );
                 }
             }
-            
+            // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
             $args['meta_query'] = $meta_query;
             return $args;
         }

@@ -20,20 +20,21 @@
 *
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps, WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize, WordPressVIPMinimum.Functions.RestrictedFunctions
 if (! class_exists('TagGroups_Object_Cache')) {
     class TagGroups_Object_Cache
     {
-          const VERSION = "1.5.0";
+        public const VERSION = "1.5.0";
     // Chatty Mango Cache
 
           // options where to save the data (preparations for future development)
-          const OFF = 0;
-        const WP_TRANSIENTS = 1;
+        public const OFF = 0;
+        public const WP_TRANSIENTS = 1;
     // WordPress transient API
-          const WP_OPTIONS = 2;
+        public const WP_OPTIONS = 2;
     // WordPress option framework
-          const FILE = 3;
-        const OTHER = 9;
+        public const FILE = 3;
+        public const OTHER = 9;
     // WP object cache
 
           private $key;
@@ -77,7 +78,7 @@ if (! class_exists('TagGroups_Object_Cache')) {
         * @var void
         * @return opject $this
         */
-        static function init()
+        public static function init()
         {
 
             TagGroups_Error::deprecated();
@@ -91,7 +92,7 @@ if (! class_exists('TagGroups_Object_Cache')) {
         * @var void
         * @return string
         */
-        static function version()
+        public static function version()
         {
 
             return self::VERSION;
@@ -316,6 +317,7 @@ if (! class_exists('TagGroups_Object_Cache')) {
                 break;
                 case TagGroups_Object_Cache::OTHER:
                     return true;
+      // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
       // wp_cache_delete( $this->key );
 
                 break;
@@ -608,7 +610,7 @@ if (! class_exists('TagGroups_Object_Cache')) {
         {
 
             $filename = $this->path . $this->key . '.php';
-            $file_contents = '<?php exit; ?>' . json_encode($data);
+            $file_contents = '<?php exit; ?>' . wp_json_encode($data);
             if (! @file_put_contents($filename, $file_contents, LOCK_EX)) {
                 $this->error = 6;
                 return false;
@@ -678,6 +680,7 @@ if (! class_exists('TagGroups_Object_Cache')) {
                         continue;
                     }
 
+                          // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                           // $filename = $file->getBasename();
 
                           @unlink($file->getPathname());
@@ -710,7 +713,7 @@ if (! class_exists('TagGroups_Object_Cache')) {
                 wp_cache_clear_cache();
             }
         }
-    } // class
+    }
 
 
 }

@@ -4,7 +4,7 @@
 
   <p><?php _e("Please stay on this page until all processes have finished.", 'tag-groups') ?></p>
 
-  <?php echo $task_html ?>
+  <?php echo wp_kses_post($task_html) ?>
 
   <div id="tag_groups_tasks_final_words_error" style="display: none;">
     <h3><?php _e('There have been errors.', 'tag-groups') ?></h3>
@@ -24,7 +24,7 @@
     <h3><?php _e('The following terms cannot be used:', 'tag-groups') ?></h3>
     <ul class="tg_list">
         <?php foreach ($bad_terms as $bad_term) : ?>
-        <li><?php echo $bad_term ?></li>
+        <li><?php echo esc_html($bad_term) ?></li>
         <?php endforeach; ?>
     </ul>
   <?php endif; ?>
@@ -37,16 +37,16 @@ var tagGroupsTaskError = false;
 var tagGroupsTaskCompleted = false;
 var tagGroupsChunkWaiting = false;
 var tagGroupsRunningTaskIndex = 0;
-var tagGroupsTasks = JSON.parse("<?php echo str_replace('"', '\"', json_encode(array_values($tasks))) ?>");
-var tagGroupsTasksTotals = JSON.parse("<?php echo str_replace('"', '\"', json_encode($totals)) ?>");
-var tagGroupsTasksLanguages = JSON.parse("<?php echo str_replace('"', '\"', json_encode($languages)) ?>");
+var tagGroupsTasks = JSON.parse("<?php echo esc_attr(str_replace('"', '\\"', wp_json_encode(array_values($tasks)))) ?>");
+var tagGroupsTasksTotals = JSON.parse("<?php echo esc_attr(str_replace('"', '\\"', wp_json_encode($totals))) ?>");
+var tagGroupsTasksLanguages = JSON.parse("<?php echo esc_attr(str_replace('"', '\\"', wp_json_encode($languages))) ?>");
 var tagGroupsTasksLength = tagGroupsTasks.length;
 var tagGroupsTaskStartTime = 0;
-var tagGroupsTaskTimout = <?php echo $timeout_task ?>;
+var tagGroupsTaskTimout = <?php echo intval($timeout_task) ?>;
 var tagGroupsChunkStartTime = 0;
-var tagGroupsChunkTimout = <?php echo $timeout_chunk ?>;
+var tagGroupsChunkTimout = <?php echo intval($timeout_chunk) ?>;
 var tagGroupsProcessChunkOffset = 0;
-var tagGroupsProcessChunkLength = <?php echo $chunk_length ?>;
+var tagGroupsProcessChunkLength = <?php echo intval($chunk_length) ?>;
 var tagGroupsInterval = 0;
 var tagGroupsAffected = 0;
 
@@ -135,7 +135,7 @@ function tagGroupsWriteResult() {
 function tagGroupsTaskAjax(task,offset,length) {
 
   jQuery.ajax({
-    url: "<?php echo $ajax_link ?>",
+    url: "<?php echo esc_url($ajax_link) ?>",
     dataType: "text",
     data: {
       action: "tg_free_ajax_process",
@@ -143,7 +143,7 @@ function tagGroupsTaskAjax(task,offset,length) {
       offset: offset,
       length: length,
       languagecode: tagGroupsTasksLanguages[tagGroupsTasks[tagGroupsRunningTaskIndex]],
-      nonce: "<?php echo wp_create_nonce('tag-groups-process-nonce') ?>"
+      nonce: "<?php echo esc_attr(wp_create_nonce('tag-groups-process-nonce')) ?>"
     },
     method: "post",
     success: function(rawData) {

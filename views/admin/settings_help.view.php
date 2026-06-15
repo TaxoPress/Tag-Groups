@@ -9,8 +9,8 @@
       <?php foreach ($topics as $tab => $atts) :
             $keywords = strtolower(implode(',', $atts['keywords'])) . ',' . strtolower($atts['title']) . ',' . $tab;
             ?>
-        <div id="tg_topic_' . $tab . '" class="tg_settings_topic" data-keywords="<?php echo esc_html($keywords) ?>">
-          <h4><span class="dashicons dashicons-arrow-right-alt tg_no_underline"></span>&nbsp; <a href="<?php echo admin_url('admin.php?page=' . $atts['page'] . '&active-tab=' . $tab) ?>"><?php echo $atts['title'] ?></a></h4>
+        <div id="tg_topic_' . $tab . '" class="tg_settings_topic" data-keywords="<?php echo esc_attr($keywords) ?>">
+          <h4><span class="dashicons dashicons-arrow-right-alt tg_no_underline"></span>&nbsp; <a href="<?php echo esc_url(admin_url('admin.php?page=' . esc_attr($atts['page']) . '&active-tab=' . esc_attr($tab))) ?>"><?php echo esc_html($atts['title']) ?></a></h4>
         </div>
       <?php endforeach; ?>
     </div>

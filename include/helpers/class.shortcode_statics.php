@@ -8,6 +8,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (! class_exists('TagGroups_Shortcode_Statics')) {
     class TagGroups_Shortcode_Statics
     {

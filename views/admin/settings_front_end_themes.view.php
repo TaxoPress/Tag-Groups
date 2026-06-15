@@ -1,7 +1,7 @@
 <div class="tg_settings_tabs_content">
 
-  <form method="POST" action="<?php echo esc_url($_SERVER['REQUEST_URI']) ?>">
-    <?php echo wp_nonce_field('tag-groups-settings', 'tag-groups-settings-nonce', true, false) ?>
+  <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI']))) : ''; ?>">
+    <?php echo wp_kses_post(wp_nonce_field('tag-groups-settings', 'tag-groups-settings-nonce', true, false)) ?>
     <div class="chatty-mango-settings-container">
       <div style="min-width:500px;padding-right:20px;">
         <p>
@@ -25,12 +25,12 @@
         <ul>
           <?php foreach ($default_themes as $theme) : ?>
             <li>
-              <input type="radio" name="theme" id="tg_<?php echo $theme ?>" value="<?php echo $theme ?>"
+              <input type="radio" name="theme" id="tg_<?php echo esc_attr($theme) ?>" value="<?php echo esc_attr($theme) ?>"
                 <?php if ($tag_group_theme == $theme) :
                     ?> checked<?php 
                 endif;?>
               />&nbsp;
-              <label for="tg_<?php echo $theme ?>"><?php echo $theme ?></label>
+              <label for="tg_<?php echo esc_attr($theme) ?>"><?php echo esc_html($theme) ?></label>
             </li>
           <?php endforeach;?>
           <li>
@@ -40,7 +40,7 @@
             endif;?>
             />&nbsp;
             <label for="tg_own"><?php _e('own theme', 'tag-groups')?>: /wp-content/uploads/</label><input type="text" id="theme-name" name="theme-name" value="<?php if ($tag_group_theme && ! in_array($tag_group_theme, $default_themes)) :
-                echo $tag_group_theme;
+                echo esc_attr($tag_group_theme);
                                 endif;?>" />
           </li>
           <li>
@@ -83,9 +83,9 @@
             <label for="html_description"><?php _e('HTML in tag description:', 'tag-groups')?></label>
             <select id="html_description" name="html_description" autocomplete="off">
               <?php foreach ($tag_group_html_description_options as $value => $label) : ?>
-                <option value="<?php echo $value ?>"<?php  if ($value == $tag_group_html_description) :
+                <option value="<?php echo esc_attr($value) ?>"<?php  if ($value == $tag_group_html_description) :
                     ?> selected<?php 
-                               endif; ?> ><?php echo $label ?></option>
+                               endif; ?> ><?php echo esc_html($label) ?></option>
               <?php endforeach; ?>
             </select>&nbsp;
             <span class="dashicons dashicons-editor-help chatty-mango-help-icon" title="<?php _e("By default the description appears in a tooltip when you hover the mouse over a tag in a tag cloud.", 'tag-groups') ?> <?php _e("If you don't trust all users of your site, remove the HTML or use a plugin to give the unfiltered_html capability only to users you trust.", 'tag-groups') ?>"></span>

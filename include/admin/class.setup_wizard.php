@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Setup_Wizard')) {
     /**
      *
@@ -70,6 +71,7 @@ if (!class_exists('TagGroups_Setup_Wizard')) {
             }
             global $tag_group_groups ;
             self::add_header();
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only wizard step navigation
             $step = ( isset($_GET['step']) && $_GET['step'] > 0 ? (int) $_GET['step'] : 1 );
             $setup_wizard_next_link = add_query_arg('step', $step + 1, admin_url('admin.php?page=tag-groups-settings-setup-wizard'));
 
@@ -215,7 +217,7 @@ if (!class_exists('TagGroups_Setup_Wizard')) {
          * @param void
          * @return void
          */
-        static function settings_page_actions_wizard()
+        public static function settings_page_actions_wizard()
         {
             global  $tag_group_groups ;
             if (empty($_REQUEST['tg_action_wizard'])) {
@@ -225,14 +227,17 @@ if (!class_exists('TagGroups_Setup_Wizard')) {
             if (!current_user_can('manage_options')) {
                 wp_die("Capability check failed");
             }
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
             if (!isset($_POST['tag-groups-setup-wizard-nonce']) || !wp_verify_nonce($_POST['tag-groups-setup-wizard-nonce'], 'tag-groups-setup-wizard-nonce')) {
                 die("Security check failed");
             }
             $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
             $taxonomy = array_shift($enabled_taxonomies);
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized in switch statement
             switch ($_REQUEST['tg_action_wizard']) {
                 case 'taxonomy':
                     if (isset($_POST['taxonomies'])) {
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized below
                         $taxonomies = $_POST['taxonomies'];
 
                         if (is_array($taxonomies)) {
@@ -258,7 +263,9 @@ if (!class_exists('TagGroups_Setup_Wizard')) {
                     /**
                      * Create groups
                      */
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized below
                     if (isset($_POST['tag-groups-create-sample-groups']) && $_POST['tag-groups-create-sample-groups']) {
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- Sanitized below
                         foreach ($_POST['tag_groups_group_names'] as $group_name) {
                             $tg_group = new TagGroups_Group();
                             $tg_group->create(sanitize_text_field($group_name));
@@ -268,7 +275,9 @@ if (!class_exists('TagGroups_Setup_Wizard')) {
                     /**
                      * Create tags
                      */
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized below
                     if (isset($_POST['tag-groups-create-sample-tags']) && $_POST['tag-groups-create-sample-tags']) {
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- Sanitized below
                         foreach ($_POST['tag_groups_tag_names'] as $tag_name) {
                             $tag_name = sanitize_text_field($tag_name);
 
@@ -299,6 +308,7 @@ if (!class_exists('TagGroups_Setup_Wizard')) {
                     $tpf_include = $tag_group_groups->get_group_ids();
                     unset($tpf_include[0]);
 
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Checkbox validation
                     if (isset($_POST['tag-groups-create-sample-page']) && $_POST['tag-groups-create-sample-page']) {
                         if (TagGroups_Gutenberg::is_gutenberg_active()) {
                             $view = new TagGroups_View('admin/sample_page_gutenberg');

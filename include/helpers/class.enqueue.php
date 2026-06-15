@@ -8,6 +8,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (! class_exists('TagGroups_Enqueue')) {
 
   /**
@@ -40,6 +41,7 @@ if (! class_exists('TagGroups_Enqueue')) {
                 has_shortcode($post->post_content, 'tag_groups_cloud') ||
                 has_shortcode($post->post_content, 'tag_groups_accordion') ||
                 has_shortcode($post->post_content, 'tag_groups_alphabet_tabs') ||
+                // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                 // has_shortcode($post->post_content, 'tag_groups_tabs') ||
                 strpos($post->post_content, '<!-- wp:chatty-mango/tag-groups-cloud-tabs') !== false ||
                 strpos($post->post_content, '<!-- wp:chatty-mango/tag-groups-cloud-accordion') !== false ||
@@ -175,6 +177,7 @@ if (! class_exists('TagGroups_Enqueue')) {
 
                 wp_enqueue_style('tag-groups-css-backend-tgb');
             } elseif (strpos($where, 'post-new.php') !== false || strpos($where, 'post.php') !== false) {
+            // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
             // use following line to enable gutenberg on Appearance > Widgets
             // } elseif ( strpos( $where, 'post-new.php' ) !== false || strpos( $where, 'post.php' ) !== false || strpos( $where, 'widgets.php' ) !== false ) {
 

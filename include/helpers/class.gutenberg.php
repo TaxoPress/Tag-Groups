@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (! class_exists('TagGroups_Gutenberg')) {
 /**
   *
@@ -62,6 +63,7 @@ if (! class_exists('TagGroups_Gutenberg')) {
               array(
                   'slug'  => 'chatty-mango',
                   'title' => 'Tag Groups',
+                  // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                   'icon'  => null, //'admin-plugins', // icons might be removed in future
               ),
             ));

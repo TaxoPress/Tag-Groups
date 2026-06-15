@@ -8,6 +8,7 @@
 * @since
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (! class_exists('TagGroups_View')) {
 /**
   * General handling of views
@@ -76,7 +77,7 @@ if (! class_exists('TagGroups_View')) {
       */
         public function render()
         {
-
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Views contain trusted HTML/JS from plugin files
             echo $this->return_html();
         }
 

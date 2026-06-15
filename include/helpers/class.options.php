@@ -7,6 +7,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (! class_exists('TagGroups_Options')) {
 
   /**
@@ -14,22 +15,22 @@ if (! class_exists('TagGroups_Options')) {
    */
     class TagGroups_Options
     {
-        const TAG_GROUPS_PLUGIN = 1;
-        const TAG_GROUPS_PREMIUM_PLUGIN = 2;
-        const INTEGER = 'integer'; // also used for booleans
-        const STRING = 'string'; // strips whitespace
-        const STRING_HTML = 'string_html';
-        const ARRAY_OF_STRINGS = 'array_of_strings';
-        const ARRAY_OF_STRINGS_HTML = 'array_of_strings_html';
-        const ARRAY_OF_INTEGERS = 'array_of_integers';
-        const MIXED = 'MIXED'; // no sanitization available, use only for internally created content
+        public const TAG_GROUPS_PLUGIN = 1;
+        public const TAG_GROUPS_PREMIUM_PLUGIN = 2;
+        public const INTEGER = 'integer'; // also used for booleans
+        public const STRING = 'string'; // strips whitespace
+        public const STRING_HTML = 'string_html';
+        public const ARRAY_OF_STRINGS = 'array_of_strings';
+        public const ARRAY_OF_STRINGS_HTML = 'array_of_strings_html';
+        public const ARRAY_OF_INTEGERS = 'array_of_integers';
+        public const MIXED = 'MIXED'; // no sanitization available, use only for internally created content
 
       /**
        * allowed tags and attributes for sanitizing HTML
        * 
        * requires PHP 5.6.0
        */
-        const ALLOWED_HTML = array(
+        public const ALLOWED_HTML = array(
         'br' => array(),
         'b' => array(),
         'hr' => array(),
@@ -742,7 +743,7 @@ if (! class_exists('TagGroups_Options')) {
        * @param string $option_name
        * @return void
        */
-        static function array_or_log($value, $option_name)
+        public static function array_or_log($value, $option_name)
         {
 
             if (! is_array($value)) {
@@ -798,7 +799,7 @@ if (! class_exists('TagGroups_Options')) {
        *
        * @return void
        */
-        static function delete_all()
+        public static function delete_all()
         {
 
             $option_count = 0;

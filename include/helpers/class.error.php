@@ -8,6 +8,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps, WordPress.PHP.DevelopmentFunctions, PublishPressStandards.Debug.DisallowDebugFunctions
 if (! class_exists('TagGroups_Error')) {
 /**
    * Error processing
@@ -18,8 +19,8 @@ if (! class_exists('TagGroups_Error')) {
       /**
        * verbosity
        */
-        const NORMAL  = 'normal';
-        const VERBOSE = 'verbose';
+        public const NORMAL  = 'normal';
+        public const VERBOSE = 'verbose';
 
       /**
        * Creates a HTML presentation of the backtrace
@@ -33,17 +34,14 @@ if (! class_exists('TagGroups_Error')) {
         {
 
             $path = ABSPATH;
-  //get_home_path();
 
             $e = new Exception();
             $trace = explode("\n", $e->getTraceAsString());
   // reverse array to make steps line up chronologically
             $trace = array_reverse($trace);
             array_shift($trace);
-  // remove {main}
 
             array_pop($trace);
-  // remove call to this method
 
             $length = count($trace);
             $result = array();
@@ -90,6 +88,7 @@ if (! class_exists('TagGroups_Error')) {
        * @param mixed ...$params
        * @return boolean
        */
+        // phpcs:ignore PublishPressStandards.Debug.DisallowDebugFunctions.Found -- Legacy debug helper alias, only logs when debugging is enabled.
         public static function dump(...$params)
         {
 
@@ -203,7 +202,7 @@ if (! class_exists('TagGroups_Error')) {
        *
        * @return boolean
        */
-        static function is_debug()
+        public static function is_debug()
         {
 
             if (defined('WP_DEBUG') && WP_DEBUG) {
@@ -223,7 +222,7 @@ if (! class_exists('TagGroups_Error')) {
        *
        * @return boolean
        */
-        static function is_verbose()
+        public static function is_verbose()
         {
 
             if (defined('CM_DEBUG') && strtolower(CM_DEBUG) == self::VERBOSE) {

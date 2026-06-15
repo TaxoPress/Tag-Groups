@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Shortcode_Accordion')) {
     class TagGroups_Shortcode_Accordion extends TagGroups_Shortcode_Common
     {
@@ -72,6 +73,7 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
             'type'    => 'string',
             'default' => '',
         ),
+            // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
             'exclude'               => array(
             'type'    => 'string',
             'default' => '',
@@ -212,6 +214,7 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
                 'delay'                 => true,
                 'div_class'             => 'tag-groups-cloud',
                 'div_id'                => '',
+                // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
                 'exclude'               => '',
                 'exclude_terms'         => '',
                 'group_in_class'        => 0,
@@ -268,6 +271,7 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
              * Call this before creating the cache key
              */
             $this->get_post_id();
+            // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
             $this->cache_key = md5('accordion' . serialize($atts) . serialize($this->attributes->tags_post_id) . serialize($this->attributes->groups_post_id));
             // check for a cached version (premium plugin)
             $html = apply_filters('tag_groups_hook_cache_get', false, $this->cache_key);

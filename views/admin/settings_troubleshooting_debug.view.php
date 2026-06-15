@@ -1,5 +1,5 @@
 <div class="tg_settings_tabs_content">
-  <form method="POST" action="<?php echo esc_url($_SERVER['REQUEST_URI']) ?>">
+  <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI']))) : ''; ?>">
 <ul>
 <?php
 
@@ -32,11 +32,11 @@ if ($debug_is_on) : ?>
 <?php endif;?>
 </ul>
 
-  <?php echo wp_nonce_field('tag-groups-debug', 'tag-groups-debug-nonce', true, false) ?>
+  <?php echo wp_kses_post(wp_nonce_field('tag-groups-debug', 'tag-groups-debug-nonce', true, false)) ?>
   <input type="hidden" id="action" name="tg_action" value="debug">
 
 </form>
 <p>&nbsp;</p>
-  <p><?php printf(__('Learn more <a %s>about debugging</a>.', 'tag-groups'), 'href="' . $help_url . '" target="_blank"')?></p>
+  <p><?php echo wp_kses_post(sprintf(__('Learn more <a %s>about debugging</a>.', 'tag-groups'), 'href="' . esc_url($help_url) . '" target="_blank"')); ?></p>
 
 </div>

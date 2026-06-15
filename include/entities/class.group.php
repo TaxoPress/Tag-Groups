@@ -12,6 +12,7 @@
  * @since      1.8.0
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps, WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize, WordPress.DB.SlowDBQuery
 if (!class_exists('TagGroups_Group')) {
     class TagGroups_Group
     {
@@ -58,8 +59,8 @@ if (!class_exists('TagGroups_Group')) {
          * @var string
          */
         public $error ;
-        const  WRONG_ID = 'wrong ID' ;
-        const  WRONG_POSITION = 'wrong position' ;
+        public const  WRONG_ID = 'wrong ID' ;
+        public const  WRONG_POSITION = 'wrong position' ;
         /**
          * Constructor
          *
@@ -754,6 +755,7 @@ if (!class_exists('TagGroups_Group')) {
                     }
                 } else {
                     $meta_query_args = array(
+                        // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                         // 'relation' => 'OR',
                         array(
                             'key'     => '_cm_term_group_array',
@@ -823,7 +825,7 @@ if (!class_exists('TagGroups_Group')) {
          *
          * @return int
          */
-        function get_parent()
+        public function get_parent()
         {
 
             if ($this->is_parent) {
@@ -843,7 +845,7 @@ if (!class_exists('TagGroups_Group')) {
          *
          * @return string
          */
-        function get_parent_label()
+        public function get_parent_label()
         {
 
             return '';

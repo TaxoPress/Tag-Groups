@@ -5,7 +5,7 @@
       <tr>
         <td>
           <div class="tg_admin_accordion">
-            <h4><span title="<?php _e('Click for more information', 'tag-groups') ?>"><?php echo $taxonomy_info['name'] ?> (<?php echo $taxonomy_info['slug'] ?>)</span></h4>
+            <h4><span title="<?php _e('Click for more information', 'tag-groups') ?>"><?php echo esc_html($taxonomy_info['name']) ?> (<?php echo esc_html($taxonomy_info['slug']) ?>)</span></h4>
             <div style="display:none;">
               <?php if ($group_count < 100 && $taxonomy_info['term_count'] < 10000) : ?>
                 <h4><?php _e('Group Statistics', 'tag-groups') ?>
@@ -13,14 +13,14 @@
                   (<?php _e('for the selected language', 'tag-groups') ?>)
                     <?php endif; ?>
               </h4>
-                    <?php echo $taxonomy_info['info_html'] ?>
+                    <?php echo wp_kses_post($taxonomy_info['info_html']) ?>
               <?php else : ?>
-                  <?php printf('This taxonomy has %d tags in %d groups.', $taxonomy_info['term_count'], $group_count) ?>
+                  <?php echo wp_kses_post(sprintf('This taxonomy has %d tags in %d groups.', $taxonomy_info['term_count'], $group_count)); ?>
               <?php endif; ?>
           </div>
         </td>
         <td style="max-width:300px;">
-          <span class="dashicons dashicons-arrow-right-alt tg_no_underline"></span>&nbsp;<a href="<?php echo $taxonomy_info['tag_group_admin'] ?>"><?php _e('go to tag group administration', 'tag-groups') ?></a>
+          <span class="dashicons dashicons-arrow-right-alt tg_no_underline"></span>&nbsp;<a href="<?php echo esc_url($taxonomy_info['tag_group_admin']) ?>"><?php _e('go to tag group administration', 'tag-groups') ?></a>
         </td>
       </tr>
     <?php endforeach; ?>

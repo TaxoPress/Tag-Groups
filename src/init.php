@@ -59,6 +59,7 @@ function chatty_mango_tag_groups_editor_assets()
     // make some data available
     $args = array(
         'siteUrl'           => get_option('siteurl'),
+        // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
         'siteLang'          => '',  // for future use
         'pluginUrl'         => TAG_GROUPS_PLUGIN_URL,
         'hasPremium'        => TagGroups_Utilities::is_premium_plan(),
@@ -69,7 +70,8 @@ function chatty_mango_tag_groups_editor_assets()
     );
 // Scripts.
     if (! empty($screen->base) && 'widgets' == $screen->base) {
-// not yet implemented
+        // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
+        // not yet implemented
         // wp_enqueue_script(
         //     'chatty-mango_tag-groups-block-js', // Handle.
         //   plugins_url( 'build/index.js', dirname( __FILE__ ) ),
@@ -89,6 +91,7 @@ function chatty_mango_tag_groups_editor_assets()
         'chatty-mango_tag-groups-block-editor-css', // Handle.
         plugins_url('build/index.css', dirname(__FILE__)), // Block editor CSS.
         array( 'wp-edit-blocks' )
+        // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
         // , $dependencies['version']
     );
     if (function_exists('wp_get_jed_locale_data')) {
@@ -100,8 +103,10 @@ function chatty_mango_tag_groups_editor_assets()
     // Ensure it doesn't break if neither function exists
     }
     
-    wp_add_inline_script('wp-i18n', 'wp.i18n.setLocaleData( ' . json_encode($locale_data) . ' );');
-} // End function chatty_mango_tag_groups_editor_assets().
+    wp_add_inline_script('wp-i18n', 'wp.i18n.setLocaleData( ' . wp_json_encode($locale_data) . ' );');
+}
+// phpcs:ignore Squiz.PHP.CommentedOutCode.Found
+// End function chatty_mango_tag_groups_editor_assets().
 
 // Hook: Editor assets.
 add_action('enqueue_block_editor_assets', 'chatty_mango_tag_groups_editor_assets');

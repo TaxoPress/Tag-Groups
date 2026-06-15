@@ -1,7 +1,7 @@
 <div class="tg_settings_tabs_content">
 
-  <form method="POST" action="<?php echo esc_url($_SERVER['REQUEST_URI']) ?>">
-    <?php echo wp_nonce_field('tag-groups-rest-api', 'tag-groups-rest-api-nonce', true, false) ?>
+  <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI']))) : ''; ?>">
+    <?php echo wp_nonce_field('tag-groups-rest-api', 'tag-groups-rest-api-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
     <p>
       <input type="checkbox" id="group_public_api_access" name="group_public_api_access" autocomplete="off" value="1"<?php if ($group_public_api_access) :
             ?> checked<?php 

@@ -19,6 +19,7 @@
 *
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (! class_exists('TagGroups_Update')) {
     class TagGroups_Update
     {
@@ -33,7 +34,7 @@ if (! class_exists('TagGroups_Update')) {
            * @param string $old_version
            * @param string $new_version
            */
-        function __construct($old_version, $new_version)
+        public function __construct($old_version, $new_version)
         {
 
             $this->old_version = $old_version;
@@ -54,6 +55,7 @@ if (! class_exists('TagGroups_Update')) {
                 return;
             }
 
+            // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
             // if ( version_compare( $this->old_version, '1.18.0' , '<' ) ) {
             // }
         }

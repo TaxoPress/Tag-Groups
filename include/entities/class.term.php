@@ -10,6 +10,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Term')) {
     class TagGroups_Term
     {
@@ -123,6 +124,7 @@ if (!class_exists('TagGroups_Term')) {
                     $this->name = $term->name;
                     $this->slug = $term->slug;
                     $this->count = $term->count;
+                    // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                     // $this->groups = array( $term->term_group );
                 } else {
                     TagGroups_Error::verbose_log('[Tag Groups] Error loading term (ID %d).', $this->term_id);
@@ -438,7 +440,7 @@ if (!class_exists('TagGroups_Term')) {
          * @param  integer   $group_id
          * @return integer
          */
-        function get_post_count($group_id = 0)
+        public function get_post_count($group_id = 0)
         {
             
             if (0 == $group_id) {
@@ -451,7 +453,7 @@ if (!class_exists('TagGroups_Term')) {
          *
          * @return boolean
          */
-        function exists()
+        public function exists()
         {
             if (empty($this->term_id)) {
                 return false;
@@ -464,7 +466,7 @@ if (!class_exists('TagGroups_Term')) {
          *
          * @return array
          */
-        function get_sorted_groups()
+        public function get_sorted_groups()
         {
             global  $tag_group_groups ;
             $groups_sorted = array();

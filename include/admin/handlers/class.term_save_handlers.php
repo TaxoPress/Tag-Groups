@@ -8,6 +8,7 @@
  * @license     GPL-3.0+
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps, WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
 if (! class_exists('TagGroups_Term_Save_Handlers')) {
 /**
    *
@@ -269,16 +270,14 @@ if (! class_exists('TagGroups_Term_Save_Handlers')) {
                         $original_term_id = $translations[$default_language_code]->element_id;
                     }
                 }
-            }
-
-        /**
-         *   taxonomy-translation.php form
-         */
-            elseif (
+            } elseif (
                 isset($_POST['term_language_code'])
                 && $_POST['term_language_code'] != $default_language_code
                 && ! empty($_POST['trid'])
             ) {
+                /**
+                 *   taxonomy-translation.php form
+                 */
                 $translations = apply_filters('wpml_get_element_translations', null, $_POST['trid']);
                 if (isset($translations[$default_language_code]->element_id)) {
                     $original_term_id = $translations[$default_language_code]->element_id;

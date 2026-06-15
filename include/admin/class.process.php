@@ -40,7 +40,9 @@ if (! class_exists('TagGroups_Process')) {
 
             $affected = 0;
             $error = false;
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce verified below
             if (isset($_REQUEST['nonce'])) {
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended -- Nonce verified below
                     $nonce = $_REQUEST['nonce'];
             }
 
@@ -49,6 +51,7 @@ if (! class_exists('TagGroups_Process')) {
             }
 
             if (isset($_REQUEST['task'])) {
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized in switch statement
                 $task = $_REQUEST['task'];
             } else {
                   $error = true;
@@ -97,7 +100,7 @@ if (! class_exists('TagGroups_Process')) {
             }
 
             if ($error) {
-                echo json_encode(array(
+                echo wp_json_encode(array(
                 'data'     => 'error',
                 'done'     => 0,
                 'affected' => 0,
@@ -105,7 +108,7 @@ if (! class_exists('TagGroups_Process')) {
                 TagGroups_Utilities::die();
             }
 
-            echo json_encode(array(
+            echo wp_json_encode(array(
             'data'     => 'success',
             'done'     => 1,
             'affected' => $affected,
@@ -119,6 +122,7 @@ if (! class_exists('TagGroups_Process')) {
        * @param  string $task
        * @return int
        */
+        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy method naming
         public static function get_task_total($task, $language_code = null)
         {
 

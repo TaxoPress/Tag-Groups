@@ -1,5 +1,5 @@
 <p>
-  <?php printf(__('%s created this sample page in the Setup Wizard of the <b>Tag Groups</b> plugin. You can safely edit and delete it or keep it for future reference.', 'tag-groups'), $author_display_name) ?>
+  <?php printf(esc_html__('%s created this sample page in the Setup Wizard of the <b>Tag Groups</b> plugin. You can safely edit and delete it or keep it for future reference.', 'tag-groups'), esc_html($author_display_name)) ?>
 </p>
 
 <p>
@@ -7,7 +7,7 @@
 </p>
 
 <p>
-  <?php printf(__('Please find links to the documentation in the <a %s>Tag Groups settings</a>.', 'tag-groups'), 'href="' . $tag_groups_settings_link . '"') ?>
+  <?php printf(esc_html__('Please find links to the documentation in the <a %s>Tag Groups settings</a>.', 'tag-groups'), 'href="' . esc_url($tag_groups_settings_link) . '"') ?>
 </p>
 <hr />
 

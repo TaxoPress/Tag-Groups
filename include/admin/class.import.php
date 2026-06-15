@@ -71,6 +71,7 @@ if (! class_exists('TagGroups_Import')) {
             } else {
                 // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Missing -- File upload validation
                 if (! empty($_FILES['settings_file']['name'])) {
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Missing -- File upload validation
                     $file_info = ' ' . $_FILES['settings_file']['name'];
                 } else {
                     $file_info = '';
@@ -164,7 +165,7 @@ if (! class_exists('TagGroups_Import')) {
                 $options['date'] = ' - ' . __('date unknown', 'tag-groups') . ' - ';
             }
 
-            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Missing -- File upload validation
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.NonceVerification.Missing -- File upload validation
             TagGroups_Admin_Notice::add('success', sprintf(__('Your settings and groups have been imported from the file %1$s (created with plugin version %2$s on %3$s).', 'tag-groups'), '<b>' . $_FILES['settings_file']['name'] . '</b>', $options['version'], $options['date']) . '</p><p>' .
             sprintf(_n('%d option was added or changed.', '%d options were added or changed.', $count_changed, 'tag-groups'), $count_changed));
             do_action('tag_groups_settings_imported');

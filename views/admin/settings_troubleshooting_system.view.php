@@ -3,19 +3,19 @@
     <h3>WordPress</h3>
     <table class="widefat fixed">
       <tr><td><?php _e('WordPress Version', 'tag-groups'); ?></td><td><?php
-        echo  get_bloginfo('version') ;
+        echo esc_html(get_bloginfo('version'));
         ?></td></tr>
       <tr><td><?php _e('Site URL', 'tag-groups'); ?></td><td><?php
-        echo  site_url() ;
+        echo esc_url(site_url());
         ?></td></tr>
       <tr><td><?php _e('Home URL', 'tag-groups'); ?></td><td><?php
-        echo  home_url() ;
+        echo esc_url(home_url());
         ?></td></tr>
 
       <tr><td><?php _e('Active Theme', 'tag-groups'); ?></td><td><?php
-        echo  $active_theme->get('Name') ;
+        echo esc_html($active_theme->get('Name'));
         ?> (<?php _e('Version', 'tag-groups'); ?> <?php
-echo  $active_theme->get('Version') ;
+echo esc_html($active_theme->get('Version'));
 ?>)</td></tr>
 
       <tr><td><?php _e('Ajax Test', 'tag-groups'); ?></td><td>
@@ -33,7 +33,7 @@ echo  $active_theme->get('Version') ;
         if (defined('ICL_SITEPRESS_VERSION')) {
             ?>
         <tr><td>WPML Version</td><td><?php
-            echo  ICL_SITEPRESS_VERSION ;
+            echo esc_html(ICL_SITEPRESS_VERSION);
         ?></td></tr>
             <?php
         }
@@ -55,8 +55,7 @@ echo  $active_theme->get('Version') ;
   <script>
   jQuery(document).ready(function(){
     jQuery.ajax({
-      url: "<?php
-        echo  $ajax_test_url ;
+      url: "<?php echo esc_url($ajax_test_url);
         ?>",
       data: {
         action: "tg_ajax_manage_groups",
@@ -114,11 +113,7 @@ echo  $active_theme->get('Version') ;
                 <?php
                 foreach ($benchmarks as $benchmark) {
                     ?>
-          <tr><td><?php
-            echo  $benchmark['name'] ;
-            ?></td><td><?php
-        echo  $benchmark['value'] ;
-?></td></tr>
+          <tr><td><?php echo esc_html($benchmark['name']); ?></td><td><?php echo esc_html($benchmark['value']); ?></td></tr>
                     <?php
                 }
                 ?>
@@ -135,8 +130,7 @@ _e('Tag groups pro only', 'tag-groups');
     <script>
     jQuery(document).ready(function(){
       jQuery.ajax({
-        url: "<?php
-        echo  $ajax_test_url ;
+        url: "<?php echo esc_url($ajax_test_url);
         ?>",
         data: {
           action: "tg_ajax_benchmark",
@@ -160,7 +154,7 @@ _e('Tag groups pro only', 'tag-groups');
     <table class="widefat fixed">
 
       <tr><td>PHP Version</td><td><?php
-        echo  $phpversion ;
+        echo esc_html($phpversion);
         ?>
         <?php
 
@@ -175,16 +169,16 @@ _e('Tag groups pro only', 'tag-groups');
         ?>
       </td></tr>
       <tr><td>PHP Memory Limit</td><td><?php
-        echo  ini_get('memory_limit') ;
+        echo esc_html(ini_get('memory_limit'));
         ?></td></tr>
       <tr><td>PHP Max Execution Time</td><td><?php
-        echo  ini_get('max_execution_time') ;
+        echo esc_html(ini_get('max_execution_time'));
         ?> secs</td></tr>
       <tr><td>PHP Post Max Size</td><td><?php
-        echo  ini_get('post_max_size') ;
+        echo esc_html(ini_get('post_max_size'));
         ?></td></tr>
       <tr><td>Database</td><td><?php
-        echo  $db_info ;
+        echo esc_html($db_info);
         ?></td></tr>
     </table>
   </div>
@@ -203,17 +197,11 @@ _e('Tag groups pro only', 'tag-groups');
 
                 if (isset($constants[$wp_constant])) {
                     ?>
-          <tr><td><?php
-            echo  $wp_constant ;
-            ?></td><td><?php
-        echo  $constants[$wp_constant] ;
-?></td></tr>
+          <tr><td><?php echo esc_html($wp_constant); ?></td><td><?php echo esc_html($constants[$wp_constant]); ?></td></tr>
                     <?php
                 } else {
                     ?>
-          <tr><td><?php
-            echo  $wp_constant ;
-            ?></td><td>not set</td></tr>
+          <tr><td><?php echo esc_html($wp_constant); ?></td><td>not set</td></tr>
                     <?php
                 }
 
@@ -229,11 +217,7 @@ _e('Tag groups pro only', 'tag-groups');
 
                 if (preg_match("/^TAG_GROUPS_/", $key) == 1) {
                     ?>
-          <tr><td><?php
-            echo  $key ;
-            ?></td><td><?php
-        echo  $value ;
-?></td></tr>
+          <tr><td><?php echo esc_html($key); ?></td><td><?php echo esc_html($value); ?></td></tr>
                     <?php
                 }
 

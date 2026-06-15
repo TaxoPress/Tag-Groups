@@ -12,6 +12,7 @@
  * @since      1.8.0
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Groups')) {
     class TagGroups_Groups
     {
@@ -51,7 +52,7 @@ if (!class_exists('TagGroups_Groups')) {
          * @var string
          */
         public $error ;
-        const  PERMISSION = 'permission denied' ;
+        public const  PERMISSION = 'permission denied' ;
         /**
          * Constructor
          *
@@ -802,7 +803,7 @@ if (!class_exists('TagGroups_Groups')) {
          * @param  int       $b
          * @return boolean
          */
-        function sort_by_label($a, $b)
+        public function sort_by_label($a, $b)
         {
             $labels = TagGroups_Options::get_option($this->get_tag_group_label_option_name(), array());
             return strnatcmp($labels[$a], $labels[$b]);
@@ -900,7 +901,7 @@ if (!class_exists('TagGroups_Groups')) {
          * @deprecated 1.40.2
          * @return array
          */
-        function get_sorted_groups($groups)
+        public function get_sorted_groups($groups)
         {
             $groups_sorted = array();
             foreach ($this->get_positions() as $group => $position) {
@@ -916,7 +917,7 @@ if (!class_exists('TagGroups_Groups')) {
          *
          * @return void
          */
-        function load_old_format()
+        public function load_old_format()
         {
             $term_groups_position = TagGroups_Options::get_option('tag_group_ids', array());
             // position -> id
@@ -941,7 +942,7 @@ if (!class_exists('TagGroups_Groups')) {
          *
          * @return void
          */
-        function recreate_ids_from_positions()
+        public function recreate_ids_from_positions()
         {
             $this->reindex_positions();
             // recreate $this->group_ids from positions
@@ -987,7 +988,7 @@ if (!class_exists('TagGroups_Groups')) {
          * @param int[] $group_ids
          * @return int[]
          */
-        function expand_parents($group_ids)
+        public function expand_parents($group_ids)
         {
 
             $this->conditionally_load();
@@ -1005,7 +1006,7 @@ if (!class_exists('TagGroups_Groups')) {
          *
          * @return boolean
          */
-        function is_only_parents()
+        public function is_only_parents()
         {
 
             $this->conditionally_load();

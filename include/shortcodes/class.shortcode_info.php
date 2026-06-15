@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Shortcode_Info')) {
     class TagGroups_Shortcode_Info extends TagGroups_Shortcode_Common
     {
@@ -27,6 +28,7 @@ if (!class_exists('TagGroups_Shortcode_Info')) {
             if (is_array($atts)) {
                 asort($atts);
             }
+            // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
             $cache_key = md5('tag_groups_info' . serialize($atts));
             // check for a cached version (premium plugin)
             $html = apply_filters('tag_groups_hook_cache_get', false, $cache_key);

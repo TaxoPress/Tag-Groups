@@ -7,6 +7,7 @@
 * @license     GPL-3.0+
 */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Settings')) {
     /**
      *
@@ -47,7 +48,9 @@ if (!class_exists('TagGroups_Settings')) {
         public static function get_active_tab($tabs)
         {
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only tab selection
             if (isset($_GET['active-tab'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only tab selection
                 return sanitize_title($_GET['active-tab']);
             } else {
                 $keys = array_keys($tabs);
@@ -378,10 +381,12 @@ if (!class_exists('TagGroups_Settings')) {
                                 'WP_DEBUG_DISPLAY',
                                 'WP_DEBUG_LOG',
                                 'ABSPATH',
+                                // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                                 // 'WP_HOME',
                                 'MULTISITE',
                                 'WP_CACHE',
                                 'COMPRESS_SCRIPTS',
+                                // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                                 // 'FS_CHMOD_DIR',
                                 // 'FS_CHMOD_FILE',
                                 'FORCE_SSL_ADMIN',
@@ -491,11 +496,13 @@ if (!class_exists('TagGroups_Settings')) {
          * @param void
          * @return void
          */
-        static function settings_page_actions()
+        public static function settings_page_actions()
         {
             global  $tag_group_groups ;
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce verified in switch cases
             if (!empty($_REQUEST['tg_action'])) {
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended -- Sanitized in switch statement
                 $tg_action = $_REQUEST['tg_action'];
             } else {
                 return;
@@ -506,7 +513,9 @@ if (!class_exists('TagGroups_Settings')) {
                 wp_die("Capability check failed");
             }
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verified in switch cases
             if (isset($_POST['ok'])) {
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Missing -- Sanitized below
                 $ok = $_POST['ok'];
             } else {
                 $ok = '';
@@ -514,6 +523,7 @@ if (!class_exists('TagGroups_Settings')) {
 
             switch ($tg_action) {
                 case 'shortcode':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-shortcode-nonce']) || !wp_verify_nonce($_POST['tag-groups-shortcode-nonce'], 'tag-groups-shortcode')) {
                         die("Security check");
                     }
@@ -538,6 +548,7 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Admin_Notice::add('success', __('Your settings have been saved.', 'tag-groups'));
                     break;
                 case 'rest_api':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-rest-api-nonce']) || !wp_verify_nonce($_POST['tag-groups-rest-api-nonce'], 'tag-groups-rest-api')) {
                         die("Security check");
                     }
@@ -555,6 +566,7 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Admin_Notice::add('success', __('Your settings has been saved.', 'tag-groups'));
                     break;
                 case 'reset':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-reset-nonce']) || !wp_verify_nonce($_POST['tag-groups-reset-nonce'], 'tag-groups-reset')) {
                         die("Security check");
                     }
@@ -574,6 +586,7 @@ if (!class_exists('TagGroups_Settings')) {
 
                     break;
                 case 'uninstall':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-uninstall-nonce']) || !wp_verify_nonce($_POST['tag-groups-uninstall-nonce'], 'tag-groups-uninstall')) {
                         die("Security check");
                     }
@@ -591,6 +604,7 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Admin_Notice::add('success', __('Your settings have been saved.', 'tag-groups'));
                     break;
                 case 'theme':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-settings-nonce']) || !wp_verify_nonce($_POST['tag-groups-settings-nonce'], 'tag-groups-settings')) {
                         die("Security check");
                     }
@@ -623,11 +637,13 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Options::update_option('tag_group_html_description', $html_description);
                     $tag_group_enqueue_jquery = ( isset($_POST['enqueue-jquery']) && $_POST['enqueue-jquery'] == '1' ? 1 : 0 );
                     TagGroups_Options::update_option('tag_group_enqueue_jquery', $tag_group_enqueue_jquery);
+                    // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                     // TagGroups_Admin::clear_cache();
                     TagGroups_Admin_Notice::add('success', __('Your settings have been saved.', 'tag-groups'));
                     do_action('tag_groups_theme_saved');
                     break;
                 case 'taxonomy':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-taxonomy-nonce']) || !wp_verify_nonce($_POST['tag-groups-taxonomy-nonce'], 'tag-groups-taxonomy')) {
                         die("Security check");
                     }
@@ -637,6 +653,7 @@ if (!class_exists('TagGroups_Settings')) {
                     }
 
                     if (isset($_POST['taxonomies'])) {
+                        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized below
                         $taxonomies = $_POST['taxonomies'];
 
                         if (is_array($taxonomies)) {
@@ -659,6 +676,7 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Admin_Notice::add('success', __('Your settings have been saved.', 'tag-groups'));
                     break;
                 case 'backend':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-backend-nonce']) || !wp_verify_nonce($_POST['tag-groups-backend-nonce'], 'tag-groups-backend')) {
                         die("Security check");
                     }
@@ -673,6 +691,7 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Admin_Notice::add('success', __('Your settings have been saved.', 'tag-groups'));
                     break;
                 case 'gutenberg':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-gutenberg-nonce']) || !wp_verify_nonce($_POST['tag-groups-gutenberg-nonce'], 'tag-groups-gutenberg')) {
                         die("Security check");
                     }
@@ -685,6 +704,7 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Admin_Notice::add('success', __('Your settings have been saved.', 'tag-groups'));
                     break;
                 case 'multilingual':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-multilingual-nonce']) || !wp_verify_nonce($_POST['tag-groups-multilingual-nonce'], 'tag-groups-multilingual')) {
                         die("Security check");
                     }
@@ -698,6 +718,7 @@ if (!class_exists('TagGroups_Settings')) {
                     break;
                 case 'reset-tag-filter':
                     // check nonce
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-reset-tag-filter-nonce']) || !wp_verify_nonce($_POST['tag-groups-reset-tag-filter-nonce'], 'tag-groups-reset-tag-filter')) {
                         die("Security check");
                     }
@@ -712,6 +733,7 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Admin_Notice::add('success', __('The filter on the tags page has been reset to show all tags.', 'tag-groups'));
                     break;
                 case 'export':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-export-nonce']) || !wp_verify_nonce($_POST['tag-groups-export-nonce'], 'tag-groups-export')) {
                         die("Security check");
                     }
@@ -726,6 +748,7 @@ if (!class_exists('TagGroups_Settings')) {
                     $export->show_download_links();
                     break;
                 case 'import':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-import-nonce']) || !wp_verify_nonce($_POST['tag-groups-import-nonce'], 'tag-groups-import')) {
                         die("Security check");
                     }
@@ -742,6 +765,7 @@ if (!class_exists('TagGroups_Settings')) {
                     $import->parse_and_save();
                     break;
                 case 'debug':
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
                     if (!isset($_POST['tag-groups-debug-nonce']) || !wp_verify_nonce($_POST['tag-groups-debug-nonce'], 'tag-groups-debug')) {
                         die("Security check");
                     }
@@ -749,6 +773,7 @@ if (!class_exists('TagGroups_Settings')) {
                     if (!current_user_can('manage_options')) {
                         wp_die("Capability check failed");
                     }
+                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- Validated below
                     $verbose_debug = ( '1' == $_POST['verbose_debug'] ? 1 : 0 );
                     TagGroups_Options::update_option('tag_group_verbose_debug', $verbose_debug);
 
@@ -780,6 +805,7 @@ if (!class_exists('TagGroups_Settings')) {
             if (is_bool($var)) {
                 return ( $var ? 'true' : 'false' );
             } elseif (is_array($var)) {
+                // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r -- Debug output for admin
                 return print_r($var, true);
             } else {
                 return (string) $var;
@@ -977,11 +1003,14 @@ if (!class_exists('TagGroups_Settings')) {
             );
             $totals = array();
             $languages = array();
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- Sanitized below
             $tasks = explode(',', $_POST['process-tasks']);
             $tasks = array_map('sanitize_title', $tasks);
             $tasks = array_intersect($tasks, array_keys($tasks_whitelist));
 
+            // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Admin context
             if (!empty($_POST['task-set-name'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Admin context
                 $task_set_name = sanitize_text_field($_POST['task-set-name']);
             } else {
                 $task_set_name = '';

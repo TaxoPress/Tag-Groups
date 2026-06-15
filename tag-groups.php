@@ -156,7 +156,7 @@ if (!function_exists('tag_groups_init')) {
 // add the hook directly
                 add_action('admin_notices', function () {
 
-                    echo  '<div class="notice notice-info is-dismissible"><p>' . __('The free Tag Groups plugin cannot be active together with Tag Groups Pro.', 'tag-groups') . ' <a href="https://taxopress.com/docs/tag-groups/" target="_blank" style="text-decoration: none;" title="' . __('more information', 'tag-groups') . '"><span class="dashicons dashicons-editor-help"></span></a></p></div><div clear="all" /></div>' ;
+                    echo  '<div class="notice notice-info is-dismissible"><p>' . esc_html__('The free Tag Groups plugin cannot be active together with Tag Groups Pro.', 'tag-groups') . ' <a href="https://taxopress.com/docs/tag-groups/" target="_blank" style="text-decoration: none;" title="' . esc_attr__('more information', 'tag-groups') . '"><span class="dashicons dashicons-editor-help"></span></a></p></div><div clear="all" /></div>' ;
                 });
 /**
                  * Remove the misleading "Plugin activated" messaage

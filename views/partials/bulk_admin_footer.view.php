@@ -12,13 +12,13 @@ jQuery(document).ready(function () {
   var sel_top = jQuery("<select name='term-group-top'>").insertAfter("select[name='action']");
   var sel_bottom = jQuery("<select name='term-group-bottom'>").insertAfter("select[name='action2']");
   <?php foreach ($term_groups as $term_group) : ?>
-  sel_top.append(jQuery("<option>").attr("value", "<?php echo $term_group['term_group'] ?>").html("<?php echo htmlentities($term_group['label'], ENT_QUOTES, "UTF-8") ?>"));
-  sel_bottom.append(jQuery("<option>").attr("value", "<?php echo $term_group['term_group'] ?>").html("<?php echo htmlentities($term_group['label'], ENT_QUOTES, "UTF-8") ?>"));
+  sel_top.append(jQuery("<option>").attr("value", "<?php echo esc_attr($term_group['term_group']) ?>").html("<?php echo esc_html($term_group['label']) ?>"));
+  sel_bottom.append(jQuery("<option>").attr("value", "<?php echo esc_attr($term_group['term_group']) ?>").html("<?php echo esc_html($term_group['label']) ?>")); 
   <?php endforeach; ?>
 
-  <?php if (isset($_GET['orderby']) && $_GET['orderby'] == 'term_group') : ?>
+  <?php if (isset($_GET['orderby']) && $_GET['orderby'] == 'term_group') : // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?>
   jQuery('th#term_group').addClass('sorted');
-        <?php if (isset($_GET['order']) && $_GET['order'] == 'asc') : ?>
+        <?php if (isset($_GET['order']) && $_GET['order'] == 'asc') : // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?>
   jQuery('th#term_group').addClass('asc');
         <?php else : ?>
   jQuery('th#term_group').addClass('desc');

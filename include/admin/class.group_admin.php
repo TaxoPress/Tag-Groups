@@ -72,6 +72,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
             $admin_url = admin_url('admin-ajax.php', $protocol);
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin page display
             if (isset($_GET['lang'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin page display
                 $admin_url = add_query_arg('lang', sanitize_key($_GET['lang']), $admin_url);
             }
             
@@ -115,7 +116,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
             
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce verified below
             if (isset($_REQUEST['tag_groups_task'])) {
-                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized in switch statement
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended -- Sanitized in switch statement
                 $task = $_REQUEST['tag_groups_task'];
             } else {
                 $task = 'refresh';
@@ -268,8 +269,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
                     // do nothing here
                     break;
                 case 'test':
-                    // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode -- AJAX response
-                    echo  json_encode(array(
+                    echo  wp_json_encode(array(
                         'data'         => 'success',
                         'supplemental' => array(
                         'message' => 'This is the regular Ajax response.',
@@ -293,8 +293,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
                 $end_position = $number_of_filtered_term_groups;
             }
             
-            // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode -- AJAX response
-            echo  json_encode(array(
+            echo  wp_json_encode(array(
                 'data'         => 'success',
                 'supplemental' => array(
                 'task'              => $task,
@@ -322,8 +321,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
         // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps, Squiz.Scope.MethodScope.Missing -- Legacy method naming
         static function ajax_send_error($message = 'error', $task = 'unknown')
         {
-            // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode -- AJAX response
-            echo  json_encode(array(
+            echo  wp_json_encode(array(
                 'data'         => 'error',
                 'supplemental' => array(
                 'message' => $message,

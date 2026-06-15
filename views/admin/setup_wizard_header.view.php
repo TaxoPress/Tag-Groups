@@ -5,7 +5,7 @@
         <?php if (! empty($step_info['title'])) : ?>
       <li>
             <?php if ($key < $step) : ?>
-          <a href="<?php echo add_query_arg('step', $key, admin_url('admin.php?page=tag-groups-settings-setup-wizard')) ?>">
+          <a href="<?php echo esc_url(add_query_arg('step', $key, admin_url('admin.php?page=tag-groups-settings-setup-wizard'))) ?>">
             <?php endif; ?>
           <h3
             <?php if ($key > $step) :
@@ -21,7 +21,7 @@
             <?php else : ?>
             <span class="dashicons dashicons-admin-settings"></span>
             <?php endif; ?>
-            <?php echo $key ?>. <?php echo $step_info['title'] ?>
+            <?php echo esc_html($key) ?>. <?php echo esc_html($step_info['title']) ?>
         </h3>
       </a>
     </li>

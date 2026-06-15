@@ -19,6 +19,7 @@
  * @since      1.24.0
  */
 
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps, WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL
 if (! class_exists('TagGroups_Transients')) {
 /**
    * The main purpose of this class is to keep all cron-related information in one place.
@@ -29,7 +30,7 @@ if (! class_exists('TagGroups_Transients')) {
       /**
        * option name used to save array of used transient names
        */
-        const TRANSIENT_NAMES = 'tag_group_used_transient_names';
+        public const TRANSIENT_NAMES = 'tag_group_used_transient_names';
 
       /**
        * Retrieves all transients created by Tag Groups Pro and deletes them
@@ -52,7 +53,7 @@ if (! class_exists('TagGroups_Transients')) {
        *
        * @return array
        */
-        static function get_used_names()
+        public static function get_used_names()
         {
 
             if (empty(self::TRANSIENT_NAMES)) {
@@ -75,11 +76,12 @@ if (! class_exists('TagGroups_Transients')) {
        * @param  array  $used_transient_names
        * @return void
        */
-        static function set_used_names($used_transient_names)
+        public static function set_used_names($used_transient_names)
         {
 
             if (self::TRANSIENT_NAMES) {
                 update_option(self::TRANSIENT_NAMES, $used_transient_names, true);
+    // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
     // TagGroups_Error::verbose_log( '[Tag Groups] Saved array of %d transient name(s)', count( $used_transient_names ) );
             } else {
                 TagGroups_Error::log('[Tag Groups] Error saving array of transient names');
@@ -93,7 +95,7 @@ if (! class_exists('TagGroups_Transients')) {
        * @param [type] $transient
        * @return void
        */
-        static function delete_transient($transient)
+        public static function delete_transient($transient)
         {
 
             if (delete_transient($transient)) {
@@ -120,7 +122,7 @@ if (! class_exists('TagGroups_Transients')) {
        * @param  integer $expiration
        * @return void
        */
-        static function set_transient($transient, $value, $expiration = null)
+        public static function set_transient($transient, $value, $expiration = null)
         {
 
             if (strlen($transient) > 172) {
@@ -143,7 +145,7 @@ if (! class_exists('TagGroups_Transients')) {
        * @param  string  $transient
        * @return mixed
        */
-        static function get_transient($transient)
+        public static function get_transient($transient)
         {
 
             $value = get_transient($transient);
@@ -166,7 +168,7 @@ if (! class_exists('TagGroups_Transients')) {
        * @param  string $substring Optional substring to match transient identifiers against
        * @return integer
        */
-        static function delete_all_transients($substring = '')
+        public static function delete_all_transients($substring = '')
         {
 
             $count = 0;
@@ -223,7 +225,7 @@ if (! class_exists('TagGroups_Transients')) {
        * @param string $substring
        * @return integer
        */
-        static function delete_all_expired_transients($substring = '')
+        public static function delete_all_expired_transients($substring = '')
         {
 
             $count = 0;
