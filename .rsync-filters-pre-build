@@ -30,7 +30,7 @@
 - codeception.dist.yml
 - cs
 - dev-workspace
-- cache
+- /cache
 - .cache
 - dist
 - jsconfig.json

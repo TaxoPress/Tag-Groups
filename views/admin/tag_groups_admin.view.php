@@ -78,7 +78,7 @@
 
   var tagGroupsAjaxParameters = {"ajaxurl": "<?php echo esc_url($admin_url) ?>", "postsurl": "<?php echo esc_url($post_url) ?>", "tagsurl": "<?php echo esc_url($tags_url) ?>", "items_per_page": "<?php echo esc_attr($items_per_page) ?>", "show_parents": false, "isPremium": false};
   var tagGroupsData = {
-    tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
+    tag_groups_taxonomy: <?php echo wp_json_encode($taxonomies); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>,
   };
 
   jQuery(document).ready(function () {
@@ -106,7 +106,7 @@
           tag_groups_task: 'update',
           tag_groups_position: input.attr('data-position'),
           tag_groups_label: input.val(),
-          tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
+          tag_groups_taxonomy: <?php echo wp_json_encode($taxonomies); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>,
         };
         tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
         return false;
@@ -126,7 +126,7 @@
         tag_groups_task: 'update',
         tag_groups_position: input.attr('data-position'),
         tag_groups_label: input.val(),
-        tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
+        tag_groups_taxonomy: <?php echo wp_json_encode($taxonomies); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>,
       };
       tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
     });
@@ -143,7 +143,7 @@
           tag_groups_task: 'new',
           tag_groups_position: input.attr('data-position'),
           tag_groups_label: input.val(),
-          tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
+          tag_groups_taxonomy: <?php echo wp_json_encode($taxonomies); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>,
         };
         tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
       }
@@ -155,7 +155,7 @@
         tag_groups_task: 'new',
         tag_groups_position: input.attr('data-position'),
         tag_groups_label: input.val(),
-        tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
+        tag_groups_taxonomy: <?php echo wp_json_encode($taxonomies); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>,
       };
       tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
     });
@@ -171,7 +171,7 @@
           var tagGroupsData = {
             tag_groups_task: 'delete',
             tag_groups_position: position,
-            tag_groups_taxonomy: JSON.parse('<?php echo wp_json_encode($taxonomies) ?>'),
+            tag_groups_taxonomy: <?php echo wp_json_encode($taxonomies); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>,
           };
           tg_do_ajax(tagGroupsAjaxParameters, tagGroupsData, tagGroupsLabels);
 
