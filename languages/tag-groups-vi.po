@@ -1,0 +1,2294 @@
+# Copyright (C) 2026 TaxoPress
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tag Groups 2.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
+"PO-Revision-Date: 2026-06-15 13:42+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: tag-groups\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: vi\n"
+
+#: tag-groups.php:4
+#: dist/tag-groups/include/admin/class.admin.php:206
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:2
+#: dist/tag-groups/views/admin/new_tag_from_list.view.php:2
+#: include/admin/class.admin.php:206
+#: views/admin/edit_tag_main.view.php:2
+#: views/admin/new_tag_from_list.view.php:2
+#. Plugin Name of the plugin
+msgid "Tag Groups"
+msgstr "Nhóm Thẻ"
+
+#: tag-groups.php:5, fuzzy
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/tag-groups/"
+msgstr "https://wordpress.org/plugins/tag-groups/"
+
+#: tag-groups.php:6
+#. Description of the plugin
+msgid ""
+"Tag Groups allows you to organize your WordPress taxonomy terms and show "
+"them in clouds, tabs, accordions, tables, lists and much more."
+msgstr ""
+"Nhóm Thẻ cho phép bạn tổ chức các thuật ngữ taxonomy WordPress của mình và "
+"hiển thị chúng trong các đám mây, tab, accordion, bảng, danh sách và nhiều "
+"hơn nữa."
+
+#: tag-groups.php:7
+#. Author of the plugin
+msgid "TaxoPress"
+msgstr "TaxoPress"
+
+#: tag-groups.php:8, fuzzy
+#. Author URI of the plugin
+msgid "https://taxopress.com"
+msgstr "https://taxopress.com"
+
+#: dist/tag-groups/include/admin/class.admin.php:22
+#: include/admin/class.admin.php:22
+msgid "Home"
+msgstr "Trang Chủ"
+
+#: dist/tag-groups/include/admin/class.admin.php:26
+#: dist/tag-groups/include/admin/class.settings.php:827
+#: dist/tag-groups/include/admin/class.setup_wizard.php:98
+#: include/admin/class.admin.php:26
+#: include/admin/class.settings.php:827
+#: include/admin/class.setup_wizard.php:98
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+#: dist/tag-groups/include/admin/class.admin.php:33
+#: include/admin/class.admin.php:33
+msgid "Front End"
+msgstr "Giao Diện Người Dùng"
+
+#: dist/tag-groups/include/admin/class.admin.php:40
+#: include/admin/class.admin.php:40
+msgid "Back End"
+msgstr "Quản Trị"
+
+#: dist/tag-groups/include/admin/class.admin.php:47
+#: dist/tag-groups/include/admin/class.settings.php:935
+#: dist/tag-groups/views/admin/onboarding.view.php:1
+#: include/admin/class.admin.php:47
+#: include/admin/class.settings.php:935
+#: views/admin/onboarding.view.php:1
+msgid "First Steps"
+msgstr "Bước Đầu Tiên"
+
+#: dist/tag-groups/include/admin/class.admin.php:54
+#: dist/tag-groups/include/admin/class.settings.php:940
+#: include/admin/class.admin.php:54
+#: include/admin/class.settings.php:940
+msgid "Setup Wizard"
+msgstr "Trình Hướng Dẫn Thiết Lập"
+
+#: dist/tag-groups/include/admin/class.admin.php:61
+#: dist/tag-groups/include/admin/class.admin.php:940
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:95
+#: include/admin/class.admin.php:61
+#: include/admin/class.admin.php:940
+#: views/admin/settings_front_end_shortcodes.view.php:95
+msgid "Settings"
+msgstr "Cài Đặt"
+
+#: dist/tag-groups/include/admin/class.admin.php:87
+#: include/admin/class.admin.php:87
+msgid "Tag Group Admin"
+msgstr "Quản Trị Nhóm Thẻ"
+
+#: dist/tag-groups/include/admin/class.admin.php:434
+#: include/admin/class.admin.php:434
+msgid "The term has been removed from all groups."
+msgstr "Thuật ngữ đã bị xóa khỏi tất cả các nhóm."
+
+#: dist/tag-groups/include/admin/class.admin.php:565
+#: include/admin/class.admin.php:565
+msgid "Edit this item inline"
+msgstr "Chỉnh sửa mục này trực tiếp"
+
+#: dist/tag-groups/include/admin/class.admin.php:567
+#: include/admin/class.admin.php:567
+msgid "Quick&nbsp;Edit"
+msgstr "Chỉnh sửa Nhanh"
+
+#: dist/tag-groups/include/admin/class.admin.php:993
+#: include/admin/class.admin.php:994
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid ""
+"Please <a %s>click here to run the migration routines</a> to make sure we "
+"have migrated all tags."
+msgstr ""
+"Vui lòng <a %s>nhấn vào đây để chạy các quy trình di chuyển</a> để đảm bảo "
+"chúng tôi đã di chuyển tất cả các thẻ."
+
+#: dist/tag-groups/include/admin/class.export.php:144
+#: include/admin/class.export.php:144
+msgid ""
+"Your settings/groups and your terms have been exported. Please download the "
+"resulting files with right-click or ctrl-click:"
+msgstr ""
+"Cài đặt/nhóm của bạn và các thuật ngữ của bạn đã được xuất. Vui lòng tải "
+"xuống các tệp kết quả bằng cách nhấp chuột phải hoặc ctrl-click:"
+
+#: dist/tag-groups/include/admin/class.export.php:151
+#: include/admin/class.export.php:151
+msgid "Writing of the exported settings failed."
+msgstr "Việc ghi lại cài đặt xuất đã thất bại."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:176
+#: dist/tag-groups/include/admin/class.group_admin.php:180
+#: include/admin/class.group_admin.php:176
+#: include/admin/class.group_admin.php:180
+msgid "The groups have been sorted alphabetically."
+msgstr "Các nhóm đã được sắp xếp theo thứ tự chữ cái."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:188
+#: dist/tag-groups/include/admin/class.group_admin.php:207
+#: include/admin/class.group_admin.php:188
+#: include/admin/class.group_admin.php:209
+msgid "The label cannot be empty."
+msgstr "Nhãn không thể để trống."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:191
+#: include/admin/class.group_admin.php:192
+#. translators: %s is the tag group label
+#, php-format
+msgid ""
+"A tag group with the label '%s' already exists, or the label has not "
+"changed. Please choose another one or go back."
+msgstr ""
+"Một nhóm nhãn với nhãn '%s' đã tồn tại, hoặc nhãn chưa thay đổi. Vui lòng "
+"chọn nhãn khác hoặc quay lại."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:195
+#: include/admin/class.group_admin.php:197
+#. translators: %s is the tag group label
+#, php-format
+msgid "A new tag group with the label '%s' has been created!"
+msgstr "Một nhóm nhãn mới với nhãn '%s' đã được tạo ra!"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:213
+#: include/admin/class.group_admin.php:216
+#. translators: %s is the tag group label
+#, php-format
+msgid "A tag group with the label '%s' already exists."
+msgstr "Một nhóm nhãn với nhãn '%s' đã tồn tại."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:225
+#: include/admin/class.group_admin.php:229
+#. translators: %s is the tag group label
+#, php-format
+msgid "The tag group with the label '%s' has been saved!"
+msgstr "Nhóm nhãn với nhãn '%s' đã được lưu!"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:231
+#: include/admin/class.group_admin.php:236
+#. translators: %1$s is the group ID, %2$s is the group label
+#, php-format
+msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
+msgstr "Một nhóm nhãn với id %1$s và nhãn '%2$s' đã bị xóa."
+
+#: dist/tag-groups/include/admin/class.import.php:81
+#: include/admin/class.import.php:81
+msgid "Error uploading the file."
+msgstr "Lỗi khi tải lên tệp."
+
+#: dist/tag-groups/include/admin/class.import.php:108
+#: include/admin/class.import.php:108
+msgid "Error reading the file."
+msgstr "Lỗi khi đọc tệp."
+
+#: dist/tag-groups/include/admin/class.import.php:146
+#: dist/tag-groups/include/admin/class.import.php:187
+#: include/admin/class.import.php:146
+#: include/admin/class.import.php:189
+msgid "Error parsing the file."
+msgstr "Lỗi khi phân tích tệp."
+
+#: dist/tag-groups/include/admin/class.import.php:165
+#: dist/tag-groups/include/admin/class.import.php:260
+#: include/admin/class.import.php:165
+#: include/admin/class.import.php:262
+msgid "date unknown"
+msgstr "ngày không xác định"
+
+#: dist/tag-groups/include/admin/class.import.php:169
+#: include/admin/class.import.php:170
+#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#, php-format
+msgid ""
+"Your settings and groups have been imported from the file %1$s (created "
+"with plugin version %2$s on %3$s)."
+msgstr ""
+"Cài đặt và nhóm của bạn đã được nhập từ tệp %1$s (được tạo bằng phiên bản "
+"plugin %2$s vào %3$s)."
+
+#: dist/tag-groups/include/admin/class.import.php:170
+#: include/admin/class.import.php:172
+#. translators: %d is the number of options
+#, php-format
+msgid "%d option was added or changed."
+msgid_plural "%d options were added or changed."
+msgstr[0] "%d tùy chọn đã được thêm hoặc thay đổi."
+
+#: dist/tag-groups/include/admin/class.import.php:264
+#: include/admin/class.import.php:267
+#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#, php-format
+msgid ""
+"Your terms have been imported from the file %1$s (created with plugin "
+"version %2$s on %3$s)."
+msgstr ""
+"Các thuật ngữ của bạn đã được nhập từ tệp %1$s (được tạo bằng phiên bản "
+"plugin %2$s vào %3$s)."
+
+#: dist/tag-groups/include/admin/class.import.php:265
+#: include/admin/class.import.php:269
+#. translators: %d is the number of terms processed
+#, php-format
+msgid "We processed %d term."
+msgid_plural "We processed %d terms."
+msgstr[0] "Chúng tôi đã xử lý %d thuật ngữ."
+
+#: dist/tag-groups/include/admin/class.import.php:266
+#: include/admin/class.import.php:271
+#. translators: %d is the number of terms saved
+#, php-format
+msgid "We saved %d term."
+msgid_plural "We saved %d terms."
+msgstr[0] "Chúng tôi đã lưu %d thuật ngữ."
+
+#: dist/tag-groups/include/admin/class.import.php:267
+#: include/admin/class.import.php:273
+#. translators: %d is the number of terms updated
+#, php-format
+msgid "The group info of %d term was updated."
+msgid_plural "The group info of %d terms was updated."
+msgstr[0] "Thông tin nhóm của %d thuật ngữ đã được cập nhật."
+
+#: dist/tag-groups/include/admin/class.settings.php:151
+#: dist/tag-groups/include/admin/class.settings.php:858
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:26
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:39
+#: include/admin/class.settings.php:151
+#: include/admin/class.settings.php:858
+#: views/admin/tag_groups_admin.view.php:26
+#: views/admin/tag_groups_admin.view.php:39
+msgid "Filters"
+msgstr "Bộ lọc"
+
+#: dist/tag-groups/include/admin/class.settings.php:153
+#: dist/tag-groups/include/admin/class.settings.php:958
+#: include/admin/class.settings.php:153
+#: include/admin/class.settings.php:958, fuzzy
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#: dist/tag-groups/include/admin/class.settings.php:156
+#: dist/tag-groups/include/admin/class.settings.php:965
+#: include/admin/class.settings.php:156
+#: include/admin/class.settings.php:965
+msgid "Multilingual"
+msgstr "Đa ngôn ngữ"
+
+#: dist/tag-groups/include/admin/class.settings.php:238
+#: dist/tag-groups/include/admin/class.settings.php:832
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:9
+#: include/admin/class.settings.php:238
+#: include/admin/class.settings.php:832
+#: views/admin/settings_front_end_shortcodes.view.php:9
+msgid "Shortcodes"
+msgstr "Mã ngắn"
+
+#: dist/tag-groups/include/admin/class.settings.php:239
+#: dist/tag-groups/include/admin/class.settings.php:846
+#: include/admin/class.settings.php:239
+#: include/admin/class.settings.php:846
+msgid "Themes and Appearance"
+msgstr "Chủ đề và Giao diện"
+
+#: dist/tag-groups/include/admin/class.settings.php:265
+#: include/admin/class.settings.php:265
+msgid "remove"
+msgstr "xóa"
+
+#: dist/tag-groups/include/admin/class.settings.php:265
+#: include/admin/class.settings.php:265
+msgid "(recommended)"
+msgstr "(đề xuất)"
+
+#: dist/tag-groups/include/admin/class.settings.php:266
+#: include/admin/class.settings.php:266
+msgid "keep"
+msgstr "giữ"
+
+#: dist/tag-groups/include/admin/class.settings.php:267
+#: include/admin/class.settings.php:267
+msgid "use unfiltered_html filter"
+msgstr "sử dụng bộ lọc unfiltered_html"
+
+#: dist/tag-groups/include/admin/class.settings.php:317
+#: dist/tag-groups/include/admin/class.settings.php:945
+#: include/admin/class.settings.php:317
+#: include/admin/class.settings.php:945
+msgid "First Aid"
+msgstr "Cấp cứu"
+
+#: dist/tag-groups/include/admin/class.settings.php:318
+#: include/admin/class.settings.php:318, fuzzy
+msgid "REST API"
+msgstr "REST API"
+
+#: dist/tag-groups/include/admin/class.settings.php:319
+#: dist/tag-groups/include/admin/class.settings.php:873
+#: include/admin/class.settings.php:319
+#: include/admin/class.settings.php:873
+msgid "System Information"
+msgstr "Thông tin Hệ thống"
+
+#: dist/tag-groups/include/admin/class.settings.php:320
+#: dist/tag-groups/include/admin/class.settings.php:887
+#: include/admin/class.settings.php:320
+#: include/admin/class.settings.php:887
+msgid "Debugging"
+msgstr "Gỡ lỗi"
+
+#: dist/tag-groups/include/admin/class.settings.php:321
+#: dist/tag-groups/include/admin/class.settings.php:863
+#: include/admin/class.settings.php:321
+#: include/admin/class.settings.php:863
+msgid "Export/Import"
+msgstr "Xuất/Nhập"
+
+#: dist/tag-groups/include/admin/class.settings.php:322
+#: dist/tag-groups/include/admin/class.settings.php:868
+#: include/admin/class.settings.php:322
+#: include/admin/class.settings.php:868
+msgid "Reset"
+msgstr "Đặt lại"
+
+#: dist/tag-groups/include/admin/class.settings.php:324
+#: include/admin/class.settings.php:324
+msgid "Licences"
+msgstr "Giấy phép"
+
+#: dist/tag-groups/include/admin/class.settings.php:422
+#: include/admin/class.settings.php:422
+msgid "Transients"
+msgstr "Tạm thời"
+
+#: dist/tag-groups/include/admin/class.settings.php:423
+#: include/admin/class.settings.php:423
+msgid "Database"
+msgstr "Cơ sở dữ liệu"
+
+#: dist/tag-groups/include/admin/class.settings.php:424
+#: include/admin/class.settings.php:424
+msgid "Filesystem"
+msgstr "Hệ thống tệp"
+
+#: dist/tag-groups/include/admin/class.settings.php:425
+#: include/admin/class.settings.php:425
+msgid "WP Object Cache"
+msgstr "Bộ nhớ WP Object Cache"
+
+#: dist/tag-groups/include/admin/class.settings.php:548
+#: dist/tag-groups/include/admin/class.settings.php:604
+#: dist/tag-groups/include/admin/class.settings.php:642
+#: dist/tag-groups/include/admin/class.settings.php:676
+#: dist/tag-groups/include/admin/class.settings.php:691
+#: dist/tag-groups/include/admin/class.settings.php:704
+#: dist/tag-groups/include/admin/class.settings.php:717
+#: dist/tag-groups/include/admin/class.settings.php:786
+#: include/admin/class.settings.php:548
+#: include/admin/class.settings.php:604
+#: include/admin/class.settings.php:642
+#: include/admin/class.settings.php:676
+#: include/admin/class.settings.php:691
+#: include/admin/class.settings.php:704
+#: include/admin/class.settings.php:717
+#: include/admin/class.settings.php:786
+msgid "Your settings have been saved."
+msgstr "Cài đặt của bạn đã được lưu."
+
+#: dist/tag-groups/include/admin/class.settings.php:566
+#: include/admin/class.settings.php:566
+msgid "Your settings has been saved."
+msgstr "Cài đặt của bạn đã được lưu."
+
+#: dist/tag-groups/include/admin/class.settings.php:584
+#: include/admin/class.settings.php:584
+msgid "All groups have been deleted and assignments reset."
+msgstr "Tất cả các nhóm đã bị xóa và phân công đã được đặt lại."
+
+#: dist/tag-groups/include/admin/class.settings.php:733
+#: include/admin/class.settings.php:733
+msgid "The filter on the tags page has been reset to show all tags."
+msgstr "Bộ lọc trên trang thẻ đã được đặt lại để hiển thị tất cả các thẻ."
+
+#: dist/tag-groups/include/admin/class.settings.php:829
+#: include/admin/class.settings.php:829
+msgid "tag groups"
+msgstr "nhóm thẻ"
+
+#: dist/tag-groups/include/admin/class.settings.php:835
+#: dist/tag-groups/include/admin/class.settings.php:849
+#: dist/tag-groups/include/admin/class.settings.php:904
+#: include/admin/class.settings.php:835
+#: include/admin/class.settings.php:849
+#: include/admin/class.settings.php:904
+msgid "tag cloud"
+msgstr "đám mây thẻ"
+
+#: dist/tag-groups/include/admin/class.settings.php:836
+#: include/admin/class.settings.php:836
+msgid "group info"
+msgstr "thông tin nhóm"
+
+#: dist/tag-groups/include/admin/class.settings.php:837
+#: include/admin/class.settings.php:837
+msgid "sidebar widget"
+msgstr "widget thanh bên"
+
+#: dist/tag-groups/include/admin/class.settings.php:838
+#: include/admin/class.settings.php:838, fuzzy
+msgid "accordion"
+msgstr "accordion"
+
+#: dist/tag-groups/include/admin/class.settings.php:839
+#: include/admin/class.settings.php:839
+msgid "tabs"
+msgstr "tab"
+
+#: dist/tag-groups/include/admin/class.settings.php:840
+#: include/admin/class.settings.php:840
+msgid "alphabetical"
+msgstr "theo thứ tự chữ cái"
+
+#: dist/tag-groups/include/admin/class.settings.php:841
+#: include/admin/class.settings.php:841
+msgid "post list"
+msgstr "danh sách bài viết"
+
+#: dist/tag-groups/include/admin/class.settings.php:853
+#: include/admin/class.settings.php:853
+msgid "colors"
+msgstr "màu sắc"
+
+#: dist/tag-groups/include/admin/class.settings.php:854
+#: include/admin/class.settings.php:854
+msgid "tag description"
+msgstr "mô tả thẻ"
+
+#: dist/tag-groups/include/admin/class.settings.php:860
+#: dist/tag-groups/include/admin/class.settings.php:952
+#: include/admin/class.settings.php:860
+#: include/admin/class.settings.php:952
+msgid "tag filter"
+msgstr "bộ lọc thẻ"
+
+#: dist/tag-groups/include/admin/class.settings.php:860
+#: include/admin/class.settings.php:860
+msgid "post filter"
+msgstr "bộ lọc bài viết"
+
+#: dist/tag-groups/include/admin/class.settings.php:865
+#: include/admin/class.settings.php:865
+msgid "backup"
+msgstr "sao lưu"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870
+msgid "remove plugin"
+msgstr "xóa plugin"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870
+msgid "remove data"
+msgstr "xóa dữ liệu"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870
+msgid "delete groups"
+msgstr "xóa nhóm"
+
+#: dist/tag-groups/include/admin/class.settings.php:876
+#: dist/tag-groups/include/admin/class.settings.php:890
+#: include/admin/class.settings.php:876
+#: include/admin/class.settings.php:890
+msgid "debugging"
+msgstr "gỡ lỗi"
+
+#: dist/tag-groups/include/admin/class.settings.php:877
+#: include/admin/class.settings.php:877
+msgid "PHP Version"
+msgstr "Phiên bản PHP"
+
+#: dist/tag-groups/include/admin/class.settings.php:878
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:21
+#: include/admin/class.settings.php:878
+#: views/admin/settings_troubleshooting_system.view.php:21
+msgid "Ajax Test"
+msgstr "Kiểm tra Ajax"
+
+#: dist/tag-groups/include/admin/class.settings.php:879
+#: dist/tag-groups/include/admin/class.settings.php:891
+#: dist/tag-groups/include/admin/class.settings.php:948
+#: include/admin/class.settings.php:879
+#: include/admin/class.settings.php:891
+#: include/admin/class.settings.php:948
+msgid "troubleshooting"
+msgstr "khắc phục sự cố"
+
+#: dist/tag-groups/include/admin/class.settings.php:880
+#: include/admin/class.settings.php:880
+msgid "benchmarks"
+msgstr "bảng điểm"
+
+#: dist/tag-groups/include/admin/class.settings.php:881
+#: include/admin/class.settings.php:881
+msgid "speed test"
+msgstr "kiểm tra tốc độ"
+
+#: dist/tag-groups/include/admin/class.settings.php:882
+#: dist/tag-groups/include/admin/class.settings.php:892
+#: include/admin/class.settings.php:882
+#: include/admin/class.settings.php:892
+msgid "error"
+msgstr "lỗi"
+
+#: dist/tag-groups/include/admin/class.settings.php:883
+#: dist/tag-groups/include/admin/class.settings.php:893
+#: include/admin/class.settings.php:883
+#: include/admin/class.settings.php:893
+msgid "testing"
+msgstr "kiểm tra"
+
+#: dist/tag-groups/include/admin/class.settings.php:894
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:950
+#: include/admin/class.settings.php:894
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:950
+msgid "help"
+msgstr "trợ giúp"
+
+#: dist/tag-groups/include/admin/class.settings.php:898
+#: include/admin/class.settings.php:898
+msgid "Tag Groups Pro"
+msgstr "Nhóm Thẻ Chuyên Nghiệp"
+
+#: dist/tag-groups/include/admin/class.settings.php:901
+#: include/admin/class.settings.php:901
+msgid "upgrade"
+msgstr "nâng cấp"
+
+#: dist/tag-groups/include/admin/class.settings.php:902
+#: include/admin/class.settings.php:902
+msgid "more groups"
+msgstr "nhiều nhóm hơn"
+
+#: dist/tag-groups/include/admin/class.settings.php:903
+#: include/admin/class.settings.php:903
+msgid "posts"
+msgstr "bài viết"
+
+#: dist/tag-groups/include/admin/class.settings.php:905
+#: include/admin/class.settings.php:905
+msgid "filter"
+msgstr "lọc"
+
+#: dist/tag-groups/include/admin/class.settings.php:906
+#: include/admin/class.settings.php:906
+msgid "animated"
+msgstr "hoạt hình"
+
+#: dist/tag-groups/include/admin/class.settings.php:907
+#: include/admin/class.settings.php:907
+msgid "searchable"
+msgstr "có thể tìm kiếm"
+
+#: dist/tag-groups/include/admin/class.settings.php:915
+#: include/admin/class.settings.php:915
+msgid "Info"
+msgstr "Thông tin"
+
+#: dist/tag-groups/include/admin/class.settings.php:918
+#: include/admin/class.settings.php:918
+msgid "author"
+msgstr "tác giả"
+
+#: dist/tag-groups/include/admin/class.settings.php:919
+#: include/admin/class.settings.php:919
+msgid "version"
+msgstr "phiên bản"
+
+#: dist/tag-groups/include/admin/class.settings.php:920
+#: include/admin/class.settings.php:920
+msgid "contact"
+msgstr "liên hệ"
+
+#: dist/tag-groups/include/admin/class.settings.php:921
+#: include/admin/class.settings.php:921
+msgid "about"
+msgstr "giới thiệu"
+
+#: dist/tag-groups/include/admin/class.settings.php:925
+#: include/admin/class.settings.php:925
+msgid "Licenses"
+msgstr "Giấy phép"
+
+#: dist/tag-groups/include/admin/class.settings.php:927
+#: include/admin/class.settings.php:927
+msgid "Credits"
+msgstr "Tín dụng"
+
+#: dist/tag-groups/include/admin/class.settings.php:930
+#: include/admin/class.settings.php:930
+msgid "Development News"
+msgstr "Tin tức Phát triển"
+
+#: dist/tag-groups/include/admin/class.settings.php:932
+#: include/admin/class.settings.php:932, fuzzy
+msgid "blog"
+msgstr "blog"
+
+#: dist/tag-groups/include/admin/class.settings.php:932
+#: include/admin/class.settings.php:932
+msgid "updates"
+msgstr "cập nhật"
+
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:942
+msgid "getting started"
+msgstr "bắt đầu"
+
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:942
+msgid "introduction"
+msgstr "giới thiệu"
+
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:942
+msgid "sample"
+msgstr "mẫu"
+
+#: dist/tag-groups/include/admin/class.settings.php:949
+#: include/admin/class.settings.php:949
+msgid "migrate"
+msgstr "di chuyển"
+
+#: dist/tag-groups/include/admin/class.settings.php:951
+#: include/admin/class.settings.php:951
+msgid "problem"
+msgstr "vấn đề"
+
+#: dist/tag-groups/include/admin/class.settings.php:960
+#: include/admin/class.settings.php:960
+msgid "live block preview"
+msgstr "xem trước khối trực tiếp"
+
+#: dist/tag-groups/include/admin/class.settings.php:967
+#: include/admin/class.settings.php:967
+msgid "translation"
+msgstr "dịch thuật"
+
+#: dist/tag-groups/include/admin/class.settings.php:998
+#: include/admin/class.settings.php:998
+msgid "Migrating the term meta"
+msgstr "Di chuyển các meta thuật ngữ"
+
+#: dist/tag-groups/include/admin/class.settings.php:999
+#: include/admin/class.settings.php:999
+msgid "Fixing incorrect tag groups"
+msgstr "Sửa các nhóm thẻ không chính xác"
+
+#: dist/tag-groups/include/admin/class.settings.php:1000
+#: include/admin/class.settings.php:1000
+msgid "Fixing incorrect groups in term meta"
+msgstr "Sửa các nhóm không chính xác trong meta thuật ngữ"
+
+#: dist/tag-groups/include/admin/class.settings.php:1001
+#: include/admin/class.settings.php:1001
+msgid "Sorting groups in term meta"
+msgstr "Sắp xếp các nhóm trong meta thuật ngữ"
+
+#: dist/tag-groups/include/admin/class.settings.php:1002
+#: include/admin/class.settings.php:1002
+msgid "Checking the tag names"
+msgstr "Kiểm tra tên thẻ"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:94
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:12
+#: include/admin/class.setup_wizard.php:94
+#: views/admin/setup_wizard_start.view.php:12
+msgid "Start"
+msgstr "Bắt đầu"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:102
+#: include/admin/class.setup_wizard.php:102
+msgid "Sample Content"
+msgstr "Nội dung mẫu"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:122
+#: include/admin/class.setup_wizard.php:122
+msgid "Sample Group A"
+msgstr "Nhóm mẫu A"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:123
+#: include/admin/class.setup_wizard.php:123
+msgid "Sample Group B"
+msgstr "Nhóm mẫu B"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:124
+#: include/admin/class.setup_wizard.php:124
+msgid "Sample Group C"
+msgstr "Nhóm mẫu C"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:140
+#: include/admin/class.setup_wizard.php:140
+msgid "First Sample Tag"
+msgstr "Thẻ mẫu đầu tiên"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:141
+#: include/admin/class.setup_wizard.php:141
+msgid "Second Sample Tag"
+msgstr "Thẻ mẫu thứ hai"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:142
+#: include/admin/class.setup_wizard.php:142
+msgid "Third Sample Tag"
+msgstr "Thẻ mẫu thứ ba"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:160
+#: include/admin/class.setup_wizard.php:160
+msgid "Create a draft sample page with Gutenberg blocks."
+msgstr "Tạo một trang mẫu nháp với các khối Gutenberg."
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:162
+#: include/admin/class.setup_wizard.php:162
+msgid "Create a draft sample page with shortcodes."
+msgstr "Tạo một trang mẫu nháp với các mã ngắn."
+
+#: dist/tag-groups/include/class.loader.php:159
+#: include/class.loader.php:160
+#. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
+#, php-format
+msgid "The plugin %1$s requires WordPress %2$s to function properly."
+msgstr "Plugin %1$s yêu cầu WordPress %2$s để hoạt động đúng cách."
+
+#: dist/tag-groups/include/class.loader.php:159
+#: include/class.loader.php:160
+#. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
+msgid "Please upgrade WordPress and then try again."
+msgstr "Vui lòng nâng cấp WordPress và thử lại."
+
+#: dist/tag-groups/include/helpers/class.groups.php:182
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:8
+#: dist/tag-groups/views/admin/new_tag_from_list.view.php:5
+#: dist/tag-groups/views/partials/quick_edit_tag.view.php:7
+#: include/helpers/class.groups.php:182
+#: views/admin/edit_tag_main.view.php:8
+#: views/admin/new_tag_from_list.view.php:5
+#: views/partials/quick_edit_tag.view.php:7
+msgid "not assigned"
+msgstr "chưa được chỉ định"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:43
+#, php-format
+msgid ""
+"You're using Tag Groups Free. The Pro version has more features and "
+"support. %sUpgrade to Pro%s"
+msgstr ""
+"Bạn đang sử dụng Tag Groups Free. Phiên bản Pro có nhiều tính năng và hỗ "
+"trợ hơn. %sNâng cấp lên Pro%s"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:71
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:115
+#: includes-core/TagGroupsCoreAdmin.php:72
+#: includes-core/TagGroupsCoreAdmin.php:116
+msgid "Upgrade to Pro"
+msgstr "Nâng cấp lên Pro"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:88
+#: includes-core/TagGroupsCoreAdmin.php:89
+msgid "Upgrade to Tag Groups Pro"
+msgstr "Nâng cấp lên Tag Groups Pro"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:93
+#: includes-core/TagGroupsCoreAdmin.php:94
+msgid "Enhance the power of Tag Groups with the Pro version:"
+msgstr "Tăng cường sức mạnh của Tag Groups với phiên bản Pro:"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:96
+#: includes-core/TagGroupsCoreAdmin.php:97
+msgid "21 Shortcodes"
+msgstr "21 Mã ngắn"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:97
+#: includes-core/TagGroupsCoreAdmin.php:98
+msgid "18 Gutenberg Blocks"
+msgstr "18 Khối Gutenberg"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:99
+msgid "Table Tag Cloud"
+msgstr "Đám mây thẻ bảng"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:99
+#: includes-core/TagGroupsCoreAdmin.php:100
+msgid "Simple Tag Cloud"
+msgstr "Đám mây thẻ đơn giản"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:100
+#: includes-core/TagGroupsCoreAdmin.php:101
+msgid "Shuffle Box"
+msgstr "Hộp xáo trộn"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:101
+#: includes-core/TagGroupsCoreAdmin.php:102
+msgid "Caching"
+msgstr "Bộ đệm"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:102
+#: includes-core/TagGroupsCoreAdmin.php:103
+msgid "Multiple Groups Per Tag"
+msgstr "Nhiều nhóm cho mỗi thẻ"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:103
+#: includes-core/TagGroupsCoreAdmin.php:104
+msgid "Tag Cloud Search"
+msgstr "Tìm kiếm đám mây thẻ"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:104
+#: includes-core/TagGroupsCoreAdmin.php:105
+msgid "Toggle Post Filter"
+msgstr "Chuyển đổi bộ lọc bài viết"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:105
+#: includes-core/TagGroupsCoreAdmin.php:106
+msgid "Dynamic Post Filter"
+msgstr "Bộ lọc bài viết động"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:106
+#: includes-core/TagGroupsCoreAdmin.php:107
+msgid "Post List"
+msgstr "Danh sách bài viết"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:107
+#: includes-core/TagGroupsCoreAdmin.php:108
+msgid "Tag Meta Box"
+msgstr "Hộp meta thẻ"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:108
+#: includes-core/TagGroupsCoreAdmin.php:109
+msgid "Post Tags in Groups"
+msgstr "Thẻ bài viết theo nhóm"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:109
+#: includes-core/TagGroupsCoreAdmin.php:110
+msgid "Permissions"
+msgstr "Quyền truy cập"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:110
+#: includes-core/TagGroupsCoreAdmin.php:111
+msgid "Default Groups"
+msgstr "Nhóm mặc định"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:111
+#: includes-core/TagGroupsCoreAdmin.php:112
+msgid "WooCommerce Attributes"
+msgstr "Thuộc tính WooCommerce"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:112
+#: includes-core/TagGroupsCoreAdmin.php:113
+msgid "Parent Group Level"
+msgstr "Cấp độ nhóm cha"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:122
+#: includes-core/TagGroupsCoreAdmin.php:123
+msgid "Need Tag Groups Support?"
+msgstr "Cần hỗ trợ nhóm thẻ không?"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:127
+#: includes-core/TagGroupsCoreAdmin.php:128
+msgid "If you need help or have a new feature request, let us know."
+msgstr "Nếu bạn cần trợ giúp hoặc có yêu cầu tính năng mới, hãy cho chúng tôi biết."
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:129
+#: includes-core/TagGroupsCoreAdmin.php:130
+msgid "Request Support"
+msgstr "Yêu cầu hỗ trợ"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:138
+#: includes-core/TagGroupsCoreAdmin.php:139
+msgid "Detailed documentation is also available on the plugin website."
+msgstr "Tài liệu chi tiết cũng có sẵn trên trang web của plugin."
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:140
+#: includes-core/TagGroupsCoreAdmin.php:141
+msgid "View Knowledge Base"
+msgstr "Xem Cơ sở Kiến thức"
+
+#: dist/tag-groups/tag-groups.php:159
+#: tag-groups.php:159
+msgid "The free Tag Groups plugin cannot be active together with Tag Groups Pro."
+msgstr "Plugin nhóm thẻ miễn phí không thể hoạt động cùng với Tag Groups Pro."
+
+#: dist/tag-groups/tag-groups.php:159
+#: tag-groups.php:159
+msgid "more information"
+msgstr "thêm thông tin"
+
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
+#: views/admin/edit_tag_main.view.php:31
+msgid "Edit tag groups"
+msgstr "Chỉnh sửa nhóm thẻ"
+
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
+#: views/admin/edit_tag_main.view.php:31
+msgid "Clicking will leave this page without saving."
+msgstr "Nhấp vào đây sẽ rời khỏi trang này mà không lưu."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:3
+#: views/admin/onboarding.view.php:3
+#. translators: %s is the plugin name
+#, php-format
+msgid "Welcome to %s!"
+msgstr "Chào mừng đến với %s!"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:4
+#: views/admin/onboarding.view.php:4
+#. translators: %s is the plugin name
+msgid ""
+"The plugin is ready for use. If you need some assistance, we can walk you "
+"through the basic steps."
+msgstr ""
+"Plugin đã sẵn sàng để sử dụng. Nếu bạn cần trợ giúp, chúng tôi có thể hướng "
+"dẫn bạn qua các bước cơ bản."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:6
+#: views/admin/onboarding.view.php:6
+msgid "Start the Setup Wizard"
+msgstr "Bắt đầu Trình hướng dẫn thiết lập"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:10
+#: views/admin/onboarding.view.php:10
+msgid "Or click here if you prefer to do it on your own."
+msgstr "Hoặc nhấp vào đây nếu bạn muốn tự làm."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:13
+#: views/admin/onboarding.view.php:13
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid ""
+"Go to the <span class=\"dashicons dashicons-tag\"></span>&nbsp;Tag Groups "
+"<a %s>taxonomy settings</a> and <b>select the taxonomy</b> (tag type) of "
+"your tags. In most cases just leave the default: Tags (post_tag)."
+msgstr ""
+"Đi đến <span class=\"dashicons dashicons-tag\"></span>&nbsp;Cài đặt <a "
+"%s>taxonomy</a> và <b>chọn taxonomy</b> (loại thẻ) của các thẻ của bạn. "
+"Trong hầu hết các trường hợp, chỉ cần để mặc định: Thẻ (post_tag)."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:14
+#: views/admin/onboarding.view.php:14
+#. translators: %s is the href attribute with URL
+msgid "Go to the tag groups admin page and <b>create some groups</b>."
+msgstr "Đi đến trang quản trị nhóm thẻ và <b>tạo một số nhóm</b>."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:14
+#: views/admin/onboarding.view.php:14
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "You can find these pages listed on your <a %s>Tag Groups home page</a>."
+msgstr ""
+"Bạn có thể tìm thấy các trang này được liệt kê trên <a %s>trang chính của "
+"Nhóm Thẻ</a>."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:15
+#: views/admin/onboarding.view.php:15
+#. translators: %s is the href attribute with URL
+msgid "Go to your tags and <b>assign them to these groups</b>."
+msgstr "Đi đến các thẻ của bạn và <b>gán chúng vào những nhóm này</b>."
+
+#: dist/tag-groups/views/admin/post_filter.view.php:3
+#: views/admin/post_filter.view.php:3
+msgid "Filter by tag group"
+msgstr "Lọc theo nhóm thẻ"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:2
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:3
+#: views/admin/sample_page.view.php:2
+#: views/admin/sample_page_gutenberg.view.php:3
+#. translators: %s is the author display name
+#, php-format
+msgid ""
+"%s created this sample page in the Setup Wizard of the <b>Tag Groups</b> "
+"plugin. You can safely edit and delete it or keep it for future reference."
+msgstr ""
+"%s đã tạo trang mẫu này trong Trình hướng dẫn thiết lập của <b>Nhóm Thẻ</b> "
+"plugin. Bạn có thể an toàn chỉnh sửa và xóa nó hoặc giữ lại để tham khảo "
+"trong tương lai."
+
+#: dist/tag-groups/views/admin/sample_page.view.php:6
+#: views/admin/sample_page.view.php:6
+msgid ""
+"The following shortcodes use a variety of parameters so that you can get an "
+"idea of the options. Feel free to generate a new sample page with more "
+"features after upgrading the plugin."
+msgstr ""
+"Các shortcode sau sử dụng nhiều tham số khác nhau để bạn có thể hình dung "
+"về các tùy chọn. Hãy thoải mái tạo một trang mẫu mới với nhiều tính năng "
+"hơn sau khi nâng cấp plugin."
+
+#: dist/tag-groups/views/admin/sample_page.view.php:10
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:21
+#: views/admin/sample_page.view.php:10
+#: views/admin/sample_page_gutenberg.view.php:21
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Please find links to the documentation in the <a %s>Tag Groups settings</a>."
+msgstr "Vui lòng tìm liên kết đến tài liệu trong <a %s>cài đặt Nhóm Thẻ</a>."
+
+#: dist/tag-groups/views/admin/sample_page.view.php:14
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:30
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:11
+#: views/admin/sample_page.view.php:14
+#: views/admin/sample_page_gutenberg.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:11
+msgid "Tabbed Tag Cloud"
+msgstr "Đám mây thẻ theo tab"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:20
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:40
+#: views/admin/sample_page.view.php:20
+#: views/admin/sample_page_gutenberg.view.php:40
+msgid "Accordion Tag Cloud"
+msgstr "Đám mây thẻ theo accordion"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:26
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:50
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:44
+#: views/admin/sample_page.view.php:26
+#: views/admin/sample_page_gutenberg.view.php:50
+#: views/admin/settings_front_end_shortcodes.view.php:44
+msgid "Alphabetical Tag Cloud"
+msgstr "Đám mây thẻ theo mẫu tự"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:32
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:60
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:33
+#: views/admin/sample_page.view.php:32
+#: views/admin/sample_page_gutenberg.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:33
+msgid "Tag List"
+msgstr "Danh sách thẻ"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:38
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:70
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:55
+#: views/admin/sample_page.view.php:38
+#: views/admin/sample_page_gutenberg.view.php:70
+#: views/admin/settings_front_end_shortcodes.view.php:55
+msgid "Alphabetical Tag Index"
+msgstr "Chỉ mục thẻ theo mẫu tự"
+
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:9
+#: views/admin/sample_page_gutenberg.view.php:9
+msgid ""
+"The following blocks use a variety of parameters so that you can get an "
+"idea of the options. Feel free to generate a new sample page with more "
+"features after upgrading the plugin."
+msgstr ""
+"Các khối sau sử dụng nhiều tham số khác nhau để bạn có thể hình dung về các "
+"tùy chọn. Hãy thoải mái tạo một trang mẫu mới với nhiều tính năng hơn sau "
+"khi nâng cấp plugin."
+
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:15
+#: views/admin/sample_page_gutenberg.view.php:15
+msgid ""
+"This page was created while you had the Gutenberg editor enabled. Therefore "
+"the features only display while Gutenberg is active."
+msgstr ""
+"Trang này được tạo ra khi bạn đã bật trình chỉnh sửa Gutenberg. Do đó, các "
+"tính năng chỉ hiển thị khi Gutenberg đang hoạt động."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:9
+#: views/admin/settings_back_end_filters.view.php:9
+msgid "Display filter on the \"Posts\" screen."
+msgstr "Hiển thị bộ lọc trên màn hình \"Bài viết\"."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:10
+#: views/admin/settings_back_end_filters.view.php:10
+msgid ""
+"Add a pull-down menu to the filters above the list of posts. If you filter "
+"posts by tag groups, then only items will be shown that have tags (terms) "
+"in that particular group. This feature can be turned off so that the menu "
+"won't obstruct your screen if you use a high number of groups. May not work "
+"with all taxonomies."
+msgstr ""
+"Thêm một menu thả xuống vào các bộ lọc ở trên danh sách bài viết. Nếu bạn "
+"lọc bài viết theo nhóm thẻ, thì chỉ những mục có thẻ (thuật ngữ) trong nhóm "
+"đó mới được hiển thị. Tính năng này có thể được tắt để menu không cản trở "
+"màn hình của bạn nếu bạn sử dụng một số lượng lớn nhóm. Có thể không hoạt "
+"động với tất cả các taxonomy."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:17
+#: views/admin/settings_back_end_filters.view.php:17
+msgid "Display filter on the \"Tags\" screen."
+msgstr "Hiển thị bộ lọc trên màn hình \"Thẻ\"."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:18
+#: views/admin/settings_back_end_filters.view.php:18
+msgid ""
+"Add a filter to the list of tags. Disable it here if it conflicts with "
+"other plugins or themes."
+msgstr ""
+"Thêm một bộ lọc vào danh sách thẻ. Vô hiệu hóa nó ở đây nếu nó xung đột với "
+"các plugin hoặc chủ đề khác."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:23
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:15
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:15
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:116
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:23
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:24
+#: views/admin/settings_back_end_filters.view.php:23
+#: views/admin/settings_back_end_gutenberg.view.php:15
+#: views/admin/settings_back_end_multilingual.view.php:15
+#: views/admin/settings_front_end_shortcodes.view.php:116
+#: views/admin/settings_rest_api.view.php:23
+#: views/admin/settings_tools_reset.view.php:24
+msgid "Save Settings"
+msgstr "Lưu cài đặt"
+
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:9
+#: views/admin/settings_back_end_gutenberg.view.php:9
+msgid "Gutenberg block preview"
+msgstr "Xem trước khối Gutenberg"
+
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:10
+#: views/admin/settings_back_end_gutenberg.view.php:10
+msgid ""
+"Some blocks can show an approximate preview in the Gutenberg editor. If you "
+"deactivate this option, then all blocks will show a static icon with text."
+msgstr ""
+"Một số khối có thể hiển thị một bản xem trước gần đúng trong trình chỉnh "
+"sửa Gutenberg. Nếu bạn vô hiệu hóa tùy chọn này, thì tất cả các khối sẽ "
+"hiển thị một biểu tượng tĩnh với văn bản."
+
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:9
+#: views/admin/settings_back_end_multilingual.view.php:9
+msgid "Keep groups of translations in sync"
+msgstr "Giữ các nhóm bản dịch đồng bộ"
+
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:10
+#: views/admin/settings_back_end_multilingual.view.php:10
+msgid ""
+"If you activate this option, we try to sync the groups across all language "
+"versions of a tag when you save it. Deactivate it to set groups "
+"independently."
+msgstr ""
+"Nếu bạn kích hoạt tùy chọn này, chúng tôi sẽ cố gắng đồng bộ hóa các nhóm "
+"trên tất cả các phiên bản ngôn ngữ của một thẻ khi bạn lưu nó. Vô hiệu hóa "
+"nó để đặt các nhóm độc lập."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:4
+#: views/admin/settings_front_end_shortcodes.view.php:4
+msgid ""
+"All Tag Groups features are available as Gutenberg blocks. You can also use "
+"shortcodes."
+msgstr ""
+"Tất cả các tính năng của Nhóm Thẻ đều có sẵn dưới dạng các khối Gutenberg. "
+"Bạn cũng có thể sử dụng shortcode."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:8
+#: views/admin/settings_front_end_shortcodes.view.php:8
+msgid "Click on the features for more information."
+msgstr "Nhấp vào các tính năng để biết thêm thông tin."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:15
+#: views/admin/settings_front_end_shortcodes.view.php:15
+msgid "Display the tags in a tabbed tag cloud."
+msgstr "Hiển thị các thẻ trong một đám mây thẻ theo tab."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:16
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:27
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:38
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:49
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:60
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:71
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:84
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:89
+#: views/admin/settings_front_end_shortcodes.view.php:16
+#: views/admin/settings_front_end_shortcodes.view.php:27
+#: views/admin/settings_front_end_shortcodes.view.php:38
+#: views/admin/settings_front_end_shortcodes.view.php:49
+#: views/admin/settings_front_end_shortcodes.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:71
+#: views/admin/settings_front_end_shortcodes.view.php:84
+#: views/admin/settings_front_end_shortcodes.view.php:89
+msgid "Example"
+msgstr "Ví dụ"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:18
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:29
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:40
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:51
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:62
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:73
+#: views/admin/settings_front_end_shortcodes.view.php:18
+#: views/admin/settings_front_end_shortcodes.view.php:29
+#: views/admin/settings_front_end_shortcodes.view.php:40
+#: views/admin/settings_front_end_shortcodes.view.php:51
+#: views/admin/settings_front_end_shortcodes.view.php:62
+#: views/admin/settings_front_end_shortcodes.view.php:73
+msgid "Parameters"
+msgstr "Tham số"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:19
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:30
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:41
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:52
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:63
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:74
+#: views/admin/settings_front_end_shortcodes.view.php:19
+#: views/admin/settings_front_end_shortcodes.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:41
+#: views/admin/settings_front_end_shortcodes.view.php:52
+#: views/admin/settings_front_end_shortcodes.view.php:63
+#: views/admin/settings_front_end_shortcodes.view.php:74
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Please find the parameters in the <a %s>documentation</a>."
+msgstr "Vui lòng tìm các tham số trong <a %s>tài liệu</a>."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:22
+#: views/admin/settings_front_end_shortcodes.view.php:22, fuzzy
+msgid "Accordion"
+msgstr "Accordion"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:26
+#: views/admin/settings_front_end_shortcodes.view.php:26
+msgid "Display the tags in an accordion."
+msgstr "Hiển thị các thẻ trong một accordion."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:37
+#: views/admin/settings_front_end_shortcodes.view.php:37
+msgid "Display the tags in lists under tag groups."
+msgstr "Hiển thị các thẻ trong danh sách dưới các nhóm thẻ."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
+#: views/admin/settings_front_end_shortcodes.view.php:48
+msgid "Display the tags in tabbed tag cloud with first letters as tabs."
+msgstr ""
+"Hiển thị các thẻ trong đám mây thẻ theo tab với các chữ cái đầu tiên làm "
+"tab."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
+#: views/admin/settings_front_end_shortcodes.view.php:48
+#: views/admin/settings_front_end_shortcodes.view.php:59
+msgid "(Not tested with right-to-left languages.)"
+msgstr "(Chưa được thử nghiệm với các ngôn ngữ viết từ phải sang trái.)"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
+#: views/admin/settings_front_end_shortcodes.view.php:59
+msgid "Display the tags in a list with first letters as heading."
+msgstr "Hiển thị các thẻ trong một danh sách với các chữ cái đầu tiên làm tiêu đề."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:67
+#: views/admin/settings_front_end_shortcodes.view.php:67
+msgid "Group Information"
+msgstr "Thông tin nhóm"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:70
+#: views/admin/settings_front_end_shortcodes.view.php:70
+msgid "Display information about tag groups."
+msgstr "Hiển thị thông tin về các nhóm thẻ."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:82
+#: views/admin/settings_front_end_shortcodes.view.php:82
+msgid ""
+"The function <b>tag_groups_cloud</b> accepts the same parameters as the "
+"[tag_groups_cloud] shortcode, except for those that determine tabs and "
+"styling."
+msgstr ""
+"Hàm <b>tag_groups_cloud</b> chấp nhận các tham số giống như shortcode "
+"[tag_groups_cloud], ngoại trừ những tham số xác định các tab và phong cách."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:83
+#: views/admin/settings_front_end_shortcodes.view.php:83
+msgid "By default it returns a string with the html for a tabbed tag cloud."
+msgstr "Mặc định nó trả về một chuỗi với html cho một đám mây thẻ theo tab."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:88
+#: views/admin/settings_front_end_shortcodes.view.php:88
+msgid ""
+"If the optional second parameter is set to 'true', the function returns a "
+"multidimensional array containing tag groups and tags."
+msgstr ""
+"Nếu tham số thứ hai tùy chọn được đặt thành 'true', hàm trả về một mảng đa "
+"chiều chứa các nhóm thẻ và thẻ."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:102
+#: views/admin/settings_front_end_shortcodes.view.php:102
+msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
+msgstr ""
+"Bật shortcode trong các widget bên thanh (nếu không hiển thị bất cứ cách "
+"nào)."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:108
+#: views/admin/settings_front_end_shortcodes.view.php:108
+msgid "Always load shortcode scripts."
+msgstr "Luôn luôn tải các script shortcode."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:109
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:9
+#: dist/tag-groups/views/admin/settings_home.view.php:8
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/settings_front_end_shortcodes.view.php:109
+#: views/admin/settings_front_end_themes.view.php:9
+#: views/admin/settings_home.view.php:8
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Click for more information"
+msgstr "Nhấn để biết thêm thông tin"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:112
+#: views/admin/settings_front_end_shortcodes.view.php:112
+msgid ""
+"Turn off to load the scripts only on posts and pages where a shortcode "
+"appears."
+msgstr ""
+"Tắt để chỉ tải các script trên các bài viết và trang nơi mà một shortcode "
+"xuất hiện."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:113
+#: views/admin/settings_front_end_shortcodes.view.php:113
+msgid "Turn on if you use these shortcodes in widgets."
+msgstr "Bật nếu bạn sử dụng các shortcode này trong các widget."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:8
+#: views/admin/settings_front_end_themes.view.php:8
+msgid ""
+"Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
+"Cloud."
+msgstr ""
+"Tại đây bạn có thể chọn một chủ đề cho Đám Mây Thẻ Theo Tab và Đám Mây Thẻ "
+"Accordion."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:14
+#: views/admin/settings_front_end_themes.view.php:14
+msgid ""
+"New themes can be created with the <a "
+"href=\"http://jqueryui.com/themeroller/\" target=\"_blank\">jQuery UI "
+"ThemeRoller</a>:"
+msgstr ""
+"Các chủ đề mới có thể được tạo ra với <a "
+"href=\"http://jqueryui.com/themeroller/\" target=\"_blank\">jQuery UI "
+"ThemeRoller</a>:"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:16
+#: views/admin/settings_front_end_themes.view.php:16
+msgid ""
+"On the page \"Theme Roller\" you can customize all features or pick one set "
+"from the gallery. Finish with the \"download\" button."
+msgstr ""
+"Trên trang \"Theme Roller\" bạn có thể tùy chỉnh tất cả các tính năng hoặc "
+"chọn một bộ từ thư viện. Kết thúc với nút \"tải xuống\"."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:17
+#: views/admin/settings_front_end_themes.view.php:17
+msgid ""
+"On the next page (\"Download Builder\") you will need to select the version "
+"1.12.x and the components \"Widget\", \"Accordion\" and \"Tabs\". Make sure "
+"that before downloading you enter at the bottom as \"CSS Scope\" "
+"<b>.tag-groups-cloud</b> (including the dot)."
+msgstr ""
+"Trên trang tiếp theo (\"Download Builder\") bạn sẽ cần chọn phiên bản "
+"1.12.x và các thành phần \"Widget\", \"Accordion\" và \"Tabs\". Hãy chắc "
+"chắn rằng trước khi tải xuống bạn nhập ở dưới cùng như \"CSS Scope\" "
+"<b>.Tag-Groups-Cloud</b> (bao gồm cả dấu chấm)."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:18
+#: views/admin/settings_front_end_themes.view.php:18
+msgid ""
+"Then you unpack the downloaded zip file. You will need the \"images\" "
+"folder and the \"jquery-ui.theme.min.css\" file."
+msgstr ""
+"Sau đó, bạn giải nén tệp zip đã tải xuống. Bạn sẽ cần thư mục \"images\" và "
+"tệp \"jquery-ui.theme.min.css\"."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:19
+#: views/admin/settings_front_end_themes.view.php:19
+msgid ""
+"Create a new folder inside your <i>wp-content/uploads</i> folder (for "
+"example \"my-theme\") and copy there these two items."
+msgstr ""
+"Tạo một thư mục mới bên trong thư mục <i>wp-content/uploads</i> của bạn (ví "
+"dụ \"my-theme\") và sao chép hai mục này vào đó."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:20
+#: views/admin/settings_front_end_themes.view.php:20
+msgid "Enter the name of this new folder (for example \"my-theme\") below."
+msgstr "Nhập tên của thư mục mới này (ví dụ \"my-theme\") bên dưới."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:42
+#: views/admin/settings_front_end_themes.view.php:42
+msgid "own theme"
+msgstr "chủ đề riêng"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
+#: views/admin/settings_front_end_themes.view.php:52
+msgid "Don't load a theme."
+msgstr "Không tải một chủ đề."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
+#: views/admin/settings_front_end_themes.view.php:52
+msgid ""
+"Here you can turn off jQuery UI themes if your WordPress theme brings its "
+"own jQuery UI theme, in order to avoid conflicts."
+msgstr ""
+"Tại đây bạn có thể tắt các chủ đề jQuery UI nếu chủ đề WordPress của bạn "
+"mang theo chủ đề jQuery UI riêng, nhằm tránh xung đột."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:57
+#: views/admin/settings_front_end_themes.view.php:57
+msgid "Further options"
+msgstr "Các tùy chọn khác"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:65
+#: views/admin/settings_front_end_themes.view.php:65
+msgid "Use jQuery.  (Default is on. Other plugins might override this setting.)"
+msgstr ""
+"Sử dụng jQuery. (Mặc định là bật. Các plugin khác có thể ghi đè cài đặt "
+"này.)"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:73
+#: views/admin/settings_front_end_themes.view.php:73
+msgid "Tabs triggered by hovering mouse pointer (without clicking)."
+msgstr "Tabs được kích hoạt bằng cách di chuột (không cần nhấp)."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:80
+#: views/admin/settings_front_end_themes.view.php:80
+msgid "Collapsible tabs (toggle open/close)."
+msgstr "Các tab có thể thu gọn (chuyển đổi mở/đóng)."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:83
+#: views/admin/settings_front_end_themes.view.php:83
+msgid "HTML in tag description:"
+msgstr "HTML trong mô tả thẻ:"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
+#: views/admin/settings_front_end_themes.view.php:91
+msgid ""
+"By default the description appears in a tooltip when you hover the mouse "
+"over a tag in a tag cloud."
+msgstr ""
+"Theo mặc định, mô tả xuất hiện trong một tooltip khi bạn di chuột qua một "
+"thẻ trong đám mây thẻ."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
+#: views/admin/settings_front_end_themes.view.php:91
+msgid ""
+"If you don't trust all users of your site, remove the HTML or use a plugin "
+"to give the unfiltered_html capability only to users you trust."
+msgstr ""
+"Nếu bạn không tin tưởng tất cả người dùng trên trang của mình, hãy xóa HTML "
+"hoặc sử dụng một plugin để cấp quyền unfiltered_html chỉ cho những người "
+"dùng mà bạn tin tưởng."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:97
+#: views/admin/settings_front_end_themes.view.php:97
+msgid "Save Theme Options"
+msgstr "Lưu Tùy Chọn Giao Diện"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:3
+#: views/admin/settings_help.view.php:3
+msgid "Search for settings"
+msgstr "Tìm kiếm cài đặt"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:3
+#: views/admin/settings_help.view.php:3
+msgid "Search for setting pages. Type a space to show all settings."
+msgstr ""
+"Tìm kiếm các trang cài đặt. Gõ một khoảng trắng để hiển thị tất cả các cài "
+"đặt."
+
+#: dist/tag-groups/views/admin/settings_help.view.php:6
+#: views/admin/settings_help.view.php:6
+msgid "Search Results"
+msgstr "Kết quả Tìm kiếm"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:8
+#: views/admin/settings_help.view.php:8
+msgid "Nothing found"
+msgstr "Không tìm thấy gì"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:2
+#: views/admin/settings_home.view.php:2
+msgid "Active Taxonomies"
+msgstr "Taxonomies Hoạt Động"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:11
+#: views/admin/settings_home.view.php:11
+msgid "Group Statistics"
+msgstr "Thống kê Nhóm"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:13
+#: views/admin/settings_home.view.php:13
+msgid "for the selected language"
+msgstr "cho ngôn ngữ đã chọn"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:23
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:33
+#: views/admin/settings_home.view.php:23
+#: views/admin/settings_taxonomies.view.php:33
+msgid "go to tag group administration"
+msgstr "đi đến quản lý nhóm thẻ"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:9
+#: views/admin/settings_rest_api.view.php:9
+msgid "Enable Tag Groups Public API Access"
+msgstr "Kích hoạt Truy cập API Công cộng cho Nhóm Thẻ"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:10
+#: views/admin/settings_rest_api.view.php:10
+msgid "Enable public access to tag groups endpoint /wp-json/tag-groups/v1/groups/."
+msgstr ""
+"Kích hoạt truy cập công cộng đến điểm cuối nhóm thẻ "
+"/wp-json/tag-groups/v1/groups/."
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:17
+#: views/admin/settings_rest_api.view.php:17
+msgid "Enable Terms Public API Access"
+msgstr "Kích hoạt Truy cập API Công cộng cho Điều Khoản"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:18
+#: views/admin/settings_rest_api.view.php:18
+msgid "Enable public access to terms endpoint /wp-json/tag-groups/v1/terms/."
+msgstr ""
+"Kích hoạt truy cập công cộng đến điểm cuối điều khoản "
+"/wp-json/tag-groups/v1/terms/."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:2
+#: views/admin/settings_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use Tag Groups:"
+msgstr "Chọn các taxonomies mà bạn muốn sử dụng Nhóm Thẻ:"
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:5
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:5
+#: views/admin/settings_taxonomies.view.php:5
+#: views/admin/setup_wizard_taxonomies.view.php:5
+msgid ""
+"The default texonomy is <b>Tags (post_tag)</b>. Please note that the tag "
+"clouds might not work with all taxonomies and that some taxonomies listed "
+"here may not be accessible in the admin backend. If you don't understand "
+"what is going on here, just leave the default."
+msgstr ""
+"Taxonomy mặc định là <b>Tags (post_tag)</b>. Xin lưu ý rằng đám mây thẻ có "
+"thể không hoạt động với tất cả taxonomies và một số taxonomies được liệt kê "
+"ở đây có thể không truy cập được trong backend quản trị. Nếu bạn không hiểu "
+"điều gì đang diễn ra ở đây, hãy để mặc định."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:6
+#: views/admin/settings_taxonomies.view.php:6
+msgid ""
+"<b>Please deselect taxonomies that you don't use. Using several taxonomies "
+"for the same post type or hierarchical taxonomies (like categories) is "
+"experimental and not supported.</b>"
+msgstr ""
+"<b>Vui lòng bỏ chọn taxonomies mà bạn không sử dụng. Sử dụng nhiều "
+"taxonomies cho cùng một loại bài viết hoặc taxonomies phân cấp (như danh "
+"mục) là thử nghiệm và không được hỗ trợ.</b>"
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:7
+#: views/admin/settings_taxonomies.view.php:7
+msgid "To see the post type, hover your mouse over the option."
+msgstr "Để xem post type, hãy di chuột qua tùy chọn."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:8
+#: views/admin/settings_taxonomies.view.php:8
+msgid ""
+"If you use a custom taxonomy, make sure that the attribute \"Public\" is "
+"set to \"true\" and \"Hierarchical\" to \"false\"."
+msgstr ""
+"Nếu bạn sử dụng một taxonomy tùy chỉnh, hãy đảm bảo rằng thuộc tính "
+"\"Public\" được đặt là \"true\" và \"Hierarchical\" là \"false\"."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:15
+#: views/admin/settings_taxonomies.view.php:15
+msgid ""
+"Show hierarchical taxonomies. Not all Tag Groups features will work with "
+"these taxonomies."
+msgstr ""
+"Hiển thị các taxonomies phân cấp. Không phải tất cả các tính năng của Tag "
+"Groups sẽ hoạt động với các taxonomies này."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:54
+#: views/admin/settings_taxonomies.view.php:54
+msgid "Save Taxonomies"
+msgstr "Lưu Taxonomies"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid "Export"
+msgstr "Xuất"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid ""
+"Use this button to export all Tag Groups settings and groups and all terms "
+"that are assigned to a group into files."
+msgstr ""
+"Sử dụng nút này để xuất tất cả cài đặt và nhóm Tag Groups và tất cả các "
+"thuật ngữ được gán cho một nhóm vào các tệp."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid ""
+"You can import both files separately. Category hierarchy won't be saved. "
+"When you restore terms that were deleted, they receive new IDs and you must "
+"assign them to posts again. Exporting cannot substitute a backup."
+msgstr ""
+"Bạn có thể nhập cả hai tệp riêng biệt. Cấu trúc phân loại sẽ không được "
+"lưu. Khi bạn khôi phục các thuật ngữ đã bị xóa, chúng sẽ nhận ID mới và bạn "
+"phải gán chúng cho các bài viết một lần nữa. Xuất không thể thay thế một "
+"bản sao lưu."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:7
+#: views/admin/settings_tools_export_import.view.php:7
+msgid "Export Files"
+msgstr "Xuất Tệp"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "Import"
+msgstr "Nhập"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid ""
+"Below you can import previously exported settings/groups or terms from a "
+"file."
+msgstr ""
+"Dưới đây bạn có thể nhập các cài đặt/nhóm hoặc thuật ngữ đã xuất trước đó "
+"từ một tệp."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "It is recommended to back up the database of your site before proceeding."
+msgstr "Khuyến nghị nên sao lưu cơ sở dữ liệu của trang web trước khi tiến hành."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "Please import the settings before the terms."
+msgstr "Vui lòng nhập các cài đặt trước các thuật ngữ."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:17
+#: views/admin/settings_tools_export_import.view.php:17
+msgid "Import File"
+msgstr "Tệp Nhập"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:4
+#: views/admin/settings_tools_reset.view.php:4
+msgid ""
+"Use this button to delete all tag groups and assignments. Your tags will "
+"not be changed. Check the checkbox to confirm."
+msgstr ""
+"Sử dụng nút này để xóa tất cả các nhóm thẻ và phân công. Các thẻ của bạn sẽ "
+"không bị thay đổi. Đánh dấu ô kiểm để xác nhận."
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:5
+#: views/admin/settings_tools_reset.view.php:5
+msgid ""
+"Please keep in mind that the tag assignments cannot be recovered by the "
+"export/import function."
+msgstr ""
+"Xin lưu ý rằng các phân công thẻ không thể được phục hồi bằng chức năng "
+"xuất/nhập."
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:7
+#: views/admin/settings_tools_reset.view.php:7
+msgid "I know what I am doing."
+msgstr "Tôi biết tôi đang làm gì."
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:10
+#: views/admin/settings_tools_reset.view.php:10
+msgid "Delete Groups"
+msgstr "Xóa Nhóm"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:13
+#: views/admin/settings_tools_reset.view.php:13
+msgid "Delete Settings and Groups"
+msgstr "Xóa Cài đặt và Nhóm"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:21
+#: views/admin/settings_tools_reset.view.php:21
+msgid "Delete all groups and settings when uninstalling the plugin."
+msgstr "Xóa tất cả các nhóm và cài đặt khi gỡ cài đặt plugin."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:7
+#: views/admin/settings_troubleshooting_debug.view.php:7
+msgid "Debug mode is on."
+msgstr "Chế độ gỡ lỗi đang bật."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:15
+#: views/admin/settings_troubleshooting_debug.view.php:15
+msgid "Verbose logging is enabled with CM_DEBUG."
+msgstr "Đã bật ghi log chi tiết với CM_DEBUG."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:17
+#: views/admin/settings_troubleshooting_debug.view.php:17
+msgid "Verbose logging is on."
+msgstr "Ghi log chi tiết đang bật."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:19
+#: views/admin/settings_troubleshooting_debug.view.php:19
+msgid "Turn off "
+msgstr "Tắt "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:24
+#: views/admin/settings_troubleshooting_debug.view.php:24
+msgid "Verbose logging is off."
+msgstr "Ghi log chi tiết đang tắt."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:26
+#: views/admin/settings_troubleshooting_debug.view.php:26
+msgid "Turn on"
+msgstr "Bật"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:31
+#: views/admin/settings_troubleshooting_debug.view.php:31
+msgid "Debug mode is off."
+msgstr "Chế độ gỡ lỗi đang tắt."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:40
+#: views/admin/settings_troubleshooting_debug.view.php:40
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Learn more <a %s>about debugging</a>."
+msgstr "Tìm hiểu thêm <a %s>về việc gỡ lỗi</a>."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
+msgid "Migrate tags to the new format of Tag Groups."
+msgstr "Chuyển đổi các thẻ sang định dạng mới của Nhóm Thẻ."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
+msgid ""
+"The plugin automatically migrates tags to the new format and tries to keep "
+"track of changes. There may, however, be cases where other components made "
+"unnoticed changes. You might also need to manually migrate tags after you "
+"enabled a taxonomy that already contained untracked tags."
+msgstr ""
+"Plugin tự động chuyển đổi các thẻ sang định dạng mới và cố gắng theo dõi "
+"các thay đổi. Tuy nhiên, có thể có những trường hợp mà các thành phần khác "
+"đã thực hiện những thay đổi không được phát hiện. Bạn cũng có thể cần phải "
+"chuyển đổi các thẻ một cách thủ công sau khi bạn đã bật một taxonomy mà đã "
+"chứa các thẻ không được theo dõi."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:9
+#: views/admin/settings_troubleshooting_first_aid.view.php:9
+msgid "Migrate"
+msgstr "Chuyển đổi"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:17
+#: views/admin/settings_troubleshooting_first_aid.view.php:17
+msgid ""
+"Running the maintenance can solve issues that you encounter during "
+"filtering by tag groups."
+msgstr ""
+"Chạy bảo trì có thể giải quyết các vấn đề mà bạn gặp phải trong quá trình "
+"lọc theo nhóm thẻ."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:18
+#: views/admin/settings_troubleshooting_first_aid.view.php:18
+msgid "Maintenance"
+msgstr "Bảo trì"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
+msgid "Reset the filter on the tags page to show all tags."
+msgstr "Đặt lại bộ lọc trên trang thẻ để hiển thị tất cả các thẻ."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
+msgid ""
+"Use it if a JavaScript error disables the filter menu. Note that it is "
+"still recommended to find out the cause of the error."
+msgstr ""
+"Sử dụng nếu một lỗi JavaScript làm vô hiệu hóa menu bộ lọc. Lưu ý rằng vẫn "
+"nên tìm ra nguyên nhân của lỗi."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:27
+#: dist/tag-groups/views/partials/admin_footer.view.php:3
+#: views/admin/settings_troubleshooting_first_aid.view.php:27
+#: views/partials/admin_footer.view.php:3
+msgid "Reset Tag Filter"
+msgstr "Đặt lại Bộ Lọc Thẻ"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:5
+#: views/admin/settings_troubleshooting_process.view.php:5
+msgid "Please stay on this page until all processes have finished."
+msgstr "Vui lòng ở lại trang này cho đến khi tất cả các quy trình hoàn tất."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:10
+#: views/admin/settings_troubleshooting_process.view.php:10
+msgid "There have been errors."
+msgstr "Đã xảy ra lỗi."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:12
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:19
+#: views/admin/settings_troubleshooting_process.view.php:12
+#: views/admin/settings_troubleshooting_process.view.php:19
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:17
+#: views/admin/settings_troubleshooting_process.view.php:17
+msgid "Finished!"
+msgstr "Hoàn tất!"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:24
+#: views/admin/settings_troubleshooting_process.view.php:24
+msgid "The following terms cannot be used:"
+msgstr "Các thuật ngữ sau không thể được sử dụng:"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:128
+#: views/admin/settings_troubleshooting_process.view.php:128
+msgid "Number of processed items: "
+msgstr "Số lượng mục đã xử lý: "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:130
+#: views/admin/settings_troubleshooting_process.view.php:130
+msgid "Number of changed items: "
+msgstr "Số lượng mục đã thay đổi: "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:5
+#: views/admin/settings_troubleshooting_system.view.php:5, fuzzy
+msgid "WordPress Version"
+msgstr "WordPress Version"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:8
+#: views/admin/settings_troubleshooting_system.view.php:8, fuzzy
+msgid "Site URL"
+msgstr "Site URL"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:11
+#: views/admin/settings_troubleshooting_system.view.php:11, fuzzy
+msgid "Home URL"
+msgstr "Home URL"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:15
+#: views/admin/settings_troubleshooting_system.view.php:15, fuzzy
+msgid "Active Theme"
+msgstr "Active Theme"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:17
+#: views/admin/settings_troubleshooting_system.view.php:17, fuzzy
+msgid "Version"
+msgstr "Version"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:23
+#: views/admin/settings_troubleshooting_system.view.php:23
+msgid "Checking..."
+msgstr "Đang kiểm tra..."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:26
+#: views/admin/settings_troubleshooting_system.view.php:26
+msgid "Show the Response"
+msgstr "Hiển thị phản hồi"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:72
+#: views/admin/settings_troubleshooting_system.view.php:72
+msgid "passed"
+msgstr "đã qua"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:98
+#: views/admin/settings_troubleshooting_system.view.php:98
+msgid "failed"
+msgstr "thất bại"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:105
+#: views/admin/settings_troubleshooting_system.view.php:105
+msgid "Benchmarks"
+msgstr "Thang điểm"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:125
+#: views/admin/settings_troubleshooting_system.view.php:125
+msgid "Cache"
+msgstr "Bộ nhớ đệm"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:127
+#: views/admin/settings_troubleshooting_system.view.php:127
+msgid "Tag groups pro only"
+msgstr "Nhóm thẻ chỉ dành cho pro"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:152
+#: views/admin/settings_troubleshooting_system.view.php:152
+msgid "Server"
+msgstr "Máy chủ"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:188
+#: views/admin/settings_troubleshooting_system.view.php:188
+msgid "Constants"
+msgstr "Hằng số"
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:3
+#: views/admin/setup_wizard_finished.view.php:3
+msgid "Well done!"
+msgstr "Làm tốt lắm!"
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:6
+#: views/admin/setup_wizard_finished.view.php:6
+msgid "Now go the Tag Group Administration."
+msgstr "Bây giờ hãy đến phần Quản trị Nhóm Thẻ."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:10
+#: views/admin/setup_wizard_finished.view.php:10
+msgid "Or preview the sample page here."
+msgstr "Hoặc xem trước trang mẫu ở đây."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:14
+#, php-format
+msgid ""
+"Or go to the <a %s>Tag Groups settings</a> or visit the <a "
+"%s>documentation</a>."
+msgstr "Hoặc đi đến <a %s>cài đặt Nhóm Thẻ</a> hoặc truy cập <a %s>tài liệu</a>."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:16
+#, php-format
+msgid ""
+"Now go to the <a %s>Tag Groups settings</a>, or visit the <a "
+"%s>documentation</a>."
+msgstr ""
+"Bây giờ hãy đến <a %s>cài đặt Nhóm Thẻ</a>, hoặc truy cập <a %s>tài "
+"liệu</a>."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:19
+#: views/admin/setup_wizard_finished.view.php:19
+msgid ""
+"If you need to launch the Setup Wizard again, you can find it in the "
+"settings. Just enter \"wizard\" in the search field."
+msgstr ""
+"Nếu bạn cần khởi động lại Trình hướng dẫn Cài đặt, bạn có thể tìm thấy nó "
+"trong cài đặt. Chỉ cần nhập \"wizard\" vào ô tìm kiếm."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:21
+#: views/admin/setup_wizard_finished.view.php:21
+msgid "Happy tagging!"
+msgstr "Chúc bạn gán thẻ vui vẻ!"
+
+#: dist/tag-groups/views/admin/setup_wizard_header.view.php:1
+#: views/admin/setup_wizard_header.view.php:1
+msgid "Tag Groups Setup Wizard"
+msgstr "Trình hướng dẫn Cài đặt Nhóm Thẻ"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:3
+#: views/admin/setup_wizard_sample_content.view.php:3
+msgid ""
+"Now you are ready to create your own tag groups. If you prefer to start out "
+"from a sample, we will create for you three groups and three tags. You can "
+"play around with them, rename or delete them."
+msgstr ""
+"Bây giờ bạn đã sẵn sàng để tạo các nhóm thẻ của riêng mình. Nếu bạn muốn "
+"bắt đầu từ một mẫu, chúng tôi sẽ tạo cho bạn ba nhóm và ba thẻ. Bạn có thể "
+"tùy chỉnh, đổi tên hoặc xóa chúng."
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:8
+#: views/admin/setup_wizard_sample_content.view.php:8
+msgid "Create sample groups:"
+msgstr "Tạo nhóm mẫu:"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:16
+#: views/admin/setup_wizard_sample_content.view.php:16
+msgid "Create sample tags in these groups:"
+msgstr "Tạo thẻ mẫu trong các nhóm này:"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:34
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:33
+#: views/admin/setup_wizard_sample_content.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:33
+msgid "Next Step"
+msgstr "Bước tiếp theo"
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:3
+#: views/admin/setup_wizard_start.view.php:3
+msgid ""
+"On the following pages we will guide you through the basic settings that "
+"you need for the most common features."
+msgstr ""
+"Trên các trang tiếp theo, chúng tôi sẽ hướng dẫn bạn qua các cài đặt cơ bản "
+"mà bạn cần cho các tính năng phổ biến nhất."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
+#: views/admin/setup_wizard_start.view.php:4
+msgid ""
+"You can later make changes or fine-tune the details in the Tag Groups "
+"settings."
+msgstr ""
+"Bạn có thể sau này thực hiện thay đổi hoặc điều chỉnh các chi tiết trong "
+"cài đặt Nhóm Thẻ."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
+#: views/admin/setup_wizard_start.view.php:4
+msgid "(show me the menu)"
+msgstr "(cho tôi xem menu)"
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:5
+#: views/admin/setup_wizard_start.view.php:5
+msgid ""
+"Feel free to abort the Setup Wizard any time and continue on your own path. "
+"You can also launch it again at a later time."
+msgstr ""
+"Bạn có thể tự do hủy bỏ Trình hướng dẫn Cài đặt bất cứ lúc nào và tiếp tục "
+"theo con đường của riêng bạn. Bạn cũng có thể khởi động lại nó vào một thời "
+"điểm sau."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:7
+#: views/admin/setup_wizard_start.view.php:7
+msgid "The wizard will offer more options after upgrading to premium."
+msgstr ""
+"Trình hướng dẫn sẽ cung cấp thêm tùy chọn sau khi nâng cấp lên phiên bản "
+"cao cấp."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use tag groups."
+msgstr "Chọn các taxonomy mà bạn muốn sử dụng Nhóm Thẻ."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
+msgstr ""
+"Trong hầu hết các trường hợp, taxonomy mặc định <b>Tags (post_tag)</b> sẽ "
+"làm tốt công việc."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:22
+#: views/admin/setup_wizard_taxonomies.view.php:22
+msgid "post type"
+msgstr "post type"
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:30
+#: views/admin/setup_wizard_taxonomies.view.php:30
+msgid "You will find more options in the Tag Groups settings."
+msgstr "Bạn sẽ tìm thấy nhiều tùy chọn hơn trong cài đặt Nhóm Thẻ."
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:3
+#: views/admin/tag_groups_admin.view.php:3
+msgid "Tag Group Administration"
+msgstr "Quản lý Nhóm Thẻ"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:10
+#: views/admin/tag_groups_admin.view.php:10
+msgid "Filter by label"
+msgstr "Lọc theo nhãn"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:22
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:35
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
+msgid "Tag Group name"
+msgstr "Tên Nhóm Thẻ"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:24
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:37
+#: views/admin/tag_groups_admin.view.php:24
+#: views/admin/tag_groups_admin.view.php:37
+msgid "Number of assigned tags"
+msgstr "Số lượng thẻ được phân công"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:28
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:41
+#: views/admin/tag_groups_admin.view.php:28
+#: views/admin/tag_groups_admin.view.php:41
+msgid "Actions"
+msgstr "Hành động"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:29
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:42
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
+msgid "Change order"
+msgstr "Thay đổi thứ tự"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:30
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:43
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
+msgid "Group ID"
+msgstr "ID nhóm"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:63
+#: views/admin/tag_groups_admin.view.php:63
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:64
+#: views/admin/tag_groups_admin.view.php:64
+msgid "Create"
+msgstr "Tạo"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:65
+#: views/admin/tag_groups_admin.view.php:65
+msgid "new"
+msgstr "mới"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:66
+#: views/admin/tag_groups_admin.view.php:66
+msgid "label"
+msgstr "nhãn"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:67
+#: views/admin/tag_groups_admin.view.php:67
+msgid "Delete this group."
+msgstr "Xóa nhóm này."
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:68
+#: views/admin/tag_groups_admin.view.php:68
+msgid "Create a new group below."
+msgstr "Tạo một nhóm mới bên dưới."
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:69
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Tag Group"
+msgstr "Thêm Nhóm Thẻ Mới"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:70
+#: views/admin/tag_groups_admin.view.php:70
+msgid "move up"
+msgstr "di chuyển lên"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:71
+#: views/admin/tag_groups_admin.view.php:71
+msgid "move down"
+msgstr "di chuyển xuống"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:72
+#: views/admin/tag_groups_admin.view.php:72
+msgid "reload"
+msgstr "tải lại"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:73
+#: views/admin/tag_groups_admin.view.php:73
+msgid "next page"
+msgstr "trang tiếp theo"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:74
+#: views/admin/tag_groups_admin.view.php:74
+msgid "previous page"
+msgstr "trang trước"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:75
+#: views/admin/tag_groups_admin.view.php:75
+msgid "go to page:"
+msgstr "đi đến trang:"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:76
+#: views/admin/tag_groups_admin.view.php:76
+msgid "Show posts"
+msgstr "Hiện bài viết"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:77
+#: views/admin/tag_groups_admin.view.php:77
+msgid "Show tags"
+msgstr "Hiện thẻ"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:168
+#: views/admin/tag_groups_admin.view.php:168
+msgid "Do you really want to delete this tag group?"
+msgstr "Bạn có thực sự muốn xóa nhóm thẻ này không?"
+
+#: dist/tag-groups/views/partials/admin_feed_fallback.view.php:2
+#, php-format
+msgid "Please visit <a %s>%s</a>."
+msgstr "Vui lòng truy cập <a %s>%s</a>."
+
+#: dist/tag-groups/views/partials/admin_feed_footer.view.php:3
+#: views/partials/admin_feed_footer.view.php:3
+msgid "Read more"
+msgstr "Đọc thêm"
+
+#: dist/tag-groups/views/partials/admin_footer_rating.view.php:4
+#, php-format
+msgid "Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s"
+msgstr "Cảm ơn bạn đã sử dụng Tag Groups | %1sTaxoPress.com%2s | Phiên bản %3s"
+
+#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:10
+#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:11
+#: views/partials/bulk_admin_footer.view.php:10
+#: views/partials/bulk_admin_footer.view.php:11
+msgid "Assign to"
+msgstr "Gán cho"
+
+#: dist/tag-groups/views/partials/filter_admin_footer.view.php:23
+#: views/partials/filter_admin_footer.view.php:23
+msgid "Filter off"
+msgstr "Tắt bộ lọc"
+
+#: dist/tag-groups/views/partials/language_notice.view.php:2
+#: views/partials/language_notice.view.php:2
+msgid "Please select one of the languages above to see the correct tag groups!"
+msgstr "Vui lòng chọn một trong các ngôn ngữ ở trên để xem các nhóm thẻ đúng!"
+
+#: dist/tag-groups/views/partials/quick_edit_tag.view.php:3
+#: views/partials/quick_edit_tag.view.php:3
+msgid "Groups"
+msgstr "Nhóm"
+
+#: includes-core/TagGroupsCoreAdmin.php:44
+#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
+#, php-format
+msgid ""
+"You're using Tag Groups Free. The Pro version has more features and "
+"support. %1$sUpgrade to Pro%2$s"
+msgstr ""
+"Bạn đang sử dụng Tag Groups miễn phí. Phiên bản Pro có nhiều tính năng và "
+"hỗ trợ hơn. %1$sNâng cấp lên Pro%2$s"
+
+#: views/admin/setup_wizard_finished.view.php:14
+#. translators: %1$s and %2$s are href attributes with URLs
+#, php-format
+msgid ""
+"Or go to the <a %1$s>Tag Groups settings</a> or visit the <a "
+"%2$s>documentation</a>."
+msgstr "Hoặc đi đến <a %1$s>cài đặt nhóm thẻ</a> hoặc truy cập <a %2$s>tài liệu</a>."
+
+#: views/admin/setup_wizard_finished.view.php:16
+#. translators: %1$s and %2$s are href attributes with URLs
+#, php-format
+msgid ""
+"Now go to the <a %1$s>Tag Groups settings</a>, or visit the <a "
+"%2$s>documentation</a>."
+msgstr ""
+"Bây giờ hãy đi đến <a %1$s>cài đặt nhóm thẻ</a>, hoặc truy cập <a %2$s>tài "
+"liệu</a>."
+
+#: views/partials/admin_feed_fallback.view.php:2
+#. translators: %1$s is the href attribute with URL, %2$s is the link text
+#, php-format
+msgid "Please visit <a %1$s>%2$s</a>."
+msgstr "Vui lòng truy cập <a %1$s>%2$s</a>."
+
+#: views/partials/admin_footer_rating.view.php:5
+#. translators: %1$s and %2$s are opening and closing anchor tags, %3$s is the version number
+#, php-format
+msgid "Thanks for using Tag Groups | %1$sTaxoPress.com%2$s | Version %3$s"
+msgstr "Cảm ơn bạn đã sử dụng Tag Groups | %1$sTaxoPress.com%2$s | Phiên bản %3$s"

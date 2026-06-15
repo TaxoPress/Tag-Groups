@@ -40,7 +40,8 @@ class TagGroupsCoreAdmin
     public function configure_top_notice($settings)
     {
         $settings['publishpress-tag-groups'] = [
-            'message' => esc_html__("You're using Tag Groups Free. The Pro version has more features and support. %sUpgrade to Pro%s", 'tag-groups'),
+            /* translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link */
+            'message' => esc_html__('You\'re using Tag Groups Free. The Pro version has more features and support. %1$sUpgrade to Pro%2$s', 'tag-groups'),
             'link'    => 'https://taxopress.com/tag-groups/',
             'screens' => [
                 ['base' => 'toplevel_page_tag-groups-settings', 'id' => 'toplevel_page_tag-groups-settings'],

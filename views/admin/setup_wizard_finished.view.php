@@ -11,9 +11,9 @@
   <?php endif; ?>
 
   <?php if (! empty($groups_admin_link)) : ?>
-    <p><?php echo wp_kses_post(sprintf(__('Or go to the <a %s>Tag Groups settings</a> or visit the <a %s>documentation</a>.', 'tag-groups'), 'href="' . esc_url($settings_home_link) . '" target="_blank"', 'href="' . esc_url($documentation_link) . '" target="_blank"')) ?></p>
+    <p><?php /* translators: %1$s and %2$s are href attributes with URLs */ echo wp_kses_post(sprintf(__('Or go to the <a %1$s>Tag Groups settings</a> or visit the <a %2$s>documentation</a>.', 'tag-groups'), 'href="' . esc_url($settings_home_link) . '" target="_blank"', 'href="' . esc_url($documentation_link) . '" target="_blank"')) ?></p>
   <?php else : ?>
-    <p><?php echo wp_kses_post(sprintf(__('Now go to the <a %s>Tag Groups settings</a>, or visit the <a %s>documentation</a>.', 'tag-groups'), 'href="' . esc_url($settings_home_link) . '" target="_blank"', 'href="' . esc_url($documentation_link) . '" target="_blank"')); ?></p>
+    <p><?php /* translators: %1$s and %2$s are href attributes with URLs */ echo wp_kses_post(sprintf(__('Now go to the <a %1$s>Tag Groups settings</a>, or visit the <a %2$s>documentation</a>.', 'tag-groups'), 'href="' . esc_url($settings_home_link) . '" target="_blank"', 'href="' . esc_url($documentation_link) . '" target="_blank"')); ?></p>
   <?php endif; ?>
 
   <p><?php _e('If you need to launch the Setup Wizard again, you can find it in the settings. Just enter "wizard" in the search field.', 'tag-groups') ?></p>
