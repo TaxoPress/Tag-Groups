@@ -9,6 +9,10 @@
  */
 
 // phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+if (! class_exists('TagGroups_Transients', false)) {
+    require_once dirname(__DIR__, 2) . '/helpers/cache/class.transients.php';
+}
+
 if (!class_exists('TagGroups_Cron_Handlers')) {
     /**
      *

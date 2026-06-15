@@ -1,0 +1,2263 @@
+# Copyright (C) 2026 TaxoPress
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tag Groups 2.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
+"PO-Revision-Date: 2026-06-15 13:38+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: tag-groups\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: th\n"
+
+#: tag-groups.php:4
+#: dist/tag-groups/include/admin/class.admin.php:206
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:2
+#: dist/tag-groups/views/admin/new_tag_from_list.view.php:2
+#: include/admin/class.admin.php:206
+#: views/admin/edit_tag_main.view.php:2
+#: views/admin/new_tag_from_list.view.php:2
+#. Plugin Name of the plugin
+msgid "Tag Groups"
+msgstr "Tag-Groups"
+
+#: tag-groups.php:5, fuzzy
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/tag-groups/"
+msgstr "https://wordpress.org/plugins/tag-groups/"
+
+#: tag-groups.php:6
+#. Description of the plugin
+msgid ""
+"Tag Groups allows you to organize your WordPress taxonomy terms and show "
+"them in clouds, tabs, accordions, tables, lists and much more."
+msgstr ""
+"Tag-Groups ช่วยให้คุณจัดระเบียบคำศัพท์ taxonomy ของ WordPress "
+"และแสดงในรูปแบบของคลาวด์ แท็บ คอร์ดิออน ตาราง รายการ และอื่นๆ อีกมากมาย."
+
+#: tag-groups.php:7
+#. Author of the plugin
+msgid "TaxoPress"
+msgstr "TaxoPress"
+
+#: tag-groups.php:8, fuzzy
+#. Author URI of the plugin
+msgid "https://taxopress.com"
+msgstr "https://taxopress.com"
+
+#: dist/tag-groups/include/admin/class.admin.php:22
+#: include/admin/class.admin.php:22
+msgid "Home"
+msgstr "หน้าหลัก"
+
+#: dist/tag-groups/include/admin/class.admin.php:26
+#: dist/tag-groups/include/admin/class.settings.php:827
+#: dist/tag-groups/include/admin/class.setup_wizard.php:98
+#: include/admin/class.admin.php:26
+#: include/admin/class.settings.php:827
+#: include/admin/class.setup_wizard.php:98
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+#: dist/tag-groups/include/admin/class.admin.php:33
+#: include/admin/class.admin.php:33
+msgid "Front End"
+msgstr "ส่วนหน้า"
+
+#: dist/tag-groups/include/admin/class.admin.php:40
+#: include/admin/class.admin.php:40
+msgid "Back End"
+msgstr "ส่วนหลัง"
+
+#: dist/tag-groups/include/admin/class.admin.php:47
+#: dist/tag-groups/include/admin/class.settings.php:935
+#: dist/tag-groups/views/admin/onboarding.view.php:1
+#: include/admin/class.admin.php:47
+#: include/admin/class.settings.php:935
+#: views/admin/onboarding.view.php:1
+msgid "First Steps"
+msgstr "ขั้นตอนแรก"
+
+#: dist/tag-groups/include/admin/class.admin.php:54
+#: dist/tag-groups/include/admin/class.settings.php:940
+#: include/admin/class.admin.php:54
+#: include/admin/class.settings.php:940
+msgid "Setup Wizard"
+msgstr "ตัวช่วยตั้งค่า"
+
+#: dist/tag-groups/include/admin/class.admin.php:61
+#: dist/tag-groups/include/admin/class.admin.php:940
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:95
+#: include/admin/class.admin.php:61
+#: include/admin/class.admin.php:940
+#: views/admin/settings_front_end_shortcodes.view.php:95
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#: dist/tag-groups/include/admin/class.admin.php:87
+#: include/admin/class.admin.php:87
+msgid "Tag Group Admin"
+msgstr "ผู้ดูแลกลุ่มแท็ก"
+
+#: dist/tag-groups/include/admin/class.admin.php:434
+#: include/admin/class.admin.php:434
+msgid "The term has been removed from all groups."
+msgstr "คำศัพท์ได้ถูกลบออกจากกลุ่มทั้งหมดแล้ว."
+
+#: dist/tag-groups/include/admin/class.admin.php:565
+#: include/admin/class.admin.php:565
+msgid "Edit this item inline"
+msgstr "แก้ไขรายการนี้แบบออนไลน์"
+
+#: dist/tag-groups/include/admin/class.admin.php:567
+#: include/admin/class.admin.php:567
+msgid "Quick&nbsp;Edit"
+msgstr "แก้ไขด่วน&nbsp;"
+
+#: dist/tag-groups/include/admin/class.admin.php:993
+#: include/admin/class.admin.php:994
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid ""
+"Please <a %s>click here to run the migration routines</a> to make sure we "
+"have migrated all tags."
+msgstr ""
+"กรุณา <a %s>คลิกที่นี่เพื่อเรียกใช้รูทีนการโยกย้าย</a> "
+"เพื่อให้แน่ใจว่าเราได้โยกย้ายแท็กทั้งหมดแล้ว."
+
+#: dist/tag-groups/include/admin/class.export.php:144
+#: include/admin/class.export.php:144
+msgid ""
+"Your settings/groups and your terms have been exported. Please download the "
+"resulting files with right-click or ctrl-click:"
+msgstr ""
+"การตั้งค่าของคุณ/กลุ่มและคำศัพท์ของคุณได้ถูกส่งออกแล้ว "
+"กรุณาดาวน์โหลดไฟล์ที่ได้จากการคลิกขวาหรือ ctrl-click:"
+
+#: dist/tag-groups/include/admin/class.export.php:151
+#: include/admin/class.export.php:151
+msgid "Writing of the exported settings failed."
+msgstr "การเขียนการตั้งค่าที่ส่งออกล้มเหลว."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:176
+#: dist/tag-groups/include/admin/class.group_admin.php:180
+#: include/admin/class.group_admin.php:176
+#: include/admin/class.group_admin.php:180
+msgid "The groups have been sorted alphabetically."
+msgstr "กลุ่มได้ถูกจัดเรียงตามลำดับตัวอักษร."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:188
+#: dist/tag-groups/include/admin/class.group_admin.php:207
+#: include/admin/class.group_admin.php:188
+#: include/admin/class.group_admin.php:209
+msgid "The label cannot be empty."
+msgstr "ป้ายกำกับไม่สามารถว่างเปล่าได้。"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:191
+#: include/admin/class.group_admin.php:192
+#. translators: %s is the tag group label
+#, php-format
+msgid ""
+"A tag group with the label '%s' already exists, or the label has not "
+"changed. Please choose another one or go back."
+msgstr ""
+"กลุ่มแท็กที่มีป้ายกำกับ '%s' มีอยู่แล้ว หรือป้ายกำกับยังไม่ได้เปลี่ยน "
+"โปรดเลือกอันอื่นหรือกลับไป。"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:195
+#: include/admin/class.group_admin.php:197
+#. translators: %s is the tag group label
+#, php-format
+msgid "A new tag group with the label '%s' has been created!"
+msgstr "กลุ่มแท็กใหม่ที่มีป้ายกำกับ '%s' ได้ถูกสร้างขึ้นแล้ว!"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:213
+#: include/admin/class.group_admin.php:216
+#. translators: %s is the tag group label
+#, php-format
+msgid "A tag group with the label '%s' already exists."
+msgstr "กลุ่มแท็กที่มีป้ายกำกับ '%s' มีอยู่แล้ว。"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:225
+#: include/admin/class.group_admin.php:229
+#. translators: %s is the tag group label
+#, php-format
+msgid "The tag group with the label '%s' has been saved!"
+msgstr "กลุ่มแท็กที่มีป้ายกำกับ '%s' ได้ถูกบันทึกแล้ว!"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:231
+#: include/admin/class.group_admin.php:236
+#. translators: %1$s is the group ID, %2$s is the group label
+#, php-format
+msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
+msgstr "กลุ่มแท็กที่มี ID %1$s และป้ายกำกับ '%2$s' ถูกลบแล้ว。"
+
+#: dist/tag-groups/include/admin/class.import.php:81
+#: include/admin/class.import.php:81
+msgid "Error uploading the file."
+msgstr "เกิดข้อผิดพลาดในการอัปโหลดไฟล์。"
+
+#: dist/tag-groups/include/admin/class.import.php:108
+#: include/admin/class.import.php:108
+msgid "Error reading the file."
+msgstr "เกิดข้อผิดพลาดในการอ่านไฟล์。"
+
+#: dist/tag-groups/include/admin/class.import.php:146
+#: dist/tag-groups/include/admin/class.import.php:187
+#: include/admin/class.import.php:146
+#: include/admin/class.import.php:189
+msgid "Error parsing the file."
+msgstr "เกิดข้อผิดพลาดในการวิเคราะห์ไฟล์。"
+
+#: dist/tag-groups/include/admin/class.import.php:165
+#: dist/tag-groups/include/admin/class.import.php:260
+#: include/admin/class.import.php:165
+#: include/admin/class.import.php:262
+msgid "date unknown"
+msgstr "วันที่ไม่ทราบ"
+
+#: dist/tag-groups/include/admin/class.import.php:169
+#: include/admin/class.import.php:170
+#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#, php-format
+msgid ""
+"Your settings and groups have been imported from the file %1$s (created "
+"with plugin version %2$s on %3$s)."
+msgstr ""
+"การตั้งค่าและกลุ่มของคุณได้ถูกนำเข้าจากไฟล์ %1$s (สร้างด้วยเวอร์ชันปลั๊กอิน "
+"%2$s เมื่อ %3$s)。"
+
+#: dist/tag-groups/include/admin/class.import.php:170
+#: include/admin/class.import.php:172
+#. translators: %d is the number of options
+#, php-format
+msgid "%d option was added or changed."
+msgid_plural "%d options were added or changed."
+msgstr[0] "เพิ่มหรือเปลี่ยนแปลง %d ตัวเลือก。"
+
+#: dist/tag-groups/include/admin/class.import.php:264
+#: include/admin/class.import.php:267
+#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#, php-format
+msgid ""
+"Your terms have been imported from the file %1$s (created with plugin "
+"version %2$s on %3$s)."
+msgstr ""
+"คำศัพท์ของคุณได้ถูกนำเข้าจากไฟล์ %1$s (สร้างด้วยเวอร์ชันปลั๊กอิน %2$s เมื่อ "
+"%3$s)。"
+
+#: dist/tag-groups/include/admin/class.import.php:265
+#: include/admin/class.import.php:269
+#. translators: %d is the number of terms processed
+#, php-format
+msgid "We processed %d term."
+msgid_plural "We processed %d terms."
+msgstr[0] "เราได้ประมวลผล %d คำศัพท์。"
+
+#: dist/tag-groups/include/admin/class.import.php:266
+#: include/admin/class.import.php:271
+#. translators: %d is the number of terms saved
+#, php-format
+msgid "We saved %d term."
+msgid_plural "We saved %d terms."
+msgstr[0] "เราได้บันทึก %d คำศัพท์。"
+
+#: dist/tag-groups/include/admin/class.import.php:267
+#: include/admin/class.import.php:273
+#. translators: %d is the number of terms updated
+#, php-format
+msgid "The group info of %d term was updated."
+msgid_plural "The group info of %d terms was updated."
+msgstr[0] "ข้อมูลกลุ่มของ %d คำศัพท์ได้รับการอัปเดต。"
+
+#: dist/tag-groups/include/admin/class.settings.php:151
+#: dist/tag-groups/include/admin/class.settings.php:858
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:26
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:39
+#: include/admin/class.settings.php:151
+#: include/admin/class.settings.php:858
+#: views/admin/tag_groups_admin.view.php:26
+#: views/admin/tag_groups_admin.view.php:39
+msgid "Filters"
+msgstr "ตัวกรอง"
+
+#: dist/tag-groups/include/admin/class.settings.php:153
+#: dist/tag-groups/include/admin/class.settings.php:958
+#: include/admin/class.settings.php:153
+#: include/admin/class.settings.php:958, fuzzy
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#: dist/tag-groups/include/admin/class.settings.php:156
+#: dist/tag-groups/include/admin/class.settings.php:965
+#: include/admin/class.settings.php:156
+#: include/admin/class.settings.php:965
+msgid "Multilingual"
+msgstr "หลายภาษา"
+
+#: dist/tag-groups/include/admin/class.settings.php:238
+#: dist/tag-groups/include/admin/class.settings.php:832
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:9
+#: include/admin/class.settings.php:238
+#: include/admin/class.settings.php:832
+#: views/admin/settings_front_end_shortcodes.view.php:9
+msgid "Shortcodes"
+msgstr "รหัสสั้น"
+
+#: dist/tag-groups/include/admin/class.settings.php:239
+#: dist/tag-groups/include/admin/class.settings.php:846
+#: include/admin/class.settings.php:239
+#: include/admin/class.settings.php:846
+msgid "Themes and Appearance"
+msgstr "ธีมและลักษณะ"
+
+#: dist/tag-groups/include/admin/class.settings.php:265
+#: include/admin/class.settings.php:265
+msgid "remove"
+msgstr "ลบ"
+
+#: dist/tag-groups/include/admin/class.settings.php:265
+#: include/admin/class.settings.php:265
+msgid "(recommended)"
+msgstr "(แนะนำ)"
+
+#: dist/tag-groups/include/admin/class.settings.php:266
+#: include/admin/class.settings.php:266
+msgid "keep"
+msgstr "เก็บ"
+
+#: dist/tag-groups/include/admin/class.settings.php:267
+#: include/admin/class.settings.php:267
+msgid "use unfiltered_html filter"
+msgstr "ใช้ตัวกรอง unfiltered_html"
+
+#: dist/tag-groups/include/admin/class.settings.php:317
+#: dist/tag-groups/include/admin/class.settings.php:945
+#: include/admin/class.settings.php:317
+#: include/admin/class.settings.php:945
+msgid "First Aid"
+msgstr "การปฐมพยาบาล"
+
+#: dist/tag-groups/include/admin/class.settings.php:318
+#: include/admin/class.settings.php:318, fuzzy
+msgid "REST API"
+msgstr "REST API"
+
+#: dist/tag-groups/include/admin/class.settings.php:319
+#: dist/tag-groups/include/admin/class.settings.php:873
+#: include/admin/class.settings.php:319
+#: include/admin/class.settings.php:873
+msgid "System Information"
+msgstr "ข้อมูลระบบ"
+
+#: dist/tag-groups/include/admin/class.settings.php:320
+#: dist/tag-groups/include/admin/class.settings.php:887
+#: include/admin/class.settings.php:320
+#: include/admin/class.settings.php:887
+msgid "Debugging"
+msgstr "การดีบัก"
+
+#: dist/tag-groups/include/admin/class.settings.php:321
+#: dist/tag-groups/include/admin/class.settings.php:863
+#: include/admin/class.settings.php:321
+#: include/admin/class.settings.php:863
+msgid "Export/Import"
+msgstr "ส่งออก/นำเข้า"
+
+#: dist/tag-groups/include/admin/class.settings.php:322
+#: dist/tag-groups/include/admin/class.settings.php:868
+#: include/admin/class.settings.php:322
+#: include/admin/class.settings.php:868
+msgid "Reset"
+msgstr "รีเซ็ต"
+
+#: dist/tag-groups/include/admin/class.settings.php:324
+#: include/admin/class.settings.php:324
+msgid "Licences"
+msgstr "ใบอนุญาต"
+
+#: dist/tag-groups/include/admin/class.settings.php:422
+#: include/admin/class.settings.php:422
+msgid "Transients"
+msgstr "ชั่วคราว"
+
+#: dist/tag-groups/include/admin/class.settings.php:423
+#: include/admin/class.settings.php:423
+msgid "Database"
+msgstr "ฐานข้อมูล"
+
+#: dist/tag-groups/include/admin/class.settings.php:424
+#: include/admin/class.settings.php:424
+msgid "Filesystem"
+msgstr "ระบบไฟล์"
+
+#: dist/tag-groups/include/admin/class.settings.php:425
+#: include/admin/class.settings.php:425, fuzzy
+msgid "WP Object Cache"
+msgstr "WP Object Cache"
+
+#: dist/tag-groups/include/admin/class.settings.php:548
+#: dist/tag-groups/include/admin/class.settings.php:604
+#: dist/tag-groups/include/admin/class.settings.php:642
+#: dist/tag-groups/include/admin/class.settings.php:676
+#: dist/tag-groups/include/admin/class.settings.php:691
+#: dist/tag-groups/include/admin/class.settings.php:704
+#: dist/tag-groups/include/admin/class.settings.php:717
+#: dist/tag-groups/include/admin/class.settings.php:786
+#: include/admin/class.settings.php:548
+#: include/admin/class.settings.php:604
+#: include/admin/class.settings.php:642
+#: include/admin/class.settings.php:676
+#: include/admin/class.settings.php:691
+#: include/admin/class.settings.php:704
+#: include/admin/class.settings.php:717
+#: include/admin/class.settings.php:786
+msgid "Your settings have been saved."
+msgstr "การตั้งค่าของคุณถูกบันทึกแล้ว."
+
+#: dist/tag-groups/include/admin/class.settings.php:566
+#: include/admin/class.settings.php:566
+msgid "Your settings has been saved."
+msgstr "การตั้งค่าของคุณถูกบันทึก."
+
+#: dist/tag-groups/include/admin/class.settings.php:584
+#: include/admin/class.settings.php:584
+msgid "All groups have been deleted and assignments reset."
+msgstr "กลุ่มทั้งหมดถูกลบและการมอบหมายถูกรีเซ็ต."
+
+#: dist/tag-groups/include/admin/class.settings.php:733
+#: include/admin/class.settings.php:733
+msgid "The filter on the tags page has been reset to show all tags."
+msgstr "ตัวกรองในหน้าป้ายถูกรีเซ็ตเพื่อแสดงป้ายทั้งหมด."
+
+#: dist/tag-groups/include/admin/class.settings.php:829
+#: include/admin/class.settings.php:829, fuzzy
+msgid "tag groups"
+msgstr "tag groups"
+
+#: dist/tag-groups/include/admin/class.settings.php:835
+#: dist/tag-groups/include/admin/class.settings.php:849
+#: dist/tag-groups/include/admin/class.settings.php:904
+#: include/admin/class.settings.php:835
+#: include/admin/class.settings.php:849
+#: include/admin/class.settings.php:904, fuzzy
+msgid "tag cloud"
+msgstr "tag cloud"
+
+#: dist/tag-groups/include/admin/class.settings.php:836
+#: include/admin/class.settings.php:836, fuzzy
+msgid "group info"
+msgstr "group info"
+
+#: dist/tag-groups/include/admin/class.settings.php:837
+#: include/admin/class.settings.php:837, fuzzy
+msgid "sidebar widget"
+msgstr "sidebar widget"
+
+#: dist/tag-groups/include/admin/class.settings.php:838
+#: include/admin/class.settings.php:838, fuzzy
+msgid "accordion"
+msgstr "accordion"
+
+#: dist/tag-groups/include/admin/class.settings.php:839
+#: include/admin/class.settings.php:839, fuzzy
+msgid "tabs"
+msgstr "tabs"
+
+#: dist/tag-groups/include/admin/class.settings.php:840
+#: include/admin/class.settings.php:840, fuzzy
+msgid "alphabetical"
+msgstr "alphabetical"
+
+#: dist/tag-groups/include/admin/class.settings.php:841
+#: include/admin/class.settings.php:841, fuzzy
+msgid "post list"
+msgstr "post list"
+
+#: dist/tag-groups/include/admin/class.settings.php:853
+#: include/admin/class.settings.php:853, fuzzy
+msgid "colors"
+msgstr "colors"
+
+#: dist/tag-groups/include/admin/class.settings.php:854
+#: include/admin/class.settings.php:854, fuzzy
+msgid "tag description"
+msgstr "tag description"
+
+#: dist/tag-groups/include/admin/class.settings.php:860
+#: dist/tag-groups/include/admin/class.settings.php:952
+#: include/admin/class.settings.php:860
+#: include/admin/class.settings.php:952, fuzzy
+msgid "tag filter"
+msgstr "tag filter"
+
+#: dist/tag-groups/include/admin/class.settings.php:860
+#: include/admin/class.settings.php:860, fuzzy
+msgid "post filter"
+msgstr "post filter"
+
+#: dist/tag-groups/include/admin/class.settings.php:865
+#: include/admin/class.settings.php:865, fuzzy
+msgid "backup"
+msgstr "backup"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870, fuzzy
+msgid "remove plugin"
+msgstr "remove plugin"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870, fuzzy
+msgid "remove data"
+msgstr "remove data"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870, fuzzy
+msgid "delete groups"
+msgstr "delete groups"
+
+#: dist/tag-groups/include/admin/class.settings.php:876
+#: dist/tag-groups/include/admin/class.settings.php:890
+#: include/admin/class.settings.php:876
+#: include/admin/class.settings.php:890, fuzzy
+msgid "debugging"
+msgstr "debugging"
+
+#: dist/tag-groups/include/admin/class.settings.php:877
+#: include/admin/class.settings.php:877, fuzzy
+msgid "PHP Version"
+msgstr "PHP Version"
+
+#: dist/tag-groups/include/admin/class.settings.php:878
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:21
+#: include/admin/class.settings.php:878
+#: views/admin/settings_troubleshooting_system.view.php:21, fuzzy
+msgid "Ajax Test"
+msgstr "Ajax Test"
+
+#: dist/tag-groups/include/admin/class.settings.php:879
+#: dist/tag-groups/include/admin/class.settings.php:891
+#: dist/tag-groups/include/admin/class.settings.php:948
+#: include/admin/class.settings.php:879
+#: include/admin/class.settings.php:891
+#: include/admin/class.settings.php:948, fuzzy
+msgid "troubleshooting"
+msgstr "troubleshooting"
+
+#: dist/tag-groups/include/admin/class.settings.php:880
+#: include/admin/class.settings.php:880
+msgid "benchmarks"
+msgstr "เกณฑ์มาตรฐาน"
+
+#: dist/tag-groups/include/admin/class.settings.php:881
+#: include/admin/class.settings.php:881
+msgid "speed test"
+msgstr "การทดสอบความเร็ว"
+
+#: dist/tag-groups/include/admin/class.settings.php:882
+#: dist/tag-groups/include/admin/class.settings.php:892
+#: include/admin/class.settings.php:882
+#: include/admin/class.settings.php:892
+msgid "error"
+msgstr "ข้อผิดพลาด"
+
+#: dist/tag-groups/include/admin/class.settings.php:883
+#: dist/tag-groups/include/admin/class.settings.php:893
+#: include/admin/class.settings.php:883
+#: include/admin/class.settings.php:893
+msgid "testing"
+msgstr "การทดสอบ"
+
+#: dist/tag-groups/include/admin/class.settings.php:894
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:950
+#: include/admin/class.settings.php:894
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:950
+msgid "help"
+msgstr "ช่วยเหลือ"
+
+#: dist/tag-groups/include/admin/class.settings.php:898
+#: include/admin/class.settings.php:898
+msgid "Tag Groups Pro"
+msgstr "กลุ่มแท็ก Pro"
+
+#: dist/tag-groups/include/admin/class.settings.php:901
+#: include/admin/class.settings.php:901
+msgid "upgrade"
+msgstr "อัพเกรด"
+
+#: dist/tag-groups/include/admin/class.settings.php:902
+#: include/admin/class.settings.php:902
+msgid "more groups"
+msgstr "กลุ่มเพิ่มเติม"
+
+#: dist/tag-groups/include/admin/class.settings.php:903
+#: include/admin/class.settings.php:903
+msgid "posts"
+msgstr "โพสต์"
+
+#: dist/tag-groups/include/admin/class.settings.php:905
+#: include/admin/class.settings.php:905
+msgid "filter"
+msgstr "กรอง"
+
+#: dist/tag-groups/include/admin/class.settings.php:906
+#: include/admin/class.settings.php:906
+msgid "animated"
+msgstr "เคลื่อนไหว"
+
+#: dist/tag-groups/include/admin/class.settings.php:907
+#: include/admin/class.settings.php:907
+msgid "searchable"
+msgstr "ค้นหาได้"
+
+#: dist/tag-groups/include/admin/class.settings.php:915
+#: include/admin/class.settings.php:915
+msgid "Info"
+msgstr "ข้อมูล"
+
+#: dist/tag-groups/include/admin/class.settings.php:918
+#: include/admin/class.settings.php:918
+msgid "author"
+msgstr "ผู้เขียน"
+
+#: dist/tag-groups/include/admin/class.settings.php:919
+#: include/admin/class.settings.php:919
+msgid "version"
+msgstr "เวอร์ชัน"
+
+#: dist/tag-groups/include/admin/class.settings.php:920
+#: include/admin/class.settings.php:920
+msgid "contact"
+msgstr "ติดต่อ"
+
+#: dist/tag-groups/include/admin/class.settings.php:921
+#: include/admin/class.settings.php:921
+msgid "about"
+msgstr "เกี่ยวกับ"
+
+#: dist/tag-groups/include/admin/class.settings.php:925
+#: include/admin/class.settings.php:925
+msgid "Licenses"
+msgstr "ใบอนุญาต"
+
+#: dist/tag-groups/include/admin/class.settings.php:927
+#: include/admin/class.settings.php:927
+msgid "Credits"
+msgstr "เครดิต"
+
+#: dist/tag-groups/include/admin/class.settings.php:930
+#: include/admin/class.settings.php:930
+msgid "Development News"
+msgstr "ข่าวการพัฒนา"
+
+#: dist/tag-groups/include/admin/class.settings.php:932
+#: include/admin/class.settings.php:932
+msgid "blog"
+msgstr "บล็อก"
+
+#: dist/tag-groups/include/admin/class.settings.php:932
+#: include/admin/class.settings.php:932
+msgid "updates"
+msgstr "อัปเดต"
+
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:942
+msgid "getting started"
+msgstr "เริ่มต้นใช้งาน"
+
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:942
+msgid "introduction"
+msgstr "บทนำ"
+
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:942
+msgid "sample"
+msgstr "ตัวอย่าง"
+
+#: dist/tag-groups/include/admin/class.settings.php:949
+#: include/admin/class.settings.php:949
+msgid "migrate"
+msgstr "ย้าย"
+
+#: dist/tag-groups/include/admin/class.settings.php:951
+#: include/admin/class.settings.php:951
+msgid "problem"
+msgstr "ปัญหา"
+
+#: dist/tag-groups/include/admin/class.settings.php:960
+#: include/admin/class.settings.php:960
+msgid "live block preview"
+msgstr "ตัวอย่างบล็อกสด"
+
+#: dist/tag-groups/include/admin/class.settings.php:967
+#: include/admin/class.settings.php:967
+msgid "translation"
+msgstr "การแปล"
+
+#: dist/tag-groups/include/admin/class.settings.php:998
+#: include/admin/class.settings.php:998
+msgid "Migrating the term meta"
+msgstr "การย้ายคำว่าเมต้า"
+
+#: dist/tag-groups/include/admin/class.settings.php:999
+#: include/admin/class.settings.php:999
+msgid "Fixing incorrect tag groups"
+msgstr "แก้ไขกลุ่มแท็กที่ไม่ถูกต้อง"
+
+#: dist/tag-groups/include/admin/class.settings.php:1000
+#: include/admin/class.settings.php:1000
+msgid "Fixing incorrect groups in term meta"
+msgstr "แก้ไขกลุ่มที่ไม่ถูกต้องในเมต้า"
+
+#: dist/tag-groups/include/admin/class.settings.php:1001
+#: include/admin/class.settings.php:1001
+msgid "Sorting groups in term meta"
+msgstr "จัดเรียงกลุ่มในเมต้า"
+
+#: dist/tag-groups/include/admin/class.settings.php:1002
+#: include/admin/class.settings.php:1002
+msgid "Checking the tag names"
+msgstr "ตรวจสอบชื่อแท็ก"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:94
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:12
+#: include/admin/class.setup_wizard.php:94
+#: views/admin/setup_wizard_start.view.php:12
+msgid "Start"
+msgstr "เริ่มต้น"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:102
+#: include/admin/class.setup_wizard.php:102
+msgid "Sample Content"
+msgstr "เนื้อหาตัวอย่าง"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:122
+#: include/admin/class.setup_wizard.php:122
+msgid "Sample Group A"
+msgstr "กลุ่มตัวอย่าง A"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:123
+#: include/admin/class.setup_wizard.php:123
+msgid "Sample Group B"
+msgstr "กลุ่มตัวอย่าง B"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:124
+#: include/admin/class.setup_wizard.php:124
+msgid "Sample Group C"
+msgstr "กลุ่มตัวอย่าง C"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:140
+#: include/admin/class.setup_wizard.php:140
+msgid "First Sample Tag"
+msgstr "แท็กตัวอย่างแรก"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:141
+#: include/admin/class.setup_wizard.php:141
+msgid "Second Sample Tag"
+msgstr "แท็กตัวอย่างที่สอง"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:142
+#: include/admin/class.setup_wizard.php:142
+msgid "Third Sample Tag"
+msgstr "แท็กตัวอย่างที่สาม"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:160
+#: include/admin/class.setup_wizard.php:160
+msgid "Create a draft sample page with Gutenberg blocks."
+msgstr "สร้างหน้าแบบร่างตัวอย่างด้วยบล็อก Gutenberg。"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:162
+#: include/admin/class.setup_wizard.php:162
+msgid "Create a draft sample page with shortcodes."
+msgstr "สร้างหน้าแบบร่างตัวอย่างด้วยรหัสสั้น。"
+
+#: dist/tag-groups/include/class.loader.php:159
+#: include/class.loader.php:160
+#. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
+#, php-format
+msgid "The plugin %1$s requires WordPress %2$s to function properly."
+msgstr "ปลั๊กอิน %1$s ต้องการ WordPress %2$s เพื่อทำงานอย่างถูกต้อง。"
+
+#: dist/tag-groups/include/class.loader.php:159
+#: include/class.loader.php:160
+#. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
+msgid "Please upgrade WordPress and then try again."
+msgstr "โปรดอัปเกรด WordPress แล้วลองอีกครั้ง。"
+
+#: dist/tag-groups/include/helpers/class.groups.php:182
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:8
+#: dist/tag-groups/views/admin/new_tag_from_list.view.php:5
+#: dist/tag-groups/views/partials/quick_edit_tag.view.php:7
+#: include/helpers/class.groups.php:182
+#: views/admin/edit_tag_main.view.php:8
+#: views/admin/new_tag_from_list.view.php:5
+#: views/partials/quick_edit_tag.view.php:7
+msgid "not assigned"
+msgstr "ยังไม่ได้กำหนด"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:43
+#, php-format
+msgid ""
+"You're using Tag Groups Free. The Pro version has more features and "
+"support. %sUpgrade to Pro%s"
+msgstr ""
+"คุณกำลังใช้ Tag Groups Free เวอร์ชัน Pro มีฟีเจอร์และการสนับสนุนมากกว่า "
+"%sอัปเกรดเป็น Pro%s"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:71
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:115
+#: includes-core/TagGroupsCoreAdmin.php:72
+#: includes-core/TagGroupsCoreAdmin.php:116
+msgid "Upgrade to Pro"
+msgstr "อัปเกรดเป็น Pro"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:88
+#: includes-core/TagGroupsCoreAdmin.php:89
+msgid "Upgrade to Tag Groups Pro"
+msgstr "อัปเกรดเป็น Tag Groups Pro"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:93
+#: includes-core/TagGroupsCoreAdmin.php:94
+msgid "Enhance the power of Tag Groups with the Pro version:"
+msgstr "เพิ่มประสิทธิภาพของ Tag Groups ด้วยเวอร์ชัน Pro:"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:96
+#: includes-core/TagGroupsCoreAdmin.php:97
+msgid "21 Shortcodes"
+msgstr "21 รหัสสั้น"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:97
+#: includes-core/TagGroupsCoreAdmin.php:98
+msgid "18 Gutenberg Blocks"
+msgstr "18 บล็อก Gutenberg"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:99
+msgid "Table Tag Cloud"
+msgstr "แท็กคลาวด์ตาราง"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:99
+#: includes-core/TagGroupsCoreAdmin.php:100
+msgid "Simple Tag Cloud"
+msgstr "แท็กคลาวด์ง่าย"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:100
+#: includes-core/TagGroupsCoreAdmin.php:101
+msgid "Shuffle Box"
+msgstr "กล่องสุ่ม"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:101
+#: includes-core/TagGroupsCoreAdmin.php:102
+msgid "Caching"
+msgstr "การเก็บข้อมูลแคช"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:102
+#: includes-core/TagGroupsCoreAdmin.php:103
+msgid "Multiple Groups Per Tag"
+msgstr "กลุ่มหลายกลุ่มต่อแท็ก"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:103
+#: includes-core/TagGroupsCoreAdmin.php:104
+msgid "Tag Cloud Search"
+msgstr "การค้นหาแท็กคลาวด์"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:104
+#: includes-core/TagGroupsCoreAdmin.php:105
+msgid "Toggle Post Filter"
+msgstr "เปลี่ยนตัวกรองโพสต์"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:105
+#: includes-core/TagGroupsCoreAdmin.php:106
+msgid "Dynamic Post Filter"
+msgstr "ตัวกรองโพสต์แบบไดนามิก"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:106
+#: includes-core/TagGroupsCoreAdmin.php:107
+msgid "Post List"
+msgstr "รายการโพสต์"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:107
+#: includes-core/TagGroupsCoreAdmin.php:108
+msgid "Tag Meta Box"
+msgstr "กล่องเมตาแท็ก"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:108
+#: includes-core/TagGroupsCoreAdmin.php:109
+msgid "Post Tags in Groups"
+msgstr "แท็กโพสต์ในกลุ่ม"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:109
+#: includes-core/TagGroupsCoreAdmin.php:110
+msgid "Permissions"
+msgstr "สิทธิ์"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:110
+#: includes-core/TagGroupsCoreAdmin.php:111
+msgid "Default Groups"
+msgstr "กลุ่มเริ่มต้น"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:111
+#: includes-core/TagGroupsCoreAdmin.php:112
+msgid "WooCommerce Attributes"
+msgstr "คุณลักษณะของ WooCommerce"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:112
+#: includes-core/TagGroupsCoreAdmin.php:113
+msgid "Parent Group Level"
+msgstr "ระดับกลุ่มหลัก"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:122
+#: includes-core/TagGroupsCoreAdmin.php:123
+msgid "Need Tag Groups Support?"
+msgstr "ต้องการความช่วยเหลือเกี่ยวกับกลุ่มแท็กหรือไม่?"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:127
+#: includes-core/TagGroupsCoreAdmin.php:128
+msgid "If you need help or have a new feature request, let us know."
+msgstr "หากคุณต้องการความช่วยเหลือหรือต้องการขอฟีเจอร์ใหม่ โปรดแจ้งให้เราทราบ."
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:129
+#: includes-core/TagGroupsCoreAdmin.php:130
+msgid "Request Support"
+msgstr "ขอความช่วยเหลือ"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:138
+#: includes-core/TagGroupsCoreAdmin.php:139
+msgid "Detailed documentation is also available on the plugin website."
+msgstr "เอกสารรายละเอียดยังมีให้บริการที่เว็บไซต์ปลั๊กอิน."
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:140
+#: includes-core/TagGroupsCoreAdmin.php:141
+msgid "View Knowledge Base"
+msgstr "ดูฐานความรู้"
+
+#: dist/tag-groups/tag-groups.php:159
+#: tag-groups.php:159
+msgid "The free Tag Groups plugin cannot be active together with Tag Groups Pro."
+msgstr "ปลั๊กอินกลุ่มแท็กฟรีไม่สามารถเปิดใช้งานร่วมกับ Tag Groups Pro ได้."
+
+#: dist/tag-groups/tag-groups.php:159
+#: tag-groups.php:159
+msgid "more information"
+msgstr "ข้อมูลเพิ่มเติม"
+
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
+#: views/admin/edit_tag_main.view.php:31
+msgid "Edit tag groups"
+msgstr "แก้ไขกลุ่มแท็ก"
+
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
+#: views/admin/edit_tag_main.view.php:31
+msgid "Clicking will leave this page without saving."
+msgstr "การคลิกจะทำให้คุณออกจากหน้านี้โดยไม่บันทึก."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:3
+#: views/admin/onboarding.view.php:3
+#. translators: %s is the plugin name
+#, php-format
+msgid "Welcome to %s!"
+msgstr "ยินดีต้อนรับสู่ %s!"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:4
+#: views/admin/onboarding.view.php:4
+#. translators: %s is the plugin name
+msgid ""
+"The plugin is ready for use. If you need some assistance, we can walk you "
+"through the basic steps."
+msgstr ""
+"ปลั๊กอินพร้อมใช้งานแล้ว หากคุณต้องการความช่วยเหลือ "
+"เราสามารถแนะนำคุณผ่านขั้นตอนพื้นฐาน."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:6
+#: views/admin/onboarding.view.php:6
+msgid "Start the Setup Wizard"
+msgstr "เริ่มต้นวิซาร์ดการตั้งค่า"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:10
+#: views/admin/onboarding.view.php:10
+msgid "Or click here if you prefer to do it on your own."
+msgstr "หรือคลิกที่นี่หากคุณต้องการทำเอง"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:13
+#: views/admin/onboarding.view.php:13
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid ""
+"Go to the <span class=\"dashicons dashicons-tag\"></span>&nbsp;Tag Groups "
+"<a %s>taxonomy settings</a> and <b>select the taxonomy</b> (tag type) of "
+"your tags. In most cases just leave the default: Tags (post_tag)."
+msgstr ""
+"ไปที่ <span class=\"dashicons dashicons-tag\"></span>&nbsp;การตั้งค่า Tag "
+"Groups <a %s>taxonomy</a> และ <b>เลือก taxonomy</b> (ประเภทแท็ก) "
+"ของแท็กของคุณ ในกรณีส่วนใหญ่ เพียงแค่ทิ้งค่าเริ่มต้น: แท็ก (post_tag)"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:14
+#: views/admin/onboarding.view.php:14
+#. translators: %s is the href attribute with URL
+msgid "Go to the tag groups admin page and <b>create some groups</b>."
+msgstr "ไปที่หน้า admin ของกลุ่มแท็กและ <b>สร้างกลุ่มบางกลุ่ม</b>"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:14
+#: views/admin/onboarding.view.php:14
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "You can find these pages listed on your <a %s>Tag Groups home page</a>."
+msgstr "คุณสามารถค้นหาหน้าเหล่านี้ได้ที่ <a %s>หน้าแรกของ Tag Groups</a>"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:15
+#: views/admin/onboarding.view.php:15
+#. translators: %s is the href attribute with URL
+msgid "Go to your tags and <b>assign them to these groups</b>."
+msgstr "ไปที่แท็กของคุณและ <b>มอบหมายให้กับกลุ่มเหล่านี้</b>"
+
+#: dist/tag-groups/views/admin/post_filter.view.php:3
+#: views/admin/post_filter.view.php:3
+msgid "Filter by tag group"
+msgstr "กรองตามกลุ่มแท็ก"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:2
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:3
+#: views/admin/sample_page.view.php:2
+#: views/admin/sample_page_gutenberg.view.php:3
+#. translators: %s is the author display name
+#, php-format
+msgid ""
+"%s created this sample page in the Setup Wizard of the <b>Tag Groups</b> "
+"plugin. You can safely edit and delete it or keep it for future reference."
+msgstr ""
+"%s สร้างหน้าแสดงตัวอย่างนี้ใน Setup Wizard ของ <b>Tag Groups</b> ปลั๊กอิน "
+"คุณสามารถแก้ไขและลบได้อย่างปลอดภัย หรือเก็บไว้เพื่อใช้อ้างอิงในอนาคต"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:6
+#: views/admin/sample_page.view.php:6
+msgid ""
+"The following shortcodes use a variety of parameters so that you can get an "
+"idea of the options. Feel free to generate a new sample page with more "
+"features after upgrading the plugin."
+msgstr ""
+"รหัสสั้นต่อไปนี้ใช้พารามิเตอร์ที่หลากหลายเพื่อให้คุณได้แนวคิดเกี่ยวกับตัวเลื"
+"อกต่างๆ "
+"คุณสามารถสร้างหน้าแสดงตัวอย่างใหม่ที่มีฟีเจอร์เพิ่มเติมหลังจากอัปเกรดปลั๊กอิ"
+"น"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:10
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:21
+#: views/admin/sample_page.view.php:10
+#: views/admin/sample_page_gutenberg.view.php:21
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Please find links to the documentation in the <a %s>Tag Groups settings</a>."
+msgstr "โปรดดูลิงก์ไปยังเอกสารใน <a %s>การตั้งค่า Tag Groups</a>"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:14
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:30
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:11
+#: views/admin/sample_page.view.php:14
+#: views/admin/sample_page_gutenberg.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:11
+msgid "Tabbed Tag Cloud"
+msgstr "คลาวด์แท็กแบบแท็บ"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:20
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:40
+#: views/admin/sample_page.view.php:20
+#: views/admin/sample_page_gutenberg.view.php:40
+msgid "Accordion Tag Cloud"
+msgstr "คลาวด์แท็กแบบอะคอร์เดียน"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:26
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:50
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:44
+#: views/admin/sample_page.view.php:26
+#: views/admin/sample_page_gutenberg.view.php:50
+#: views/admin/settings_front_end_shortcodes.view.php:44
+msgid "Alphabetical Tag Cloud"
+msgstr "คลาวด์แท็กแบบตัวอักษร"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:32
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:60
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:33
+#: views/admin/sample_page.view.php:32
+#: views/admin/sample_page_gutenberg.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:33
+msgid "Tag List"
+msgstr "รายการแท็ก"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:38
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:70
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:55
+#: views/admin/sample_page.view.php:38
+#: views/admin/sample_page_gutenberg.view.php:70
+#: views/admin/settings_front_end_shortcodes.view.php:55
+msgid "Alphabetical Tag Index"
+msgstr "ดัชนีแท็กแบบตัวอักษร"
+
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:9
+#: views/admin/sample_page_gutenberg.view.php:9
+msgid ""
+"The following blocks use a variety of parameters so that you can get an "
+"idea of the options. Feel free to generate a new sample page with more "
+"features after upgrading the plugin."
+msgstr ""
+"บล็อกต่อไปนี้ใช้พารามิเตอร์ที่หลากหลายเพื่อให้คุณได้แนวคิดเกี่ยวกับตัวเลือกต"
+"่างๆ "
+"คุณสามารถสร้างหน้าแสดงตัวอย่างใหม่ที่มีฟีเจอร์เพิ่มเติมหลังจากอัปเกรดปลั๊กอิ"
+"น"
+
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:15
+#: views/admin/sample_page_gutenberg.view.php:15
+msgid ""
+"This page was created while you had the Gutenberg editor enabled. Therefore "
+"the features only display while Gutenberg is active."
+msgstr ""
+"หน้านี้ถูกสร้างขึ้นในขณะที่คุณเปิดใช้งาน Gutenberg editor "
+"ดังนั้นฟีเจอร์จะปรากฏเฉพาะเมื่อ Gutenberg ทำงาน"
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:9
+#: views/admin/settings_back_end_filters.view.php:9
+msgid "Display filter on the \"Posts\" screen."
+msgstr "แสดงตัวกรองบนหน้าจอ \"โพสต์\""
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:10
+#: views/admin/settings_back_end_filters.view.php:10
+msgid ""
+"Add a pull-down menu to the filters above the list of posts. If you filter "
+"posts by tag groups, then only items will be shown that have tags (terms) "
+"in that particular group. This feature can be turned off so that the menu "
+"won't obstruct your screen if you use a high number of groups. May not work "
+"with all taxonomies."
+msgstr ""
+"เพิ่มเมนูแบบเลื่อนลงไปยังตัวกรองด้านบนของรายการโพสต์ "
+"หากคุณกรองโพสต์ตามกลุ่มแท็ก จะมีเฉพาะรายการที่มีแท็ก (เงื่อนไข) "
+"ในกลุ่มเฉพาะนั้นแสดงอยู่ "
+"ฟีเจอร์นี้สามารถปิดได้เพื่อไม่ให้เมนูขัดขวางหน้าจอของคุณหากคุณใช้จำนวนกลุ่มท"
+"ี่มาก อาจไม่ทำงานกับ taxonomy ทุกประเภท"
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:17
+#: views/admin/settings_back_end_filters.view.php:17
+msgid "Display filter on the \"Tags\" screen."
+msgstr "แสดงตัวกรองบนหน้าจอ \"แท็ก\""
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:18
+#: views/admin/settings_back_end_filters.view.php:18
+msgid ""
+"Add a filter to the list of tags. Disable it here if it conflicts with "
+"other plugins or themes."
+msgstr ""
+"เพิ่มตัวกรองในรายการแท็ก "
+"ปิดใช้งานที่นี่หากมีความขัดแย้งกับปลั๊กอินหรือธีมอื่นๆ"
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:23
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:15
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:15
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:116
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:23
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:24
+#: views/admin/settings_back_end_filters.view.php:23
+#: views/admin/settings_back_end_gutenberg.view.php:15
+#: views/admin/settings_back_end_multilingual.view.php:15
+#: views/admin/settings_front_end_shortcodes.view.php:116
+#: views/admin/settings_rest_api.view.php:23
+#: views/admin/settings_tools_reset.view.php:24
+msgid "Save Settings"
+msgstr "บันทึกการตั้งค่า"
+
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:9
+#: views/admin/settings_back_end_gutenberg.view.php:9
+msgid "Gutenberg block preview"
+msgstr "ตัวอย่างบล็อก Gutenberg"
+
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:10
+#: views/admin/settings_back_end_gutenberg.view.php:10
+msgid ""
+"Some blocks can show an approximate preview in the Gutenberg editor. If you "
+"deactivate this option, then all blocks will show a static icon with text."
+msgstr ""
+"บางบล็อกสามารถแสดงตัวอย่างที่ใกล้เคียงในตัวแก้ไข Gutenberg "
+"หากคุณปิดใช้งานตัวเลือกนี้ บล็อกทั้งหมดจะแสดงไอคอนแบบสแตติกพร้อมข้อความ"
+
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:9
+#: views/admin/settings_back_end_multilingual.view.php:9
+msgid "Keep groups of translations in sync"
+msgstr "รักษากลุ่มการแปลให้ซิงค์กัน"
+
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:10
+#: views/admin/settings_back_end_multilingual.view.php:10
+msgid ""
+"If you activate this option, we try to sync the groups across all language "
+"versions of a tag when you save it. Deactivate it to set groups "
+"independently."
+msgstr ""
+"หากคุณเปิดใช้งานตัวเลือกนี้ "
+"เราจะพยายามซิงค์กลุ่มระหว่างเวอร์ชันภาษาทั้งหมดของแท็กเมื่อคุณบันทึก "
+"ปิดใช้งานเพื่อกำหนดกลุ่มอย่างอิสระ"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:4
+#: views/admin/settings_front_end_shortcodes.view.php:4
+msgid ""
+"All Tag Groups features are available as Gutenberg blocks. You can also use "
+"shortcodes."
+msgstr ""
+"ฟังก์ชันของกลุ่มแท็กทั้งหมดมีให้เป็นบล็อก Gutenberg คุณยังสามารถใช้ "
+"shortcode ได้"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:8
+#: views/admin/settings_front_end_shortcodes.view.php:8
+msgid "Click on the features for more information."
+msgstr "คลิกที่ฟังก์ชันเพื่อดูข้อมูลเพิ่มเติม"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:15
+#: views/admin/settings_front_end_shortcodes.view.php:15
+msgid "Display the tags in a tabbed tag cloud."
+msgstr "แสดงแท็กในคลาวด์แท็กแบบแท็บ"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:16
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:27
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:38
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:49
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:60
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:71
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:84
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:89
+#: views/admin/settings_front_end_shortcodes.view.php:16
+#: views/admin/settings_front_end_shortcodes.view.php:27
+#: views/admin/settings_front_end_shortcodes.view.php:38
+#: views/admin/settings_front_end_shortcodes.view.php:49
+#: views/admin/settings_front_end_shortcodes.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:71
+#: views/admin/settings_front_end_shortcodes.view.php:84
+#: views/admin/settings_front_end_shortcodes.view.php:89
+msgid "Example"
+msgstr "ตัวอย่าง"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:18
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:29
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:40
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:51
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:62
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:73
+#: views/admin/settings_front_end_shortcodes.view.php:18
+#: views/admin/settings_front_end_shortcodes.view.php:29
+#: views/admin/settings_front_end_shortcodes.view.php:40
+#: views/admin/settings_front_end_shortcodes.view.php:51
+#: views/admin/settings_front_end_shortcodes.view.php:62
+#: views/admin/settings_front_end_shortcodes.view.php:73
+msgid "Parameters"
+msgstr "พารามิเตอร์"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:19
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:30
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:41
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:52
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:63
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:74
+#: views/admin/settings_front_end_shortcodes.view.php:19
+#: views/admin/settings_front_end_shortcodes.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:41
+#: views/admin/settings_front_end_shortcodes.view.php:52
+#: views/admin/settings_front_end_shortcodes.view.php:63
+#: views/admin/settings_front_end_shortcodes.view.php:74
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Please find the parameters in the <a %s>documentation</a>."
+msgstr "โปรดดูพารามิเตอร์ใน <a %s>เอกสาร</a>"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:22
+#: views/admin/settings_front_end_shortcodes.view.php:22
+msgid "Accordion"
+msgstr "อะคอร์เดียน"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:26
+#: views/admin/settings_front_end_shortcodes.view.php:26
+msgid "Display the tags in an accordion."
+msgstr "แสดงแท็กในอะคอร์เดียน"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:37
+#: views/admin/settings_front_end_shortcodes.view.php:37
+msgid "Display the tags in lists under tag groups."
+msgstr "แสดงแท็กในรายการภายใต้กลุ่มแท็ก"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
+#: views/admin/settings_front_end_shortcodes.view.php:48
+msgid "Display the tags in tabbed tag cloud with first letters as tabs."
+msgstr "แสดงแท็กในคลาวด์แท็กแบบแท็บโดยใช้ตัวอักษรแรกเป็นแท็บ"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
+#: views/admin/settings_front_end_shortcodes.view.php:48
+#: views/admin/settings_front_end_shortcodes.view.php:59
+msgid "(Not tested with right-to-left languages.)"
+msgstr "(ไม่ได้ทดสอบกับภาษาที่เขียนจากขวาไปซ้าย)"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
+#: views/admin/settings_front_end_shortcodes.view.php:59
+msgid "Display the tags in a list with first letters as heading."
+msgstr "แสดงแท็กในรายการโดยใช้ตัวอักษรแรกเป็นหัวเรื่อง"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:67
+#: views/admin/settings_front_end_shortcodes.view.php:67
+msgid "Group Information"
+msgstr "ข้อมูลกลุ่ม"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:70
+#: views/admin/settings_front_end_shortcodes.view.php:70
+msgid "Display information about tag groups."
+msgstr "แสดงข้อมูลเกี่ยวกับกลุ่มแท็ก"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:82
+#: views/admin/settings_front_end_shortcodes.view.php:82
+msgid ""
+"The function <b>tag_groups_cloud</b> accepts the same parameters as the "
+"[tag_groups_cloud] shortcode, except for those that determine tabs and "
+"styling."
+msgstr ""
+"ฟังก์ชัน <b>tag_groups_cloud</b> รับพารามิเตอร์เดียวกันกับ shortcode "
+"[tag_groups_cloud] ยกเว้นพารามิเตอร์ที่กำหนดแท็บและการจัดรูปแบบ"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:83
+#: views/admin/settings_front_end_shortcodes.view.php:83
+msgid "By default it returns a string with the html for a tabbed tag cloud."
+msgstr "ตามค่าเริ่มต้นจะคืนค่าเป็นสตริงที่มี HTML สำหรับแท็บที่มีแท็กคลาวด์"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:88
+#: views/admin/settings_front_end_shortcodes.view.php:88
+msgid ""
+"If the optional second parameter is set to 'true', the function returns a "
+"multidimensional array containing tag groups and tags."
+msgstr ""
+"หากตั้งค่าพารามิเตอร์ที่สองแบบไม่บังคับเป็น 'true' "
+"ฟังก์ชันจะคืนค่าเป็นอาร์เรย์หลายมิติที่มีแท็กกลุ่มและแท็ก"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:102
+#: views/admin/settings_front_end_shortcodes.view.php:102
+msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
+msgstr "เปิดใช้งาน shortcode ใน widget แถบด้านข้าง (ถ้าไม่มองเห็นอยู่ดี)"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:108
+#: views/admin/settings_front_end_shortcodes.view.php:108
+msgid "Always load shortcode scripts."
+msgstr "โหลดสคริปต์ shortcode เสมอ"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:109
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:9
+#: dist/tag-groups/views/admin/settings_home.view.php:8
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/settings_front_end_shortcodes.view.php:109
+#: views/admin/settings_front_end_themes.view.php:9
+#: views/admin/settings_home.view.php:8
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Click for more information"
+msgstr "คลิกเพื่อดูข้อมูลเพิ่มเติม"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:112
+#: views/admin/settings_front_end_shortcodes.view.php:112
+msgid ""
+"Turn off to load the scripts only on posts and pages where a shortcode "
+"appears."
+msgstr "ปิดการใช้งานเพื่อโหลดสคริปต์เฉพาะในโพสต์และหน้าเว็บที่มี shortcode"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:113
+#: views/admin/settings_front_end_shortcodes.view.php:113
+msgid "Turn on if you use these shortcodes in widgets."
+msgstr "เปิดใช้งานหากคุณใช้ shortcodes เหล่านี้ใน widget"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:8
+#: views/admin/settings_front_end_themes.view.php:8
+msgid ""
+"Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
+"Cloud."
+msgstr "ที่นี่คุณสามารถเลือกธีมสำหรับ Tabbed Tag Cloud และ Accordion Tag Cloud"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:14
+#: views/admin/settings_front_end_themes.view.php:14
+msgid ""
+"New themes can be created with the <a "
+"href=\"http://jqueryui.com/themeroller/\" target=\"_blank\">jQuery UI "
+"ThemeRoller</a>:"
+msgstr ""
+"ธีมใหม่สามารถสร้างได้ด้วย <a href=\"http://jqueryui.com/themeroller/\" "
+"target=\"_blank\">jQuery UI ThemeRoller</a>:"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:16
+#: views/admin/settings_front_end_themes.view.php:16
+msgid ""
+"On the page \"Theme Roller\" you can customize all features or pick one set "
+"from the gallery. Finish with the \"download\" button."
+msgstr ""
+"ในหน้า \"Theme Roller\" "
+"คุณสามารถปรับแต่งฟีเจอร์ทั้งหมดหรือเลือกชุดหนึ่งจากแกลเลอรี "
+"เสร็จสิ้นด้วยปุ่ม \"ดาวน์โหลด\""
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:17
+#: views/admin/settings_front_end_themes.view.php:17
+msgid ""
+"On the next page (\"Download Builder\") you will need to select the version "
+"1.12.x and the components \"Widget\", \"Accordion\" and \"Tabs\". Make sure "
+"that before downloading you enter at the bottom as \"CSS Scope\" "
+"<b>.tag-groups-cloud</b> (including the dot)."
+msgstr ""
+"ในหน้าถัดไป (\"Download Builder\") คุณจะต้องเลือกเวอร์ชัน 1.12.x "
+"และส่วนประกอบ \"Widget\", \"Accordion\" และ \"Tabs\" "
+"ให้แน่ใจว่าก่อนดาวน์โหลดคุณใส่ที่ด้านล่างเป็น \"CSS Scope\" "
+"<b>.Tag-Groups</b> (รวมถึงจุด)"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:18
+#: views/admin/settings_front_end_themes.view.php:18
+msgid ""
+"Then you unpack the downloaded zip file. You will need the \"images\" "
+"folder and the \"jquery-ui.theme.min.css\" file."
+msgstr ""
+"จากนั้นคุณจะทำการแตกไฟล์ zip ที่ดาวน์โหลด คุณจะต้องใช้โฟลเดอร์ \"images\" "
+"และไฟล์ \"jquery-ui.theme.min.css\""
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:19
+#: views/admin/settings_front_end_themes.view.php:19
+msgid ""
+"Create a new folder inside your <i>wp-content/uploads</i> folder (for "
+"example \"my-theme\") and copy there these two items."
+msgstr ""
+"สร้างโฟลเดอร์ใหม่ภายในโฟลเดอร์ <i>wp-content/uploads</i> ของคุณ (เช่น "
+"\"my-theme\") และคัดลอกสองรายการนี้ไปที่นั่น"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:20
+#: views/admin/settings_front_end_themes.view.php:20
+msgid "Enter the name of this new folder (for example \"my-theme\") below."
+msgstr "ใส่ชื่อของโฟลเดอร์ใหม่นี้ (เช่น \"my-theme\") ด้านล่าง"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:42
+#: views/admin/settings_front_end_themes.view.php:42
+msgid "own theme"
+msgstr "ธีมของตัวเอง"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
+#: views/admin/settings_front_end_themes.view.php:52
+msgid "Don't load a theme."
+msgstr "ไม่โหลดธีม"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
+#: views/admin/settings_front_end_themes.view.php:52
+msgid ""
+"Here you can turn off jQuery UI themes if your WordPress theme brings its "
+"own jQuery UI theme, in order to avoid conflicts."
+msgstr ""
+"ที่นี่คุณสามารถปิดธีม jQuery UI หากธีม WordPress ของคุณนำธีม jQuery UI "
+"ของตนเองมาเพื่อลดความขัดแย้ง"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:57
+#: views/admin/settings_front_end_themes.view.php:57
+msgid "Further options"
+msgstr "ตัวเลือกเพิ่มเติม"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:65
+#: views/admin/settings_front_end_themes.view.php:65
+msgid "Use jQuery.  (Default is on. Other plugins might override this setting.)"
+msgstr "ใช้ jQuery (ค่าเริ่มต้นคือเปิดอยู่ ส่วนเสริมอื่นอาจเขียนทับการตั้งค่านี้)"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:73
+#: views/admin/settings_front_end_themes.view.php:73
+msgid "Tabs triggered by hovering mouse pointer (without clicking)."
+msgstr "แท็บที่ถูกกระตุ้นโดยการเลื่อนเคอร์เซอร์เมาส์ (โดยไม่ต้องคลิก)"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:80
+#: views/admin/settings_front_end_themes.view.php:80
+msgid "Collapsible tabs (toggle open/close)."
+msgstr "แท็บที่ยุบได้ (สลับเปิด/ปิด)."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:83
+#: views/admin/settings_front_end_themes.view.php:83
+msgid "HTML in tag description:"
+msgstr "HTML ในคำอธิบายแท็ก:"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
+#: views/admin/settings_front_end_themes.view.php:91
+msgid ""
+"By default the description appears in a tooltip when you hover the mouse "
+"over a tag in a tag cloud."
+msgstr "โดยปกติแล้วคำอธิบายจะปรากฏในเครื่องมือเมื่อคุณชี้เมาส์ไปที่แท็กในแท็กคลาวด์."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
+#: views/admin/settings_front_end_themes.view.php:91
+msgid ""
+"If you don't trust all users of your site, remove the HTML or use a plugin "
+"to give the unfiltered_html capability only to users you trust."
+msgstr ""
+"หากคุณไม่ไว้วางใจผู้ใช้ทั้งหมดในเว็บไซต์ของคุณ ให้ลบ HTML "
+"หรือใช้ปลั๊กอินเพื่อให้ความสามารถ unfiltered_html "
+"แก่ผู้ใช้ที่คุณไว้วางใจเท่านั้น."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:97
+#: views/admin/settings_front_end_themes.view.php:97
+msgid "Save Theme Options"
+msgstr "บันทึกตัวเลือกธีม"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:3
+#: views/admin/settings_help.view.php:3
+msgid "Search for settings"
+msgstr "ค้นหาการตั้งค่า"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:3
+#: views/admin/settings_help.view.php:3
+msgid "Search for setting pages. Type a space to show all settings."
+msgstr "ค้นหาหน้าการตั้งค่า พิมพ์ช่องว่างเพื่อแสดงการตั้งค่าทั้งหมด."
+
+#: dist/tag-groups/views/admin/settings_help.view.php:6
+#: views/admin/settings_help.view.php:6
+msgid "Search Results"
+msgstr "ผลการค้นหา"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:8
+#: views/admin/settings_help.view.php:8
+msgid "Nothing found"
+msgstr "ไม่พบข้อมูล"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:2
+#: views/admin/settings_home.view.php:2
+msgid "Active Taxonomies"
+msgstr "ภาษีที่ใช้งานอยู่"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:11
+#: views/admin/settings_home.view.php:11
+msgid "Group Statistics"
+msgstr "สถิติกลุ่ม"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:13
+#: views/admin/settings_home.view.php:13
+msgid "for the selected language"
+msgstr "สำหรับภาษาที่เลือก"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:23
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:33
+#: views/admin/settings_home.view.php:23
+#: views/admin/settings_taxonomies.view.php:33
+msgid "go to tag group administration"
+msgstr "ไปที่การจัดการกลุ่มแท็ก"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:9
+#: views/admin/settings_rest_api.view.php:9
+msgid "Enable Tag Groups Public API Access"
+msgstr "เปิดใช้งานการเข้าถึง API สาธารณะของกลุ่มแท็ก"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:10
+#: views/admin/settings_rest_api.view.php:10
+msgid "Enable public access to tag groups endpoint /wp-json/tag-groups/v1/groups/."
+msgstr ""
+"เปิดใช้งานการเข้าถึงสาธารณะไปยังจุดสิ้นสุดกลุ่มแท็ก "
+"/wp-json/tag-groups/v1/groups/."
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:17
+#: views/admin/settings_rest_api.view.php:17
+msgid "Enable Terms Public API Access"
+msgstr "เปิดใช้งานการเข้าถึง API สาธารณะของเงื่อนไข"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:18
+#: views/admin/settings_rest_api.view.php:18
+msgid "Enable public access to terms endpoint /wp-json/tag-groups/v1/terms/."
+msgstr ""
+"เปิดใช้งานการเข้าถึงสาธารณะไปยังจุดสิ้นสุดเงื่อนไข "
+"/wp-json/tag-groups/v1/terms/."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:2
+#: views/admin/settings_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use Tag Groups:"
+msgstr "เลือก taxonomies ที่คุณต้องการใช้ Tag-Groups:"
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:5
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:5
+#: views/admin/settings_taxonomies.view.php:5
+#: views/admin/setup_wizard_taxonomies.view.php:5
+msgid ""
+"The default texonomy is <b>Tags (post_tag)</b>. Please note that the tag "
+"clouds might not work with all taxonomies and that some taxonomies listed "
+"here may not be accessible in the admin backend. If you don't understand "
+"what is going on here, just leave the default."
+msgstr ""
+"ภาษีเริ่มต้นคือ <b>Tags (post_tag)</b>. "
+"โปรดทราบว่าแท็กคลาวด์อาจไม่ทำงานกับภาษีทั้งหมดและว่าภาษีบางรายการที่ระบุไว้ท"
+"ี่นี่อาจไม่สามารถเข้าถึงได้ในด้านการดูแลระบบ "
+"หากคุณไม่เข้าใจว่าเกิดอะไรขึ้นที่นี่ ให้ทิ้งค่าเริ่มต้นไว้."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:6
+#: views/admin/settings_taxonomies.view.php:6
+msgid ""
+"<b>Please deselect taxonomies that you don't use. Using several taxonomies "
+"for the same post type or hierarchical taxonomies (like categories) is "
+"experimental and not supported.</b>"
+msgstr ""
+"<b>โปรดยกเลิกการเลือก taxonomies ที่คุณไม่ใช้ "
+"การใช้หลายภาษีสำหรับประเภทโพสต์เดียวกันหรือภาษีเชิงลำดับชั้น (เช่น "
+"หมวดหมู่) เป็นการทดลองและไม่ได้รับการสนับสนุน.</b>"
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:7
+#: views/admin/settings_taxonomies.view.php:7
+msgid "To see the post type, hover your mouse over the option."
+msgstr "เพื่อดูประเภทโพสต์ ให้เลื่อนเมาส์ไปที่ตัวเลือก"
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:8
+#: views/admin/settings_taxonomies.view.php:8
+msgid ""
+"If you use a custom taxonomy, make sure that the attribute \"Public\" is "
+"set to \"true\" and \"Hierarchical\" to \"false\"."
+msgstr ""
+"หากคุณใช้ taxonomy ที่กำหนดเอง ให้แน่ใจว่าคุณสมบัติ \"Public\" "
+"ถูกตั้งค่าเป็น \"true\" และ \"Hierarchical\" เป็น \"false\""
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:15
+#: views/admin/settings_taxonomies.view.php:15
+msgid ""
+"Show hierarchical taxonomies. Not all Tag Groups features will work with "
+"these taxonomies."
+msgstr ""
+"แสดง taxonomies แบบลำดับชั้น ฟีเจอร์ของ Tag Groups ไม่ทั้งหมดจะทำงานกับ "
+"taxonomies เหล่านี้"
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:54
+#: views/admin/settings_taxonomies.view.php:54
+msgid "Save Taxonomies"
+msgstr "บันทึก Taxonomies"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid "Export"
+msgstr "ส่งออก"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid ""
+"Use this button to export all Tag Groups settings and groups and all terms "
+"that are assigned to a group into files."
+msgstr ""
+"ใช้ปุ่มนี้เพื่อส่งออกการตั้งค่าและกลุ่ม Tag Groups ทั้งหมด "
+"รวมถึงคำที่ถูกกำหนดให้กับกลุ่มไปยังไฟล์"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid ""
+"You can import both files separately. Category hierarchy won't be saved. "
+"When you restore terms that were deleted, they receive new IDs and you must "
+"assign them to posts again. Exporting cannot substitute a backup."
+msgstr ""
+"คุณสามารถนำเข้าไฟล์ทั้งสองแยกกันได้ โครงสร้างหมวดหมู่จะไม่ถูกบันทึก "
+"เมื่อคุณกู้คืนคำที่ถูกลบ มันจะได้รับ ID "
+"ใหม่และคุณต้องกำหนดให้กับโพสต์อีกครั้ง "
+"การส่งออกไม่สามารถแทนที่การสำรองข้อมูลได้"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:7
+#: views/admin/settings_tools_export_import.view.php:7
+msgid "Export Files"
+msgstr "ไฟล์ที่ส่งออก"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "Import"
+msgstr "นำเข้า"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid ""
+"Below you can import previously exported settings/groups or terms from a "
+"file."
+msgstr ""
+"ด้านล่างคุณสามารถนำเข้าการตั้งค่าหรือกลุ่มหรือคำที่ส่งออกไปก่อนหน้านี้จากไฟล"
+"์"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "It is recommended to back up the database of your site before proceeding."
+msgstr "แนะนำให้สำรองข้อมูลฐานข้อมูลของเว็บไซต์ของคุณก่อนดำเนินการต่อ"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "Please import the settings before the terms."
+msgstr "กรุณานำเข้าการตั้งค่าก่อนคำ"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:17
+#: views/admin/settings_tools_export_import.view.php:17
+msgid "Import File"
+msgstr "ไฟล์นำเข้า"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:4
+#: views/admin/settings_tools_reset.view.php:4
+msgid ""
+"Use this button to delete all tag groups and assignments. Your tags will "
+"not be changed. Check the checkbox to confirm."
+msgstr ""
+"ใช้ปุ่มนี้เพื่อลบกลุ่มแท็กและการกำหนดทั้งหมด แท็กของคุณจะไม่ถูกเปลี่ยน "
+"ตรวจสอบช่องทำเครื่องหมายเพื่อยืนยัน"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:5
+#: views/admin/settings_tools_reset.view.php:5
+msgid ""
+"Please keep in mind that the tag assignments cannot be recovered by the "
+"export/import function."
+msgstr "โปรดทราบว่าการกำหนดแท็กไม่สามารถกู้คืนได้โดยฟังก์ชันส่งออก/นำเข้า"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:7
+#: views/admin/settings_tools_reset.view.php:7
+msgid "I know what I am doing."
+msgstr "ฉันรู้ว่าฉันกำลังทำอะไร"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:10
+#: views/admin/settings_tools_reset.view.php:10
+msgid "Delete Groups"
+msgstr "ลบกลุ่ม"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:13
+#: views/admin/settings_tools_reset.view.php:13
+msgid "Delete Settings and Groups"
+msgstr "ลบการตั้งค่าและกลุ่ม"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:21
+#: views/admin/settings_tools_reset.view.php:21
+msgid "Delete all groups and settings when uninstalling the plugin."
+msgstr "ลบกลุ่มและการตั้งค่าทั้งหมดเมื่อถอนการติดตั้งปลั๊กอิน"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:7
+#: views/admin/settings_troubleshooting_debug.view.php:7
+msgid "Debug mode is on."
+msgstr "โหมดดีบักเปิดอยู่"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:15
+#: views/admin/settings_troubleshooting_debug.view.php:15
+msgid "Verbose logging is enabled with CM_DEBUG."
+msgstr "การบันทึกข้อมูลแบบละเอียดเปิดใช้งานด้วย CM_DEBUG."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:17
+#: views/admin/settings_troubleshooting_debug.view.php:17
+msgid "Verbose logging is on."
+msgstr "การบันทึกข้อมูลแบบละเอียดเปิดอยู่."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:19
+#: views/admin/settings_troubleshooting_debug.view.php:19
+msgid "Turn off "
+msgstr "ปิด "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:24
+#: views/admin/settings_troubleshooting_debug.view.php:24
+msgid "Verbose logging is off."
+msgstr "การบันทึกข้อมูลแบบละเอียดปิดอยู่."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:26
+#: views/admin/settings_troubleshooting_debug.view.php:26
+msgid "Turn on"
+msgstr "เปิด"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:31
+#: views/admin/settings_troubleshooting_debug.view.php:31
+msgid "Debug mode is off."
+msgstr "โหมดดีบักปิดอยู่."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:40
+#: views/admin/settings_troubleshooting_debug.view.php:40
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Learn more <a %s>about debugging</a>."
+msgstr "เรียนรู้เพิ่มเติม <a %s>เกี่ยวกับการดีบัก</a>."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
+msgid "Migrate tags to the new format of Tag Groups."
+msgstr "ย้ายแท็กไปยังรูปแบบใหม่ของกลุ่มแท็ก."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
+msgid ""
+"The plugin automatically migrates tags to the new format and tries to keep "
+"track of changes. There may, however, be cases where other components made "
+"unnoticed changes. You might also need to manually migrate tags after you "
+"enabled a taxonomy that already contained untracked tags."
+msgstr ""
+"ปลั๊กอินจะย้ายแท็กไปยังรูปแบบใหม่โดยอัตโนมัติและพยายามติดตามการเปลี่ยนแปลง "
+"อย่างไรก็ตาม อาจมีกรณีที่ส่วนประกอบอื่นทำการเปลี่ยนแปลงโดยไม่ถูกสังเกต "
+"คุณอาจต้องย้ายแท็กด้วยตนเองหลังจากที่คุณเปิดใช้งาน taxonomy "
+"ที่มีแท็กที่ไม่ได้ติดตามอยู่แล้ว."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:9
+#: views/admin/settings_troubleshooting_first_aid.view.php:9
+msgid "Migrate"
+msgstr "ย้าย"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:17
+#: views/admin/settings_troubleshooting_first_aid.view.php:17
+msgid ""
+"Running the maintenance can solve issues that you encounter during "
+"filtering by tag groups."
+msgstr "การรันการบำรุงรักษาสามารถแก้ไขปัญหาที่คุณพบระหว่างการกรองตามกลุ่มแท็ก."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:18
+#: views/admin/settings_troubleshooting_first_aid.view.php:18
+msgid "Maintenance"
+msgstr "การบำรุงรักษา"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
+msgid "Reset the filter on the tags page to show all tags."
+msgstr "รีเซ็ตตัวกรองในหน้าของแท็กเพื่อแสดงแท็กทั้งหมด."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
+msgid ""
+"Use it if a JavaScript error disables the filter menu. Note that it is "
+"still recommended to find out the cause of the error."
+msgstr ""
+"ใช้มันหากเกิดข้อผิดพลาด JavaScript ที่ปิดใช้งานเมนูตัวกรอง "
+"โปรดทราบว่ายังแนะนำให้หาสาเหตุของข้อผิดพลาด."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:27
+#: dist/tag-groups/views/partials/admin_footer.view.php:3
+#: views/admin/settings_troubleshooting_first_aid.view.php:27
+#: views/partials/admin_footer.view.php:3
+msgid "Reset Tag Filter"
+msgstr "รีเซ็ตตัวกรองแท็ก"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:5
+#: views/admin/settings_troubleshooting_process.view.php:5
+msgid "Please stay on this page until all processes have finished."
+msgstr "กรุณาอยู่ในหน้านี้จนกว่ากระบวนการทั้งหมดจะเสร็จสิ้น."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:10
+#: views/admin/settings_troubleshooting_process.view.php:10
+msgid "There have been errors."
+msgstr "มีข้อผิดพลาดเกิดขึ้น."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:12
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:19
+#: views/admin/settings_troubleshooting_process.view.php:12
+#: views/admin/settings_troubleshooting_process.view.php:19
+msgid "Continue"
+msgstr "ดำเนินการต่อ"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:17
+#: views/admin/settings_troubleshooting_process.view.php:17
+msgid "Finished!"
+msgstr "เสร็จสิ้น!"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:24
+#: views/admin/settings_troubleshooting_process.view.php:24
+msgid "The following terms cannot be used:"
+msgstr "คำต่อไปนี้ไม่สามารถใช้ได้:"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:128
+#: views/admin/settings_troubleshooting_process.view.php:128
+msgid "Number of processed items: "
+msgstr "จำนวนรายการที่ประมวลผล: "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:130
+#: views/admin/settings_troubleshooting_process.view.php:130
+msgid "Number of changed items: "
+msgstr "จำนวนรายการที่เปลี่ยนแปลง: "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:5
+#: views/admin/settings_troubleshooting_system.view.php:5, fuzzy
+msgid "WordPress Version"
+msgstr "WordPress Version"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:8
+#: views/admin/settings_troubleshooting_system.view.php:8, fuzzy
+msgid "Site URL"
+msgstr "Site URL"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:11
+#: views/admin/settings_troubleshooting_system.view.php:11, fuzzy
+msgid "Home URL"
+msgstr "Home URL"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:15
+#: views/admin/settings_troubleshooting_system.view.php:15, fuzzy
+msgid "Active Theme"
+msgstr "Active Theme"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:17
+#: views/admin/settings_troubleshooting_system.view.php:17, fuzzy
+msgid "Version"
+msgstr "Version"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:23
+#: views/admin/settings_troubleshooting_system.view.php:23
+msgid "Checking..."
+msgstr "กำลังตรวจสอบ..."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:26
+#: views/admin/settings_troubleshooting_system.view.php:26
+msgid "Show the Response"
+msgstr "แสดงการตอบกลับ"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:72
+#: views/admin/settings_troubleshooting_system.view.php:72
+msgid "passed"
+msgstr "ผ่าน"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:98
+#: views/admin/settings_troubleshooting_system.view.php:98
+msgid "failed"
+msgstr "ล้มเหลว"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:105
+#: views/admin/settings_troubleshooting_system.view.php:105, fuzzy
+msgid "Benchmarks"
+msgstr "Benchmarks"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:125
+#: views/admin/settings_troubleshooting_system.view.php:125, fuzzy
+msgid "Cache"
+msgstr "Cache"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:127
+#: views/admin/settings_troubleshooting_system.view.php:127
+msgid "Tag groups pro only"
+msgstr "กลุ่มแท็กเฉพาะโปร"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:152
+#: views/admin/settings_troubleshooting_system.view.php:152, fuzzy
+msgid "Server"
+msgstr "Server"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:188
+#: views/admin/settings_troubleshooting_system.view.php:188, fuzzy
+msgid "Constants"
+msgstr "Constants"
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:3
+#: views/admin/setup_wizard_finished.view.php:3
+msgid "Well done!"
+msgstr "ทำได้ดีมาก!"
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:6
+#: views/admin/setup_wizard_finished.view.php:6
+msgid "Now go the Tag Group Administration."
+msgstr "ตอนนี้ไปที่การจัดการกลุ่มแท็ก."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:10
+#: views/admin/setup_wizard_finished.view.php:10
+msgid "Or preview the sample page here."
+msgstr "หรือดูตัวอย่างหน้าที่นี่."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:14
+#, php-format
+msgid ""
+"Or go to the <a %s>Tag Groups settings</a> or visit the <a "
+"%s>documentation</a>."
+msgstr "หรือไปที่ <a %s>การตั้งค่ากลุ่มแท็ก</a> หรือเยี่ยมชม <a %s>เอกสาร</a>."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:16
+#, php-format
+msgid ""
+"Now go to the <a %s>Tag Groups settings</a>, or visit the <a "
+"%s>documentation</a>."
+msgstr "ตอนนี้ไปที่ <a %s>การตั้งค่า Tag Groups</a> หรือเยี่ยมชม <a %s>เอกสาร</a>."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:19
+#: views/admin/setup_wizard_finished.view.php:19
+msgid ""
+"If you need to launch the Setup Wizard again, you can find it in the "
+"settings. Just enter \"wizard\" in the search field."
+msgstr ""
+"หากคุณต้องการเริ่มต้น Setup Wizard อีกครั้ง คุณสามารถหามันได้ในการตั้งค่า "
+"เพียงแค่พิมพ์ \"wizard\" ในช่องค้นหา."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:21
+#: views/admin/setup_wizard_finished.view.php:21
+msgid "Happy tagging!"
+msgstr "มีความสุขกับการแท็ก!"
+
+#: dist/tag-groups/views/admin/setup_wizard_header.view.php:1
+#: views/admin/setup_wizard_header.view.php:1, fuzzy
+msgid "Tag Groups Setup Wizard"
+msgstr "Tag Groups Setup Wizard"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:3
+#: views/admin/setup_wizard_sample_content.view.php:3
+msgid ""
+"Now you are ready to create your own tag groups. If you prefer to start out "
+"from a sample, we will create for you three groups and three tags. You can "
+"play around with them, rename or delete them."
+msgstr ""
+"ตอนนี้คุณพร้อมที่จะสร้างกลุ่มแท็กของคุณเอง หากคุณต้องการเริ่มจากตัวอย่าง "
+"เราจะสร้างให้คุณสามกลุ่มและสามแท็ก คุณสามารถทดลองใช้งาน เปลี่ยนชื่อ หรือ "
+"ลบพวกมันได้."
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:8
+#: views/admin/setup_wizard_sample_content.view.php:8
+msgid "Create sample groups:"
+msgstr "สร้างกลุ่มตัวอย่าง:"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:16
+#: views/admin/setup_wizard_sample_content.view.php:16
+msgid "Create sample tags in these groups:"
+msgstr "สร้างแท็กตัวอย่างในกลุ่มเหล่านี้:"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:34
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:33
+#: views/admin/setup_wizard_sample_content.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:33
+msgid "Next Step"
+msgstr "ขั้นตอนถัดไป"
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:3
+#: views/admin/setup_wizard_start.view.php:3
+msgid ""
+"On the following pages we will guide you through the basic settings that "
+"you need for the most common features."
+msgstr ""
+"ในหน้าถัดไปเราจะแนะนำคุณเกี่ยวกับการตั้งค่าพื้นฐานที่คุณต้องการสำหรับฟีเจอร์"
+"ที่พบบ่อยที่สุด."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
+#: views/admin/setup_wizard_start.view.php:4
+msgid ""
+"You can later make changes or fine-tune the details in the Tag Groups "
+"settings."
+msgstr ""
+"คุณสามารถทำการเปลี่ยนแปลงหรือปรับแต่งรายละเอียดในการตั้งค่า Tag Groups "
+"ได้ในภายหลัง."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
+#: views/admin/setup_wizard_start.view.php:4
+msgid "(show me the menu)"
+msgstr "(แสดงเมนูให้ฉันดู)"
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:5
+#: views/admin/setup_wizard_start.view.php:5
+msgid ""
+"Feel free to abort the Setup Wizard any time and continue on your own path. "
+"You can also launch it again at a later time."
+msgstr ""
+"คุณสามารถยกเลิก Setup Wizard ได้ทุกเมื่อและดำเนินการตามเส้นทางของคุณเอง "
+"คุณยังสามารถเริ่มมันอีกครั้งในภายหลังได้."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:7
+#: views/admin/setup_wizard_start.view.php:7
+msgid "The wizard will offer more options after upgrading to premium."
+msgstr "วิเศษจะเสนอตัวเลือกเพิ่มเติมหลังจากอัปเกรดเป็นพรีเมียม."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use tag groups."
+msgstr "เลือก taxonomies ที่คุณต้องการใช้กลุ่มแท็ก."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
+msgstr "ในกรณีส่วนใหญ่ taxonomy เริ่มต้น <b>Tags (post_tag)</b> จะทำงานได้ดี."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:22
+#: views/admin/setup_wizard_taxonomies.view.php:22
+msgid "post type"
+msgstr "post type"
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:30
+#: views/admin/setup_wizard_taxonomies.view.php:30
+msgid "You will find more options in the Tag Groups settings."
+msgstr "คุณจะพบตัวเลือกเพิ่มเติมในการตั้งค่า Tag Groups."
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:3
+#: views/admin/tag_groups_admin.view.php:3
+msgid "Tag Group Administration"
+msgstr "การจัดการกลุ่มแท็ก"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:10
+#: views/admin/tag_groups_admin.view.php:10
+msgid "Filter by label"
+msgstr "กรองตามป้ายกำกับ"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:22
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:35
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
+msgid "Tag Group name"
+msgstr "ชื่อกลุ่มแท็ก"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:24
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:37
+#: views/admin/tag_groups_admin.view.php:24
+#: views/admin/tag_groups_admin.view.php:37
+msgid "Number of assigned tags"
+msgstr "จำนวนแท็กที่กำหนด"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:28
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:41
+#: views/admin/tag_groups_admin.view.php:28
+#: views/admin/tag_groups_admin.view.php:41
+msgid "Actions"
+msgstr "การดำเนินการ"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:29
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:42
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
+msgid "Change order"
+msgstr "เปลี่ยนลำดับ"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:30
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:43
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
+msgid "Group ID"
+msgstr "รหัสกลุ่ม"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:63
+#: views/admin/tag_groups_admin.view.php:63
+msgid "Edit"
+msgstr "แก้ไข"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:64
+#: views/admin/tag_groups_admin.view.php:64
+msgid "Create"
+msgstr "สร้าง"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:65
+#: views/admin/tag_groups_admin.view.php:65
+msgid "new"
+msgstr "ใหม่"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:66
+#: views/admin/tag_groups_admin.view.php:66
+msgid "label"
+msgstr "ป้าย"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:67
+#: views/admin/tag_groups_admin.view.php:67
+msgid "Delete this group."
+msgstr "ลบกลุ่มนี้"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:68
+#: views/admin/tag_groups_admin.view.php:68
+msgid "Create a new group below."
+msgstr "สร้างกลุ่มใหม่ด้านล่าง"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:69
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Tag Group"
+msgstr "เพิ่มกลุ่มแท็กใหม่"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:70
+#: views/admin/tag_groups_admin.view.php:70
+msgid "move up"
+msgstr "เลื่อนขึ้น"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:71
+#: views/admin/tag_groups_admin.view.php:71
+msgid "move down"
+msgstr "เลื่อนลง"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:72
+#: views/admin/tag_groups_admin.view.php:72
+msgid "reload"
+msgstr "โหลดใหม่"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:73
+#: views/admin/tag_groups_admin.view.php:73
+msgid "next page"
+msgstr "หน้าถัดไป"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:74
+#: views/admin/tag_groups_admin.view.php:74
+msgid "previous page"
+msgstr "หน้าก่อนหน้า"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:75
+#: views/admin/tag_groups_admin.view.php:75
+msgid "go to page:"
+msgstr "ไปยังหน้า:"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:76
+#: views/admin/tag_groups_admin.view.php:76
+msgid "Show posts"
+msgstr "แสดงโพสต์"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:77
+#: views/admin/tag_groups_admin.view.php:77
+msgid "Show tags"
+msgstr "แสดงแท็ก"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:168
+#: views/admin/tag_groups_admin.view.php:168
+msgid "Do you really want to delete this tag group?"
+msgstr "คุณต้องการลบกลุ่มแท็กนี้จริงๆ หรือไม่?"
+
+#: dist/tag-groups/views/partials/admin_feed_fallback.view.php:2
+#, php-format
+msgid "Please visit <a %s>%s</a>."
+msgstr "กรุณาเยี่ยมชม <a %s>%s</a>."
+
+#: dist/tag-groups/views/partials/admin_feed_footer.view.php:3
+#: views/partials/admin_feed_footer.view.php:3
+msgid "Read more"
+msgstr "อ่านเพิ่มเติม"
+
+#: dist/tag-groups/views/partials/admin_footer_rating.view.php:4
+#, php-format
+msgid "Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s"
+msgstr "ขอบคุณที่ใช้ Tag Groups | %1sTaxoPress.com%2s | รุ่น %3s"
+
+#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:10
+#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:11
+#: views/partials/bulk_admin_footer.view.php:10
+#: views/partials/bulk_admin_footer.view.php:11
+msgid "Assign to"
+msgstr "มอบหมายให้"
+
+#: dist/tag-groups/views/partials/filter_admin_footer.view.php:23
+#: views/partials/filter_admin_footer.view.php:23
+msgid "Filter off"
+msgstr "ปิดการกรอง"
+
+#: dist/tag-groups/views/partials/language_notice.view.php:2
+#: views/partials/language_notice.view.php:2
+msgid "Please select one of the languages above to see the correct tag groups!"
+msgstr "กรุณาเลือกหนึ่งในภาษาข้างต้นเพื่อดูกลุ่มแท็กที่ถูกต้อง!"
+
+#: dist/tag-groups/views/partials/quick_edit_tag.view.php:3
+#: views/partials/quick_edit_tag.view.php:3
+msgid "Groups"
+msgstr "กลุ่ม"
+
+#: includes-core/TagGroupsCoreAdmin.php:44
+#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
+#, php-format
+msgid ""
+"You're using Tag Groups Free. The Pro version has more features and "
+"support. %1$sUpgrade to Pro%2$s"
+msgstr ""
+"คุณกำลังใช้ Tag Groups ฟรี รุ่น Pro มีฟีเจอร์และการสนับสนุนมากขึ้น "
+"%1$sอัปเกรดเป็น Pro%2$s"
+
+#: views/admin/setup_wizard_finished.view.php:14
+#. translators: %1$s and %2$s are href attributes with URLs
+#, php-format
+msgid ""
+"Or go to the <a %1$s>Tag Groups settings</a> or visit the <a "
+"%2$s>documentation</a>."
+msgstr "หรือไปที่ <a %1$s>การตั้งค่า Tag Groups</a> หรือตรวจสอบ <a %2$s>เอกสาร</a>."
+
+#: views/admin/setup_wizard_finished.view.php:16
+#. translators: %1$s and %2$s are href attributes with URLs
+#, php-format
+msgid ""
+"Now go to the <a %1$s>Tag Groups settings</a>, or visit the <a "
+"%2$s>documentation</a>."
+msgstr "ตอนนี้ไปที่ <a %1$s>การตั้งค่า Tag Groups</a> หรือไปที่ <a %2$s>เอกสาร</a>."
+
+#: views/partials/admin_feed_fallback.view.php:2
+#. translators: %1$s is the href attribute with URL, %2$s is the link text
+#, php-format
+msgid "Please visit <a %1$s>%2$s</a>."
+msgstr "กรุณาเยี่ยมชม <a %1$s>%2$s</a>."
+
+#: views/partials/admin_footer_rating.view.php:5
+#. translators: %1$s and %2$s are opening and closing anchor tags, %3$s is the version number
+#, php-format
+msgid "Thanks for using Tag Groups | %1$sTaxoPress.com%2$s | Version %3$s"
+msgstr "ขอบคุณที่ใช้ Tag Groups | %1$sTaxoPress.com%2$s | รุ่น %3$s"

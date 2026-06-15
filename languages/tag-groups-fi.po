@@ -1,0 +1,2298 @@
+# Copyright (C) 2026 TaxoPress
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tag Groups 2.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
+"PO-Revision-Date: 2026-06-15 12:50+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: tag-groups\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fi\n"
+
+#: tag-groups.php:4
+#: dist/tag-groups/include/admin/class.admin.php:206
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:2
+#: dist/tag-groups/views/admin/new_tag_from_list.view.php:2
+#: include/admin/class.admin.php:206
+#: views/admin/edit_tag_main.view.php:2
+#: views/admin/new_tag_from_list.view.php:2
+#. Plugin Name of the plugin
+msgid "Tag Groups"
+msgstr "Tag-Groups"
+
+#: tag-groups.php:5, fuzzy
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/tag-groups/"
+msgstr "https://wordpress.org/plugins/tag-groups/"
+
+#: tag-groups.php:6
+#. Description of the plugin
+msgid ""
+"Tag Groups allows you to organize your WordPress taxonomy terms and show "
+"them in clouds, tabs, accordions, tables, lists and much more."
+msgstr ""
+"Tag-Groups mahdollistaa WordPress taxonomy -termojen organisoinnin ja "
+"niiden näyttämisen pilvissä, välilehdissä, akordeoneissa, taulukoissa, "
+"listoissa ja paljon muuta."
+
+#: tag-groups.php:7
+#. Author of the plugin
+msgid "TaxoPress"
+msgstr "TaxoPress"
+
+#: tag-groups.php:8, fuzzy
+#. Author URI of the plugin
+msgid "https://taxopress.com"
+msgstr "https://taxopress.com"
+
+#: dist/tag-groups/include/admin/class.admin.php:22
+#: include/admin/class.admin.php:22
+msgid "Home"
+msgstr "Koti"
+
+#: dist/tag-groups/include/admin/class.admin.php:26
+#: dist/tag-groups/include/admin/class.settings.php:827
+#: dist/tag-groups/include/admin/class.setup_wizard.php:98
+#: include/admin/class.admin.php:26
+#: include/admin/class.settings.php:827
+#: include/admin/class.setup_wizard.php:98
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+#: dist/tag-groups/include/admin/class.admin.php:33
+#: include/admin/class.admin.php:33
+msgid "Front End"
+msgstr "Etupää"
+
+#: dist/tag-groups/include/admin/class.admin.php:40
+#: include/admin/class.admin.php:40
+msgid "Back End"
+msgstr "Takapää"
+
+#: dist/tag-groups/include/admin/class.admin.php:47
+#: dist/tag-groups/include/admin/class.settings.php:935
+#: dist/tag-groups/views/admin/onboarding.view.php:1
+#: include/admin/class.admin.php:47
+#: include/admin/class.settings.php:935
+#: views/admin/onboarding.view.php:1
+msgid "First Steps"
+msgstr "Ensimmäiset askeleet"
+
+#: dist/tag-groups/include/admin/class.admin.php:54
+#: dist/tag-groups/include/admin/class.settings.php:940
+#: include/admin/class.admin.php:54
+#: include/admin/class.settings.php:940
+msgid "Setup Wizard"
+msgstr "Asennusohjelma"
+
+#: dist/tag-groups/include/admin/class.admin.php:61
+#: dist/tag-groups/include/admin/class.admin.php:940
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:95
+#: include/admin/class.admin.php:61
+#: include/admin/class.admin.php:940
+#: views/admin/settings_front_end_shortcodes.view.php:95
+msgid "Settings"
+msgstr "Asetukset"
+
+#: dist/tag-groups/include/admin/class.admin.php:87
+#: include/admin/class.admin.php:87, fuzzy
+msgid "Tag Group Admin"
+msgstr "Tag Group Admin"
+
+#: dist/tag-groups/include/admin/class.admin.php:434
+#: include/admin/class.admin.php:434
+msgid "The term has been removed from all groups."
+msgstr "Termi on poistettu kaikista ryhmistä."
+
+#: dist/tag-groups/include/admin/class.admin.php:565
+#: include/admin/class.admin.php:565
+msgid "Edit this item inline"
+msgstr "Muokkaa tätä kohdetta suoraan"
+
+#: dist/tag-groups/include/admin/class.admin.php:567
+#: include/admin/class.admin.php:567
+msgid "Quick&nbsp;Edit"
+msgstr "Nopea&nbsp;Muokkaus"
+
+#: dist/tag-groups/include/admin/class.admin.php:993
+#: include/admin/class.admin.php:994
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid ""
+"Please <a %s>click here to run the migration routines</a> to make sure we "
+"have migrated all tags."
+msgstr ""
+"Ole hyvä ja <a %s>klikkaa tästä suorittaaksesi migraatio-ohjelmat</a> "
+"varmistaaksesi, että olemme siirtäneet kaikki tagit."
+
+#: dist/tag-groups/include/admin/class.export.php:144
+#: include/admin/class.export.php:144
+msgid ""
+"Your settings/groups and your terms have been exported. Please download the "
+"resulting files with right-click or ctrl-click:"
+msgstr ""
+"Asetuksesi/ryhmät ja termisi on viety. Ole hyvä ja lataa tuloksena saadut "
+"tiedostot oikealla hiiren napilla tai ctrl-napilla:"
+
+#: dist/tag-groups/include/admin/class.export.php:151
+#: include/admin/class.export.php:151
+msgid "Writing of the exported settings failed."
+msgstr "Vietyjen asetusten kirjoittaminen epäonnistui."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:176
+#: dist/tag-groups/include/admin/class.group_admin.php:180
+#: include/admin/class.group_admin.php:176
+#: include/admin/class.group_admin.php:180
+msgid "The groups have been sorted alphabetically."
+msgstr "Ryhmiä on lajiteltu aakkosjärjestykseen."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:188
+#: dist/tag-groups/include/admin/class.group_admin.php:207
+#: include/admin/class.group_admin.php:188
+#: include/admin/class.group_admin.php:209
+msgid "The label cannot be empty."
+msgstr "Tunniste ei voi olla tyhjää."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:191
+#: include/admin/class.group_admin.php:192
+#. translators: %s is the tag group label
+#, php-format
+msgid ""
+"A tag group with the label '%s' already exists, or the label has not "
+"changed. Please choose another one or go back."
+msgstr ""
+"Tunnisteyhdistelmä, jonka tunniste on '%s', on jo olemassa, tai tunniste ei "
+"ole muuttunut. Valitse toinen tai palaa takaisin."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:195
+#: include/admin/class.group_admin.php:197
+#. translators: %s is the tag group label
+#, php-format
+msgid "A new tag group with the label '%s' has been created!"
+msgstr "Uusi tunnisteyhdistelmä, jonka tunniste on '%s', on luotu!"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:213
+#: include/admin/class.group_admin.php:216
+#. translators: %s is the tag group label
+#, php-format
+msgid "A tag group with the label '%s' already exists."
+msgstr "Tunnisteyhdistelmä, jonka tunniste on '%s', on jo olemassa."
+
+#: dist/tag-groups/include/admin/class.group_admin.php:225
+#: include/admin/class.group_admin.php:229
+#. translators: %s is the tag group label
+#, php-format
+msgid "The tag group with the label '%s' has been saved!"
+msgstr "Tunnisteyhdistelmä, jonka tunniste on '%s', on tallennettu!"
+
+#: dist/tag-groups/include/admin/class.group_admin.php:231
+#: include/admin/class.group_admin.php:236
+#. translators: %1$s is the group ID, %2$s is the group label
+#, php-format
+msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
+msgstr "Tunnisteyhdistelmä, jonka id on %1$s ja tunniste on '%2$s', on poistettu."
+
+#: dist/tag-groups/include/admin/class.import.php:81
+#: include/admin/class.import.php:81
+msgid "Error uploading the file."
+msgstr "Virhe tiedoston lataamisessa."
+
+#: dist/tag-groups/include/admin/class.import.php:108
+#: include/admin/class.import.php:108
+msgid "Error reading the file."
+msgstr "Virhe tiedoston lukemisessa."
+
+#: dist/tag-groups/include/admin/class.import.php:146
+#: dist/tag-groups/include/admin/class.import.php:187
+#: include/admin/class.import.php:146
+#: include/admin/class.import.php:189
+msgid "Error parsing the file."
+msgstr "Virhe tiedoston jäsentämisessä."
+
+#: dist/tag-groups/include/admin/class.import.php:165
+#: dist/tag-groups/include/admin/class.import.php:260
+#: include/admin/class.import.php:165
+#: include/admin/class.import.php:262
+msgid "date unknown"
+msgstr "päivämäärä tuntematon"
+
+#: dist/tag-groups/include/admin/class.import.php:169
+#: include/admin/class.import.php:170
+#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#, php-format
+msgid ""
+"Your settings and groups have been imported from the file %1$s (created "
+"with plugin version %2$s on %3$s)."
+msgstr ""
+"Asetuksesi ja ryhmäsi on tuotu tiedostosta %1$s (luotu liitännäisversion "
+"%2$s avulla %3$s)."
+
+#: dist/tag-groups/include/admin/class.import.php:170
+#: include/admin/class.import.php:172
+#. translators: %d is the number of options
+#, php-format
+msgid "%d option was added or changed."
+msgid_plural "%d options were added or changed."
+msgstr[0] "%d vaihtoehto lisättiin tai muutettiin."
+msgstr[1] "%d vaihtoehtoa lisättiin tai muutettiin."
+
+#: dist/tag-groups/include/admin/class.import.php:264
+#: include/admin/class.import.php:267
+#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#, php-format
+msgid ""
+"Your terms have been imported from the file %1$s (created with plugin "
+"version %2$s on %3$s)."
+msgstr ""
+"Termisi on tuotu tiedostosta %1$s (luotu liitännäisversion %2$s avulla "
+"%3$s)."
+
+#: dist/tag-groups/include/admin/class.import.php:265
+#: include/admin/class.import.php:269
+#. translators: %d is the number of terms processed
+#, php-format
+msgid "We processed %d term."
+msgid_plural "We processed %d terms."
+msgstr[0] "Käsittelimme %d termin."
+msgstr[1] "Käsittelimme %d termiä."
+
+#: dist/tag-groups/include/admin/class.import.php:266
+#: include/admin/class.import.php:271
+#. translators: %d is the number of terms saved
+#, php-format
+msgid "We saved %d term."
+msgid_plural "We saved %d terms."
+msgstr[0] "Tallensimme %d termin."
+msgstr[1] "Tallensimme %d termiä."
+
+#: dist/tag-groups/include/admin/class.import.php:267
+#: include/admin/class.import.php:273
+#. translators: %d is the number of terms updated
+#, php-format
+msgid "The group info of %d term was updated."
+msgid_plural "The group info of %d terms was updated."
+msgstr[0] "Ryhmätieto %d termistä päivitettiin."
+msgstr[1] "Ryhmätieto %d termistä päivitettiin."
+
+#: dist/tag-groups/include/admin/class.settings.php:151
+#: dist/tag-groups/include/admin/class.settings.php:858
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:26
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:39
+#: include/admin/class.settings.php:151
+#: include/admin/class.settings.php:858
+#: views/admin/tag_groups_admin.view.php:26
+#: views/admin/tag_groups_admin.view.php:39
+msgid "Filters"
+msgstr "Suodattimet"
+
+#: dist/tag-groups/include/admin/class.settings.php:153
+#: dist/tag-groups/include/admin/class.settings.php:958
+#: include/admin/class.settings.php:153
+#: include/admin/class.settings.php:958, fuzzy
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#: dist/tag-groups/include/admin/class.settings.php:156
+#: dist/tag-groups/include/admin/class.settings.php:965
+#: include/admin/class.settings.php:156
+#: include/admin/class.settings.php:965
+msgid "Multilingual"
+msgstr "Monikielinen"
+
+#: dist/tag-groups/include/admin/class.settings.php:238
+#: dist/tag-groups/include/admin/class.settings.php:832
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:9
+#: include/admin/class.settings.php:238
+#: include/admin/class.settings.php:832
+#: views/admin/settings_front_end_shortcodes.view.php:9, fuzzy
+msgid "Shortcodes"
+msgstr "Shortcodes"
+
+#: dist/tag-groups/include/admin/class.settings.php:239
+#: dist/tag-groups/include/admin/class.settings.php:846
+#: include/admin/class.settings.php:239
+#: include/admin/class.settings.php:846
+msgid "Themes and Appearance"
+msgstr "Teemat ja ulkoasu"
+
+#: dist/tag-groups/include/admin/class.settings.php:265
+#: include/admin/class.settings.php:265
+msgid "remove"
+msgstr "poista"
+
+#: dist/tag-groups/include/admin/class.settings.php:265
+#: include/admin/class.settings.php:265
+msgid "(recommended)"
+msgstr "(suositellaan)"
+
+#: dist/tag-groups/include/admin/class.settings.php:266
+#: include/admin/class.settings.php:266
+msgid "keep"
+msgstr "pidä"
+
+#: dist/tag-groups/include/admin/class.settings.php:267
+#: include/admin/class.settings.php:267
+msgid "use unfiltered_html filter"
+msgstr "käytä unfiltered_html-suodatinta"
+
+#: dist/tag-groups/include/admin/class.settings.php:317
+#: dist/tag-groups/include/admin/class.settings.php:945
+#: include/admin/class.settings.php:317
+#: include/admin/class.settings.php:945
+msgid "First Aid"
+msgstr "Ensimmäinen apu"
+
+#: dist/tag-groups/include/admin/class.settings.php:318
+#: include/admin/class.settings.php:318, fuzzy
+msgid "REST API"
+msgstr "REST API"
+
+#: dist/tag-groups/include/admin/class.settings.php:319
+#: dist/tag-groups/include/admin/class.settings.php:873
+#: include/admin/class.settings.php:319
+#: include/admin/class.settings.php:873
+msgid "System Information"
+msgstr "Järjestelmän tiedot"
+
+#: dist/tag-groups/include/admin/class.settings.php:320
+#: dist/tag-groups/include/admin/class.settings.php:887
+#: include/admin/class.settings.php:320
+#: include/admin/class.settings.php:887
+msgid "Debugging"
+msgstr "Vianetsintä"
+
+#: dist/tag-groups/include/admin/class.settings.php:321
+#: dist/tag-groups/include/admin/class.settings.php:863
+#: include/admin/class.settings.php:321
+#: include/admin/class.settings.php:863
+msgid "Export/Import"
+msgstr "Vienti/tuonti"
+
+#: dist/tag-groups/include/admin/class.settings.php:322
+#: dist/tag-groups/include/admin/class.settings.php:868
+#: include/admin/class.settings.php:322
+#: include/admin/class.settings.php:868
+msgid "Reset"
+msgstr "Nollaa"
+
+#: dist/tag-groups/include/admin/class.settings.php:324
+#: include/admin/class.settings.php:324
+msgid "Licences"
+msgstr "Lisenssit"
+
+#: dist/tag-groups/include/admin/class.settings.php:422
+#: include/admin/class.settings.php:422
+msgid "Transients"
+msgstr "Tilapäiset"
+
+#: dist/tag-groups/include/admin/class.settings.php:423
+#: include/admin/class.settings.php:423
+msgid "Database"
+msgstr "Tietokanta"
+
+#: dist/tag-groups/include/admin/class.settings.php:424
+#: include/admin/class.settings.php:424
+msgid "Filesystem"
+msgstr "Tiedostojärjestelmä"
+
+#: dist/tag-groups/include/admin/class.settings.php:425
+#: include/admin/class.settings.php:425
+msgid "WP Object Cache"
+msgstr "WP-objektivälimuisti"
+
+#: dist/tag-groups/include/admin/class.settings.php:548
+#: dist/tag-groups/include/admin/class.settings.php:604
+#: dist/tag-groups/include/admin/class.settings.php:642
+#: dist/tag-groups/include/admin/class.settings.php:676
+#: dist/tag-groups/include/admin/class.settings.php:691
+#: dist/tag-groups/include/admin/class.settings.php:704
+#: dist/tag-groups/include/admin/class.settings.php:717
+#: dist/tag-groups/include/admin/class.settings.php:786
+#: include/admin/class.settings.php:548
+#: include/admin/class.settings.php:604
+#: include/admin/class.settings.php:642
+#: include/admin/class.settings.php:676
+#: include/admin/class.settings.php:691
+#: include/admin/class.settings.php:704
+#: include/admin/class.settings.php:717
+#: include/admin/class.settings.php:786
+msgid "Your settings have been saved."
+msgstr "Asetuksesi on tallennettu."
+
+#: dist/tag-groups/include/admin/class.settings.php:566
+#: include/admin/class.settings.php:566
+msgid "Your settings has been saved."
+msgstr "Asetuksesi on tallennettu."
+
+#: dist/tag-groups/include/admin/class.settings.php:584
+#: include/admin/class.settings.php:584
+msgid "All groups have been deleted and assignments reset."
+msgstr "Kaikki ryhmät on poistettu ja tehtävät nollattu."
+
+#: dist/tag-groups/include/admin/class.settings.php:733
+#: include/admin/class.settings.php:733
+msgid "The filter on the tags page has been reset to show all tags."
+msgstr "Suodatin tunnisteet-sivulla on nollattu näyttämään kaikki tunnisteet."
+
+#: dist/tag-groups/include/admin/class.settings.php:829
+#: include/admin/class.settings.php:829, fuzzy
+msgid "tag groups"
+msgstr "tag groups"
+
+#: dist/tag-groups/include/admin/class.settings.php:835
+#: dist/tag-groups/include/admin/class.settings.php:849
+#: dist/tag-groups/include/admin/class.settings.php:904
+#: include/admin/class.settings.php:835
+#: include/admin/class.settings.php:849
+#: include/admin/class.settings.php:904, fuzzy
+msgid "tag cloud"
+msgstr "tag cloud"
+
+#: dist/tag-groups/include/admin/class.settings.php:836
+#: include/admin/class.settings.php:836, fuzzy
+msgid "group info"
+msgstr "group info"
+
+#: dist/tag-groups/include/admin/class.settings.php:837
+#: include/admin/class.settings.php:837, fuzzy
+msgid "sidebar widget"
+msgstr "sidebar widget"
+
+#: dist/tag-groups/include/admin/class.settings.php:838
+#: include/admin/class.settings.php:838, fuzzy
+msgid "accordion"
+msgstr "accordion"
+
+#: dist/tag-groups/include/admin/class.settings.php:839
+#: include/admin/class.settings.php:839, fuzzy
+msgid "tabs"
+msgstr "tabs"
+
+#: dist/tag-groups/include/admin/class.settings.php:840
+#: include/admin/class.settings.php:840, fuzzy
+msgid "alphabetical"
+msgstr "alphabetical"
+
+#: dist/tag-groups/include/admin/class.settings.php:841
+#: include/admin/class.settings.php:841, fuzzy
+msgid "post list"
+msgstr "post list"
+
+#: dist/tag-groups/include/admin/class.settings.php:853
+#: include/admin/class.settings.php:853, fuzzy
+msgid "colors"
+msgstr "colors"
+
+#: dist/tag-groups/include/admin/class.settings.php:854
+#: include/admin/class.settings.php:854, fuzzy
+msgid "tag description"
+msgstr "tag description"
+
+#: dist/tag-groups/include/admin/class.settings.php:860
+#: dist/tag-groups/include/admin/class.settings.php:952
+#: include/admin/class.settings.php:860
+#: include/admin/class.settings.php:952, fuzzy
+msgid "tag filter"
+msgstr "tag filter"
+
+#: dist/tag-groups/include/admin/class.settings.php:860
+#: include/admin/class.settings.php:860, fuzzy
+msgid "post filter"
+msgstr "post filter"
+
+#: dist/tag-groups/include/admin/class.settings.php:865
+#: include/admin/class.settings.php:865, fuzzy
+msgid "backup"
+msgstr "backup"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870, fuzzy
+msgid "remove plugin"
+msgstr "remove plugin"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870, fuzzy
+msgid "remove data"
+msgstr "remove data"
+
+#: dist/tag-groups/include/admin/class.settings.php:870
+#: include/admin/class.settings.php:870, fuzzy
+msgid "delete groups"
+msgstr "delete groups"
+
+#: dist/tag-groups/include/admin/class.settings.php:876
+#: dist/tag-groups/include/admin/class.settings.php:890
+#: include/admin/class.settings.php:876
+#: include/admin/class.settings.php:890, fuzzy
+msgid "debugging"
+msgstr "debugging"
+
+#: dist/tag-groups/include/admin/class.settings.php:877
+#: include/admin/class.settings.php:877, fuzzy
+msgid "PHP Version"
+msgstr "PHP Version"
+
+#: dist/tag-groups/include/admin/class.settings.php:878
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:21
+#: include/admin/class.settings.php:878
+#: views/admin/settings_troubleshooting_system.view.php:21, fuzzy
+msgid "Ajax Test"
+msgstr "Ajax Test"
+
+#: dist/tag-groups/include/admin/class.settings.php:879
+#: dist/tag-groups/include/admin/class.settings.php:891
+#: dist/tag-groups/include/admin/class.settings.php:948
+#: include/admin/class.settings.php:879
+#: include/admin/class.settings.php:891
+#: include/admin/class.settings.php:948, fuzzy
+msgid "troubleshooting"
+msgstr "troubleshooting"
+
+#: dist/tag-groups/include/admin/class.settings.php:880
+#: include/admin/class.settings.php:880
+msgid "benchmarks"
+msgstr "suorituskykytestit"
+
+#: dist/tag-groups/include/admin/class.settings.php:881
+#: include/admin/class.settings.php:881
+msgid "speed test"
+msgstr "nopeustesti"
+
+#: dist/tag-groups/include/admin/class.settings.php:882
+#: dist/tag-groups/include/admin/class.settings.php:892
+#: include/admin/class.settings.php:882
+#: include/admin/class.settings.php:892
+msgid "error"
+msgstr "virhe"
+
+#: dist/tag-groups/include/admin/class.settings.php:883
+#: dist/tag-groups/include/admin/class.settings.php:893
+#: include/admin/class.settings.php:883
+#: include/admin/class.settings.php:893
+msgid "testing"
+msgstr "testaus"
+
+#: dist/tag-groups/include/admin/class.settings.php:894
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:950
+#: include/admin/class.settings.php:894
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:950
+msgid "help"
+msgstr "apu"
+
+#: dist/tag-groups/include/admin/class.settings.php:898
+#: include/admin/class.settings.php:898, fuzzy
+msgid "Tag Groups Pro"
+msgstr "Tag Groups Pro"
+
+#: dist/tag-groups/include/admin/class.settings.php:901
+#: include/admin/class.settings.php:901
+msgid "upgrade"
+msgstr "päivitä"
+
+#: dist/tag-groups/include/admin/class.settings.php:902
+#: include/admin/class.settings.php:902
+msgid "more groups"
+msgstr "lisää ryhmiä"
+
+#: dist/tag-groups/include/admin/class.settings.php:903
+#: include/admin/class.settings.php:903
+msgid "posts"
+msgstr "viestit"
+
+#: dist/tag-groups/include/admin/class.settings.php:905
+#: include/admin/class.settings.php:905
+msgid "filter"
+msgstr "suodatin"
+
+#: dist/tag-groups/include/admin/class.settings.php:906
+#: include/admin/class.settings.php:906
+msgid "animated"
+msgstr "animoitu"
+
+#: dist/tag-groups/include/admin/class.settings.php:907
+#: include/admin/class.settings.php:907
+msgid "searchable"
+msgstr "haettavissa"
+
+#: dist/tag-groups/include/admin/class.settings.php:915
+#: include/admin/class.settings.php:915
+msgid "Info"
+msgstr "Tietoa"
+
+#: dist/tag-groups/include/admin/class.settings.php:918
+#: include/admin/class.settings.php:918
+msgid "author"
+msgstr "tekijä"
+
+#: dist/tag-groups/include/admin/class.settings.php:919
+#: include/admin/class.settings.php:919
+msgid "version"
+msgstr "versio"
+
+#: dist/tag-groups/include/admin/class.settings.php:920
+#: include/admin/class.settings.php:920
+msgid "contact"
+msgstr "yhteystiedot"
+
+#: dist/tag-groups/include/admin/class.settings.php:921
+#: include/admin/class.settings.php:921
+msgid "about"
+msgstr "tietoa"
+
+#: dist/tag-groups/include/admin/class.settings.php:925
+#: include/admin/class.settings.php:925
+msgid "Licenses"
+msgstr "Lisenssit"
+
+#: dist/tag-groups/include/admin/class.settings.php:927
+#: include/admin/class.settings.php:927
+msgid "Credits"
+msgstr "Kiitokset"
+
+#: dist/tag-groups/include/admin/class.settings.php:930
+#: include/admin/class.settings.php:930
+msgid "Development News"
+msgstr "Kehitysuutiset"
+
+#: dist/tag-groups/include/admin/class.settings.php:932
+#: include/admin/class.settings.php:932
+msgid "blog"
+msgstr "blogi"
+
+#: dist/tag-groups/include/admin/class.settings.php:932
+#: include/admin/class.settings.php:932
+msgid "updates"
+msgstr "päivitykset"
+
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:942
+msgid "getting started"
+msgstr "aloittaminen"
+
+#: dist/tag-groups/include/admin/class.settings.php:937
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:942
+msgid "introduction"
+msgstr "esittely"
+
+#: dist/tag-groups/include/admin/class.settings.php:942
+#: include/admin/class.settings.php:942
+msgid "sample"
+msgstr "esimerkki"
+
+#: dist/tag-groups/include/admin/class.settings.php:949
+#: include/admin/class.settings.php:949
+msgid "migrate"
+msgstr "migrointi"
+
+#: dist/tag-groups/include/admin/class.settings.php:951
+#: include/admin/class.settings.php:951
+msgid "problem"
+msgstr "ongelma"
+
+#: dist/tag-groups/include/admin/class.settings.php:960
+#: include/admin/class.settings.php:960
+msgid "live block preview"
+msgstr "live-lohkoesikatselu"
+
+#: dist/tag-groups/include/admin/class.settings.php:967
+#: include/admin/class.settings.php:967
+msgid "translation"
+msgstr "käännös"
+
+#: dist/tag-groups/include/admin/class.settings.php:998
+#: include/admin/class.settings.php:998
+msgid "Migrating the term meta"
+msgstr "Termi-metan migrointi"
+
+#: dist/tag-groups/include/admin/class.settings.php:999
+#: include/admin/class.settings.php:999
+msgid "Fixing incorrect tag groups"
+msgstr "Virheellisten tagiryhmien korjaaminen"
+
+#: dist/tag-groups/include/admin/class.settings.php:1000
+#: include/admin/class.settings.php:1000
+msgid "Fixing incorrect groups in term meta"
+msgstr "Virheellisten ryhmien korjaaminen termi-metassa"
+
+#: dist/tag-groups/include/admin/class.settings.php:1001
+#: include/admin/class.settings.php:1001
+msgid "Sorting groups in term meta"
+msgstr "Ryhmien lajittelu termi-metassa"
+
+#: dist/tag-groups/include/admin/class.settings.php:1002
+#: include/admin/class.settings.php:1002
+msgid "Checking the tag names"
+msgstr "Tagin nimien tarkistaminen"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:94
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:12
+#: include/admin/class.setup_wizard.php:94
+#: views/admin/setup_wizard_start.view.php:12
+msgid "Start"
+msgstr "Aloita"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:102
+#: include/admin/class.setup_wizard.php:102
+msgid "Sample Content"
+msgstr "Esimerkkisisältö"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:122
+#: include/admin/class.setup_wizard.php:122
+msgid "Sample Group A"
+msgstr "Esimerkkiryhmä A"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:123
+#: include/admin/class.setup_wizard.php:123
+msgid "Sample Group B"
+msgstr "Esimerkkiryhmä B"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:124
+#: include/admin/class.setup_wizard.php:124
+msgid "Sample Group C"
+msgstr "Esimerkkiryhmä C"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:140
+#: include/admin/class.setup_wizard.php:140
+msgid "First Sample Tag"
+msgstr "Ensimmäinen esimerkkitag"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:141
+#: include/admin/class.setup_wizard.php:141
+msgid "Second Sample Tag"
+msgstr "Toinen esimerkkitag"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:142
+#: include/admin/class.setup_wizard.php:142
+msgid "Third Sample Tag"
+msgstr "Kolmas esimerkkitag"
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:160
+#: include/admin/class.setup_wizard.php:160
+msgid "Create a draft sample page with Gutenberg blocks."
+msgstr "Luo luonnos esimerkkisivusta Gutenberg-lohkoilla."
+
+#: dist/tag-groups/include/admin/class.setup_wizard.php:162
+#: include/admin/class.setup_wizard.php:162
+msgid "Create a draft sample page with shortcodes."
+msgstr "Luo luonnos esimerkkisivusta lyhytkoodeilla."
+
+#: dist/tag-groups/include/class.loader.php:159
+#: include/class.loader.php:160
+#. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
+#, php-format
+msgid "The plugin %1$s requires WordPress %2$s to function properly."
+msgstr "Lisäosa %1$s vaatii WordPressin %2$s toimiakseen oikein."
+
+#: dist/tag-groups/include/class.loader.php:159
+#: include/class.loader.php:160
+#. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
+msgid "Please upgrade WordPress and then try again."
+msgstr "Ole hyvä ja päivitä WordPress ja yritä sitten uudelleen."
+
+#: dist/tag-groups/include/helpers/class.groups.php:182
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:8
+#: dist/tag-groups/views/admin/new_tag_from_list.view.php:5
+#: dist/tag-groups/views/partials/quick_edit_tag.view.php:7
+#: include/helpers/class.groups.php:182
+#: views/admin/edit_tag_main.view.php:8
+#: views/admin/new_tag_from_list.view.php:5
+#: views/partials/quick_edit_tag.view.php:7
+msgid "not assigned"
+msgstr "ei määritetty"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:43
+#, php-format
+msgid ""
+"You're using Tag Groups Free. The Pro version has more features and "
+"support. %sUpgrade to Pro%s"
+msgstr ""
+"Käytät Tag Groups Free -versiota. Pro-versiossa on enemmän ominaisuuksia ja "
+"tukea. %sPäivitä Pro:hon%s"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:71
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:115
+#: includes-core/TagGroupsCoreAdmin.php:72
+#: includes-core/TagGroupsCoreAdmin.php:116
+msgid "Upgrade to Pro"
+msgstr "Päivitä Pro:hon"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:88
+#: includes-core/TagGroupsCoreAdmin.php:89
+msgid "Upgrade to Tag Groups Pro"
+msgstr "Päivitä Tag Groups Pro:hon"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:93
+#: includes-core/TagGroupsCoreAdmin.php:94
+msgid "Enhance the power of Tag Groups with the Pro version:"
+msgstr "Vahvista Tag Groupsin tehoa Pro-versiolla:"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:96
+#: includes-core/TagGroupsCoreAdmin.php:97
+msgid "21 Shortcodes"
+msgstr "21 lyhytkoodia"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:97
+#: includes-core/TagGroupsCoreAdmin.php:98
+msgid "18 Gutenberg Blocks"
+msgstr "18 Gutenberg-lohkoa"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:99
+msgid "Table Tag Cloud"
+msgstr "Taulukko Tag Cloud"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:99
+#: includes-core/TagGroupsCoreAdmin.php:100
+msgid "Simple Tag Cloud"
+msgstr "Yksinkertainen Tag Cloud"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:100
+#: includes-core/TagGroupsCoreAdmin.php:101
+msgid "Shuffle Box"
+msgstr "Sekoita laatikko"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:101
+#: includes-core/TagGroupsCoreAdmin.php:102
+msgid "Caching"
+msgstr "Välimuisti"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:102
+#: includes-core/TagGroupsCoreAdmin.php:103
+msgid "Multiple Groups Per Tag"
+msgstr "Useita ryhmiä per tag"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:103
+#: includes-core/TagGroupsCoreAdmin.php:104
+msgid "Tag Cloud Search"
+msgstr "Tag Cloud -haku"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:104
+#: includes-core/TagGroupsCoreAdmin.php:105
+msgid "Toggle Post Filter"
+msgstr "Vaihda julkaisu-suodatin"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:105
+#: includes-core/TagGroupsCoreAdmin.php:106
+msgid "Dynamic Post Filter"
+msgstr "Dynaaminen Postisuodatin"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:106
+#: includes-core/TagGroupsCoreAdmin.php:107
+msgid "Post List"
+msgstr "Viestilista"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:107
+#: includes-core/TagGroupsCoreAdmin.php:108
+msgid "Tag Meta Box"
+msgstr "Tagi Meta-laatikko"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:108
+#: includes-core/TagGroupsCoreAdmin.php:109
+msgid "Post Tags in Groups"
+msgstr "Viesti Tagit Ryhmissä"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:109
+#: includes-core/TagGroupsCoreAdmin.php:110
+msgid "Permissions"
+msgstr "Oikeudet"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:110
+#: includes-core/TagGroupsCoreAdmin.php:111
+msgid "Default Groups"
+msgstr "Oletusryhmät"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:111
+#: includes-core/TagGroupsCoreAdmin.php:112
+msgid "WooCommerce Attributes"
+msgstr "WooCommerce Ominaisuudet"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:112
+#: includes-core/TagGroupsCoreAdmin.php:113
+msgid "Parent Group Level"
+msgstr "Vanhemman Ryhmätason"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:122
+#: includes-core/TagGroupsCoreAdmin.php:123
+msgid "Need Tag Groups Support?"
+msgstr "Tarvitsetko Tuki Tagiryhmille?"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:127
+#: includes-core/TagGroupsCoreAdmin.php:128
+msgid "If you need help or have a new feature request, let us know."
+msgstr "Jos tarvitset apua tai sinulla on uusi ominaisuuspyyntö, kerro meille."
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:129
+#: includes-core/TagGroupsCoreAdmin.php:130
+msgid "Request Support"
+msgstr "Pyydä Tukea"
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:138
+#: includes-core/TagGroupsCoreAdmin.php:139
+msgid "Detailed documentation is also available on the plugin website."
+msgstr "Yksityiskohtaiset asiakirjat ovat myös saatavilla lisäosan verkkosivustolla."
+
+#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:140
+#: includes-core/TagGroupsCoreAdmin.php:141
+msgid "View Knowledge Base"
+msgstr "Näytä Tietopohja"
+
+#: dist/tag-groups/tag-groups.php:159
+#: tag-groups.php:159
+msgid "The free Tag Groups plugin cannot be active together with Tag Groups Pro."
+msgstr ""
+"Ilmainen Tagiryhmät-lisäosa ei voi olla aktiivinen yhdessä Tagiryhmät Pro:n "
+"kanssa."
+
+#: dist/tag-groups/tag-groups.php:159
+#: tag-groups.php:159
+msgid "more information"
+msgstr "lisätietoja"
+
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
+#: views/admin/edit_tag_main.view.php:31
+msgid "Edit tag groups"
+msgstr "Muokkaa tagiryhmiä"
+
+#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
+#: views/admin/edit_tag_main.view.php:31
+msgid "Clicking will leave this page without saving."
+msgstr "Klikkaaminen vie sinut tältä sivulta tallentamatta."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:3
+#: views/admin/onboarding.view.php:3
+#. translators: %s is the plugin name
+#, php-format
+msgid "Welcome to %s!"
+msgstr "Tervetuloa %s!"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:4
+#: views/admin/onboarding.view.php:4
+#. translators: %s is the plugin name
+msgid ""
+"The plugin is ready for use. If you need some assistance, we can walk you "
+"through the basic steps."
+msgstr ""
+"Lisäosa on valmis käytettäväksi. Jos tarvitset apua, voimme opastaa sinua "
+"perusvaiheissa."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:6
+#: views/admin/onboarding.view.php:6
+msgid "Start the Setup Wizard"
+msgstr "Aloita Asennusvelho"
+
+#: dist/tag-groups/views/admin/onboarding.view.php:10
+#: views/admin/onboarding.view.php:10
+msgid "Or click here if you prefer to do it on your own."
+msgstr "Tai napsauta täällä, jos haluat tehdä sen itse."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:13
+#: views/admin/onboarding.view.php:13
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid ""
+"Go to the <span class=\"dashicons dashicons-tag\"></span>&nbsp;Tag Groups "
+"<a %s>taxonomy settings</a> and <b>select the taxonomy</b> (tag type) of "
+"your tags. In most cases just leave the default: Tags (post_tag)."
+msgstr ""
+"Siirry <span class=\"dashicons dashicons-tag\"></span>&nbsp;Tag Groups <a "
+"%s>taxonomy-asetuksiin</a> ja <b>valitse taxonomy</b> (tagityyppi) "
+"tageillesi. Useimmissa tapauksissa voit vain jättää oletuksen: Tags "
+"(post_tag)."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:14
+#: views/admin/onboarding.view.php:14
+#. translators: %s is the href attribute with URL
+msgid "Go to the tag groups admin page and <b>create some groups</b>."
+msgstr "Siirry tagiryhmien hallintasivulle ja <b>luo joitakin ryhmiä</b>."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:14
+#: views/admin/onboarding.view.php:14
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "You can find these pages listed on your <a %s>Tag Groups home page</a>."
+msgstr "Voit löytää nämä sivut lueteltuna <a %s>Tag Groups etusivulta</a>."
+
+#: dist/tag-groups/views/admin/onboarding.view.php:15
+#: views/admin/onboarding.view.php:15
+#. translators: %s is the href attribute with URL
+msgid "Go to your tags and <b>assign them to these groups</b>."
+msgstr "Siirry tageihisi ja <b>määrää ne näihin ryhmiin</b>."
+
+#: dist/tag-groups/views/admin/post_filter.view.php:3
+#: views/admin/post_filter.view.php:3
+msgid "Filter by tag group"
+msgstr "Suodata tagiryhmän mukaan"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:2
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:3
+#: views/admin/sample_page.view.php:2
+#: views/admin/sample_page_gutenberg.view.php:3
+#. translators: %s is the author display name
+#, php-format
+msgid ""
+"%s created this sample page in the Setup Wizard of the <b>Tag Groups</b> "
+"plugin. You can safely edit and delete it or keep it for future reference."
+msgstr ""
+"%s loi tämän esimerkkisivun <b>Tag Groups</b> -lisäosan asennusviisaria "
+"käyttäessäsi. Voit muokata ja poistaa sen turvallisesti tai pitää sen "
+"tulevaa käyttöä varten."
+
+#: dist/tag-groups/views/admin/sample_page.view.php:6
+#: views/admin/sample_page.view.php:6
+msgid ""
+"The following shortcodes use a variety of parameters so that you can get an "
+"idea of the options. Feel free to generate a new sample page with more "
+"features after upgrading the plugin."
+msgstr ""
+"Seuraavat shortcode:t käyttävät erilaisia parametreja, jotta saat "
+"käsityksen vaihtoehdoista. Voit vapaasti luoda uuden esimerkkisivun, jossa "
+"on enemmän ominaisuuksia, päivittämällä lisäosaa."
+
+#: dist/tag-groups/views/admin/sample_page.view.php:10
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:21
+#: views/admin/sample_page.view.php:10
+#: views/admin/sample_page_gutenberg.view.php:21
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Please find links to the documentation in the <a %s>Tag Groups settings</a>."
+msgstr "Löydät linkit dokumentaatioon <a %s>Tag Groups asetuksista</a>."
+
+#: dist/tag-groups/views/admin/sample_page.view.php:14
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:30
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:11
+#: views/admin/sample_page.view.php:14
+#: views/admin/sample_page_gutenberg.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:11
+msgid "Tabbed Tag Cloud"
+msgstr "Välilehtipohjainen tagipilvi"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:20
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:40
+#: views/admin/sample_page.view.php:20
+#: views/admin/sample_page_gutenberg.view.php:40
+msgid "Accordion Tag Cloud"
+msgstr "Akordeonipohjainen tagipilvi"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:26
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:50
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:44
+#: views/admin/sample_page.view.php:26
+#: views/admin/sample_page_gutenberg.view.php:50
+#: views/admin/settings_front_end_shortcodes.view.php:44
+msgid "Alphabetical Tag Cloud"
+msgstr "Aakkosellinen tagipilvi"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:32
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:60
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:33
+#: views/admin/sample_page.view.php:32
+#: views/admin/sample_page_gutenberg.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:33
+msgid "Tag List"
+msgstr "Tagiluettelo"
+
+#: dist/tag-groups/views/admin/sample_page.view.php:38
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:70
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:55
+#: views/admin/sample_page.view.php:38
+#: views/admin/sample_page_gutenberg.view.php:70
+#: views/admin/settings_front_end_shortcodes.view.php:55
+msgid "Alphabetical Tag Index"
+msgstr "Aakkosellinen tagi-indeksi"
+
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:9
+#: views/admin/sample_page_gutenberg.view.php:9
+msgid ""
+"The following blocks use a variety of parameters so that you can get an "
+"idea of the options. Feel free to generate a new sample page with more "
+"features after upgrading the plugin."
+msgstr ""
+"Seuraavat lohkot käyttävät erilaisia parametreja, jotta saat käsityksen "
+"vaihtoehdoista. Voit vapaasti luoda uuden esimerkkisivun, jossa on enemmän "
+"ominaisuuksia, päivittämällä lisäosaa."
+
+#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:15
+#: views/admin/sample_page_gutenberg.view.php:15
+msgid ""
+"This page was created while you had the Gutenberg editor enabled. Therefore "
+"the features only display while Gutenberg is active."
+msgstr ""
+"Tämä sivu luotiin, kun Gutenberg-editori oli käytössä. Siksi ominaisuudet "
+"näkyvät vain, kun Gutenberg on aktiivinen."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:9
+#: views/admin/settings_back_end_filters.view.php:9
+msgid "Display filter on the \"Posts\" screen."
+msgstr "Näytä suodatin \"Postit\" -näytöllä."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:10
+#: views/admin/settings_back_end_filters.view.php:10
+msgid ""
+"Add a pull-down menu to the filters above the list of posts. If you filter "
+"posts by tag groups, then only items will be shown that have tags (terms) "
+"in that particular group. This feature can be turned off so that the menu "
+"won't obstruct your screen if you use a high number of groups. May not work "
+"with all taxonomies."
+msgstr ""
+"Lisää pudotusvalikko suodattimille yllä postiluettelon. Jos suodatat postit "
+"tagiryhmien mukaan, niin vain ne kohteet näytetään, joilla on tageja "
+"(termejä) kyseisessä ryhmässä. Tämä ominaisuus voidaan kytkeä pois päältä, "
+"jotta valikko ei estä näyttöäsi, jos käytät suurta määrää ryhmiä. Ei "
+"välttämättä toimi kaikkien taxonomien kanssa."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:17
+#: views/admin/settings_back_end_filters.view.php:17
+msgid "Display filter on the \"Tags\" screen."
+msgstr "Näytä suodatin \"Tagit\" -näytöllä."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:18
+#: views/admin/settings_back_end_filters.view.php:18
+msgid ""
+"Add a filter to the list of tags. Disable it here if it conflicts with "
+"other plugins or themes."
+msgstr ""
+"Lisää suodatin tagiluetteloon. Poista se käytöstä täällä, jos se on "
+"ristiriidassa muiden lisäosien tai teemojen kanssa."
+
+#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:23
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:15
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:15
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:116
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:23
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:24
+#: views/admin/settings_back_end_filters.view.php:23
+#: views/admin/settings_back_end_gutenberg.view.php:15
+#: views/admin/settings_back_end_multilingual.view.php:15
+#: views/admin/settings_front_end_shortcodes.view.php:116
+#: views/admin/settings_rest_api.view.php:23
+#: views/admin/settings_tools_reset.view.php:24
+msgid "Save Settings"
+msgstr "Tallenna asetukset"
+
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:9
+#: views/admin/settings_back_end_gutenberg.view.php:9
+msgid "Gutenberg block preview"
+msgstr "Gutenberg-lohkon esikatselu"
+
+#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:10
+#: views/admin/settings_back_end_gutenberg.view.php:10
+msgid ""
+"Some blocks can show an approximate preview in the Gutenberg editor. If you "
+"deactivate this option, then all blocks will show a static icon with text."
+msgstr ""
+"Jotkut lohkot voivat näyttää arvioidun esikatselun Gutenberg-editorissa. "
+"Jos poistat tämän vaihtoehdon käytöstä, kaikki lohkot näyttävät staattisen "
+"kuvakkeen tekstillä."
+
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:9
+#: views/admin/settings_back_end_multilingual.view.php:9
+msgid "Keep groups of translations in sync"
+msgstr "Pidä käännösryhmät synkronoituna"
+
+#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:10
+#: views/admin/settings_back_end_multilingual.view.php:10
+msgid ""
+"If you activate this option, we try to sync the groups across all language "
+"versions of a tag when you save it. Deactivate it to set groups "
+"independently."
+msgstr ""
+"Jos aktivoit tämän vaihtoehdon, yritämme synkronoida ryhmät kaikkien "
+"kieliversioiden välillä, kun tallennat sen. Poista se käytöstä asettaaksesi "
+"ryhmät itsenäisesti."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:4
+#: views/admin/settings_front_end_shortcodes.view.php:4
+msgid ""
+"All Tag Groups features are available as Gutenberg blocks. You can also use "
+"shortcodes."
+msgstr ""
+"Kaikki Tag Groups -toiminnot ovat saatavilla Gutenberg-lohkoina. Voit myös "
+"käyttää shortcodeja."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:8
+#: views/admin/settings_front_end_shortcodes.view.php:8
+msgid "Click on the features for more information."
+msgstr "Napsauta ominaisuuksia saadaksesi lisätietoja."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:15
+#: views/admin/settings_front_end_shortcodes.view.php:15
+msgid "Display the tags in a tabbed tag cloud."
+msgstr "Näytä tagit välilehdillä olevassa tagipilvessä."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:16
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:27
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:38
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:49
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:60
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:71
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:84
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:89
+#: views/admin/settings_front_end_shortcodes.view.php:16
+#: views/admin/settings_front_end_shortcodes.view.php:27
+#: views/admin/settings_front_end_shortcodes.view.php:38
+#: views/admin/settings_front_end_shortcodes.view.php:49
+#: views/admin/settings_front_end_shortcodes.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:71
+#: views/admin/settings_front_end_shortcodes.view.php:84
+#: views/admin/settings_front_end_shortcodes.view.php:89
+msgid "Example"
+msgstr "Esimerkki"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:18
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:29
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:40
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:51
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:62
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:73
+#: views/admin/settings_front_end_shortcodes.view.php:18
+#: views/admin/settings_front_end_shortcodes.view.php:29
+#: views/admin/settings_front_end_shortcodes.view.php:40
+#: views/admin/settings_front_end_shortcodes.view.php:51
+#: views/admin/settings_front_end_shortcodes.view.php:62
+#: views/admin/settings_front_end_shortcodes.view.php:73
+msgid "Parameters"
+msgstr "Parametrit"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:19
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:30
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:41
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:52
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:63
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:74
+#: views/admin/settings_front_end_shortcodes.view.php:19
+#: views/admin/settings_front_end_shortcodes.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:41
+#: views/admin/settings_front_end_shortcodes.view.php:52
+#: views/admin/settings_front_end_shortcodes.view.php:63
+#: views/admin/settings_front_end_shortcodes.view.php:74
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Please find the parameters in the <a %s>documentation</a>."
+msgstr "Ole hyvä ja löydä parametrit <a %s>dokumentaatiosta</a>."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:22
+#: views/admin/settings_front_end_shortcodes.view.php:22
+msgid "Accordion"
+msgstr "Akkordion"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:26
+#: views/admin/settings_front_end_shortcodes.view.php:26
+msgid "Display the tags in an accordion."
+msgstr "Näytä tagit akordionissa."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:37
+#: views/admin/settings_front_end_shortcodes.view.php:37
+msgid "Display the tags in lists under tag groups."
+msgstr "Näytä tagit listoina tagiryhmien alla."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
+#: views/admin/settings_front_end_shortcodes.view.php:48
+msgid "Display the tags in tabbed tag cloud with first letters as tabs."
+msgstr ""
+"Näytä tagit välilehdillä olevassa tagipilvessä, jossa ensimmäiset kirjaimet "
+"ovat välilehtiä."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
+#: views/admin/settings_front_end_shortcodes.view.php:48
+#: views/admin/settings_front_end_shortcodes.view.php:59
+msgid "(Not tested with right-to-left languages.)"
+msgstr "(Ei testattu oikealta vasemmalle -kielillä.)"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
+#: views/admin/settings_front_end_shortcodes.view.php:59
+msgid "Display the tags in a list with first letters as heading."
+msgstr "Näytä tagit listassa, jossa ensimmäiset kirjaimet ovat otsikkona."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:67
+#: views/admin/settings_front_end_shortcodes.view.php:67
+msgid "Group Information"
+msgstr "Ryhmätiedot"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:70
+#: views/admin/settings_front_end_shortcodes.view.php:70
+msgid "Display information about tag groups."
+msgstr "Näytä tietoja tagiryhmistä."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:82
+#: views/admin/settings_front_end_shortcodes.view.php:82
+msgid ""
+"The function <b>tag_groups_cloud</b> accepts the same parameters as the "
+"[tag_groups_cloud] shortcode, except for those that determine tabs and "
+"styling."
+msgstr ""
+"Toiminto <b>tag_groups_cloud</b> hyväksyy samat parametrit kuin "
+"[tag_groups_cloud] shortcode, paitsi ne, jotka määrittävät välilehdet ja "
+"tyylit."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:83
+#: views/admin/settings_front_end_shortcodes.view.php:83
+msgid "By default it returns a string with the html for a tabbed tag cloud."
+msgstr ""
+"Oletusarvoisesti se palauttaa merkkijonon, jossa on HTML-tiedot "
+"välilehtipohjaiselle tagipilvelle."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:88
+#: views/admin/settings_front_end_shortcodes.view.php:88
+msgid ""
+"If the optional second parameter is set to 'true', the function returns a "
+"multidimensional array containing tag groups and tags."
+msgstr ""
+"Jos valinnainen toinen parametri on asetettu 'true', funktio palauttaa "
+"monidimensionaalisen taulukon, joka sisältää tagiryhmät ja tagit."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:102
+#: views/admin/settings_front_end_shortcodes.view.php:102
+msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
+msgstr ""
+"Ota shortcode käyttöön sivupalkin widgeteissä (jos se ei ole näkyvissä "
+"kuitenkaan)."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:108
+#: views/admin/settings_front_end_shortcodes.view.php:108
+msgid "Always load shortcode scripts."
+msgstr "Lataa aina shortcode-skriptit."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:109
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:9
+#: dist/tag-groups/views/admin/settings_home.view.php:8
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/settings_front_end_shortcodes.view.php:109
+#: views/admin/settings_front_end_themes.view.php:9
+#: views/admin/settings_home.view.php:8
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Click for more information"
+msgstr "Napsauta saadaksesi lisätietoja"
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:112
+#: views/admin/settings_front_end_shortcodes.view.php:112
+msgid ""
+"Turn off to load the scripts only on posts and pages where a shortcode "
+"appears."
+msgstr ""
+"Ota pois käytöstä, jotta skriptit ladataan vain niillä kirjoituksilla ja "
+"sivuilla, joilla shortcode esiintyy."
+
+#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:113
+#: views/admin/settings_front_end_shortcodes.view.php:113
+msgid "Turn on if you use these shortcodes in widgets."
+msgstr "Ota käyttöön, jos käytät näitä shortkodeja widgeteissä."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:8
+#: views/admin/settings_front_end_themes.view.php:8
+msgid ""
+"Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
+"Cloud."
+msgstr ""
+"Täällä voit valita teeman Välilehtipohjaiselle Tagipilvelle ja Akkordion "
+"Tagipilvelle."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:14
+#: views/admin/settings_front_end_themes.view.php:14
+msgid ""
+"New themes can be created with the <a "
+"href=\"http://jqueryui.com/themeroller/\" target=\"_blank\">jQuery UI "
+"ThemeRoller</a>:"
+msgstr ""
+"Uusia teemoja voidaan luoda <a href=\"http://jqueryui.com/themeroller/\" "
+"target=\"_blank\">jQuery UI ThemeRollerin</a> avulla:"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:16
+#: views/admin/settings_front_end_themes.view.php:16
+msgid ""
+"On the page \"Theme Roller\" you can customize all features or pick one set "
+"from the gallery. Finish with the \"download\" button."
+msgstr ""
+"Sivulla \"Theme Roller\" voit mukauttaa kaikkia ominaisuuksia tai valita "
+"yhden kokoelman galleriasta. Viimeistele \"lataa\" -painikkeella."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:17
+#: views/admin/settings_front_end_themes.view.php:17
+msgid ""
+"On the next page (\"Download Builder\") you will need to select the version "
+"1.12.x and the components \"Widget\", \"Accordion\" and \"Tabs\". Make sure "
+"that before downloading you enter at the bottom as \"CSS Scope\" "
+"<b>.tag-groups-cloud</b> (including the dot)."
+msgstr ""
+"Seuraavalla sivulla (\"Download Builder\") sinun on valittava versio 1.12.x "
+"ja komponentit \"Widget\", \"Accordion\" ja \"Tabs\". Varmista, että ennen "
+"lataamista kirjoitat alareunaan \"CSS Scope\" <b>.Tag-Groups-Cloud</b> "
+"(mukaan lukien piste)."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:18
+#: views/admin/settings_front_end_themes.view.php:18
+msgid ""
+"Then you unpack the downloaded zip file. You will need the \"images\" "
+"folder and the \"jquery-ui.theme.min.css\" file."
+msgstr ""
+"Sitten purat ladatun zip-tiedoston. Tarvitset \"images\" -kansion ja "
+"\"jquery-ui.theme.min.css\" -tiedoston."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:19
+#: views/admin/settings_front_end_themes.view.php:19
+msgid ""
+"Create a new folder inside your <i>wp-content/uploads</i> folder (for "
+"example \"my-theme\") and copy there these two items."
+msgstr ""
+"Luo uusi kansio <i>wp-content/uploads</i> -kansiosi sisälle (esimerkiksi "
+"\"my-theme\") ja kopioi sinne nämä kaksi kohdetta."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:20
+#: views/admin/settings_front_end_themes.view.php:20
+msgid "Enter the name of this new folder (for example \"my-theme\") below."
+msgstr "Kirjoita tämän uuden kansion nimi (esimerkiksi \"my-theme\") alla."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:42
+#: views/admin/settings_front_end_themes.view.php:42
+msgid "own theme"
+msgstr "oma teema"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
+#: views/admin/settings_front_end_themes.view.php:52
+msgid "Don't load a theme."
+msgstr "Älä lataa teemaa."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
+#: views/admin/settings_front_end_themes.view.php:52
+msgid ""
+"Here you can turn off jQuery UI themes if your WordPress theme brings its "
+"own jQuery UI theme, in order to avoid conflicts."
+msgstr ""
+"Täällä voit poistaa käytöstä jQuery UI -teemat, jos WordPress-teemasi tuo "
+"mukanaan oman jQuery UI -teeman, jotta vältetään ristiriidat."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:57
+#: views/admin/settings_front_end_themes.view.php:57
+msgid "Further options"
+msgstr "Lisävaihtoehdot"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:65
+#: views/admin/settings_front_end_themes.view.php:65
+msgid "Use jQuery.  (Default is on. Other plugins might override this setting.)"
+msgstr ""
+"Käytä jQueryä. (Oletusarvoisesti päällä. Muut lisäosat saattavat ohittaa "
+"tämän asetuksen.)"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:73
+#: views/admin/settings_front_end_themes.view.php:73
+msgid "Tabs triggered by hovering mouse pointer (without clicking)."
+msgstr ""
+"Välilehdet, jotka aktivoituvat hiiren osoittimen kelluessa (ilman "
+"klikkausta)."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:80
+#: views/admin/settings_front_end_themes.view.php:80
+msgid "Collapsible tabs (toggle open/close)."
+msgstr "Käytettävät välilehdet (vaihda avaa/sulje)."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:83
+#: views/admin/settings_front_end_themes.view.php:83
+msgid "HTML in tag description:"
+msgstr "HTML tagin kuvauksessa:"
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
+#: views/admin/settings_front_end_themes.view.php:91
+msgid ""
+"By default the description appears in a tooltip when you hover the mouse "
+"over a tag in a tag cloud."
+msgstr ""
+"Oletuksena kuvaus näkyy työkaluvihjeessä, kun viet hiiren tagin päälle "
+"tagipilvessä."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
+#: views/admin/settings_front_end_themes.view.php:91
+msgid ""
+"If you don't trust all users of your site, remove the HTML or use a plugin "
+"to give the unfiltered_html capability only to users you trust."
+msgstr ""
+"Jos et luota kaikkiin sivustosi käyttäjiin, poista HTML tai käytä lisäosaa "
+"antaaksesi unfiltered_html-ominaisuuden vain luotettaville käyttäjille."
+
+#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:97
+#: views/admin/settings_front_end_themes.view.php:97
+msgid "Save Theme Options"
+msgstr "Tallenna teeman asetukset"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:3
+#: views/admin/settings_help.view.php:3
+msgid "Search for settings"
+msgstr "Etsi asetuksia"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:3
+#: views/admin/settings_help.view.php:3
+msgid "Search for setting pages. Type a space to show all settings."
+msgstr "Etsi asetussivuja. Kirjoita välilyönti näyttääksesi kaikki asetukset."
+
+#: dist/tag-groups/views/admin/settings_help.view.php:6
+#: views/admin/settings_help.view.php:6
+msgid "Search Results"
+msgstr "Hakutulokset"
+
+#: dist/tag-groups/views/admin/settings_help.view.php:8
+#: views/admin/settings_help.view.php:8
+msgid "Nothing found"
+msgstr "Ei löytynyt"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:2
+#: views/admin/settings_home.view.php:2
+msgid "Active Taxonomies"
+msgstr "Aktiiviset taxonomies"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:11
+#: views/admin/settings_home.view.php:11
+msgid "Group Statistics"
+msgstr "Ryhmän tilastot"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:13
+#: views/admin/settings_home.view.php:13
+msgid "for the selected language"
+msgstr "valitulle kielelle"
+
+#: dist/tag-groups/views/admin/settings_home.view.php:23
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:33
+#: views/admin/settings_home.view.php:23
+#: views/admin/settings_taxonomies.view.php:33
+msgid "go to tag group administration"
+msgstr "siirry tagiryhmän hallintaan"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:9
+#: views/admin/settings_rest_api.view.php:9
+msgid "Enable Tag Groups Public API Access"
+msgstr "Ota käyttöön Tag-Groupsin julkinen API-pääsy"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:10
+#: views/admin/settings_rest_api.view.php:10
+msgid "Enable public access to tag groups endpoint /wp-json/tag-groups/v1/groups/."
+msgstr ""
+"Ota käyttöön julkinen pääsy tagiryhmien päätepisteeseen "
+"/wp-json/tag-groups/v1/groups/."
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:17
+#: views/admin/settings_rest_api.view.php:17
+msgid "Enable Terms Public API Access"
+msgstr "Ota käyttöön Termien julkinen API-pääsy"
+
+#: dist/tag-groups/views/admin/settings_rest_api.view.php:18
+#: views/admin/settings_rest_api.view.php:18
+msgid "Enable public access to terms endpoint /wp-json/tag-groups/v1/terms/."
+msgstr ""
+"Ota käyttöön julkinen pääsy termien päätepisteeseen "
+"/wp-json/tag-groups/v1/terms/."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:2
+#: views/admin/settings_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use Tag Groups:"
+msgstr "Valitse taxonomiat, joita haluat käyttää Tag-Groupsissa:"
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:5
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:5
+#: views/admin/settings_taxonomies.view.php:5
+#: views/admin/setup_wizard_taxonomies.view.php:5
+msgid ""
+"The default texonomy is <b>Tags (post_tag)</b>. Please note that the tag "
+"clouds might not work with all taxonomies and that some taxonomies listed "
+"here may not be accessible in the admin backend. If you don't understand "
+"what is going on here, just leave the default."
+msgstr ""
+"Oletustaxonomia on <b>Tags (post_tag)</b>. Huomaa, että tagipilvet eivät "
+"ehkä toimi kaikkien taxonomioiden kanssa ja että jotkin tässä luetellut "
+"taxonomiat eivät välttämättä ole saatavilla admin-taustalla. Jos et "
+"ymmärrä, mitä täällä tapahtuu, jätä vain oletusasetukset."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:6
+#: views/admin/settings_taxonomies.view.php:6
+msgid ""
+"<b>Please deselect taxonomies that you don't use. Using several taxonomies "
+"for the same post type or hierarchical taxonomies (like categories) is "
+"experimental and not supported.</b>"
+msgstr ""
+"<b>Poista käytöstä taxonomiat, joita et käytä. Useiden taxonomioiden "
+"käyttäminen samalle post-tyypille tai hierarkkisten taxonomioiden (kuten "
+"kategorioiden) käyttäminen on kokeellista eikä tuettua.</b>"
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:7
+#: views/admin/settings_taxonomies.view.php:7
+msgid "To see the post type, hover your mouse over the option."
+msgstr "Näet post tyypin, kun viet hiiren vaihtoehdon päälle."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:8
+#: views/admin/settings_taxonomies.view.php:8
+msgid ""
+"If you use a custom taxonomy, make sure that the attribute \"Public\" is "
+"set to \"true\" and \"Hierarchical\" to \"false\"."
+msgstr ""
+"Jos käytät mukautettua taxonomyä, varmista, että attribuutti \"Public\" on "
+"asetettu \"true\" ja \"Hierarchical\" \"false\":ksi."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:15
+#: views/admin/settings_taxonomies.view.php:15
+msgid ""
+"Show hierarchical taxonomies. Not all Tag Groups features will work with "
+"these taxonomies."
+msgstr ""
+"Näytä hierarkkiset taxonomiat. Kaikki Tag Groups -toiminnot eivät "
+"välttämättä toimi näiden taxonomioiden kanssa."
+
+#: dist/tag-groups/views/admin/settings_taxonomies.view.php:54
+#: views/admin/settings_taxonomies.view.php:54
+msgid "Save Taxonomies"
+msgstr "Tallenna Taxonomiat"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid "Export"
+msgstr "Vie"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid ""
+"Use this button to export all Tag Groups settings and groups and all terms "
+"that are assigned to a group into files."
+msgstr ""
+"Käytä tätä painiketta viedäksesi kaikki Tag Groups -asetukset ja ryhmät "
+"sekä kaikki termit, jotka on liitetty ryhmään, tiedostoihin."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
+#: views/admin/settings_tools_export_import.view.php:4
+msgid ""
+"You can import both files separately. Category hierarchy won't be saved. "
+"When you restore terms that were deleted, they receive new IDs and you must "
+"assign them to posts again. Exporting cannot substitute a backup."
+msgstr ""
+"Voit tuoda molemmat tiedostot erikseen. Kategoriahierarkia ei tallennu. Kun "
+"palautat poistettuja termejä, ne saavat uudet ID:t ja sinun on liitettävä "
+"ne uudelleen postauksiin. Vienti ei voi korvata varmuuskopiota."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:7
+#: views/admin/settings_tools_export_import.view.php:7
+msgid "Export Files"
+msgstr "Vientitiedostot"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "Import"
+msgstr "Tuo"
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid ""
+"Below you can import previously exported settings/groups or terms from a "
+"file."
+msgstr "Alla voit tuoda aiemmin vietyjä asetuksia/ryhmiä tai termejä tiedostosta."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "It is recommended to back up the database of your site before proceeding."
+msgstr ""
+"On suositeltavaa varmuuskopioida verkkosivustosi tietokanta ennen "
+"jatkamista."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "Please import the settings before the terms."
+msgstr "Ole hyvä ja tuo asetukset ennen termejä."
+
+#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:17
+#: views/admin/settings_tools_export_import.view.php:17
+msgid "Import File"
+msgstr "Tuo tiedosto"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:4
+#: views/admin/settings_tools_reset.view.php:4
+msgid ""
+"Use this button to delete all tag groups and assignments. Your tags will "
+"not be changed. Check the checkbox to confirm."
+msgstr ""
+"Käytä tätä painiketta poistaaksesi kaikki tagiryhmät ja -liitännät. Tagisi "
+"eivät muutu. Vahvista valitsemalla valintaruutu."
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:5
+#: views/admin/settings_tools_reset.view.php:5
+msgid ""
+"Please keep in mind that the tag assignments cannot be recovered by the "
+"export/import function."
+msgstr ""
+"Pidä mielessä, että tagiliitännät eivät voi palautua "
+"vienti-/tuontitoiminnolla."
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:7
+#: views/admin/settings_tools_reset.view.php:7
+msgid "I know what I am doing."
+msgstr "Tiedän, mitä teen."
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:10
+#: views/admin/settings_tools_reset.view.php:10
+msgid "Delete Groups"
+msgstr "Poista ryhmät"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:13
+#: views/admin/settings_tools_reset.view.php:13
+msgid "Delete Settings and Groups"
+msgstr "Poista asetukset ja ryhmät"
+
+#: dist/tag-groups/views/admin/settings_tools_reset.view.php:21
+#: views/admin/settings_tools_reset.view.php:21
+msgid "Delete all groups and settings when uninstalling the plugin."
+msgstr "Poista kaikki ryhmät ja asetukset, kun poistat liitännäisen."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:7
+#: views/admin/settings_troubleshooting_debug.view.php:7
+msgid "Debug mode is on."
+msgstr "Vianetsintätila on päällä."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:15
+#: views/admin/settings_troubleshooting_debug.view.php:15
+msgid "Verbose logging is enabled with CM_DEBUG."
+msgstr "Yksityiskohtainen lokitus on käytössä CM_DEBUG:lla."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:17
+#: views/admin/settings_troubleshooting_debug.view.php:17
+msgid "Verbose logging is on."
+msgstr "Yksityiskohtainen lokitus on päällä."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:19
+#: views/admin/settings_troubleshooting_debug.view.php:19
+msgid "Turn off "
+msgstr "Kytke pois "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:24
+#: views/admin/settings_troubleshooting_debug.view.php:24
+msgid "Verbose logging is off."
+msgstr "Yksityiskohtainen lokitus on pois päältä."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:26
+#: views/admin/settings_troubleshooting_debug.view.php:26
+msgid "Turn on"
+msgstr "Kytke päälle"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:31
+#: views/admin/settings_troubleshooting_debug.view.php:31
+msgid "Debug mode is off."
+msgstr "Debug-tila on pois päältä."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:40
+#: views/admin/settings_troubleshooting_debug.view.php:40
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Learn more <a %s>about debugging</a>."
+msgstr "Opi lisää <a %s>virheenkorjauksesta</a>."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
+msgid "Migrate tags to the new format of Tag Groups."
+msgstr "Siirrä tagit uuteen Tag Groups -muotoon."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
+msgid ""
+"The plugin automatically migrates tags to the new format and tries to keep "
+"track of changes. There may, however, be cases where other components made "
+"unnoticed changes. You might also need to manually migrate tags after you "
+"enabled a taxonomy that already contained untracked tags."
+msgstr ""
+"Liitännäinen siirtää automaattisesti tagit uuteen muotoon ja yrittää pitää "
+"kirjaa muutoksista. Saattaa kuitenkin olla tapauksia, joissa muut "
+"komponentit ovat tehneet huomaamattomia muutoksia. Saatat myös tarvita "
+"manuaalista siirtoa tagien jälkeen, kun olet aktivoinut taksonomian, joka "
+"jo sisälsi seuraamattomia tageja."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:9
+#: views/admin/settings_troubleshooting_first_aid.view.php:9
+msgid "Migrate"
+msgstr "Siirrä"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:17
+#: views/admin/settings_troubleshooting_first_aid.view.php:17
+msgid ""
+"Running the maintenance can solve issues that you encounter during "
+"filtering by tag groups."
+msgstr ""
+"Ylläpidon suorittaminen voi ratkaista ongelmia, joita kohtaat "
+"suodattaessasi tagiryhmien avulla."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:18
+#: views/admin/settings_troubleshooting_first_aid.view.php:18
+msgid "Maintenance"
+msgstr "Ylläpito"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
+msgid "Reset the filter on the tags page to show all tags."
+msgstr "Nollaa suodatin tagisivulla näyttämään kaikki tagit."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
+msgid ""
+"Use it if a JavaScript error disables the filter menu. Note that it is "
+"still recommended to find out the cause of the error."
+msgstr ""
+"Käytä sitä, jos JavaScript-virhe estää suodatinvalikon. Huomaa, että on "
+"silti suositeltavaa selvittää virheen syy."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:27
+#: dist/tag-groups/views/partials/admin_footer.view.php:3
+#: views/admin/settings_troubleshooting_first_aid.view.php:27
+#: views/partials/admin_footer.view.php:3
+msgid "Reset Tag Filter"
+msgstr "Nollaa tagisuodatin"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:5
+#: views/admin/settings_troubleshooting_process.view.php:5
+msgid "Please stay on this page until all processes have finished."
+msgstr "Ole hyvä ja pysy tällä sivulla, kunnes kaikki prosessit ovat päättyneet."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:10
+#: views/admin/settings_troubleshooting_process.view.php:10
+msgid "There have been errors."
+msgstr "On ollut virheitä."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:12
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:19
+#: views/admin/settings_troubleshooting_process.view.php:12
+#: views/admin/settings_troubleshooting_process.view.php:19
+msgid "Continue"
+msgstr "Jatka"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:17
+#: views/admin/settings_troubleshooting_process.view.php:17
+msgid "Finished!"
+msgstr "Valmis!"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:24
+#: views/admin/settings_troubleshooting_process.view.php:24
+msgid "The following terms cannot be used:"
+msgstr "Seuraavia termejä ei voida käyttää:"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:128
+#: views/admin/settings_troubleshooting_process.view.php:128
+msgid "Number of processed items: "
+msgstr "Käsiteltyjen kohteiden määrä: "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:130
+#: views/admin/settings_troubleshooting_process.view.php:130
+msgid "Number of changed items: "
+msgstr "Muutettujen kohteiden määrä: "
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:5
+#: views/admin/settings_troubleshooting_system.view.php:5
+msgid "WordPress Version"
+msgstr "WordPress Versio"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:8
+#: views/admin/settings_troubleshooting_system.view.php:8
+msgid "Site URL"
+msgstr "Verkkosivun URL"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:11
+#: views/admin/settings_troubleshooting_system.view.php:11
+msgid "Home URL"
+msgstr "Etusivun URL"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:15
+#: views/admin/settings_troubleshooting_system.view.php:15
+msgid "Active Theme"
+msgstr "Aktiivinen teema"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:17
+#: views/admin/settings_troubleshooting_system.view.php:17
+msgid "Version"
+msgstr "Versio"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:23
+#: views/admin/settings_troubleshooting_system.view.php:23
+msgid "Checking..."
+msgstr "Tarkistetaan..."
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:26
+#: views/admin/settings_troubleshooting_system.view.php:26
+msgid "Show the Response"
+msgstr "Näytä vastaus"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:72
+#: views/admin/settings_troubleshooting_system.view.php:72
+msgid "passed"
+msgstr "läpäisi"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:98
+#: views/admin/settings_troubleshooting_system.view.php:98
+msgid "failed"
+msgstr "epäonnistui"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:105
+#: views/admin/settings_troubleshooting_system.view.php:105
+msgid "Benchmarks"
+msgstr "Vertailuarvot"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:125
+#: views/admin/settings_troubleshooting_system.view.php:125
+msgid "Cache"
+msgstr "Välimuisti"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:127
+#: views/admin/settings_troubleshooting_system.view.php:127
+msgid "Tag groups pro only"
+msgstr "Tag-ryhmät vain pro"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:152
+#: views/admin/settings_troubleshooting_system.view.php:152
+msgid "Server"
+msgstr "Palvelin"
+
+#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:188
+#: views/admin/settings_troubleshooting_system.view.php:188
+msgid "Constants"
+msgstr "Vakiot"
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:3
+#: views/admin/setup_wizard_finished.view.php:3
+msgid "Well done!"
+msgstr "Hyvin tehty!"
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:6
+#: views/admin/setup_wizard_finished.view.php:6
+msgid "Now go the Tag Group Administration."
+msgstr "Siirry nyt Tag Group -hallintaan."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:10
+#: views/admin/setup_wizard_finished.view.php:10
+msgid "Or preview the sample page here."
+msgstr "Tai esikatsele näytesivua täällä."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:14
+#, php-format
+msgid ""
+"Or go to the <a %s>Tag Groups settings</a> or visit the <a "
+"%s>documentation</a>."
+msgstr ""
+"Tai siirry <a %s>Tag-ryhmien asetuksiin</a> tai vieraile <a "
+"%s>dokumentaatiossa</a>."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:16
+#, php-format
+msgid ""
+"Now go to the <a %s>Tag Groups settings</a>, or visit the <a "
+"%s>documentation</a>."
+msgstr ""
+"Siirry nyt <a %s>Tag Groups asetuksiin</a> tai käy <a "
+"%s>dokumentaatiossa</a>."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:19
+#: views/admin/setup_wizard_finished.view.php:19
+msgid ""
+"If you need to launch the Setup Wizard again, you can find it in the "
+"settings. Just enter \"wizard\" in the search field."
+msgstr ""
+"Jos sinun tarvitsee käynnistää Asennusohjelma uudelleen, löydät sen "
+"asetuksista. Kirjoita vain \"wizard\" hakukenttään."
+
+#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:21
+#: views/admin/setup_wizard_finished.view.php:21
+msgid "Happy tagging!"
+msgstr "Hauskaa tageamista!"
+
+#: dist/tag-groups/views/admin/setup_wizard_header.view.php:1
+#: views/admin/setup_wizard_header.view.php:1
+msgid "Tag Groups Setup Wizard"
+msgstr "Tag Groups Asennusohjelma"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:3
+#: views/admin/setup_wizard_sample_content.view.php:3
+msgid ""
+"Now you are ready to create your own tag groups. If you prefer to start out "
+"from a sample, we will create for you three groups and three tags. You can "
+"play around with them, rename or delete them."
+msgstr ""
+"Nyt olet valmis luomaan omia tagiryhmiäsi. Jos haluat aloittaa esimerkin "
+"perusteella, luomme sinulle kolme ryhmää ja kolme tagia. Voit leikkiä "
+"niiden kanssa, nimetä ne uudelleen tai poistaa ne."
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:8
+#: views/admin/setup_wizard_sample_content.view.php:8
+msgid "Create sample groups:"
+msgstr "Luo esimerkkiryhmät:"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:16
+#: views/admin/setup_wizard_sample_content.view.php:16
+msgid "Create sample tags in these groups:"
+msgstr "Luo esimerkkitagit näissä ryhmissä:"
+
+#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:34
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:33
+#: views/admin/setup_wizard_sample_content.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:33
+msgid "Next Step"
+msgstr "Seuraava vaihe"
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:3
+#: views/admin/setup_wizard_start.view.php:3
+msgid ""
+"On the following pages we will guide you through the basic settings that "
+"you need for the most common features."
+msgstr ""
+"Seuraavilla sivuilla opastamme sinut läpi perusasetusten, joita tarvitset "
+"yleisimpiä toimintoja varten."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
+#: views/admin/setup_wizard_start.view.php:4
+msgid ""
+"You can later make changes or fine-tune the details in the Tag Groups "
+"settings."
+msgstr ""
+"Voit myöhemmin tehdä muutoksia tai hienosäätää yksityiskohtia Tag Groups "
+"asetuksissa."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
+#: views/admin/setup_wizard_start.view.php:4
+msgid "(show me the menu)"
+msgstr "(näytä minulle valikko)"
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:5
+#: views/admin/setup_wizard_start.view.php:5
+msgid ""
+"Feel free to abort the Setup Wizard any time and continue on your own path. "
+"You can also launch it again at a later time."
+msgstr ""
+"Voit keskeyttää Asennusohjelman milloin tahansa ja jatkaa omalla polullasi. "
+"Voit myös käynnistää sen uudelleen myöhemmin."
+
+#: dist/tag-groups/views/admin/setup_wizard_start.view.php:7
+#: views/admin/setup_wizard_start.view.php:7
+msgid "The wizard will offer more options after upgrading to premium."
+msgstr "Asennusohjelma tarjoaa lisää vaihtoehtoja päivittämisen jälkeen premiumiin."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use tag groups."
+msgstr "Valitse taxonomiat, joille haluat käyttää tagiryhmiä."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
+msgstr "Useimmissa tapauksissa oletustaxonomia <b>Tags (post_tag)</b> riittää."
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:22
+#: views/admin/setup_wizard_taxonomies.view.php:22
+msgid "post type"
+msgstr "post type"
+
+#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:30
+#: views/admin/setup_wizard_taxonomies.view.php:30
+msgid "You will find more options in the Tag Groups settings."
+msgstr "Löydät lisää vaihtoehtoja Tag Groups asetuksista."
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:3
+#: views/admin/tag_groups_admin.view.php:3
+msgid "Tag Group Administration"
+msgstr "Tag Group Hallinta"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:10
+#: views/admin/tag_groups_admin.view.php:10
+msgid "Filter by label"
+msgstr "Suodata nimilapun mukaan"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:22
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:35
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
+msgid "Tag Group name"
+msgstr "Tag Group nimi"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:24
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:37
+#: views/admin/tag_groups_admin.view.php:24
+#: views/admin/tag_groups_admin.view.php:37
+msgid "Number of assigned tags"
+msgstr "Määrä määritettyjä tageja"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:28
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:41
+#: views/admin/tag_groups_admin.view.php:28
+#: views/admin/tag_groups_admin.view.php:41
+msgid "Actions"
+msgstr "Toiminnot"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:29
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:42
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
+msgid "Change order"
+msgstr "Vaihda järjestystä"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:30
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:43
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
+msgid "Group ID"
+msgstr "Ryhmän ID"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:63
+#: views/admin/tag_groups_admin.view.php:63
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:64
+#: views/admin/tag_groups_admin.view.php:64
+msgid "Create"
+msgstr "Luo"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:65
+#: views/admin/tag_groups_admin.view.php:65
+msgid "new"
+msgstr "uusi"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:66
+#: views/admin/tag_groups_admin.view.php:66
+msgid "label"
+msgstr "tunnus"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:67
+#: views/admin/tag_groups_admin.view.php:67
+msgid "Delete this group."
+msgstr "Poista tämä ryhmä."
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:68
+#: views/admin/tag_groups_admin.view.php:68
+msgid "Create a new group below."
+msgstr "Luo uusi ryhmä alla."
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:69
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Tag Group"
+msgstr "Lisää uusi tagiryhmä"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:70
+#: views/admin/tag_groups_admin.view.php:70
+msgid "move up"
+msgstr "siirrä ylös"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:71
+#: views/admin/tag_groups_admin.view.php:71
+msgid "move down"
+msgstr "siirrä alas"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:72
+#: views/admin/tag_groups_admin.view.php:72
+msgid "reload"
+msgstr "lataa uudelleen"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:73
+#: views/admin/tag_groups_admin.view.php:73
+msgid "next page"
+msgstr "seuraava sivu"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:74
+#: views/admin/tag_groups_admin.view.php:74
+msgid "previous page"
+msgstr "edellinen sivu"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:75
+#: views/admin/tag_groups_admin.view.php:75
+msgid "go to page:"
+msgstr "siirry sivulle:"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:76
+#: views/admin/tag_groups_admin.view.php:76
+msgid "Show posts"
+msgstr "Näytä viestit"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:77
+#: views/admin/tag_groups_admin.view.php:77
+msgid "Show tags"
+msgstr "Näytä tagit"
+
+#: dist/tag-groups/views/admin/tag_groups_admin.view.php:168
+#: views/admin/tag_groups_admin.view.php:168
+msgid "Do you really want to delete this tag group?"
+msgstr "Haluatko todella poistaa tämän tagiryhmän?"
+
+#: dist/tag-groups/views/partials/admin_feed_fallback.view.php:2
+#, php-format
+msgid "Please visit <a %s>%s</a>."
+msgstr "Ole hyvä ja vieraile <a %s>%s</a>."
+
+#: dist/tag-groups/views/partials/admin_feed_footer.view.php:3
+#: views/partials/admin_feed_footer.view.php:3
+msgid "Read more"
+msgstr "Lue lisää"
+
+#: dist/tag-groups/views/partials/admin_footer_rating.view.php:4
+#, php-format
+msgid "Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s"
+msgstr "Kiitos, että käytät Tag Groups | %1sTaxoPress.com%2s | Versio %3s"
+
+#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:10
+#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:11
+#: views/partials/bulk_admin_footer.view.php:10
+#: views/partials/bulk_admin_footer.view.php:11
+msgid "Assign to"
+msgstr "Määritä"
+
+#: dist/tag-groups/views/partials/filter_admin_footer.view.php:23
+#: views/partials/filter_admin_footer.view.php:23
+msgid "Filter off"
+msgstr "Suodatin pois päältä"
+
+#: dist/tag-groups/views/partials/language_notice.view.php:2
+#: views/partials/language_notice.view.php:2
+msgid "Please select one of the languages above to see the correct tag groups!"
+msgstr "Valitse yllä olevista kielistä nähdäksesi oikeat tagiryhmät!"
+
+#: dist/tag-groups/views/partials/quick_edit_tag.view.php:3
+#: views/partials/quick_edit_tag.view.php:3
+msgid "Groups"
+msgstr "Ryhmät"
+
+#: includes-core/TagGroupsCoreAdmin.php:44
+#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
+#, php-format
+msgid ""
+"You're using Tag Groups Free. The Pro version has more features and "
+"support. %1$sUpgrade to Pro%2$s"
+msgstr ""
+"Käytät Tag Groups Free -versiota. Pro-versiossa on enemmän ominaisuuksia ja "
+"tukea. %1$sPäivitä Pro:hon%2$s"
+
+#: views/admin/setup_wizard_finished.view.php:14
+#. translators: %1$s and %2$s are href attributes with URLs
+#, php-format
+msgid ""
+"Or go to the <a %1$s>Tag Groups settings</a> or visit the <a "
+"%2$s>documentation</a>."
+msgstr ""
+"Tai siirry <a %1$s>Tag Groups -asetuksiin</a> tai vieraile <a "
+"%2$s>dokumentaatiossa</a>."
+
+#: views/admin/setup_wizard_finished.view.php:16
+#. translators: %1$s and %2$s are href attributes with URLs
+#, php-format
+msgid ""
+"Now go to the <a %1$s>Tag Groups settings</a>, or visit the <a "
+"%2$s>documentation</a>."
+msgstr ""
+"Siirry nyt <a %1$s>Tag Groups -asetuksiin</a>, tai vieraile <a "
+"%2$s>dokumentaatiossa</a>."
+
+#: views/partials/admin_feed_fallback.view.php:2
+#. translators: %1$s is the href attribute with URL, %2$s is the link text
+#, php-format
+msgid "Please visit <a %1$s>%2$s</a>."
+msgstr "Ole hyvä ja vieraile <a %1$s>%2$s</a>."
+
+#: views/partials/admin_footer_rating.view.php:5
+#. translators: %1$s and %2$s are opening and closing anchor tags, %3$s is the version number
+#, php-format
+msgid "Thanks for using Tag Groups | %1$sTaxoPress.com%2$s | Version %3$s"
+msgstr "Kiitos, että käytät Tag Groups | %1$sTaxoPress.com%2$s | Versio %3$s"

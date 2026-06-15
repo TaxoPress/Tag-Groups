@@ -16,7 +16,7 @@
       <h4><?php _e('Example', 'tag-groups') ?></h4>
       <p>[tag_groups_cloud smallest=9 largest=30 include=1,2,10]</p>
       <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php echo wp_kses_post(sprintf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tabbed-tag-cloud-shortcode-parameters/" target="_blank"')); ?></p>
+      <p><?php /* translators: %s is the href attribute with URL */ echo wp_kses_post(sprintf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tabbed-tag-cloud-shortcode-parameters/" target="_blank"')); ?></p>
     </div>
 
     <h4><span class="dashicons dashicons-menu"></span> <?php _e('Accordion', 'tag-groups') ?></h4>

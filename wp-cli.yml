@@ -1,0 +1,9 @@
+command:
+  allow-root: true
+
+i18n:
+  exclude:
+    - dist
+    - vendor
+    - node_modules
+    - tests

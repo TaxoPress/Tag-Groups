@@ -990,6 +990,7 @@ if (!class_exists('TagGroups_Admin')) {
         // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy method naming
         public static function recommend_to_run_migration()
         {
+            /* translators: %s is the href attribute with URL */
             TagGroups_Admin_Notice::add('info', sprintf(__('Please <a %s>click here to run the migration routines</a> to make sure we have migrated all tags.', 'tag-groups'), 'href="' . admin_url('admin.php?page=tag-groups-settings-general&process-tasks=migratetermmeta&task-set-name=Migration') . '"'));
         }
     }

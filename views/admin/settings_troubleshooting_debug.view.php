@@ -37,6 +37,6 @@ if ($debug_is_on) : ?>
 
 </form>
 <p>&nbsp;</p>
-  <p><?php echo wp_kses_post(sprintf(__('Learn more <a %s>about debugging</a>.', 'tag-groups'), 'href="' . esc_url($help_url) . '" target="_blank"')); ?></p>
+  <p><?php /* translators: %s is the href attribute with URL */ echo wp_kses_post(sprintf(__('Learn more <a %s>about debugging</a>.', 'tag-groups'), 'href="' . esc_url($help_url) . '" target="_blank"')); ?></p>
 
 </div>

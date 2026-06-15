@@ -188,10 +188,12 @@ if (!class_exists('TagGroups_Group_Admin')) {
                         $message = __('The label cannot be empty.', 'tag-groups');
                         self::ajax_send_error($message, $task);
                     } elseif (!$allow_duplicate_group_names && $tg_group->find_by_label($label)) {
+                        /* translators: %s is the tag group label */
                         $message = sprintf(__('A tag group with the label \'%s\' already exists, or the label has not changed. Please choose another one or go back.', 'tag-groups'), $label);
                         self::ajax_send_error($message, $task);
                     } else {
                         $tg_group->create($label, $position + 1);
+                        /* translators: %s is the tag group label */
                         $message = sprintf(__('A new tag group with the label \'%s\' has been created!', 'tag-groups'), $label);
                     }
                     
@@ -210,6 +212,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
                         if (!empty($position) && $position == $tg_group->get_position()) {
                             // Label hast not changed, just ignore
                         } else {
+                            /* translators: %s is the tag group label */
                             $message = sprintf(__('A tag group with the label \'%s\' already exists.', 'tag-groups'), $label);
                             self::ajax_send_error($message, $task);
                         }
@@ -222,12 +225,14 @@ if (!class_exists('TagGroups_Group_Admin')) {
                             self::ajax_send_error('error: invalid position: ' . $position, $task);
                         }
                         
+                        /* translators: %s is the tag group label */
                         $message = sprintf(__('The tag group with the label \'%s\' has been saved!', 'tag-groups'), $label);
                     }
                     
                     break;
                 case "delete":
                     if (!empty($position) && $tg_group->find_by_position($position)) {
+                        /* translators: %1$s is the group ID, %2$s is the group label */
                         $message = sprintf(__('A tag group with the id %1$s and the label \'%2$s\' has been deleted.', 'tag-groups'), $tg_group->get_group_id(), $tg_group->get_label());
                         $tg_group->delete();
                     } else {
