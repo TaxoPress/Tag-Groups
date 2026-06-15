@@ -1,5 +1,5 @@
 <div class="tg_settings_tabs_content">
-  <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
+  <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
     <?php echo wp_nonce_field('tag-groups-reset', 'tag-groups-reset-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
     <p><?php _e('Use this button to delete all tag groups and assignments. Your tags will not be changed. Check the checkbox to confirm.', 'tag-groups') ?>
     <span class="dashicons dashicons-editor-help chatty-mango-help-icon" title="<?php _e('Please keep in mind that the tag assignments cannot be recovered by the export/import function.', 'tag-groups') ?>"></span></p>
@@ -11,7 +11,7 @@
   </form>
   <p>&nbsp;</p>
   <h2><?php _e('Delete Settings and Groups', 'tag-groups') ?></h2>
-  <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
+  <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
     <?php echo wp_nonce_field('tag-groups-uninstall', 'tag-groups-uninstall-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
     <p>
       <input type="checkbox" id="data_ok" name="ok" autocomplete="off" value="yes"

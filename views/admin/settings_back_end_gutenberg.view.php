@@ -1,6 +1,6 @@
 <div class="tg_settings_tabs_content">
 
-  <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
+  <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
     <?php echo wp_nonce_field('tag-groups-gutenberg', 'tag-groups-gutenberg-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
     <p>
       <input type="checkbox" id="tg_server_side_render" name="tag_group_server_side_render" autocomplete="off" value="1" <?php if ($tag_group_server_side_render) :

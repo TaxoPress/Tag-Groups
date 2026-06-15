@@ -20,7 +20,7 @@
 
   <?php if ($tag_group_show_filter_tags) : ?>
     <p>&nbsp;</p>
-    <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
+    <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
       <p><?php _e("Reset the filter on the tags page to show all tags.", 'tag-groups') ?><span class="dashicons dashicons-editor-help chatty-mango-help-icon" title="<?php _e('Use it if a JavaScript error disables the filter menu. Note that it is still recommended to find out the cause of the error.', 'tag-groups') ?>"></span></p>
         <?php echo wp_nonce_field('tag-groups-reset-tag-filter', 'tag-groups-reset-tag-filter-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
       <input type="hidden" name="tg_action" value="reset-tag-filter">

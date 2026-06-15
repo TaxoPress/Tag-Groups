@@ -8,7 +8,7 @@
     <p><?php _e('If you use a custom taxonomy, make sure that the attribute "Public" is set to "true" and "Hierarchical" to "false".', 'tag-groups') ?></p>
   </div>
   <div class="chatty-mango-settings-container">
-    <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
+    <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
       <?php echo wp_nonce_field('tag-groups-taxonomy', 'tag-groups-taxonomy-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
       <ul>
         <p><input id="tg_advanced_options_checkbox" type="checkbox" value=1 autocomplete="off" />
