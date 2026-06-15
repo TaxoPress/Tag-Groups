@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Tag Groups
  *
@@ -8,6 +9,8 @@
  * @copyright 2019 Christoph Amthor (@ Chatty Mango, chattymango.com)
  * @license   GPL-3.0+
  */
+
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Loader')) {
     class TagGroups_Loader
     {
@@ -44,40 +47,39 @@ if (!class_exists('TagGroups_Loader')) {
          */
         public function require_classes()
         {
-            spl_autoload_register(
-                function ($class_name) {
-                    if (strpos($class_name, 'TagGroups_') !== 0) {
-                        return;
-                    }
+            spl_autoload_register(function ($class_name) {
+
+                if (strpos($class_name, 'TagGroups_') !== 0) {
+                    return;
+                }
                     
-                    if (class_exists($class_name)) {
-                        return;
-                    }
-                    /**
-                     * Directories are ordered according to priority
-                     */
-                    $dirs = array(
-                    '/include/entities/',
-                    '/include/helpers/',
-                    '/include/helpers/cache/',
-                    '/include/admin/',
-                    '/include/admin/runners/',
-                    '/include/admin/handlers/',
-                    '/include/shortcodes/'
-                    );
-                    $class_name = str_replace('TagGroups_', '', $class_name);
-                    foreach ($dirs as $dir) {
-                        /**
-                         * We need to make all strings lower-case for different filesystems
-                         */
+                if (class_exists($class_name)) {
+                    return;
+                }
+                /**
+                 * Directories are ordered according to priority
+                 */
+                $dirs = array(
+                '/include/entities/',
+                '/include/helpers/',
+                '/include/helpers/cache/',
+                '/include/admin/',
+                '/include/admin/runners/',
+                '/include/admin/handlers/',
+                '/include/shortcodes/'
+                );
+                $class_name = str_replace('TagGroups_', '', $class_name);
+                foreach ($dirs as $dir) {
+                /**
+                                         * We need to make all strings lower-case for different filesystems
+                                         */
                     
-                        if (file_exists($this->plugin_path . $dir . 'class.' . strtolower($class_name) . '.php')) {
-                            include_once $this->plugin_path . $dir . 'class.' . strtolower($class_name) . '.php';
-                            return;
-                        }
+                    if (file_exists($this->plugin_path . $dir . 'class.' . strtolower($class_name) . '.php')) {
+                        include_once $this->plugin_path . $dir . 'class.' . strtolower($class_name) . '.php';
+                        return;
                     }
                 }
-            );
+            });
             return $this;
         }
         
@@ -127,7 +129,6 @@ if (!class_exists('TagGroups_Loader')) {
                 include_once ABSPATH . '/wp-admin/includes/plugin.php';
             }
             $plugin_header = get_plugin_data(WP_PLUGIN_DIR . '/' . TAG_GROUPS_PLUGIN_BASENAME, false, false);
-            
             if (isset($plugin_header['Version'])) {
                 $version = $plugin_header['Version'];
             } else {
@@ -149,9 +150,9 @@ if (!class_exists('TagGroups_Loader')) {
                 return;
             }
             global  $wp_version ;
-            /**
-             * Check the minimum WP version
-             */
+    /**
+                 * Check the minimum WP version
+                 */
             
             if (version_compare($wp_version, TAG_GROUPS_MINIMUM_VERSION_WP, '<')) {
                 TagGroups_Error::log('[Tag Groups] Insufficient WordPress version for Tag Groups plugin.');
@@ -171,7 +172,6 @@ if (!class_exists('TagGroups_Loader')) {
             global  $tag_groups_hooks ;
             $tag_groups_hooks = new TagGroups_Hooks($this);
             $tag_groups_hooks->root_all();
-            
             if (is_admin()) {
                 $tag_groups_hooks->is_admin();
             } else {
@@ -196,7 +196,7 @@ if (!class_exists('TagGroups_Loader')) {
              * add Gutenberg functionality
              */
             include_once $this->plugin_path . '/src/init.php';
-            // Register shortcodes also for admin so that we can remove them with strip_shortcodes in Ajax call
+    // Register shortcodes also for admin so that we can remove them with strip_shortcodes in Ajax call
             TagGroups_Shortcode_Statics::register();
             return $this;
         }
@@ -221,12 +221,12 @@ if (!class_exists('TagGroups_Loader')) {
             $domain       = 'tag-groups';
             $mofile_custom = sprintf('%s-%s.mo', $domain, get_user_locale());
             $locations = [
-                trailingslashit( WP_LANG_DIR . '/' . $domain ),
-                trailingslashit( WP_LANG_DIR . '/loco/plugins/'),
-                trailingslashit( WP_LANG_DIR ),
-                trailingslashit( plugin_dir_path(TAG_GROUPS_FILE) . 'languages' ),
+            trailingslashit(WP_LANG_DIR . '/' . $domain),
+            trailingslashit(WP_LANG_DIR . '/loco/plugins/'),
+            trailingslashit(WP_LANG_DIR),
+            trailingslashit(plugin_dir_path(TAG_GROUPS_FILE) . 'languages'),
             ];
-            // Try custom locations in WP_LANG_DIR.
+    // Try custom locations in WP_LANG_DIR.
             foreach ($locations as $location) {
                 if (load_textdomain($domain, $location . $mofile_custom)) {
                     return true;
@@ -245,9 +245,10 @@ if (!class_exists('TagGroups_Loader')) {
             // CRON independent from admin or frontend
             TagGroups_Cron::register_cron_handlers();
             TagGroups_Cron::schedule_regular('hourly', 'tag_groups_check_tag_migration');
-            // schedule purging of expired transients
+    // schedule purging of expired transients
             TagGroups_Cron::schedule_regular('daily', 'tag_groups_purge_expired_transients');
             return $this;
         }
     }
+
 }

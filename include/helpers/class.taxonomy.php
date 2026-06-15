@@ -10,7 +10,9 @@
 * @since       0.38
 *
 */
-if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
+
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+if (!class_exists('TagGroups_Taxonomy')) {
     class TagGroups_Taxonomy
     {
         /**
@@ -29,13 +31,13 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          * @param array $taxonomy_slugs
          * @return array
          */
-        public static function remove_invalid( $taxonomy_slugs )
+        public static function remove_invalid($taxonomy_slugs)
         {
-            if ( !is_array( $taxonomy_slugs ) ) {
+            if (!is_array($taxonomy_slugs)) {
                 $taxonomy_slugs = array( $taxonomy_slugs );
             }
             $valid_taxonomy_slugs = self::get_public_taxonomies();
-            return array_values( array_intersect( $taxonomy_slugs, $valid_taxonomy_slugs ) );
+            return array_values(array_intersect($taxonomy_slugs, $valid_taxonomy_slugs));
         }
         
         /**
@@ -45,20 +47,19 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          * @param array|string $intersect_taxonomy_slugs Optional array of taxonomy names that needs to be intersected
          * @return array
          */
-        public static function get_enabled_taxonomies( $intersect_taxonomy_slugs = null )
+        public static function get_enabled_taxonomies($intersect_taxonomy_slugs = null)
         {
-            if ( !empty($intersect_taxonomy_slugs) && !is_array( $intersect_taxonomy_slugs ) ) {
+            if (!empty($intersect_taxonomy_slugs) && !is_array($intersect_taxonomy_slugs)) {
                 $intersect_taxonomy_slugs = array( $intersect_taxonomy_slugs );
             }
-            $tag_group_taxonomies = TagGroups_Options::get_option( 'tag_group_taxonomy', array( 'post_tag' ) );
+            $tag_group_taxonomies = TagGroups_Options::get_option('tag_group_taxonomy', array( 'post_tag' ));
             $valid_taxonomy_slugs = self::get_public_taxonomies();
             
-            if ( empty($intersect_taxonomy_slugs) ) {
-                return array_values( array_intersect( $tag_group_taxonomies, $valid_taxonomy_slugs ) );
+            if (empty($intersect_taxonomy_slugs)) {
+                return array_values(array_intersect($tag_group_taxonomies, $valid_taxonomy_slugs));
             } else {
-                return array_values( array_intersect( $tag_group_taxonomies, $valid_taxonomy_slugs, $intersect_taxonomy_slugs ) );
+                return array_values(array_intersect($tag_group_taxonomies, $valid_taxonomy_slugs, $intersect_taxonomy_slugs));
             }
-        
         }
         
         /**
@@ -68,7 +69,7 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          * @param array $intersect_taxonomy_slugs Optional array of taxonomy names that needs to be intersected
          * @return array
          */
-        public static function get_taxonomies_for_metabox( $intersect_taxonomy_slugs = null )
+        public static function get_taxonomies_for_metabox($intersect_taxonomy_slugs = null)
         {
             
             return array();
@@ -83,9 +84,9 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          */
         public static function get_public_taxonomies()
         {
-            return get_taxonomies( array(
+            return get_taxonomies(array(
                 'public' => true,
-            ), 'names' );
+            ), 'names');
         }
         
         /**
@@ -94,25 +95,25 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          * @param array|string $taxonomy_slugs
          * @return array
          */
-        static function post_types_from_taxonomies( $taxonomy_slugs = array() )
+        static function post_types_from_taxonomies($taxonomy_slugs = array())
         {
-            if ( !is_array( $taxonomy_slugs ) ) {
+            if (!is_array($taxonomy_slugs)) {
                 $taxonomy_slugs = array( $taxonomy_slugs );
             }
-            $taxonomy_slugs = array_values( $taxonomy_slugs );
+            $taxonomy_slugs = array_values($taxonomy_slugs);
             $post_types = array();
-            foreach ( $taxonomy_slugs as $taxonomy ) {
+            foreach ($taxonomy_slugs as $taxonomy) {
                 $post_type_a = array();
-                $taxonomy_o = get_taxonomy( $taxonomy );
+                $taxonomy_o = get_taxonomy($taxonomy);
                 /**
                  * The return value of get_taxonomy can be false
                  */
-                if ( !empty($taxonomy_o) ) {
+                if (!empty($taxonomy_o)) {
                     $post_type_a = $taxonomy_o->object_type;
                 }
-                if ( !empty($post_type_a) ) {
-                    foreach ( $post_type_a as $post_type ) {
-                        if ( !in_array( $post_type, $post_types ) ) {
+                if (!empty($post_type_a)) {
+                    foreach ($post_type_a as $post_type) {
+                        if (!in_array($post_type, $post_types)) {
                             $post_types[] = $post_type;
                         }
                     }
@@ -128,16 +129,15 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          * @param string $taxonomy_slug
          * @return string name
          */
-        public static function get_name_from_slug( $taxonomy_slug )
+        public static function get_name_from_slug($taxonomy_slug)
         {
-            $taxonomy = get_taxonomy( $taxonomy_slug );
+            $taxonomy = get_taxonomy($taxonomy_slug);
             
-            if ( is_object( $taxonomy ) && is_object( $taxonomy->labels ) ) {
+            if (is_object($taxonomy) && is_object($taxonomy->labels)) {
                 return $taxonomy->labels->name;
             } else {
                 return $taxonomy_slug;
             }
-        
         }
         
         /**
@@ -147,10 +147,10 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          * @param array $intersect_taxonomy_slugs Optional array of taxonomy names that needs to be intersected
          * @return array
          */
-        public static function get_metabox( $intersect_taxonomy_slugs = null )
+        public static function get_metabox($intersect_taxonomy_slugs = null)
         {
             TagGroups_Error::deprecated();
-            return self::get_taxonomies_for_metabox( $intersect_taxonomy_slugs );
+            return self::get_taxonomies_for_metabox($intersect_taxonomy_slugs);
         }
         
         /**
@@ -160,17 +160,17 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          * @param string $taxonomy
          * @return string
          */
-        public static function get_tag_group_admin_url( $taxonomy )
+        public static function get_tag_group_admin_url($taxonomy)
         {
-            $post_type = TagGroups_Utilities::get_first_element( self::post_types_from_taxonomies( $taxonomy ) );
+            $post_type = TagGroups_Utilities::get_first_element(self::post_types_from_taxonomies($taxonomy));
             
-            if ( 'post' == $post_type ) {
+            if ('post' == $post_type) {
                 $rel_url = 'edit.php?page=tag-groups_' . $post_type;
             } else {
                 $rel_url = 'edit.php?post_type=' . $post_type . '&page=tag-groups_' . $post_type;
             }
             
-            return admin_url( $rel_url );
+            return admin_url($rel_url);
         }
         
         /**
@@ -179,14 +179,13 @@ if ( !class_exists( 'TagGroups_Taxonomy' ) ) {
          * @param array $taxonomies
          * @return void
          */
-        public static function update_enabled( $taxonomies )
+        public static function update_enabled($taxonomies)
         {
             
-            if ( TagGroups_Options::update_option( 'tag_group_taxonomy', $taxonomies ) ) {
+            if (TagGroups_Options::update_option('tag_group_taxonomy', $taxonomies)) {
                 // trigger actions
-                do_action( 'tag_groups_taxonomies_saved', $taxonomies );
+                do_action('tag_groups_taxonomies_saved', $taxonomies);
             }
         }
-    
     }
 }

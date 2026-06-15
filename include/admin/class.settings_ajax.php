@@ -6,7 +6,9 @@
 * @copyright   2018 Christoph Amthor (@ Chatty Mango, chattymango.com)
 * @license     GPL-3.0+
 */
-if ( !class_exists( 'TagGroups_Settings_Ajax' ) ) {
+
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+if (!class_exists('TagGroups_Settings_Ajax')) {
     /**
      *
      */
@@ -21,18 +23,19 @@ if ( !class_exists( 'TagGroups_Settings_Ajax' ) ) {
          */
         public static function ajax_benchmark()
         {
-            if ( !isset( $_POST['task'] ) ) {
+            // phpcs:ignore WordPress.Security.NonceVerification.Missing -- AJAX handler
+            if (!isset($_POST['task'])) {
                 return;
             }
             
             $benchmark = array();
-            switch ( $_POST['task'] ) {
+            // phpcs:ignore WordPress.Security.NonceVerification.Missing -- AJAX handler
+            switch ($_POST['task']) {
                 case "cache":
                     break;
             }
-            echo  json_encode( $benchmark ) ;
+            echo  wp_json_encode($benchmark) ;
             wp_die();
         }
-
     }
 }

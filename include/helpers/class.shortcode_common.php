@@ -7,29 +7,30 @@
 * @license     GPL-3.0+
 */
 
-if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+if (!class_exists('TagGroups_Shortcode_Common')) {
     #[\AllowDynamicProperties]
     class TagGroups_Shortcode_Common
     {
-        public  $attributes ;
-        public  $assigned_terms ;
-        public  $cache_key ;
-        public  $count_amount ;
-        public  $final_order ;
-        public  $final_orderby ;
-        public  $include_array ;
-        public  $include_tags_post_id_groups ;
-        public  $min_max ;
-        public  $post_counts ;
-        public  $post_id ;
-        public  $shortcode_id ;
-        public  $start_group ;
-        public  $tag_group_data ;
-        public  $tag_group_ids ;
-        public  $tags ;
-        public  $taxonomies ;
-        public  $wpml_language ;
-        public  $remove_filters ;
+        public $attributes ;
+        public $assigned_terms ;
+        public $cache_key ;
+        public $count_amount ;
+        public $final_order ;
+        public $final_orderby ;
+        public $include_array ;
+        public $include_tags_post_id_groups ;
+        public $min_max ;
+        public $post_counts ;
+        public $post_id ;
+        public $shortcode_id ;
+        public $start_group ;
+        public $tag_group_data ;
+        public $tag_group_ids ;
+        public $tags ;
+        public $taxonomies ;
+        public $wpml_language ;
+        public $remove_filters ;
         /**
          * loads commonly required data
          *
@@ -51,7 +52,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
              */
             $current_language = TagGroups_WPML::get_current_language();
             
-            if ( $current_language ) {
+            if ($current_language) {
                 $this->wpml_language = $current_language;
             } else {
                 $this->wpml_language = '';
@@ -66,19 +67,19 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param array $atts
          * @return void
          */
-        function set_attributes( $atts )
+        public function set_attributes($atts)
         {
-            foreach ( $atts as $key => $value ) {
-                if ( 'div_id' == $key || 'table_id' == $key ) {
+            foreach ($atts as $key => $value) {
+                if ('div_id' == $key || 'table_id' == $key) {
                     $key = 'html_id';
                 }
                 /**
                  * Many people copy formatted quotes
                  */
                 
-                if ( '”' == mb_substr( $value, 0, 1 ) && '”' == mb_substr( $value, -1, 1 ) ) {
-                    TagGroups_Error::verbose_log( '[Tag Groups] The value %s seems to be enclosed by wrong quotes. We remove them.', $value );
-                    $value = mb_substr( $value, 1, -1 );
+                if ('”' == mb_substr($value, 0, 1) && '”' == mb_substr($value, -1, 1)) {
+                    TagGroups_Error::verbose_log('[Tag Groups] The value %s seems to be enclosed by wrong quotes. We remove them.', $value);
+                    $value = mb_substr($value, 1, -1);
                 }
                 
                 $this->attributes->{$key} = $value;
@@ -93,13 +94,13 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param int $max Largest post count
          * @return int
          */
-        function font_size( $count, $min, $max )
+        public function font_size($count, $min, $max)
         {
             
-            if ( $max > $min ) {
-                $size = round( ($count - $min) * ($this->attributes->largest - $this->attributes->smallest) / ($max - $min) + $this->attributes->smallest );
+            if ($max > $min) {
+                $size = round(($count - $min) * ($this->attributes->largest - $this->attributes->smallest) / ($max - $min) + $this->attributes->smallest);
             } else {
-                $size = round( $this->attributes->smallest );
+                $size = round($this->attributes->smallest);
             }
             
             return $size;
@@ -110,53 +111,51 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          *
          * @return string
          */
-        function custom_js_tabs()
+        public function custom_js_tabs()
         {
             $options = array();
             
-            if ( isset( $this->attributes->mouseover ) ) {
-                if ( $this->attributes->mouseover ) {
+            if (isset($this->attributes->mouseover)) {
+                if ($this->attributes->mouseover) {
                     $options['event'] = 'mouseover';
                 }
             } else {
-                if ( TagGroups_Options::get_option( 'tag_group_mouseover', 0 ) ) {
+                if (TagGroups_Options::get_option('tag_group_mouseover', 0)) {
                     $options['event'] = 'mouseover';
                 }
             }
             
             
-            if ( isset( $this->attributes->collapsible ) ) {
-                if ( $this->attributes->collapsible ) {
+            if (isset($this->attributes->collapsible)) {
+                if ($this->attributes->collapsible) {
                     $options['collapsible'] = true;
                 }
             } else {
-                if ( TagGroups_Options::get_option( 'tag_group_collapsible', 0 ) ) {
+                if (TagGroups_Options::get_option('tag_group_collapsible', 0)) {
                     $options['collapsible'] = true;
                 }
             }
             
-            if ( isset( $this->attributes->active ) ) {
-                
-                if ( $this->attributes->active >= 0 ) {
+            if (isset($this->attributes->active)) {
+                if ($this->attributes->active >= 0) {
                     $options['active'] = (int) $this->attributes->active;
                 } else {
                     $options['active'] = false;
                 }
-            
             }
             
-            if ( empty($this->attributes->html_id) ) {
+            if (empty($this->attributes->html_id)) {
                 $this->attributes->html_id = 'tag-groups-cloud-tabs';
             } else {
-                $this->attributes->html_id = TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->html_id );
+                $this->attributes->html_id = TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->html_id);
             }
             
-            $view = new TagGroups_View( 'shortcodes/js_tabs_snippet' );
-            $view->set( array(
+            $view = new TagGroups_View('shortcodes/js_tabs_snippet');
+            $view->set(array(
                 'id'                => $this->attributes->html_id,
-                'options_js_object' => json_encode( (object) $options ),
+                'options_js_object' => wp_json_encode((object) $options),
                 'delay'             => $this->attributes->delay,
-            ) );
+            ));
             return $view->return_html();
         }
         
@@ -165,56 +164,54 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          *
          * @return string
          */
-        function custom_js_accordion()
+        public function custom_js_accordion()
         {
             $options = array();
             
-            if ( isset( $this->attributes->mouseover ) ) {
-                if ( $this->attributes->mouseover ) {
+            if (isset($this->attributes->mouseover)) {
+                if ($this->attributes->mouseover) {
                     $options['event'] = 'mouseover';
                 }
             } else {
-                if ( TagGroups_Options::get_option( 'tag_group_mouseover', 0 ) ) {
+                if (TagGroups_Options::get_option('tag_group_mouseover', 0)) {
                     $options['event'] = 'mouseover';
                 }
             }
             
             
-            if ( isset( $this->attributes->collapsible ) ) {
-                if ( $this->attributes->html_id ) {
+            if (isset($this->attributes->collapsible)) {
+                if ($this->attributes->html_id) {
                     $options['collapsible'] = true;
                 }
             } else {
-                if ( TagGroups_Options::get_option( 'tag_group_collapsible', 0 ) ) {
+                if (TagGroups_Options::get_option('tag_group_collapsible', 0)) {
                     $options['collapsible'] = true;
                 }
             }
             
-            if ( !empty($this->attributes->heightstyle) ) {
-                $options['heightStyle'] = sanitize_title( $this->attributes->heightstyle );
+            if (!empty($this->attributes->heightstyle)) {
+                $options['heightStyle'] = sanitize_title($this->attributes->heightstyle);
             }
-            if ( isset( $this->attributes->active ) ) {
-                
-                if ( $this->attributes->active >= 0 ) {
+            if (isset($this->attributes->active)) {
+                if ($this->attributes->active >= 0) {
                     $options['active'] = (int) $this->attributes->active;
                 } else {
                     $options['active'] = false;
                 }
-            
             }
             
-            if ( !isset( $this->attributes->html_id ) ) {
+            if (!isset($this->attributes->html_id)) {
                 $this->attributes->html_id = 'tag-groups-cloud-accordion';
             } else {
-                $this->attributes->html_id = TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->html_id );
+                $this->attributes->html_id = TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->html_id);
             }
             
-            $view = new TagGroups_View( 'shortcodes/js_accordion_snippet' );
-            $view->set( array(
+            $view = new TagGroups_View('shortcodes/js_accordion_snippet');
+            $view->set(array(
                 'id'                => $this->attributes->html_id,
-                'options_js_object' => json_encode( (object) $options ),
+                'options_js_object' => wp_json_encode((object) $options),
                 'delay'             => $this->attributes->delay,
-            ) );
+            ));
             return $view->return_html();
         }
         
@@ -224,71 +221,66 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param void
          * @return void
          */
-        function determine_min_max()
+        public function determine_min_max()
         {
             $this->min_max = array();
             $count_amount = array();
-            foreach ( $this->tag_group_ids as $tag_group_id ) {
+            foreach ($this->tag_group_ids as $tag_group_id) {
                 $count_amount[$tag_group_id] = 0;
                 $this->min_max[$tag_group_id]['min'] = 0;
                 $this->min_max[$tag_group_id]['max'] = 0;
             }
-            if ( empty($this->tags) || !is_array( $this->tags ) ) {
+            if (empty($this->tags) || !is_array($this->tags)) {
                 return;
             }
-            foreach ( $this->tags as $tag ) {
-                $term_o = new TagGroups_Term( $tag );
-                if ( !$term_o->has_group( $this->tag_group_ids ) ) {
+            foreach ($this->tags as $tag) {
+                $term_o = new TagGroups_Term($tag);
+                if (!$term_o->has_group($this->tag_group_ids)) {
                     continue;
                 }
                 $post_count_per_group = array();
                 $post_count_total = 0;
                 // check if tag has posts for a particular group
                 
-                if ( !empty($this->tag_group_data) && !empty($this->post_counts) ) {
-                    foreach ( $this->tag_group_ids as $tag_group_id ) {
-                        
-                        if ( isset( $this->post_counts[$tag->term_id][$tag_group_id] ) ) {
+                if (!empty($this->tag_group_data) && !empty($this->post_counts)) {
+                    foreach ($this->tag_group_ids as $tag_group_id) {
+                        if (isset($this->post_counts[$tag->term_id][$tag_group_id])) {
                             $post_count_per_group[$tag_group_id] = $this->post_counts[$tag->term_id][$tag_group_id];
                             $post_count_total += $this->post_counts[$tag->term_id][$tag_group_id];
                         } else {
                             $post_count_per_group[$tag_group_id] = $tag->count;
                             $post_count_total += $tag->count;
                         }
-                    
                     }
                 } else {
                     $post_count_total = $tag->count;
                 }
                 
                 
-                if ( $post_count_total > 0 ) {
+                if ($post_count_total > 0) {
                     /**
                      * Use only groups that are in the list
                      */
-                    $term_groups = array_intersect( $term_o->get_groups(), $this->tag_group_ids );
-                    foreach ( $term_groups as $term_group ) {
-                        
-                        if ( isset( $post_count_per_group[$term_group] ) ) {
+                    $term_groups = array_intersect($term_o->get_groups(), $this->tag_group_ids);
+                    foreach ($term_groups as $term_group) {
+                        if (isset($post_count_per_group[$term_group])) {
                             $tag_count_this_group = $post_count_per_group[$term_group];
                         } else {
                             $tag_count_this_group = $post_count_total;
                         }
                         
                         
-                        if ( (0 == $this->attributes->amount || $count_amount[$term_group] < $this->attributes->amount) && (empty($this->include_tags_post_id_groups) || in_array( $tag->term_id, $this->include_tags_post_id_groups[$term_group] )) ) {
-                            if ( isset( $this->min_max[$term_group]['max'] ) && $tag_count_this_group > $this->min_max[$term_group]['max'] ) {
+                        if ((0 == $this->attributes->amount || $count_amount[$term_group] < $this->attributes->amount) && (empty($this->include_tags_post_id_groups) || in_array($tag->term_id, $this->include_tags_post_id_groups[$term_group]))) {
+                            if (isset($this->min_max[$term_group]['max']) && $tag_count_this_group > $this->min_max[$term_group]['max']) {
                                 $this->min_max[$term_group]['max'] = $tag_count_this_group;
                             }
-                            if ( isset( $this->min_max[$term_group]['min'] ) && ($tag_count_this_group < $this->min_max[$term_group]['min'] || 0 == $this->min_max[$term_group]['min']) ) {
+                            if (isset($this->min_max[$term_group]['min']) && ($tag_count_this_group < $this->min_max[$term_group]['min'] || 0 == $this->min_max[$term_group]['min'])) {
                                 $this->min_max[$term_group]['min'] = $tag_count_this_group;
                             }
                             $count_amount[$term_group]++;
                         }
-                    
                     }
                 }
-            
             }
         }
         
@@ -300,13 +292,13 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param void
          * @return void
          */
-        function natural_sorting()
+        public function natural_sorting()
         {
-            $factor = ( 'desc' == strtolower( $this->final_order ) ? -1 : 1 );
-            uasort( $this->tags, function ( $a, $b ) use( $factor ) {
-                return $factor * strnatcasecmp( $a->name, $b->name );
-            } );
-            $this->tags = array_values( $this->tags );
+            $factor = ( 'desc' == strtolower($this->final_order) ? -1 : 1 );
+            uasort($this->tags, function ($a, $b) use ($factor) {
+                return $factor * strnatcasecmp($a->name, $b->name);
+            });
+            $this->tags = array_values($this->tags);
         }
         
         /**
@@ -315,12 +307,13 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param void
          * @return void
          */
-        function random_sorting()
+        public function random_sorting()
         {
-            uasort( $this->tags, function ( $a, $b ) {
-                return 2 * mt_rand( 0, 1 ) - 1;
-            } );
-            $this->tags = array_values( $this->tags );
+            uasort($this->tags, function ($a, $b) {
+                // phpcs:ignore WordPress.WP.AlternativeFunctions.rand_mt_rand
+                return 2 * mt_rand(0, 1) - 1;
+            });
+            $this->tags = array_values($this->tags);
         }
         
         /**
@@ -328,18 +321,18 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          *
          * @return void
          */
-        function sort()
+        public function sort()
         {
-            if ( count( $this->tags ) == 0 ) {
+            if (count($this->tags) == 0) {
                 return $this->tags;
             }
-            if ( 'random' == $this->final_orderby ) {
+            if ('random' == $this->final_orderby) {
                 return $this->random_sorting();
             }
-            if ( 'natural' == $this->final_orderby ) {
-                return $this->natural_sorting( $this->tags, $this->final_order );
+            if ('natural' == $this->final_orderby) {
+                return $this->natural_sorting($this->tags, $this->final_order);
             }
-            $factor = ( 'desc' == strtolower( $this->final_order ) ? -1 : 1 );
+            $factor = ( 'desc' == strtolower($this->final_order) ? -1 : 1 );
             /**
              * name
              * count
@@ -348,44 +341,44 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
              * description
              * term_order
              */
-            switch ( $this->final_orderby ) {
+            switch ($this->final_orderby) {
                 case 'name':
-                    uasort( $this->tags, function ( $a, $b ) use( $factor ) {
-                        return $factor * strnatcasecmp( $a->name, $b->name );
-                    } );
+                    uasort($this->tags, function ($a, $b) use ($factor) {
+                        return $factor * strnatcasecmp($a->name, $b->name);
+                    });
                     break;
                 case 'count':
-                    uasort( $this->tags, function ( $a, $b ) use( $factor ) {
+                    uasort($this->tags, function ($a, $b) use ($factor) {
                         return $factor * (( $a->count > $b->count ? 1 : -1 ));
-                    } );
+                    });
                     break;
                 case 'slug':
-                    uasort( $this->tags, function ( $a, $b ) use( $factor ) {
-                        return $factor * strcmp( $a->slug, $b->slug );
-                    } );
+                    uasort($this->tags, function ($a, $b) use ($factor) {
+                        return $factor * strcmp($a->slug, $b->slug);
+                    });
                     break;
                 case 'term_id':
-                    uasort( $this->tags, function ( $a, $b ) use( $factor ) {
+                    uasort($this->tags, function ($a, $b) use ($factor) {
                         return $factor * (( $a->term_id > $b->term_id ? 1 : -1 ));
-                    } );
+                    });
                     break;
                 case 'description':
-                    uasort( $this->tags, function ( $a, $b ) use( $factor ) {
-                        return $factor * strcmp( $a->description, $b->description );
-                    } );
+                    uasort($this->tags, function ($a, $b) use ($factor) {
+                        return $factor * strcmp($a->description, $b->description);
+                    });
                     break;
                 case 'term_order':
-                    if ( !isset( $this->tags[0]->term_order ) ) {
-                        TagGroups_Error::log( '[Tag Groups] Field term_order not found.' );
+                    if (!isset($this->tags[0]->term_order)) {
+                        TagGroups_Error::log('[Tag Groups] Field term_order not found.');
                     }
-                    uasort( $this->tags, function ( $a, $b ) use( $factor ) {
+                    uasort($this->tags, function ($a, $b) use ($factor) {
                         return $factor * (( $a->term_order > $b->term_order ? 1 : -1 ));
-                    } );
+                    });
                     break;
                 default:
                     break;
             }
-            $this->tags = array_values( $this->tags );
+            $this->tags = array_values($this->tags);
         }
         
         /**
@@ -393,13 +386,13 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          *
          * @return void
          */
-        function maybe_add_post_tags_or_groups()
+        public function maybe_add_post_tags_or_groups()
         {
             /*
              *  applying parameter tags_post_id
              */
             
-            if ( property_exists( $this->attributes, 'tags_post_id' ) && $this->attributes->tags_post_id > 0 ) {
+            if (property_exists($this->attributes, 'tags_post_id') && $this->attributes->tags_post_id > 0) {
                 $this->post_id = $this->attributes->tags_post_id;
                 $this->add_tags_of_post();
             }
@@ -408,11 +401,10 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
              *  applying parameter groups_post_id
              */
             
-            if ( property_exists( $this->attributes, 'groups_post_id' ) && $this->attributes->groups_post_id > 0 ) {
+            if (property_exists($this->attributes, 'groups_post_id') && $this->attributes->groups_post_id > 0) {
                 $this->post_id = $this->attributes->groups_post_id;
                 $this->add_groups_of_post();
             }
-        
         }
         
         /**
@@ -421,27 +413,27 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param void
          * @return void
          */
-        function add_groups_of_post()
+        public function add_groups_of_post()
         {
             
             $post_id_terms = array();
             /*
              *  get all tags of this post
              */
-            foreach ( $this->taxonomies as $taxonomy_item ) {
-                $terms = get_the_terms( (int) $this->post_id, $taxonomy_item );
-                if ( !empty($terms) && is_array( $terms ) ) {
-                    $post_id_terms = array_merge( $post_id_terms, $terms );
+            foreach ($this->taxonomies as $taxonomy_item) {
+                $terms = get_the_terms((int) $this->post_id, $taxonomy_item);
+                if (!empty($terms) && is_array($terms)) {
+                    $post_id_terms = array_merge($post_id_terms, $terms);
                 }
             }
             /*
              *  get all involved groups, append them to $this->attributes->include
              */
-            if ( $post_id_terms ) {
-                foreach ( $post_id_terms as $term ) {
-                    $term_o = new TagGroups_Term( $term );
+            if ($post_id_terms) {
+                foreach ($post_id_terms as $term) {
+                    $term_o = new TagGroups_Term($term);
                     $groups_of_term = $term_o->get_groups();
-                    $this->include_array = array_merge( $this->include_array, $groups_of_term );
+                    $this->include_array = array_merge($this->include_array, $groups_of_term);
                 }
             }
         }
@@ -452,7 +444,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param void
          * @return void
          */
-        function add_tags_of_post()
+        public function add_tags_of_post()
         {
             
             $post_id_terms = array();
@@ -461,45 +453,42 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
              *  we have a particular post ID
              *  get all tags of this post
              */
-            foreach ( $this->taxonomies as $taxonomy_item ) {
-                $terms = get_the_terms( (int) $this->post_id, $taxonomy_item );
+            foreach ($this->taxonomies as $taxonomy_item) {
+                $terms = get_the_terms((int) $this->post_id, $taxonomy_item);
                 /*
                  *  merging the results of selected taxonomies
                  */
-                if ( !empty($terms) && is_array( $terms ) ) {
-                    $post_id_terms = array_merge( $post_id_terms, $terms );
+                if (!empty($terms) && is_array($terms)) {
+                    $post_id_terms = array_merge($post_id_terms, $terms);
                 }
             }
             /*
              *  clean all others from $this->tags
              */
-            foreach ( $this->tags as $key => $tag ) {
+            foreach ($this->tags as $key => $tag) {
                 $found = false;
-                foreach ( $post_id_terms as $id_tag ) {
-                    
-                    if ( $tag->term_id == $id_tag->term_id ) {
+                foreach ($post_id_terms as $id_tag) {
+                    if ($tag->term_id == $id_tag->term_id) {
                         $found = true;
                         break;
                     }
-                
                 }
                 
-                if ( !empty($this->attributes->assigned_class) ) {
+                if (!empty($this->attributes->assigned_class)) {
                     /*
                      *  Keep all terms but mark for different styling
                      */
-                    if ( $found ) {
+                    if ($found) {
                         $this->assigned_terms[$tag->term_id] = true;
                     }
                 } else {
                     /*
                      *  Remove unused terms.
                      */
-                    if ( !$found ) {
-                        unset( $this->tags[$key] );
+                    if (!$found) {
+                        unset($this->tags[$key]);
                     }
                 }
-            
             }
         }
         
@@ -511,27 +500,26 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param string $order
          * @return void
          */
-        public function sort_within_groups( $group_id )
+        public function sort_within_groups($group_id)
         {
             $shortcode_this = $this;
-            uasort( $this->tags, function ( $a, $b ) use( &$shortcode_this, $group_id ) {
-                if ( !isset( $shortcode_this->post_counts[$a->term_id][$group_id] ) ) {
+            uasort($this->tags, function ($a, $b) use (&$shortcode_this, $group_id) {
+                if (!isset($shortcode_this->post_counts[$a->term_id][$group_id])) {
                     $shortcode_this->post_counts[$a->term_id][$group_id] = $a->count;
                 }
-                if ( !isset( $shortcode_this->post_counts[$b->term_id][$group_id] ) ) {
+                if (!isset($shortcode_this->post_counts[$b->term_id][$group_id])) {
                     $shortcode_this->post_counts[$b->term_id][$group_id] = $b->count;
                 }
-                if ( $shortcode_this->post_counts[$a->term_id][$group_id] == $shortcode_this->post_counts[$b->term_id][$group_id] ) {
+                if ($shortcode_this->post_counts[$a->term_id][$group_id] == $shortcode_this->post_counts[$b->term_id][$group_id]) {
                     return 0;
                 }
                 
-                if ( 'asc' == strtolower( $shortcode_this->final_order ) ) {
+                if ('asc' == strtolower($shortcode_this->final_order)) {
                     return ( $shortcode_this->post_counts[$a->term_id][$group_id] > $shortcode_this->post_counts[$b->term_id][$group_id] ? 1 : -1 );
                 } else {
                     return ( $shortcode_this->post_counts[$a->term_id][$group_id] > $shortcode_this->post_counts[$b->term_id][$group_id] ? -1 : 1 );
                 }
-            
-            } );
+            });
         }
         
         /**
@@ -540,11 +528,11 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param string $tag tag name
          * @return string
          */
-        public function get_first_letter( $tag )
+        public function get_first_letter($tag)
         {
-            $first_letter = mb_strtolower( mb_substr( $tag, 0, 1 ) );
-            if ( $this->attributes->ignore_accents ) {
-                $first_letter = remove_accents( $first_letter );
+            $first_letter = mb_strtolower(mb_substr($tag, 0, 1));
+            if ($this->attributes->ignore_accents) {
+                $first_letter = remove_accents($first_letter);
             }
             return $first_letter;
         }
@@ -557,9 +545,9 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
         public function extract_alphabet()
         {
             $this->attributes->alphabet = array();
-            foreach ( $this->tags as $tag ) {
-                $first_letter = $this->get_first_letter( $tag->name );
-                if ( !in_array( $first_letter, $this->attributes->alphabet ) ) {
+            foreach ($this->tags as $tag) {
+                $first_letter = $this->get_first_letter($tag->name);
+                if (!in_array($first_letter, $this->attributes->alphabet)) {
                     $this->attributes->alphabet[] = $first_letter;
                 }
             }
@@ -575,33 +563,32 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
             /**
              * include
              */
-            $this->attributes->include_letters = str_replace( ' ', '', $this->attributes->include_letters );
+            $this->attributes->include_letters = str_replace(' ', '', $this->attributes->include_letters);
             
-            if ( $this->attributes->include_letters != '' ) {
+            if ($this->attributes->include_letters != '') {
                 // don't use empty()
                 $include_letters_array = array();
-                $this->attributes->include_letters = mb_strtolower( $this->attributes->include_letters );
-                for ( $i = 0 ;  $i < mb_strlen( $this->attributes->include_letters ) ;  $i++ ) {
-                    $include_letters_array[] = mb_substr( $this->attributes->include_letters, $i, 1 );
+                $this->attributes->include_letters = mb_strtolower($this->attributes->include_letters);
+                for ($i = 0; $i < mb_strlen($this->attributes->include_letters); $i++) {
+                    $include_letters_array[] = mb_substr($this->attributes->include_letters, $i, 1);
                 }
-                $this->attributes->alphabet = array_intersect( $this->attributes->alphabet, $include_letters_array );
+                $this->attributes->alphabet = array_intersect($this->attributes->alphabet, $include_letters_array);
             }
             
             /**
              * exclude
              */
-            $this->attributes->exclude_letters = str_replace( ' ', '', $this->attributes->exclude_letters );
+            $this->attributes->exclude_letters = str_replace(' ', '', $this->attributes->exclude_letters);
             
-            if ( $this->attributes->exclude_letters != '' ) {
+            if ($this->attributes->exclude_letters != '') {
                 // don't use empty()
                 $exclude_letters_array = array();
-                $this->attributes->exclude_letters = mb_strtolower( $this->attributes->exclude_letters );
-                for ( $i = 0 ;  $i < mb_strlen( $this->attributes->exclude_letters ) ;  $i++ ) {
-                    $exclude_letters_array[] = mb_substr( $this->attributes->exclude_letters, $i, 1 );
+                $this->attributes->exclude_letters = mb_strtolower($this->attributes->exclude_letters);
+                for ($i = 0; $i < mb_strlen($this->attributes->exclude_letters); $i++) {
+                    $exclude_letters_array[] = mb_substr($this->attributes->exclude_letters, $i, 1);
                 }
-                $this->attributes->alphabet = array_diff( $this->attributes->alphabet, $exclude_letters_array );
+                $this->attributes->alphabet = array_diff($this->attributes->alphabet, $exclude_letters_array);
             }
-        
         }
         
         /**
@@ -612,40 +599,38 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          */
         public function sort_alphabet()
         {
-            if ( empty($this->attributes->locale) ) {
+            if (empty($this->attributes->locale)) {
                 $this->attributes->locale = get_locale();
             }
             
-            if ( class_exists( 'Collator' ) ) {
+            if (class_exists('Collator')) {
                 // Collator is more reliable
-                $collator = new Collator( $this->attributes->locale );
+                $collator = new Collator($this->attributes->locale);
                 
-                if ( !(array) $collator ) {
+                if (!(array) $collator) {
                     $error_message = intl_get_error_message();
-                    if ( 'U_USING_DEFAULT_WARNING' == $error_message ) {
-                        $error_message = sprintf( 'Collator used the default locale data ("%s"); neither the requested locale "%s" nor any of its fall back locales could be found.', $collator->getLocale( Locale::ACTUAL_LOCALE ), $this->attributes->locale );
+                    if ('U_USING_DEFAULT_WARNING' == $error_message) {
+                        $error_message = sprintf('Collator used the default locale data ("%s"); neither the requested locale "%s" nor any of its fall back locales could be found.', $collator->getLocale(Locale::ACTUAL_LOCALE), $this->attributes->locale);
                     }
-                    if ( 'U_USING_FALLBACK_WARNING' == $error_message ) {
-                        $error_message = sprintf( 'Collator used the fall back locale "%s" because the requested locale "%s" could not be found.', $collator->getLocale( Locale::ACTUAL_LOCALE ), $this->attributes->locale );
+                    if ('U_USING_FALLBACK_WARNING' == $error_message) {
+                        $error_message = sprintf('Collator used the fall back locale "%s" because the requested locale "%s" could not be found.', $collator->getLocale(Locale::ACTUAL_LOCALE), $this->attributes->locale);
                     }
-                    TagGroups_Error::verbose_log( '[Tag Groups] ' . $error_message );
+                    TagGroups_Error::verbose_log('[Tag Groups] ' . $error_message);
                 }
                 
-                $collator->sort( $this->attributes->alphabet );
+                $collator->sort($this->attributes->alphabet);
             } else {
-                if ( strpos( $this->attributes->locale, ',' ) !== false ) {
-                    $this->attributes->locale = array_map( 'trim', explode( ',', $this->attributes->locale ) );
+                if (strpos($this->attributes->locale, ',') !== false) {
+                    $this->attributes->locale = array_map('trim', explode(',', $this->attributes->locale));
                 }
-                $result = @setlocale( LC_COLLATE, $this->attributes->locale );
+                $result = @setlocale(LC_COLLATE, $this->attributes->locale);
                 
-                if ( false === $result ) {
-                    TagGroups_Error::verbose_log( '[Tag Groups] Cannot set locale %s', $this->attributes->locale );
+                if (false === $result) {
+                    TagGroups_Error::verbose_log('[Tag Groups] Cannot set locale %s', $this->attributes->locale);
                 } else {
-                    sort( $this->attributes->alphabet, SORT_LOCALE_STRING );
+                    sort($this->attributes->alphabet, SORT_LOCALE_STRING);
                 }
-            
             }
-        
         }
         
         /**
@@ -653,74 +638,71 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * 
          * @return void
          */
-        function determine_min_max_alphabet()
+        public function determine_min_max_alphabet()
         {
             $this->min_max = array();
             $count_amount = array();
             
-            if ( $this->attributes->min_max_per_letter ) {
-                foreach ( $this->attributes->alphabet as $letter ) {
+            if ($this->attributes->min_max_per_letter) {
+                foreach ($this->attributes->alphabet as $letter) {
                     $count_amount[$letter] = 0;
                     $this->min_max[$letter]['min'] = 0;
                     $this->min_max[$letter]['max'] = 0;
                 }
-                if ( empty($this->tags) || !is_array( $this->tags ) ) {
+                if (empty($this->tags) || !is_array($this->tags)) {
                     return;
                 }
-                foreach ( $this->tags as $tag ) {
-                    $first_letter = $this->get_first_letter( $tag->name, $this->attributes->ignore_accents );
-                    if ( !in_array( $first_letter, $this->attributes->alphabet ) ) {
+                foreach ($this->tags as $tag) {
+                    $first_letter = $this->get_first_letter($tag->name, $this->attributes->ignore_accents);
+                    if (!in_array($first_letter, $this->attributes->alphabet)) {
                         continue;
                     }
-                    if ( $this->attributes->amount > 0 && $count_amount[$first_letter] > $this->attributes->amount ) {
+                    if ($this->attributes->amount > 0 && $count_amount[$first_letter] > $this->attributes->amount) {
                         continue;
                     }
                     $post_count_total = $tag->count;
                     
-                    if ( $post_count_total > 0 ) {
-                        if ( isset( $this->min_max[$first_letter]['max'] ) && $post_count_total > $this->min_max[$first_letter]['max'] ) {
+                    if ($post_count_total > 0) {
+                        if (isset($this->min_max[$first_letter]['max']) && $post_count_total > $this->min_max[$first_letter]['max']) {
                             $this->min_max[$first_letter]['max'] = $post_count_total;
                         }
-                        if ( isset( $this->min_max[$first_letter]['min'] ) && ($post_count_total < $this->min_max[$first_letter]['min'] || 0 == $this->min_max[$first_letter]['min']) ) {
+                        if (isset($this->min_max[$first_letter]['min']) && ($post_count_total < $this->min_max[$first_letter]['min'] || 0 == $this->min_max[$first_letter]['min'])) {
                             $this->min_max[$first_letter]['min'] = $post_count_total;
                         }
                         $count_amount[$first_letter]++;
                     }
-                
                 }
             } else {
                 $absolute_min = 0;
                 $absolute_max = 0;
-                foreach ( $this->attributes->alphabet as $letter ) {
+                foreach ($this->attributes->alphabet as $letter) {
                     $count_amount[$letter] = 0;
                 }
-                foreach ( $this->tags as $tag ) {
-                    $first_letter = $this->get_first_letter( $tag->name, $this->attributes->ignore_accents );
-                    if ( !in_array( $first_letter, $this->attributes->alphabet ) ) {
+                foreach ($this->tags as $tag) {
+                    $first_letter = $this->get_first_letter($tag->name, $this->attributes->ignore_accents);
+                    if (!in_array($first_letter, $this->attributes->alphabet)) {
                         continue;
                     }
-                    if ( $count_amount[$first_letter] > $this->attributes->amount ) {
+                    if ($count_amount[$first_letter] > $this->attributes->amount) {
                         continue;
                     }
                     $post_count_total = $tag->count;
                     
-                    if ( $post_count_total > 0 ) {
-                        if ( $post_count_total > $absolute_max ) {
+                    if ($post_count_total > 0) {
+                        if ($post_count_total > $absolute_max) {
                             $absolute_max = $post_count_total;
                         }
-                        if ( $post_count_total < $absolute_min || 0 == $absolute_min ) {
+                        if ($post_count_total < $absolute_min || 0 == $absolute_min) {
                             $absolute_min = $post_count_total;
                         }
                         $count_amount[$first_letter]++;
                     }
-                
                 }
-                foreach ( $this->attributes->alphabet as $letter ) {
+                foreach ($this->attributes->alphabet as $letter) {
                     $this->min_max[$letter]['min'] = $absolute_min;
                     $this->min_max[$letter]['max'] = $absolute_max;
                 }
             }
-        
         }
         
         /**
@@ -730,25 +712,24 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param void
          * @return void
          */
-        function get_taxonomies()
+        public function get_taxonomies()
         {
             $requested_taxonomies = array();
-            if ( !empty($this->attributes->taxonomy) ) {
-                $requested_taxonomies = array_map( 'trim', explode( ',', $this->attributes->taxonomy ) );
+            if (!empty($this->attributes->taxonomy)) {
+                $requested_taxonomies = array_map('trim', explode(',', $this->attributes->taxonomy));
             }
             $this->taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
             
-            if ( !empty($requested_taxonomies) ) {
-                $this->taxonomies = array_intersect( $this->taxonomies, $requested_taxonomies );
+            if (!empty($requested_taxonomies)) {
+                $this->taxonomies = array_intersect($this->taxonomies, $requested_taxonomies);
                 
-                if ( empty($this->taxonomies) ) {
-                    TagGroups_Error::log( '[Tag Groups Pro] Wrong taxonomy or taxonomies (%s) in shortcode %s', implode( ',', $requested_taxonomies ), $this->shortcode_id );
+                if (empty($this->taxonomies)) {
+                    TagGroups_Error::log('[Tag Groups Pro] Wrong taxonomy or taxonomies (%s) in shortcode %s', implode(',', $requested_taxonomies), $this->shortcode_id);
+                    // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                     // return ''; // We are forgiving and let the shortcode work with any taxonomy
                     $this->taxonomies = $requested_taxonomies;
                 }
-            
             }
-        
         }
         
         /**
@@ -756,16 +737,17 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          *
          * @return void
          */
-        function maybe_enable_terms_order()
+        public function maybe_enable_terms_order()
         {
             global  $tag_group_terms, $wpdb ;
             
-            if ( 'term_order' == $this->final_orderby ) {
+            if ('term_order' == $this->final_orderby) {
                 $tables = $wpdb->tables();
-                $columns = $wpdb->get_col( "DESC {$tables['terms']}", 0 );
+                // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+                $columns = $wpdb->get_col("DESC {$tables['terms']}", 0);
                 
-                if ( !in_array( 'term_order', $columns ) ) {
-                    TagGroups_Error::log( '[Tag Groups] If you use orderby=term_order, your database needs to have the term_order column.' );
+                if (!in_array('term_order', $columns)) {
+                    TagGroups_Error::log('[Tag Groups] If you use orderby=term_order, your database needs to have the term_order column.');
                     return;
                 }
                 
@@ -776,7 +758,6 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                     2
                 );
             }
-        
         }
         
         /**
@@ -784,34 +765,31 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          *
          * @return void
          */
-        function get_post_id()
+        public function get_post_id()
         {
             
-            if ( property_exists( $this->attributes, 'tags_post_id' ) && 0 == $this->attributes->tags_post_id ) {
+            if (property_exists($this->attributes, 'tags_post_id') && 0 == $this->attributes->tags_post_id) {
                 $post_id = get_the_ID();
                 
-                if ( false !== $post_id ) {
+                if (false !== $post_id) {
                     $this->attributes->tags_post_id = $post_id;
                 } else {
-                    TagGroups_Error::verbose_log( '[Tag Groups Pro] Cannot get the post ID' );
+                    TagGroups_Error::verbose_log('[Tag Groups Pro] Cannot get the post ID');
                     $this->attributes->do_not_cache = true;
                 }
-            
             }
             
             
-            if ( property_exists( $this->attributes, 'groups_post_id' ) && 0 == $this->attributes->groups_post_id ) {
+            if (property_exists($this->attributes, 'groups_post_id') && 0 == $this->attributes->groups_post_id) {
                 $post_id = get_the_ID();
                 
-                if ( false !== $post_id ) {
+                if (false !== $post_id) {
                     $this->attributes->groups_post_id = $post_id;
                 } else {
-                    TagGroups_Error::verbose_log( '[Tag Groups Pro] Cannot get the post ID' );
+                    TagGroups_Error::verbose_log('[Tag Groups Pro] Cannot get the post ID');
                     $this->attributes->do_not_cache = true;
                 }
-            
             }
-        
         }
         
         /**
@@ -819,19 +797,19 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          *
          * @return void
          */
-        function check_attributes()
+        public function check_attributes()
         {
             
-            if ( 'shortcode' == $this->attributes->source ) {
-                $this->attributes->prepend = html_entity_decode( $this->attributes->prepend );
-                $this->attributes->append = html_entity_decode( $this->attributes->append );
-                if ( property_exists( $this->attributes, 'separator' ) ) {
-                    $this->attributes->separator = html_entity_decode( $this->attributes->separator );
+            if ('shortcode' == $this->attributes->source) {
+                $this->attributes->prepend = html_entity_decode($this->attributes->prepend);
+                $this->attributes->append = html_entity_decode($this->attributes->append);
+                if (property_exists($this->attributes, 'separator')) {
+                    $this->attributes->separator = html_entity_decode($this->attributes->separator);
                 }
             }
             
             
-            if ( property_exists( $this->attributes, 'threshold' ) && $this->attributes->threshold ) {
+            if (property_exists($this->attributes, 'threshold') && $this->attributes->threshold) {
                 $this->final_orderby = $this->attributes->orderby;
                 $this->final_order = $this->attributes->order;
                 $this->attributes->orderby = 'count';
@@ -847,53 +825,47 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                 $this->final_order = $this->attributes->order;
             }
             
-            if ( property_exists( $this->attributes, 'smallest' ) && $this->attributes->smallest < 1 ) {
+            if (property_exists($this->attributes, 'smallest') && $this->attributes->smallest < 1) {
                 $this->attributes->smallest = 1;
             }
-            if ( property_exists( $this->attributes, 'largest' ) && $this->attributes->largest < $this->attributes->smallest ) {
+            if (property_exists($this->attributes, 'largest') && $this->attributes->largest < $this->attributes->smallest) {
                 $this->attributes->largest = $this->attributes->smallest;
             }
-            if ( property_exists( $this->attributes, 'amount' ) && $this->attributes->amount < 0 ) {
+            if (property_exists($this->attributes, 'amount') && $this->attributes->amount < 0) {
                 $this->attributes->amount = 0;
             }
             
-            if ( property_exists( $this->attributes, 'show_not_assigned' ) && !empty($this->attributes->show_not_assigned) ) {
+            if (property_exists($this->attributes, 'show_not_assigned') && !empty($this->attributes->show_not_assigned)) {
                 $this->start_group = 0;
             } else {
                 $this->start_group = 1;
             }
             
-            if ( property_exists( $this->attributes, 'link_append' ) && !empty($this->attributes->link_append) && mb_strpos( $this->attributes->link_append, '?' ) === 0 ) {
-                $this->attributes->link_append = mb_substr( $this->attributes->link_append, 1 );
+            if (property_exists($this->attributes, 'link_append') && !empty($this->attributes->link_append) && mb_strpos($this->attributes->link_append, '?') === 0) {
+                $this->attributes->link_append = mb_substr($this->attributes->link_append, 1);
             }
-            if ( property_exists( $this->attributes, 'separator_size' ) && !empty($this->attributes->separator_size) ) {
-                
-                if ( $this->attributes->separator_size < 1 ) {
+            if (property_exists($this->attributes, 'separator_size') && !empty($this->attributes->separator_size)) {
+                if ($this->attributes->separator_size < 1) {
                     $this->attributes->separator_size = 12;
                 } else {
                     $this->attributes->separator_size = (int) $this->attributes->separator_size;
                 }
-            
             }
-            if ( property_exists( $this->attributes, 'tags_post_id' ) ) {
-                
-                if ( $this->attributes->tags_post_id < -1 ) {
+            if (property_exists($this->attributes, 'tags_post_id')) {
+                if ($this->attributes->tags_post_id < -1) {
                     $this->attributes->tags_post_id = -1;
-                } elseif ( $this->attributes->tags_post_id > -1 ) {
+                } elseif ($this->attributes->tags_post_id > -1) {
                     $this->attributes->include_terms = '';
                 }
-            
             }
-            if ( property_exists( $this->attributes, 'groups_post_id' ) ) {
-                
-                if ( $this->attributes->groups_post_id < -1 ) {
+            if (property_exists($this->attributes, 'groups_post_id')) {
+                if ($this->attributes->groups_post_id < -1) {
                     $this->attributes->groups_post_id = -1;
-                } elseif ( $this->attributes->groups_post_id > -1 ) {
+                } elseif ($this->attributes->groups_post_id > -1) {
                     $this->attributes->include = '';
                 }
-            
             }
-            if ( property_exists( $this->attributes, 'h_level' ) ) {
+            if (property_exists($this->attributes, 'h_level')) {
                 $this->attributes->h_level = (int) $this->attributes->h_level;
             }
         }
@@ -903,15 +875,15 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          *
          * @return void
          */
-        function get_tags()
+        public function get_tags()
         {
             $tag_groups_hooks = new TagGroups_Hooks();
             /**
              * Reduce the risk of interference from other plugins
              */
             
-            if ( $this->remove_filters ) {
-                $tag_groups_hooks->remove_all_filters( array( 'get_terms_orderby', 'get_terms', 'list_terms_exclusions' ) );
+            if ($this->remove_filters) {
+                $tag_groups_hooks->remove_all_filters(array( 'get_terms_orderby', 'get_terms', 'list_terms_exclusions' ));
                 // keep terms_clauses for WPML
             }
             
@@ -919,15 +891,16 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
              * term_order requires special treatment
              */
             $this->maybe_enable_terms_order();
-            $term_query = new WP_Term_Query( array(
+            $term_query = new WP_Term_Query(array(
                 'taxonomy'   => $this->taxonomies,
                 'hide_empty' => $this->attributes->hide_empty,
                 'orderby'    => $this->attributes->orderby,
                 'order'      => $this->attributes->order,
                 'include'    => $this->attributes->include_terms,
+                // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
                 'exclude'    => $this->attributes->exclude_terms,
                 'threshold'  => $this->attributes->threshold,
-            ) );
+            ));
             $this->tags = ( empty($term_query->terms) ? array() : $term_query->terms );
             /**
              * Filters the terms of a group before it's returned or saved to the transient
@@ -965,11 +938,10 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
              * In case of errors: return empty array
              */
             
-            if ( !is_array( $this->tags ) ) {
+            if (!is_array($this->tags)) {
                 $this->tags = array();
-                TagGroups_Error::log( '[Tag Groups] Error retrieving tags with WP_Term_Query.' );
+                TagGroups_Error::log('[Tag Groups] Error retrieving tags with WP_Term_Query.');
             }
-        
         }
         
         /**
@@ -978,26 +950,25 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param void
          * @return void
          */
-        function make_include_array()
+        public function make_include_array()
         {
             global  $tag_group_groups ;
             
-            if ( property_exists( $this->attributes, 'include' ) && $this->attributes->include !== '' ) {
-                $this->include_array = array_map( 'intval', explode( ',', $this->attributes->include ) );
-                $this->include_array = $tag_group_groups->expand_parents( $this->include_array );
-            } elseif ( !property_exists( $this->attributes, 'groups_post_id' ) || $this->attributes->groups_post_id < 0 ) {
+            if (property_exists($this->attributes, 'include') && $this->attributes->include !== '') {
+                $this->include_array = array_map('intval', explode(',', $this->attributes->include));
+                $this->include_array = $tag_group_groups->expand_parents($this->include_array);
+            } elseif (!property_exists($this->attributes, 'groups_post_id') || $this->attributes->groups_post_id < 0) {
                 $this->include_array = $this->tag_group_ids;
             } else {
                 $this->include_array = array();
             }
             
             
-            if ( property_exists( $this->attributes, 'exclude' ) && $this->attributes->exclude !== '' ) {
-                $exclude_array = array_map( 'intval', explode( ',', $this->attributes->exclude ) );
-                $exclude_array = $tag_group_groups->expand_parents( $exclude_array );
-                $this->include_array = array_diff( $this->include_array, $exclude_array );
+            if (property_exists($this->attributes, 'exclude') && $this->attributes->exclude !== '') {
+                $exclude_array = array_map('intval', explode(',', $this->attributes->exclude));
+                $exclude_array = $tag_group_groups->expand_parents($exclude_array);
+                $this->include_array = array_diff($this->include_array, $exclude_array);
             }
-        
         }
         
         /**
@@ -1006,15 +977,14 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param int $post_count
          * @return string
          */
-        function get_prepend_output( $post_count )
+        public function get_prepend_output($post_count)
         {
             
-            if ( !empty($this->attributes->prepend) ) {
-                return preg_replace( "/(\\{count\\})/", $post_count, $this->attributes->prepend );
+            if (!empty($this->attributes->prepend)) {
+                return preg_replace("/(\\{count\\})/", $post_count, $this->attributes->prepend);
             } else {
                 return '';
             }
-        
         }
         
         /**
@@ -1023,15 +993,14 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param int $post_count
          * @return string
          */
-        function get_append_output( $post_count )
+        public function get_append_output($post_count)
         {
             
-            if ( !empty($this->attributes->append) ) {
-                return preg_replace( "/(\\{count\\})/", $post_count, $this->attributes->append );
+            if (!empty($this->attributes->append)) {
+                return preg_replace("/(\\{count\\})/", $post_count, $this->attributes->append);
             } else {
                 return '';
             }
-        
         }
         
         /**
@@ -1041,20 +1010,19 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param int $post_count
          * @return string
          */
-        function get_title( $tag, $post_count )
+        public function get_title($tag, $post_count)
         {
             /**
              * Don't test for empty() because the user might need to display an empty title
              */
             if (
-                ( property_exists( $this->attributes, 'custom_title' ) && ! is_null( $this->attributes->custom_title ) ) ||
-                ( property_exists( $this->attributes, 'custom_title_zero' ) && ! is_null( $this->attributes->custom_title_zero ) ) ||
-                ( property_exists( $this->attributes, 'custom_title_plural' ) && ! is_null( $this->attributes->custom_title_plural ) )
+                ( property_exists($this->attributes, 'custom_title') && ! is_null($this->attributes->custom_title) ) ||
+                ( property_exists($this->attributes, 'custom_title_zero') && ! is_null($this->attributes->custom_title_zero) ) ||
+                ( property_exists($this->attributes, 'custom_title_plural') && ! is_null($this->attributes->custom_title_plural) )
             ) {
-                
-                if ( 0 == $post_count && property_exists( $this->attributes, 'custom_title_zero' ) && !is_null( $this->attributes->custom_title_zero ) ) {
+                if (0 == $post_count && property_exists($this->attributes, 'custom_title_zero') && !is_null($this->attributes->custom_title_zero)) {
                     $title = $this->attributes->custom_title_zero;
-                } elseif ( $post_count > 1 && property_exists( $this->attributes, 'custom_title_plural' ) && !is_null( $this->attributes->custom_title_plural ) ) {
+                } elseif ($post_count > 1 && property_exists($this->attributes, 'custom_title_plural') && !is_null($this->attributes->custom_title_plural)) {
                     $title = $this->attributes->custom_title_plural;
                 } else {
                     $title = $this->attributes->custom_title;
@@ -1077,24 +1045,23 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                     $post_count
                 );
                 // use the provided template
-                $description = ( !empty($tag->description) ? esc_html( $tag->description ) : '' );
-                $title = preg_replace( "/(\\{description\\})/", $description, $title );
-                $name = ( !empty($tag->name) ? esc_html( $tag->name ) : '' );
-                $title = preg_replace( "/(\\{name\\})/", $name, $title );
-                $title = preg_replace( "/(\\{count\\})/", $post_count, $title );
-                if ( trim($title) === '' ) {
+                $description = ( !empty($tag->description) ? esc_html($tag->description) : '' );
+                $title = preg_replace("/(\\{description\\})/", $description, $title);
+                $name = ( !empty($tag->name) ? esc_html($tag->name) : '' );
+                $title = preg_replace("/(\\{name\\})/", $name, $title);
+                $title = preg_replace("/(\\{count\\})/", $post_count, $title);
+                if (trim($title) === '') {
                     $tag_count_brackets = $this->attributes->show_tag_count ? '(' . $post_count . ')' : '';
                     return $description . $tag_count_brackets;
-                  }
+                }
           
                   return $title;
             } else {
                 // use just description and number
-                $description = ( !empty($tag->description) ? esc_html( $tag->description ) . ' ' : '' );
+                $description = ( !empty($tag->description) ? esc_html($tag->description) . ' ' : '' );
                 $tag_count_brackets = ( $this->attributes->show_tag_count ? '(' . $post_count . ')' : '' );
                 return $description . $tag_count_brackets;
             }
-        
         }
         
         /**
@@ -1103,29 +1070,25 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param object $tag
          * @return string
          */
-        function get_tag_link( $tag, $i = null )
+        public function get_tag_link($tag, $i = null)
         {
-            $tag_link = get_term_link( $tag );
-            if ( !empty($this->attributes->link_append) ) {
-                
-                if ( mb_strpos( $tag_link, '?' ) === false ) {
-                    $tag_link = esc_url( $tag_link . '?' . $this->attributes->link_append );
+            $tag_link = get_term_link($tag);
+            if (!empty($this->attributes->link_append)) {
+                if (mb_strpos($tag_link, '?') === false) {
+                    $tag_link = esc_url($tag_link . '?' . $this->attributes->link_append);
                 } else {
-                    $tag_link = esc_url( $tag_link . '&' . $this->attributes->link_append );
+                    $tag_link = esc_url($tag_link . '&' . $this->attributes->link_append);
                 }
-            
             }
             /**
              * Append a parameter to separate terms by group on the archive page
              */
-            if ( !is_null( $i ) && class_exists( 'TagGroups_Premium_Term' ) && property_exists( $this->attributes, 'add_premium_filter' ) && $this->attributes->add_premium_filter && isset( $this->tag_group_data[$i]['term_group'] ) ) {
-                
-                if ( mb_strpos( $tag_link, '?' ) === false ) {
-                    $tag_link = esc_url( $tag_link . '?term_group=' . $this->tag_group_data[$i]['term_group'] . '&term_id=' . $tag->term_id );
+            if (!is_null($i) && class_exists('TagGroups_Premium_Term') && property_exists($this->attributes, 'add_premium_filter') && $this->attributes->add_premium_filter && isset($this->tag_group_data[$i]['term_group'])) {
+                if (mb_strpos($tag_link, '?') === false) {
+                    $tag_link = esc_url($tag_link . '?term_group=' . $this->tag_group_data[$i]['term_group'] . '&term_id=' . $tag->term_id);
                 } else {
-                    $tag_link = esc_url( $tag_link . '&term_group=' . $this->tag_group_data[$i]['term_group'] . '&term_id=' . $tag->term_id );
+                    $tag_link = esc_url($tag_link . '&term_group=' . $this->tag_group_data[$i]['term_group'] . '&term_id=' . $tag->term_id);
                 }
-            
             }
             return $tag_link;
         }
@@ -1139,16 +1102,16 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
          * @param integer $post_count
          * @return string
          */
-        function maybe_filter_title( $title, $description, $post_count )
+        public function maybe_filter_title($title, $description, $post_count)
         {
-            $tag_group_html_description = TagGroups_Options::get_option( 'tag_group_html_description', 0 );
-            switch ( $tag_group_html_description ) {
+            $tag_group_html_description = TagGroups_Options::get_option('tag_group_html_description', 0);
+            switch ($tag_group_html_description) {
                 case 0:
                 default:
                     /**
                      * Convert double quotes to smart/curly quotes and replace any left over so that the HTML won't break
                      */
-                    $title = str_replace( '"', "”", wptexturize( wp_strip_all_tags( html_entity_decode( $title ) ) ) );
+                    $title = str_replace('"', "”", wptexturize(wp_strip_all_tags(html_entity_decode($title))));
                     break;
                 case 1:
                     /**
@@ -1156,11 +1119,11 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                      */
                     break;
                 case 2:
-                    if ( !current_user_can( 'unfiltered_html' ) ) {
+                    if (!current_user_can('unfiltered_html')) {
                         /**
                          * Convert double quotes to smart/curly quotes and replace any left over so that the HTML won't break
                          */
-                        $title = str_replace( '"', "”", wptexturize( wp_strip_all_tags( html_entity_decode( $title ) ) ) );
+                        $title = str_replace('"', "”", wptexturize(wp_strip_all_tags(html_entity_decode($title))));
                     }
                     break;
             }
@@ -1180,7 +1143,6 @@ if ( !class_exists( 'TagGroups_Shortcode_Common' ) ) {
                 $post_count
             );
         }
-    
     }
     // class
 }

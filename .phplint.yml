@@ -1,0 +1,21 @@
+path: .
+jobs: 5
+
+extensions:
+  - php
+
+exclude:
+  - .cursor
+  - .github
+  - .idea
+  - .vscode
+  - .wordpress-org
+  - assets
+  - bin
+  - dev-workspace-cache
+  - dist
+  - languages
+  - lib/vendor
+  - node_modules
+  - tests
+  - vendor

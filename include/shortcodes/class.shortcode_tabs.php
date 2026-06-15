@@ -7,7 +7,8 @@
 * @license     GPL-3.0+
 */
 
-if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+if (!class_exists('TagGroups_Shortcode_Tabs')) {
     class TagGroups_Shortcode_Tabs extends TagGroups_Shortcode_Common
     {
         /**
@@ -15,7 +16,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
          *
          * @var array
          */
-        public static  $serverside_render_attributes = array(
+        public static $serverside_render_attributes = array(
             'source'                => array(
             'type'    => 'string',
             'default' => '',
@@ -72,6 +73,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
             'type'    => 'string',
             'default' => '',
         ),
+            // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
             'exclude'               => array(
             'type'    => 'string',
             'default' => '',
@@ -177,8 +179,8 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
             'default' => '',
         ),
         ) ;
-        public  $html_tags ;
-        public  $html_tabs ;
+        public $html_tags ;
+        public $html_tabs ;
         /**
          *
          * Render the tabbed tag cloud, usually by a shortcode, or returning a multidimensional array
@@ -187,11 +189,11 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
          * @param bool $return_array
          * @return string
          */
-        public function tag_groups_cloud( $atts = array(), $return_array = false )
+        public function tag_groups_cloud($atts = array(), $return_array = false)
         {
             $this->init();
             $this->shortcode_id = 'tag_groups_cloud';
-            $this->set_attributes( shortcode_atts( array(
+            $this->set_attributes(shortcode_atts(array(
                 'active'                => -1,
                 'adjust_separator_size' => true,
                 'add_premium_filter'    => 0,
@@ -206,6 +208,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
                 'div_class'             => 'tag-groups-cloud',
                 'div_id'                => '',
                 'do_not_cache'          => false,
+                // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
                 'exclude'               => '',
                 'exclude_terms'         => '',
                 'group_in_class'        => 0,
@@ -232,40 +235,41 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
                 'smallest'              => 12,
                 'source'                => 'shortcode',
                 'tags_post_id'          => -1,
-                'taxonomy'              => implode( ',', TagGroups_Taxonomy::get_enabled_taxonomies() ),
+                'taxonomy'              => implode(',', TagGroups_Taxonomy::get_enabled_taxonomies()),
                 'threshold'             => 0,
                 'ul_class'              => '',
-            ), $atts ) );
+            ), $atts));
             /**
              * Don't set it as default in extract( shortcode_atts() ) because the block sends an empty string
              */
-            if ( empty($this->attributes->html_id) ) {
+            if (empty($this->attributes->html_id)) {
                 $this->attributes->html_id = 'tag-groups-cloud-tabs-' . uniqid();
             }
             /**
              * Keep always jQuery UI class to produce correct output
              */
-            if ( !in_array( 'tag-groups-cloud', array_map( 'trim', explode( ' ', $this->attributes->div_class ) ) ) ) {
+            if (!in_array('tag-groups-cloud', array_map('trim', explode(' ', $this->attributes->div_class)))) {
                 $this->attributes->div_class .= ' tag-groups-cloud';
             }
-            if ( $this->attributes->delay ) {
+            if ($this->attributes->delay) {
                 $this->attributes->div_class .= ' tag-groups-cloud-hidden';
             }
-            $div_id_output = ( $this->attributes->html_id ? ' id="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->html_id ) . '"' : '' );
-            $div_class_output = ( $this->attributes->div_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->div_class ) . '"' : '' );
-            if ( is_array( $atts ) ) {
-                asort( $atts );
+            $div_id_output = ( $this->attributes->html_id ? ' id="' . TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->html_id) . '"' : '' );
+            $div_class_output = ( $this->attributes->div_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->div_class) . '"' : '' );
+            if (is_array($atts)) {
+                asort($atts);
             }
             /**
              * Call this before creating the cache key
              */
             $this->get_post_id();
-            $this->cache_key = md5( 'tabs' . serialize( $atts ) . var_export( $return_array, true ) . serialize( $this->attributes->tags_post_id ) . serialize( $this->attributes->groups_post_id ) );
+            // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize, WordPress.PHP.DevelopmentFunctions.error_log_var_export
+            $this->cache_key = md5('tabs' . serialize($atts) . var_export($return_array, true) . serialize($this->attributes->tags_post_id) . serialize($this->attributes->groups_post_id));
             // check for a cached version (premium plugin)
-            $html = apply_filters( 'tag_groups_hook_cache_get', false, $this->cache_key );
+            $html = apply_filters('tag_groups_hook_cache_get', false, $this->cache_key);
 
-            if ( $html ) {
-                if ( !$return_array ) {
+            if ($html) {
+                if (!$return_array) {
                     $html = $this->finalize_html(
                         $html,
                         $div_id_output,
@@ -281,12 +285,12 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
             $this->get_tags();
             $this->make_include_array();
             $this->maybe_add_post_tags_or_groups();
-            $ul_class_output = ( $this->attributes->ul_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes( $this->attributes->ul_class ) . '"' : '' );
+            $ul_class_output = ( $this->attributes->ul_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->ul_class) . '"' : '' );
             // apply sorting that cannot be done on database level
-            if ( 'natural' == $this->attributes->orderby || 'random' == $this->attributes->orderby || $this->attributes->threshold ) {
+            if ('natural' == $this->attributes->orderby || 'random' == $this->attributes->orderby || $this->attributes->threshold) {
                 $this->sort();
             }
-            if ( $return_array ) {
+            if ($return_array) {
                 return $this->construct_array();
             }
             $html = '';
@@ -295,21 +299,21 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
             /*
              *  render the tabs
              */
-            if ( $this->attributes->show_tabs ) {
+            if ($this->attributes->show_tabs) {
                 $this->make_tabs_HTML();
             }
             /*
              *  render the tab content
              */
             $this->make_tags_HTML();
-            if ( !empty($this->html_tabs) ) {
-                $html .= '<ul' . $ul_class_output . '>' . implode( "\n", $this->html_tabs ) . '</ul>';
+            if (!empty($this->html_tabs)) {
+                $html .= '<ul' . $ul_class_output . '>' . implode("\n", $this->html_tabs) . '</ul>';
             }
-            $html .= implode( "\n", $this->html_tags );
-            if ( !empty($this->post_counts) && !$this->attributes->do_not_cache ) {
+            $html .= implode("\n", $this->html_tags);
+            if (!empty($this->post_counts) && !$this->attributes->do_not_cache) {
                 // we don't cache if we used a preliminary post count
                 // create a cached version (premium plugin)
-                do_action( 'tag_groups_hook_cache_set', $this->cache_key, $html );
+                do_action('tag_groups_hook_cache_set', $this->cache_key, $html);
             }
             $html = $this->finalize_html(
                 $html,
@@ -334,15 +338,15 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
             $output = array();
             $this->post_counts = array();
             $this->determine_min_max();
-            for ( $i = $this->start_group ;  $i <= $tag_group_groups->get_max_position() ;  $i++ ) {
-                if ( !isset( $this->tag_group_data[$i] ) ) {
+            for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
+                if (!isset($this->tag_group_data[$i])) {
                     continue;
                 }
-                if ( !($this->attributes->show_all_groups || in_array( $this->tag_group_data[$i]['term_group'], $this->include_array )) ) {
+                if (!($this->attributes->show_all_groups || in_array($this->tag_group_data[$i]['term_group'], $this->include_array))) {
                     continue;
                 }
 
-                if ( $i == 0 ) {
+                if ($i == 0) {
                     $output[$i]['name'] = $this->attributes->not_assigned_name;
                 } else {
                     $output[$i]['name'] = $this->tag_group_data[$i]['label'];
@@ -351,29 +355,29 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
                 $output[$i]['term_group'] = $this->tag_group_data[$i]['term_group'];
                 $count_amount = 0;
                 $output[$i]['tags'] = array();
-                foreach ( $this->tags as $tag ) {
-                    if ( !empty($this->attributes->amount) && $count_amount >= $this->attributes->amount ) {
+                foreach ($this->tags as $tag) {
+                    if (!empty($this->attributes->amount) && $count_amount >= $this->attributes->amount) {
                         break;
                     }
-                    $term_o = new TagGroups_Term( $tag );
-                    if ( !$term_o->has_group( $this->tag_group_data[$i]['term_group'] ) ) {
+                    $term_o = new TagGroups_Term($tag);
+                    if (!$term_o->has_group($this->tag_group_data[$i]['term_group'])) {
                         continue;
                     }
 
-                    if ( empty($this->include_tags_post_id_groups) || in_array( $tag->term_id, $this->include_tags_post_id_groups[$this->tag_group_data[$i]['term_group']] ) ) {
+                    if (empty($this->include_tags_post_id_groups) || in_array($tag->term_id, $this->include_tags_post_id_groups[$this->tag_group_data[$i]['term_group']])) {
                         // check if tag has posts for this particular group
 
-                        if ( !empty($this->post_counts) && isset( $this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']] ) ) {
+                        if (!empty($this->post_counts) && isset($this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']])) {
                             $post_count = $this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']];
                         } else {
                             $post_count = $tag->count;
                         }
 
 
-                        if ( !$this->attributes->hide_empty || $post_count > 0 ) {
+                        if (!$this->attributes->hide_empty || $post_count > 0) {
                             $output[$i]['tags'][$count_amount] = array();
                             $output[$i]['tags'][$count_amount]['term_id'] = $tag->term_id;
-                            $output[$i]['tags'][$count_amount]['link'] = get_term_link( $tag );
+                            $output[$i]['tags'][$count_amount]['link'] = get_term_link($tag);
                             $output[$i]['tags'][$count_amount]['description'] = $tag->description;
                             $output[$i]['tags'][$count_amount]['count'] = $post_count;
                             $output[$i]['tags'][$count_amount]['slug'] = $tag->slug;
@@ -385,21 +389,19 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
                                 $this->attributes->smallest,
                                 $this->attributes->largest
                             );
-                            if ( !empty($this->attributes->assigned_class) ) {
+                            if (!empty($this->attributes->assigned_class)) {
                                 $output[$i]['tags'][$count_amount]['assigned'] = $this->assigned_terms[$tag->term_id];
                             }
                             $count_amount++;
                         }
-
                     }
-
                 }
                 $output[$i]['amount'] = $count_amount;
             }
-            if ( !empty($this->post_counts) && !$this->attributes->do_not_cache ) {
+            if (!empty($this->post_counts) && !$this->attributes->do_not_cache) {
                 // we don't cache if we used a preliminary post count
                 // create a cached version (premium plugin)
-                do_action( 'tag_groups_hook_cache_set', $this->cache_key, $output );
+                do_action('tag_groups_hook_cache_set', $this->cache_key, $output);
             }
             return $output;
         }
@@ -412,26 +414,24 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
         private function make_tabs_HTML()
         {
             global  $tag_group_groups ;
-            for ( $i = $this->start_group ;  $i <= $tag_group_groups->get_max_position() ;  $i++ ) {
-                if ( !isset( $this->tag_group_data[$i] ) ) {
+            for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
+                if (!isset($this->tag_group_data[$i])) {
                     continue;
                 }
 
-                if ( $this->attributes->show_all_groups || in_array( $this->tag_group_data[$i]['term_group'], $this->include_array ) ) {
-
-                    if ( $i == 0 ) {
+                if ($this->attributes->show_all_groups || in_array($this->tag_group_data[$i]['term_group'], $this->include_array)) {
+                    if ($i == 0) {
                         $group_name = $this->attributes->not_assigned_name;
                     } else {
                         $group_name = $this->tag_group_data[$i]['label'];
                     }
 
-                    if ( !empty($this->attributes->group_in_class) ) {
-                        $header_class_group = sanitize_html_class( ' tg_header_group_id_' . $this->tag_group_data[$i]['term_group'] ) . ' ' . sanitize_html_class( 'tg_header_group_label_' . strtolower( $this->tag_group_data[$i]['label'] ) );
+                    if (!empty($this->attributes->group_in_class)) {
+                        $header_class_group = sanitize_html_class(' tg_header_group_id_' . $this->tag_group_data[$i]['term_group']) . ' ' . sanitize_html_class('tg_header_group_label_' . strtolower($this->tag_group_data[$i]['label']));
                     }
                     $header_class_output = ( !empty($header_class_group) ? ' class="' . $header_class_group . '"' : '' );
-                    $this->html_tabs[$i] = '<li data-group="' . $this->tag_group_data[$i]['term_group'] . '#"><a href="#tabs-1' . $i . '" ' . $header_class_output . '>' . htmlentities( $group_name, ENT_QUOTES, "UTF-8" ) . '</a></li>';
+                    $this->html_tabs[$i] = '<li data-group="' . $this->tag_group_data[$i]['term_group'] . '#"><a href="#tabs-1' . $i . '" ' . $header_class_output . '>' . htmlentities($group_name, ENT_QUOTES, "UTF-8") . '</a></li>';
                 }
-
             }
         }
 
@@ -444,70 +444,68 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
         {
             global $tag_group_premium_terms, $tag_group_groups ;
             $this->determine_min_max();
-            for ( $i = $this->start_group ;  $i <= $tag_group_groups->get_max_position() ;  $i++ ) {
-                if ( !isset( $this->tag_group_data[$i] ) ) {
+            for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
+                if (!isset($this->tag_group_data[$i])) {
                     continue;
                 }
-                if ( !$this->attributes->show_all_groups && !empty($this->include_array) && !in_array( $this->tag_group_data[$i]['term_group'], $this->include_array ) ) {
+                if (!$this->attributes->show_all_groups && !empty($this->include_array) && !in_array($this->tag_group_data[$i]['term_group'], $this->include_array)) {
                     continue;
                 }
                 $count_amount = 0;
                 $this->html_tags[$i] = '';
-                foreach ( $this->tags as $tag ) {
+                foreach ($this->tags as $tag) {
                     $other_tag_classes = '';
-                    if ( !empty($this->attributes->amount) && $count_amount >= $this->attributes->amount ) {
+                    if (!empty($this->attributes->amount) && $count_amount >= $this->attributes->amount) {
                         break;
                     }
-                    $term_o = new TagGroups_Term( $tag );
-                    if ( !$term_o->has_group( $this->tag_group_data[$i]['term_group'] ) ) {
+                    $term_o = new TagGroups_Term($tag);
+                    if (!$term_o->has_group($this->tag_group_data[$i]['term_group'])) {
                         continue;
                     }
-                    if ( !empty($this->include_tags_post_id_groups) && !in_array( $tag->term_id, $this->include_tags_post_id_groups[$this->tag_group_data[$i]['term_group']] ) ) {
+                    if (!empty($this->include_tags_post_id_groups) && !in_array($tag->term_id, $this->include_tags_post_id_groups[$this->tag_group_data[$i]['term_group']])) {
                         continue;
                     }
                     // check if tag has posts for this particular group
 
-                    if ( !empty($this->post_counts) && !empty($this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']]) ) {
+                    if (!empty($this->post_counts) && !empty($this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']])) {
                         $post_count = $this->post_counts[$tag->term_id][$this->tag_group_data[$i]['term_group']];
                     } else {
                         $post_count = $tag->count;
                     }
 
-                    if ( $this->attributes->hide_empty && 0 == $post_count ) {
+                    if ($this->attributes->hide_empty && 0 == $post_count) {
                         continue;
                     }
-                    $tag_link = $this->get_tag_link( $tag, $i );
-                    $font_size = $this->font_size( $post_count, $this->min_max[$this->tag_group_data[$i]['term_group']]['min'], $this->min_max[$this->tag_group_data[$i]['term_group']]['max'] );
+                    $tag_link = $this->get_tag_link($tag, $i);
+                    $font_size = $this->font_size($post_count, $this->min_max[$this->tag_group_data[$i]['term_group']]['min'], $this->min_max[$this->tag_group_data[$i]['term_group']]['max']);
                     $font_size_separator = ( $this->attributes->adjust_separator_size ? $font_size : $this->attributes->separator_size );
-                    if ( $count_amount > 0 && !empty($this->attributes->separator) ) {
+                    if ($count_amount > 0 && !empty($this->attributes->separator)) {
                         $this->html_tags[$i] .= '<span style="font-size:' . $font_size_separator . 'px">' . $this->attributes->separator . '</span> ';
                     }
-                    if ( !empty($this->attributes->assigned_class) ) {
-
-                        if ( !empty($this->assigned_terms[$tag->term_id]) ) {
+                    if (!empty($this->attributes->assigned_class)) {
+                        if (!empty($this->assigned_terms[$tag->term_id])) {
                             $other_tag_classes = ' ' . $this->attributes->assigned_class . '_1';
                         } else {
                             $other_tag_classes = ' ' . $this->attributes->assigned_class . '_0';
                         }
-
                     }
-                    $title = $this->get_title( $tag, $post_count );
-                    $title = $this->maybe_filter_title( $title, $tag->description, $post_count );
+                    $title = $this->get_title($tag, $post_count);
+                    $title = $this->maybe_filter_title($title, $tag->description, $post_count);
                     $title_html = ( $title == '' ? '' : ' title="' . $title . '"' );
                     // replace placeholders in prepend and append
-                    $prepend_output = $this->get_prepend_output( $post_count );
-                    $append_output = $this->get_append_output( $post_count );
+                    $prepend_output = $this->get_prepend_output($post_count);
+                    $append_output = $this->get_append_output($post_count);
                     // adding link target
                     $link_target_html = ( !empty($this->attributes->link_target) ? 'target="' . $this->attributes->link_target . '"' : '' );
                     // adding class for group
-                    if ( !empty($this->attributes->group_in_class) ) {
-                        $other_tag_classes .= ' ' . sanitize_html_class( ' tg_tag_group_id_' . $this->tag_group_data[$i]['term_group'] ) . ' ' . sanitize_html_class( 'tg_tag_group_label_' . strtolower( $this->tag_group_data[$i]['label'] ) );
+                    if (!empty($this->attributes->group_in_class)) {
+                        $other_tag_classes .= ' ' . sanitize_html_class(' tg_tag_group_id_' . $this->tag_group_data[$i]['term_group']) . ' ' . sanitize_html_class('tg_tag_group_label_' . strtolower($this->tag_group_data[$i]['label']));
                     }
                     // assembling a tag
                     $this->html_tags[$i] .= '<span class="tag-groups-tag' . $other_tag_classes . '" style="font-size:' . $font_size . 'px" data-group="' . $this->tag_group_data[$i]['term_group'] . '#"><a href="' . $tag_link . '" ' . $link_target_html . '' . $title_html . '  class="' . $tag->slug . '">';
 
-                    if ( '' != $prepend_output ) {
-                        $prepend_html = '<span class="tag-groups-prepend" style="font-size:' . $font_size . 'px">' . htmlentities( $prepend_output, ENT_QUOTES, "UTF-8" ) . '</span>';
+                    if ('' != $prepend_output) {
+                        $prepend_html = '<span class="tag-groups-prepend" style="font-size:' . $font_size . 'px">' . htmlentities($prepend_output, ENT_QUOTES, "UTF-8") . '</span>';
                     } else {
                         $prepend_html = '';
                     }
@@ -559,8 +557,8 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
                         $this->shortcode_id
                     );
 
-                    if ( '' != $append_output ) {
-                        $append_html = '<span class="tag-groups-append" style="font-size:' . $font_size . 'px">' . htmlentities( $append_output, ENT_QUOTES, "UTF-8" ) . '</span>';
+                    if ('' != $append_output) {
+                        $append_html = '<span class="tag-groups-append" style="font-size:' . $font_size . 'px">' . htmlentities($append_output, ENT_QUOTES, "UTF-8") . '</span>';
                     } else {
                         $append_html = '';
                     }
@@ -587,13 +585,12 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
                     $count_amount++;
                 }
 
-                if ( $this->attributes->hide_empty_tabs && !$count_amount ) {
-                    unset( $this->html_tabs[$i] );
-                    unset( $this->html_tags[$i] );
-                } elseif ( isset( $this->html_tags[$i] ) ) {
+                if ($this->attributes->hide_empty_tabs && !$count_amount) {
+                    unset($this->html_tabs[$i]);
+                    unset($this->html_tags[$i]);
+                } elseif (isset($this->html_tags[$i])) {
                     $this->html_tags[$i] = '<div id="tabs-1' . $i . '">' . $this->html_tags[$i] . '</div>';
                 }
-
             }
         }
 
@@ -611,8 +608,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
             $div_id_output,
             $div_class_output,
             $atts
-        )
-        {
+        ) {
             $html = '<div' . $div_id_output . $div_class_output . '>' . $html . '</div>';
             // entire wrapper
             $html .= $this->custom_js_tabs();
@@ -632,7 +628,6 @@ if ( !class_exists( 'TagGroups_Shortcode_Tabs' ) ) {
             );
             return $html;
         }
-
     }
     // class
 }

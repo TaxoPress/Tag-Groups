@@ -6,7 +6,9 @@
 * @copyright   2021 Christoph Amthor (@ Chatty Mango, chattymango.com)
 * @license     GPL-3.0+
 */
-if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
+
+if (!class_exists('TagGroups_Group_Admin')) {
+    // phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps -- Legacy class structure
     class TagGroups_Group_Admin
     {
         /**
@@ -15,27 +17,29 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
          * @param void
          * @return void
          */
+        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps, Squiz.Scope.MethodScope.Missing -- Legacy method naming
         static function render_group_administration()
         {
             global  $tag_group_groups ;
-            $tag_group_show_filter_tags = TagGroups_Options::get_option( 'tag_group_show_filter_tags', 0 );
+            $tag_group_show_filter_tags = TagGroups_Options::get_option('tag_group_show_filter_tags', 0);
             //tags
-            $tag_group_show_filter = TagGroups_Options::get_option( 'tag_group_show_filter', 0 );
+            $tag_group_show_filter = TagGroups_Options::get_option('tag_group_show_filter', 0);
             // posts
-            $this_post_type = preg_replace( '/tag-groups_(.+)/', '$1', sanitize_title( $_GET['page'] ) );
-            $post_type_taxonomies = get_object_taxonomies( $this_post_type );
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- Read-only admin page display
+            $this_post_type = preg_replace('/tag-groups_(.+)/', '$1', sanitize_title($_GET['page']));
+            $post_type_taxonomies = get_object_taxonomies($this_post_type);
             $first_enabled_taxonomy = '';
-            $taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies( $post_type_taxonomies );
+            $taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies($post_type_taxonomies);
             /**
              * Check if the tag filter is activated
              */
-            if ( $tag_group_show_filter_tags ) {
+            if ($tag_group_show_filter_tags) {
                 // get first of taxonomies that are associated with that $post_type
                 /**
                  * Show the link to the taxonomy filter only if there is only one taxonomy for this post type (otherwise ambiguous where to link)
                  */
-                if ( !empty($taxonomies) && count( $taxonomies ) == 1 ) {
-                    $first_enabled_taxonomy = TagGroups_Utilities::get_first_element( $taxonomies );
+                if (!empty($taxonomies) && count($taxonomies) == 1) {
+                    $first_enabled_taxonomy = TagGroups_Utilities::get_first_element($taxonomies);
                 }
             }
             /**
@@ -43,42 +47,42 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
              */
             $current_language = TagGroups_WPML::get_current_language();
             
-            if ( $current_language ) {
-                
-                if ( 'all' == $current_language ) {
-                    $wpml_piece = '&lang=' . (string) apply_filters( 'wpml_default_language', NULL );
+            if ($current_language) {
+                if ('all' == $current_language) {
+                    $wpml_piece = '&lang=' . (string) apply_filters('wpml_default_language', null);
                 } else {
                     $wpml_piece = '&lang=' . $current_language;
                 }
-            
             } else {
                 $wpml_piece = '';
             }
             
             
-            if ( $this_post_type == 'post' ) {
+            if ($this_post_type == 'post') {
                 $post_type_piece = '';
             } else {
                 $post_type_piece = '&post_type=' . $this_post_type;
             }
             
             $items_per_page = self::get_items_per_page();
-            $protocol = ( isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://' );
-            $post_url = ( empty($tag_group_show_filter) ? '' : admin_url( 'edit.php?post_type=' . $this_post_type . $wpml_piece, $protocol ) );
-            $tags_url = ( empty($first_enabled_taxonomy) ? '' : admin_url( 'edit-tags.php?taxonomy=' . $first_enabled_taxonomy . $wpml_piece . $post_type_piece, $protocol ) );
-            $settings_url = admin_url( 'admin.php?page=tag-groups-settings' );
-            $admin_url = admin_url( 'admin-ajax.php', $protocol );
-            if ( isset( $_GET['lang'] ) ) {
-                $admin_url = add_query_arg( 'lang', sanitize_key( $_GET['lang'] ), $admin_url );
+            $protocol = ( isset($_SERVER['HTTPS']) ? 'https://' : 'http://' );
+            $post_url = ( empty($tag_group_show_filter) ? '' : admin_url('edit.php?post_type=' . $this_post_type . $wpml_piece, $protocol) );
+            $tags_url = ( empty($first_enabled_taxonomy) ? '' : admin_url('edit-tags.php?taxonomy=' . $first_enabled_taxonomy . $wpml_piece . $post_type_piece, $protocol) );
+            $settings_url = admin_url('admin.php?page=tag-groups-settings');
+            $admin_url = admin_url('admin-ajax.php', $protocol);
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin page display
+            if (isset($_GET['lang'])) {
+                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin page display
+                $admin_url = add_query_arg('lang', sanitize_key($_GET['lang']), $admin_url);
             }
             
-            if ( 'all' == $current_language ) {
-                $view = new TagGroups_View( 'partials/language_notice' );
+            if ('all' == $current_language) {
+                $view = new TagGroups_View('partials/language_notice');
                 $view->render();
             }
             
-            $view = new TagGroups_View( 'admin/tag_groups_admin' );
-            $view->set( array(
+            $view = new TagGroups_View('admin/tag_groups_admin');
+            $view->set(array(
                 'tag_group_show_filter' => $tag_group_show_filter || $tag_group_show_filter_tags,
                 'show_parents'          => TagGroups_Utilities::is_premium_plan(),
                 'post_url'              => $post_url,
@@ -87,13 +91,14 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
                 'settings_url'          => $settings_url,
                 'admin_url'             => $admin_url,
                 'taxonomies'            => $taxonomies,
-            ) );
+            ));
             $view->render();
         }
         
         /**
          * AJAX handler to manage Tag Groups
          */
+        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps, Squiz.Scope.MethodScope.Missing -- Legacy method naming
         static function ajax_manage_groups()
         {
             global  $tag_group_groups ;
@@ -107,23 +112,23 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
              * @param bool
              * @return bool
              */
-            $allow_duplicate_group_names = apply_filters( 'tag_groups_allow_duplicate_group_names', $allow_duplicate_group_name );
+            $allow_duplicate_group_names = apply_filters('tag_groups_allow_duplicate_group_names', $allow_duplicate_group_name);
             
-            if ( isset( $_REQUEST['tag_groups_task'] ) ) {
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce verified below
+            if (isset($_REQUEST['tag_groups_task'])) {
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended -- Sanitized in switch statement
                 $task = $_REQUEST['tag_groups_task'];
             } else {
                 $task = 'refresh';
             }
             
             
-            if ( isset( $_REQUEST['tag_groups_taxonomy'] ) ) {
-                
-                if ( is_array( $_REQUEST['tag_groups_taxonomy'] ) ) {
-                    $taxonomy = array_map( 'sanitize_title', $_REQUEST['tag_groups_taxonomy'] );
+            if (isset($_REQUEST['tag_groups_taxonomy'])) {
+                if (is_array($_REQUEST['tag_groups_taxonomy'])) {
+                    $taxonomy = array_map('sanitize_title', $_REQUEST['tag_groups_taxonomy']);
                 } else {
-                    $taxonomy = sanitize_title( $_REQUEST['tag_groups_taxonomy'] );
+                    $taxonomy = sanitize_title($_REQUEST['tag_groups_taxonomy']);
                 }
-            
             } else {
                 $taxonomy = array( 'post_tag' );
             }
@@ -131,134 +136,131 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
             $message = '';
             $tag_group_role_edit_groups = 'edit_pages';
             
-            if ( $task != 'refresh' && $task != 'test' && !(current_user_can( $tag_group_role_edit_groups ) && wp_verify_nonce( $_REQUEST['nonce'], 'tg_groups_management' )) ) {
-                self::ajax_send_error( 'Security check', $task );
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- Nonce verification
+            if ($task != 'refresh' && $task != 'test' && !(current_user_can($tag_group_role_edit_groups) && wp_verify_nonce($_REQUEST['nonce'], 'tg_groups_management'))) {
+                self::ajax_send_error('Security check', $task);
                 exit;
             }
             
             
-            if ( isset( $_REQUEST['tag_groups_position'] ) ) {
+            if (isset($_REQUEST['tag_groups_position'])) {
                 $position = (int) $_REQUEST['tag_groups_position'];
             } else {
                 $position = 0;
             }
             
             
-            if ( isset( $_REQUEST['tag_groups_new_position'] ) ) {
+            if (isset($_REQUEST['tag_groups_new_position'])) {
                 $new_position = (int) $_REQUEST['tag_groups_new_position'];
             } else {
                 $new_position = 0;
             }
             
             
-            if ( isset( $_REQUEST['tag_groups_filter_label'] ) ) {
-                $tag_groups_filter_label = sanitize_text_field( $_REQUEST['tag_groups_filter_label'] );
+            if (isset($_REQUEST['tag_groups_filter_label'])) {
+                $tag_groups_filter_label = sanitize_text_field($_REQUEST['tag_groups_filter_label']);
             } else {
                 $tag_groups_filter_label = '';
             }
             
-            if ( isset( $_REQUEST['tag_groups_start_position'] ) ) {
+            if (isset($_REQUEST['tag_groups_start_position'])) {
                 $start_position = (int) $_REQUEST['tag_groups_start_position'];
             }
-            if ( empty($start_position) || $start_position < 1 ) {
+            if (empty($start_position) || $start_position < 1) {
                 $start_position = 1;
             }
             $tg_group = new TagGroups_Group();
-            switch ( $task ) {
+            switch ($task) {
                 case "sortup":
-                    $tag_group_groups->sort( 'up' )->save();
-                    $message = __( 'The groups have been sorted alphabetically.', 'tag-groups' );
+                    $tag_group_groups->sort('up')->save();
+                    $message = __('The groups have been sorted alphabetically.', 'tag-groups');
                     break;
                 case "sortdown":
-                    $tag_group_groups->sort( 'down' )->save();
-                    $message = __( 'The groups have been sorted alphabetically.', 'tag-groups' );
+                    $tag_group_groups->sort('down')->save();
+                    $message = __('The groups have been sorted alphabetically.', 'tag-groups');
                     break;
                 case "new":
-                    if ( isset( $_REQUEST['tag_groups_label'] ) ) {
-                        $label = stripslashes( sanitize_text_field( $_REQUEST['tag_groups_label'] ) );
+                    if (isset($_REQUEST['tag_groups_label'])) {
+                        $label = stripslashes(sanitize_text_field($_REQUEST['tag_groups_label']));
                     }
                     
-                    if ( empty($label) ) {
-                        $message = __( 'The label cannot be empty.', 'tag-groups' );
-                        self::ajax_send_error( $message, $task );
-                    } elseif ( !$allow_duplicate_group_names && $tg_group->find_by_label( $label ) ) {
-                        $message = sprintf( __( 'A tag group with the label \'%s\' already exists, or the label has not changed. Please choose another one or go back.', 'tag-groups' ), $label );
-                        self::ajax_send_error( $message, $task );
+                    if (empty($label)) {
+                        $message = __('The label cannot be empty.', 'tag-groups');
+                        self::ajax_send_error($message, $task);
+                    } elseif (!$allow_duplicate_group_names && $tg_group->find_by_label($label)) {
+                        $message = sprintf(__('A tag group with the label \'%s\' already exists, or the label has not changed. Please choose another one or go back.', 'tag-groups'), $label);
+                        self::ajax_send_error($message, $task);
                     } else {
-                        $tg_group->create( $label, $position + 1 );
-                        $message = sprintf( __( 'A new tag group with the label \'%s\' has been created!', 'tag-groups' ), $label );
+                        $tg_group->create($label, $position + 1);
+                        $message = sprintf(__('A new tag group with the label \'%s\' has been created!', 'tag-groups'), $label);
                     }
                     
                     break;
                 case "new-parent":
                     break;
                 case "update":
-                    if ( isset( $_REQUEST['tag_groups_label'] ) ) {
-                        $label = stripslashes( sanitize_text_field( $_REQUEST['tag_groups_label'] ) );
+                    if (isset($_REQUEST['tag_groups_label'])) {
+                        $label = stripslashes(sanitize_text_field($_REQUEST['tag_groups_label']));
                     }
                     
-                    if ( empty($label) ) {
-                        $message = __( 'The label cannot be empty.', 'tag-groups' );
-                        self::ajax_send_error( $message, $task );
-                    } elseif ( !$allow_duplicate_group_names && $tg_group->find_by_label( $label ) ) {
-                        
-                        if ( !empty($position) && $position == $tg_group->get_position() ) {
+                    if (empty($label)) {
+                        $message = __('The label cannot be empty.', 'tag-groups');
+                        self::ajax_send_error($message, $task);
+                    } elseif (!$allow_duplicate_group_names && $tg_group->find_by_label($label)) {
+                        if (!empty($position) && $position == $tg_group->get_position()) {
                             // Label hast not changed, just ignore
                         } else {
-                            $message = sprintf( __( 'A tag group with the label \'%s\' already exists.', 'tag-groups' ), $label );
-                            self::ajax_send_error( $message, $task );
+                            $message = sprintf(__('A tag group with the label \'%s\' already exists.', 'tag-groups'), $label);
+                            self::ajax_send_error($message, $task);
                         }
-                    
                     } else {
-                        
-                        if ( !empty($position) ) {
-                            if ( $tg_group->find_by_position( $position ) ) {
-                                $tg_group->set_label( $label )->save();
+                        if (!empty($position)) {
+                            if ($tg_group->find_by_position($position)) {
+                                $tg_group->set_label($label)->save();
                             }
                         } else {
-                            self::ajax_send_error( 'error: invalid position: ' . $position, $task );
+                            self::ajax_send_error('error: invalid position: ' . $position, $task);
                         }
                         
-                        $message = sprintf( __( 'The tag group with the label \'%s\' has been saved!', 'tag-groups' ), $label );
+                        $message = sprintf(__('The tag group with the label \'%s\' has been saved!', 'tag-groups'), $label);
                     }
                     
                     break;
                 case "delete":
-                    
-                    if ( !empty($position) && $tg_group->find_by_position( $position ) ) {
-                        $message = sprintf( __( 'A tag group with the id %1$s and the label \'%2$s\' has been deleted.', 'tag-groups' ), $tg_group->get_group_id(), $tg_group->get_label() );
+                    if (!empty($position) && $tg_group->find_by_position($position)) {
+                        $message = sprintf(__('A tag group with the id %1$s and the label \'%2$s\' has been deleted.', 'tag-groups'), $tg_group->get_group_id(), $tg_group->get_label());
                         $tg_group->delete();
                     } else {
-                        self::ajax_send_error( 'error: invalid position: ' . $position, $task );
+                        self::ajax_send_error('error: invalid position: ' . $position, $task);
                     }
                     
                     break;
                 case "up":
-                    if ( $position > 1 && $tg_group->find_by_position( $position ) ) {
-                        if ( $tg_group->move_to_position( $position - 1 ) !== false ) {
+                    if ($position > 1 && $tg_group->find_by_position($position)) {
+                        if ($tg_group->move_to_position($position - 1) !== false) {
                             $tg_group->save();
                         }
                     }
                     break;
                 case "down":
-                    if ( $position < $tag_group_groups->get_max_position() && $tg_group->find_by_position( $position ) ) {
-                        if ( $tg_group->move_to_position( $position + 1 ) !== false ) {
+                    if ($position < $tag_group_groups->get_max_position() && $tg_group->find_by_position($position)) {
+                        if ($tg_group->move_to_position($position + 1) !== false) {
                             $tg_group->save();
                         }
                     }
                     break;
                 case "move":
-                    if ( $new_position < 1 ) {
+                    if ($new_position < 1) {
                         $new_position = 1;
                     }
-                    if ( $new_position > $tag_group_groups->get_max_position() ) {
+                    if ($new_position > $tag_group_groups->get_max_position()) {
                         $new_position = $tag_group_groups->get_max_position();
                     }
-                    if ( $position == $new_position ) {
+                    if ($position == $new_position) {
                         break;
                     }
-                    if ( $tg_group->find_by_position( $position ) ) {
-                        if ( $tg_group->move_to_position( $new_position ) !== false ) {
+                    if ($tg_group->find_by_position($position)) {
+                        if ($tg_group->move_to_position($new_position) !== false) {
                             $tg_group->save();
                         }
                     }
@@ -267,96 +269,97 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
                     // do nothing here
                     break;
                 case 'test':
-                    echo  json_encode( array(
+                    echo  wp_json_encode(array(
                         'data'         => 'success',
                         'supplemental' => array(
                         'message' => 'This is the regular Ajax response.',
                     ),
-                    ) ) ;
+                    )) ;
                     exit;
                     break;
             }
             $tag_group_groups_filtered = clone $tag_group_groups;
-            $number_of_filtered_term_groups = $tag_group_groups_filtered->filter_by_substring( $tag_groups_filter_label )->get_number_of_term_groups();
-            if ( $start_position > $number_of_filtered_term_groups ) {
+            $number_of_filtered_term_groups = $tag_group_groups_filtered->filter_by_substring($tag_groups_filter_label)->get_number_of_term_groups();
+            if ($start_position > $number_of_filtered_term_groups) {
                 $start_position = $number_of_filtered_term_groups;
             }
             $items_per_page = self::get_items_per_page();
             // calculate start and end positions
-            $start_position = (int) floor( ($start_position - 1) / $items_per_page ) * $items_per_page + 1;
+            $start_position = (int) floor(($start_position - 1) / $items_per_page) * $items_per_page + 1;
             
-            if ( $start_position + $items_per_page - 1 < $number_of_filtered_term_groups ) {
+            if ($start_position + $items_per_page - 1 < $number_of_filtered_term_groups) {
                 $end_position = $start_position + $items_per_page - 1;
             } else {
                 $end_position = $number_of_filtered_term_groups;
             }
             
-            echo  json_encode( array(
+            echo  wp_json_encode(array(
                 'data'         => 'success',
                 'supplemental' => array(
                 'task'              => $task,
                 'message'           => $message,
-                'nonce'             => wp_create_nonce( 'tg_groups_management' ),
+                'nonce'             => wp_create_nonce('tg_groups_management'),
                 'start_position'    => $start_position,
                 'groups'            => self::assemble_group_table(
-                $start_position,
-                $end_position,
-                $taxonomy,
-                $tag_group_groups_filtered
-            ),
+                    $start_position,
+                    $end_position,
+                    $taxonomy,
+                    $tag_group_groups_filtered
+                ),
                 'max_number'        => $number_of_filtered_term_groups,
                 'parents_available' => TagGroups_Utilities::is_premium_plan() && !empty($tag_group_groups->get_parents()),
                 'only_parents'      => TagGroups_Utilities::is_premium_plan() && $tag_group_groups->is_only_parents(),
                 'is_filtered'       => !empty($tag_groups_filter_label),
             ),
-            ) ) ;
+            )) ;
             exit;
         }
         
         /**
          *  Rerturns an error message to AJAX
          */
-        static function ajax_send_error( $message = 'error', $task = 'unknown' )
+        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps, Squiz.Scope.MethodScope.Missing -- Legacy method naming
+        static function ajax_send_error($message = 'error', $task = 'unknown')
         {
-            echo  json_encode( array(
+            echo  wp_json_encode(array(
                 'data'         => 'error',
                 'supplemental' => array(
                 'message' => $message,
-                'nonce'   => wp_create_nonce( 'tg_groups_management' ),
+                'nonce'   => wp_create_nonce('tg_groups_management'),
                 'task'    => $task,
             ),
-            ) ) ;
+            )) ;
             exit;
         }
         
         /**
          * Assemble the content of the table of tag groups for AJAX
          */
+        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps, Squiz.Scope.MethodScope.Missing -- Legacy method naming
         static function assemble_group_table(
             $start_position,
             $end_position,
             $taxonomy,
             $tag_group_groups_filtered
-        )
-        {
-            $term_groups = array_values( $tag_group_groups_filtered->get_all_with_position_as_key( true ) );
+        ) {
+            $term_groups = array_values($tag_group_groups_filtered->get_all_with_position_as_key(true));
             $output = array();
-            if ( count( $term_groups ) <= 1 ) {
+            if (count($term_groups) <= 1) {
                 return $output;
             }
-            for ( $i = $start_position ;  $i <= $end_position ;  $i++ ) {
-                if ( empty($term_groups[$i]) ) {
+            for ($i = $start_position; $i <= $end_position; $i++) {
+                if (empty($term_groups[$i])) {
                     continue;
                 }
-                $tg_group = new TagGroups_Group( $term_groups[$i]['term_group'] );
-                array_push( $output, array(
+                $tg_group = new TagGroups_Group($term_groups[$i]['term_group']);
+                array_push($output, array(
                     'id'           => $term_groups[$i]['term_group'],
                     'label'        => $term_groups[$i]['label'],
                     'position'     => $term_groups[$i]['position'],
-                    'amount'       => $tg_group->get_number_of_terms( $taxonomy ),
+                    'amount'       => $tg_group->get_number_of_terms($taxonomy),
                     'is_parent'    => $tg_group->is_parent,
                     'parent_label' => $tg_group->get_parent_label(),
-                ) );
+                ));
             }
             return $output;
         }
@@ -367,11 +370,11 @@ if ( !class_exists( 'TagGroups_Group_Admin' ) ) {
          * @param void
          * @return int
          */
+        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy method naming
         public static function get_items_per_page()
         {
             $items_per_page = TAG_GROUPS_ITEMS_PER_PAGE;
             return $items_per_page;
         }
-    
     }
 }
