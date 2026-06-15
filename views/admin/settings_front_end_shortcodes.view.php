@@ -93,7 +93,7 @@
 
   <p>&nbsp;</p>
   <h3><?php _e('Settings', 'tag-groups') ?></h3>
-  <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI']))) : ''; ?>">
+  <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
     <input type="hidden" name="tag-groups-shortcode-nonce" id="tag-groups-shortcode-nonce" value="<?php echo esc_attr(wp_create_nonce('tag-groups-shortcode')) ?>" />
     <p>
       <input type="checkbox" name="widget" autocomplete="off" id="tg_widget" value="1" <?php if ($tag_group_shortcode_widget) :

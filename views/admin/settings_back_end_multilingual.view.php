@@ -1,7 +1,7 @@
 <div class="tg_settings_tabs_content">
 
-  <form method="POST" action="<?php echo isset($_SERVER['REQUEST_URI']) ? esc_url(sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI']))) : ''; ?>">
-    <?php echo wp_kses_post(wp_nonce_field('tag-groups-multilingual', 'tag-groups-multilingual-nonce', true, false)) ?>
+  <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
+    <?php echo wp_nonce_field('tag-groups-multilingual', 'tag-groups-multilingual-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
     <p>
       <input type="checkbox" id="tag_group_multilingual_sync_groups" name="tag_group_multilingual_sync_groups" autocomplete="off" value="1" <?php if ($tag_group_multilingual_sync_groups) :
             ?> checked<?php 

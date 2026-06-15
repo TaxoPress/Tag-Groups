@@ -4,7 +4,7 @@
 
   <p><?php _e("Please stay on this page until all processes have finished.", 'tag-groups') ?></p>
 
-  <?php echo wp_kses_post($task_html) ?>
+  <?php echo $task_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Generated from internal task view with escaped values. ?>
 
   <div id="tag_groups_tasks_final_words_error" style="display: none;">
     <h3><?php _e('There have been errors.', 'tag-groups') ?></h3>
@@ -37,9 +37,9 @@ var tagGroupsTaskError = false;
 var tagGroupsTaskCompleted = false;
 var tagGroupsChunkWaiting = false;
 var tagGroupsRunningTaskIndex = 0;
-var tagGroupsTasks = JSON.parse("<?php echo esc_attr(str_replace('"', '\\"', wp_json_encode(array_values($tasks)))) ?>");
-var tagGroupsTasksTotals = JSON.parse("<?php echo esc_attr(str_replace('"', '\\"', wp_json_encode($totals))) ?>");
-var tagGroupsTasksLanguages = JSON.parse("<?php echo esc_attr(str_replace('"', '\\"', wp_json_encode($languages))) ?>");
+var tagGroupsTasks = <?php echo wp_json_encode(array_values($tasks)); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+var tagGroupsTasksTotals = <?php echo wp_json_encode($totals); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+var tagGroupsTasksLanguages = <?php echo wp_json_encode($languages); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
 var tagGroupsTasksLength = tagGroupsTasks.length;
 var tagGroupsTaskStartTime = 0;
 var tagGroupsTaskTimout = <?php echo intval($timeout_task) ?>;

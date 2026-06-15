@@ -73,6 +73,10 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
                 if ('div_id' == $key || 'table_id' == $key) {
                     $key = 'html_id';
                 }
+                if (is_null($value)) {
+                    $this->attributes->{$key} = $value;
+                    continue;
+                }
                 /**
                  * Many people copy formatted quotes
                  */

@@ -1,12 +1,12 @@
 <!-- begin Tag Groups plugin -->
 <script>
   if (typeof jQuery !== 'undefined' && typeof jQuery.ui !== 'undefined' && typeof jQuery.ui.accordion !== 'undefined' && typeof jQuery.widget !== 'undefined' && typeof TagGroupsBase !== 'undefined') {
-    TagGroupsBase.accordion('<?php echo esc_attr($id) ?>', <?php echo wp_json_encode($options_js_object) ?>, <?php echo esc_attr($delay ? 'true' : 'false') ?>);
+    TagGroupsBase.accordion('<?php echo esc_js($id) ?>', <?php echo $options_js_object; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Already JSON encoded. ?>, <?php echo $delay ? 'true' : 'false' ?>);
   } else {
     jQuery(document).ready(function(){
       setTimeout(function(){
         if (typeof jQuery !== 'undefined' && typeof jQuery.ui !== 'undefined' && typeof jQuery.ui.accordion !== 'undefined' && typeof jQuery.widget !== 'undefined' && typeof TagGroupsBase !== 'undefined') {
-          TagGroupsBase.accordion('<?php echo esc_attr($id) ?>', <?php echo wp_json_encode($options_js_object) ?>, <?php echo esc_attr($delay ? 'true' : 'false') ?>);
+          TagGroupsBase.accordion('<?php echo esc_js($id) ?>', <?php echo $options_js_object; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Already JSON encoded. ?>, <?php echo $delay ? 'true' : 'false' ?>);
         } else {
           console.log('[Tag Groups] Error: jQuery UI Accordion is missing!');
         }
