@@ -40,10 +40,11 @@ if (! class_exists('TagGroups_Utilities')) {
 
         public static function is_premium_plan()
         {
-            
-            return file_exists(TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/premium/tag-groups-premium.php');
-        }
 
+            return defined('TAG_GROUPS_LOADED_BY_PRO') && TAG_GROUPS_LOADED_BY_PRO
+                || defined('TAG_GROUPS_PRO_FILE')
+                || defined('TAG_GROUPS_PRO_VERSION');
+        }
 
         /**
          * Turns a string into a valid JS function name, preserving as much as possible uniqueness
