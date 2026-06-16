@@ -12,6 +12,10 @@ class TagGroupsCoreAdmin
 {
     public function __construct()
     {
+        if (! self::should_show_free_upsells()) {
+            return;
+        }
+
         if (is_admin()) {
             if (class_exists('PublishPress\WordpressVersionNotices\Module\TopNotice\Module')) {
                 add_filter(
@@ -29,6 +33,28 @@ class TagGroupsCoreAdmin
         }
 
         add_action('tag_groups_settings_right_sidebar', [$this, 'tag_groups_admin_advertising_sidebar_banner']);
+    }
+
+    /**
+     * Whether free-only upgrade UI should be registered.
+     *
+     * @return bool
+     */
+    private static function should_show_free_upsells()
+    {
+        if (defined('TAG_GROUPS_SKIP_VERSION_NOTICES') && TAG_GROUPS_SKIP_VERSION_NOTICES) {
+            return false;
+        }
+
+        if (defined('TAG_GROUPS_PLUGIN_IS_FREE') && ! TAG_GROUPS_PLUGIN_IS_FREE) {
+            return false;
+        }
+
+        if (class_exists('TagGroups_Utilities') && \TagGroups_Utilities::is_premium_plan()) {
+            return false;
+        }
+
+        return true;
     }
 
     /**

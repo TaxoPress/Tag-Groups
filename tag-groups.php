@@ -177,9 +177,12 @@ if (!function_exists('tag_groups_init')) {
             $tag_groups_loader->register_REST_API();
             $tag_groups_loader->register_CRON();
             if (is_admin()) {
-                require_once(TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/includes-core/TagGroupsCoreAdmin.php');
-                new \TaxoPress\TagGroups\TagGroupsCoreAdmin();
-                require_once(TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/includes-core/TagGroupsReviews.php');
+                // Only load free-only admin features if not running inside Pro
+                if (!defined('TAG_GROUPS_SKIP_VERSION_NOTICES') || !TAG_GROUPS_SKIP_VERSION_NOTICES) {
+                    require_once(TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/includes-core/TagGroupsCoreAdmin.php');
+                    new \TaxoPress\TagGroups\TagGroupsCoreAdmin();
+                    require_once(TAG_GROUPS_PLUGIN_ABSOLUTE_PATH . '/includes-core/TagGroupsReviews.php');
+                }
             }
         }
     }
