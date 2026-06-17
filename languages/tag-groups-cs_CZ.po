@@ -10,16 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
-"PO-Revision-Date: 2026-06-15 13:16+0000\n"
+"PO-Revision-Date: 2026-06-17 15:08+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tag-groups\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"Language: cs-CZ\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : (n >= 2 && n <= 4) ? 1 : 2;\n"
 
 #: tag-groups.php:4
-#: dist/tag-groups/include/admin/class.admin.php:206
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:2
-#: dist/tag-groups/views/admin/new_tag_from_list.view.php:2
 #: include/admin/class.admin.php:206
 #: views/admin/edit_tag_main.view.php:2
 #: views/admin/new_tag_from_list.view.php:2
@@ -51,76 +48,57 @@ msgstr "TaxoPress"
 msgid "https://taxopress.com"
 msgstr "https://taxopress.com"
 
-#: dist/tag-groups/include/admin/class.admin.php:22
 #: include/admin/class.admin.php:22
 msgid "Home"
 msgstr "Domů"
 
-#: dist/tag-groups/include/admin/class.admin.php:26
-#: dist/tag-groups/include/admin/class.settings.php:827
-#: dist/tag-groups/include/admin/class.setup_wizard.php:98
 #: include/admin/class.admin.php:26
 #: include/admin/class.settings.php:827
 #: include/admin/class.setup_wizard.php:98
 msgid "Taxonomies"
 msgstr "Taxonomie"
 
-#: dist/tag-groups/include/admin/class.admin.php:33
 #: include/admin/class.admin.php:33
 msgid "Front End"
 msgstr "Přední část"
 
-#: dist/tag-groups/include/admin/class.admin.php:40
 #: include/admin/class.admin.php:40
 msgid "Back End"
 msgstr "Zadní část"
 
-#: dist/tag-groups/include/admin/class.admin.php:47
-#: dist/tag-groups/include/admin/class.settings.php:935
-#: dist/tag-groups/views/admin/onboarding.view.php:1
 #: include/admin/class.admin.php:47
 #: include/admin/class.settings.php:935
 #: views/admin/onboarding.view.php:1
 msgid "First Steps"
 msgstr "První kroky"
 
-#: dist/tag-groups/include/admin/class.admin.php:54
-#: dist/tag-groups/include/admin/class.settings.php:940
 #: include/admin/class.admin.php:54
 #: include/admin/class.settings.php:940
 msgid "Setup Wizard"
 msgstr "Průvodce nastavením"
 
-#: dist/tag-groups/include/admin/class.admin.php:61
-#: dist/tag-groups/include/admin/class.admin.php:940
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:95
 #: include/admin/class.admin.php:61
 #: include/admin/class.admin.php:940
 #: views/admin/settings_front_end_shortcodes.view.php:95
 msgid "Settings"
 msgstr "Nastavení"
 
-#: dist/tag-groups/include/admin/class.admin.php:87
 #: include/admin/class.admin.php:87
 msgid "Tag Group Admin"
 msgstr "Admin skupin tagů"
 
-#: dist/tag-groups/include/admin/class.admin.php:434
 #: include/admin/class.admin.php:434
 msgid "The term has been removed from all groups."
 msgstr "Termín byl odstraněn ze všech skupin."
 
-#: dist/tag-groups/include/admin/class.admin.php:565
 #: include/admin/class.admin.php:565
 msgid "Edit this item inline"
 msgstr "Upravit tuto položku inline"
 
-#: dist/tag-groups/include/admin/class.admin.php:567
 #: include/admin/class.admin.php:567
 msgid "Quick&nbsp;Edit"
 msgstr "Rychlá úprava"
 
-#: dist/tag-groups/include/admin/class.admin.php:993
 #: include/admin/class.admin.php:994
 #. translators: %s is the href attribute with URL
 #, php-format
@@ -131,7 +109,6 @@ msgstr ""
 "Prosím <a %s>klikněte zde pro spuštění migračních rutin</a> abyste se "
 "ujistili, že jsme migrovali všechny tagy."
 
-#: dist/tag-groups/include/admin/class.export.php:144
 #: include/admin/class.export.php:144
 msgid ""
 "Your settings/groups and your terms have been exported. Please download the "
@@ -140,26 +117,20 @@ msgstr ""
 "Vaše nastavení/skupiny a vaše termíny byly exportovány. Prosím, stáhněte si "
 "výsledné soubory pravým kliknutím nebo ctrl-kliknutím:"
 
-#: dist/tag-groups/include/admin/class.export.php:151
 #: include/admin/class.export.php:151
 msgid "Writing of the exported settings failed."
 msgstr "Zápis exportovaných nastavení se nezdařil."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:176
-#: dist/tag-groups/include/admin/class.group_admin.php:180
 #: include/admin/class.group_admin.php:176
 #: include/admin/class.group_admin.php:180
 msgid "The groups have been sorted alphabetically."
 msgstr "Skupiny byly seřazeny abecedně."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:188
-#: dist/tag-groups/include/admin/class.group_admin.php:207
 #: include/admin/class.group_admin.php:188
 #: include/admin/class.group_admin.php:209
 msgid "The label cannot be empty."
 msgstr "Štítek nemůže být prázdný."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:191
 #: include/admin/class.group_admin.php:192
 #. translators: %s is the tag group label
 #, php-format
@@ -170,61 +141,50 @@ msgstr ""
 "Skupina štítků se štítkem '%s' již existuje, nebo se štítek nezměnil. "
 "Prosím vyberte jiný nebo se vraťte."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:195
 #: include/admin/class.group_admin.php:197
 #. translators: %s is the tag group label
 #, php-format
 msgid "A new tag group with the label '%s' has been created!"
 msgstr "Byla vytvořena nová skupina štítků se štítkem '%s'!"
 
-#: dist/tag-groups/include/admin/class.group_admin.php:213
 #: include/admin/class.group_admin.php:216
 #. translators: %s is the tag group label
 #, php-format
 msgid "A tag group with the label '%s' already exists."
 msgstr "Skupina štítků se štítkem '%s' již existuje."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:225
 #: include/admin/class.group_admin.php:229
 #. translators: %s is the tag group label
 #, php-format
 msgid "The tag group with the label '%s' has been saved!"
 msgstr "Skupina štítků se štítkem '%s' byla uložena!"
 
-#: dist/tag-groups/include/admin/class.group_admin.php:231
 #: include/admin/class.group_admin.php:236
 #. translators: %1$s is the group ID, %2$s is the group label
 #, php-format
 msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
 msgstr "Skupina štítků s ID %1$s a štítkem '%2$s' byla smazána."
 
-#: dist/tag-groups/include/admin/class.import.php:81
 #: include/admin/class.import.php:81
 msgid "Error uploading the file."
 msgstr "Chyba při nahrávání souboru."
 
-#: dist/tag-groups/include/admin/class.import.php:108
 #: include/admin/class.import.php:108
 msgid "Error reading the file."
 msgstr "Chyba při čtení souboru."
 
-#: dist/tag-groups/include/admin/class.import.php:146
-#: dist/tag-groups/include/admin/class.import.php:187
 #: include/admin/class.import.php:146
-#: include/admin/class.import.php:189
+#: include/admin/class.import.php:194
 msgid "Error parsing the file."
 msgstr "Chyba při parsování souboru."
 
-#: dist/tag-groups/include/admin/class.import.php:165
-#: dist/tag-groups/include/admin/class.import.php:260
 #: include/admin/class.import.php:165
-#: include/admin/class.import.php:262
+#: include/admin/class.import.php:267
 msgid "date unknown"
 msgstr "datum neznámé"
 
-#: dist/tag-groups/include/admin/class.import.php:169
-#: include/admin/class.import.php:170
-#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#: include/admin/class.import.php:171
+#. translators: 1: Filename, 2: Plugin version, 3: Export file creation date.
 #, php-format
 msgid ""
 "Your settings and groups have been imported from the file %1$s (created "
@@ -233,18 +193,17 @@ msgstr ""
 "Vaše nastavení a skupiny byly importovány ze souboru %1$s (vytvořeno s "
 "verzí pluginu %2$s dne %3$s)."
 
-#: dist/tag-groups/include/admin/class.import.php:170
-#: include/admin/class.import.php:172
+#: include/admin/class.import.php:177
 #. translators: %d is the number of options
 #, php-format
 msgid "%d option was added or changed."
 msgid_plural "%d options were added or changed."
 msgstr[0] "%d volba byla přidána nebo změněna."
 msgstr[1] "%d možnosti byly přidány nebo změněny."
+msgstr[2] ""
 
-#: dist/tag-groups/include/admin/class.import.php:264
-#: include/admin/class.import.php:267
-#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#: include/admin/class.import.php:273
+#. translators: 1: Filename, 2: Plugin version, 3: Export file creation date.
 #, php-format
 msgid ""
 "Your terms have been imported from the file %1$s (created with plugin "
@@ -253,37 +212,33 @@ msgstr ""
 "Vaše termíny byly importovány ze souboru %1$s (vytvořeno s verzí pluginu "
 "%2$s dne %3$s)."
 
-#: dist/tag-groups/include/admin/class.import.php:265
-#: include/admin/class.import.php:269
+#: include/admin/class.import.php:279
 #. translators: %d is the number of terms processed
 #, php-format
 msgid "We processed %d term."
 msgid_plural "We processed %d terms."
 msgstr[0] "Zpracovali jsme %d termín."
 msgstr[1] "Zpracovali jsme %d termíny."
+msgstr[2] ""
 
-#: dist/tag-groups/include/admin/class.import.php:266
-#: include/admin/class.import.php:271
+#: include/admin/class.import.php:281
 #. translators: %d is the number of terms saved
 #, php-format
 msgid "We saved %d term."
 msgid_plural "We saved %d terms."
 msgstr[0] "Uložili jsme %d termín."
 msgstr[1] "Uložili jsme %d termíny."
+msgstr[2] ""
 
-#: dist/tag-groups/include/admin/class.import.php:267
-#: include/admin/class.import.php:273
+#: include/admin/class.import.php:283
 #. translators: %d is the number of terms updated
 #, php-format
 msgid "The group info of %d term was updated."
 msgid_plural "The group info of %d terms was updated."
 msgstr[0] "Informace o skupině %d termínu byly aktualizovány."
 msgstr[1] "Informace o skupině %d termínů byly aktualizovány."
+msgstr[2] ""
 
-#: dist/tag-groups/include/admin/class.settings.php:151
-#: dist/tag-groups/include/admin/class.settings.php:858
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:26
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:39
 #: include/admin/class.settings.php:151
 #: include/admin/class.settings.php:858
 #: views/admin/tag_groups_admin.view.php:26
@@ -291,129 +246,92 @@ msgstr[1] "Informace o skupině %d termínů byly aktualizovány."
 msgid "Filters"
 msgstr "Filtry"
 
-#: dist/tag-groups/include/admin/class.settings.php:153
-#: dist/tag-groups/include/admin/class.settings.php:958
 #: include/admin/class.settings.php:153
 #: include/admin/class.settings.php:958, fuzzy
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
-#: dist/tag-groups/include/admin/class.settings.php:156
-#: dist/tag-groups/include/admin/class.settings.php:965
 #: include/admin/class.settings.php:156
 #: include/admin/class.settings.php:965
 msgid "Multilingual"
 msgstr "Vícejazyčný"
 
-#: dist/tag-groups/include/admin/class.settings.php:238
-#: dist/tag-groups/include/admin/class.settings.php:832
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:9
 #: include/admin/class.settings.php:238
 #: include/admin/class.settings.php:832
 #: views/admin/settings_front_end_shortcodes.view.php:9
 msgid "Shortcodes"
 msgstr "Krátké kódy"
 
-#: dist/tag-groups/include/admin/class.settings.php:239
-#: dist/tag-groups/include/admin/class.settings.php:846
 #: include/admin/class.settings.php:239
 #: include/admin/class.settings.php:846
 msgid "Themes and Appearance"
 msgstr "Témata a vzhled"
 
-#: dist/tag-groups/include/admin/class.settings.php:265
 #: include/admin/class.settings.php:265
 msgid "remove"
 msgstr "odstranit"
 
-#: dist/tag-groups/include/admin/class.settings.php:265
 #: include/admin/class.settings.php:265
 msgid "(recommended)"
 msgstr "(doporučeno)"
 
-#: dist/tag-groups/include/admin/class.settings.php:266
 #: include/admin/class.settings.php:266
 msgid "keep"
 msgstr "uchovat"
 
-#: dist/tag-groups/include/admin/class.settings.php:267
 #: include/admin/class.settings.php:267
 msgid "use unfiltered_html filter"
 msgstr "použít filtr unfiltered_html"
 
-#: dist/tag-groups/include/admin/class.settings.php:317
-#: dist/tag-groups/include/admin/class.settings.php:945
 #: include/admin/class.settings.php:317
 #: include/admin/class.settings.php:945
 msgid "First Aid"
 msgstr "První pomoc"
 
-#: dist/tag-groups/include/admin/class.settings.php:318
 #: include/admin/class.settings.php:318, fuzzy
 msgid "REST API"
 msgstr "REST API"
 
-#: dist/tag-groups/include/admin/class.settings.php:319
-#: dist/tag-groups/include/admin/class.settings.php:873
 #: include/admin/class.settings.php:319
 #: include/admin/class.settings.php:873
 msgid "System Information"
 msgstr "Informace o systému"
 
-#: dist/tag-groups/include/admin/class.settings.php:320
-#: dist/tag-groups/include/admin/class.settings.php:887
 #: include/admin/class.settings.php:320
 #: include/admin/class.settings.php:887
 msgid "Debugging"
 msgstr "Ladění"
 
-#: dist/tag-groups/include/admin/class.settings.php:321
-#: dist/tag-groups/include/admin/class.settings.php:863
 #: include/admin/class.settings.php:321
 #: include/admin/class.settings.php:863, fuzzy
 msgid "Export/Import"
 msgstr "Export/Import"
 
-#: dist/tag-groups/include/admin/class.settings.php:322
-#: dist/tag-groups/include/admin/class.settings.php:868
 #: include/admin/class.settings.php:322
 #: include/admin/class.settings.php:868
 msgid "Reset"
 msgstr "Obnovit"
 
-#: dist/tag-groups/include/admin/class.settings.php:324
 #: include/admin/class.settings.php:324
 msgid "Licences"
 msgstr "Licence"
 
-#: dist/tag-groups/include/admin/class.settings.php:422
 #: include/admin/class.settings.php:422
 msgid "Transients"
 msgstr "Dočasné"
 
-#: dist/tag-groups/include/admin/class.settings.php:423
 #: include/admin/class.settings.php:423
 msgid "Database"
 msgstr "Databáze"
 
-#: dist/tag-groups/include/admin/class.settings.php:424
 #: include/admin/class.settings.php:424
 msgid "Filesystem"
 msgstr "Souborový systém"
 
-#: dist/tag-groups/include/admin/class.settings.php:425
 #: include/admin/class.settings.php:425, fuzzy
 msgid "WP Object Cache"
 msgstr "WP Object Cache"
 
-#: dist/tag-groups/include/admin/class.settings.php:548
-#: dist/tag-groups/include/admin/class.settings.php:604
-#: dist/tag-groups/include/admin/class.settings.php:642
-#: dist/tag-groups/include/admin/class.settings.php:676
-#: dist/tag-groups/include/admin/class.settings.php:691
-#: dist/tag-groups/include/admin/class.settings.php:704
-#: dist/tag-groups/include/admin/class.settings.php:717
-#: dist/tag-groups/include/admin/class.settings.php:786
 #: include/admin/class.settings.php:548
 #: include/admin/class.settings.php:604
 #: include/admin/class.settings.php:642
@@ -425,386 +343,299 @@ msgstr "WP Object Cache"
 msgid "Your settings have been saved."
 msgstr "Vaše nastavení byla uložena."
 
-#: dist/tag-groups/include/admin/class.settings.php:566
 #: include/admin/class.settings.php:566
 msgid "Your settings has been saved."
 msgstr "Vaše nastavení bylo uloženo."
 
-#: dist/tag-groups/include/admin/class.settings.php:584
 #: include/admin/class.settings.php:584
 msgid "All groups have been deleted and assignments reset."
 msgstr "Všechny skupiny byly smazány a přiřazení obnoveno."
 
-#: dist/tag-groups/include/admin/class.settings.php:733
 #: include/admin/class.settings.php:733
 msgid "The filter on the tags page has been reset to show all tags."
 msgstr "Filtr na stránce štítků byl obnoven, aby zobrazoval všechny štítky."
 
-#: dist/tag-groups/include/admin/class.settings.php:829
 #: include/admin/class.settings.php:829
 msgid "tag groups"
 msgstr "skupiny tagů"
 
-#: dist/tag-groups/include/admin/class.settings.php:835
-#: dist/tag-groups/include/admin/class.settings.php:849
-#: dist/tag-groups/include/admin/class.settings.php:904
 #: include/admin/class.settings.php:835
 #: include/admin/class.settings.php:849
 #: include/admin/class.settings.php:904
 msgid "tag cloud"
 msgstr "tagová cloud"
 
-#: dist/tag-groups/include/admin/class.settings.php:836
 #: include/admin/class.settings.php:836
 msgid "group info"
 msgstr "informace o skupině"
 
-#: dist/tag-groups/include/admin/class.settings.php:837
 #: include/admin/class.settings.php:837
 msgid "sidebar widget"
 msgstr "widget bočního panelu"
 
-#: dist/tag-groups/include/admin/class.settings.php:838
 #: include/admin/class.settings.php:838
 msgid "accordion"
 msgstr "akordeon"
 
-#: dist/tag-groups/include/admin/class.settings.php:839
 #: include/admin/class.settings.php:839
 msgid "tabs"
 msgstr "karty"
 
-#: dist/tag-groups/include/admin/class.settings.php:840
 #: include/admin/class.settings.php:840
 msgid "alphabetical"
 msgstr "abecední"
 
-#: dist/tag-groups/include/admin/class.settings.php:841
 #: include/admin/class.settings.php:841
 msgid "post list"
 msgstr "seznam příspěvků"
 
-#: dist/tag-groups/include/admin/class.settings.php:853
 #: include/admin/class.settings.php:853
 msgid "colors"
 msgstr "barvy"
 
-#: dist/tag-groups/include/admin/class.settings.php:854
 #: include/admin/class.settings.php:854
 msgid "tag description"
 msgstr "popis tagu"
 
-#: dist/tag-groups/include/admin/class.settings.php:860
-#: dist/tag-groups/include/admin/class.settings.php:952
 #: include/admin/class.settings.php:860
 #: include/admin/class.settings.php:952
 msgid "tag filter"
 msgstr "filtr tagů"
 
-#: dist/tag-groups/include/admin/class.settings.php:860
 #: include/admin/class.settings.php:860
 msgid "post filter"
 msgstr "filtr příspěvků"
 
-#: dist/tag-groups/include/admin/class.settings.php:865
 #: include/admin/class.settings.php:865
 msgid "backup"
 msgstr "záloha"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870
 msgid "remove plugin"
 msgstr "odebrat plugin"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870
 msgid "remove data"
 msgstr "odebrat data"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870
 msgid "delete groups"
 msgstr "smazat skupiny"
 
-#: dist/tag-groups/include/admin/class.settings.php:876
-#: dist/tag-groups/include/admin/class.settings.php:890
 #: include/admin/class.settings.php:876
 #: include/admin/class.settings.php:890
 msgid "debugging"
 msgstr "ladění"
 
-#: dist/tag-groups/include/admin/class.settings.php:877
 #: include/admin/class.settings.php:877
 msgid "PHP Version"
 msgstr "verze PHP"
 
-#: dist/tag-groups/include/admin/class.settings.php:878
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:21
 #: include/admin/class.settings.php:878
 #: views/admin/settings_troubleshooting_system.view.php:21
 msgid "Ajax Test"
 msgstr "Ajax test"
 
-#: dist/tag-groups/include/admin/class.settings.php:879
-#: dist/tag-groups/include/admin/class.settings.php:891
-#: dist/tag-groups/include/admin/class.settings.php:948
 #: include/admin/class.settings.php:879
 #: include/admin/class.settings.php:891
 #: include/admin/class.settings.php:948
 msgid "troubleshooting"
 msgstr "odstraňování problémů"
 
-#: dist/tag-groups/include/admin/class.settings.php:880
 #: include/admin/class.settings.php:880
 msgid "benchmarks"
 msgstr "benchmarky"
 
-#: dist/tag-groups/include/admin/class.settings.php:881
 #: include/admin/class.settings.php:881
 msgid "speed test"
 msgstr "test rychlosti"
 
-#: dist/tag-groups/include/admin/class.settings.php:882
-#: dist/tag-groups/include/admin/class.settings.php:892
 #: include/admin/class.settings.php:882
 #: include/admin/class.settings.php:892
 msgid "error"
 msgstr "chyba"
 
-#: dist/tag-groups/include/admin/class.settings.php:883
-#: dist/tag-groups/include/admin/class.settings.php:893
 #: include/admin/class.settings.php:883
 #: include/admin/class.settings.php:893
 msgid "testing"
 msgstr "testování"
 
-#: dist/tag-groups/include/admin/class.settings.php:894
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:950
 #: include/admin/class.settings.php:894
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:950
 msgid "help"
 msgstr "nápověda"
 
-#: dist/tag-groups/include/admin/class.settings.php:898
 #: include/admin/class.settings.php:898, fuzzy
 msgid "Tag Groups Pro"
 msgstr "Tag Groups Pro"
 
-#: dist/tag-groups/include/admin/class.settings.php:901
 #: include/admin/class.settings.php:901
 msgid "upgrade"
 msgstr "aktualizace"
 
-#: dist/tag-groups/include/admin/class.settings.php:902
 #: include/admin/class.settings.php:902
 msgid "more groups"
 msgstr "více skupin"
 
-#: dist/tag-groups/include/admin/class.settings.php:903
 #: include/admin/class.settings.php:903
 msgid "posts"
 msgstr "příspěvky"
 
-#: dist/tag-groups/include/admin/class.settings.php:905
 #: include/admin/class.settings.php:905
 msgid "filter"
 msgstr "filtr"
 
-#: dist/tag-groups/include/admin/class.settings.php:906
 #: include/admin/class.settings.php:906
 msgid "animated"
 msgstr "animovaný"
 
-#: dist/tag-groups/include/admin/class.settings.php:907
 #: include/admin/class.settings.php:907
 msgid "searchable"
 msgstr "hledatelný"
 
-#: dist/tag-groups/include/admin/class.settings.php:915
 #: include/admin/class.settings.php:915, fuzzy
 msgid "Info"
 msgstr "Info"
 
-#: dist/tag-groups/include/admin/class.settings.php:918
 #: include/admin/class.settings.php:918
 msgid "author"
 msgstr "autor"
 
-#: dist/tag-groups/include/admin/class.settings.php:919
 #: include/admin/class.settings.php:919
 msgid "version"
 msgstr "verze"
 
-#: dist/tag-groups/include/admin/class.settings.php:920
 #: include/admin/class.settings.php:920
 msgid "contact"
 msgstr "kontakt"
 
-#: dist/tag-groups/include/admin/class.settings.php:921
 #: include/admin/class.settings.php:921
 msgid "about"
 msgstr "o aplikaci"
 
-#: dist/tag-groups/include/admin/class.settings.php:925
 #: include/admin/class.settings.php:925
 msgid "Licenses"
 msgstr "Licence"
 
-#: dist/tag-groups/include/admin/class.settings.php:927
 #: include/admin/class.settings.php:927
 msgid "Credits"
 msgstr "Zásluhy"
 
-#: dist/tag-groups/include/admin/class.settings.php:930
 #: include/admin/class.settings.php:930
 msgid "Development News"
 msgstr "Novinky ve vývoji"
 
-#: dist/tag-groups/include/admin/class.settings.php:932
 #: include/admin/class.settings.php:932, fuzzy
 msgid "blog"
 msgstr "blog"
 
-#: dist/tag-groups/include/admin/class.settings.php:932
 #: include/admin/class.settings.php:932
 msgid "updates"
 msgstr "aktualizace"
 
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:942
 msgid "getting started"
 msgstr "začínáme"
 
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:942
 msgid "introduction"
 msgstr "úvod"
 
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:942
 msgid "sample"
 msgstr "ukázka"
 
-#: dist/tag-groups/include/admin/class.settings.php:949
 #: include/admin/class.settings.php:949
 msgid "migrate"
 msgstr "migrovat"
 
-#: dist/tag-groups/include/admin/class.settings.php:951
 #: include/admin/class.settings.php:951
 msgid "problem"
 msgstr "problém"
 
-#: dist/tag-groups/include/admin/class.settings.php:960
 #: include/admin/class.settings.php:960
 msgid "live block preview"
 msgstr "náhled živého bloku"
 
-#: dist/tag-groups/include/admin/class.settings.php:967
 #: include/admin/class.settings.php:967
 msgid "translation"
 msgstr "překlad"
 
-#: dist/tag-groups/include/admin/class.settings.php:998
 #: include/admin/class.settings.php:998
 msgid "Migrating the term meta"
 msgstr "Migrace termínu meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:999
 #: include/admin/class.settings.php:999
 msgid "Fixing incorrect tag groups"
 msgstr "Oprava nesprávných skupin štítků"
 
-#: dist/tag-groups/include/admin/class.settings.php:1000
 #: include/admin/class.settings.php:1000
 msgid "Fixing incorrect groups in term meta"
 msgstr "Oprava nesprávných skupin v termínu meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:1001
 #: include/admin/class.settings.php:1001
 msgid "Sorting groups in term meta"
 msgstr "Třídění skupin v termínu meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:1002
 #: include/admin/class.settings.php:1002
 msgid "Checking the tag names"
 msgstr "Kontrola názvů štítků"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:94
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:12
 #: include/admin/class.setup_wizard.php:94
 #: views/admin/setup_wizard_start.view.php:12
 msgid "Start"
 msgstr "Začít"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:102
 #: include/admin/class.setup_wizard.php:102
 msgid "Sample Content"
 msgstr "Ukázkový obsah"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:122
 #: include/admin/class.setup_wizard.php:122
 msgid "Sample Group A"
 msgstr "Ukázková skupina A"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:123
 #: include/admin/class.setup_wizard.php:123
 msgid "Sample Group B"
 msgstr "Ukázková skupina B"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:124
 #: include/admin/class.setup_wizard.php:124
 msgid "Sample Group C"
 msgstr "Ukázková skupina C"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:140
 #: include/admin/class.setup_wizard.php:140
 msgid "First Sample Tag"
 msgstr "První ukázkový štítek"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:141
 #: include/admin/class.setup_wizard.php:141
 msgid "Second Sample Tag"
 msgstr "Druhý ukázkový tag"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:142
 #: include/admin/class.setup_wizard.php:142
 msgid "Third Sample Tag"
 msgstr "Třetí ukázkový tag"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:160
 #: include/admin/class.setup_wizard.php:160
 msgid "Create a draft sample page with Gutenberg blocks."
 msgstr "Vytvořte koncept ukázkové stránky s bloky Gutenberg."
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:162
 #: include/admin/class.setup_wizard.php:162
 msgid "Create a draft sample page with shortcodes."
 msgstr "Vytvořte koncept ukázkové stránky s krátkými kódy."
 
-#: dist/tag-groups/include/class.loader.php:159
 #: include/class.loader.php:160
 #. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
 #, php-format
 msgid "The plugin %1$s requires WordPress %2$s to function properly."
 msgstr "Plugin %1$s vyžaduje WordPress %2$s k správnému fungování."
 
-#: dist/tag-groups/include/class.loader.php:159
 #: include/class.loader.php:160
 #. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
 msgid "Please upgrade WordPress and then try again."
 msgstr "Prosím, aktualizujte WordPress a zkuste to znovu."
 
-#: dist/tag-groups/include/helpers/class.groups.php:182
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:8
-#: dist/tag-groups/views/admin/new_tag_from_list.view.php:5
-#: dist/tag-groups/views/partials/quick_edit_tag.view.php:7
 #: include/helpers/class.groups.php:182
 #: views/admin/edit_tag_main.view.php:8
 #: views/admin/new_tag_from_list.view.php:5
@@ -812,172 +643,141 @@ msgstr "Prosím, aktualizujte WordPress a zkuste to znovu."
 msgid "not assigned"
 msgstr "není přiřazeno"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:43
+#: includes-core/TagGroupsCoreAdmin.php:70
+#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
 #, php-format
 msgid ""
 "You're using Tag Groups Free. The Pro version has more features and "
-"support. %sUpgrade to Pro%s"
+"support. %1$sUpgrade to Pro%2$s"
 msgstr ""
-"Používáte Tag Groups Free. Pro verze má více funkcí a podporu. %sPřechod na "
-"Pro%s"
+"Používáte Tag Groups Free. Pro verze má více funkcí a podporu. %1$sPřejít "
+"na Pro%2$s"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:71
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:115
-#: includes-core/TagGroupsCoreAdmin.php:72
-#: includes-core/TagGroupsCoreAdmin.php:116
+#: includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:142
 msgid "Upgrade to Pro"
 msgstr "Přechod na Pro"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:88
-#: includes-core/TagGroupsCoreAdmin.php:89
+#: includes-core/TagGroupsCoreAdmin.php:115
 msgid "Upgrade to Tag Groups Pro"
 msgstr "Přechod na Tag Groups Pro"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:93
-#: includes-core/TagGroupsCoreAdmin.php:94
+#: includes-core/TagGroupsCoreAdmin.php:120
 msgid "Enhance the power of Tag Groups with the Pro version:"
 msgstr "Zvyšte sílu Tag Groups s Pro verzí:"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:96
-#: includes-core/TagGroupsCoreAdmin.php:97
+#: includes-core/TagGroupsCoreAdmin.php:123
 msgid "21 Shortcodes"
 msgstr "21 Krátkých kódů"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:97
-#: includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:124
 msgid "18 Gutenberg Blocks"
 msgstr "18 Bloků Gutenberg"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:98
-#: includes-core/TagGroupsCoreAdmin.php:99
+#: includes-core/TagGroupsCoreAdmin.php:125
 msgid "Table Tag Cloud"
 msgstr "Tag Cloud Tabulka"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:99
-#: includes-core/TagGroupsCoreAdmin.php:100
+#: includes-core/TagGroupsCoreAdmin.php:126
 msgid "Simple Tag Cloud"
 msgstr "Jednoduchý Tag Cloud"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:100
-#: includes-core/TagGroupsCoreAdmin.php:101, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:127, fuzzy
 msgid "Shuffle Box"
 msgstr "Shuffle Box"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:101
-#: includes-core/TagGroupsCoreAdmin.php:102, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:128, fuzzy
 msgid "Caching"
 msgstr "Caching"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:102
-#: includes-core/TagGroupsCoreAdmin.php:103
+#: includes-core/TagGroupsCoreAdmin.php:129
 msgid "Multiple Groups Per Tag"
 msgstr "Více skupin na tag"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:103
-#: includes-core/TagGroupsCoreAdmin.php:104
+#: includes-core/TagGroupsCoreAdmin.php:130
 msgid "Tag Cloud Search"
 msgstr "Vyhledávání v Tag Cloud"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:104
-#: includes-core/TagGroupsCoreAdmin.php:105
+#: includes-core/TagGroupsCoreAdmin.php:131
 msgid "Toggle Post Filter"
 msgstr "Přepnout filtr příspěvků"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:105
-#: includes-core/TagGroupsCoreAdmin.php:106
+#: includes-core/TagGroupsCoreAdmin.php:132
 msgid "Dynamic Post Filter"
 msgstr "Dynamický filtr příspěvků"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:106
-#: includes-core/TagGroupsCoreAdmin.php:107
+#: includes-core/TagGroupsCoreAdmin.php:133
 msgid "Post List"
 msgstr "Seznam příspěvků"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:107
-#: includes-core/TagGroupsCoreAdmin.php:108
+#: includes-core/TagGroupsCoreAdmin.php:134
 msgid "Tag Meta Box"
 msgstr "Meta box pro štítky"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:108
-#: includes-core/TagGroupsCoreAdmin.php:109
+#: includes-core/TagGroupsCoreAdmin.php:135
 msgid "Post Tags in Groups"
 msgstr "Štítky příspěvků ve skupinách"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:109
-#: includes-core/TagGroupsCoreAdmin.php:110
+#: includes-core/TagGroupsCoreAdmin.php:136
 msgid "Permissions"
 msgstr "Oprávnění"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:110
-#: includes-core/TagGroupsCoreAdmin.php:111
+#: includes-core/TagGroupsCoreAdmin.php:137
 msgid "Default Groups"
 msgstr "Výchozí skupiny"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:111
-#: includes-core/TagGroupsCoreAdmin.php:112
+#: includes-core/TagGroupsCoreAdmin.php:138
 msgid "WooCommerce Attributes"
 msgstr "Atributy WooCommerce"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:112
-#: includes-core/TagGroupsCoreAdmin.php:113
+#: includes-core/TagGroupsCoreAdmin.php:139
 msgid "Parent Group Level"
 msgstr "Úroveň nadřazené skupiny"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:122
-#: includes-core/TagGroupsCoreAdmin.php:123
+#: includes-core/TagGroupsCoreAdmin.php:149
 msgid "Need Tag Groups Support?"
 msgstr "Potřebujete podporu pro skupiny štítků?"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:127
-#: includes-core/TagGroupsCoreAdmin.php:128
+#: includes-core/TagGroupsCoreAdmin.php:154
 msgid "If you need help or have a new feature request, let us know."
 msgstr "Pokud potřebujete pomoc nebo máte žádost o novou funkci, dejte nám vědět."
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:129
-#: includes-core/TagGroupsCoreAdmin.php:130
+#: includes-core/TagGroupsCoreAdmin.php:156
 msgid "Request Support"
 msgstr "Požádat o podporu"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:138
-#: includes-core/TagGroupsCoreAdmin.php:139
+#: includes-core/TagGroupsCoreAdmin.php:165
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "Podrobné dokumentace je také k dispozici na webových stránkách pluginu."
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:140
-#: includes-core/TagGroupsCoreAdmin.php:141
+#: includes-core/TagGroupsCoreAdmin.php:167
 msgid "View Knowledge Base"
 msgstr "Zobrazit znalostní bázi"
 
-#: dist/tag-groups/tag-groups.php:159
-#: tag-groups.php:159
+#: tag-groups.php:177
 msgid "The free Tag Groups plugin cannot be active together with Tag Groups Pro."
 msgstr ""
 "Bezplatný plugin pro skupiny štítků nemůže být aktivní společně se "
 "skupinami štítků Pro."
 
-#: dist/tag-groups/tag-groups.php:159
-#: tag-groups.php:159
+#: tag-groups.php:177
 msgid "more information"
 msgstr "více informací"
 
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
 #: views/admin/edit_tag_main.view.php:31
 msgid "Edit tag groups"
 msgstr "Upravit skupiny štítků"
 
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
 #: views/admin/edit_tag_main.view.php:31
 msgid "Clicking will leave this page without saving."
 msgstr "Kliknutím opustíte tuto stránku bez uložení."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:3
 #: views/admin/onboarding.view.php:3
 #. translators: %s is the plugin name
 #, php-format
 msgid "Welcome to %s!"
 msgstr "Vítejte ve %s!"
 
-#: dist/tag-groups/views/admin/onboarding.view.php:4
 #: views/admin/onboarding.view.php:4
 #. translators: %s is the plugin name
 msgid ""
@@ -987,17 +787,14 @@ msgstr ""
 "Plugin je připraven k použití. Pokud potřebujete pomoc, můžeme vás provést "
 "základními kroky."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:6
 #: views/admin/onboarding.view.php:6
 msgid "Start the Setup Wizard"
 msgstr "Spustit průvodce nastavením"
 
-#: dist/tag-groups/views/admin/onboarding.view.php:10
 #: views/admin/onboarding.view.php:10
 msgid "Or click here if you prefer to do it on your own."
 msgstr "Nebo klikněte sem, pokud dáváte přednost dělat to sami."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:13
 #: views/admin/onboarding.view.php:13
 #. translators: %s is the href attribute with URL
 #, php-format
@@ -1011,7 +808,6 @@ msgstr ""
 "tagu) svých tagů. Ve většině případů stačí ponechat výchozí: Tagy "
 "(post_tag)."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:14
 #: views/admin/onboarding.view.php:14
 #. translators: %s is the href attribute with URL
 msgid "Go to the tag groups admin page and <b>create some groups</b>."
@@ -1019,26 +815,21 @@ msgstr ""
 "Přejděte na administrační stránku skupin tagů a <b>vytvořte nějaké "
 "skupiny</b>."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:14
 #: views/admin/onboarding.view.php:14
 #. translators: %s is the href attribute with URL
 #, php-format
 msgid "You can find these pages listed on your <a %s>Tag Groups home page</a>."
 msgstr "Tyto stránky najdete uvedené na vaší <a %s>domovské stránce skupin tagů</a>."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:15
 #: views/admin/onboarding.view.php:15
 #. translators: %s is the href attribute with URL
 msgid "Go to your tags and <b>assign them to these groups</b>."
 msgstr "Přejděte na své tagy a <b>přiřaďte je těmto skupinám</b>."
 
-#: dist/tag-groups/views/admin/post_filter.view.php:3
 #: views/admin/post_filter.view.php:3
 msgid "Filter by tag group"
 msgstr "Filtr podle skupiny tagů"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:2
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:3
 #: views/admin/sample_page.view.php:2
 #: views/admin/sample_page_gutenberg.view.php:3
 #. translators: %s is the author display name
@@ -1051,7 +842,6 @@ msgstr ""
 "Groups</b>. Můžete ji bezpečně upravit a smazat nebo si ji ponechat pro "
 "budoucí použití."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:6
 #: views/admin/sample_page.view.php:6
 msgid ""
 "The following shortcodes use a variety of parameters so that you can get an "
@@ -1062,8 +852,6 @@ msgstr ""
 "představu o možnostech. Po upgradu pluginu se nebojte vygenerovat novou "
 "vzorovou stránku s více funkcemi."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:10
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:21
 #: views/admin/sample_page.view.php:10
 #: views/admin/sample_page_gutenberg.view.php:21
 #. translators: %s is the href attribute with URL
@@ -1071,50 +859,35 @@ msgstr ""
 msgid "Please find links to the documentation in the <a %s>Tag Groups settings</a>."
 msgstr "Najděte prosím odkazy na dokumentaci v <a %s>nastavení skupin tagů</a>."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:14
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:30
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:11
 #: views/admin/sample_page.view.php:14
 #: views/admin/sample_page_gutenberg.view.php:30
 #: views/admin/settings_front_end_shortcodes.view.php:11
 msgid "Tabbed Tag Cloud"
 msgstr "Záložkový tag cloud"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:20
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:40
 #: views/admin/sample_page.view.php:20
 #: views/admin/sample_page_gutenberg.view.php:40
 msgid "Accordion Tag Cloud"
 msgstr "Akkordeonový tag cloud"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:26
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:50
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:44
 #: views/admin/sample_page.view.php:26
 #: views/admin/sample_page_gutenberg.view.php:50
 #: views/admin/settings_front_end_shortcodes.view.php:44
 msgid "Alphabetical Tag Cloud"
 msgstr "Abecední tag cloud"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:32
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:60
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:33
 #: views/admin/sample_page.view.php:32
 #: views/admin/sample_page_gutenberg.view.php:60
 #: views/admin/settings_front_end_shortcodes.view.php:33
 msgid "Tag List"
 msgstr "Seznam tagů"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:38
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:70
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:55
 #: views/admin/sample_page.view.php:38
 #: views/admin/sample_page_gutenberg.view.php:70
 #: views/admin/settings_front_end_shortcodes.view.php:55
 msgid "Alphabetical Tag Index"
 msgstr "Abecední index tagů"
 
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:9
 #: views/admin/sample_page_gutenberg.view.php:9
 msgid ""
 "The following blocks use a variety of parameters so that you can get an "
@@ -1125,7 +898,6 @@ msgstr ""
 "představu o možnostech. Po upgradu pluginu se nebojte vygenerovat novou "
 "vzorovou stránku s více funkcemi."
 
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:15
 #: views/admin/sample_page_gutenberg.view.php:15
 msgid ""
 "This page was created while you had the Gutenberg editor enabled. Therefore "
@@ -1134,12 +906,10 @@ msgstr ""
 "Tato stránka byla vytvořena, když jste měli povolený editor Gutenberg. "
 "Proto se funkce zobrazují pouze, když je Gutenberg aktivní."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:9
 #: views/admin/settings_back_end_filters.view.php:9
 msgid "Display filter on the \"Posts\" screen."
 msgstr "Zobrazit filtr na obrazovce \"Příspěvky\"."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:10
 #: views/admin/settings_back_end_filters.view.php:10
 msgid ""
 "Add a pull-down menu to the filters above the list of posts. If you filter "
@@ -1154,12 +924,10 @@ msgstr ""
 "aby menu nebránilo vaší obrazovce, pokud používáte velký počet skupin. "
 "Nemusí fungovat se všemi taxonomií."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:17
 #: views/admin/settings_back_end_filters.view.php:17
 msgid "Display filter on the \"Tags\" screen."
 msgstr "Zobrazit filtr na obrazovce \"Tagy\"."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:18
 #: views/admin/settings_back_end_filters.view.php:18
 msgid ""
 "Add a filter to the list of tags. Disable it here if it conflicts with "
@@ -1168,12 +936,6 @@ msgstr ""
 "Přidejte filtr do seznamu tagů. Zde jej deaktivujte, pokud koliduje s "
 "jinými pluginy nebo motivy."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:23
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:15
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:15
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:116
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:23
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:24
 #: views/admin/settings_back_end_filters.view.php:23
 #: views/admin/settings_back_end_gutenberg.view.php:15
 #: views/admin/settings_back_end_multilingual.view.php:15
@@ -1183,12 +945,10 @@ msgstr ""
 msgid "Save Settings"
 msgstr "Uložit nastavení"
 
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:9
 #: views/admin/settings_back_end_gutenberg.view.php:9
 msgid "Gutenberg block preview"
 msgstr "Náhled bloku Gutenberg"
 
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:10
 #: views/admin/settings_back_end_gutenberg.view.php:10
 msgid ""
 "Some blocks can show an approximate preview in the Gutenberg editor. If you "
@@ -1197,12 +957,10 @@ msgstr ""
 "Některé bloky mohou zobrazit přibližný náhled v editoru Gutenberg. Pokud "
 "tuto možnost deaktivujete, všechny bloky zobrazí statickou ikonu s textem."
 
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:9
 #: views/admin/settings_back_end_multilingual.view.php:9
 msgid "Keep groups of translations in sync"
 msgstr "Udržovat skupiny překladů synchronizované"
 
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:10
 #: views/admin/settings_back_end_multilingual.view.php:10
 msgid ""
 "If you activate this option, we try to sync the groups across all language "
@@ -1213,7 +971,6 @@ msgstr ""
 "všemi jazykovými verzemi štítku, když ho uložíte. Deaktivujte to, abyste "
 "nastavili skupiny nezávisle."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:4
 #: views/admin/settings_front_end_shortcodes.view.php:4
 msgid ""
 "All Tag Groups features are available as Gutenberg blocks. You can also use "
@@ -1222,24 +979,14 @@ msgstr ""
 "Všechny funkce Tag Groups jsou k dispozici jako bloky Gutenberg. Můžete "
 "také použít shortcodes."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:8
 #: views/admin/settings_front_end_shortcodes.view.php:8
 msgid "Click on the features for more information."
 msgstr "Klikněte na funkce pro více informací."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:15
 #: views/admin/settings_front_end_shortcodes.view.php:15
 msgid "Display the tags in a tabbed tag cloud."
 msgstr "Zobrazit štítky v kartovém mraku štítků."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:16
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:27
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:38
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:49
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:60
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:71
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:84
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:89
 #: views/admin/settings_front_end_shortcodes.view.php:16
 #: views/admin/settings_front_end_shortcodes.view.php:27
 #: views/admin/settings_front_end_shortcodes.view.php:38
@@ -1251,12 +998,6 @@ msgstr "Zobrazit štítky v kartovém mraku štítků."
 msgid "Example"
 msgstr "Příklad"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:18
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:29
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:40
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:51
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:62
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:73
 #: views/admin/settings_front_end_shortcodes.view.php:18
 #: views/admin/settings_front_end_shortcodes.view.php:29
 #: views/admin/settings_front_end_shortcodes.view.php:40
@@ -1266,12 +1007,6 @@ msgstr "Příklad"
 msgid "Parameters"
 msgstr "Parametry"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:19
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:30
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:41
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:52
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:63
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:74
 #: views/admin/settings_front_end_shortcodes.view.php:19
 #: views/admin/settings_front_end_shortcodes.view.php:30
 #: views/admin/settings_front_end_shortcodes.view.php:41
@@ -1283,49 +1018,39 @@ msgstr "Parametry"
 msgid "Please find the parameters in the <a %s>documentation</a>."
 msgstr "Najděte prosím parametry v <a %s>dokumentaci</a>."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:22
 #: views/admin/settings_front_end_shortcodes.view.php:22
 msgid "Accordion"
 msgstr "Akordeon"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:26
 #: views/admin/settings_front_end_shortcodes.view.php:26
 msgid "Display the tags in an accordion."
 msgstr "Zobrazit štítky v akordeonu."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:37
 #: views/admin/settings_front_end_shortcodes.view.php:37
 msgid "Display the tags in lists under tag groups."
 msgstr "Zobrazit štítky v seznamech pod skupinami štítků."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
 #: views/admin/settings_front_end_shortcodes.view.php:48
 msgid "Display the tags in tabbed tag cloud with first letters as tabs."
 msgstr "Zobrazit štítky v kartovém mraku štítků s prvními písmeny jako kartami."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
 #: views/admin/settings_front_end_shortcodes.view.php:48
 #: views/admin/settings_front_end_shortcodes.view.php:59
 msgid "(Not tested with right-to-left languages.)"
 msgstr "(Nebylo testováno s jazyky píšícími zprava doleva.)"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
 #: views/admin/settings_front_end_shortcodes.view.php:59
 msgid "Display the tags in a list with first letters as heading."
 msgstr "Zobrazit štítky v seznamu s prvními písmeny jako nadpisem."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:67
 #: views/admin/settings_front_end_shortcodes.view.php:67
 msgid "Group Information"
 msgstr "Informace o skupině"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:70
 #: views/admin/settings_front_end_shortcodes.view.php:70
 msgid "Display information about tag groups."
 msgstr "Zobrazit informace o skupinách štítků."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:82
 #: views/admin/settings_front_end_shortcodes.view.php:82
 msgid ""
 "The function <b>tag_groups_cloud</b> accepts the same parameters as the "
@@ -1335,12 +1060,10 @@ msgstr ""
 "Funkce <b>tag_groups_cloud</b> přijímá stejné parametry jako shortcode "
 "[tag_groups_cloud], s výjimkou těch, které určují karty a stylování."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:83
 #: views/admin/settings_front_end_shortcodes.view.php:83
 msgid "By default it returns a string with the html for a tabbed tag cloud."
 msgstr "Ve výchozím nastavení vrací řetězec s HTML pro záložkový tag cloud."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:88
 #: views/admin/settings_front_end_shortcodes.view.php:88
 msgid ""
 "If the optional second parameter is set to 'true', the function returns a "
@@ -1349,20 +1072,14 @@ msgstr ""
 "Pokud je volitelný druhý parametr nastaven na 'true', funkce vrátí "
 "vícerozměrné pole obsahující skupiny tagů a tagy."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:102
 #: views/admin/settings_front_end_shortcodes.view.php:102
 msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
 msgstr "Povolit shortcode v postranních widgete (pokud není stejně viditelný)."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:108
 #: views/admin/settings_front_end_shortcodes.view.php:108
 msgid "Always load shortcode scripts."
 msgstr "Vždy načíst skripty shortcode."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:109
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:9
-#: dist/tag-groups/views/admin/settings_home.view.php:8
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
 #: views/admin/settings_front_end_shortcodes.view.php:109
 #: views/admin/settings_front_end_themes.view.php:9
 #: views/admin/settings_home.view.php:8
@@ -1370,7 +1087,6 @@ msgstr "Vždy načíst skripty shortcode."
 msgid "Click for more information"
 msgstr "Klikněte pro více informací"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:112
 #: views/admin/settings_front_end_shortcodes.view.php:112
 msgid ""
 "Turn off to load the scripts only on posts and pages where a shortcode "
@@ -1379,19 +1095,16 @@ msgstr ""
 "Vypněte, abyste načítali skripty pouze na příspěvcích a stránkách, kde se "
 "shortcode objevuje."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:113
 #: views/admin/settings_front_end_shortcodes.view.php:113
 msgid "Turn on if you use these shortcodes in widgets."
 msgstr "Zapněte, pokud používáte tyto shortcody ve widgete."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:8
 #: views/admin/settings_front_end_themes.view.php:8
 msgid ""
 "Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
 "Cloud."
 msgstr "Zde si můžete vybrat téma pro záložkový tag cloud a akordeonový tag cloud."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:14
 #: views/admin/settings_front_end_themes.view.php:14
 msgid ""
 "New themes can be created with the <a "
@@ -1402,7 +1115,6 @@ msgstr ""
 "href=\"http://jqueryui.com/themeroller/\" target=\"_blank\">jQuery UI "
 "ThemeRoller</a>:"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:16
 #: views/admin/settings_front_end_themes.view.php:16
 msgid ""
 "On the page \"Theme Roller\" you can customize all features or pick one set "
@@ -1411,7 +1123,6 @@ msgstr ""
 "Na stránce \"Theme Roller\" si můžete přizpůsobit všechny funkce nebo "
 "vybrat jednu sadu z galerie. Dokončete to stisknutím tlačítka \"stáhnout\"."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:17
 #: views/admin/settings_front_end_themes.view.php:17
 msgid ""
 "On the next page (\"Download Builder\") you will need to select the version "
@@ -1424,7 +1135,6 @@ msgstr ""
 "stažením zadáte na dně jako \"CSS Scope\" <b>.tag-groups-cloud</b> (včetně "
 "tečky)."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:18
 #: views/admin/settings_front_end_themes.view.php:18
 msgid ""
 "Then you unpack the downloaded zip file. You will need the \"images\" "
@@ -1433,7 +1143,6 @@ msgstr ""
 "Poté rozbalíte stažený zip soubor. Budete potřebovat složku \"images\" a "
 "soubor \"jquery-ui.theme.min.css\"."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:19
 #: views/admin/settings_front_end_themes.view.php:19
 msgid ""
 "Create a new folder inside your <i>wp-content/uploads</i> folder (for "
@@ -1442,22 +1151,18 @@ msgstr ""
 "Vytvořte novou složku uvnitř vaší <i>wp-content/uploads</i> složky "
 "(například \"my-theme\") a zkopírujte tam tyto dvě položky."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:20
 #: views/admin/settings_front_end_themes.view.php:20
 msgid "Enter the name of this new folder (for example \"my-theme\") below."
 msgstr "Zadejte název této nové složky (například \"my-theme\") níže."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:42
 #: views/admin/settings_front_end_themes.view.php:42
 msgid "own theme"
 msgstr "vlastní téma"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
 #: views/admin/settings_front_end_themes.view.php:52
 msgid "Don't load a theme."
 msgstr "Nenačítat téma."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
 #: views/admin/settings_front_end_themes.view.php:52
 msgid ""
 "Here you can turn off jQuery UI themes if your WordPress theme brings its "
@@ -1466,34 +1171,28 @@ msgstr ""
 "Zde můžete vypnout jQuery UI témata, pokud váš WordPress téma přináší své "
 "vlastní jQuery UI téma, abyste se vyhnuli konfliktům."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:57
 #: views/admin/settings_front_end_themes.view.php:57
 msgid "Further options"
 msgstr "Další možnosti"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:65
 #: views/admin/settings_front_end_themes.view.php:65
 msgid "Use jQuery.  (Default is on. Other plugins might override this setting.)"
 msgstr ""
 "Použít jQuery. (Výchozí je zapnuto. Jiné pluginy mohou přepsat toto "
 "nastavení.)"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:73
 #: views/admin/settings_front_end_themes.view.php:73
 msgid "Tabs triggered by hovering mouse pointer (without clicking)."
 msgstr "Záložky vyvolané pohybem ukazatele myši (bez kliknutí)."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:80
 #: views/admin/settings_front_end_themes.view.php:80
 msgid "Collapsible tabs (toggle open/close)."
 msgstr "Skrývací karty (přepnout otevřít/zavřít)."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:83
 #: views/admin/settings_front_end_themes.view.php:83
 msgid "HTML in tag description:"
 msgstr "HTML v popisu tagu:"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
 #: views/admin/settings_front_end_themes.view.php:91
 msgid ""
 "By default the description appears in a tooltip when you hover the mouse "
@@ -1502,7 +1201,6 @@ msgstr ""
 "Ve výchozím nastavení se popis zobrazuje v nápovědě, když najedete myší na "
 "tag v tagovém cloudu."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
 #: views/admin/settings_front_end_themes.view.php:91
 msgid ""
 "If you don't trust all users of your site, remove the HTML or use a plugin "
@@ -1512,84 +1210,67 @@ msgstr ""
 "použijte plugin, který poskytne schopnost unfiltered_html pouze uživatelům, "
 "kterým důvěřujete."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:97
 #: views/admin/settings_front_end_themes.view.php:97
 msgid "Save Theme Options"
 msgstr "Uložit možnosti motivu"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:3
 #: views/admin/settings_help.view.php:3
 msgid "Search for settings"
 msgstr "Hledat nastavení"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:3
 #: views/admin/settings_help.view.php:3
 msgid "Search for setting pages. Type a space to show all settings."
 msgstr "Hledat stránky nastavení. Zadejte mezeru pro zobrazení všech nastavení."
 
-#: dist/tag-groups/views/admin/settings_help.view.php:6
 #: views/admin/settings_help.view.php:6
 msgid "Search Results"
 msgstr "Výsledky hledání"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:8
 #: views/admin/settings_help.view.php:8
 msgid "Nothing found"
 msgstr "Nenašlo se nic"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:2
 #: views/admin/settings_home.view.php:2
 msgid "Active Taxonomies"
 msgstr "Aktivní taxonomie"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:11
 #: views/admin/settings_home.view.php:11
 msgid "Group Statistics"
 msgstr "Statistika skupiny"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:13
 #: views/admin/settings_home.view.php:13
 msgid "for the selected language"
 msgstr "pro vybraný jazyk"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:23
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:33
 #: views/admin/settings_home.view.php:23
 #: views/admin/settings_taxonomies.view.php:33
 msgid "go to tag group administration"
 msgstr "přejít do správy skupin tagů"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:9
 #: views/admin/settings_rest_api.view.php:9
 msgid "Enable Tag Groups Public API Access"
 msgstr "Povolit veřejný přístup k API Tag Groups"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:10
 #: views/admin/settings_rest_api.view.php:10
 msgid "Enable public access to tag groups endpoint /wp-json/tag-groups/v1/groups/."
 msgstr ""
 "Povolit veřejný přístup k koncovému bodu skupin tagů "
 "/wp-json/tag-groups/v1/groups/."
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:17
 #: views/admin/settings_rest_api.view.php:17
 msgid "Enable Terms Public API Access"
 msgstr "Povolit veřejný přístup k API Terms"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:18
 #: views/admin/settings_rest_api.view.php:18
 msgid "Enable public access to terms endpoint /wp-json/tag-groups/v1/terms/."
 msgstr ""
 "Povolit veřejný přístup k koncovému bodu termínů "
 "/wp-json/tag-groups/v1/terms/."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:2
 #: views/admin/settings_taxonomies.view.php:2
 msgid "Choose the taxonomies for which you want to use Tag Groups:"
 msgstr "Vyberte taxonomie, pro které chcete používat Tag-Groups:"
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:5
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:5
 #: views/admin/settings_taxonomies.view.php:5
 #: views/admin/setup_wizard_taxonomies.view.php:5
 msgid ""
@@ -1603,7 +1284,6 @@ msgstr ""
 "uvedené zde nemusí být přístupné v administraci. Pokud nerozumíte, co se "
 "zde děje, jednoduše nechte výchozí nastavení."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:6
 #: views/admin/settings_taxonomies.view.php:6
 msgid ""
 "<b>Please deselect taxonomies that you don't use. Using several taxonomies "
@@ -1614,12 +1294,10 @@ msgstr ""
 "taxonomií pro stejný typ příspěvku nebo hierarchických taxonomií (jako "
 "kategorie) je experimentální a není podporováno.</b>"
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:7
 #: views/admin/settings_taxonomies.view.php:7
 msgid "To see the post type, hover your mouse over the option."
 msgstr "Chcete-li vidět post type, přesuňte myš nad možnost."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:8
 #: views/admin/settings_taxonomies.view.php:8
 msgid ""
 "If you use a custom taxonomy, make sure that the attribute \"Public\" is "
@@ -1628,7 +1306,6 @@ msgstr ""
 "Pokud používáte vlastní taxonomy, ujistěte se, že je atribut \"Public\" "
 "nastaven na \"true\" a \"Hierarchical\" na \"false\"."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:15
 #: views/admin/settings_taxonomies.view.php:15
 msgid ""
 "Show hierarchical taxonomies. Not all Tag Groups features will work with "
@@ -1637,17 +1314,14 @@ msgstr ""
 "Zobrazit hierarchické taxonomies. Ne všechny funkce Tag Groups budou "
 "fungovat s těmito taxonomies."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:54
 #: views/admin/settings_taxonomies.view.php:54
 msgid "Save Taxonomies"
 msgstr "Uložit Taxonomies"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid "Export"
 msgstr "Exportovat"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid ""
 "Use this button to export all Tag Groups settings and groups and all terms "
@@ -1656,7 +1330,6 @@ msgstr ""
 "Použijte toto tlačítko k exportu všech nastavení a skupin Tag Groups a "
 "všech termínů, které jsou přiřazeny ke skupině, do souborů."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid ""
 "You can import both files separately. Category hierarchy won't be saved. "
@@ -1667,17 +1340,14 @@ msgstr ""
 "uložena. Když obnovíte termíny, které byly smazány, obdrží nové ID a musíte "
 "je znovu přiřadit k příspěvkům. Exportování nemůže nahradit zálohu."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:7
 #: views/admin/settings_tools_export_import.view.php:7
 msgid "Export Files"
 msgstr "Exportovat Soubory"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "Import"
 msgstr "Importovat"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid ""
 "Below you can import previously exported settings/groups or terms from a "
@@ -1686,22 +1356,18 @@ msgstr ""
 "Níže můžete importovat dříve exportovaná nastavení/skupiny nebo termíny ze "
 "souboru."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "It is recommended to back up the database of your site before proceeding."
 msgstr "Doporučuje se zálohovat databázi vašeho webu před pokračováním."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "Please import the settings before the terms."
 msgstr "Prosím, importujte nastavení před termíny."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:17
 #: views/admin/settings_tools_export_import.view.php:17
 msgid "Import File"
 msgstr "Importovat Soubory"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:4
 #: views/admin/settings_tools_reset.view.php:4
 msgid ""
 "Use this button to delete all tag groups and assignments. Your tags will "
@@ -1710,7 +1376,6 @@ msgstr ""
 "Použijte toto tlačítko k odstranění všech skupin tagů a přiřazení. Vaše "
 "tagy nebudou změněny. Zaškrtněte políčko pro potvrzení."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:5
 #: views/admin/settings_tools_reset.view.php:5
 msgid ""
 "Please keep in mind that the tag assignments cannot be recovered by the "
@@ -1719,74 +1384,60 @@ msgstr ""
 "Mějte prosím na paměti, že přiřazení tagů nelze obnovit pomocí funkce "
 "exportu/importu."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:7
 #: views/admin/settings_tools_reset.view.php:7
 msgid "I know what I am doing."
 msgstr "Vím, co dělám."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:10
 #: views/admin/settings_tools_reset.view.php:10
 msgid "Delete Groups"
 msgstr "Smazat Skupiny"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:13
 #: views/admin/settings_tools_reset.view.php:13
 msgid "Delete Settings and Groups"
 msgstr "Smazat Nastavení a Skupiny"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:21
 #: views/admin/settings_tools_reset.view.php:21
 msgid "Delete all groups and settings when uninstalling the plugin."
 msgstr "Smazat všechny skupiny a nastavení při odinstalaci pluginu."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:7
 #: views/admin/settings_troubleshooting_debug.view.php:7
 msgid "Debug mode is on."
 msgstr "Režim ladění je zapnutý."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:15
 #: views/admin/settings_troubleshooting_debug.view.php:15
 msgid "Verbose logging is enabled with CM_DEBUG."
 msgstr "Verbose logging je povolen s CM_DEBUG."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:17
 #: views/admin/settings_troubleshooting_debug.view.php:17
 msgid "Verbose logging is on."
 msgstr "Verbose logging je zapnutý."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:19
 #: views/admin/settings_troubleshooting_debug.view.php:19
 msgid "Turn off "
 msgstr "Vypnout "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:24
 #: views/admin/settings_troubleshooting_debug.view.php:24
 msgid "Verbose logging is off."
 msgstr "Verbose logging je vypnutý."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:26
 #: views/admin/settings_troubleshooting_debug.view.php:26
 msgid "Turn on"
 msgstr "Zapnout"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:31
 #: views/admin/settings_troubleshooting_debug.view.php:31
 msgid "Debug mode is off."
 msgstr "Debugovací režim je vypnutý."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:40
 #: views/admin/settings_troubleshooting_debug.view.php:40
 #. translators: %s is the href attribute with URL
 #, php-format
 msgid "Learn more <a %s>about debugging</a>."
 msgstr "Zjistit více <a %s>o ladění</a>."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
 #: views/admin/settings_troubleshooting_first_aid.view.php:8
 msgid "Migrate tags to the new format of Tag Groups."
 msgstr "Migrace tagů na nový formát skupin tagů."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
 #: views/admin/settings_troubleshooting_first_aid.view.php:8
 msgid ""
 "The plugin automatically migrates tags to the new format and tries to keep "
@@ -1799,12 +1450,10 @@ msgstr ""
 "změny. Možná budete muset také ručně migrovat tagy poté, co jste povolili "
 "taxonomii, která již obsahovala nesledované tagy."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:9
 #: views/admin/settings_troubleshooting_first_aid.view.php:9
 msgid "Migrate"
 msgstr "Migrace"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:17
 #: views/admin/settings_troubleshooting_first_aid.view.php:17
 msgid ""
 "Running the maintenance can solve issues that you encounter during "
@@ -1813,17 +1462,14 @@ msgstr ""
 "Spuštění údržby může vyřešit problémy, které se vyskytnou během filtrování "
 "podle skupin tagů."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:18
 #: views/admin/settings_troubleshooting_first_aid.view.php:18
 msgid "Maintenance"
 msgstr "Údržba"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
 #: views/admin/settings_troubleshooting_first_aid.view.php:24
 msgid "Reset the filter on the tags page to show all tags."
 msgstr "Resetujte filtr na stránce tagů, abyste zobrazili všechny tagy."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
 #: views/admin/settings_troubleshooting_first_aid.view.php:24
 msgid ""
 "Use it if a JavaScript error disables the filter menu. Note that it is "
@@ -1832,430 +1478,107 @@ msgstr ""
 "Použijte to, pokud JavaScriptová chyba deaktivuje nabídku filtrů. Všimněte "
 "si, že je stále doporučeno zjistit příčinu chyby."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:27
-#: dist/tag-groups/views/partials/admin_footer.view.php:3
 #: views/admin/settings_troubleshooting_first_aid.view.php:27
 #: views/partials/admin_footer.view.php:3
 msgid "Reset Tag Filter"
 msgstr "Resetovat filtr tagů"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:5
 #: views/admin/settings_troubleshooting_process.view.php:5
 msgid "Please stay on this page until all processes have finished."
 msgstr "Prosím, zůstaňte na této stránce, dokud všechny procesy neskončí."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:10
 #: views/admin/settings_troubleshooting_process.view.php:10
 msgid "There have been errors."
 msgstr "Došlo k chybám."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:12
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:19
 #: views/admin/settings_troubleshooting_process.view.php:12
 #: views/admin/settings_troubleshooting_process.view.php:19
 msgid "Continue"
 msgstr "Pokračovat"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:17
 #: views/admin/settings_troubleshooting_process.view.php:17
 msgid "Finished!"
 msgstr "Hotovo!"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:24
 #: views/admin/settings_troubleshooting_process.view.php:24
 msgid "The following terms cannot be used:"
 msgstr "Následující termíny nelze použít:"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:128
 #: views/admin/settings_troubleshooting_process.view.php:128
 msgid "Number of processed items: "
 msgstr "Počet zpracovaných položek: "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:130
 #: views/admin/settings_troubleshooting_process.view.php:130
 msgid "Number of changed items: "
 msgstr "Počet změněných položek: "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:5
 #: views/admin/settings_troubleshooting_system.view.php:5
 msgid "WordPress Version"
 msgstr "WordPress Verze"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:8
 #: views/admin/settings_troubleshooting_system.view.php:8
 msgid "Site URL"
 msgstr "URL webu"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:11
 #: views/admin/settings_troubleshooting_system.view.php:11
 msgid "Home URL"
 msgstr "URL domovské stránky"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:15
 #: views/admin/settings_troubleshooting_system.view.php:15
 msgid "Active Theme"
 msgstr "Aktivní téma"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:17
 #: views/admin/settings_troubleshooting_system.view.php:17
 msgid "Version"
 msgstr "Verze"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:23
 #: views/admin/settings_troubleshooting_system.view.php:23
 msgid "Checking..."
 msgstr "Kontroluji..."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:26
 #: views/admin/settings_troubleshooting_system.view.php:26
 msgid "Show the Response"
 msgstr "Zobrazit odpověď"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:72
 #: views/admin/settings_troubleshooting_system.view.php:72
 msgid "passed"
 msgstr "úspěšně"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:98
 #: views/admin/settings_troubleshooting_system.view.php:98
 msgid "failed"
 msgstr "neúspěšně"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:105
 #: views/admin/settings_troubleshooting_system.view.php:105
 msgid "Benchmarks"
 msgstr "Měření výkonu"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:125
 #: views/admin/settings_troubleshooting_system.view.php:125
 msgid "Cache"
 msgstr "Mezipaměť"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:127
 #: views/admin/settings_troubleshooting_system.view.php:127
 msgid "Tag groups pro only"
 msgstr "Skupiny tagů pro pouze"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:152
 #: views/admin/settings_troubleshooting_system.view.php:152, fuzzy
 msgid "Server"
 msgstr "Server"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:188
 #: views/admin/settings_troubleshooting_system.view.php:188
 msgid "Constants"
 msgstr "Konstanty"
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:3
 #: views/admin/setup_wizard_finished.view.php:3
 msgid "Well done!"
 msgstr "Dobrá práce!"
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:6
 #: views/admin/setup_wizard_finished.view.php:6
 msgid "Now go the Tag Group Administration."
 msgstr "Nyní přejděte na administraci skupin tagů."
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:10
 #: views/admin/setup_wizard_finished.view.php:10
 msgid "Or preview the sample page here."
 msgstr "Nebo si zde prohlédněte ukázkovou stránku."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:14
-#, php-format
-msgid ""
-"Or go to the <a %s>Tag Groups settings</a> or visit the <a "
-"%s>documentation</a>."
-msgstr ""
-"Nebo přejděte do <a %s>nastavení skupin tagů</a> nebo navštivte <a "
-"%s>dokumentaci</a>."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:16
-#, php-format
-msgid ""
-"Now go to the <a %s>Tag Groups settings</a>, or visit the <a "
-"%s>documentation</a>."
-msgstr ""
-"Nyní přejděte do <a %s>nastavení skupin štítků</a>, nebo navštivte <a "
-"%s>dokumentaci</a>."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:19
-#: views/admin/setup_wizard_finished.view.php:19
-msgid ""
-"If you need to launch the Setup Wizard again, you can find it in the "
-"settings. Just enter \"wizard\" in the search field."
-msgstr ""
-"Pokud potřebujete znovu spustit Průvodce nastavením, najdete ho v "
-"nastavení. Stačí zadat \"wizard\" do vyhledávacího pole."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:21
-#: views/admin/setup_wizard_finished.view.php:21
-msgid "Happy tagging!"
-msgstr "Šťastné štítkování!"
-
-#: dist/tag-groups/views/admin/setup_wizard_header.view.php:1
-#: views/admin/setup_wizard_header.view.php:1
-msgid "Tag Groups Setup Wizard"
-msgstr "Průvodce nastavením skupin štítků"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:3
-#: views/admin/setup_wizard_sample_content.view.php:3
-msgid ""
-"Now you are ready to create your own tag groups. If you prefer to start out "
-"from a sample, we will create for you three groups and three tags. You can "
-"play around with them, rename or delete them."
-msgstr ""
-"Nyní jste připraveni vytvořit si vlastní skupiny štítků. Pokud dáváte "
-"přednost začít od vzorku, vytvoříme pro vás tři skupiny a tři štítky. "
-"Můžete si s nimi hrát, přejmenovávat je nebo je mazat."
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:8
-#: views/admin/setup_wizard_sample_content.view.php:8
-msgid "Create sample groups:"
-msgstr "Vytvořit vzorové skupiny:"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:16
-#: views/admin/setup_wizard_sample_content.view.php:16
-msgid "Create sample tags in these groups:"
-msgstr "Vytvořit vzorové štítky v těchto skupinách:"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:34
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:33
-#: views/admin/setup_wizard_sample_content.view.php:34
-#: views/admin/setup_wizard_taxonomies.view.php:33
-msgid "Next Step"
-msgstr "Další krok"
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:3
-#: views/admin/setup_wizard_start.view.php:3
-msgid ""
-"On the following pages we will guide you through the basic settings that "
-"you need for the most common features."
-msgstr ""
-"Na následujících stránkách vás provedeme základními nastaveními, která "
-"potřebujete pro nejběžnější funkce."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
-#: views/admin/setup_wizard_start.view.php:4
-msgid ""
-"You can later make changes or fine-tune the details in the Tag Groups "
-"settings."
-msgstr "Později můžete provést změny nebo doladit detaily v nastavení skupin štítků."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
-#: views/admin/setup_wizard_start.view.php:4
-msgid "(show me the menu)"
-msgstr "(ukázat menu)"
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:5
-#: views/admin/setup_wizard_start.view.php:5
-msgid ""
-"Feel free to abort the Setup Wizard any time and continue on your own path. "
-"You can also launch it again at a later time."
-msgstr ""
-"Neváhejte kdykoli přerušit Průvodce nastavením a pokračovat vlastní cestou. "
-"Můžete ho také znovu spustit později."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:7
-#: views/admin/setup_wizard_start.view.php:7
-msgid "The wizard will offer more options after upgrading to premium."
-msgstr "Průvodce nabídne více možností po upgradu na prémiovou verzi."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
-#: views/admin/setup_wizard_taxonomies.view.php:2
-msgid "Choose the taxonomies for which you want to use tag groups."
-msgstr "Vyberte taxonomie, pro které chcete používat skupiny štítků."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
-#: views/admin/setup_wizard_taxonomies.view.php:2
-msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
-msgstr ""
-"Ve většině případů udělá svou práci výchozí taxonomie <b>Tags "
-"(post_tag)</b>."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:22
-#: views/admin/setup_wizard_taxonomies.view.php:22
-msgid "post type"
-msgstr "post type"
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:30
-#: views/admin/setup_wizard_taxonomies.view.php:30
-msgid "You will find more options in the Tag Groups settings."
-msgstr "V nastavení skupin štítků naleznete více možností."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:3
-#: views/admin/tag_groups_admin.view.php:3
-msgid "Tag Group Administration"
-msgstr "Administrace skupin štítků"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:10
-#: views/admin/tag_groups_admin.view.php:10
-msgid "Filter by label"
-msgstr "Filtr podle štítku"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:22
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:35
-#: views/admin/tag_groups_admin.view.php:22
-#: views/admin/tag_groups_admin.view.php:35
-msgid "Tag Group name"
-msgstr "Název skupiny štítků"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:24
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:37
-#: views/admin/tag_groups_admin.view.php:24
-#: views/admin/tag_groups_admin.view.php:37
-msgid "Number of assigned tags"
-msgstr "Počet přiřazených štítků"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:28
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:41
-#: views/admin/tag_groups_admin.view.php:28
-#: views/admin/tag_groups_admin.view.php:41
-msgid "Actions"
-msgstr "Akce"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:29
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:42
-#: views/admin/tag_groups_admin.view.php:29
-#: views/admin/tag_groups_admin.view.php:42
-msgid "Change order"
-msgstr "Změnit pořadí"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:30
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:43
-#: views/admin/tag_groups_admin.view.php:30
-#: views/admin/tag_groups_admin.view.php:43
-msgid "Group ID"
-msgstr "ID skupiny"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:63
-#: views/admin/tag_groups_admin.view.php:63
-msgid "Edit"
-msgstr "Upravit"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:64
-#: views/admin/tag_groups_admin.view.php:64
-msgid "Create"
-msgstr "Vytvořit"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:65
-#: views/admin/tag_groups_admin.view.php:65
-msgid "new"
-msgstr "nový"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:66
-#: views/admin/tag_groups_admin.view.php:66
-msgid "label"
-msgstr "štítek"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:67
-#: views/admin/tag_groups_admin.view.php:67
-msgid "Delete this group."
-msgstr "Smazat tuto skupinu."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:68
-#: views/admin/tag_groups_admin.view.php:68
-msgid "Create a new group below."
-msgstr "Vytvořte novou skupinu níže."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:69
-#: views/admin/tag_groups_admin.view.php:69
-msgid "Add New Tag Group"
-msgstr "Přidat novou skupinu štítků"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:70
-#: views/admin/tag_groups_admin.view.php:70
-msgid "move up"
-msgstr "přesunout nahoru"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:71
-#: views/admin/tag_groups_admin.view.php:71
-msgid "move down"
-msgstr "přesunout dolů"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:72
-#: views/admin/tag_groups_admin.view.php:72
-msgid "reload"
-msgstr "aktualizovat"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:73
-#: views/admin/tag_groups_admin.view.php:73
-msgid "next page"
-msgstr "další stránka"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:74
-#: views/admin/tag_groups_admin.view.php:74
-msgid "previous page"
-msgstr "předchozí stránka"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:75
-#: views/admin/tag_groups_admin.view.php:75
-msgid "go to page:"
-msgstr "přejít na stránku:"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:76
-#: views/admin/tag_groups_admin.view.php:76
-msgid "Show posts"
-msgstr "Zobrazit příspěvky"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:77
-#: views/admin/tag_groups_admin.view.php:77
-msgid "Show tags"
-msgstr "Zobrazit štítky"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:168
-#: views/admin/tag_groups_admin.view.php:168
-msgid "Do you really want to delete this tag group?"
-msgstr "Opravdu chcete smazat tuto skupinu štítků?"
-
-#: dist/tag-groups/views/partials/admin_feed_fallback.view.php:2
-#, php-format
-msgid "Please visit <a %s>%s</a>."
-msgstr "Prosím navštivte <a %s>%s</a>."
-
-#: dist/tag-groups/views/partials/admin_feed_footer.view.php:3
-#: views/partials/admin_feed_footer.view.php:3
-msgid "Read more"
-msgstr "Přečtěte si více"
-
-#: dist/tag-groups/views/partials/admin_footer_rating.view.php:4
-#, php-format
-msgid "Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s"
-msgstr "Děkujeme, že používáte Tag Groups | %1sTaxoPress.com%2s | Verze %3s"
-
-#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:10
-#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:11
-#: views/partials/bulk_admin_footer.view.php:10
-#: views/partials/bulk_admin_footer.view.php:11
-msgid "Assign to"
-msgstr "Přiřadit k"
-
-#: dist/tag-groups/views/partials/filter_admin_footer.view.php:23
-#: views/partials/filter_admin_footer.view.php:23
-msgid "Filter off"
-msgstr "Filtr vypnut"
-
-#: dist/tag-groups/views/partials/language_notice.view.php:2
-#: views/partials/language_notice.view.php:2
-msgid "Please select one of the languages above to see the correct tag groups!"
-msgstr ""
-"Prosím vyberte jednu z výše uvedených jazyků pro zobrazení správných skupin "
-"tagů!"
-
-#: dist/tag-groups/views/partials/quick_edit_tag.view.php:3
-#: views/partials/quick_edit_tag.view.php:3
-msgid "Groups"
-msgstr "Skupiny"
-
-#: includes-core/TagGroupsCoreAdmin.php:44
-#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
-#, php-format
-msgid ""
-"You're using Tag Groups Free. The Pro version has more features and "
-"support. %1$sUpgrade to Pro%2$s"
-msgstr ""
-"Používáte Tag Groups Free. Pro verze má více funkcí a podporu. %1$sPřejít "
-"na Pro%2$s"
 
 #: views/admin/setup_wizard_finished.view.php:14
 #. translators: %1$s and %2$s are href attributes with URLs
@@ -2277,14 +1600,221 @@ msgstr ""
 "Nyní přejděte na <a %1$s>nastavení skupin tagů</a>, nebo navštivte <a "
 "%2$s>dokumentaci</a>."
 
+#: views/admin/setup_wizard_finished.view.php:19
+msgid ""
+"If you need to launch the Setup Wizard again, you can find it in the "
+"settings. Just enter \"wizard\" in the search field."
+msgstr ""
+"Pokud potřebujete znovu spustit Průvodce nastavením, najdete ho v "
+"nastavení. Stačí zadat \"wizard\" do vyhledávacího pole."
+
+#: views/admin/setup_wizard_finished.view.php:21
+msgid "Happy tagging!"
+msgstr "Šťastné štítkování!"
+
+#: views/admin/setup_wizard_header.view.php:1
+msgid "Tag Groups Setup Wizard"
+msgstr "Průvodce nastavením skupin štítků"
+
+#: views/admin/setup_wizard_sample_content.view.php:3
+msgid ""
+"Now you are ready to create your own tag groups. If you prefer to start out "
+"from a sample, we will create for you three groups and three tags. You can "
+"play around with them, rename or delete them."
+msgstr ""
+"Nyní jste připraveni vytvořit si vlastní skupiny štítků. Pokud dáváte "
+"přednost začít od vzorku, vytvoříme pro vás tři skupiny a tři štítky. "
+"Můžete si s nimi hrát, přejmenovávat je nebo je mazat."
+
+#: views/admin/setup_wizard_sample_content.view.php:8
+msgid "Create sample groups:"
+msgstr "Vytvořit vzorové skupiny:"
+
+#: views/admin/setup_wizard_sample_content.view.php:16
+msgid "Create sample tags in these groups:"
+msgstr "Vytvořit vzorové štítky v těchto skupinách:"
+
+#: views/admin/setup_wizard_sample_content.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:33
+msgid "Next Step"
+msgstr "Další krok"
+
+#: views/admin/setup_wizard_start.view.php:3
+msgid ""
+"On the following pages we will guide you through the basic settings that "
+"you need for the most common features."
+msgstr ""
+"Na následujících stránkách vás provedeme základními nastaveními, která "
+"potřebujete pro nejběžnější funkce."
+
+#: views/admin/setup_wizard_start.view.php:4
+msgid ""
+"You can later make changes or fine-tune the details in the Tag Groups "
+"settings."
+msgstr "Později můžete provést změny nebo doladit detaily v nastavení skupin štítků."
+
+#: views/admin/setup_wizard_start.view.php:4
+msgid "(show me the menu)"
+msgstr "(ukázat menu)"
+
+#: views/admin/setup_wizard_start.view.php:5
+msgid ""
+"Feel free to abort the Setup Wizard any time and continue on your own path. "
+"You can also launch it again at a later time."
+msgstr ""
+"Neváhejte kdykoli přerušit Průvodce nastavením a pokračovat vlastní cestou. "
+"Můžete ho také znovu spustit později."
+
+#: views/admin/setup_wizard_start.view.php:7
+msgid "The wizard will offer more options after upgrading to premium."
+msgstr "Průvodce nabídne více možností po upgradu na prémiovou verzi."
+
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use tag groups."
+msgstr "Vyberte taxonomie, pro které chcete používat skupiny štítků."
+
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
+msgstr ""
+"Ve většině případů udělá svou práci výchozí taxonomie <b>Tags "
+"(post_tag)</b>."
+
+#: views/admin/setup_wizard_taxonomies.view.php:22
+msgid "post type"
+msgstr "post type"
+
+#: views/admin/setup_wizard_taxonomies.view.php:30
+msgid "You will find more options in the Tag Groups settings."
+msgstr "V nastavení skupin štítků naleznete více možností."
+
+#: views/admin/tag_groups_admin.view.php:3
+msgid "Tag Group Administration"
+msgstr "Administrace skupin štítků"
+
+#: views/admin/tag_groups_admin.view.php:10
+msgid "Filter by label"
+msgstr "Filtr podle štítku"
+
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
+msgid "Tag Group name"
+msgstr "Název skupiny štítků"
+
+#: views/admin/tag_groups_admin.view.php:24
+#: views/admin/tag_groups_admin.view.php:37
+msgid "Number of assigned tags"
+msgstr "Počet přiřazených štítků"
+
+#: views/admin/tag_groups_admin.view.php:28
+#: views/admin/tag_groups_admin.view.php:41
+msgid "Actions"
+msgstr "Akce"
+
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
+msgid "Change order"
+msgstr "Změnit pořadí"
+
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
+msgid "Group ID"
+msgstr "ID skupiny"
+
+#: views/admin/tag_groups_admin.view.php:63
+msgid "Edit"
+msgstr "Upravit"
+
+#: views/admin/tag_groups_admin.view.php:64
+msgid "Create"
+msgstr "Vytvořit"
+
+#: views/admin/tag_groups_admin.view.php:65
+msgid "new"
+msgstr "nový"
+
+#: views/admin/tag_groups_admin.view.php:66
+msgid "label"
+msgstr "štítek"
+
+#: views/admin/tag_groups_admin.view.php:67
+msgid "Delete this group."
+msgstr "Smazat tuto skupinu."
+
+#: views/admin/tag_groups_admin.view.php:68
+msgid "Create a new group below."
+msgstr "Vytvořte novou skupinu níže."
+
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Tag Group"
+msgstr "Přidat novou skupinu štítků"
+
+#: views/admin/tag_groups_admin.view.php:70
+msgid "move up"
+msgstr "přesunout nahoru"
+
+#: views/admin/tag_groups_admin.view.php:71
+msgid "move down"
+msgstr "přesunout dolů"
+
+#: views/admin/tag_groups_admin.view.php:72
+msgid "reload"
+msgstr "aktualizovat"
+
+#: views/admin/tag_groups_admin.view.php:73
+msgid "next page"
+msgstr "další stránka"
+
+#: views/admin/tag_groups_admin.view.php:74
+msgid "previous page"
+msgstr "předchozí stránka"
+
+#: views/admin/tag_groups_admin.view.php:75
+msgid "go to page:"
+msgstr "přejít na stránku:"
+
+#: views/admin/tag_groups_admin.view.php:76
+msgid "Show posts"
+msgstr "Zobrazit příspěvky"
+
+#: views/admin/tag_groups_admin.view.php:77
+msgid "Show tags"
+msgstr "Zobrazit štítky"
+
+#: views/admin/tag_groups_admin.view.php:168
+msgid "Do you really want to delete this tag group?"
+msgstr "Opravdu chcete smazat tuto skupinu štítků?"
+
 #: views/partials/admin_feed_fallback.view.php:2
 #. translators: %1$s is the href attribute with URL, %2$s is the link text
 #, php-format
 msgid "Please visit <a %1$s>%2$s</a>."
 msgstr "Prosím navštivte <a %1$s>%2$s</a>."
 
-#: views/partials/admin_footer_rating.view.php:5
-#. translators: %1$s and %2$s are opening and closing anchor tags, %3$s is the version number
+#: views/partials/admin_feed_footer.view.php:3
+msgid "Read more"
+msgstr "Přečtěte si více"
+
+#: views/partials/admin_footer_rating.view.php:4
+#. translators: 1: Opening TaxoPress link tag, 2: Closing link tag, 3: Plugin version.
 #, php-format
 msgid "Thanks for using Tag Groups | %1$sTaxoPress.com%2$s | Version %3$s"
 msgstr "Děkujeme, že používáte Tag Groups | %1$sTaxoPress.com%2$s | Verze %3$s"
+
+#: views/partials/bulk_admin_footer.view.php:10
+#: views/partials/bulk_admin_footer.view.php:11
+msgid "Assign to"
+msgstr "Přiřadit k"
+
+#: views/partials/filter_admin_footer.view.php:23
+msgid "Filter off"
+msgstr "Filtr vypnut"
+
+#: views/partials/language_notice.view.php:2
+msgid "Please select one of the languages above to see the correct tag groups!"
+msgstr ""
+"Prosím vyberte jednu z výše uvedených jazyků pro zobrazení správných skupin "
+"tagů!"
+
+#: views/partials/quick_edit_tag.view.php:3
+msgid "Groups"
+msgstr "Skupiny"

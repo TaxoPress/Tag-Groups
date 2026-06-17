@@ -10,16 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
-"PO-Revision-Date: 2026-06-15 13:35+0000\n"
+"PO-Revision-Date: 2026-06-17 15:08+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tag-groups\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: sv-SE\n"
 
 #: tag-groups.php:4
-#: dist/tag-groups/include/admin/class.admin.php:206
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:2
-#: dist/tag-groups/views/admin/new_tag_from_list.view.php:2
 #: include/admin/class.admin.php:206
 #: views/admin/edit_tag_main.view.php:2
 #: views/admin/new_tag_from_list.view.php:2
@@ -51,76 +48,57 @@ msgstr "TaxoPress"
 msgid "https://taxopress.com"
 msgstr "https://taxopress.com"
 
-#: dist/tag-groups/include/admin/class.admin.php:22
 #: include/admin/class.admin.php:22
 msgid "Home"
 msgstr "Hem"
 
-#: dist/tag-groups/include/admin/class.admin.php:26
-#: dist/tag-groups/include/admin/class.settings.php:827
-#: dist/tag-groups/include/admin/class.setup_wizard.php:98
 #: include/admin/class.admin.php:26
 #: include/admin/class.settings.php:827
 #: include/admin/class.setup_wizard.php:98
 msgid "Taxonomies"
 msgstr "Taxonomier"
 
-#: dist/tag-groups/include/admin/class.admin.php:33
 #: include/admin/class.admin.php:33
 msgid "Front End"
 msgstr "Framsidan"
 
-#: dist/tag-groups/include/admin/class.admin.php:40
 #: include/admin/class.admin.php:40
 msgid "Back End"
 msgstr "Baksidan"
 
-#: dist/tag-groups/include/admin/class.admin.php:47
-#: dist/tag-groups/include/admin/class.settings.php:935
-#: dist/tag-groups/views/admin/onboarding.view.php:1
 #: include/admin/class.admin.php:47
 #: include/admin/class.settings.php:935
 #: views/admin/onboarding.view.php:1
 msgid "First Steps"
 msgstr "Första Steg"
 
-#: dist/tag-groups/include/admin/class.admin.php:54
-#: dist/tag-groups/include/admin/class.settings.php:940
 #: include/admin/class.admin.php:54
 #: include/admin/class.settings.php:940
 msgid "Setup Wizard"
 msgstr "Installationsguide"
 
-#: dist/tag-groups/include/admin/class.admin.php:61
-#: dist/tag-groups/include/admin/class.admin.php:940
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:95
 #: include/admin/class.admin.php:61
 #: include/admin/class.admin.php:940
 #: views/admin/settings_front_end_shortcodes.view.php:95
 msgid "Settings"
 msgstr "Inställningar"
 
-#: dist/tag-groups/include/admin/class.admin.php:87
 #: include/admin/class.admin.php:87, fuzzy
 msgid "Tag Group Admin"
 msgstr "Tag Group Admin"
 
-#: dist/tag-groups/include/admin/class.admin.php:434
 #: include/admin/class.admin.php:434
 msgid "The term has been removed from all groups."
 msgstr "Termen har tagits bort från alla grupper."
 
-#: dist/tag-groups/include/admin/class.admin.php:565
 #: include/admin/class.admin.php:565
 msgid "Edit this item inline"
 msgstr "Redigera detta objekt inline"
 
-#: dist/tag-groups/include/admin/class.admin.php:567
 #: include/admin/class.admin.php:567
 msgid "Quick&nbsp;Edit"
 msgstr "Snabb&nbsp;Redigera"
 
-#: dist/tag-groups/include/admin/class.admin.php:993
 #: include/admin/class.admin.php:994
 #. translators: %s is the href attribute with URL
 #, php-format
@@ -131,7 +109,6 @@ msgstr ""
 "Vänligen <a %s>klicka här för att köra migrationsrutinerna</a> för att "
 "säkerställa att vi har migrerat alla taggar."
 
-#: dist/tag-groups/include/admin/class.export.php:144
 #: include/admin/class.export.php:144
 msgid ""
 "Your settings/groups and your terms have been exported. Please download the "
@@ -140,26 +117,20 @@ msgstr ""
 "Dina inställningar/grupper och dina termer har exporterats. Vänligen ladda "
 "ner de resulterande filerna med högerklick eller ctrl-klick:"
 
-#: dist/tag-groups/include/admin/class.export.php:151
 #: include/admin/class.export.php:151
 msgid "Writing of the exported settings failed."
 msgstr "Skrivningen av de exporterade inställningarna misslyckades."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:176
-#: dist/tag-groups/include/admin/class.group_admin.php:180
 #: include/admin/class.group_admin.php:176
 #: include/admin/class.group_admin.php:180
 msgid "The groups have been sorted alphabetically."
 msgstr "Grupperna har sorterats alfabetiskt."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:188
-#: dist/tag-groups/include/admin/class.group_admin.php:207
 #: include/admin/class.group_admin.php:188
 #: include/admin/class.group_admin.php:209
 msgid "The label cannot be empty."
 msgstr "Etiketten kan inte vara tom."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:191
 #: include/admin/class.group_admin.php:192
 #. translators: %s is the tag group label
 #, php-format
@@ -170,61 +141,50 @@ msgstr ""
 "En taggrupp med etiketten '%s' finns redan, eller så har etiketten inte "
 "ändrats. Vänligen välj en annan eller gå tillbaka."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:195
 #: include/admin/class.group_admin.php:197
 #. translators: %s is the tag group label
 #, php-format
 msgid "A new tag group with the label '%s' has been created!"
 msgstr "En ny taggrupp med etiketten '%s' har skapats!"
 
-#: dist/tag-groups/include/admin/class.group_admin.php:213
 #: include/admin/class.group_admin.php:216
 #. translators: %s is the tag group label
 #, php-format
 msgid "A tag group with the label '%s' already exists."
 msgstr "En taggrupp med etiketten '%s' finns redan."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:225
 #: include/admin/class.group_admin.php:229
 #. translators: %s is the tag group label
 #, php-format
 msgid "The tag group with the label '%s' has been saved!"
 msgstr "Taggruppen med etiketten '%s' har sparats!"
 
-#: dist/tag-groups/include/admin/class.group_admin.php:231
 #: include/admin/class.group_admin.php:236
 #. translators: %1$s is the group ID, %2$s is the group label
 #, php-format
 msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
 msgstr "En taggrupp med id %1$s och etiketten '%2$s' har raderats."
 
-#: dist/tag-groups/include/admin/class.import.php:81
 #: include/admin/class.import.php:81
 msgid "Error uploading the file."
 msgstr "Fel vid uppladdning av filen."
 
-#: dist/tag-groups/include/admin/class.import.php:108
 #: include/admin/class.import.php:108
 msgid "Error reading the file."
 msgstr "Fel vid läsning av filen."
 
-#: dist/tag-groups/include/admin/class.import.php:146
-#: dist/tag-groups/include/admin/class.import.php:187
 #: include/admin/class.import.php:146
-#: include/admin/class.import.php:189
+#: include/admin/class.import.php:194
 msgid "Error parsing the file."
 msgstr "Fel vid tolkning av filen."
 
-#: dist/tag-groups/include/admin/class.import.php:165
-#: dist/tag-groups/include/admin/class.import.php:260
 #: include/admin/class.import.php:165
-#: include/admin/class.import.php:262
+#: include/admin/class.import.php:267
 msgid "date unknown"
 msgstr "datum okänt"
 
-#: dist/tag-groups/include/admin/class.import.php:169
-#: include/admin/class.import.php:170
-#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#: include/admin/class.import.php:171
+#. translators: 1: Filename, 2: Plugin version, 3: Export file creation date.
 #, php-format
 msgid ""
 "Your settings and groups have been imported from the file %1$s (created "
@@ -233,8 +193,7 @@ msgstr ""
 "Dina inställningar och grupper har importerats från filen %1$s (skapad med "
 "pluginversion %2$s den %3$s)."
 
-#: dist/tag-groups/include/admin/class.import.php:170
-#: include/admin/class.import.php:172
+#: include/admin/class.import.php:177
 #. translators: %d is the number of options
 #, php-format
 msgid "%d option was added or changed."
@@ -242,9 +201,8 @@ msgid_plural "%d options were added or changed."
 msgstr[0] "%d alternativ lades till eller ändrades."
 msgstr[1] "%d alternativ lades till eller ändrades."
 
-#: dist/tag-groups/include/admin/class.import.php:264
-#: include/admin/class.import.php:267
-#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#: include/admin/class.import.php:273
+#. translators: 1: Filename, 2: Plugin version, 3: Export file creation date.
 #, php-format
 msgid ""
 "Your terms have been imported from the file %1$s (created with plugin "
@@ -253,8 +211,7 @@ msgstr ""
 "Dina termer har importerats från filen %1$s (skapad med pluginversion %2$s "
 "den %3$s)."
 
-#: dist/tag-groups/include/admin/class.import.php:265
-#: include/admin/class.import.php:269
+#: include/admin/class.import.php:279
 #. translators: %d is the number of terms processed
 #, php-format
 msgid "We processed %d term."
@@ -262,8 +219,7 @@ msgid_plural "We processed %d terms."
 msgstr[0] "Vi har bearbetat %d term."
 msgstr[1] "Vi har bearbetat %d termer."
 
-#: dist/tag-groups/include/admin/class.import.php:266
-#: include/admin/class.import.php:271
+#: include/admin/class.import.php:281
 #. translators: %d is the number of terms saved
 #, php-format
 msgid "We saved %d term."
@@ -271,8 +227,7 @@ msgid_plural "We saved %d terms."
 msgstr[0] "Vi har sparat %d term."
 msgstr[1] "Vi har sparat %d termer."
 
-#: dist/tag-groups/include/admin/class.import.php:267
-#: include/admin/class.import.php:273
+#: include/admin/class.import.php:283
 #. translators: %d is the number of terms updated
 #, php-format
 msgid "The group info of %d term was updated."
@@ -280,10 +235,6 @@ msgid_plural "The group info of %d terms was updated."
 msgstr[0] "Gruppinformationen för %d term har uppdaterats."
 msgstr[1] "Gruppinformationen för %d termer har uppdaterats."
 
-#: dist/tag-groups/include/admin/class.settings.php:151
-#: dist/tag-groups/include/admin/class.settings.php:858
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:26
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:39
 #: include/admin/class.settings.php:151
 #: include/admin/class.settings.php:858
 #: views/admin/tag_groups_admin.view.php:26
@@ -291,129 +242,92 @@ msgstr[1] "Gruppinformationen för %d termer har uppdaterats."
 msgid "Filters"
 msgstr "Filter"
 
-#: dist/tag-groups/include/admin/class.settings.php:153
-#: dist/tag-groups/include/admin/class.settings.php:958
 #: include/admin/class.settings.php:153
 #: include/admin/class.settings.php:958, fuzzy
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
-#: dist/tag-groups/include/admin/class.settings.php:156
-#: dist/tag-groups/include/admin/class.settings.php:965
 #: include/admin/class.settings.php:156
 #: include/admin/class.settings.php:965
 msgid "Multilingual"
 msgstr "Flerspråkig"
 
-#: dist/tag-groups/include/admin/class.settings.php:238
-#: dist/tag-groups/include/admin/class.settings.php:832
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:9
 #: include/admin/class.settings.php:238
 #: include/admin/class.settings.php:832
 #: views/admin/settings_front_end_shortcodes.view.php:9
 msgid "Shortcodes"
 msgstr "Kortkoder"
 
-#: dist/tag-groups/include/admin/class.settings.php:239
-#: dist/tag-groups/include/admin/class.settings.php:846
 #: include/admin/class.settings.php:239
 #: include/admin/class.settings.php:846
 msgid "Themes and Appearance"
 msgstr "Teman och Utseende"
 
-#: dist/tag-groups/include/admin/class.settings.php:265
 #: include/admin/class.settings.php:265
 msgid "remove"
 msgstr "ta bort"
 
-#: dist/tag-groups/include/admin/class.settings.php:265
 #: include/admin/class.settings.php:265
 msgid "(recommended)"
 msgstr "(rekommenderad)"
 
-#: dist/tag-groups/include/admin/class.settings.php:266
 #: include/admin/class.settings.php:266
 msgid "keep"
 msgstr "behåll"
 
-#: dist/tag-groups/include/admin/class.settings.php:267
 #: include/admin/class.settings.php:267
 msgid "use unfiltered_html filter"
 msgstr "använd unfiltered_html filter"
 
-#: dist/tag-groups/include/admin/class.settings.php:317
-#: dist/tag-groups/include/admin/class.settings.php:945
 #: include/admin/class.settings.php:317
 #: include/admin/class.settings.php:945
 msgid "First Aid"
 msgstr "Första Hjälpen"
 
-#: dist/tag-groups/include/admin/class.settings.php:318
 #: include/admin/class.settings.php:318, fuzzy
 msgid "REST API"
 msgstr "REST API"
 
-#: dist/tag-groups/include/admin/class.settings.php:319
-#: dist/tag-groups/include/admin/class.settings.php:873
 #: include/admin/class.settings.php:319
 #: include/admin/class.settings.php:873
 msgid "System Information"
 msgstr "Systeminformation"
 
-#: dist/tag-groups/include/admin/class.settings.php:320
-#: dist/tag-groups/include/admin/class.settings.php:887
 #: include/admin/class.settings.php:320
 #: include/admin/class.settings.php:887
 msgid "Debugging"
 msgstr "Felsökning"
 
-#: dist/tag-groups/include/admin/class.settings.php:321
-#: dist/tag-groups/include/admin/class.settings.php:863
 #: include/admin/class.settings.php:321
 #: include/admin/class.settings.php:863
 msgid "Export/Import"
 msgstr "Exportera/Importera"
 
-#: dist/tag-groups/include/admin/class.settings.php:322
-#: dist/tag-groups/include/admin/class.settings.php:868
 #: include/admin/class.settings.php:322
 #: include/admin/class.settings.php:868
 msgid "Reset"
 msgstr "Återställ"
 
-#: dist/tag-groups/include/admin/class.settings.php:324
 #: include/admin/class.settings.php:324
 msgid "Licences"
 msgstr "Licenser"
 
-#: dist/tag-groups/include/admin/class.settings.php:422
 #: include/admin/class.settings.php:422
 msgid "Transients"
 msgstr "Transienta"
 
-#: dist/tag-groups/include/admin/class.settings.php:423
 #: include/admin/class.settings.php:423
 msgid "Database"
 msgstr "Databas"
 
-#: dist/tag-groups/include/admin/class.settings.php:424
 #: include/admin/class.settings.php:424
 msgid "Filesystem"
 msgstr "Filsystem"
 
-#: dist/tag-groups/include/admin/class.settings.php:425
 #: include/admin/class.settings.php:425
 msgid "WP Object Cache"
 msgstr "WP Objekt Cache"
 
-#: dist/tag-groups/include/admin/class.settings.php:548
-#: dist/tag-groups/include/admin/class.settings.php:604
-#: dist/tag-groups/include/admin/class.settings.php:642
-#: dist/tag-groups/include/admin/class.settings.php:676
-#: dist/tag-groups/include/admin/class.settings.php:691
-#: dist/tag-groups/include/admin/class.settings.php:704
-#: dist/tag-groups/include/admin/class.settings.php:717
-#: dist/tag-groups/include/admin/class.settings.php:786
 #: include/admin/class.settings.php:548
 #: include/admin/class.settings.php:604
 #: include/admin/class.settings.php:642
@@ -425,386 +339,299 @@ msgstr "WP Objekt Cache"
 msgid "Your settings have been saved."
 msgstr "Dina inställningar har sparats."
 
-#: dist/tag-groups/include/admin/class.settings.php:566
 #: include/admin/class.settings.php:566
 msgid "Your settings has been saved."
 msgstr "Dina inställningar har sparats."
 
-#: dist/tag-groups/include/admin/class.settings.php:584
 #: include/admin/class.settings.php:584
 msgid "All groups have been deleted and assignments reset."
 msgstr "Alla grupper har raderats och tilldelningar har återställts."
 
-#: dist/tag-groups/include/admin/class.settings.php:733
 #: include/admin/class.settings.php:733
 msgid "The filter on the tags page has been reset to show all tags."
 msgstr "Filtret på taggsidan har återställts för att visa alla taggar."
 
-#: dist/tag-groups/include/admin/class.settings.php:829
 #: include/admin/class.settings.php:829
 msgid "tag groups"
 msgstr "taggrupper"
 
-#: dist/tag-groups/include/admin/class.settings.php:835
-#: dist/tag-groups/include/admin/class.settings.php:849
-#: dist/tag-groups/include/admin/class.settings.php:904
 #: include/admin/class.settings.php:835
 #: include/admin/class.settings.php:849
 #: include/admin/class.settings.php:904
 msgid "tag cloud"
 msgstr "tagmoln"
 
-#: dist/tag-groups/include/admin/class.settings.php:836
 #: include/admin/class.settings.php:836
 msgid "group info"
 msgstr "gruppinfo"
 
-#: dist/tag-groups/include/admin/class.settings.php:837
 #: include/admin/class.settings.php:837
 msgid "sidebar widget"
 msgstr "sidofältwidget"
 
-#: dist/tag-groups/include/admin/class.settings.php:838
 #: include/admin/class.settings.php:838
 msgid "accordion"
 msgstr "ackordion"
 
-#: dist/tag-groups/include/admin/class.settings.php:839
 #: include/admin/class.settings.php:839
 msgid "tabs"
 msgstr "flikar"
 
-#: dist/tag-groups/include/admin/class.settings.php:840
 #: include/admin/class.settings.php:840
 msgid "alphabetical"
 msgstr "alfabetisk"
 
-#: dist/tag-groups/include/admin/class.settings.php:841
 #: include/admin/class.settings.php:841
 msgid "post list"
 msgstr "inläggslista"
 
-#: dist/tag-groups/include/admin/class.settings.php:853
 #: include/admin/class.settings.php:853
 msgid "colors"
 msgstr "färger"
 
-#: dist/tag-groups/include/admin/class.settings.php:854
 #: include/admin/class.settings.php:854
 msgid "tag description"
 msgstr "taggbeskrivning"
 
-#: dist/tag-groups/include/admin/class.settings.php:860
-#: dist/tag-groups/include/admin/class.settings.php:952
 #: include/admin/class.settings.php:860
 #: include/admin/class.settings.php:952
 msgid "tag filter"
 msgstr "taggfilter"
 
-#: dist/tag-groups/include/admin/class.settings.php:860
 #: include/admin/class.settings.php:860
 msgid "post filter"
 msgstr "inläggsfilter"
 
-#: dist/tag-groups/include/admin/class.settings.php:865
 #: include/admin/class.settings.php:865, fuzzy
 msgid "backup"
 msgstr "backup"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870
 msgid "remove plugin"
 msgstr "ta bort plugin"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870
 msgid "remove data"
 msgstr "ta bort data"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870
 msgid "delete groups"
 msgstr "ta bort grupper"
 
-#: dist/tag-groups/include/admin/class.settings.php:876
-#: dist/tag-groups/include/admin/class.settings.php:890
 #: include/admin/class.settings.php:876
 #: include/admin/class.settings.php:890
 msgid "debugging"
 msgstr "felsökning"
 
-#: dist/tag-groups/include/admin/class.settings.php:877
 #: include/admin/class.settings.php:877
 msgid "PHP Version"
 msgstr "PHP-version"
 
-#: dist/tag-groups/include/admin/class.settings.php:878
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:21
 #: include/admin/class.settings.php:878
 #: views/admin/settings_troubleshooting_system.view.php:21
 msgid "Ajax Test"
 msgstr "Ajax-test"
 
-#: dist/tag-groups/include/admin/class.settings.php:879
-#: dist/tag-groups/include/admin/class.settings.php:891
-#: dist/tag-groups/include/admin/class.settings.php:948
 #: include/admin/class.settings.php:879
 #: include/admin/class.settings.php:891
 #: include/admin/class.settings.php:948
 msgid "troubleshooting"
 msgstr "felsökning"
 
-#: dist/tag-groups/include/admin/class.settings.php:880
 #: include/admin/class.settings.php:880
 msgid "benchmarks"
 msgstr "prestandatester"
 
-#: dist/tag-groups/include/admin/class.settings.php:881
 #: include/admin/class.settings.php:881
 msgid "speed test"
 msgstr "hastighetstest"
 
-#: dist/tag-groups/include/admin/class.settings.php:882
-#: dist/tag-groups/include/admin/class.settings.php:892
 #: include/admin/class.settings.php:882
 #: include/admin/class.settings.php:892
 msgid "error"
 msgstr "fel"
 
-#: dist/tag-groups/include/admin/class.settings.php:883
-#: dist/tag-groups/include/admin/class.settings.php:893
 #: include/admin/class.settings.php:883
 #: include/admin/class.settings.php:893
 msgid "testing"
 msgstr "testning"
 
-#: dist/tag-groups/include/admin/class.settings.php:894
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:950
 #: include/admin/class.settings.php:894
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:950
 msgid "help"
 msgstr "hjälp"
 
-#: dist/tag-groups/include/admin/class.settings.php:898
 #: include/admin/class.settings.php:898, fuzzy
 msgid "Tag Groups Pro"
 msgstr "Tag Groups Pro"
 
-#: dist/tag-groups/include/admin/class.settings.php:901
 #: include/admin/class.settings.php:901
 msgid "upgrade"
 msgstr "uppgradera"
 
-#: dist/tag-groups/include/admin/class.settings.php:902
 #: include/admin/class.settings.php:902
 msgid "more groups"
 msgstr "fler grupper"
 
-#: dist/tag-groups/include/admin/class.settings.php:903
 #: include/admin/class.settings.php:903
 msgid "posts"
 msgstr "inlägg"
 
-#: dist/tag-groups/include/admin/class.settings.php:905
 #: include/admin/class.settings.php:905, fuzzy
 msgid "filter"
 msgstr "filter"
 
-#: dist/tag-groups/include/admin/class.settings.php:906
 #: include/admin/class.settings.php:906
 msgid "animated"
 msgstr "animerad"
 
-#: dist/tag-groups/include/admin/class.settings.php:907
 #: include/admin/class.settings.php:907
 msgid "searchable"
 msgstr "sökbar"
 
-#: dist/tag-groups/include/admin/class.settings.php:915
 #: include/admin/class.settings.php:915
 msgid "Info"
 msgstr "Information"
 
-#: dist/tag-groups/include/admin/class.settings.php:918
 #: include/admin/class.settings.php:918
 msgid "author"
 msgstr "författare"
 
-#: dist/tag-groups/include/admin/class.settings.php:919
 #: include/admin/class.settings.php:919, fuzzy
 msgid "version"
 msgstr "version"
 
-#: dist/tag-groups/include/admin/class.settings.php:920
 #: include/admin/class.settings.php:920
 msgid "contact"
 msgstr "kontakt"
 
-#: dist/tag-groups/include/admin/class.settings.php:921
 #: include/admin/class.settings.php:921
 msgid "about"
 msgstr "om"
 
-#: dist/tag-groups/include/admin/class.settings.php:925
 #: include/admin/class.settings.php:925
 msgid "Licenses"
 msgstr "Licenser"
 
-#: dist/tag-groups/include/admin/class.settings.php:927
 #: include/admin/class.settings.php:927
 msgid "Credits"
 msgstr "Krediter"
 
-#: dist/tag-groups/include/admin/class.settings.php:930
 #: include/admin/class.settings.php:930
 msgid "Development News"
 msgstr "Utvecklingsnyheter"
 
-#: dist/tag-groups/include/admin/class.settings.php:932
 #: include/admin/class.settings.php:932
 msgid "blog"
 msgstr "blogg"
 
-#: dist/tag-groups/include/admin/class.settings.php:932
 #: include/admin/class.settings.php:932
 msgid "updates"
 msgstr "uppdateringar"
 
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:942
 msgid "getting started"
 msgstr "komma igång"
 
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:942
 msgid "introduction"
 msgstr "introduktion"
 
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:942
 msgid "sample"
 msgstr "exempel"
 
-#: dist/tag-groups/include/admin/class.settings.php:949
 #: include/admin/class.settings.php:949
 msgid "migrate"
 msgstr "migrera"
 
-#: dist/tag-groups/include/admin/class.settings.php:951
 #: include/admin/class.settings.php:951, fuzzy
 msgid "problem"
 msgstr "problem"
 
-#: dist/tag-groups/include/admin/class.settings.php:960
 #: include/admin/class.settings.php:960
 msgid "live block preview"
 msgstr "live blockförhandsvisning"
 
-#: dist/tag-groups/include/admin/class.settings.php:967
 #: include/admin/class.settings.php:967
 msgid "translation"
 msgstr "översättning"
 
-#: dist/tag-groups/include/admin/class.settings.php:998
 #: include/admin/class.settings.php:998
 msgid "Migrating the term meta"
 msgstr "Migrering av termen meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:999
 #: include/admin/class.settings.php:999
 msgid "Fixing incorrect tag groups"
 msgstr "Fixar felaktiga taggrupper"
 
-#: dist/tag-groups/include/admin/class.settings.php:1000
 #: include/admin/class.settings.php:1000
 msgid "Fixing incorrect groups in term meta"
 msgstr "Fixar felaktiga grupper i termen meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:1001
 #: include/admin/class.settings.php:1001
 msgid "Sorting groups in term meta"
 msgstr "Sortera grupper i termen meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:1002
 #: include/admin/class.settings.php:1002
 msgid "Checking the tag names"
 msgstr "Kontrollerar taggnamnen"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:94
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:12
 #: include/admin/class.setup_wizard.php:94
 #: views/admin/setup_wizard_start.view.php:12, fuzzy
 msgid "Start"
 msgstr "Start"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:102
 #: include/admin/class.setup_wizard.php:102
 msgid "Sample Content"
 msgstr "Exempelinnehåll"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:122
 #: include/admin/class.setup_wizard.php:122
 msgid "Sample Group A"
 msgstr "Exempelgrupp A"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:123
 #: include/admin/class.setup_wizard.php:123
 msgid "Sample Group B"
 msgstr "Exempelgrupp B"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:124
 #: include/admin/class.setup_wizard.php:124
 msgid "Sample Group C"
 msgstr "Exempelgrupp C"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:140
 #: include/admin/class.setup_wizard.php:140
 msgid "First Sample Tag"
 msgstr "Första exempeltaggen"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:141
 #: include/admin/class.setup_wizard.php:141
 msgid "Second Sample Tag"
 msgstr "Andra exempel tagg"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:142
 #: include/admin/class.setup_wizard.php:142
 msgid "Third Sample Tag"
 msgstr "Tredje exempel tagg"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:160
 #: include/admin/class.setup_wizard.php:160
 msgid "Create a draft sample page with Gutenberg blocks."
 msgstr "Skapa en utkast exempel sida med Gutenberg-block."
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:162
 #: include/admin/class.setup_wizard.php:162
 msgid "Create a draft sample page with shortcodes."
 msgstr "Skapa en utkast exempel sida med kortkoder."
 
-#: dist/tag-groups/include/class.loader.php:159
 #: include/class.loader.php:160
 #. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
 #, php-format
 msgid "The plugin %1$s requires WordPress %2$s to function properly."
 msgstr "Pluginet %1$s kräver WordPress %2$s för att fungera korrekt."
 
-#: dist/tag-groups/include/class.loader.php:159
 #: include/class.loader.php:160
 #. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
 msgid "Please upgrade WordPress and then try again."
 msgstr "Vänligen uppgradera WordPress och försök igen."
 
-#: dist/tag-groups/include/helpers/class.groups.php:182
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:8
-#: dist/tag-groups/views/admin/new_tag_from_list.view.php:5
-#: dist/tag-groups/views/partials/quick_edit_tag.view.php:7
 #: include/helpers/class.groups.php:182
 #: views/admin/edit_tag_main.view.php:8
 #: views/admin/new_tag_from_list.view.php:5
@@ -812,172 +639,141 @@ msgstr "Vänligen uppgradera WordPress och försök igen."
 msgid "not assigned"
 msgstr "inte tilldelad"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:43
+#: includes-core/TagGroupsCoreAdmin.php:70
+#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
 #, php-format
 msgid ""
 "You're using Tag Groups Free. The Pro version has more features and "
-"support. %sUpgrade to Pro%s"
+"support. %1$sUpgrade to Pro%2$s"
 msgstr ""
-"Du använder Tag Groups Free. Pro-versionen har fler funktioner och support. "
-"%sUppgradera till Pro%s"
+"Du använder Tag Grupper Gratis. Pro-versionen har fler funktioner och "
+"support. %1$sUppgradera till Pro%2$s"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:71
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:115
-#: includes-core/TagGroupsCoreAdmin.php:72
-#: includes-core/TagGroupsCoreAdmin.php:116
+#: includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:142
 msgid "Upgrade to Pro"
 msgstr "Uppgradera till Pro"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:88
-#: includes-core/TagGroupsCoreAdmin.php:89
+#: includes-core/TagGroupsCoreAdmin.php:115
 msgid "Upgrade to Tag Groups Pro"
 msgstr "Uppgradera till Tag Groups Pro"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:93
-#: includes-core/TagGroupsCoreAdmin.php:94
+#: includes-core/TagGroupsCoreAdmin.php:120
 msgid "Enhance the power of Tag Groups with the Pro version:"
 msgstr "Förbättra kraften i Tag Groups med Pro-versionen:"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:96
-#: includes-core/TagGroupsCoreAdmin.php:97
+#: includes-core/TagGroupsCoreAdmin.php:123
 msgid "21 Shortcodes"
 msgstr "21 Kortkoder"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:97
-#: includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:124
 msgid "18 Gutenberg Blocks"
 msgstr "18 Gutenberg-block"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:98
-#: includes-core/TagGroupsCoreAdmin.php:99
+#: includes-core/TagGroupsCoreAdmin.php:125
 msgid "Table Tag Cloud"
 msgstr "Tagg Moln Tabell"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:99
-#: includes-core/TagGroupsCoreAdmin.php:100
+#: includes-core/TagGroupsCoreAdmin.php:126
 msgid "Simple Tag Cloud"
 msgstr "Enkel Tagg Moln"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:100
-#: includes-core/TagGroupsCoreAdmin.php:101
+#: includes-core/TagGroupsCoreAdmin.php:127
 msgid "Shuffle Box"
 msgstr "Blanda Ruta"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:101
-#: includes-core/TagGroupsCoreAdmin.php:102, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:128, fuzzy
 msgid "Caching"
 msgstr "Caching"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:102
-#: includes-core/TagGroupsCoreAdmin.php:103
+#: includes-core/TagGroupsCoreAdmin.php:129
 msgid "Multiple Groups Per Tag"
 msgstr "Flera grupper per tagg"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:103
-#: includes-core/TagGroupsCoreAdmin.php:104
+#: includes-core/TagGroupsCoreAdmin.php:130
 msgid "Tag Cloud Search"
 msgstr "Tagg Moln Sökning"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:104
-#: includes-core/TagGroupsCoreAdmin.php:105
+#: includes-core/TagGroupsCoreAdmin.php:131
 msgid "Toggle Post Filter"
 msgstr "Växla inläggsfilter"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:105
-#: includes-core/TagGroupsCoreAdmin.php:106
+#: includes-core/TagGroupsCoreAdmin.php:132
 msgid "Dynamic Post Filter"
 msgstr "Dynamisk inläggsfilter"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:106
-#: includes-core/TagGroupsCoreAdmin.php:107
+#: includes-core/TagGroupsCoreAdmin.php:133
 msgid "Post List"
 msgstr "Inläggslista"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:107
-#: includes-core/TagGroupsCoreAdmin.php:108
+#: includes-core/TagGroupsCoreAdmin.php:134
 msgid "Tag Meta Box"
 msgstr "Taggmetabox"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:108
-#: includes-core/TagGroupsCoreAdmin.php:109
+#: includes-core/TagGroupsCoreAdmin.php:135
 msgid "Post Tags in Groups"
 msgstr "Taggar i grupper"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:109
-#: includes-core/TagGroupsCoreAdmin.php:110
+#: includes-core/TagGroupsCoreAdmin.php:136
 msgid "Permissions"
 msgstr "Behörigheter"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:110
-#: includes-core/TagGroupsCoreAdmin.php:111
+#: includes-core/TagGroupsCoreAdmin.php:137
 msgid "Default Groups"
 msgstr "Standardgrupper"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:111
-#: includes-core/TagGroupsCoreAdmin.php:112
+#: includes-core/TagGroupsCoreAdmin.php:138
 msgid "WooCommerce Attributes"
 msgstr "WooCommerce-attribut"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:112
-#: includes-core/TagGroupsCoreAdmin.php:113
+#: includes-core/TagGroupsCoreAdmin.php:139
 msgid "Parent Group Level"
 msgstr "Föräldragruppsnivå"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:122
-#: includes-core/TagGroupsCoreAdmin.php:123
+#: includes-core/TagGroupsCoreAdmin.php:149
 msgid "Need Tag Groups Support?"
 msgstr "Behöver du stöd för taggrupper?"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:127
-#: includes-core/TagGroupsCoreAdmin.php:128
+#: includes-core/TagGroupsCoreAdmin.php:154
 msgid "If you need help or have a new feature request, let us know."
 msgstr "Om du behöver hjälp eller har en ny funktionsförfrågan, låt oss veta."
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:129
-#: includes-core/TagGroupsCoreAdmin.php:130
+#: includes-core/TagGroupsCoreAdmin.php:156
 msgid "Request Support"
 msgstr "Begär support"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:138
-#: includes-core/TagGroupsCoreAdmin.php:139
+#: includes-core/TagGroupsCoreAdmin.php:165
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "Detaljerad dokumentation finns också tillgänglig på pluginens webbplats."
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:140
-#: includes-core/TagGroupsCoreAdmin.php:141
+#: includes-core/TagGroupsCoreAdmin.php:167
 msgid "View Knowledge Base"
 msgstr "Visa kunskapsbas"
 
-#: dist/tag-groups/tag-groups.php:159
-#: tag-groups.php:159
+#: tag-groups.php:177
 msgid "The free Tag Groups plugin cannot be active together with Tag Groups Pro."
 msgstr ""
 "Det kostnadsfria Tag Groups-pluginet kan inte vara aktivt tillsammans med "
 "Tag Groups Pro."
 
-#: dist/tag-groups/tag-groups.php:159
-#: tag-groups.php:159
+#: tag-groups.php:177
 msgid "more information"
 msgstr "mer information"
 
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
 #: views/admin/edit_tag_main.view.php:31
 msgid "Edit tag groups"
 msgstr "Redigera taggrupper"
 
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
 #: views/admin/edit_tag_main.view.php:31
 msgid "Clicking will leave this page without saving."
 msgstr "Klicka för att lämna denna sida utan att spara."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:3
 #: views/admin/onboarding.view.php:3
 #. translators: %s is the plugin name
 #, php-format
 msgid "Welcome to %s!"
 msgstr "Välkommen till %s!"
 
-#: dist/tag-groups/views/admin/onboarding.view.php:4
 #: views/admin/onboarding.view.php:4
 #. translators: %s is the plugin name
 msgid ""
@@ -987,17 +783,14 @@ msgstr ""
 "Pluginet är klart att användas. Om du behöver hjälp kan vi guida dig genom "
 "de grundläggande stegen."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:6
 #: views/admin/onboarding.view.php:6
 msgid "Start the Setup Wizard"
 msgstr "Starta installationsguiden"
 
-#: dist/tag-groups/views/admin/onboarding.view.php:10
 #: views/admin/onboarding.view.php:10
 msgid "Or click here if you prefer to do it on your own."
 msgstr "Eller klicka här om du föredrar att göra det själv."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:13
 #: views/admin/onboarding.view.php:13
 #. translators: %s is the href attribute with URL
 #, php-format
@@ -1011,32 +804,26 @@ msgstr ""
 "taggar. I de flesta fall, lämna bara standardinställningen: Taggar "
 "(post_tag)."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:14
 #: views/admin/onboarding.view.php:14
 #. translators: %s is the href attribute with URL
 msgid "Go to the tag groups admin page and <b>create some groups</b>."
 msgstr "Gå till admin-sidan för taggrupper och <b>skapa några grupper</b>."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:14
 #: views/admin/onboarding.view.php:14
 #. translators: %s is the href attribute with URL
 #, php-format
 msgid "You can find these pages listed on your <a %s>Tag Groups home page</a>."
 msgstr "Du kan hitta dessa sidor listade på din <a %s>Taggrupper hemsida</a>."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:15
 #: views/admin/onboarding.view.php:15
 #. translators: %s is the href attribute with URL
 msgid "Go to your tags and <b>assign them to these groups</b>."
 msgstr "Gå till dina taggar och <b>tilldela dem till dessa grupper</b>."
 
-#: dist/tag-groups/views/admin/post_filter.view.php:3
 #: views/admin/post_filter.view.php:3
 msgid "Filter by tag group"
 msgstr "Filtrera efter taggrupp"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:2
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:3
 #: views/admin/sample_page.view.php:2
 #: views/admin/sample_page_gutenberg.view.php:3
 #. translators: %s is the author display name
@@ -1049,7 +836,6 @@ msgstr ""
 "<b>Taggrupper</b>-pluginet. Du kan säkert redigera och ta bort den eller "
 "behålla den för framtida referens."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:6
 #: views/admin/sample_page.view.php:6
 msgid ""
 "The following shortcodes use a variety of parameters so that you can get an "
@@ -1060,8 +846,6 @@ msgstr ""
 "uppfattning om alternativen. Känn dig fri att generera en ny exempel-sida "
 "med fler funktioner efter att du har uppgraderat pluginet."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:10
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:21
 #: views/admin/sample_page.view.php:10
 #: views/admin/sample_page_gutenberg.view.php:21
 #. translators: %s is the href attribute with URL
@@ -1071,50 +855,35 @@ msgstr ""
 "Vänligen hitta länkar till dokumentationen i <a "
 "%s>Taggrupper-inställningar</a>."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:14
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:30
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:11
 #: views/admin/sample_page.view.php:14
 #: views/admin/sample_page_gutenberg.view.php:30
 #: views/admin/settings_front_end_shortcodes.view.php:11
 msgid "Tabbed Tag Cloud"
 msgstr "Flikad Taggmoln"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:20
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:40
 #: views/admin/sample_page.view.php:20
 #: views/admin/sample_page_gutenberg.view.php:40
 msgid "Accordion Tag Cloud"
 msgstr "Accordion Taggmoln"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:26
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:50
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:44
 #: views/admin/sample_page.view.php:26
 #: views/admin/sample_page_gutenberg.view.php:50
 #: views/admin/settings_front_end_shortcodes.view.php:44
 msgid "Alphabetical Tag Cloud"
 msgstr "Alfabetisk Taggmoln"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:32
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:60
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:33
 #: views/admin/sample_page.view.php:32
 #: views/admin/sample_page_gutenberg.view.php:60
 #: views/admin/settings_front_end_shortcodes.view.php:33
 msgid "Tag List"
 msgstr "Tagglista"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:38
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:70
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:55
 #: views/admin/sample_page.view.php:38
 #: views/admin/sample_page_gutenberg.view.php:70
 #: views/admin/settings_front_end_shortcodes.view.php:55
 msgid "Alphabetical Tag Index"
 msgstr "Alfabetisk Taggindex"
 
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:9
 #: views/admin/sample_page_gutenberg.view.php:9
 msgid ""
 "The following blocks use a variety of parameters so that you can get an "
@@ -1125,7 +894,6 @@ msgstr ""
 "om alternativen. Känn dig fri att generera en ny exempel-sida med fler "
 "funktioner efter att du har uppgraderat pluginet."
 
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:15
 #: views/admin/sample_page_gutenberg.view.php:15
 msgid ""
 "This page was created while you had the Gutenberg editor enabled. Therefore "
@@ -1134,12 +902,10 @@ msgstr ""
 "Denna sida skapades medan du hade Gutenberg-redigeraren aktiverad. Därför "
 "visas funktionerna endast när Gutenberg är aktiv."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:9
 #: views/admin/settings_back_end_filters.view.php:9
 msgid "Display filter on the \"Posts\" screen."
 msgstr "Visa filter på \"Inlägg\"-skärmen."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:10
 #: views/admin/settings_back_end_filters.view.php:10
 msgid ""
 "Add a pull-down menu to the filters above the list of posts. If you filter "
@@ -1154,12 +920,10 @@ msgstr ""
 "att menyn inte blockerar din skärm om du använder ett stort antal grupper. "
 "Kanske inte fungerar med alla taxonomier."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:17
 #: views/admin/settings_back_end_filters.view.php:17
 msgid "Display filter on the \"Tags\" screen."
 msgstr "Visa filter på \"Taggar\"-skärmen."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:18
 #: views/admin/settings_back_end_filters.view.php:18
 msgid ""
 "Add a filter to the list of tags. Disable it here if it conflicts with "
@@ -1168,12 +932,6 @@ msgstr ""
 "Lägg till ett filter till listan med taggar. Inaktivera det här om det "
 "krockar med andra plugin eller teman."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:23
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:15
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:15
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:116
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:23
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:24
 #: views/admin/settings_back_end_filters.view.php:23
 #: views/admin/settings_back_end_gutenberg.view.php:15
 #: views/admin/settings_back_end_multilingual.view.php:15
@@ -1183,12 +941,10 @@ msgstr ""
 msgid "Save Settings"
 msgstr "Spara inställningar"
 
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:9
 #: views/admin/settings_back_end_gutenberg.view.php:9
 msgid "Gutenberg block preview"
 msgstr "Gutenberg blockförhandsvisning"
 
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:10
 #: views/admin/settings_back_end_gutenberg.view.php:10
 msgid ""
 "Some blocks can show an approximate preview in the Gutenberg editor. If you "
@@ -1198,12 +954,10 @@ msgstr ""
 "Om du avaktiverar det här alternativet kommer alla block att visa en "
 "statisk ikon med text."
 
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:9
 #: views/admin/settings_back_end_multilingual.view.php:9
 msgid "Keep groups of translations in sync"
 msgstr "Håll grupper av översättningar synkroniserade"
 
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:10
 #: views/admin/settings_back_end_multilingual.view.php:10
 msgid ""
 "If you activate this option, we try to sync the groups across all language "
@@ -1214,7 +968,6 @@ msgstr ""
 "över alla språkversioner av en tagg när du sparar den. Avaktivera det för "
 "att ställa in grupper oberoende."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:4
 #: views/admin/settings_front_end_shortcodes.view.php:4
 msgid ""
 "All Tag Groups features are available as Gutenberg blocks. You can also use "
@@ -1223,24 +976,14 @@ msgstr ""
 "Alla funktioner för taggrupper är tillgängliga som Gutenberg-block. Du kan "
 "också använda shortcodes."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:8
 #: views/admin/settings_front_end_shortcodes.view.php:8
 msgid "Click on the features for more information."
 msgstr "Klicka på funktionerna för mer information."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:15
 #: views/admin/settings_front_end_shortcodes.view.php:15
 msgid "Display the tags in a tabbed tag cloud."
 msgstr "Visa taggarna i en flikbaserad taggmoln."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:16
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:27
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:38
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:49
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:60
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:71
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:84
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:89
 #: views/admin/settings_front_end_shortcodes.view.php:16
 #: views/admin/settings_front_end_shortcodes.view.php:27
 #: views/admin/settings_front_end_shortcodes.view.php:38
@@ -1252,12 +995,6 @@ msgstr "Visa taggarna i en flikbaserad taggmoln."
 msgid "Example"
 msgstr "Exempel"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:18
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:29
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:40
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:51
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:62
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:73
 #: views/admin/settings_front_end_shortcodes.view.php:18
 #: views/admin/settings_front_end_shortcodes.view.php:29
 #: views/admin/settings_front_end_shortcodes.view.php:40
@@ -1267,12 +1004,6 @@ msgstr "Exempel"
 msgid "Parameters"
 msgstr "Parametrar"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:19
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:30
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:41
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:52
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:63
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:74
 #: views/admin/settings_front_end_shortcodes.view.php:19
 #: views/admin/settings_front_end_shortcodes.view.php:30
 #: views/admin/settings_front_end_shortcodes.view.php:41
@@ -1284,49 +1015,39 @@ msgstr "Parametrar"
 msgid "Please find the parameters in the <a %s>documentation</a>."
 msgstr "Vänligen hitta parametrarna i <a %s>dokumentationen</a>."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:22
 #: views/admin/settings_front_end_shortcodes.view.php:22, fuzzy
 msgid "Accordion"
 msgstr "Accordion"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:26
 #: views/admin/settings_front_end_shortcodes.view.php:26
 msgid "Display the tags in an accordion."
 msgstr "Visa taggarna i en accordion."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:37
 #: views/admin/settings_front_end_shortcodes.view.php:37
 msgid "Display the tags in lists under tag groups."
 msgstr "Visa taggarna i listor under taggrupper."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
 #: views/admin/settings_front_end_shortcodes.view.php:48
 msgid "Display the tags in tabbed tag cloud with first letters as tabs."
 msgstr "Visa taggarna i flikbaserad taggmoln med första bokstäver som flikar."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
 #: views/admin/settings_front_end_shortcodes.view.php:48
 #: views/admin/settings_front_end_shortcodes.view.php:59
 msgid "(Not tested with right-to-left languages.)"
 msgstr "(Ej testad med språk som läses från höger till vänster.)"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
 #: views/admin/settings_front_end_shortcodes.view.php:59
 msgid "Display the tags in a list with first letters as heading."
 msgstr "Visa taggarna i en lista med första bokstäver som rubrik."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:67
 #: views/admin/settings_front_end_shortcodes.view.php:67
 msgid "Group Information"
 msgstr "Gruppinformation"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:70
 #: views/admin/settings_front_end_shortcodes.view.php:70
 msgid "Display information about tag groups."
 msgstr "Visa information om taggrupper."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:82
 #: views/admin/settings_front_end_shortcodes.view.php:82
 msgid ""
 "The function <b>tag_groups_cloud</b> accepts the same parameters as the "
@@ -1336,12 +1057,10 @@ msgstr ""
 "Funktionen <b>tag_groups_cloud</b> accepterar samma parametrar som "
 "[tag_groups_cloud] shortcode, förutom de som avgör flikar och styling."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:83
 #: views/admin/settings_front_end_shortcodes.view.php:83
 msgid "By default it returns a string with the html for a tabbed tag cloud."
 msgstr "Som standard returnerar den en sträng med html för en flikad taggmoln."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:88
 #: views/admin/settings_front_end_shortcodes.view.php:88
 msgid ""
 "If the optional second parameter is set to 'true', the function returns a "
@@ -1350,20 +1069,14 @@ msgstr ""
 "Om den valfria andra parametern sätts till 'true', returnerar funktionen en "
 "flerdimensionell array som innehåller tagggrupper och taggar."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:102
 #: views/admin/settings_front_end_shortcodes.view.php:102
 msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
 msgstr "Aktivera shortcode i sidofältets widgets (om de inte är synliga ändå)."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:108
 #: views/admin/settings_front_end_shortcodes.view.php:108
 msgid "Always load shortcode scripts."
 msgstr "Ladda alltid shortcode-skript."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:109
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:9
-#: dist/tag-groups/views/admin/settings_home.view.php:8
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
 #: views/admin/settings_front_end_shortcodes.view.php:109
 #: views/admin/settings_front_end_themes.view.php:9
 #: views/admin/settings_home.view.php:8
@@ -1371,7 +1084,6 @@ msgstr "Ladda alltid shortcode-skript."
 msgid "Click for more information"
 msgstr "Klicka för mer information"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:112
 #: views/admin/settings_front_end_shortcodes.view.php:112
 msgid ""
 "Turn off to load the scripts only on posts and pages where a shortcode "
@@ -1380,12 +1092,10 @@ msgstr ""
 "Stäng av för att bara ladda skripten på inlägg och sidor där en shortcode "
 "visas."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:113
 #: views/admin/settings_front_end_shortcodes.view.php:113
 msgid "Turn on if you use these shortcodes in widgets."
 msgstr "Slå på om du använder dessa shortcodes i widgets."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:8
 #: views/admin/settings_front_end_themes.view.php:8
 msgid ""
 "Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
@@ -1394,7 +1104,6 @@ msgstr ""
 "Här kan du välja ett tema för den flikade taggmolnet och den dragna "
 "taggmolnet."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:14
 #: views/admin/settings_front_end_themes.view.php:14
 msgid ""
 "New themes can be created with the <a "
@@ -1404,7 +1113,6 @@ msgstr ""
 "Nya teman kan skapas med <a href=\"http://jqueryui.com/themeroller/\" "
 "target=\"_blank\">jQuery UI ThemeRoller</a>:"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:16
 #: views/admin/settings_front_end_themes.view.php:16
 msgid ""
 "On the page \"Theme Roller\" you can customize all features or pick one set "
@@ -1413,7 +1121,6 @@ msgstr ""
 "På sidan \"Theme Roller\" kan du anpassa alla funktioner eller välja ett "
 "set från galleriet. Avsluta med \"download\"-knappen."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:17
 #: views/admin/settings_front_end_themes.view.php:17
 msgid ""
 "On the next page (\"Download Builder\") you will need to select the version "
@@ -1426,7 +1133,6 @@ msgstr ""
 "\"CSS Scope\" som <b>.Tag-Groups</b> (inklusive punkten) innan du laddar "
 "ner."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:18
 #: views/admin/settings_front_end_themes.view.php:18
 msgid ""
 "Then you unpack the downloaded zip file. You will need the \"images\" "
@@ -1435,7 +1141,6 @@ msgstr ""
 "Därefter packar du upp den nedladdade zip-filen. Du kommer att behöva "
 "\"images\"-mappen och \"jquery-ui.theme.min.css\"-filen."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:19
 #: views/admin/settings_front_end_themes.view.php:19
 msgid ""
 "Create a new folder inside your <i>wp-content/uploads</i> folder (for "
@@ -1444,22 +1149,18 @@ msgstr ""
 "Skapa en ny mapp inuti din <i>wp-content/uploads</i>-mapp (till exempel "
 "\"my-theme\") och kopiera de här två objekten dit."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:20
 #: views/admin/settings_front_end_themes.view.php:20
 msgid "Enter the name of this new folder (for example \"my-theme\") below."
 msgstr "Ange namnet på denna nya mapp (till exempel \"my-theme\") nedan."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:42
 #: views/admin/settings_front_end_themes.view.php:42
 msgid "own theme"
 msgstr "egen tema"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
 #: views/admin/settings_front_end_themes.view.php:52
 msgid "Don't load a theme."
 msgstr "Ladda inte ett tema."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
 #: views/admin/settings_front_end_themes.view.php:52
 msgid ""
 "Here you can turn off jQuery UI themes if your WordPress theme brings its "
@@ -1468,34 +1169,28 @@ msgstr ""
 "Här kan du stänga av jQuery UI-teman om ditt WordPress-tema har sitt eget "
 "jQuery UI-tema, för att undvika konflikter."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:57
 #: views/admin/settings_front_end_themes.view.php:57
 msgid "Further options"
 msgstr "Ytterligare alternativ"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:65
 #: views/admin/settings_front_end_themes.view.php:65
 msgid "Use jQuery.  (Default is on. Other plugins might override this setting.)"
 msgstr ""
 "Använd jQuery. (Standard är på. Andra tillägg kan åsidosätta denna "
 "inställning.)"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:73
 #: views/admin/settings_front_end_themes.view.php:73
 msgid "Tabs triggered by hovering mouse pointer (without clicking)."
 msgstr "Flikar som aktiveras genom att sväva med muspekaren (utan att klicka)."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:80
 #: views/admin/settings_front_end_themes.view.php:80
 msgid "Collapsible tabs (toggle open/close)."
 msgstr "Kollapsbara flikar (växla öppen/stängd)."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:83
 #: views/admin/settings_front_end_themes.view.php:83
 msgid "HTML in tag description:"
 msgstr "HTML i taggbeskrivning:"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
 #: views/admin/settings_front_end_themes.view.php:91
 msgid ""
 "By default the description appears in a tooltip when you hover the mouse "
@@ -1504,7 +1199,6 @@ msgstr ""
 "Som standard visas beskrivningen i en tooltip när du hovrar över en tagg i "
 "en taggsky."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
 #: views/admin/settings_front_end_themes.view.php:91
 msgid ""
 "If you don't trust all users of your site, remove the HTML or use a plugin "
@@ -1514,86 +1208,69 @@ msgstr ""
 "använd ett plugin för att ge unfiltered_html-funktionen endast till "
 "användare du litar på."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:97
 #: views/admin/settings_front_end_themes.view.php:97
 msgid "Save Theme Options"
 msgstr "Spara temat alternativ"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:3
 #: views/admin/settings_help.view.php:3
 msgid "Search for settings"
 msgstr "Sök efter inställningar"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:3
 #: views/admin/settings_help.view.php:3
 msgid "Search for setting pages. Type a space to show all settings."
 msgstr ""
 "Sök efter inställningssidor. Skriv ett mellanslag för att visa alla "
 "inställningar."
 
-#: dist/tag-groups/views/admin/settings_help.view.php:6
 #: views/admin/settings_help.view.php:6
 msgid "Search Results"
 msgstr "Sökresultat"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:8
 #: views/admin/settings_help.view.php:8
 msgid "Nothing found"
 msgstr "Ingenting hittades"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:2
 #: views/admin/settings_home.view.php:2
 msgid "Active Taxonomies"
 msgstr "Aktiva taxonomies"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:11
 #: views/admin/settings_home.view.php:11
 msgid "Group Statistics"
 msgstr "Gruppera statistik"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:13
 #: views/admin/settings_home.view.php:13
 msgid "for the selected language"
 msgstr "för det valda språket"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:23
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:33
 #: views/admin/settings_home.view.php:23
 #: views/admin/settings_taxonomies.view.php:33
 msgid "go to tag group administration"
 msgstr "gå till tagggruppsadministration"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:9
 #: views/admin/settings_rest_api.view.php:9
 msgid "Enable Tag Groups Public API Access"
 msgstr "Aktivera offentlig API-åtkomst till Tag-Groups"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:10
 #: views/admin/settings_rest_api.view.php:10
 msgid "Enable public access to tag groups endpoint /wp-json/tag-groups/v1/groups/."
 msgstr ""
 "Aktivera offentlig åtkomst till tagggruppens slutpunkt "
 "/wp-json/tag-groups/v1/groups/."
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:17
 #: views/admin/settings_rest_api.view.php:17
 msgid "Enable Terms Public API Access"
 msgstr "Aktivera offentlig API-åtkomst till termer"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:18
 #: views/admin/settings_rest_api.view.php:18
 msgid "Enable public access to terms endpoint /wp-json/tag-groups/v1/terms/."
 msgstr ""
 "Aktivera offentlig åtkomst till termernas slutpunkt "
 "/wp-json/tag-groups/v1/terms/."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:2
 #: views/admin/settings_taxonomies.view.php:2
 msgid "Choose the taxonomies for which you want to use Tag Groups:"
 msgstr "Välj de taxonomier för vilka du vill använda Tag-Groups:"
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:5
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:5
 #: views/admin/settings_taxonomies.view.php:5
 #: views/admin/setup_wizard_taxonomies.view.php:5
 msgid ""
@@ -1607,7 +1284,6 @@ msgstr ""
 "listas här kanske inte är tillgängliga i adminbackend. Om du inte förstår "
 "vad som pågår här, lämna bara standarden."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:6
 #: views/admin/settings_taxonomies.view.php:6
 msgid ""
 "<b>Please deselect taxonomies that you don't use. Using several taxonomies "
@@ -1618,12 +1294,10 @@ msgstr ""
 "taxonomier för samma posttyp eller hierarkiska taxonomier (som kategorier) "
 "är experimentellt och stöds inte.</b>"
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:7
 #: views/admin/settings_taxonomies.view.php:7
 msgid "To see the post type, hover your mouse over the option."
 msgstr "För att se posttypen, håll muspekaren över alternativet."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:8
 #: views/admin/settings_taxonomies.view.php:8
 msgid ""
 "If you use a custom taxonomy, make sure that the attribute \"Public\" is "
@@ -1632,7 +1306,6 @@ msgstr ""
 "Om du använder en anpassad taxonomy, se till att attributet \"Public\" är "
 "inställt på \"true\" och \"Hierarchical\" på \"false\"."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:15
 #: views/admin/settings_taxonomies.view.php:15
 msgid ""
 "Show hierarchical taxonomies. Not all Tag Groups features will work with "
@@ -1641,17 +1314,14 @@ msgstr ""
 "Visa hierarkiska taxonomies. Inte alla funktioner i Tag Groups kommer att "
 "fungera med dessa taxonomies."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:54
 #: views/admin/settings_taxonomies.view.php:54
 msgid "Save Taxonomies"
 msgstr "Spara Taxonomies"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid "Export"
 msgstr "Exportera"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid ""
 "Use this button to export all Tag Groups settings and groups and all terms "
@@ -1660,7 +1330,6 @@ msgstr ""
 "Använd denna knapp för att exportera alla inställningar och grupper från "
 "Tag Groups och alla termer som är tilldelade en grupp till filer."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid ""
 "You can import both files separately. Category hierarchy won't be saved. "
@@ -1672,17 +1341,14 @@ msgstr ""
 "måste tilldela dem till inlägg igen. Export kan inte ersätta en "
 "säkerhetskopia."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:7
 #: views/admin/settings_tools_export_import.view.php:7
 msgid "Export Files"
 msgstr "Exportera Filer"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "Import"
 msgstr "Importera"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid ""
 "Below you can import previously exported settings/groups or terms from a "
@@ -1691,24 +1357,20 @@ msgstr ""
 "Nedan kan du importera tidigare exporterade inställningar/grupper eller "
 "termer från en fil."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "It is recommended to back up the database of your site before proceeding."
 msgstr ""
 "Det rekommenderas att säkerhetskopiera databasen för din webbplats innan du "
 "fortsätter."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "Please import the settings before the terms."
 msgstr "Var vänlig importera inställningarna innan termerna."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:17
 #: views/admin/settings_tools_export_import.view.php:17
 msgid "Import File"
 msgstr "Importera Fil"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:4
 #: views/admin/settings_tools_reset.view.php:4
 msgid ""
 "Use this button to delete all tag groups and assignments. Your tags will "
@@ -1717,7 +1379,6 @@ msgstr ""
 "Använd denna knapp för att radera alla taggrupper och tilldelningar. Dina "
 "taggar kommer inte att ändras. Markera kryssrutan för att bekräfta."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:5
 #: views/admin/settings_tools_reset.view.php:5
 msgid ""
 "Please keep in mind that the tag assignments cannot be recovered by the "
@@ -1726,74 +1387,60 @@ msgstr ""
 "Vänligen kom ihåg att taggtilldelningarna inte kan återställas av "
 "export/import-funktionen."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:7
 #: views/admin/settings_tools_reset.view.php:7
 msgid "I know what I am doing."
 msgstr "Jag vet vad jag gör."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:10
 #: views/admin/settings_tools_reset.view.php:10
 msgid "Delete Groups"
 msgstr "Radera Grupper"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:13
 #: views/admin/settings_tools_reset.view.php:13
 msgid "Delete Settings and Groups"
 msgstr "Radera Inställningar och Grupper"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:21
 #: views/admin/settings_tools_reset.view.php:21
 msgid "Delete all groups and settings when uninstalling the plugin."
 msgstr "Radera alla grupper och inställningar vid avinstallation av pluginet."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:7
 #: views/admin/settings_troubleshooting_debug.view.php:7
 msgid "Debug mode is on."
 msgstr "Debug-läget är aktiverat."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:15
 #: views/admin/settings_troubleshooting_debug.view.php:15
 msgid "Verbose logging is enabled with CM_DEBUG."
 msgstr "Verbose logging är aktiverat med CM_DEBUG."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:17
 #: views/admin/settings_troubleshooting_debug.view.php:17
 msgid "Verbose logging is on."
 msgstr "Verbose logging är på."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:19
 #: views/admin/settings_troubleshooting_debug.view.php:19
 msgid "Turn off "
 msgstr "Stäng av "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:24
 #: views/admin/settings_troubleshooting_debug.view.php:24
 msgid "Verbose logging is off."
 msgstr "Verbose logging är av."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:26
 #: views/admin/settings_troubleshooting_debug.view.php:26
 msgid "Turn on"
 msgstr "Sätt på"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:31
 #: views/admin/settings_troubleshooting_debug.view.php:31
 msgid "Debug mode is off."
 msgstr "Debug-läget är av."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:40
 #: views/admin/settings_troubleshooting_debug.view.php:40
 #. translators: %s is the href attribute with URL
 #, php-format
 msgid "Learn more <a %s>about debugging</a>."
 msgstr "Lär dig mer <a %s>om felsökning</a>."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
 #: views/admin/settings_troubleshooting_first_aid.view.php:8
 msgid "Migrate tags to the new format of Tag Groups."
 msgstr "Migrera taggar till det nya formatet för Tag Grupper."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
 #: views/admin/settings_troubleshooting_first_aid.view.php:8
 msgid ""
 "The plugin automatically migrates tags to the new format and tries to keep "
@@ -1807,12 +1454,10 @@ msgstr ""
 "manuellt efter att du aktiverat en taxonomi som redan innehöll oövervakade "
 "taggar."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:9
 #: views/admin/settings_troubleshooting_first_aid.view.php:9
 msgid "Migrate"
 msgstr "Migrera"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:17
 #: views/admin/settings_troubleshooting_first_aid.view.php:17
 msgid ""
 "Running the maintenance can solve issues that you encounter during "
@@ -1821,17 +1466,14 @@ msgstr ""
 "Att köra underhåll kan lösa problem som du stöter på under filtrering efter "
 "taggrupper."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:18
 #: views/admin/settings_troubleshooting_first_aid.view.php:18
 msgid "Maintenance"
 msgstr "Underhåll"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
 #: views/admin/settings_troubleshooting_first_aid.view.php:24
 msgid "Reset the filter on the tags page to show all tags."
 msgstr "Återställ filtret på taggsidan för att visa alla taggar."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
 #: views/admin/settings_troubleshooting_first_aid.view.php:24
 msgid ""
 "Use it if a JavaScript error disables the filter menu. Note that it is "
@@ -1840,432 +1482,107 @@ msgstr ""
 "Använd det om ett JavaScript-fel inaktiverar filtermenyn. Observera att det "
 "fortfarande rekommenderas att ta reda på orsaken till felet."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:27
-#: dist/tag-groups/views/partials/admin_footer.view.php:3
 #: views/admin/settings_troubleshooting_first_aid.view.php:27
 #: views/partials/admin_footer.view.php:3
 msgid "Reset Tag Filter"
 msgstr "Återställ Taggfilter"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:5
 #: views/admin/settings_troubleshooting_process.view.php:5
 msgid "Please stay on this page until all processes have finished."
 msgstr "Vänligen stanna kvar på denna sida tills alla processer har avslutats."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:10
 #: views/admin/settings_troubleshooting_process.view.php:10
 msgid "There have been errors."
 msgstr "Det har uppstått fel."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:12
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:19
 #: views/admin/settings_troubleshooting_process.view.php:12
 #: views/admin/settings_troubleshooting_process.view.php:19
 msgid "Continue"
 msgstr "Fortsätt"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:17
 #: views/admin/settings_troubleshooting_process.view.php:17
 msgid "Finished!"
 msgstr "Avslutat!"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:24
 #: views/admin/settings_troubleshooting_process.view.php:24
 msgid "The following terms cannot be used:"
 msgstr "Följande termer kan inte användas:"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:128
 #: views/admin/settings_troubleshooting_process.view.php:128
 msgid "Number of processed items: "
 msgstr "Antal behandlade objekt: "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:130
 #: views/admin/settings_troubleshooting_process.view.php:130
 msgid "Number of changed items: "
 msgstr "Antal ändrade objekt: "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:5
 #: views/admin/settings_troubleshooting_system.view.php:5
 msgid "WordPress Version"
 msgstr "WordPress-version"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:8
 #: views/admin/settings_troubleshooting_system.view.php:8
 msgid "Site URL"
 msgstr "Webbplats-URL"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:11
 #: views/admin/settings_troubleshooting_system.view.php:11
 msgid "Home URL"
 msgstr "Hem-URL"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:15
 #: views/admin/settings_troubleshooting_system.view.php:15
 msgid "Active Theme"
 msgstr "Aktiv tema"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:17
 #: views/admin/settings_troubleshooting_system.view.php:17, fuzzy
 msgid "Version"
 msgstr "Version"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:23
 #: views/admin/settings_troubleshooting_system.view.php:23
 msgid "Checking..."
 msgstr "Kontrollerar..."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:26
 #: views/admin/settings_troubleshooting_system.view.php:26
 msgid "Show the Response"
 msgstr "Visa svaret"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:72
 #: views/admin/settings_troubleshooting_system.view.php:72
 msgid "passed"
 msgstr "godkänd"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:98
 #: views/admin/settings_troubleshooting_system.view.php:98
 msgid "failed"
 msgstr "misslyckad"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:105
 #: views/admin/settings_troubleshooting_system.view.php:105
 msgid "Benchmarks"
 msgstr "Prestandatest"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:125
 #: views/admin/settings_troubleshooting_system.view.php:125, fuzzy
 msgid "Cache"
 msgstr "Cache"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:127
 #: views/admin/settings_troubleshooting_system.view.php:127
 msgid "Tag groups pro only"
 msgstr "Taggrupper pro endast"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:152
 #: views/admin/settings_troubleshooting_system.view.php:152, fuzzy
 msgid "Server"
 msgstr "Server"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:188
 #: views/admin/settings_troubleshooting_system.view.php:188
 msgid "Constants"
 msgstr "Konstanter"
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:3
 #: views/admin/setup_wizard_finished.view.php:3
 msgid "Well done!"
 msgstr "Bra gjort!"
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:6
 #: views/admin/setup_wizard_finished.view.php:6
 msgid "Now go the Tag Group Administration."
 msgstr "Gå nu till Taggruppsadministrationen."
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:10
 #: views/admin/setup_wizard_finished.view.php:10
 msgid "Or preview the sample page here."
 msgstr "Eller förhandsgranska exempel-sidan här."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:14
-#, php-format
-msgid ""
-"Or go to the <a %s>Tag Groups settings</a> or visit the <a "
-"%s>documentation</a>."
-msgstr ""
-"Eller gå till <a %s>Taggruppsinställningar</a> eller besök <a "
-"%s>dokumentationen</a>."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:16
-#, php-format
-msgid ""
-"Now go to the <a %s>Tag Groups settings</a>, or visit the <a "
-"%s>documentation</a>."
-msgstr ""
-"Gå nu till <a %s>Taggruppsinställningar</a>, eller besök <a "
-"%s>dokumentationen</a>."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:19
-#: views/admin/setup_wizard_finished.view.php:19
-msgid ""
-"If you need to launch the Setup Wizard again, you can find it in the "
-"settings. Just enter \"wizard\" in the search field."
-msgstr ""
-"Om du behöver starta installationsguiden igen, kan du hitta den i "
-"inställningarna. Ange bara \"wizard\" i sökfältet."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:21
-#: views/admin/setup_wizard_finished.view.php:21
-msgid "Happy tagging!"
-msgstr "Lycka till med taggningen!"
-
-#: dist/tag-groups/views/admin/setup_wizard_header.view.php:1
-#: views/admin/setup_wizard_header.view.php:1, fuzzy
-msgid "Tag Groups Setup Wizard"
-msgstr "Tag Groups Setup Wizard"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:3
-#: views/admin/setup_wizard_sample_content.view.php:3
-msgid ""
-"Now you are ready to create your own tag groups. If you prefer to start out "
-"from a sample, we will create for you three groups and three tags. You can "
-"play around with them, rename or delete them."
-msgstr ""
-"Nu är du redo att skapa dina egna taggrupper. Om du föredrar att börja med "
-"ett exempel, kommer vi att skapa tre grupper och tre taggar åt dig. Du kan "
-"leka med dem, döpa om eller ta bort dem."
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:8
-#: views/admin/setup_wizard_sample_content.view.php:8
-msgid "Create sample groups:"
-msgstr "Skapa exempelgrupper:"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:16
-#: views/admin/setup_wizard_sample_content.view.php:16
-msgid "Create sample tags in these groups:"
-msgstr "Skapa exempel-taggar i dessa grupper:"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:34
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:33
-#: views/admin/setup_wizard_sample_content.view.php:34
-#: views/admin/setup_wizard_taxonomies.view.php:33
-msgid "Next Step"
-msgstr "Nästa steg"
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:3
-#: views/admin/setup_wizard_start.view.php:3
-msgid ""
-"On the following pages we will guide you through the basic settings that "
-"you need for the most common features."
-msgstr ""
-"På följande sidor kommer vi att vägleda dig genom de grundläggande "
-"inställningarna som du behöver för de vanligaste funktionerna."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
-#: views/admin/setup_wizard_start.view.php:4
-msgid ""
-"You can later make changes or fine-tune the details in the Tag Groups "
-"settings."
-msgstr ""
-"Du kan senare göra ändringar eller justera detaljerna i "
-"taggruppsinställningarna."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
-#: views/admin/setup_wizard_start.view.php:4
-msgid "(show me the menu)"
-msgstr "(visa mig menyn)"
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:5
-#: views/admin/setup_wizard_start.view.php:5
-msgid ""
-"Feel free to abort the Setup Wizard any time and continue on your own path. "
-"You can also launch it again at a later time."
-msgstr ""
-"Känn dig fri att avbryta installationsguiden när som helst och fortsätta på "
-"egen hand. Du kan också starta den igen vid ett senare tillfälle."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:7
-#: views/admin/setup_wizard_start.view.php:7
-msgid "The wizard will offer more options after upgrading to premium."
-msgstr ""
-"Guiden kommer att erbjuda fler alternativ efter att du har uppgraderat till "
-"premium."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
-#: views/admin/setup_wizard_taxonomies.view.php:2
-msgid "Choose the taxonomies for which you want to use tag groups."
-msgstr "Välj de taxonomier för vilka du vill använda taggrupper."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
-#: views/admin/setup_wizard_taxonomies.view.php:2
-msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
-msgstr ""
-"I de flesta fall kommer standardtaxonomin <b>Tags (post_tag)</b> att göra "
-"jobbet."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:22
-#: views/admin/setup_wizard_taxonomies.view.php:22
-msgid "post type"
-msgstr "post type"
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:30
-#: views/admin/setup_wizard_taxonomies.view.php:30
-msgid "You will find more options in the Tag Groups settings."
-msgstr "Du kommer att hitta fler alternativ i taggruppsinställningarna."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:3
-#: views/admin/tag_groups_admin.view.php:3
-msgid "Tag Group Administration"
-msgstr "Taggruppsadministration"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:10
-#: views/admin/tag_groups_admin.view.php:10
-msgid "Filter by label"
-msgstr "Filtrera efter etikett"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:22
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:35
-#: views/admin/tag_groups_admin.view.php:22
-#: views/admin/tag_groups_admin.view.php:35
-msgid "Tag Group name"
-msgstr "Taggruppens namn"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:24
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:37
-#: views/admin/tag_groups_admin.view.php:24
-#: views/admin/tag_groups_admin.view.php:37
-msgid "Number of assigned tags"
-msgstr "Antal tilldelade taggar"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:28
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:41
-#: views/admin/tag_groups_admin.view.php:28
-#: views/admin/tag_groups_admin.view.php:41
-msgid "Actions"
-msgstr "Åtgärder"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:29
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:42
-#: views/admin/tag_groups_admin.view.php:29
-#: views/admin/tag_groups_admin.view.php:42
-msgid "Change order"
-msgstr "Ändra ordning"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:30
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:43
-#: views/admin/tag_groups_admin.view.php:30
-#: views/admin/tag_groups_admin.view.php:43
-msgid "Group ID"
-msgstr "Grupp-ID"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:63
-#: views/admin/tag_groups_admin.view.php:63
-msgid "Edit"
-msgstr "Redigera"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:64
-#: views/admin/tag_groups_admin.view.php:64
-msgid "Create"
-msgstr "Skapa"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:65
-#: views/admin/tag_groups_admin.view.php:65
-msgid "new"
-msgstr "ny"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:66
-#: views/admin/tag_groups_admin.view.php:66
-msgid "label"
-msgstr "etikett"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:67
-#: views/admin/tag_groups_admin.view.php:67
-msgid "Delete this group."
-msgstr "Ta bort denna grupp."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:68
-#: views/admin/tag_groups_admin.view.php:68
-msgid "Create a new group below."
-msgstr "Skapa en ny grupp nedan."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:69
-#: views/admin/tag_groups_admin.view.php:69
-msgid "Add New Tag Group"
-msgstr "Lägg till ny taggrupp"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:70
-#: views/admin/tag_groups_admin.view.php:70
-msgid "move up"
-msgstr "flytta upp"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:71
-#: views/admin/tag_groups_admin.view.php:71
-msgid "move down"
-msgstr "flytta ner"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:72
-#: views/admin/tag_groups_admin.view.php:72
-msgid "reload"
-msgstr "ladda om"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:73
-#: views/admin/tag_groups_admin.view.php:73
-msgid "next page"
-msgstr "nästa sida"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:74
-#: views/admin/tag_groups_admin.view.php:74
-msgid "previous page"
-msgstr "föregående sida"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:75
-#: views/admin/tag_groups_admin.view.php:75
-msgid "go to page:"
-msgstr "gå till sida:"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:76
-#: views/admin/tag_groups_admin.view.php:76
-msgid "Show posts"
-msgstr "Visa inlägg"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:77
-#: views/admin/tag_groups_admin.view.php:77
-msgid "Show tags"
-msgstr "Visa taggar"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:168
-#: views/admin/tag_groups_admin.view.php:168
-msgid "Do you really want to delete this tag group?"
-msgstr "Vill du verkligen ta bort denna taggrupp?"
-
-#: dist/tag-groups/views/partials/admin_feed_fallback.view.php:2
-#, php-format
-msgid "Please visit <a %s>%s</a>."
-msgstr "Vänligen besök <a %s>%s</a>."
-
-#: dist/tag-groups/views/partials/admin_feed_footer.view.php:3
-#: views/partials/admin_feed_footer.view.php:3
-msgid "Read more"
-msgstr "Läs mer"
-
-#: dist/tag-groups/views/partials/admin_footer_rating.view.php:4
-#, php-format
-msgid "Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s"
-msgstr "Tack för att du använder Tag Grupper | %1sTaxoPress.com%2s | Version %3s"
-
-#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:10
-#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:11
-#: views/partials/bulk_admin_footer.view.php:10
-#: views/partials/bulk_admin_footer.view.php:11
-msgid "Assign to"
-msgstr "Tilldela till"
-
-#: dist/tag-groups/views/partials/filter_admin_footer.view.php:23
-#: views/partials/filter_admin_footer.view.php:23
-msgid "Filter off"
-msgstr "Filtrera av"
-
-#: dist/tag-groups/views/partials/language_notice.view.php:2
-#: views/partials/language_notice.view.php:2
-msgid "Please select one of the languages above to see the correct tag groups!"
-msgstr "Vänligen välj ett av språken ovan för att se de korrekta taggrupperna!"
-
-#: dist/tag-groups/views/partials/quick_edit_tag.view.php:3
-#: views/partials/quick_edit_tag.view.php:3
-msgid "Groups"
-msgstr "Grupper"
-
-#: includes-core/TagGroupsCoreAdmin.php:44
-#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
-#, php-format
-msgid ""
-"You're using Tag Groups Free. The Pro version has more features and "
-"support. %1$sUpgrade to Pro%2$s"
-msgstr ""
-"Du använder Tag Grupper Gratis. Pro-versionen har fler funktioner och "
-"support. %1$sUppgradera till Pro%2$s"
 
 #: views/admin/setup_wizard_finished.view.php:14
 #. translators: %1$s and %2$s are href attributes with URLs
@@ -2287,14 +1604,223 @@ msgstr ""
 "Gå nu till <a %1$s>Tag Grupper inställningar</a>, eller besök <a "
 "%2$s>dokumentationen</a>."
 
+#: views/admin/setup_wizard_finished.view.php:19
+msgid ""
+"If you need to launch the Setup Wizard again, you can find it in the "
+"settings. Just enter \"wizard\" in the search field."
+msgstr ""
+"Om du behöver starta installationsguiden igen, kan du hitta den i "
+"inställningarna. Ange bara \"wizard\" i sökfältet."
+
+#: views/admin/setup_wizard_finished.view.php:21
+msgid "Happy tagging!"
+msgstr "Lycka till med taggningen!"
+
+#: views/admin/setup_wizard_header.view.php:1, fuzzy
+msgid "Tag Groups Setup Wizard"
+msgstr "Tag Groups Setup Wizard"
+
+#: views/admin/setup_wizard_sample_content.view.php:3
+msgid ""
+"Now you are ready to create your own tag groups. If you prefer to start out "
+"from a sample, we will create for you three groups and three tags. You can "
+"play around with them, rename or delete them."
+msgstr ""
+"Nu är du redo att skapa dina egna taggrupper. Om du föredrar att börja med "
+"ett exempel, kommer vi att skapa tre grupper och tre taggar åt dig. Du kan "
+"leka med dem, döpa om eller ta bort dem."
+
+#: views/admin/setup_wizard_sample_content.view.php:8
+msgid "Create sample groups:"
+msgstr "Skapa exempelgrupper:"
+
+#: views/admin/setup_wizard_sample_content.view.php:16
+msgid "Create sample tags in these groups:"
+msgstr "Skapa exempel-taggar i dessa grupper:"
+
+#: views/admin/setup_wizard_sample_content.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:33
+msgid "Next Step"
+msgstr "Nästa steg"
+
+#: views/admin/setup_wizard_start.view.php:3
+msgid ""
+"On the following pages we will guide you through the basic settings that "
+"you need for the most common features."
+msgstr ""
+"På följande sidor kommer vi att vägleda dig genom de grundläggande "
+"inställningarna som du behöver för de vanligaste funktionerna."
+
+#: views/admin/setup_wizard_start.view.php:4
+msgid ""
+"You can later make changes or fine-tune the details in the Tag Groups "
+"settings."
+msgstr ""
+"Du kan senare göra ändringar eller justera detaljerna i "
+"taggruppsinställningarna."
+
+#: views/admin/setup_wizard_start.view.php:4
+msgid "(show me the menu)"
+msgstr "(visa mig menyn)"
+
+#: views/admin/setup_wizard_start.view.php:5
+msgid ""
+"Feel free to abort the Setup Wizard any time and continue on your own path. "
+"You can also launch it again at a later time."
+msgstr ""
+"Känn dig fri att avbryta installationsguiden när som helst och fortsätta på "
+"egen hand. Du kan också starta den igen vid ett senare tillfälle."
+
+#: views/admin/setup_wizard_start.view.php:7
+msgid "The wizard will offer more options after upgrading to premium."
+msgstr ""
+"Guiden kommer att erbjuda fler alternativ efter att du har uppgraderat till "
+"premium."
+
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use tag groups."
+msgstr "Välj de taxonomier för vilka du vill använda taggrupper."
+
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
+msgstr ""
+"I de flesta fall kommer standardtaxonomin <b>Tags (post_tag)</b> att göra "
+"jobbet."
+
+#: views/admin/setup_wizard_taxonomies.view.php:22
+msgid "post type"
+msgstr "post type"
+
+#: views/admin/setup_wizard_taxonomies.view.php:30
+msgid "You will find more options in the Tag Groups settings."
+msgstr "Du kommer att hitta fler alternativ i taggruppsinställningarna."
+
+#: views/admin/tag_groups_admin.view.php:3
+msgid "Tag Group Administration"
+msgstr "Taggruppsadministration"
+
+#: views/admin/tag_groups_admin.view.php:10
+msgid "Filter by label"
+msgstr "Filtrera efter etikett"
+
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
+msgid "Tag Group name"
+msgstr "Taggruppens namn"
+
+#: views/admin/tag_groups_admin.view.php:24
+#: views/admin/tag_groups_admin.view.php:37
+msgid "Number of assigned tags"
+msgstr "Antal tilldelade taggar"
+
+#: views/admin/tag_groups_admin.view.php:28
+#: views/admin/tag_groups_admin.view.php:41
+msgid "Actions"
+msgstr "Åtgärder"
+
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
+msgid "Change order"
+msgstr "Ändra ordning"
+
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
+msgid "Group ID"
+msgstr "Grupp-ID"
+
+#: views/admin/tag_groups_admin.view.php:63
+msgid "Edit"
+msgstr "Redigera"
+
+#: views/admin/tag_groups_admin.view.php:64
+msgid "Create"
+msgstr "Skapa"
+
+#: views/admin/tag_groups_admin.view.php:65
+msgid "new"
+msgstr "ny"
+
+#: views/admin/tag_groups_admin.view.php:66
+msgid "label"
+msgstr "etikett"
+
+#: views/admin/tag_groups_admin.view.php:67
+msgid "Delete this group."
+msgstr "Ta bort denna grupp."
+
+#: views/admin/tag_groups_admin.view.php:68
+msgid "Create a new group below."
+msgstr "Skapa en ny grupp nedan."
+
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Tag Group"
+msgstr "Lägg till ny taggrupp"
+
+#: views/admin/tag_groups_admin.view.php:70
+msgid "move up"
+msgstr "flytta upp"
+
+#: views/admin/tag_groups_admin.view.php:71
+msgid "move down"
+msgstr "flytta ner"
+
+#: views/admin/tag_groups_admin.view.php:72
+msgid "reload"
+msgstr "ladda om"
+
+#: views/admin/tag_groups_admin.view.php:73
+msgid "next page"
+msgstr "nästa sida"
+
+#: views/admin/tag_groups_admin.view.php:74
+msgid "previous page"
+msgstr "föregående sida"
+
+#: views/admin/tag_groups_admin.view.php:75
+msgid "go to page:"
+msgstr "gå till sida:"
+
+#: views/admin/tag_groups_admin.view.php:76
+msgid "Show posts"
+msgstr "Visa inlägg"
+
+#: views/admin/tag_groups_admin.view.php:77
+msgid "Show tags"
+msgstr "Visa taggar"
+
+#: views/admin/tag_groups_admin.view.php:168
+msgid "Do you really want to delete this tag group?"
+msgstr "Vill du verkligen ta bort denna taggrupp?"
+
 #: views/partials/admin_feed_fallback.view.php:2
 #. translators: %1$s is the href attribute with URL, %2$s is the link text
 #, php-format
 msgid "Please visit <a %1$s>%2$s</a>."
 msgstr "Vänligen besök <a %1$s>%2$s</a>."
 
-#: views/partials/admin_footer_rating.view.php:5
-#. translators: %1$s and %2$s are opening and closing anchor tags, %3$s is the version number
+#: views/partials/admin_feed_footer.view.php:3
+msgid "Read more"
+msgstr "Läs mer"
+
+#: views/partials/admin_footer_rating.view.php:4
+#. translators: 1: Opening TaxoPress link tag, 2: Closing link tag, 3: Plugin version.
 #, php-format
 msgid "Thanks for using Tag Groups | %1$sTaxoPress.com%2$s | Version %3$s"
 msgstr "Tack för att du använder Tag Grupper | %1$sTaxoPress.com%2$s | Version %3$s"
+
+#: views/partials/bulk_admin_footer.view.php:10
+#: views/partials/bulk_admin_footer.view.php:11
+msgid "Assign to"
+msgstr "Tilldela till"
+
+#: views/partials/filter_admin_footer.view.php:23
+msgid "Filter off"
+msgstr "Filtrera av"
+
+#: views/partials/language_notice.view.php:2
+msgid "Please select one of the languages above to see the correct tag groups!"
+msgstr "Vänligen välj ett av språken ovan för att se de korrekta taggrupperna!"
+
+#: views/partials/quick_edit_tag.view.php:3
+msgid "Groups"
+msgstr "Grupper"
