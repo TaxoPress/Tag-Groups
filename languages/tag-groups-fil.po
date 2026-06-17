@@ -10,16 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
-"PO-Revision-Date: 2026-06-15 12:52+0000\n"
+"PO-Revision-Date: 2026-06-17 15:08+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tag-groups\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: fil\n"
+"Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 || n % 10 == 6 || n % 10 == 9);\n"
 
 #: tag-groups.php:4
-#: dist/tag-groups/include/admin/class.admin.php:206
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:2
-#: dist/tag-groups/views/admin/new_tag_from_list.view.php:2
 #: include/admin/class.admin.php:206
 #: views/admin/edit_tag_main.view.php:2
 #: views/admin/new_tag_from_list.view.php:2
@@ -52,76 +49,57 @@ msgstr "TaxoPress"
 msgid "https://taxopress.com"
 msgstr "https://taxopress.com"
 
-#: dist/tag-groups/include/admin/class.admin.php:22
 #: include/admin/class.admin.php:22
 msgid "Home"
 msgstr "Bahay"
 
-#: dist/tag-groups/include/admin/class.admin.php:26
-#: dist/tag-groups/include/admin/class.settings.php:827
-#: dist/tag-groups/include/admin/class.setup_wizard.php:98
 #: include/admin/class.admin.php:26
 #: include/admin/class.settings.php:827
 #: include/admin/class.setup_wizard.php:98
 msgid "Taxonomies"
 msgstr "Taxonomies"
 
-#: dist/tag-groups/include/admin/class.admin.php:33
 #: include/admin/class.admin.php:33, fuzzy
 msgid "Front End"
 msgstr "Front End"
 
-#: dist/tag-groups/include/admin/class.admin.php:40
 #: include/admin/class.admin.php:40, fuzzy
 msgid "Back End"
 msgstr "Back End"
 
-#: dist/tag-groups/include/admin/class.admin.php:47
-#: dist/tag-groups/include/admin/class.settings.php:935
-#: dist/tag-groups/views/admin/onboarding.view.php:1
 #: include/admin/class.admin.php:47
 #: include/admin/class.settings.php:935
 #: views/admin/onboarding.view.php:1
 msgid "First Steps"
 msgstr "Unang Hakbang"
 
-#: dist/tag-groups/include/admin/class.admin.php:54
-#: dist/tag-groups/include/admin/class.settings.php:940
 #: include/admin/class.admin.php:54
 #: include/admin/class.settings.php:940, fuzzy
 msgid "Setup Wizard"
 msgstr "Setup Wizard"
 
-#: dist/tag-groups/include/admin/class.admin.php:61
-#: dist/tag-groups/include/admin/class.admin.php:940
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:95
 #: include/admin/class.admin.php:61
 #: include/admin/class.admin.php:940
 #: views/admin/settings_front_end_shortcodes.view.php:95
 msgid "Settings"
 msgstr "Mga Setting"
 
-#: dist/tag-groups/include/admin/class.admin.php:87
 #: include/admin/class.admin.php:87, fuzzy
 msgid "Tag Group Admin"
 msgstr "Tag Group Admin"
 
-#: dist/tag-groups/include/admin/class.admin.php:434
 #: include/admin/class.admin.php:434
 msgid "The term has been removed from all groups."
 msgstr "Ang termino ay tinanggal mula sa lahat ng grupo."
 
-#: dist/tag-groups/include/admin/class.admin.php:565
 #: include/admin/class.admin.php:565
 msgid "Edit this item inline"
 msgstr "I-edit ang item na ito nang inline"
 
-#: dist/tag-groups/include/admin/class.admin.php:567
 #: include/admin/class.admin.php:567
 msgid "Quick&nbsp;Edit"
 msgstr "Mabilis&nbsp;I-edit"
 
-#: dist/tag-groups/include/admin/class.admin.php:993
 #: include/admin/class.admin.php:994
 #. translators: %s is the href attribute with URL
 #, php-format
@@ -132,7 +110,6 @@ msgstr ""
 "Mangyaring <a %s>mag-click dito upang patakbuhin ang mga migration "
 "routine</a> upang matiyak na nailipat na natin ang lahat ng mga tag."
 
-#: dist/tag-groups/include/admin/class.export.php:144
 #: include/admin/class.export.php:144
 msgid ""
 "Your settings/groups and your terms have been exported. Please download the "
@@ -142,26 +119,20 @@ msgstr ""
 "Mangyaring i-download ang mga resulta ng mga file sa pamamagitan ng "
 "right-click o ctrl-click:"
 
-#: dist/tag-groups/include/admin/class.export.php:151
 #: include/admin/class.export.php:151
 msgid "Writing of the exported settings failed."
 msgstr "Nabigo ang pagsulat ng mga na-export na setting."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:176
-#: dist/tag-groups/include/admin/class.group_admin.php:180
 #: include/admin/class.group_admin.php:176
 #: include/admin/class.group_admin.php:180
 msgid "The groups have been sorted alphabetically."
 msgstr "Ang mga grupo ay na-uri ayon sa alpabeto."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:188
-#: dist/tag-groups/include/admin/class.group_admin.php:207
 #: include/admin/class.group_admin.php:188
 #: include/admin/class.group_admin.php:209
 msgid "The label cannot be empty."
 msgstr "Ang label ay hindi maaaring walang laman."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:191
 #: include/admin/class.group_admin.php:192
 #. translators: %s is the tag group label
 #, php-format
@@ -172,61 +143,50 @@ msgstr ""
 "Mayroon nang tag group na may label na '%s', o hindi nagbago ang label. "
 "Mangyaring pumili ng iba o bumalik."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:195
 #: include/admin/class.group_admin.php:197
 #. translators: %s is the tag group label
 #, php-format
 msgid "A new tag group with the label '%s' has been created!"
 msgstr "Isang bagong tag group na may label na '%s' ang nalikha!"
 
-#: dist/tag-groups/include/admin/class.group_admin.php:213
 #: include/admin/class.group_admin.php:216
 #. translators: %s is the tag group label
 #, php-format
 msgid "A tag group with the label '%s' already exists."
 msgstr "Mayroon nang tag group na may label na '%s'."
 
-#: dist/tag-groups/include/admin/class.group_admin.php:225
 #: include/admin/class.group_admin.php:229
 #. translators: %s is the tag group label
 #, php-format
 msgid "The tag group with the label '%s' has been saved!"
 msgstr "Ang tag group na may label na '%s' ay nasave na!"
 
-#: dist/tag-groups/include/admin/class.group_admin.php:231
 #: include/admin/class.group_admin.php:236
 #. translators: %1$s is the group ID, %2$s is the group label
 #, php-format
 msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
 msgstr "Isang tag group na may id %1$s at label na '%2$s' ang nabura na."
 
-#: dist/tag-groups/include/admin/class.import.php:81
 #: include/admin/class.import.php:81
 msgid "Error uploading the file."
 msgstr "Error sa pag-upload ng file."
 
-#: dist/tag-groups/include/admin/class.import.php:108
 #: include/admin/class.import.php:108
 msgid "Error reading the file."
 msgstr "Error sa pagbabasa ng file."
 
-#: dist/tag-groups/include/admin/class.import.php:146
-#: dist/tag-groups/include/admin/class.import.php:187
 #: include/admin/class.import.php:146
-#: include/admin/class.import.php:189
+#: include/admin/class.import.php:194
 msgid "Error parsing the file."
 msgstr "Error sa pag-parse ng file."
 
-#: dist/tag-groups/include/admin/class.import.php:165
-#: dist/tag-groups/include/admin/class.import.php:260
 #: include/admin/class.import.php:165
-#: include/admin/class.import.php:262
+#: include/admin/class.import.php:267
 msgid "date unknown"
 msgstr "petsa ay hindi alam"
 
-#: dist/tag-groups/include/admin/class.import.php:169
-#: include/admin/class.import.php:170
-#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#: include/admin/class.import.php:171
+#. translators: 1: Filename, 2: Plugin version, 3: Export file creation date.
 #, php-format
 msgid ""
 "Your settings and groups have been imported from the file %1$s (created "
@@ -235,8 +195,7 @@ msgstr ""
 "Ang iyong mga setting at grupo ay na-import mula sa file %1$s (nalikha "
 "gamit ang bersyon ng plugin %2$s noong %3$s)."
 
-#: dist/tag-groups/include/admin/class.import.php:170
-#: include/admin/class.import.php:172
+#: include/admin/class.import.php:177
 #. translators: %d is the number of options
 #, php-format
 msgid "%d option was added or changed."
@@ -244,9 +203,8 @@ msgid_plural "%d options were added or changed."
 msgstr[0] "%d opsyon ang nadagdag o binago."
 msgstr[1] "%d mga opsyon ang nadagdag o binago."
 
-#: dist/tag-groups/include/admin/class.import.php:264
-#: include/admin/class.import.php:267
-#. translators: %1$s is the filename, %2$s is the plugin version, %3$s is the creation date
+#: include/admin/class.import.php:273
+#. translators: 1: Filename, 2: Plugin version, 3: Export file creation date.
 #, php-format
 msgid ""
 "Your terms have been imported from the file %1$s (created with plugin "
@@ -255,8 +213,7 @@ msgstr ""
 "Ang iyong mga termino ay na-import mula sa file %1$s (nalikha gamit ang "
 "bersyon ng plugin %2$s noong %3$s)."
 
-#: dist/tag-groups/include/admin/class.import.php:265
-#: include/admin/class.import.php:269
+#: include/admin/class.import.php:279
 #. translators: %d is the number of terms processed
 #, php-format
 msgid "We processed %d term."
@@ -264,8 +221,7 @@ msgid_plural "We processed %d terms."
 msgstr[0] "Naprocess namin ang %d termino."
 msgstr[1] "Naprocess namin ang %d mga termino."
 
-#: dist/tag-groups/include/admin/class.import.php:266
-#: include/admin/class.import.php:271
+#: include/admin/class.import.php:281
 #. translators: %d is the number of terms saved
 #, php-format
 msgid "We saved %d term."
@@ -273,8 +229,7 @@ msgid_plural "We saved %d terms."
 msgstr[0] "Naisave namin ang %d termino."
 msgstr[1] "Naisave namin ang %d mga termino."
 
-#: dist/tag-groups/include/admin/class.import.php:267
-#: include/admin/class.import.php:273
+#: include/admin/class.import.php:283
 #. translators: %d is the number of terms updated
 #, php-format
 msgid "The group info of %d term was updated."
@@ -282,10 +237,6 @@ msgid_plural "The group info of %d terms was updated."
 msgstr[0] "Na-update ang info ng grupo ng %d termino."
 msgstr[1] "Na-update ang info ng grupo ng %d mga termino."
 
-#: dist/tag-groups/include/admin/class.settings.php:151
-#: dist/tag-groups/include/admin/class.settings.php:858
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:26
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:39
 #: include/admin/class.settings.php:151
 #: include/admin/class.settings.php:858
 #: views/admin/tag_groups_admin.view.php:26
@@ -293,129 +244,92 @@ msgstr[1] "Na-update ang info ng grupo ng %d mga termino."
 msgid "Filters"
 msgstr "Mga filter"
 
-#: dist/tag-groups/include/admin/class.settings.php:153
-#: dist/tag-groups/include/admin/class.settings.php:958
 #: include/admin/class.settings.php:153
 #: include/admin/class.settings.php:958, fuzzy
 msgid "Gutenberg"
 msgstr "Gutenberg"
 
-#: dist/tag-groups/include/admin/class.settings.php:156
-#: dist/tag-groups/include/admin/class.settings.php:965
 #: include/admin/class.settings.php:156
 #: include/admin/class.settings.php:965
 msgid "Multilingual"
 msgstr "Maraming wika"
 
-#: dist/tag-groups/include/admin/class.settings.php:238
-#: dist/tag-groups/include/admin/class.settings.php:832
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:9
 #: include/admin/class.settings.php:238
 #: include/admin/class.settings.php:832
 #: views/admin/settings_front_end_shortcodes.view.php:9
 msgid "Shortcodes"
 msgstr "Mga shortcode"
 
-#: dist/tag-groups/include/admin/class.settings.php:239
-#: dist/tag-groups/include/admin/class.settings.php:846
 #: include/admin/class.settings.php:239
 #: include/admin/class.settings.php:846
 msgid "Themes and Appearance"
 msgstr "Mga Tema at Hitsura"
 
-#: dist/tag-groups/include/admin/class.settings.php:265
 #: include/admin/class.settings.php:265
 msgid "remove"
 msgstr "alisin"
 
-#: dist/tag-groups/include/admin/class.settings.php:265
 #: include/admin/class.settings.php:265
 msgid "(recommended)"
 msgstr "(inirerekomenda)"
 
-#: dist/tag-groups/include/admin/class.settings.php:266
 #: include/admin/class.settings.php:266
 msgid "keep"
 msgstr "panatilihin"
 
-#: dist/tag-groups/include/admin/class.settings.php:267
 #: include/admin/class.settings.php:267
 msgid "use unfiltered_html filter"
 msgstr "gamitin ang unfiltered_html na filter"
 
-#: dist/tag-groups/include/admin/class.settings.php:317
-#: dist/tag-groups/include/admin/class.settings.php:945
 #: include/admin/class.settings.php:317
 #: include/admin/class.settings.php:945
 msgid "First Aid"
 msgstr "Unang Tulong"
 
-#: dist/tag-groups/include/admin/class.settings.php:318
 #: include/admin/class.settings.php:318, fuzzy
 msgid "REST API"
 msgstr "REST API"
 
-#: dist/tag-groups/include/admin/class.settings.php:319
-#: dist/tag-groups/include/admin/class.settings.php:873
 #: include/admin/class.settings.php:319
 #: include/admin/class.settings.php:873
 msgid "System Information"
 msgstr "Impormasyon ng Sistema"
 
-#: dist/tag-groups/include/admin/class.settings.php:320
-#: dist/tag-groups/include/admin/class.settings.php:887
 #: include/admin/class.settings.php:320
 #: include/admin/class.settings.php:887
 msgid "Debugging"
 msgstr "Pag-debug"
 
-#: dist/tag-groups/include/admin/class.settings.php:321
-#: dist/tag-groups/include/admin/class.settings.php:863
 #: include/admin/class.settings.php:321
 #: include/admin/class.settings.php:863
 msgid "Export/Import"
 msgstr "I-export/I-import"
 
-#: dist/tag-groups/include/admin/class.settings.php:322
-#: dist/tag-groups/include/admin/class.settings.php:868
 #: include/admin/class.settings.php:322
 #: include/admin/class.settings.php:868
 msgid "Reset"
 msgstr "I-reset"
 
-#: dist/tag-groups/include/admin/class.settings.php:324
 #: include/admin/class.settings.php:324
 msgid "Licences"
 msgstr "Mga Lisensya"
 
-#: dist/tag-groups/include/admin/class.settings.php:422
 #: include/admin/class.settings.php:422
 msgid "Transients"
 msgstr "Mga Transient"
 
-#: dist/tag-groups/include/admin/class.settings.php:423
 #: include/admin/class.settings.php:423, fuzzy
 msgid "Database"
 msgstr "Database"
 
-#: dist/tag-groups/include/admin/class.settings.php:424
 #: include/admin/class.settings.php:424, fuzzy
 msgid "Filesystem"
 msgstr "Filesystem"
 
-#: dist/tag-groups/include/admin/class.settings.php:425
 #: include/admin/class.settings.php:425, fuzzy
 msgid "WP Object Cache"
 msgstr "WP Object Cache"
 
-#: dist/tag-groups/include/admin/class.settings.php:548
-#: dist/tag-groups/include/admin/class.settings.php:604
-#: dist/tag-groups/include/admin/class.settings.php:642
-#: dist/tag-groups/include/admin/class.settings.php:676
-#: dist/tag-groups/include/admin/class.settings.php:691
-#: dist/tag-groups/include/admin/class.settings.php:704
-#: dist/tag-groups/include/admin/class.settings.php:717
-#: dist/tag-groups/include/admin/class.settings.php:786
 #: include/admin/class.settings.php:548
 #: include/admin/class.settings.php:604
 #: include/admin/class.settings.php:642
@@ -427,386 +341,299 @@ msgstr "WP Object Cache"
 msgid "Your settings have been saved."
 msgstr "Ang iyong mga setting ay nai-save na."
 
-#: dist/tag-groups/include/admin/class.settings.php:566
 #: include/admin/class.settings.php:566
 msgid "Your settings has been saved."
 msgstr "Ang iyong mga setting ay nai-save na."
 
-#: dist/tag-groups/include/admin/class.settings.php:584
 #: include/admin/class.settings.php:584
 msgid "All groups have been deleted and assignments reset."
 msgstr "Lahat ng grupo ay natanggal at ang mga assignment ay na-reset."
 
-#: dist/tag-groups/include/admin/class.settings.php:733
 #: include/admin/class.settings.php:733
 msgid "The filter on the tags page has been reset to show all tags."
 msgstr "Ang filter sa pahina ng mga tag ay na-reset upang ipakita ang lahat ng tag."
 
-#: dist/tag-groups/include/admin/class.settings.php:829
 #: include/admin/class.settings.php:829, fuzzy
 msgid "tag groups"
 msgstr "tag groups"
 
-#: dist/tag-groups/include/admin/class.settings.php:835
-#: dist/tag-groups/include/admin/class.settings.php:849
-#: dist/tag-groups/include/admin/class.settings.php:904
 #: include/admin/class.settings.php:835
 #: include/admin/class.settings.php:849
 #: include/admin/class.settings.php:904, fuzzy
 msgid "tag cloud"
 msgstr "tag cloud"
 
-#: dist/tag-groups/include/admin/class.settings.php:836
 #: include/admin/class.settings.php:836, fuzzy
 msgid "group info"
 msgstr "group info"
 
-#: dist/tag-groups/include/admin/class.settings.php:837
 #: include/admin/class.settings.php:837, fuzzy
 msgid "sidebar widget"
 msgstr "sidebar widget"
 
-#: dist/tag-groups/include/admin/class.settings.php:838
 #: include/admin/class.settings.php:838, fuzzy
 msgid "accordion"
 msgstr "accordion"
 
-#: dist/tag-groups/include/admin/class.settings.php:839
 #: include/admin/class.settings.php:839, fuzzy
 msgid "tabs"
 msgstr "tabs"
 
-#: dist/tag-groups/include/admin/class.settings.php:840
 #: include/admin/class.settings.php:840, fuzzy
 msgid "alphabetical"
 msgstr "alphabetical"
 
-#: dist/tag-groups/include/admin/class.settings.php:841
 #: include/admin/class.settings.php:841, fuzzy
 msgid "post list"
 msgstr "post list"
 
-#: dist/tag-groups/include/admin/class.settings.php:853
 #: include/admin/class.settings.php:853, fuzzy
 msgid "colors"
 msgstr "colors"
 
-#: dist/tag-groups/include/admin/class.settings.php:854
 #: include/admin/class.settings.php:854, fuzzy
 msgid "tag description"
 msgstr "tag description"
 
-#: dist/tag-groups/include/admin/class.settings.php:860
-#: dist/tag-groups/include/admin/class.settings.php:952
 #: include/admin/class.settings.php:860
 #: include/admin/class.settings.php:952, fuzzy
 msgid "tag filter"
 msgstr "tag filter"
 
-#: dist/tag-groups/include/admin/class.settings.php:860
 #: include/admin/class.settings.php:860, fuzzy
 msgid "post filter"
 msgstr "post filter"
 
-#: dist/tag-groups/include/admin/class.settings.php:865
 #: include/admin/class.settings.php:865, fuzzy
 msgid "backup"
 msgstr "backup"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870, fuzzy
 msgid "remove plugin"
 msgstr "remove plugin"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870, fuzzy
 msgid "remove data"
 msgstr "remove data"
 
-#: dist/tag-groups/include/admin/class.settings.php:870
 #: include/admin/class.settings.php:870, fuzzy
 msgid "delete groups"
 msgstr "delete groups"
 
-#: dist/tag-groups/include/admin/class.settings.php:876
-#: dist/tag-groups/include/admin/class.settings.php:890
 #: include/admin/class.settings.php:876
 #: include/admin/class.settings.php:890, fuzzy
 msgid "debugging"
 msgstr "debugging"
 
-#: dist/tag-groups/include/admin/class.settings.php:877
 #: include/admin/class.settings.php:877, fuzzy
 msgid "PHP Version"
 msgstr "PHP Version"
 
-#: dist/tag-groups/include/admin/class.settings.php:878
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:21
 #: include/admin/class.settings.php:878
 #: views/admin/settings_troubleshooting_system.view.php:21, fuzzy
 msgid "Ajax Test"
 msgstr "Ajax Test"
 
-#: dist/tag-groups/include/admin/class.settings.php:879
-#: dist/tag-groups/include/admin/class.settings.php:891
-#: dist/tag-groups/include/admin/class.settings.php:948
 #: include/admin/class.settings.php:879
 #: include/admin/class.settings.php:891
 #: include/admin/class.settings.php:948, fuzzy
 msgid "troubleshooting"
 msgstr "troubleshooting"
 
-#: dist/tag-groups/include/admin/class.settings.php:880
 #: include/admin/class.settings.php:880
 msgid "benchmarks"
 msgstr "mga benchmark"
 
-#: dist/tag-groups/include/admin/class.settings.php:881
 #: include/admin/class.settings.php:881
 msgid "speed test"
 msgstr "pagsubok sa bilis"
 
-#: dist/tag-groups/include/admin/class.settings.php:882
-#: dist/tag-groups/include/admin/class.settings.php:892
 #: include/admin/class.settings.php:882
 #: include/admin/class.settings.php:892, fuzzy
 msgid "error"
 msgstr "error"
 
-#: dist/tag-groups/include/admin/class.settings.php:883
-#: dist/tag-groups/include/admin/class.settings.php:893
 #: include/admin/class.settings.php:883
 #: include/admin/class.settings.php:893
 msgid "testing"
 msgstr "pagsubok"
 
-#: dist/tag-groups/include/admin/class.settings.php:894
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:950
 #: include/admin/class.settings.php:894
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:950
 msgid "help"
 msgstr "tulong"
 
-#: dist/tag-groups/include/admin/class.settings.php:898
 #: include/admin/class.settings.php:898, fuzzy
 msgid "Tag Groups Pro"
 msgstr "Tag Groups Pro"
 
-#: dist/tag-groups/include/admin/class.settings.php:901
 #: include/admin/class.settings.php:901
 msgid "upgrade"
 msgstr "pag-upgrade"
 
-#: dist/tag-groups/include/admin/class.settings.php:902
 #: include/admin/class.settings.php:902
 msgid "more groups"
 msgstr "mas maraming grupo"
 
-#: dist/tag-groups/include/admin/class.settings.php:903
 #: include/admin/class.settings.php:903
 msgid "posts"
 msgstr "mga post"
 
-#: dist/tag-groups/include/admin/class.settings.php:905
 #: include/admin/class.settings.php:905, fuzzy
 msgid "filter"
 msgstr "filter"
 
-#: dist/tag-groups/include/admin/class.settings.php:906
 #: include/admin/class.settings.php:906, fuzzy
 msgid "animated"
 msgstr "animated"
 
-#: dist/tag-groups/include/admin/class.settings.php:907
 #: include/admin/class.settings.php:907
 msgid "searchable"
 msgstr "mahanap"
 
-#: dist/tag-groups/include/admin/class.settings.php:915
 #: include/admin/class.settings.php:915
 msgid "Info"
 msgstr "Impormasyon"
 
-#: dist/tag-groups/include/admin/class.settings.php:918
 #: include/admin/class.settings.php:918
 msgid "author"
 msgstr "may-akda"
 
-#: dist/tag-groups/include/admin/class.settings.php:919
 #: include/admin/class.settings.php:919
 msgid "version"
 msgstr "bersyon"
 
-#: dist/tag-groups/include/admin/class.settings.php:920
 #: include/admin/class.settings.php:920
 msgid "contact"
 msgstr "kontak"
 
-#: dist/tag-groups/include/admin/class.settings.php:921
 #: include/admin/class.settings.php:921
 msgid "about"
 msgstr "tungkol"
 
-#: dist/tag-groups/include/admin/class.settings.php:925
 #: include/admin/class.settings.php:925
 msgid "Licenses"
 msgstr "Mga Lisensya"
 
-#: dist/tag-groups/include/admin/class.settings.php:927
 #: include/admin/class.settings.php:927
 msgid "Credits"
 msgstr "Mga Kredito"
 
-#: dist/tag-groups/include/admin/class.settings.php:930
 #: include/admin/class.settings.php:930
 msgid "Development News"
 msgstr "Balita sa Pag-unlad"
 
-#: dist/tag-groups/include/admin/class.settings.php:932
 #: include/admin/class.settings.php:932, fuzzy
 msgid "blog"
 msgstr "blog"
 
-#: dist/tag-groups/include/admin/class.settings.php:932
 #: include/admin/class.settings.php:932
 msgid "updates"
 msgstr "mga update"
 
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:942
 msgid "getting started"
 msgstr "pagsisimula"
 
-#: dist/tag-groups/include/admin/class.settings.php:937
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:937
 #: include/admin/class.settings.php:942
 msgid "introduction"
 msgstr "panimula"
 
-#: dist/tag-groups/include/admin/class.settings.php:942
 #: include/admin/class.settings.php:942
 msgid "sample"
 msgstr "halimbawa"
 
-#: dist/tag-groups/include/admin/class.settings.php:949
 #: include/admin/class.settings.php:949
 msgid "migrate"
 msgstr "ililipat"
 
-#: dist/tag-groups/include/admin/class.settings.php:951
 #: include/admin/class.settings.php:951
 msgid "problem"
 msgstr "problema"
 
-#: dist/tag-groups/include/admin/class.settings.php:960
 #: include/admin/class.settings.php:960, fuzzy
 msgid "live block preview"
 msgstr "live block preview"
 
-#: dist/tag-groups/include/admin/class.settings.php:967
 #: include/admin/class.settings.php:967
 msgid "translation"
 msgstr "pagsasalin"
 
-#: dist/tag-groups/include/admin/class.settings.php:998
 #: include/admin/class.settings.php:998
 msgid "Migrating the term meta"
 msgstr "Paglipat ng term meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:999
 #: include/admin/class.settings.php:999
 msgid "Fixing incorrect tag groups"
 msgstr "Pag-aayos ng maling grupo ng tag"
 
-#: dist/tag-groups/include/admin/class.settings.php:1000
 #: include/admin/class.settings.php:1000
 msgid "Fixing incorrect groups in term meta"
 msgstr "Pag-aayos ng maling grupo sa term meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:1001
 #: include/admin/class.settings.php:1001
 msgid "Sorting groups in term meta"
 msgstr "Pag-uri-uri ng mga grupo sa term meta"
 
-#: dist/tag-groups/include/admin/class.settings.php:1002
 #: include/admin/class.settings.php:1002
 msgid "Checking the tag names"
 msgstr "Suriin ang mga pangalan ng tag"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:94
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:12
 #: include/admin/class.setup_wizard.php:94
 #: views/admin/setup_wizard_start.view.php:12
 msgid "Start"
 msgstr "Simulan"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:102
 #: include/admin/class.setup_wizard.php:102
 msgid "Sample Content"
 msgstr "Halimbawa ng Nilalaman"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:122
 #: include/admin/class.setup_wizard.php:122
 msgid "Sample Group A"
 msgstr "Halimbawa ng Grupo A"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:123
 #: include/admin/class.setup_wizard.php:123
 msgid "Sample Group B"
 msgstr "Halimbawa ng Grupo B"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:124
 #: include/admin/class.setup_wizard.php:124
 msgid "Sample Group C"
 msgstr "Halimbawa ng Grupo C"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:140
 #: include/admin/class.setup_wizard.php:140
 msgid "First Sample Tag"
 msgstr "Unang Halimbawa ng Tag"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:141
 #: include/admin/class.setup_wizard.php:141
 msgid "Second Sample Tag"
 msgstr "Pangalawang Halimbawa na Tag"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:142
 #: include/admin/class.setup_wizard.php:142
 msgid "Third Sample Tag"
 msgstr "Pangatlong Halimbawa na Tag"
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:160
 #: include/admin/class.setup_wizard.php:160
 msgid "Create a draft sample page with Gutenberg blocks."
 msgstr "Gumawa ng isang draft na sample na pahina gamit ang mga Gutenberg blocks."
 
-#: dist/tag-groups/include/admin/class.setup_wizard.php:162
 #: include/admin/class.setup_wizard.php:162
 msgid "Create a draft sample page with shortcodes."
 msgstr "Gumawa ng isang draft na sample na pahina gamit ang mga shortcodes."
 
-#: dist/tag-groups/include/class.loader.php:159
 #: include/class.loader.php:160
 #. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
 #, php-format
 msgid "The plugin %1$s requires WordPress %2$s to function properly."
 msgstr "Ang plugin %1$s ay nangangailangan ng WordPress %2$s upang gumana ng maayos."
 
-#: dist/tag-groups/include/class.loader.php:159
 #: include/class.loader.php:160
 #. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
 msgid "Please upgrade WordPress and then try again."
 msgstr "Mangyaring i-upgrade ang WordPress at subukan muli."
 
-#: dist/tag-groups/include/helpers/class.groups.php:182
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:8
-#: dist/tag-groups/views/admin/new_tag_from_list.view.php:5
-#: dist/tag-groups/views/partials/quick_edit_tag.view.php:7
 #: include/helpers/class.groups.php:182
 #: views/admin/edit_tag_main.view.php:8
 #: views/admin/new_tag_from_list.view.php:5
@@ -814,174 +641,143 @@ msgstr "Mangyaring i-upgrade ang WordPress at subukan muli."
 msgid "not assigned"
 msgstr "hindi nakatalaga"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:43
+#: includes-core/TagGroupsCoreAdmin.php:70
+#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
 #, php-format
 msgid ""
 "You're using Tag Groups Free. The Pro version has more features and "
-"support. %sUpgrade to Pro%s"
+"support. %1$sUpgrade to Pro%2$s"
 msgstr ""
-"Gumagamit ka ng Tag Groups Free. Ang Pro version ay may higit pang mga "
-"tampok at suporta. %sI-upgrade sa Pro%s"
+"Gumagamit ka ng Tag Groups Free. Ang Pro na bersyon ay may higit pang mga "
+"tampok at suporta. %1$sMag-upgrade sa Pro%2$s"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:71
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:115
-#: includes-core/TagGroupsCoreAdmin.php:72
-#: includes-core/TagGroupsCoreAdmin.php:116
+#: includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:142
 msgid "Upgrade to Pro"
 msgstr "I-upgrade sa Pro"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:88
-#: includes-core/TagGroupsCoreAdmin.php:89
+#: includes-core/TagGroupsCoreAdmin.php:115
 msgid "Upgrade to Tag Groups Pro"
 msgstr "I-upgrade sa Tag Groups Pro"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:93
-#: includes-core/TagGroupsCoreAdmin.php:94
+#: includes-core/TagGroupsCoreAdmin.php:120
 msgid "Enhance the power of Tag Groups with the Pro version:"
 msgstr "Palakasin ang kapangyarihan ng Tag Groups gamit ang Pro version:"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:96
-#: includes-core/TagGroupsCoreAdmin.php:97, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:123, fuzzy
 msgid "21 Shortcodes"
 msgstr "21 Shortcodes"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:97
-#: includes-core/TagGroupsCoreAdmin.php:98, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:124, fuzzy
 msgid "18 Gutenberg Blocks"
 msgstr "18 Gutenberg Blocks"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:98
-#: includes-core/TagGroupsCoreAdmin.php:99, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:125, fuzzy
 msgid "Table Tag Cloud"
 msgstr "Table Tag Cloud"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:99
-#: includes-core/TagGroupsCoreAdmin.php:100, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:126, fuzzy
 msgid "Simple Tag Cloud"
 msgstr "Simple Tag Cloud"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:100
-#: includes-core/TagGroupsCoreAdmin.php:101, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:127, fuzzy
 msgid "Shuffle Box"
 msgstr "Shuffle Box"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:101
-#: includes-core/TagGroupsCoreAdmin.php:102, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:128, fuzzy
 msgid "Caching"
 msgstr "Caching"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:102
-#: includes-core/TagGroupsCoreAdmin.php:103
+#: includes-core/TagGroupsCoreAdmin.php:129
 msgid "Multiple Groups Per Tag"
 msgstr "Maramihang Mga Grupo Bawat Tag"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:103
-#: includes-core/TagGroupsCoreAdmin.php:104, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:130, fuzzy
 msgid "Tag Cloud Search"
 msgstr "Tag Cloud Search"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:104
-#: includes-core/TagGroupsCoreAdmin.php:105
+#: includes-core/TagGroupsCoreAdmin.php:131
 msgid "Toggle Post Filter"
 msgstr "I-toggle ang Post Filter"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:105
-#: includes-core/TagGroupsCoreAdmin.php:106
+#: includes-core/TagGroupsCoreAdmin.php:132
 msgid "Dynamic Post Filter"
 msgstr "Dinamiko na Post Filter"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:106
-#: includes-core/TagGroupsCoreAdmin.php:107
+#: includes-core/TagGroupsCoreAdmin.php:133
 msgid "Post List"
 msgstr "Listahan ng Post"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:107
-#: includes-core/TagGroupsCoreAdmin.php:108, fuzzy
+#: includes-core/TagGroupsCoreAdmin.php:134, fuzzy
 msgid "Tag Meta Box"
 msgstr "Tag Meta Box"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:108
-#: includes-core/TagGroupsCoreAdmin.php:109
+#: includes-core/TagGroupsCoreAdmin.php:135
 msgid "Post Tags in Groups"
 msgstr "Post Tags sa Mga Grupo"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:109
-#: includes-core/TagGroupsCoreAdmin.php:110
+#: includes-core/TagGroupsCoreAdmin.php:136
 msgid "Permissions"
 msgstr "Mga Pahintulot"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:110
-#: includes-core/TagGroupsCoreAdmin.php:111
+#: includes-core/TagGroupsCoreAdmin.php:137
 msgid "Default Groups"
 msgstr "Mga Default na Grupo"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:111
-#: includes-core/TagGroupsCoreAdmin.php:112
+#: includes-core/TagGroupsCoreAdmin.php:138
 msgid "WooCommerce Attributes"
 msgstr "Mga Katangian ng WooCommerce"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:112
-#: includes-core/TagGroupsCoreAdmin.php:113
+#: includes-core/TagGroupsCoreAdmin.php:139
 msgid "Parent Group Level"
 msgstr "Antas ng Parent Group"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:122
-#: includes-core/TagGroupsCoreAdmin.php:123
+#: includes-core/TagGroupsCoreAdmin.php:149
 msgid "Need Tag Groups Support?"
 msgstr "Kailangan ng Suporta para sa Tag Groups?"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:127
-#: includes-core/TagGroupsCoreAdmin.php:128
+#: includes-core/TagGroupsCoreAdmin.php:154
 msgid "If you need help or have a new feature request, let us know."
 msgstr ""
 "Kung kailangan mo ng tulong o may bagong kahilingan para sa tampok, ipaalam "
 "sa amin."
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:129
-#: includes-core/TagGroupsCoreAdmin.php:130
+#: includes-core/TagGroupsCoreAdmin.php:156
 msgid "Request Support"
 msgstr "Humiling ng Suporta"
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:138
-#: includes-core/TagGroupsCoreAdmin.php:139
+#: includes-core/TagGroupsCoreAdmin.php:165
 msgid "Detailed documentation is also available on the plugin website."
 msgstr "Detalyadong dokumentasyon ay available din sa website ng plugin."
 
-#: dist/tag-groups/includes-core/TagGroupsCoreAdmin.php:140
-#: includes-core/TagGroupsCoreAdmin.php:141
+#: includes-core/TagGroupsCoreAdmin.php:167
 msgid "View Knowledge Base"
 msgstr "Tingnan ang Knowledge Base"
 
-#: dist/tag-groups/tag-groups.php:159
-#: tag-groups.php:159
+#: tag-groups.php:177
 msgid "The free Tag Groups plugin cannot be active together with Tag Groups Pro."
 msgstr ""
 "Ang libreng Tag Groups plugin ay hindi maaaring aktibo kasabay ng Tag "
 "Groups Pro."
 
-#: dist/tag-groups/tag-groups.php:159
-#: tag-groups.php:159
+#: tag-groups.php:177
 msgid "more information"
 msgstr "karagdagang impormasyon"
 
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
 #: views/admin/edit_tag_main.view.php:31
 msgid "Edit tag groups"
 msgstr "I-edit ang mga tag group"
 
-#: dist/tag-groups/views/admin/edit_tag_main.view.php:31
 #: views/admin/edit_tag_main.view.php:31
 msgid "Clicking will leave this page without saving."
 msgstr "Ang pag-click ay iiwan ang pahinang ito nang walang pag-save."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:3
 #: views/admin/onboarding.view.php:3
 #. translators: %s is the plugin name
 #, php-format
 msgid "Welcome to %s!"
 msgstr "Maligayang pagdating sa %s!"
 
-#: dist/tag-groups/views/admin/onboarding.view.php:4
 #: views/admin/onboarding.view.php:4
 #. translators: %s is the plugin name
 msgid ""
@@ -991,19 +787,16 @@ msgstr ""
 "Ang plugin ay handa na para sa paggamit. Kung kailangan mo ng tulong, "
 "maaari naming ipakita sa iyo ang mga pangunahing hakbang."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:6
 #: views/admin/onboarding.view.php:6
 msgid "Start the Setup Wizard"
 msgstr "Simulan ang Setup Wizard"
 
-#: dist/tag-groups/views/admin/onboarding.view.php:10
 #: views/admin/onboarding.view.php:10
 msgid "Or click here if you prefer to do it on your own."
 msgstr ""
 "O kaya, mag-click dito kung mas gusto mong gawin ito sa iyong sariling "
 "paraan."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:13
 #: views/admin/onboarding.view.php:13
 #. translators: %s is the href attribute with URL
 #, php-format
@@ -1017,7 +810,6 @@ msgstr ""
 "ng iyong mga tag. Sa karamihan ng mga kaso, iwanan lamang ang default: Tags "
 "(post_tag)."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:14
 #: views/admin/onboarding.view.php:14
 #. translators: %s is the href attribute with URL
 msgid "Go to the tag groups admin page and <b>create some groups</b>."
@@ -1025,7 +817,6 @@ msgstr ""
 "Pumunta sa pahina ng admin ng mga tag groups at <b>lumikha ng ilang "
 "grupo</b>."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:14
 #: views/admin/onboarding.view.php:14
 #. translators: %s is the href attribute with URL
 #, php-format
@@ -1034,19 +825,15 @@ msgstr ""
 "Maaari mong makita ang mga pahinang ito na nakalista sa iyong <a %s>Pahina "
 "ng Tahanan ng Tag Groups</a>."
 
-#: dist/tag-groups/views/admin/onboarding.view.php:15
 #: views/admin/onboarding.view.php:15
 #. translators: %s is the href attribute with URL
 msgid "Go to your tags and <b>assign them to these groups</b>."
 msgstr "Pumunta sa iyong mga tag at <b>italaga ang mga ito sa mga grupong ito</b>."
 
-#: dist/tag-groups/views/admin/post_filter.view.php:3
 #: views/admin/post_filter.view.php:3
 msgid "Filter by tag group"
 msgstr "I-filter ayon sa grupo ng tag"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:2
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:3
 #: views/admin/sample_page.view.php:2
 #: views/admin/sample_page_gutenberg.view.php:3
 #. translators: %s is the author display name
@@ -1059,7 +846,6 @@ msgstr ""
 "Groups</b> plugin. Maaari mo itong ligtas na i-edit at i-delete o itago ito "
 "para sa hinaharap na sanggunian."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:6
 #: views/admin/sample_page.view.php:6
 msgid ""
 "The following shortcodes use a variety of parameters so that you can get an "
@@ -1071,8 +857,6 @@ msgstr ""
 "isang bagong sample na pahina na may higit pang mga tampok matapos "
 "i-upgrade ang plugin."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:10
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:21
 #: views/admin/sample_page.view.php:10
 #: views/admin/sample_page_gutenberg.view.php:21
 #. translators: %s is the href attribute with URL
@@ -1082,50 +866,35 @@ msgstr ""
 "Mangyaring hanapin ang mga link sa dokumentasyon sa <a %s>Mga Setting ng "
 "Tag Groups</a>."
 
-#: dist/tag-groups/views/admin/sample_page.view.php:14
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:30
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:11
 #: views/admin/sample_page.view.php:14
 #: views/admin/sample_page_gutenberg.view.php:30
 #: views/admin/settings_front_end_shortcodes.view.php:11, fuzzy
 msgid "Tabbed Tag Cloud"
 msgstr "Tabbed Tag Cloud"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:20
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:40
 #: views/admin/sample_page.view.php:20
 #: views/admin/sample_page_gutenberg.view.php:40, fuzzy
 msgid "Accordion Tag Cloud"
 msgstr "Accordion Tag Cloud"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:26
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:50
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:44
 #: views/admin/sample_page.view.php:26
 #: views/admin/sample_page_gutenberg.view.php:50
 #: views/admin/settings_front_end_shortcodes.view.php:44, fuzzy
 msgid "Alphabetical Tag Cloud"
 msgstr "Alphabetical Tag Cloud"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:32
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:60
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:33
 #: views/admin/sample_page.view.php:32
 #: views/admin/sample_page_gutenberg.view.php:60
 #: views/admin/settings_front_end_shortcodes.view.php:33
 msgid "Tag List"
 msgstr "Listahan ng Tag"
 
-#: dist/tag-groups/views/admin/sample_page.view.php:38
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:70
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:55
 #: views/admin/sample_page.view.php:38
 #: views/admin/sample_page_gutenberg.view.php:70
 #: views/admin/settings_front_end_shortcodes.view.php:55, fuzzy
 msgid "Alphabetical Tag Index"
 msgstr "Alphabetical Tag Index"
 
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:9
 #: views/admin/sample_page_gutenberg.view.php:9
 msgid ""
 "The following blocks use a variety of parameters so that you can get an "
@@ -1137,7 +906,6 @@ msgstr ""
 "bagong sample na pahina na may higit pang mga tampok matapos i-upgrade ang "
 "plugin."
 
-#: dist/tag-groups/views/admin/sample_page_gutenberg.view.php:15
 #: views/admin/sample_page_gutenberg.view.php:15
 msgid ""
 "This page was created while you had the Gutenberg editor enabled. Therefore "
@@ -1147,12 +915,10 @@ msgstr ""
 "Samakatuwid, ang mga tampok ay nagpapakita lamang habang aktibo ang "
 "Gutenberg."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:9
 #: views/admin/settings_back_end_filters.view.php:9
 msgid "Display filter on the \"Posts\" screen."
 msgstr "I-display ang filter sa screen ng \"Mga Post\"."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:10
 #: views/admin/settings_back_end_filters.view.php:10
 msgid ""
 "Add a pull-down menu to the filters above the list of posts. If you filter "
@@ -1168,12 +934,10 @@ msgstr ""
 "ang iyong screen kung gumagamit ka ng mataas na bilang ng mga grupo. "
 "Maaaring hindi ito gumana sa lahat ng taxonomy."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:17
 #: views/admin/settings_back_end_filters.view.php:17
 msgid "Display filter on the \"Tags\" screen."
 msgstr "I-display ang filter sa screen ng \"Mga Tag\"."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:18
 #: views/admin/settings_back_end_filters.view.php:18
 msgid ""
 "Add a filter to the list of tags. Disable it here if it conflicts with "
@@ -1182,12 +946,6 @@ msgstr ""
 "Magdagdag ng filter sa listahan ng mga tag. I-disable ito dito kung may "
 "conflict ito sa ibang plugins o tema."
 
-#: dist/tag-groups/views/admin/settings_back_end_filters.view.php:23
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:15
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:15
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:116
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:23
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:24
 #: views/admin/settings_back_end_filters.view.php:23
 #: views/admin/settings_back_end_gutenberg.view.php:15
 #: views/admin/settings_back_end_multilingual.view.php:15
@@ -1197,12 +955,10 @@ msgstr ""
 msgid "Save Settings"
 msgstr "I-save ang Mga Setting"
 
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:9
 #: views/admin/settings_back_end_gutenberg.view.php:9
 msgid "Gutenberg block preview"
 msgstr "preview ng Gutenberg block"
 
-#: dist/tag-groups/views/admin/settings_back_end_gutenberg.view.php:10
 #: views/admin/settings_back_end_gutenberg.view.php:10
 msgid ""
 "Some blocks can show an approximate preview in the Gutenberg editor. If you "
@@ -1212,12 +968,10 @@ msgstr ""
 "Gutenberg editor. Kung i-deactivate mo ang opsyong ito, lahat ng block ay "
 "magpapakita ng isang static na icon na may teksto."
 
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:9
 #: views/admin/settings_back_end_multilingual.view.php:9
 msgid "Keep groups of translations in sync"
 msgstr "Panatilihing naka-sync ang mga grupo ng pagsasalin"
 
-#: dist/tag-groups/views/admin/settings_back_end_multilingual.view.php:10
 #: views/admin/settings_back_end_multilingual.view.php:10
 msgid ""
 "If you activate this option, we try to sync the groups across all language "
@@ -1228,7 +982,6 @@ msgstr ""
 "sa lahat ng bersyon ng wika ng isang tag kapag ito ay sine-save. "
 "I-deactivate ito upang i-set ang mga grupo nang hiwalay."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:4
 #: views/admin/settings_front_end_shortcodes.view.php:4
 msgid ""
 "All Tag Groups features are available as Gutenberg blocks. You can also use "
@@ -1237,24 +990,14 @@ msgstr ""
 "Lahat ng mga tampok ng Tag Groups ay available bilang mga Gutenberg block. "
 "Maaari mo ring gamitin ang mga shortcode."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:8
 #: views/admin/settings_front_end_shortcodes.view.php:8
 msgid "Click on the features for more information."
 msgstr "I-click ang mga tampok para sa karagdagang impormasyon."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:15
 #: views/admin/settings_front_end_shortcodes.view.php:15
 msgid "Display the tags in a tabbed tag cloud."
 msgstr "Ipakita ang mga tag sa isang tabbed tag cloud."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:16
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:27
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:38
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:49
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:60
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:71
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:84
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:89
 #: views/admin/settings_front_end_shortcodes.view.php:16
 #: views/admin/settings_front_end_shortcodes.view.php:27
 #: views/admin/settings_front_end_shortcodes.view.php:38
@@ -1266,12 +1009,6 @@ msgstr "Ipakita ang mga tag sa isang tabbed tag cloud."
 msgid "Example"
 msgstr "Halimbawa"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:18
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:29
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:40
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:51
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:62
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:73
 #: views/admin/settings_front_end_shortcodes.view.php:18
 #: views/admin/settings_front_end_shortcodes.view.php:29
 #: views/admin/settings_front_end_shortcodes.view.php:40
@@ -1281,12 +1018,6 @@ msgstr "Halimbawa"
 msgid "Parameters"
 msgstr "Mga Parameter"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:19
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:30
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:41
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:52
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:63
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:74
 #: views/admin/settings_front_end_shortcodes.view.php:19
 #: views/admin/settings_front_end_shortcodes.view.php:30
 #: views/admin/settings_front_end_shortcodes.view.php:41
@@ -1298,51 +1029,41 @@ msgstr "Mga Parameter"
 msgid "Please find the parameters in the <a %s>documentation</a>."
 msgstr "Pakihanap ang mga parameter sa <a %s>dokumento</a>."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:22
 #: views/admin/settings_front_end_shortcodes.view.php:22, fuzzy
 msgid "Accordion"
 msgstr "Accordion"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:26
 #: views/admin/settings_front_end_shortcodes.view.php:26
 msgid "Display the tags in an accordion."
 msgstr "Ipakita ang mga tag sa isang accordion."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:37
 #: views/admin/settings_front_end_shortcodes.view.php:37
 msgid "Display the tags in lists under tag groups."
 msgstr "Ipakita ang mga tag sa mga listahan sa ilalim ng mga grupo ng tag."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
 #: views/admin/settings_front_end_shortcodes.view.php:48
 msgid "Display the tags in tabbed tag cloud with first letters as tabs."
 msgstr ""
 "Ipakita ang mga tag sa tabbed tag cloud na may mga unang titik bilang mga "
 "tab."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:48
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
 #: views/admin/settings_front_end_shortcodes.view.php:48
 #: views/admin/settings_front_end_shortcodes.view.php:59
 msgid "(Not tested with right-to-left languages.)"
 msgstr "(Hindi nasubukan sa mga wika mula kanang bahagi patungo sa kaliwa.)"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:59
 #: views/admin/settings_front_end_shortcodes.view.php:59
 msgid "Display the tags in a list with first letters as heading."
 msgstr "Ipakita ang mga tag sa isang listahan na may mga unang titik bilang pamagat."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:67
 #: views/admin/settings_front_end_shortcodes.view.php:67
 msgid "Group Information"
 msgstr "Impormasyon ng Grupo"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:70
 #: views/admin/settings_front_end_shortcodes.view.php:70
 msgid "Display information about tag groups."
 msgstr "Ipakita ang impormasyon tungkol sa mga grupo ng tag."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:82
 #: views/admin/settings_front_end_shortcodes.view.php:82
 msgid ""
 "The function <b>tag_groups_cloud</b> accepts the same parameters as the "
@@ -1353,14 +1074,12 @@ msgstr ""
 "parameter tulad ng [tag_groups_cloud] shortcode, maliban sa mga iyon na "
 "nagtatakda ng mga tab at istilo."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:83
 #: views/admin/settings_front_end_shortcodes.view.php:83
 msgid "By default it returns a string with the html for a tabbed tag cloud."
 msgstr ""
 "Sa default, ito ay nagbabalik ng isang string na may html para sa isang "
 "tabbed tag cloud."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:88
 #: views/admin/settings_front_end_shortcodes.view.php:88
 msgid ""
 "If the optional second parameter is set to 'true', the function returns a "
@@ -1370,22 +1089,16 @@ msgstr ""
 "function ay nagbabalik ng isang multidimensional na array na naglalaman ng "
 "mga Tag-Groups at mga tag."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:102
 #: views/admin/settings_front_end_shortcodes.view.php:102
 msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
 msgstr ""
 "I-enable ang shortcode sa sidebar widgets (kung hindi ito nakikita sa "
 "anumang paraan)."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:108
 #: views/admin/settings_front_end_shortcodes.view.php:108
 msgid "Always load shortcode scripts."
 msgstr "Palaging i-load ang mga shortcode scripts."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:109
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:9
-#: dist/tag-groups/views/admin/settings_home.view.php:8
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
 #: views/admin/settings_front_end_shortcodes.view.php:109
 #: views/admin/settings_front_end_themes.view.php:9
 #: views/admin/settings_home.view.php:8
@@ -1393,7 +1106,6 @@ msgstr "Palaging i-load ang mga shortcode scripts."
 msgid "Click for more information"
 msgstr "I-click para sa karagdagang impormasyon"
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:112
 #: views/admin/settings_front_end_shortcodes.view.php:112
 msgid ""
 "Turn off to load the scripts only on posts and pages where a shortcode "
@@ -1402,12 +1114,10 @@ msgstr ""
 "I-off upang i-load ang mga scripts lamang sa mga post at pahina kung saan "
 "lumilitaw ang shortcode."
 
-#: dist/tag-groups/views/admin/settings_front_end_shortcodes.view.php:113
 #: views/admin/settings_front_end_shortcodes.view.php:113
 msgid "Turn on if you use these shortcodes in widgets."
 msgstr "I-on kung gumagamit ka ng mga shortcode na ito sa widgets."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:8
 #: views/admin/settings_front_end_themes.view.php:8
 msgid ""
 "Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
@@ -1416,7 +1126,6 @@ msgstr ""
 "Dito maaari kang pumili ng tema para sa Tabbed Tag Cloud at ang Accordion "
 "Tag Cloud."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:14
 #: views/admin/settings_front_end_themes.view.php:14
 msgid ""
 "New themes can be created with the <a "
@@ -1427,7 +1136,6 @@ msgstr ""
 "href=\"http://jqueryui.com/themeroller/\" target=\"_blank\">jQuery UI "
 "ThemeRoller</a>:"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:16
 #: views/admin/settings_front_end_themes.view.php:16
 msgid ""
 "On the page \"Theme Roller\" you can customize all features or pick one set "
@@ -1437,7 +1145,6 @@ msgstr ""
 "tampok o pumili ng isang set mula sa gallery. Tapusin gamit ang "
 "\"download\" na button."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:17
 #: views/admin/settings_front_end_themes.view.php:17
 msgid ""
 "On the next page (\"Download Builder\") you will need to select the version "
@@ -1450,7 +1157,6 @@ msgstr ""
 "\"Tabs\". Siguraduhin na bago mag-download ay ilagay mo sa ibaba bilang "
 "\"CSS Scope\" <b>.tag-groups-cloud</b> (kasama ang tuldok)."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:18
 #: views/admin/settings_front_end_themes.view.php:18
 msgid ""
 "Then you unpack the downloaded zip file. You will need the \"images\" "
@@ -1459,7 +1165,6 @@ msgstr ""
 "Pagkatapos ay i-unpack ang na-download na zip file. Kailangan mo ang "
 "\"images\" na folder at ang \"jquery-ui.theme.min.css\" na file."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:19
 #: views/admin/settings_front_end_themes.view.php:19
 msgid ""
 "Create a new folder inside your <i>wp-content/uploads</i> folder (for "
@@ -1468,24 +1173,20 @@ msgstr ""
 "Gumawa ng bagong folder sa loob ng iyong <i>wp-content/uploads</i> folder "
 "(halimbawa \"my-theme\") at kopyahin dito ang dalawang item na ito."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:20
 #: views/admin/settings_front_end_themes.view.php:20
 msgid "Enter the name of this new folder (for example \"my-theme\") below."
 msgstr ""
 "I-enter ang pangalan ng bagong folder na ito (halimbawa \"my-theme\") sa "
 "ibaba."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:42
 #: views/admin/settings_front_end_themes.view.php:42
 msgid "own theme"
 msgstr "sariling tema"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
 #: views/admin/settings_front_end_themes.view.php:52
 msgid "Don't load a theme."
 msgstr "Huwag mag-load ng tema."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:52
 #: views/admin/settings_front_end_themes.view.php:52
 msgid ""
 "Here you can turn off jQuery UI themes if your WordPress theme brings its "
@@ -1495,36 +1196,30 @@ msgstr ""
 "ay nagdadala ng sarili nitong jQuery UI theme, upang maiwasan ang mga "
 "conflict."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:57
 #: views/admin/settings_front_end_themes.view.php:57
 msgid "Further options"
 msgstr "Karagdagang mga opsyon"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:65
 #: views/admin/settings_front_end_themes.view.php:65
 msgid "Use jQuery.  (Default is on. Other plugins might override this setting.)"
 msgstr ""
 "Gumamit ng jQuery. (Ang default ay naka-on. Maaaring i-override ng ibang "
 "plugins ang setting na ito.)"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:73
 #: views/admin/settings_front_end_themes.view.php:73
 msgid "Tabs triggered by hovering mouse pointer (without clicking)."
 msgstr ""
 "Mga Tabs na na-trigger sa pag-hover ng mouse pointer (nang walang "
 "pag-click)."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:80
 #: views/admin/settings_front_end_themes.view.php:80
 msgid "Collapsible tabs (toggle open/close)."
 msgstr "Mga nababaligtad na tab (buksan/sarado)."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:83
 #: views/admin/settings_front_end_themes.view.php:83
 msgid "HTML in tag description:"
 msgstr "HTML sa paglalarawan ng tag:"
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
 #: views/admin/settings_front_end_themes.view.php:91
 msgid ""
 "By default the description appears in a tooltip when you hover the mouse "
@@ -1533,7 +1228,6 @@ msgstr ""
 "Sa default, lumalabas ang paglalarawan sa isang tooltip kapag inii-hover mo "
 "ang mouse sa isang tag sa tag cloud."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:91
 #: views/admin/settings_front_end_themes.view.php:91
 msgid ""
 "If you don't trust all users of your site, remove the HTML or use a plugin "
@@ -1543,86 +1237,69 @@ msgstr ""
 "alisin ang HTML o gumamit ng plugin upang bigyan ng unfiltered_html na "
 "kakayahan ang mga gumagamit na pinagkakatiwalaan mo lamang."
 
-#: dist/tag-groups/views/admin/settings_front_end_themes.view.php:97
 #: views/admin/settings_front_end_themes.view.php:97
 msgid "Save Theme Options"
 msgstr "I-save ang Mga Opsyon sa Tema"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:3
 #: views/admin/settings_help.view.php:3
 msgid "Search for settings"
 msgstr "Hanapin ang mga setting"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:3
 #: views/admin/settings_help.view.php:3
 msgid "Search for setting pages. Type a space to show all settings."
 msgstr ""
 "Hanapin ang mga pahina ng setting. Mag-type ng space upang ipakita ang "
 "lahat ng mga setting."
 
-#: dist/tag-groups/views/admin/settings_help.view.php:6
 #: views/admin/settings_help.view.php:6
 msgid "Search Results"
 msgstr "Mga Resulta ng Paghahanap"
 
-#: dist/tag-groups/views/admin/settings_help.view.php:8
 #: views/admin/settings_help.view.php:8
 msgid "Nothing found"
 msgstr "Walang nahanap"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:2
 #: views/admin/settings_home.view.php:2
 msgid "Active Taxonomies"
 msgstr "Mga Aktibong Taxonomies"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:11
 #: views/admin/settings_home.view.php:11
 msgid "Group Statistics"
 msgstr "Estadistika ng Grupo"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:13
 #: views/admin/settings_home.view.php:13
 msgid "for the selected language"
 msgstr "para sa napiling wika"
 
-#: dist/tag-groups/views/admin/settings_home.view.php:23
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:33
 #: views/admin/settings_home.view.php:23
 #: views/admin/settings_taxonomies.view.php:33
 msgid "go to tag group administration"
 msgstr "pumunta sa administrasyon ng grupo ng tag"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:9
 #: views/admin/settings_rest_api.view.php:9
 msgid "Enable Tag Groups Public API Access"
 msgstr "I-enable ang Public API Access ng Tag Groups"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:10
 #: views/admin/settings_rest_api.view.php:10
 msgid "Enable public access to tag groups endpoint /wp-json/tag-groups/v1/groups/."
 msgstr ""
 "I-enable ang pampublikong access sa endpoint ng tag groups "
 "/wp-json/tag-groups/v1/groups/."
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:17
 #: views/admin/settings_rest_api.view.php:17
 msgid "Enable Terms Public API Access"
 msgstr "I-enable ang Public API Access ng Terms"
 
-#: dist/tag-groups/views/admin/settings_rest_api.view.php:18
 #: views/admin/settings_rest_api.view.php:18
 msgid "Enable public access to terms endpoint /wp-json/tag-groups/v1/terms/."
 msgstr ""
 "I-enable ang pampublikong access sa endpoint ng terms "
 "/wp-json/tag-groups/v1/terms/."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:2
 #: views/admin/settings_taxonomies.view.php:2
 msgid "Choose the taxonomies for which you want to use Tag Groups:"
 msgstr "Pumili ng mga taxonomies na nais mong gamitin para sa Tag Groups:"
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:5
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:5
 #: views/admin/settings_taxonomies.view.php:5
 #: views/admin/setup_wizard_taxonomies.view.php:5
 msgid ""
@@ -1637,7 +1314,6 @@ msgstr ""
 "Kung hindi mo naiintindihan kung ano ang nangyayari dito, iwanan lamang ang "
 "default."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:6
 #: views/admin/settings_taxonomies.view.php:6
 msgid ""
 "<b>Please deselect taxonomies that you don't use. Using several taxonomies "
@@ -1648,12 +1324,10 @@ msgstr ""
 "paggamit ng maraming taxonomies para sa parehong post type o hierarchical "
 "taxonomies (tulad ng mga kategorya) ay experimental at hindi suportado.</b>"
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:7
 #: views/admin/settings_taxonomies.view.php:7
 msgid "To see the post type, hover your mouse over the option."
 msgstr "Upang makita ang post type, i-hover ang iyong mouse sa opsyon."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:8
 #: views/admin/settings_taxonomies.view.php:8
 msgid ""
 "If you use a custom taxonomy, make sure that the attribute \"Public\" is "
@@ -1662,7 +1336,6 @@ msgstr ""
 "Kung gumagamit ka ng custom taxonomy, tiyakin na ang katangiang \"Public\" "
 "ay nakaset sa \"true\" at \"Hierarchical\" sa \"false\"."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:15
 #: views/admin/settings_taxonomies.view.php:15
 msgid ""
 "Show hierarchical taxonomies. Not all Tag Groups features will work with "
@@ -1671,17 +1344,14 @@ msgstr ""
 "Ipakita ang hierarchical taxonomies. Hindi lahat ng tampok ng Tag Groups ay "
 "gagana sa mga taxonomies na ito."
 
-#: dist/tag-groups/views/admin/settings_taxonomies.view.php:54
 #: views/admin/settings_taxonomies.view.php:54
 msgid "Save Taxonomies"
 msgstr "I-save ang Taxonomies"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid "Export"
 msgstr "I-export"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid ""
 "Use this button to export all Tag Groups settings and groups and all terms "
@@ -1691,7 +1361,6 @@ msgstr ""
 "Groups at mga grupo at lahat ng mga termino na naitalaga sa isang grupo sa "
 "mga file."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:4
 #: views/admin/settings_tools_export_import.view.php:4
 msgid ""
 "You can import both files separately. Category hierarchy won't be saved. "
@@ -1703,17 +1372,14 @@ msgstr ""
 "tumatanggap sila ng mga bagong ID at kailangan mong italaga muli ang mga "
 "ito sa mga post. Ang pag-export ay hindi maaaring maging kapalit ng backup."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:7
 #: views/admin/settings_tools_export_import.view.php:7
 msgid "Export Files"
 msgstr "I-export ang mga File"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "Import"
 msgstr "I-import"
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid ""
 "Below you can import previously exported settings/groups or terms from a "
@@ -1722,22 +1388,18 @@ msgstr ""
 "Sa ibaba maaari mong i-import ang mga naunang na-export na mga "
 "setting/grupo o mga termino mula sa isang file."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "It is recommended to back up the database of your site before proceeding."
 msgstr "Inirerekomenda na i-back up ang database ng iyong site bago magpatuloy."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:13
 #: views/admin/settings_tools_export_import.view.php:13
 msgid "Please import the settings before the terms."
 msgstr "Mangyaring i-import ang mga setting bago ang mga termino."
 
-#: dist/tag-groups/views/admin/settings_tools_export_import.view.php:17
 #: views/admin/settings_tools_export_import.view.php:17
 msgid "Import File"
 msgstr "I-import ang File"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:4
 #: views/admin/settings_tools_reset.view.php:4
 msgid ""
 "Use this button to delete all tag groups and assignments. Your tags will "
@@ -1747,7 +1409,6 @@ msgstr ""
 "mga asignasyon. Ang iyong mga tag ay hindi mababago. Suriin ang checkbox "
 "upang kumpirmahin."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:5
 #: views/admin/settings_tools_reset.view.php:5
 msgid ""
 "Please keep in mind that the tag assignments cannot be recovered by the "
@@ -1756,74 +1417,60 @@ msgstr ""
 "Mangyaring isaalang-alang na ang mga tag assignments ay hindi maibabalik sa "
 "pamamagitan ng pag-export/pag-import na function."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:7
 #: views/admin/settings_tools_reset.view.php:7
 msgid "I know what I am doing."
 msgstr "Alam ko kung ano ang aking ginagawa."
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:10
 #: views/admin/settings_tools_reset.view.php:10
 msgid "Delete Groups"
 msgstr "Tanggalin ang Mga Grupo"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:13
 #: views/admin/settings_tools_reset.view.php:13
 msgid "Delete Settings and Groups"
 msgstr "Tanggalin ang Mga Setting at Grupo"
 
-#: dist/tag-groups/views/admin/settings_tools_reset.view.php:21
 #: views/admin/settings_tools_reset.view.php:21
 msgid "Delete all groups and settings when uninstalling the plugin."
 msgstr "Tanggalin ang lahat ng mga grupo at setting kapag inaalis ang plugin."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:7
 #: views/admin/settings_troubleshooting_debug.view.php:7
 msgid "Debug mode is on."
 msgstr "Naka-on ang debug mode."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:15
 #: views/admin/settings_troubleshooting_debug.view.php:15
 msgid "Verbose logging is enabled with CM_DEBUG."
 msgstr "Ang verbose logging ay enabled sa CM_DEBUG."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:17
 #: views/admin/settings_troubleshooting_debug.view.php:17
 msgid "Verbose logging is on."
 msgstr "Ang verbose logging ay on."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:19
 #: views/admin/settings_troubleshooting_debug.view.php:19
 msgid "Turn off "
 msgstr "Patayin ang "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:24
 #: views/admin/settings_troubleshooting_debug.view.php:24
 msgid "Verbose logging is off."
 msgstr "Ang verbose logging ay off."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:26
 #: views/admin/settings_troubleshooting_debug.view.php:26
 msgid "Turn on"
 msgstr "Buksan"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:31
 #: views/admin/settings_troubleshooting_debug.view.php:31
 msgid "Debug mode is off."
 msgstr "Ang debug mode ay off."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_debug.view.php:40
 #: views/admin/settings_troubleshooting_debug.view.php:40
 #. translators: %s is the href attribute with URL
 #, php-format
 msgid "Learn more <a %s>about debugging</a>."
 msgstr "Matuto pa <a %s>tungkol sa debugging</a>."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
 #: views/admin/settings_troubleshooting_first_aid.view.php:8
 msgid "Migrate tags to the new format of Tag Groups."
 msgstr "I-migrate ang mga tag sa bagong format ng Tag Groups."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:8
 #: views/admin/settings_troubleshooting_first_aid.view.php:8
 msgid ""
 "The plugin automatically migrates tags to the new format and tries to keep "
@@ -1838,12 +1485,10 @@ msgstr ""
 "pagkatapos mong i-enable ang isang taxonomy na mayroon nang mga untracked "
 "na tag."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:9
 #: views/admin/settings_troubleshooting_first_aid.view.php:9
 msgid "Migrate"
 msgstr "I-migrate"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:17
 #: views/admin/settings_troubleshooting_first_aid.view.php:17
 msgid ""
 "Running the maintenance can solve issues that you encounter during "
@@ -1852,17 +1497,14 @@ msgstr ""
 "Ang pagpapatakbo ng maintenance ay makakapag-solve ng mga isyu na iyong "
 "nararanasan sa pag-filter sa pamamagitan ng mga tag groups."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:18
 #: views/admin/settings_troubleshooting_first_aid.view.php:18, fuzzy
 msgid "Maintenance"
 msgstr "Maintenance"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
 #: views/admin/settings_troubleshooting_first_aid.view.php:24
 msgid "Reset the filter on the tags page to show all tags."
 msgstr "I-reset ang filter sa pahina ng mga tag upang ipakita ang lahat ng mga tag."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:24
 #: views/admin/settings_troubleshooting_first_aid.view.php:24
 msgid ""
 "Use it if a JavaScript error disables the filter menu. Note that it is "
@@ -1871,438 +1513,109 @@ msgstr ""
 "Gamitin ito kung ang isang JavaScript error ay nag-disable sa filter menu. "
 "Tandaan na inirerekomenda pa ring alamin ang sanhi ng error."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_first_aid.view.php:27
-#: dist/tag-groups/views/partials/admin_footer.view.php:3
 #: views/admin/settings_troubleshooting_first_aid.view.php:27
 #: views/partials/admin_footer.view.php:3
 msgid "Reset Tag Filter"
 msgstr "I-reset ang Tag Filter"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:5
 #: views/admin/settings_troubleshooting_process.view.php:5
 msgid "Please stay on this page until all processes have finished."
 msgstr ""
 "Mangyaring manatili sa pahinang ito hanggang sa matapos ang lahat ng "
 "proseso."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:10
 #: views/admin/settings_troubleshooting_process.view.php:10
 msgid "There have been errors."
 msgstr "May mga error na nangyari."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:12
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:19
 #: views/admin/settings_troubleshooting_process.view.php:12
 #: views/admin/settings_troubleshooting_process.view.php:19
 msgid "Continue"
 msgstr "Magpatuloy"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:17
 #: views/admin/settings_troubleshooting_process.view.php:17
 msgid "Finished!"
 msgstr "Tapos na!"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:24
 #: views/admin/settings_troubleshooting_process.view.php:24
 msgid "The following terms cannot be used:"
 msgstr "Ang mga sumusunod na termino ay hindi maaaring gamitin:"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:128
 #: views/admin/settings_troubleshooting_process.view.php:128
 msgid "Number of processed items: "
 msgstr "Bilang ng mga na-prosesong item: "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_process.view.php:130
 #: views/admin/settings_troubleshooting_process.view.php:130
 msgid "Number of changed items: "
 msgstr "Bilang ng mga binagong item: "
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:5
 #: views/admin/settings_troubleshooting_system.view.php:5
 msgid "WordPress Version"
 msgstr "Bersyon ng WordPress"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:8
 #: views/admin/settings_troubleshooting_system.view.php:8
 msgid "Site URL"
 msgstr "URL ng Site"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:11
 #: views/admin/settings_troubleshooting_system.view.php:11
 msgid "Home URL"
 msgstr "URL ng Tahanan"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:15
 #: views/admin/settings_troubleshooting_system.view.php:15
 msgid "Active Theme"
 msgstr "Aktibong Tema"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:17
 #: views/admin/settings_troubleshooting_system.view.php:17
 msgid "Version"
 msgstr "Bersyon"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:23
 #: views/admin/settings_troubleshooting_system.view.php:23
 msgid "Checking..."
 msgstr "Nagre-repaso..."
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:26
 #: views/admin/settings_troubleshooting_system.view.php:26
 msgid "Show the Response"
 msgstr "Ipakita ang Tugon"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:72
 #: views/admin/settings_troubleshooting_system.view.php:72
 msgid "passed"
 msgstr "nagawa"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:98
 #: views/admin/settings_troubleshooting_system.view.php:98
 msgid "failed"
 msgstr "nabigo"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:105
 #: views/admin/settings_troubleshooting_system.view.php:105
 msgid "Benchmarks"
 msgstr "Mga Benchmark"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:125
 #: views/admin/settings_troubleshooting_system.view.php:125, fuzzy
 msgid "Cache"
 msgstr "Cache"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:127
 #: views/admin/settings_troubleshooting_system.view.php:127
 msgid "Tag groups pro only"
 msgstr "Tag groups pro lamang"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:152
 #: views/admin/settings_troubleshooting_system.view.php:152, fuzzy
 msgid "Server"
 msgstr "Server"
 
-#: dist/tag-groups/views/admin/settings_troubleshooting_system.view.php:188
 #: views/admin/settings_troubleshooting_system.view.php:188
 msgid "Constants"
 msgstr "Mga Constants"
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:3
 #: views/admin/setup_wizard_finished.view.php:3
 msgid "Well done!"
 msgstr "Magaling!"
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:6
 #: views/admin/setup_wizard_finished.view.php:6
 msgid "Now go the Tag Group Administration."
 msgstr "Ngayon ay pumunta sa Pamamahala ng Tag Group."
 
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:10
 #: views/admin/setup_wizard_finished.view.php:10
 msgid "Or preview the sample page here."
 msgstr "O i-preview ang sample na pahina dito."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:14
-#, php-format
-msgid ""
-"Or go to the <a %s>Tag Groups settings</a> or visit the <a "
-"%s>documentation</a>."
-msgstr ""
-"O pumunta sa <a %s>mga setting ng Tag Groups</a> o bisitahin ang <a "
-"%s>dokumento</a>."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:16
-#, php-format
-msgid ""
-"Now go to the <a %s>Tag Groups settings</a>, or visit the <a "
-"%s>documentation</a>."
-msgstr ""
-"Ngayon pumunta sa <a %s>Tag Groups settings</a>, o bisitahin ang <a "
-"%s>documentation</a>."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:19
-#: views/admin/setup_wizard_finished.view.php:19
-msgid ""
-"If you need to launch the Setup Wizard again, you can find it in the "
-"settings. Just enter \"wizard\" in the search field."
-msgstr ""
-"Kung kailangan mong ilunsad muli ang Setup Wizard, makikita mo ito sa mga "
-"setting. Ipasok lamang ang \"wizard\" sa search field."
-
-#: dist/tag-groups/views/admin/setup_wizard_finished.view.php:21
-#: views/admin/setup_wizard_finished.view.php:21
-msgid "Happy tagging!"
-msgstr "Masaya sa pag-tag!"
-
-#: dist/tag-groups/views/admin/setup_wizard_header.view.php:1
-#: views/admin/setup_wizard_header.view.php:1, fuzzy
-msgid "Tag Groups Setup Wizard"
-msgstr "Tag Groups Setup Wizard"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:3
-#: views/admin/setup_wizard_sample_content.view.php:3
-msgid ""
-"Now you are ready to create your own tag groups. If you prefer to start out "
-"from a sample, we will create for you three groups and three tags. You can "
-"play around with them, rename or delete them."
-msgstr ""
-"Ngayon handa ka nang lumikha ng sarili mong tag groups. Kung mas gusto mong "
-"magsimula mula sa isang sample, lilikha kami para sa iyo ng tatlong grupo "
-"at tatlong tag. Maaari mong subukan ang mga ito, palitan ang pangalan o "
-"tanggalin ang mga ito."
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:8
-#: views/admin/setup_wizard_sample_content.view.php:8
-msgid "Create sample groups:"
-msgstr "Lumikha ng mga sample na grupo:"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:16
-#: views/admin/setup_wizard_sample_content.view.php:16
-msgid "Create sample tags in these groups:"
-msgstr "Lumikha ng mga sample na tag sa mga grupong ito:"
-
-#: dist/tag-groups/views/admin/setup_wizard_sample_content.view.php:34
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:33
-#: views/admin/setup_wizard_sample_content.view.php:34
-#: views/admin/setup_wizard_taxonomies.view.php:33
-msgid "Next Step"
-msgstr "Susunod na Hakbang"
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:3
-#: views/admin/setup_wizard_start.view.php:3
-msgid ""
-"On the following pages we will guide you through the basic settings that "
-"you need for the most common features."
-msgstr ""
-"Sa mga susunod na pahina, gagabayan ka namin sa mga pangunahing setting na "
-"kailangan mo para sa pinakakaraniwang mga tampok."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
-#: views/admin/setup_wizard_start.view.php:4
-msgid ""
-"You can later make changes or fine-tune the details in the Tag Groups "
-"settings."
-msgstr ""
-"Maaari mong baguhin o ayusin ang mga detalye sa Tag Groups settings sa "
-"ibang pagkakataon."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:4
-#: views/admin/setup_wizard_start.view.php:4
-msgid "(show me the menu)"
-msgstr "(ipakita mo sa akin ang menu)"
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:5
-#: views/admin/setup_wizard_start.view.php:5
-msgid ""
-"Feel free to abort the Setup Wizard any time and continue on your own path. "
-"You can also launch it again at a later time."
-msgstr ""
-"Huwag mag-atubiling i-abort ang Setup Wizard anumang oras at ipagpatuloy "
-"ang iyong sariling landas. Maaari mo rin itong ilunsad muli sa ibang "
-"pagkakataon."
-
-#: dist/tag-groups/views/admin/setup_wizard_start.view.php:7
-#: views/admin/setup_wizard_start.view.php:7
-msgid "The wizard will offer more options after upgrading to premium."
-msgstr ""
-"Magbibigay ang wizard ng higit pang mga opsyon pagkatapos mag-upgrade sa "
-"premium."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
-#: views/admin/setup_wizard_taxonomies.view.php:2
-msgid "Choose the taxonomies for which you want to use tag groups."
-msgstr "Pumili ng mga taxonomy na nais mong gamitin ang tag groups."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:2
-#: views/admin/setup_wizard_taxonomies.view.php:2
-msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
-msgstr ""
-"Sa karamihan ng mga kaso, ang default na taxonomy <b>Tags (post_tag)</b> ay "
-"sapat na."
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:22
-#: views/admin/setup_wizard_taxonomies.view.php:22
-msgid "post type"
-msgstr "post type"
-
-#: dist/tag-groups/views/admin/setup_wizard_taxonomies.view.php:30
-#: views/admin/setup_wizard_taxonomies.view.php:30
-msgid "You will find more options in the Tag Groups settings."
-msgstr "Makikita mo ang higit pang mga opsyon sa Tag Groups settings."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:3
-#: views/admin/tag_groups_admin.view.php:3, fuzzy
-msgid "Tag Group Administration"
-msgstr "Tag Group Administration"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:10
-#: views/admin/tag_groups_admin.view.php:10
-msgid "Filter by label"
-msgstr "I-filter ayon sa label"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:22
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:35
-#: views/admin/tag_groups_admin.view.php:22
-#: views/admin/tag_groups_admin.view.php:35
-msgid "Tag Group name"
-msgstr "Pangalan ng Tag Group"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:24
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:37
-#: views/admin/tag_groups_admin.view.php:24
-#: views/admin/tag_groups_admin.view.php:37
-msgid "Number of assigned tags"
-msgstr "Bilang ng naitalagang tag"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:28
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:41
-#: views/admin/tag_groups_admin.view.php:28
-#: views/admin/tag_groups_admin.view.php:41
-msgid "Actions"
-msgstr "Mga Aksyon"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:29
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:42
-#: views/admin/tag_groups_admin.view.php:29
-#: views/admin/tag_groups_admin.view.php:42
-msgid "Change order"
-msgstr "Baguhin ang pagkakasunud-sunod"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:30
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:43
-#: views/admin/tag_groups_admin.view.php:30
-#: views/admin/tag_groups_admin.view.php:43
-msgid "Group ID"
-msgstr "ID ng Grupo"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:63
-#: views/admin/tag_groups_admin.view.php:63
-msgid "Edit"
-msgstr "I-edit"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:64
-#: views/admin/tag_groups_admin.view.php:64
-msgid "Create"
-msgstr "Lumikha"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:65
-#: views/admin/tag_groups_admin.view.php:65
-msgid "new"
-msgstr "bago"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:66
-#: views/admin/tag_groups_admin.view.php:66, fuzzy
-msgid "label"
-msgstr "label"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:67
-#: views/admin/tag_groups_admin.view.php:67
-msgid "Delete this group."
-msgstr "Tanggalin ang grupong ito."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:68
-#: views/admin/tag_groups_admin.view.php:68
-msgid "Create a new group below."
-msgstr "Lumikha ng bagong grupo sa ibaba."
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:69
-#: views/admin/tag_groups_admin.view.php:69
-msgid "Add New Tag Group"
-msgstr "Magdagdag ng Bagong Grupo ng Tag"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:70
-#: views/admin/tag_groups_admin.view.php:70
-msgid "move up"
-msgstr "ilipat pataas"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:71
-#: views/admin/tag_groups_admin.view.php:71
-msgid "move down"
-msgstr "ilipat pababa"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:72
-#: views/admin/tag_groups_admin.view.php:72
-msgid "reload"
-msgstr "i-reload"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:73
-#: views/admin/tag_groups_admin.view.php:73
-msgid "next page"
-msgstr "susunod na pahina"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:74
-#: views/admin/tag_groups_admin.view.php:74
-msgid "previous page"
-msgstr "nakaraang pahina"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:75
-#: views/admin/tag_groups_admin.view.php:75
-msgid "go to page:"
-msgstr "pumunta sa pahina:"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:76
-#: views/admin/tag_groups_admin.view.php:76
-msgid "Show posts"
-msgstr "Ipakita ang mga post"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:77
-#: views/admin/tag_groups_admin.view.php:77
-msgid "Show tags"
-msgstr "Ipakita ang mga tag"
-
-#: dist/tag-groups/views/admin/tag_groups_admin.view.php:168
-#: views/admin/tag_groups_admin.view.php:168
-msgid "Do you really want to delete this tag group?"
-msgstr "Talaga bang nais mong tanggalin ang grupong tag na ito?"
-
-#: dist/tag-groups/views/partials/admin_feed_fallback.view.php:2
-#, php-format
-msgid "Please visit <a %s>%s</a>."
-msgstr "Pakisuyin ang <a %s>%s</a>."
-
-#: dist/tag-groups/views/partials/admin_feed_footer.view.php:3
-#: views/partials/admin_feed_footer.view.php:3
-msgid "Read more"
-msgstr "Magbasa pa"
-
-#: dist/tag-groups/views/partials/admin_footer_rating.view.php:4
-#, php-format
-msgid "Thanks for using Tag Groups | %1sTaxoPress.com%2s | Version %3s"
-msgstr "Salamat sa paggamit ng Tag Groups | %1sTaxoPress.com%2s | Bersyon %3s"
-
-#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:10
-#: dist/tag-groups/views/partials/bulk_admin_footer.view.php:11
-#: views/partials/bulk_admin_footer.view.php:10
-#: views/partials/bulk_admin_footer.view.php:11
-msgid "Assign to"
-msgstr "Itatalaga sa"
-
-#: dist/tag-groups/views/partials/filter_admin_footer.view.php:23
-#: views/partials/filter_admin_footer.view.php:23
-msgid "Filter off"
-msgstr "I-off ang filter"
-
-#: dist/tag-groups/views/partials/language_notice.view.php:2
-#: views/partials/language_notice.view.php:2
-msgid "Please select one of the languages above to see the correct tag groups!"
-msgstr ""
-"Pakisuyin ang isa sa mga wika sa itaas upang makita ang tamang mga tag "
-"group!"
-
-#: dist/tag-groups/views/partials/quick_edit_tag.view.php:3
-#: views/partials/quick_edit_tag.view.php:3
-msgid "Groups"
-msgstr "Mga grupo"
-
-#: includes-core/TagGroupsCoreAdmin.php:44
-#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
-#, php-format
-msgid ""
-"You're using Tag Groups Free. The Pro version has more features and "
-"support. %1$sUpgrade to Pro%2$s"
-msgstr ""
-"Gumagamit ka ng Tag Groups Free. Ang Pro na bersyon ay may higit pang mga "
-"tampok at suporta. %1$sMag-upgrade sa Pro%2$s"
 
 #: views/admin/setup_wizard_finished.view.php:14
 #. translators: %1$s and %2$s are href attributes with URLs
@@ -2324,14 +1637,227 @@ msgstr ""
 "Ngayon pumunta sa <a %1$s>mga setting ng Tag Groups</a>, o bisitahin ang <a "
 "%2$s>dokumento</a>."
 
+#: views/admin/setup_wizard_finished.view.php:19
+msgid ""
+"If you need to launch the Setup Wizard again, you can find it in the "
+"settings. Just enter \"wizard\" in the search field."
+msgstr ""
+"Kung kailangan mong ilunsad muli ang Setup Wizard, makikita mo ito sa mga "
+"setting. Ipasok lamang ang \"wizard\" sa search field."
+
+#: views/admin/setup_wizard_finished.view.php:21
+msgid "Happy tagging!"
+msgstr "Masaya sa pag-tag!"
+
+#: views/admin/setup_wizard_header.view.php:1, fuzzy
+msgid "Tag Groups Setup Wizard"
+msgstr "Tag Groups Setup Wizard"
+
+#: views/admin/setup_wizard_sample_content.view.php:3
+msgid ""
+"Now you are ready to create your own tag groups. If you prefer to start out "
+"from a sample, we will create for you three groups and three tags. You can "
+"play around with them, rename or delete them."
+msgstr ""
+"Ngayon handa ka nang lumikha ng sarili mong tag groups. Kung mas gusto mong "
+"magsimula mula sa isang sample, lilikha kami para sa iyo ng tatlong grupo "
+"at tatlong tag. Maaari mong subukan ang mga ito, palitan ang pangalan o "
+"tanggalin ang mga ito."
+
+#: views/admin/setup_wizard_sample_content.view.php:8
+msgid "Create sample groups:"
+msgstr "Lumikha ng mga sample na grupo:"
+
+#: views/admin/setup_wizard_sample_content.view.php:16
+msgid "Create sample tags in these groups:"
+msgstr "Lumikha ng mga sample na tag sa mga grupong ito:"
+
+#: views/admin/setup_wizard_sample_content.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:33
+msgid "Next Step"
+msgstr "Susunod na Hakbang"
+
+#: views/admin/setup_wizard_start.view.php:3
+msgid ""
+"On the following pages we will guide you through the basic settings that "
+"you need for the most common features."
+msgstr ""
+"Sa mga susunod na pahina, gagabayan ka namin sa mga pangunahing setting na "
+"kailangan mo para sa pinakakaraniwang mga tampok."
+
+#: views/admin/setup_wizard_start.view.php:4
+msgid ""
+"You can later make changes or fine-tune the details in the Tag Groups "
+"settings."
+msgstr ""
+"Maaari mong baguhin o ayusin ang mga detalye sa Tag Groups settings sa "
+"ibang pagkakataon."
+
+#: views/admin/setup_wizard_start.view.php:4
+msgid "(show me the menu)"
+msgstr "(ipakita mo sa akin ang menu)"
+
+#: views/admin/setup_wizard_start.view.php:5
+msgid ""
+"Feel free to abort the Setup Wizard any time and continue on your own path. "
+"You can also launch it again at a later time."
+msgstr ""
+"Huwag mag-atubiling i-abort ang Setup Wizard anumang oras at ipagpatuloy "
+"ang iyong sariling landas. Maaari mo rin itong ilunsad muli sa ibang "
+"pagkakataon."
+
+#: views/admin/setup_wizard_start.view.php:7
+msgid "The wizard will offer more options after upgrading to premium."
+msgstr ""
+"Magbibigay ang wizard ng higit pang mga opsyon pagkatapos mag-upgrade sa "
+"premium."
+
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use tag groups."
+msgstr "Pumili ng mga taxonomy na nais mong gamitin ang tag groups."
+
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
+msgstr ""
+"Sa karamihan ng mga kaso, ang default na taxonomy <b>Tags (post_tag)</b> ay "
+"sapat na."
+
+#: views/admin/setup_wizard_taxonomies.view.php:22
+msgid "post type"
+msgstr "post type"
+
+#: views/admin/setup_wizard_taxonomies.view.php:30
+msgid "You will find more options in the Tag Groups settings."
+msgstr "Makikita mo ang higit pang mga opsyon sa Tag Groups settings."
+
+#: views/admin/tag_groups_admin.view.php:3, fuzzy
+msgid "Tag Group Administration"
+msgstr "Tag Group Administration"
+
+#: views/admin/tag_groups_admin.view.php:10
+msgid "Filter by label"
+msgstr "I-filter ayon sa label"
+
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
+msgid "Tag Group name"
+msgstr "Pangalan ng Tag Group"
+
+#: views/admin/tag_groups_admin.view.php:24
+#: views/admin/tag_groups_admin.view.php:37
+msgid "Number of assigned tags"
+msgstr "Bilang ng naitalagang tag"
+
+#: views/admin/tag_groups_admin.view.php:28
+#: views/admin/tag_groups_admin.view.php:41
+msgid "Actions"
+msgstr "Mga Aksyon"
+
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
+msgid "Change order"
+msgstr "Baguhin ang pagkakasunud-sunod"
+
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
+msgid "Group ID"
+msgstr "ID ng Grupo"
+
+#: views/admin/tag_groups_admin.view.php:63
+msgid "Edit"
+msgstr "I-edit"
+
+#: views/admin/tag_groups_admin.view.php:64
+msgid "Create"
+msgstr "Lumikha"
+
+#: views/admin/tag_groups_admin.view.php:65
+msgid "new"
+msgstr "bago"
+
+#: views/admin/tag_groups_admin.view.php:66, fuzzy
+msgid "label"
+msgstr "label"
+
+#: views/admin/tag_groups_admin.view.php:67
+msgid "Delete this group."
+msgstr "Tanggalin ang grupong ito."
+
+#: views/admin/tag_groups_admin.view.php:68
+msgid "Create a new group below."
+msgstr "Lumikha ng bagong grupo sa ibaba."
+
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Tag Group"
+msgstr "Magdagdag ng Bagong Grupo ng Tag"
+
+#: views/admin/tag_groups_admin.view.php:70
+msgid "move up"
+msgstr "ilipat pataas"
+
+#: views/admin/tag_groups_admin.view.php:71
+msgid "move down"
+msgstr "ilipat pababa"
+
+#: views/admin/tag_groups_admin.view.php:72
+msgid "reload"
+msgstr "i-reload"
+
+#: views/admin/tag_groups_admin.view.php:73
+msgid "next page"
+msgstr "susunod na pahina"
+
+#: views/admin/tag_groups_admin.view.php:74
+msgid "previous page"
+msgstr "nakaraang pahina"
+
+#: views/admin/tag_groups_admin.view.php:75
+msgid "go to page:"
+msgstr "pumunta sa pahina:"
+
+#: views/admin/tag_groups_admin.view.php:76
+msgid "Show posts"
+msgstr "Ipakita ang mga post"
+
+#: views/admin/tag_groups_admin.view.php:77
+msgid "Show tags"
+msgstr "Ipakita ang mga tag"
+
+#: views/admin/tag_groups_admin.view.php:168
+msgid "Do you really want to delete this tag group?"
+msgstr "Talaga bang nais mong tanggalin ang grupong tag na ito?"
+
 #: views/partials/admin_feed_fallback.view.php:2
 #. translators: %1$s is the href attribute with URL, %2$s is the link text
 #, php-format
 msgid "Please visit <a %1$s>%2$s</a>."
 msgstr "Pakisuyin ang <a %1$s>%2$s</a>."
 
-#: views/partials/admin_footer_rating.view.php:5
-#. translators: %1$s and %2$s are opening and closing anchor tags, %3$s is the version number
+#: views/partials/admin_feed_footer.view.php:3
+msgid "Read more"
+msgstr "Magbasa pa"
+
+#: views/partials/admin_footer_rating.view.php:4
+#. translators: 1: Opening TaxoPress link tag, 2: Closing link tag, 3: Plugin version.
 #, php-format
 msgid "Thanks for using Tag Groups | %1$sTaxoPress.com%2$s | Version %3$s"
 msgstr "Salamat sa paggamit ng Tag Groups | %1$sTaxoPress.com%2$s | Bersyon %3$s"
+
+#: views/partials/bulk_admin_footer.view.php:10
+#: views/partials/bulk_admin_footer.view.php:11
+msgid "Assign to"
+msgstr "Itatalaga sa"
+
+#: views/partials/filter_admin_footer.view.php:23
+msgid "Filter off"
+msgstr "I-off ang filter"
+
+#: views/partials/language_notice.view.php:2
+msgid "Please select one of the languages above to see the correct tag groups!"
+msgstr ""
+"Pakisuyin ang isa sa mga wika sa itaas upang makita ang tamang mga tag "
+"group!"
+
+#: views/partials/quick_edit_tag.view.php:3
+msgid "Groups"
+msgstr "Mga grupo"
