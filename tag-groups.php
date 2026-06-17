@@ -109,6 +109,24 @@ if (!defined('TAG_GROUPS_PLUGIN_BASENAME')) {
     }
 }
 
+if (defined('TAG_GROUPS_LOADED_BY_PRO') && TAG_GROUPS_LOADED_BY_PRO && defined('TAG_GROUPS_PRO_ABSPATH')) {
+    if (!defined('TAG_GROUPS_PREMIUM_PLUGIN_ABSOLUTE_PATH')) {
+        define('TAG_GROUPS_PREMIUM_PLUGIN_ABSOLUTE_PATH', TAG_GROUPS_PRO_ABSPATH . '/premium');
+    }
+    if (!defined('TAG_GROUPS_PREMIUM_PLUGIN_RELATIVE_PATH')) {
+        define('TAG_GROUPS_PREMIUM_PLUGIN_RELATIVE_PATH', 'premium');
+    }
+    if (!defined('TAG_GROUPS_PREMIUM_CACHE_LIFETIME')) {
+        define('TAG_GROUPS_PREMIUM_CACHE_LIFETIME', 600);
+    }
+    if (!defined('TAG_GROUPS_PREMIUM_MB_RELOAD_TAGS')) {
+        define('TAG_GROUPS_PREMIUM_MB_RELOAD_TAGS', 300000);
+    }
+    if (!defined('TAG_GROUPS_PREMIUM_PLUGIN_URL') && defined('TAG_GROUPS_PRO_URL')) {
+        define('TAG_GROUPS_PREMIUM_PLUGIN_URL', TAG_GROUPS_PRO_URL . '/premium');
+    }
+}
+
 $libAutoloadPath = TAG_GROUPS_LIB_VENDOR_PATH . '/autoload.php';
 if (file_exists($libAutoloadPath)) {
     require_once $libAutoloadPath;
