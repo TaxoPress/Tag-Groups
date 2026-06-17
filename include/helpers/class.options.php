@@ -462,6 +462,11 @@ if (! class_exists('TagGroups_Options')) {
             'export' => true,
             'type'   => self::INTEGER
             );
+            $available_options['tag_group_meta_box_remove_all'] = array(
+            'origin' => self::TAG_GROUPS_PREMIUM_PLUGIN,
+            'export' => true,
+            'type'   => self::INTEGER
+            );
             $available_options['tag_group_meta_box_staged_loading'] = array(
             'origin' => self::TAG_GROUPS_PREMIUM_PLUGIN,
             'export' => true,
