@@ -42,4 +42,5 @@ ray.php
 README.md
 screenshot-*.png
 webpack.config.js
+wp-cli.yml
 yarn.lock
