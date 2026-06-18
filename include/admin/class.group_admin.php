@@ -137,7 +137,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
             $tag_group_role_edit_groups = 'edit_pages';
             
             // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- Nonce verification
-            if ($task != 'refresh' && $task != 'test' && !(current_user_can($tag_group_role_edit_groups) && wp_verify_nonce($_REQUEST['nonce'], 'tg_groups_management'))) {
+            if (!(current_user_can($tag_group_role_edit_groups) && wp_verify_nonce($_REQUEST['nonce'] ?? '', 'tg_groups_management'))) {
                 self::ajax_send_error('Security check', $task);
                 exit;
             }
