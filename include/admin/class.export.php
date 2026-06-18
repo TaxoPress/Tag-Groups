@@ -113,19 +113,14 @@ if (!class_exists('TagGroups_Export')) {
             try {
                 // misusing the password generator to get a hash
                 $this->hash = wp_generate_password(10, false);
-                /*
-                 * Write settings/groups and tags separately
-                 */
-                // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- Export functionality
-                $fp = fopen(WP_CONTENT_DIR . '/uploads/tag_groups_settings-' . $this->hash . '.json', 'w');
-                // phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.file_ops_fwrite -- Export functionality
-                fwrite($fp, wp_json_encode($this->options));
-                fclose($fp);
-                // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- Export functionality
-                $fp = fopen(WP_CONTENT_DIR . '/uploads/tag_groups_terms-' . $this->hash . '.json', 'w');
-                // phpcs:ignore WordPressVIPMinimum.Functions.RestrictedFunctions.file_ops_fwrite -- Export functionality
-                fwrite($fp, wp_json_encode($this->terms));
-                fclose($fp);
+                $export_data = array(
+                    'settings' => wp_json_encode($this->options),
+                    'terms'    => wp_json_encode($this->terms),
+                );
+
+                if (!set_transient('tag_groups_export_' . $this->hash, $export_data, 15 * MINUTE_IN_SECONDS)) {
+                    $this->error = true;
+                }
             } catch (Exception $e) {
                 $this->error = true;
             }
@@ -141,15 +136,73 @@ if (!class_exists('TagGroups_Export')) {
         {
 
             if (!$this->error) {
+                $settings_url = self::get_download_url($this->hash, 'settings');
+                $terms_url = self::get_download_url($this->hash, 'terms');
                 TagGroups_Admin_Notice::add('success', __('Your settings/groups and your terms have been exported. Please download the resulting files with right-click or ctrl-click:', 'tag-groups') . '  <p>
-        <a href="' . get_bloginfo('wpurl') . '/wp-content/uploads/tag_groups_settings-' . $this->hash . '.json" target="_blank">tag_groups_settings-' . $this->hash . '.json</a>
+        <a href="' . esc_url($settings_url) . '" target="_blank">tag_groups_settings-' . esc_html($this->hash) . '.json</a>
         </p>' . '  <p>
-        <a href="' . get_bloginfo('wpurl') . '/wp-content/uploads/tag_groups_terms-' . $this->hash . '.json" target="_blank">tag_groups_terms-' . $this->hash . '.json</a>
+        <a href="' . esc_url($terms_url) . '" target="_blank">tag_groups_terms-' . esc_html($this->hash) . '.json</a>
         </p>');
             } else {
                 TagGroups_Error::log('[Tag Groups] Error writing files');
                 TagGroups_Admin_Notice::add('error', __('Writing of the exported settings failed.', 'tag-groups'));
             }
+        }
+
+        /**
+         * Builds an authenticated URL for an export download.
+         *
+         * @param string $hash
+         * @param string $type
+         * @return string
+         */
+        private static function get_download_url($hash, $type)
+        {
+            return add_query_arg(
+                array(
+                    'action'                 => 'tag_groups_download_export',
+                    'tag_groups_export'      => $hash,
+                    'tag_groups_export_type' => $type,
+                    '_wpnonce'               => wp_create_nonce('tag-groups-download-export-' . $hash . '-' . $type),
+                ),
+                admin_url('admin-post.php')
+            );
+        }
+
+        /**
+         * Serves an exported JSON file to authorized administrators.
+         *
+         * @return void
+         */
+        public static function download_file()
+        {
+            if (!current_user_can('manage_options')) {
+                wp_die(__('You do not have permission to download this export file.', 'tag-groups'));
+            }
+
+            $hash = isset($_GET['tag_groups_export']) ? sanitize_text_field(wp_unslash($_GET['tag_groups_export'])) : '';
+            $type = isset($_GET['tag_groups_export_type']) ? sanitize_key(wp_unslash($_GET['tag_groups_export_type'])) : '';
+            $nonce = isset($_GET['_wpnonce']) ? sanitize_text_field(wp_unslash($_GET['_wpnonce'])) : '';
+
+            if (empty($hash) || !in_array($type, array( 'settings', 'terms' ), true) || !wp_verify_nonce($nonce, 'tag-groups-download-export-' . $hash . '-' . $type)) {
+                wp_die(__('The export download link is invalid or has expired. Please run the export again.', 'tag-groups'));
+            }
+
+            $export_data = get_transient('tag_groups_export_' . $hash);
+
+            if (empty($export_data[$type])) {
+                wp_die(__('The requested export file has expired. Please run the export again.', 'tag-groups'));
+            }
+
+            $filename = sanitize_file_name('tag_groups_' . $type . '-' . $hash . '.json');
+
+            nocache_headers();
+            header('Content-Type: application/json; charset=' . get_option('blog_charset'));
+            header('Content-Disposition: attachment; filename="' . $filename . '"');
+            header('X-Content-Type-Options: nosniff');
+
+            echo $export_data[$type]; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- JSON file download.
+            exit;
         }
     }
 }
