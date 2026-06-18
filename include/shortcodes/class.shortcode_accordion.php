@@ -397,21 +397,16 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
                     if ($this->count_amount > 0 && !empty($this->attributes->separator)) {
                         $html_tags .= '<span style="font-size:' . $font_size_separator . 'px">' . $this->attributes->separator . '</span> ';
                     }
-                    if (!empty($this->attributes->assigned_class)) {
-                        if (!empty($this->assigned_terms[$tag->term_id])) {
-                            $other_tag_classes = ' ' . $this->attributes->assigned_class . '_1';
-                        } else {
-                            $other_tag_classes = ' ' . $this->attributes->assigned_class . '_0';
-                        }
-                    }
+                    $other_tag_classes = $this->get_assigned_tag_class($tag->term_id);
                     $title = $this->get_title($tag, $post_count);
                     $title = $this->maybe_filter_title($title, $tag->description, $post_count);
-                    $title_html = ( $title == '' ? '' : ' title="' . $title . '"' );
+                    $title_html = ( $title == '' ? '' : ' title="' . esc_attr($title) . '"' );
                     // replace placeholders in prepend and append
                     $prepend_output = $this->get_prepend_output($post_count);
                     $append_output = $this->get_append_output($post_count);
                     // adding link target
-                    $link_target_html = ( !empty($link_target) ? 'target="' . $link_target . '"' : '' );
+                    $link_target = TagGroups_Shortcode_Statics::sanitize_link_target($this->attributes->link_target);
+                    $link_target_html = ( !empty($link_target) ? 'target="' . esc_attr($link_target) . '"' : '' );
                     // adding class for group
                     if (!empty($this->attributes->group_in_class)) {
                         $other_tag_classes .= ' ' . sanitize_html_class(' tg_tag_group_id_' . $this->tag_group_data[$i]['term_group']) . ' ' . sanitize_html_class('tg_tag_group_label_' . strtolower($this->tag_group_data[$i]['label']));

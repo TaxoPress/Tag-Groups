@@ -181,6 +181,24 @@ if (! class_exists('TagGroups_Shortcode_Statics')) {
             $classes = implode(' ', $classes);
             return $classes;
         }
+
+        /**
+         * Sanitizes the link target shortcode attribute.
+         *
+         * @param  string $target
+         * @return string
+         */
+        public static function sanitize_link_target($target)
+        {
+            $target = strtolower(trim((string) $target));
+            $allowed_targets = array( '_blank', '_self', '_parent', '_top' );
+
+            if (!in_array($target, $allowed_targets, true)) {
+                return '';
+            }
+
+            return $target;
+        }
     }
 
 
