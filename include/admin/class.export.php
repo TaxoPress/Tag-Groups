@@ -12,7 +12,7 @@ if (!class_exists('TagGroups_Export')) {
      *
      * @since 1.38.0
      */
-    // phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps -- Legacy class structure
+    // phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy class structure
     class TagGroups_Export
     {
         /**
@@ -177,7 +177,7 @@ if (!class_exists('TagGroups_Export')) {
         public static function download_file()
         {
             if (!current_user_can('manage_options')) {
-                wp_die(__('You do not have permission to download this export file.', 'tag-groups'));
+                wp_die(esc_html__('You do not have permission to download this export file.', 'tag-groups'));
             }
 
             $hash = isset($_GET['tag_groups_export']) ? sanitize_text_field(wp_unslash($_GET['tag_groups_export'])) : '';
@@ -185,13 +185,13 @@ if (!class_exists('TagGroups_Export')) {
             $nonce = isset($_GET['_wpnonce']) ? sanitize_text_field(wp_unslash($_GET['_wpnonce'])) : '';
 
             if (empty($hash) || !in_array($type, array( 'settings', 'terms' ), true) || !wp_verify_nonce($nonce, 'tag-groups-download-export-' . $hash . '-' . $type)) {
-                wp_die(__('The export download link is invalid or has expired. Please run the export again.', 'tag-groups'));
+                wp_die(esc_html__('The export download link is invalid or has expired. Please run the export again.', 'tag-groups'));
             }
 
             $export_data = get_transient('tag_groups_export_' . $hash);
 
             if (empty($export_data[$type])) {
-                wp_die(__('The requested export file has expired. Please run the export again.', 'tag-groups'));
+                wp_die(esc_html__('The requested export file has expired. Please run the export again.', 'tag-groups'));
             }
 
             $filename = sanitize_file_name('tag_groups_' . $type . '-' . $hash . '.json');
