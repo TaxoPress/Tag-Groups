@@ -639,10 +639,9 @@ if (!class_exists('TagGroups_REST_API')) {
                  */
 
                 if (get_current_user_id()) {
-                    $post_type_object = get_post_type_object($post->post_type);
-                    if (!is_object($post_type_object) || !is_object($post_type_object->cap) || !current_user_can($post_type_object->cap->read, $post_id)) {
+                    if (!current_user_can('read_post', $id)) {
                         return new WP_Error('permission', "You are not allowed to view this post.", array(
-                            'status' => 400,
+                            'status' => 403,
                         ));
                     }
                 } else {
@@ -683,8 +682,7 @@ if (!class_exists('TagGroups_REST_API')) {
                      */
 
                     if (get_current_user_id()) {
-                        $post_type_object = get_post_type_object($post->post_type);
-                        if (!is_object($post_type_object) || !is_object($post_type_object->cap) || !current_user_can($post_type_object->cap->read, $post_id)) {
+                        if (!current_user_can('read_post', $post_id)) {
                             continue;
                         }
                     } else {
