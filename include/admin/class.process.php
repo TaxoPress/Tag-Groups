@@ -40,10 +40,15 @@ if (! class_exists('TagGroups_Process')) {
 
             $affected = 0;
             $error = false;
+            $nonce = '';
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce verified below
             if (isset($_REQUEST['nonce'])) {
                     // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended -- Nonce verified below
                     $nonce = $_REQUEST['nonce'];
+            }
+
+            if (! current_user_can('manage_options')) {
+                die('Access denied.');
             }
 
             if (! wp_verify_nonce($nonce, 'tag-groups-process-nonce')) {
