@@ -108,6 +108,15 @@ if (!class_exists('TagGroups_Cron_Handlers')) {
             TagGroups_Error::verbose_log('[Tag Groups] Checking if we should migrate terms.');
             $convert_term_count = TagGroups_Term_Meta_Tools::convert_to_term_meta(true);
             $recommend_post_migration = false;
+            if (TagGroups_Utilities::is_premium_plan() && class_exists('TagGroups_Premium_Post_Meta_Tools')) {
+                TagGroups_Cron::schedule_in_secs(5, 'tag_groups_run_post_migration');
+                $post_ids = TagGroups_Premium_Post_Meta_Tools::get_post_ids_with_missing_group();
+
+                if (count($post_ids) > 1000) {
+                    $recommend_post_migration = true;
+                }
+            }
+
             if ($convert_term_count > 0 || $recommend_post_migration) {
                 // If there's a lot to do, we also want to show the admin notice
                 TagGroups_Admin::recommend_to_run_migration();

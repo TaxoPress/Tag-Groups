@@ -90,6 +90,13 @@ if (!class_exists('TagGroups_Groups')) {
                 $this->load_old_format();
             } else {
                 $this->positions = TagGroups_Options::get_option('term_group_positions', array());
+                if (TagGroups_Utilities::is_premium_plan()) {
+                    $this->parents = array_values(array_intersect(
+                        TagGroups_Options::get_option('term_group_parents', array()),
+                        $this->group_ids
+                    ));
+                }
+
                 $this->labels = TagGroups_Options::get_option($this->get_tag_group_label_option_name(), array());
 
                 if (empty($this->labels)) {
@@ -223,6 +230,11 @@ if (!class_exists('TagGroups_Groups')) {
             $positions = apply_filters('tag_groups_save_group_positions', $this->positions);
             TagGroups_Options::update_option('term_groups', $group_ids, true);
             TagGroups_Options::update_option('term_group_positions', $positions, true);
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $parents = apply_filters('tag_groups_save_group_parents', $this->parents);
+                TagGroups_Options::update_option('term_group_parents', $parents, true);
+            }
+
             TagGroups_Options::update_option($this->get_tag_group_label_option_name(), $labels, true);
             /**
              * If we save translated groups, make sure we have untranslated ones. If not, give them the translations.
@@ -630,6 +642,11 @@ if (!class_exists('TagGroups_Groups')) {
         public function get_parents()
         {
 
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $this->conditionally_load();
+                return $this->parents;
+            }
+
             return array();
         }
 
@@ -654,6 +671,31 @@ if (!class_exists('TagGroups_Groups')) {
          */
         public function get_children($parent)
         {
+
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $this->conditionally_load();
+                if (
+                    !in_array($parent, $this->group_ids)
+                    || !in_array($parent, $this->parents)
+                    || !isset($this->positions[$parent])
+                ) {
+                    return array();
+                }
+
+                $parent_position = $this->positions[$parent];
+                $positions_flipped = array_flip($this->positions);
+                $children = array();
+
+                for ($i = $parent_position + 1; $i < count($positions_flipped); $i++) {
+                    if (in_array($positions_flipped[$i], $this->parents)) {
+                        break;
+                    }
+
+                    $children[] = $positions_flipped[$i];
+                }
+
+                return $children;
+            }
 
             /**
              * otherwise simply remove the parent IDs
@@ -791,6 +833,24 @@ if (!class_exists('TagGroups_Groups')) {
         {
 
             $this->conditionally_load();
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $groups_of_children = array();
+                $current_parent = 0;
+                $groups_by_position = array_flip($this->positions);
+
+                foreach ($groups_by_position as $group_id) {
+                    if (in_array($group_id, $this->parents)) {
+                        $current_parent = $group_id;
+                        $groups_of_children[$group_id] = array();
+                        continue;
+                    }
+
+                    $groups_of_children[$current_parent][] = $group_id;
+                }
+
+                return $groups_of_children;
+            }
+
             return array(
                 0 => $this->group_ids,
             );
@@ -995,10 +1055,29 @@ if (!class_exists('TagGroups_Groups')) {
             if (empty($this->parents)) {
                 return $group_ids;
             }
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $expanded_group_ids = array();
+
+                foreach ($group_ids as $group_id) {
+                    if (in_array($group_id, $expanded_group_ids)) {
+                        continue;
+                    }
+
+                    if (in_array($group_id, $this->parents)) {
+                        $children = $this->get_children($group_id);
+                        $expanded_group_ids = array_merge($expanded_group_ids, $children);
+                    } else {
+                        $expanded_group_ids[] = $group_id;
+                    }
+                }
+
+                return $expanded_group_ids;
+            }
+
             /**
              * otherwise simply remove the parent IDs
              */
-            return array_diff($this->group_ids, $this->parents);
+            return array_diff($group_ids, $this->parents);
         }
 
         /**
@@ -1010,6 +1089,11 @@ if (!class_exists('TagGroups_Groups')) {
         {
 
             $this->conditionally_load();
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $groups_diff = array_diff($this->group_ids, $this->parents);
+                return empty($groups_diff) || array( 0 ) == $groups_diff;
+            }
+
             return false;
         }
     }

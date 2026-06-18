@@ -48,6 +48,30 @@ if (!class_exists('TagGroups_Terms')) {
          */
         public function clear_post_count_transient($rebuild_in_seconds = 5)
         {
+            if (!TagGroups_Utilities::is_premium_plan()) {
+                return;
+            }
+
+            $languages = apply_filters('wpml_active_languages', null, '');
+
+            if (!empty($languages)) {
+                foreach ($languages as $language_code => $language_info) {
+                    TagGroups_Transients::delete_transient('tag_groups_post_counts-' . $language_code);
+                }
+            } else {
+                TagGroups_Transients::delete_transient('tag_groups_post_counts');
+            }
+
+            if ($rebuild_in_seconds < 0) {
+                return;
+            }
+
+            if (
+                (!defined('TAG_GROUPS_DISABLE_CACHE_REBUILD') || TAG_GROUPS_DISABLE_CACHE_REBUILD)
+                && class_exists('TagGroups_Premium_Cron')
+            ) {
+                TagGroups_Premium_Cron::schedule_in_secs($rebuild_in_seconds, 'tag_groups_rebuild_post_counts');
+            }
         }
         
         /**

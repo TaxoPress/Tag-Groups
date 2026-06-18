@@ -82,6 +82,16 @@ if (!class_exists('TagGroups_Group_Admin')) {
             }
             
             $view = new TagGroups_View('admin/tag_groups_admin');
+            if (TagGroups_Utilities::is_premium_plan() && defined('TAG_GROUPS_PREMIUM_PLUGIN_ABSOLUTE_PATH')) {
+                $premium_view_path = TAG_GROUPS_PREMIUM_PLUGIN_ABSOLUTE_PATH . '/include/helpers/class.premium_view.php';
+                if (!class_exists('TagGroups_Premium_View') && file_exists($premium_view_path)) {
+                    require_once $premium_view_path;
+                }
+
+                if (class_exists('TagGroups_Premium_View')) {
+                    $view = new TagGroups_Premium_View('admin/tag_groups_admin');
+                }
+            }
             $view->set(array(
                 'tag_group_show_filter' => $tag_group_show_filter || $tag_group_show_filter_tags,
                 'show_parents'          => TagGroups_Utilities::is_premium_plan(),
@@ -199,6 +209,25 @@ if (!class_exists('TagGroups_Group_Admin')) {
                     
                     break;
                 case "new-parent":
+                    if (TagGroups_Utilities::is_premium_plan()) {
+                        if (isset($_REQUEST['tag_groups_label'])) {
+                            $label = stripslashes(sanitize_text_field($_REQUEST['tag_groups_label']));
+                        }
+
+                        if (empty($label)) {
+                            $message = __('The label cannot be empty.', 'tag-groups');
+                            self::ajax_send_error($message, $task);
+                        } elseif ($tg_group->find_by_label($label)) {
+                            /* translators: %s is the tag group label */
+                            $message = sprintf(__('A tag group with the label \'%s\' already exists, or the label has not changed. Please choose another one or go back.', 'tag-groups'), $label);
+                            self::ajax_send_error($message, $task);
+                        } else {
+                            $tg_group->create($label, $position, true);
+                            /* translators: %s is the tag group label */
+                            $message = sprintf(__('A new parent group with the label \'%s\' has been created at the bottom of the table!', 'tag-groups'), $label);
+                        }
+                    }
+
                     break;
                 case "update":
                     if (isset($_REQUEST['tag_groups_label'])) {

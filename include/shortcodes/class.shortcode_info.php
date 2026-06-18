@@ -137,6 +137,20 @@ if (!class_exists('TagGroups_Shortcode_Info')) {
             </tr>';
                         break;
                     case 'link':
+                        if (TagGroups_Utilities::is_premium_plan()) {
+                            $path = str_replace('{id}', (int) $term_group, $link_pattern);
+                            $slug = sanitize_title($tg_group->get_label());
+                            $path = str_replace('{slug}', $slug, $path);
+
+                            $output .= '<tr>
+              <td class="tag-groups-td-label" data-group-id="' . $term_group . '">';
+                            $output .= '<a' . $id_string . $class_string . ' href="' . site_url($path) . '" target="' . $target . '">';
+                            $output .= $tg_group->get_label();
+                            $output .= '</a>';
+                            $output .= '</td>
+              </tr>';
+                        }
+
                         break;
                     case 'number_of_tags':
                     default:
@@ -190,6 +204,16 @@ if (!class_exists('TagGroups_Shortcode_Info')) {
                     $output .= '</span>';
                     break;
                 case 'link':
+                    if (TagGroups_Utilities::is_premium_plan()) {
+                        $path = str_replace('{id}', (int) $group_id, $link_pattern);
+                        $slug = sanitize_title($tg_group->get_label());
+                        $path = str_replace('{slug}', $slug, $path);
+
+                        $output .= '<a' . $id_string . $class_string . ' href="' . site_url($path) . '" target="' . $target . '">';
+                        $output .= $tg_group->get_label();
+                        $output .= '</a>';
+                    }
+
                     break;
                 case 'number_of_tags':
                 default:

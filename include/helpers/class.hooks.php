@@ -187,6 +187,11 @@ if (!class_exists('TagGroups_Hooks')) {
             $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
             $tag_group_role_edit_tags = 'edit_pages';
             $tag_group_role_edit_groups = 'edit_pages';
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $tag_group_role_edit_tags = TagGroups_Options::get_option('tag_group_role_edit_tags', 'edit_pages');
+                $tag_group_role_edit_groups = TagGroups_Options::get_option('tag_group_role_edit_groups', 'edit_pages');
+            }
+
             if (current_user_can($tag_group_role_edit_tags)) {
                 $this->user_can_tag_group_role_edit_tags($enabled_taxonomies);
             }

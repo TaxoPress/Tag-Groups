@@ -12,6 +12,7 @@
 *.code-workspace
 *.log
 /builder.yml
+/build
 /cache
 /dev-workspace-cache
 /dist

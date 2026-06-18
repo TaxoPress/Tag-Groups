@@ -76,6 +76,10 @@ if (!class_exists('TagGroups_Group')) {
                 $this->set_group_id($group_id);
             }
             $this->load();
+            if (TagGroups_Utilities::is_premium_plan() && class_exists('TagGroups_Premium_Group')) {
+                $this->tg_group_premium = new TagGroups_Premium_Group($this->group_id);
+            }
+
             return $this;
         }
 
@@ -102,6 +106,11 @@ if (!class_exists('TagGroups_Group')) {
                 $this->position = $positions[$this->group_id];
             } else {
                 $this->position = 1;
+            }
+
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $parents = $this->tg_groups->get_parents();
+                $this->is_parent = is_array($parents) && in_array($this->group_id, $parents);
             }
 
             return $this;
@@ -144,6 +153,14 @@ if (!class_exists('TagGroups_Group')) {
             $positions[$this->group_id] = $this->position;
             $this->tg_groups->set_labels($labels);
             $this->tg_groups->set_positions($positions);
+            if (TagGroups_Utilities::is_premium_plan() && $this->is_parent) {
+                $parents = $this->tg_groups->get_parents();
+                if (!in_array($this->group_id, $parents)) {
+                    $parents[] = $this->group_id;
+                    $this->tg_groups->set_parents($parents);
+                }
+            }
+
             $this->tg_groups->save();
             return $this;
         }
@@ -173,6 +190,10 @@ if (!class_exists('TagGroups_Group')) {
         {
 
             $this->group_id = (int) $group_id;
+            if (TagGroups_Utilities::is_premium_plan() && isset($this->tg_group_premium)) {
+                $this->tg_group_premium->set_group_id((int) $group_id);
+            }
+
             return $this;
         }
 
@@ -837,6 +858,18 @@ if (!class_exists('TagGroups_Group')) {
             if ($this->position < 2) {
                 return 0;
             }
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $positions = $this->tg_groups->get_positions();
+                $positions_flipped = array_flip($positions);
+                $parents = $this->tg_groups->get_parents();
+
+                for ($i = $this->position; $i > 0; $i--) {
+                    if (isset($positions_flipped[$i]) && in_array($positions_flipped[$i], $parents)) {
+                        return $positions_flipped[$i];
+                    }
+                }
+            }
+
             return 0;
         }
 
@@ -847,6 +880,25 @@ if (!class_exists('TagGroups_Group')) {
          */
         public function get_parent_label()
         {
+
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $parent_id = $this->get_parent();
+
+                if (0 == $parent_id) {
+                    return '- none -';
+                }
+
+                /*
+                 * Use the labels array because group IDs may already be filtered.
+                 */
+                $labels = $this->tg_groups->get_labels();
+
+                if (isset($labels[$parent_id])) {
+                    return $labels[$parent_id];
+                }
+
+                return '- none -';
+            }
 
             return '';
         }

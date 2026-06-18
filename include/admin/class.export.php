@@ -61,6 +61,11 @@ if (!class_exists('TagGroups_Export')) {
             $available_options = TagGroups_Options::get_available_options();
             foreach ($available_options as $key => $value) {
                 if ($available_options[$key]['export']) {
+                    if (TagGroups_Utilities::is_premium_plan()) {
+                        $this->options[$key] = TagGroups_Options::get_option($key);
+                        continue;
+                    }
+
                     if (TagGroups_Options::TAG_GROUPS_PLUGIN == $available_options[$key]['origin']) {
                         $this->options[$key] = TagGroups_Options::get_option($key);
                     }
