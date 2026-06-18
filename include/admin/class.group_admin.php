@@ -126,8 +126,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
             
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce verified below
             if (isset($_REQUEST['tag_groups_task'])) {
-                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended -- Sanitized in switch statement
-                $task = $_REQUEST['tag_groups_task'];
+                $task = sanitize_key(wp_unslash($_REQUEST['tag_groups_task']));
             } else {
                 $task = 'refresh';
             }
@@ -303,13 +302,12 @@ if (!class_exists('TagGroups_Group_Admin')) {
                     // do nothing here
                     break;
                 case 'test':
-                    echo  wp_json_encode(array(
+                    wp_send_json(array(
                         'data'         => 'success',
                         'supplemental' => array(
                         'message' => 'This is the regular Ajax response.',
                     ),
-                    )) ;
-                    exit;
+                    ));
                     break;
             }
             $tag_group_groups_filtered = clone $tag_group_groups;
@@ -327,7 +325,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
                 $end_position = $number_of_filtered_term_groups;
             }
             
-            echo  wp_json_encode(array(
+            wp_send_json(array(
                 'data'         => 'success',
                 'supplemental' => array(
                 'task'              => $task,
@@ -345,8 +343,7 @@ if (!class_exists('TagGroups_Group_Admin')) {
                 'only_parents'      => TagGroups_Utilities::is_premium_plan() && $tag_group_groups->is_only_parents(),
                 'is_filtered'       => !empty($tag_groups_filter_label),
             ),
-            )) ;
-            exit;
+            ));
         }
         
         /**
@@ -355,15 +352,14 @@ if (!class_exists('TagGroups_Group_Admin')) {
         // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps, Squiz.Scope.MethodScope.Missing -- Legacy method naming
         static function ajax_send_error($message = 'error', $task = 'unknown')
         {
-            echo  wp_json_encode(array(
+            wp_send_json(array(
                 'data'         => 'error',
                 'supplemental' => array(
                 'message' => $message,
                 'nonce'   => wp_create_nonce('tg_groups_management'),
-                'task'    => $task,
+                'task'    => sanitize_key($task),
             ),
-            )) ;
-            exit;
+            ));
         }
         
         /**
