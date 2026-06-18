@@ -91,6 +91,7 @@ if (!class_exists('TagGroups_Hooks')) {
              * Display any admin notices from the queue
              */
             add_action('admin_notices', array( 'TagGroups_Admin_Notice', 'display' ));
+            add_action('admin_post_tag_groups_download_export', array( 'TagGroups_Export', 'download_file' ));
             /**
              * Add own category to Gutenberg
              */
