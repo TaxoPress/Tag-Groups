@@ -71,7 +71,18 @@ if (!class_exists('TagGroups_Taxonomy')) {
          */
         public static function get_taxonomies_for_metabox($intersect_taxonomy_slugs = null)
         {
-            
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $tag_group_taxonomies = TagGroups_Options::get_option('tag_group_taxonomy', array( 'post_tag' ));
+                $tag_group_meta_box_taxonomies = TagGroups_Options::get_option('tag_group_meta_box_taxonomy', array());
+                $valid_taxonomy_slugs = self::get_public_taxonomies();
+
+                if (empty($intersect_taxonomy_slugs)) {
+                    return array_values(array_intersect($tag_group_taxonomies, $valid_taxonomy_slugs, $tag_group_meta_box_taxonomies));
+                }
+
+                return array_values(array_intersect($tag_group_taxonomies, $valid_taxonomy_slugs, $tag_group_meta_box_taxonomies, $intersect_taxonomy_slugs));
+            }
+
             return array();
         }
         
@@ -185,6 +196,12 @@ if (!class_exists('TagGroups_Taxonomy')) {
             if (TagGroups_Options::update_option('tag_group_taxonomy', $taxonomies)) {
                 // trigger actions
                 do_action('tag_groups_taxonomies_saved', $taxonomies);
+                if (
+                    TagGroups_Utilities::is_premium_plan()
+                    && (!defined('TAG_GROUPS_DISABLE_CACHE_REBUILD') || TAG_GROUPS_DISABLE_CACHE_REBUILD)
+                ) {
+                    TagGroups_Cron::schedule_in_secs(2, 'tag_groups_run_post_migration');
+                }
             }
         }
     }

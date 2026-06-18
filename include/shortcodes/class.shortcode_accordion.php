@@ -296,6 +296,14 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
             if ('natural' == $this->attributes->orderby || 'random' == $this->attributes->orderby || $this->attributes->threshold) {
                 $this->sort();
             }
+            if (TagGroups_Utilities::is_premium_plan()) {
+                if (class_exists('TagGroups_Premium_Term') && method_exists($tag_group_premium_terms, 'get_post_counts')) {
+                    if (TagGroups_Premium_Meta_Box::metabox_is_activated($this->taxonomies)) {
+                        $this->post_counts = $tag_group_premium_terms->maybe_get_post_counts();
+                    }
+                }
+            }
+
             $this->determine_min_max();
             $html = '';
             for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
@@ -314,6 +322,12 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
                 if ($this->attributes->show_accordion == 1) {
                     $html_header .= $this->make_header($i);
                 }
+                if (TagGroups_Utilities::is_premium_plan()) {
+                    if ('count' == $this->final_orderby && !empty($this->post_counts)) {
+                        $this->sort_within_groups($this->tag_group_data[$i]['term_group']);
+                    }
+                }
+
                 /*
                  *  render the accordion content
                  */

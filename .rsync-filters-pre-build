@@ -1,5 +1,4 @@
 - *.code-workspace
-- .babelrc
 - .distignore
 - .git
 - .gitattributes
@@ -17,7 +16,6 @@
 - /tests
 - /tests-old
 - /version.txt
-- /webpack.config.js
 - /yarn.lock
 - Gruntfile.js
 - README-build.md

@@ -169,6 +169,9 @@ if (!class_exists('TagGroups_Term')) {
                  * Check permissions
                  */
                 $tag_group_role_edit_tags = 'edit_pages';
+                if (TagGroups_Utilities::is_premium_plan()) {
+                    $tag_group_role_edit_tags = TagGroups_Options::get_option('tag_group_role_edit_tags', 'edit_pages');
+                }
                 
                 if (!current_user_can($tag_group_role_edit_tags)) {
                     TagGroups_Error::verbose_log('[Tag Groups] Insufficient permission to save terms');
@@ -190,8 +193,13 @@ if (!class_exists('TagGroups_Term')) {
                 }
             }
             
-            $first_group = TagGroups_Utilities::get_first_element($term_groups);
-            $result = update_term_meta($this->term_id, '_cm_term_group_array', ',' . $first_group . ',');
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $result = update_term_meta($this->term_id, '_cm_term_group_array', ',' . implode(',', $term_groups) . ',');
+            } else {
+                $first_group = TagGroups_Utilities::get_first_element($term_groups);
+                $result = update_term_meta($this->term_id, '_cm_term_group_array', ',' . $first_group . ',');
+            }
+
             if ($result) {
                 do_action('tag_groups_groups_of_term_saved', $term_groups, $this->term_id);
             }
@@ -445,6 +453,26 @@ if (!class_exists('TagGroups_Term')) {
             
             if (0 == $group_id) {
                 return $this->count;
+            }
+
+            if (TagGroups_Utilities::is_premium_plan()) {
+                global $tag_group_premium_terms;
+
+                if (empty($tag_group_premium_terms)) {
+                    return $this->count;
+                }
+
+                $post_counts = $tag_group_premium_terms->get_post_counts();
+
+                if (!isset($post_counts[$this->term_id])) {
+                    return $this->count;
+                }
+
+                if (!isset($post_counts[$this->term_id][$group_id])) {
+                    return 0;
+                }
+
+                return $post_counts[$this->term_id][$group_id];
             }
         }
         

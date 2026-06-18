@@ -76,6 +76,10 @@ if (!class_exists('TagGroups_Admin')) {
             // for each registered taxonomy a tag group admin page
             $tag_group_taxonomies = TagGroups_Options::get_option('tag_group_taxonomy', array( 'post_tag' ));
             $tag_group_role_edit_groups = 'edit_pages';
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $tag_group_role_edit_groups = TagGroups_Options::get_option('tag_group_role_edit_groups', 'edit_pages');
+            }
+
             $tag_group_post_types = TagGroups_Taxonomy::post_types_from_taxonomies($tag_group_taxonomies);
             foreach ($tag_group_post_types as $post_type) {
                 if ('post' == $post_type) {
@@ -85,6 +89,13 @@ if (!class_exists('TagGroups_Admin')) {
                 }
 
                 $submenu_page = add_submenu_page('edit.php' . $post_type_query, __('Tag Group Admin', 'tag-groups'), __('Tag Group Admin', 'tag-groups'), $tag_group_role_edit_groups, 'tag-groups_' . $post_type, array( 'TagGroups_Group_Admin', 'render_group_administration' ));
+                if (
+                    TagGroups_Utilities::is_premium_plan()
+                    && class_exists('TagGroups_Premium_Admin')
+                    && method_exists('TagGroups_Premium_Admin', 'add_screen_option')
+                ) {
+                    add_action("load-$submenu_page", array( 'TagGroups_Premium_Admin', 'add_screen_option' ));
+                }
             }
         }
 
@@ -125,6 +136,10 @@ if (!class_exists('TagGroups_Admin')) {
             unset($term_groups[0]);
             $tg_term = new TagGroups_Term($tag);
             $view = new TagGroups_View('admin/edit_tag_main');
+            if (TagGroups_Utilities::is_premium_plan() && class_exists('TagGroups_Premium_View')) {
+                $view = new TagGroups_Premium_View('admin/edit_tag_main');
+            }
+
             $view->set(array(
                 'term_groups'         => $term_groups,
                 'screen'              => $screen,
@@ -147,6 +162,10 @@ if (!class_exists('TagGroups_Admin')) {
             $term_groups = $tag_group_groups->get_all_with_position_as_key();
             unset($term_groups[0]);
             $new_tag_initial_groups = array();
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $new_tag_initial_groups = TagGroups_Options::get_option('tag_group_new_tag_default_groups', array());
+            }
+
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for WPML translation context
             if (empty($new_tag_initial_groups) && TagGroups_WPML::is_multilingual() && isset($_GET['trid']) && !empty($_GET['taxonomy'])) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for WPML translation context
@@ -169,6 +188,10 @@ if (!class_exists('TagGroups_Admin')) {
             }
 
             $view = new TagGroups_View('admin/new_tag_from_list');
+            if (TagGroups_Utilities::is_premium_plan() && class_exists('TagGroups_Premium_View')) {
+                $view = new TagGroups_Premium_View('admin/new_tag_from_list');
+            }
+
             $view->set(array(
                 'term_groups'            => $term_groups,
                 'screen'                 => $screen,
@@ -584,6 +607,10 @@ if (!class_exists('TagGroups_Admin')) {
                 return;
             }
             $view = new TagGroups_View('partials/quick_edit_javascript');
+            if (TagGroups_Utilities::is_premium_plan() && class_exists('TagGroups_Premium_View')) {
+                $view = new TagGroups_Premium_View('partials/quick_edit_javascript');
+            }
+
             $view->render();
         }
 
@@ -608,6 +635,10 @@ if (!class_exists('TagGroups_Admin')) {
             $term_groups = $tag_group_groups->get_all_with_position_as_key();
             unset($term_groups[0]);
             $view = new TagGroups_View('partials/quick_edit_tag');
+            if (TagGroups_Utilities::is_premium_plan() && class_exists('TagGroups_Premium_View')) {
+                $view = new TagGroups_Premium_View('partials/quick_edit_tag');
+            }
+
             $view->set(array(
                 'term_groups' => $term_groups,
                 'screen'      => $screen,
@@ -817,6 +848,42 @@ if (!class_exists('TagGroups_Admin')) {
             if (count($taxonomy_intersect) && isset($_GET['tg_filter_posts_value']) && '' !== $_GET['tg_filter_posts_value']) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter application
                 $group_id = (int) $_GET['tg_filter_posts_value'];
+                if (TagGroups_Utilities::is_premium_plan()) {
+                    $group_ids = $tag_group_groups->expand_parents(array( $group_id ));
+
+                    if (count($group_ids) == 0) {
+                        // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional meta_query for post filtering by tag groups
+                        $query->query_vars['meta_query'] = array(
+                            array(
+                                'key'     => '_cm_post_terms_dummy',
+                                'compare' => 'EXISTS',
+                            ),
+                        );
+                    } elseif (count($group_ids) == 1) {
+                        // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional meta_query for post filtering by tag groups
+                        $query->query_vars['meta_query'] = array(
+                            array(
+                                'key'     => '_cm_post_terms_' . $group_ids[0],
+                                'compare' => 'EXISTS',
+                            ),
+                        );
+                    } else {
+                        // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional meta_query for post filtering by tag groups
+                        $query->query_vars['meta_query'] = array(
+                            'relation' => 'OR',
+                        );
+
+                        foreach ($group_ids as $group_id) {
+                            $query->query_vars['meta_query'][] = array(
+                                'key'     => '_cm_post_terms_' . $group_id,
+                                'compare' => 'EXISTS',
+                            );
+                        }
+                    }
+
+                    return $query;
+                }
+
                 $tg_group = new TagGroups_Group($group_id);
                 $tags = $tg_group->get_group_terms($taxonomy_intersect, true, 'ids');
                 if (empty($tags)) {

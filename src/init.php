@@ -68,6 +68,11 @@ function chatty_mango_tag_groups_editor_assets()
         'mouseover'         => TagGroups_Options::get_option('tag_group_mouseover', 0),
         'gutenbergSettings' => admin_url('admin.php?page=tag-groups-settings-back-end&active-tab=gutenberg')
     );
+    $block_asset_url = TAG_GROUPS_PLUGIN_URL;
+
+    if (defined('TAG_GROUPS_LOADED_BY_PRO') && TAG_GROUPS_LOADED_BY_PRO && defined('TAG_GROUPS_PRO_ABSPATH') && defined('TAG_GROUPS_PRO_URL')) {
+        $block_asset_url = TAG_GROUPS_PRO_URL;
+    }
 // Scripts.
     if (! empty($screen->base) && 'widgets' == $screen->base) {
         // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
@@ -80,7 +85,7 @@ function chatty_mango_tag_groups_editor_assets()
     } else {
         wp_enqueue_script(
             'chatty-mango_tag-groups-block-js', // Handle.
-            plugins_url('build/index.js', dirname(__FILE__)),
+            $block_asset_url . '/build/index.js',
             array( 'lodash', 'react', 'react-dom', 'wp-api-fetch', 'wp-components', 'wp-element', 'wp-polyfill', 'wp-url', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor' )
         );
     }
@@ -89,7 +94,7 @@ function chatty_mango_tag_groups_editor_assets()
 // Styles.
     wp_enqueue_style(
         'chatty-mango_tag-groups-block-editor-css', // Handle.
-        plugins_url('build/index.css', dirname(__FILE__)), // Block editor CSS.
+        $block_asset_url . '/build/index.css', // Block editor CSS.
         array( 'wp-edit-blocks' )
         // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
         // , $dependencies['version']

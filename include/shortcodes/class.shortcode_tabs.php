@@ -337,6 +337,14 @@ if (!class_exists('TagGroups_Shortcode_Tabs')) {
              */
             $output = array();
             $this->post_counts = array();
+            if (TagGroups_Utilities::is_premium_plan()) {
+                if (class_exists('TagGroups_Premium_Term') && method_exists($tag_group_premium_terms, 'get_post_counts')) {
+                    if (TagGroups_Premium_Meta_Box::metabox_is_activated($this->taxonomies)) {
+                        $this->post_counts = $tag_group_premium_terms->maybe_get_post_counts();
+                    }
+                }
+            }
+
             $this->determine_min_max();
             for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
                 if (!isset($this->tag_group_data[$i])) {
@@ -354,6 +362,12 @@ if (!class_exists('TagGroups_Shortcode_Tabs')) {
 
                 $output[$i]['term_group'] = $this->tag_group_data[$i]['term_group'];
                 $count_amount = 0;
+                if (TagGroups_Utilities::is_premium_plan()) {
+                    if ('count' == $this->final_orderby && !empty($this->post_counts)) {
+                        $this->sort_within_groups($this->tag_group_data[$i]['term_group']);
+                    }
+                }
+
                 $output[$i]['tags'] = array();
                 foreach ($this->tags as $tag) {
                     if (!empty($this->attributes->amount) && $count_amount >= $this->attributes->amount) {
@@ -443,6 +457,14 @@ if (!class_exists('TagGroups_Shortcode_Tabs')) {
         private function make_tags_HTML()
         {
             global $tag_group_premium_terms, $tag_group_groups ;
+            if (TagGroups_Utilities::is_premium_plan()) {
+                if (class_exists('TagGroups_Premium_Term') && method_exists($tag_group_premium_terms, 'get_post_counts')) {
+                    if (TagGroups_Premium_Meta_Box::metabox_is_activated($this->taxonomies)) {
+                        $this->post_counts = $tag_group_premium_terms->maybe_get_post_counts();
+                    }
+                }
+            }
+
             $this->determine_min_max();
             for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
                 if (!isset($this->tag_group_data[$i])) {
@@ -453,6 +475,12 @@ if (!class_exists('TagGroups_Shortcode_Tabs')) {
                 }
                 $count_amount = 0;
                 $this->html_tags[$i] = '';
+                if (TagGroups_Utilities::is_premium_plan()) {
+                    if ('count' == $this->final_orderby && !empty($this->post_counts)) {
+                        $this->sort_within_groups($this->tag_group_data[$i]['term_group']);
+                    }
+                }
+
                 foreach ($this->tags as $tag) {
                     $other_tag_classes = '';
                     if (!empty($this->attributes->amount) && $count_amount >= $this->attributes->amount) {

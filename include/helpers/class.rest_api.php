@@ -164,6 +164,51 @@ if (!class_exists('TagGroups_REST_API')) {
                     )
                 )
             );
+
+            if (TagGroups_Utilities::is_premium_plan()) {
+                register_rest_route(
+                    'tag-groups/v1',
+                    '/post-tags/(?P<id>\\d+)',
+                    array(
+                        array(
+                            'methods'             => WP_REST_Server::READABLE,
+                            'callback'            => array('TagGroups_REST_API', 'get_posts'),
+                            'args'                => array(
+                                'id' => array(
+                                    'validate_callback' => function ($param, $request, $key) {
+                                        return is_numeric($param);
+                                    },
+                                ),
+                            ),
+                            'schema'              => array('TagGroups_REST_API', 'get_post_schema'),
+                            'permission_callback' => '__return_true',
+                        ),
+                        array(
+                            'methods'             => WP_REST_Server::EDITABLE,
+                            'callback'            => array('TagGroups_REST_API', 'edit_post'),
+                            'args'                => array(
+                                'id' => array(
+                                    'validate_callback' => function ($param, $request, $key) {
+                                        return is_numeric($param);
+                                    },
+                                ),
+                            ),
+                            'permission_callback' => array('TagGroups_REST_API', 'current_user_can_manage_post_tags'),
+                        ),
+                    )
+                );
+
+                register_rest_route(
+                    'tag-groups/v1',
+                    '/post-tags/',
+                    array(
+                        'methods'             => WP_REST_Server::READABLE,
+                        'callback'            => array('TagGroups_REST_API', 'get_posts'),
+                        'schema'              => array('TagGroups_REST_API', 'get_post_schema'),
+                        'permission_callback' => '__return_true',
+                    )
+                );
+            }
         }        
 
 
@@ -192,6 +237,26 @@ if (!class_exists('TagGroups_REST_API')) {
             $orderby = sanitize_title($request->get_param('orderby'));
             $order = sanitize_title($request->get_param('order'));
 
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $expand = sanitize_title($request->get_param('expand'));
+
+                if (!empty($expand)) {
+                    $expand_a = explode(',', $expand);
+                    $expand_a = array_map('intval', $expand_a);
+                    $expand_a = $tag_group_groups->expand_parents($expand_a);
+
+                    $groups = $tag_group_groups->get_info_of_all(
+                        $taxonomy,
+                        $hide_empty,
+                        $fields,
+                        $orderby,
+                        $order
+                    );
+
+                    return array_intersect_key($groups, array_flip($expand_a));
+                }
+            }
+
             if (isset($id)) {
                 $id = (int) $id;
                 // particular group
@@ -217,6 +282,25 @@ if (!class_exists('TagGroups_REST_API')) {
                 $orderby,
                 $order
             );
+
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $type = $request->get_param('type');
+
+                if ('metabox' == $type) {
+                    $tag_group_meta_box_include = TagGroups_Options::get_option('tag_group_meta_box_include', array());
+
+                    if (!empty($tag_group_meta_box_include)) {
+                        foreach ($groups as $key => $group) {
+                            if (!in_array($group['term_group'], $tag_group_meta_box_include)) {
+                                unset($groups[$key]);
+                            }
+                        }
+
+                        $groups = array_values($groups);
+                    }
+                }
+            }
+
             return $groups;
         }
 
@@ -840,6 +924,10 @@ if (!class_exists('TagGroups_REST_API')) {
 
             global $tag_groups_current_user_id ;
             $tag_group_role_edit_groups = 'edit_pages';
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $tag_group_role_edit_groups = TagGroups_Options::get_option('tag_group_role_edit_groups', 'edit_pages');
+            }
+
             if (!get_current_user_id() && $tag_groups_current_user_id) {
                 wp_set_current_user($tag_groups_current_user_id);
             }
@@ -864,6 +952,10 @@ if (!class_exists('TagGroups_REST_API')) {
 
             global $tag_groups_current_user_id ;
             $tag_group_role_edit_tags = 'edit_pages';
+            if (TagGroups_Utilities::is_premium_plan()) {
+                $tag_group_role_edit_tags = TagGroups_Options::get_option('tag_group_role_edit_tags', 'edit_pages');
+            }
+
             if (!get_current_user_id() && $tag_groups_current_user_id) {
                 wp_set_current_user($tag_groups_current_user_id);
             }
@@ -936,6 +1028,14 @@ if (!class_exists('TagGroups_REST_API')) {
             }
 
             global $tag_groups_current_user_id ;
+            if (TagGroups_Utilities::is_premium_plan()) {
+                if (!get_current_user_id() && $tag_groups_current_user_id) {
+                    wp_set_current_user($tag_groups_current_user_id);
+                }
+
+                return current_user_can('edit_posts');
+            }
+
             return false;
         }
     }

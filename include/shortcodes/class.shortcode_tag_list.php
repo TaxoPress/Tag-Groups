@@ -284,6 +284,14 @@ if (!class_exists('TagGroups_Shortcode_Tag_List')) {
             $html = '';
             $tags_div_class_output = ( $this->attributes->tags_div_class ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes($this->attributes->tags_div_class) . '"' : '' );
             $this->post_counts = array();
+            if (TagGroups_Utilities::is_premium_plan()) {
+                if (class_exists('TagGroups_Premium_Term') && method_exists($tag_group_premium_terms, 'get_post_counts')) {
+                    if (TagGroups_Premium_Meta_Box::metabox_is_activated($this->taxonomies)) {
+                        $this->post_counts = $tag_group_premium_terms->maybe_get_post_counts();
+                    }
+                }
+            }
+
             $this->determine_min_max();
             $first = true;
             for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
@@ -318,6 +326,12 @@ if (!class_exists('TagGroups_Shortcode_Tag_List')) {
 
                 $header_class_output = ( $header_class_group ? ' class="' . TagGroups_Shortcode_Statics::sanitize_html_classes($header_class_group) . '"' : '' );
                 $html_header .= '<h' . $this->attributes->h_level . $header_class_output . '>' . htmlentities($group_name, ENT_QUOTES, "UTF-8") . '</h' . $this->attributes->h_level . '>';
+                if (TagGroups_Utilities::is_premium_plan()) {
+                    if ('count' == $this->final_orderby && !empty($this->post_counts)) {
+                        $this->sort_within_groups($this->tag_group_data[$i]['term_group']);
+                    }
+                }
+
                 /*
                  *  render the content
                  */

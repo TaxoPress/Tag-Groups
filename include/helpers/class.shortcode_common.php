@@ -419,6 +419,17 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
          */
         public function add_groups_of_post()
         {
+            if (TagGroups_Utilities::is_premium_plan() && class_exists('TagGroups_Premium_Post')) {
+                $tg_post = new TagGroups_Premium_Post($this->post_id);
+
+                foreach ($this->tag_group_ids as $tag_group_id) {
+                    if ($tg_post->has_group($tag_group_id)) {
+                        $this->include_array[] = $tag_group_id;
+                    }
+                }
+
+                return;
+            }
             
             $post_id_terms = array();
             /*
@@ -492,6 +503,22 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
                     if (!$found) {
                         unset($this->tags[$key]);
                     }
+                }
+            }
+
+            if (TagGroups_Utilities::is_premium_plan() && class_exists('TagGroups_Premium_Post')) {
+                $post_o = new TagGroups_Premium_Post($this->post_id);
+                $terms_by_group_tmp = $post_o->get_terms_by_group();
+
+                foreach ($terms_by_group_tmp as $key => $value) {
+                    if (!isset($this->include_tags_post_id_groups[$key])) {
+                        $this->include_tags_post_id_groups[$key] = array();
+                    }
+
+                    $this->include_tags_post_id_groups[$key] = array_merge(
+                        $this->include_tags_post_id_groups[$key],
+                        $value
+                    );
                 }
             }
         }
