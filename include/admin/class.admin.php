@@ -905,6 +905,12 @@ if (!class_exists('TagGroups_Admin')) {
         // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy method naming
         public static function ajax_get_feed()
         {
+            if (!current_user_can('manage_options')) {
+                wp_die(-1, 403);
+            }
+
+            check_ajax_referer('tg_get_feed_nonce', 'nonce');
+
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- AJAX handler
             if (isset($_REQUEST['url'])) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- AJAX handler
@@ -927,6 +933,7 @@ if (!class_exists('TagGroups_Admin')) {
             } else {
                 $amount = 5;
             }
+            $amount = max(1, min(20, $amount));
 
             /**
              * Assuming that the posts URL is the $url minus the trailing /feed
@@ -937,8 +944,7 @@ if (!class_exists('TagGroups_Admin')) {
                 $rss->set_debug(WP_DEBUG);
             }
             $rss->set_url($url)->set_posts_url($posts_url)->set_amount($amount);
-            echo  wp_json_encode($rss->get_html());
-            TagGroups_Utilities::die();
+            wp_send_json($rss->get_html());
         }
 
         /**
