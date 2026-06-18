@@ -55,7 +55,7 @@
   <div id="tg_pager_container_adjuster">
     <div id="tg_pager_container"></div>
   </div>
-  <input type="hidden" id="tg_nonce" value="">
+  <input type="hidden" id="tg_nonce" value="<?php echo esc_attr(wp_create_nonce('tg_groups_management')); ?>">
   <input type="hidden" id="tg_start_position" value="1">
 
   <script>

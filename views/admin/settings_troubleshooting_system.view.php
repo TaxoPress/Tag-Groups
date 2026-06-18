@@ -59,7 +59,8 @@ echo esc_html($active_theme->get('Version'));
         ?>",
       data: {
         action: "tg_ajax_manage_groups",
-        task: "test"
+        tag_groups_task: "test",
+        nonce: "<?php echo esc_attr(wp_create_nonce('tg_groups_management')); ?>"
       },
       method: "post",
       dataType: 'text',
