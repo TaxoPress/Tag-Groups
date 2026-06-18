@@ -852,6 +852,7 @@ if (!class_exists('TagGroups_Admin')) {
                     $group_ids = $tag_group_groups->expand_parents(array( $group_id ));
 
                     if (count($group_ids) == 0) {
+                        // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional meta_query for post filtering by tag groups
                         $query->query_vars['meta_query'] = array(
                             array(
                                 'key'     => '_cm_post_terms_dummy',
@@ -859,6 +860,7 @@ if (!class_exists('TagGroups_Admin')) {
                             ),
                         );
                     } elseif (count($group_ids) == 1) {
+                        // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional meta_query for post filtering by tag groups
                         $query->query_vars['meta_query'] = array(
                             array(
                                 'key'     => '_cm_post_terms_' . $group_ids[0],
@@ -866,6 +868,7 @@ if (!class_exists('TagGroups_Admin')) {
                             ),
                         );
                     } else {
+                        // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Intentional meta_query for post filtering by tag groups
                         $query->query_vars['meta_query'] = array(
                             'relation' => 'OR',
                         );
