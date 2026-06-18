@@ -12,7 +12,7 @@ if (!class_exists('TagGroups_Export')) {
      *
      * @since 1.38.0
      */
-    // phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy class structure
+    // phpcs:ignore PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps -- Legacy class structure
     class TagGroups_Export
     {
         /**
@@ -156,6 +156,7 @@ if (!class_exists('TagGroups_Export')) {
          * @param string $type
          * @return string
          */
+        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy method naming
         private static function get_download_url($hash, $type)
         {
             return add_query_arg(
@@ -174,6 +175,7 @@ if (!class_exists('TagGroups_Export')) {
          *
          * @return void
          */
+        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy method naming
         public static function download_file()
         {
             if (!current_user_can('manage_options')) {
