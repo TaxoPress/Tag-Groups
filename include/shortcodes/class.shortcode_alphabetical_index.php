@@ -331,22 +331,17 @@ if (! class_exists('TagGroups_Shortcode_Alphabetical_Index')) {
                     if (! $this->attributes->hide_empty || $post_count > 0) {
                             $tag_link = $this->get_tag_link($tag);
                             $font_size = $this->font_size($post_count, $this->min_max[ $letter ]['min'], $this->min_max[ $letter ]['max']);
-                        if (! empty($this->attributes->assigned_class)) {
-                            if (! empty($this->assigned_terms[ $tag->term_id ])) {
-                                        $other_tag_classes = ' ' . $this->attributes->assigned_class . '_1';
-                            } else {
-                                $other_tag_classes = ' ' . $this->attributes->assigned_class . '_0';
-                            }
-                        }
+                        $other_tag_classes = $this->get_assigned_tag_class($tag->term_id);
 
                         $title = $this->get_title($tag, $post_count);
                         $title = $this->maybe_filter_title($title, $tag->description, $post_count);
-                        $title_html = ( $title == '' ) ? '' : ' title="' .  $title . '"';
+                        $title_html = ( $title == '' ) ? '' : ' title="' .  esc_attr($title) . '"';
                 // replace placeholders in prepend and append
                         $prepend_output = $this->get_prepend_output($post_count);
                         $append_output = $this->get_append_output($post_count);
                 // adding link target
-                        $link_target_html = ! empty($this->attributes->link_target) ? 'target="' . $this->attributes->link_target . '"' : '';
+                        $link_target = TagGroups_Shortcode_Statics::sanitize_link_target($this->attributes->link_target);
+                        $link_target_html = ! empty($link_target) ? 'target="' . esc_attr($link_target) . '"' : '';
                 // assembling a tag
                         $this->html_tags[ $i ] .= '<span class="tag-groups-tag' . $other_tag_classes . '" style="font-size:' . $font_size . 'px"><a href="' . $tag_link . '" ' . $link_target_html . '' . $title_html . '  class="' . $tag->slug . '">';
                         if ('' != $prepend_output) {

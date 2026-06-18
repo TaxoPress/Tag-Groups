@@ -1147,6 +1147,31 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
                 $post_count
             );
         }
+
+        /**
+         * Returns the sanitized assigned-class marker for a tag.
+         *
+         * @param integer $term_id 
+         * @return string
+         */
+        protected function get_assigned_tag_class($term_id)
+        {
+            if (empty($this->attributes->assigned_class)) {
+                return '';
+            }
+
+            $assigned_class = sanitize_html_class($this->attributes->assigned_class);
+
+            if (empty($assigned_class)) {
+                return '';
+            }
+
+            if (!empty($this->assigned_terms[$term_id])) {
+                return ' ' . sanitize_html_class($assigned_class . '_1');
+            }
+
+            return ' ' . sanitize_html_class($assigned_class . '_0');
+        }
     }
     // class
 }
