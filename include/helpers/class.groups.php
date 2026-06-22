@@ -499,6 +499,10 @@ if (!class_exists('TagGroups_Groups')) {
             $result = array();
             foreach ($this->group_ids as $group_id) {
                 if (isset($this->positions[$group_id]) && isset($this->labels[$group_id])) {
+                    if (TagGroups_Utilities::is_premium_plan() && !$include_parents && in_array($group_id, $this->parents)) {
+                        continue;
+                    }
+
                     $result[$this->positions[$group_id]] = array(
                         'term_group' => (int) $group_id,
                         'label'      => $this->labels[$group_id],
