@@ -10,14 +10,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
-"PO-Revision-Date: 2026-06-17 15:08+0000\n"
+"PO-Revision-Date: 2026-06-22 16:18+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tag-groups\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: sv-SE\n"
 
 #: tag-groups.php:4
-#: include/admin/class.admin.php:206
+#: include/admin/class.admin.php:229
 #: views/admin/edit_tag_main.view.php:2
 #: views/admin/new_tag_from_list.view.php:2
 #. Plugin Name of the plugin
@@ -78,28 +78,28 @@ msgid "Setup Wizard"
 msgstr "Installationsguide"
 
 #: include/admin/class.admin.php:61
-#: include/admin/class.admin.php:940
+#: include/admin/class.admin.php:1013
 #: views/admin/settings_front_end_shortcodes.view.php:95
 msgid "Settings"
 msgstr "Inställningar"
 
-#: include/admin/class.admin.php:87, fuzzy
+#: include/admin/class.admin.php:91, fuzzy
 msgid "Tag Group Admin"
 msgstr "Tag Group Admin"
 
-#: include/admin/class.admin.php:434
+#: include/admin/class.admin.php:457
 msgid "The term has been removed from all groups."
 msgstr "Termen har tagits bort från alla grupper."
 
-#: include/admin/class.admin.php:565
+#: include/admin/class.admin.php:588
 msgid "Edit this item inline"
 msgstr "Redigera detta objekt inline"
 
-#: include/admin/class.admin.php:567
+#: include/admin/class.admin.php:590
 msgid "Quick&nbsp;Edit"
 msgstr "Snabb&nbsp;Redigera"
 
-#: include/admin/class.admin.php:994
+#: include/admin/class.admin.php:1067
 #. translators: %s is the href attribute with URL
 #, php-format
 msgid ""
@@ -109,7 +109,7 @@ msgstr ""
 "Vänligen <a %s>klicka här för att köra migrationsrutinerna</a> för att "
 "säkerställa att vi har migrerat alla taggar."
 
-#: include/admin/class.export.php:144
+#: include/admin/class.export.php:146
 msgid ""
 "Your settings/groups and your terms have been exported. Please download the "
 "resulting files with right-click or ctrl-click:"
@@ -117,21 +117,39 @@ msgstr ""
 "Dina inställningar/grupper och dina termer har exporterats. Vänligen ladda "
 "ner de resulterande filerna med högerklick eller ctrl-klick:"
 
-#: include/admin/class.export.php:151
+#: include/admin/class.export.php:153
 msgid "Writing of the exported settings failed."
 msgstr "Skrivningen av de exporterade inställningarna misslyckades."
 
-#: include/admin/class.group_admin.php:176
-#: include/admin/class.group_admin.php:180
+#: include/admin/class.export.php:187
+msgid "You do not have permission to download this export file."
+msgstr "Du har inte behörighet att ladda ner den här exportfilen."
+
+#: include/admin/class.export.php:195
+msgid ""
+"The export download link is invalid or has expired. Please run the export "
+"again."
+msgstr ""
+"Länken för exportnedladdning är ogiltig eller har löpt ut. Vänligen kör "
+"exporten igen."
+
+#: include/admin/class.export.php:201
+msgid "The requested export file has expired. Please run the export again."
+msgstr "Den begärda exportfilen har löpt ut. Vänligen kör exporten igen."
+
+#: include/admin/class.group_admin.php:185
+#: include/admin/class.group_admin.php:189
 msgid "The groups have been sorted alphabetically."
 msgstr "Grupperna har sorterats alfabetiskt."
 
-#: include/admin/class.group_admin.php:188
-#: include/admin/class.group_admin.php:209
+#: include/admin/class.group_admin.php:197
+#: include/admin/class.group_admin.php:217
+#: include/admin/class.group_admin.php:237
 msgid "The label cannot be empty."
 msgstr "Etiketten kan inte vara tom."
 
-#: include/admin/class.group_admin.php:192
+#: include/admin/class.group_admin.php:201
+#: include/admin/class.group_admin.php:221
 #. translators: %s is the tag group label
 #, php-format
 msgid ""
@@ -141,25 +159,33 @@ msgstr ""
 "En taggrupp med etiketten '%s' finns redan, eller så har etiketten inte "
 "ändrats. Vänligen välj en annan eller gå tillbaka."
 
-#: include/admin/class.group_admin.php:197
+#: include/admin/class.group_admin.php:206
 #. translators: %s is the tag group label
 #, php-format
 msgid "A new tag group with the label '%s' has been created!"
 msgstr "En ny taggrupp med etiketten '%s' har skapats!"
 
-#: include/admin/class.group_admin.php:216
+#: include/admin/class.group_admin.php:226
+#. translators: %s is the tag group label
+#, php-format
+msgid ""
+"A new parent group with the label '%s' has been created at the bottom of "
+"the table!"
+msgstr "En ny överordnad grupp med etiketten '%s' har skapats längst ner i tabellen!"
+
+#: include/admin/class.group_admin.php:244
 #. translators: %s is the tag group label
 #, php-format
 msgid "A tag group with the label '%s' already exists."
 msgstr "En taggrupp med etiketten '%s' finns redan."
 
-#: include/admin/class.group_admin.php:229
+#: include/admin/class.group_admin.php:257
 #. translators: %s is the tag group label
 #, php-format
 msgid "The tag group with the label '%s' has been saved!"
 msgstr "Taggruppen med etiketten '%s' har sparats!"
 
-#: include/admin/class.group_admin.php:236
+#: include/admin/class.group_admin.php:264
 #. translators: %1$s is the group ID, %2$s is the group label
 #, php-format
 msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
@@ -313,18 +339,22 @@ msgid "Licences"
 msgstr "Licenser"
 
 #: include/admin/class.settings.php:422
+#: include/admin/class.settings_ajax.php:42
 msgid "Transients"
 msgstr "Transienta"
 
 #: include/admin/class.settings.php:423
+#: include/admin/class.settings_ajax.php:43
 msgid "Database"
 msgstr "Databas"
 
 #: include/admin/class.settings.php:424
+#: include/admin/class.settings_ajax.php:44
 msgid "Filesystem"
 msgstr "Filsystem"
 
 #: include/admin/class.settings.php:425
+#: include/admin/class.settings_ajax.php:45
 msgid "WP Object Cache"
 msgstr "WP Objekt Cache"
 
@@ -580,6 +610,19 @@ msgstr "Sortera grupper i termen meta"
 msgid "Checking the tag names"
 msgstr "Kontrollerar taggnamnen"
 
+#: include/admin/class.settings_ajax.php:48
+#: views/admin/settings_troubleshooting_system.view.php:126, fuzzy
+msgid "Cache"
+msgstr "Cache"
+
+#: include/admin/class.settings_ajax.php:48
+msgid "(1000x read, 100x write)"
+msgstr "(1000x läs, 100x skriv)"
+
+#: include/admin/class.settings_ajax.php:63
+msgid "ineffective"
+msgstr "ineffektiv"
+
 #: include/admin/class.setup_wizard.php:94
 #: views/admin/setup_wizard_start.view.php:12, fuzzy
 msgid "Start"
@@ -632,7 +675,7 @@ msgstr "Pluginet %1$s kräver WordPress %2$s för att fungera korrekt."
 msgid "Please upgrade WordPress and then try again."
 msgstr "Vänligen uppgradera WordPress och försök igen."
 
-#: include/helpers/class.groups.php:182
+#: include/helpers/class.groups.php:189
 #: views/admin/edit_tag_main.view.php:8
 #: views/admin/new_tag_from_list.view.php:5
 #: views/partials/quick_edit_tag.view.php:7
@@ -1544,31 +1587,27 @@ msgstr "Kontrollerar..."
 msgid "Show the Response"
 msgstr "Visa svaret"
 
-#: views/admin/settings_troubleshooting_system.view.php:72
+#: views/admin/settings_troubleshooting_system.view.php:73
 msgid "passed"
 msgstr "godkänd"
 
-#: views/admin/settings_troubleshooting_system.view.php:98
+#: views/admin/settings_troubleshooting_system.view.php:99
 msgid "failed"
 msgstr "misslyckad"
 
-#: views/admin/settings_troubleshooting_system.view.php:105
+#: views/admin/settings_troubleshooting_system.view.php:106
 msgid "Benchmarks"
 msgstr "Prestandatest"
 
-#: views/admin/settings_troubleshooting_system.view.php:125, fuzzy
-msgid "Cache"
-msgstr "Cache"
-
-#: views/admin/settings_troubleshooting_system.view.php:127
+#: views/admin/settings_troubleshooting_system.view.php:128
 msgid "Tag groups pro only"
 msgstr "Taggrupper pro endast"
 
-#: views/admin/settings_troubleshooting_system.view.php:152, fuzzy
+#: views/admin/settings_troubleshooting_system.view.php:153, fuzzy
 msgid "Server"
 msgstr "Server"
 
-#: views/admin/settings_troubleshooting_system.view.php:188
+#: views/admin/settings_troubleshooting_system.view.php:189
 msgid "Constants"
 msgstr "Konstanter"
 

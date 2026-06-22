@@ -10,14 +10,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
-"PO-Revision-Date: 2026-06-17 15:08+0000\n"
+"PO-Revision-Date: 2026-06-22 16:17+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: tag-groups\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: nl-NL\n"
 
 #: tag-groups.php:4
-#: include/admin/class.admin.php:206
+#: include/admin/class.admin.php:229
 #: views/admin/edit_tag_main.view.php:2
 #: views/admin/new_tag_from_list.view.php:2
 #. Plugin Name of the plugin
@@ -79,28 +79,28 @@ msgid "Setup Wizard"
 msgstr "Installatie Wizard"
 
 #: include/admin/class.admin.php:61
-#: include/admin/class.admin.php:940
+#: include/admin/class.admin.php:1013
 #: views/admin/settings_front_end_shortcodes.view.php:95
 msgid "Settings"
 msgstr "Instellingen"
 
-#: include/admin/class.admin.php:87
+#: include/admin/class.admin.php:91
 msgid "Tag Group Admin"
 msgstr "Tag Groep Admin"
 
-#: include/admin/class.admin.php:434
+#: include/admin/class.admin.php:457
 msgid "The term has been removed from all groups."
 msgstr "De term is uit alle groepen verwijderd."
 
-#: include/admin/class.admin.php:565
+#: include/admin/class.admin.php:588
 msgid "Edit this item inline"
 msgstr "Bewerk dit item inline"
 
-#: include/admin/class.admin.php:567
+#: include/admin/class.admin.php:590
 msgid "Quick&nbsp;Edit"
 msgstr "Snelle&nbsp;Bewerking"
 
-#: include/admin/class.admin.php:994
+#: include/admin/class.admin.php:1067
 #. translators: %s is the href attribute with URL
 #, php-format
 msgid ""
@@ -110,7 +110,7 @@ msgstr ""
 "Klik <a %s>hier om de migratieroutines uit te voeren</a> om er zeker van te "
 "zijn dat we alle tags hebben gemigreerd."
 
-#: include/admin/class.export.php:144
+#: include/admin/class.export.php:146
 msgid ""
 "Your settings/groups and your terms have been exported. Please download the "
 "resulting files with right-click or ctrl-click:"
@@ -118,21 +118,39 @@ msgstr ""
 "Je instellingen/groepen en je termen zijn geëxporteerd. Download de "
 "resulterende bestanden met rechtsklikken of ctrl-klik:"
 
-#: include/admin/class.export.php:151
+#: include/admin/class.export.php:153
 msgid "Writing of the exported settings failed."
 msgstr "Het schrijven van de geëxporteerde instellingen is mislukt."
 
-#: include/admin/class.group_admin.php:176
-#: include/admin/class.group_admin.php:180
+#: include/admin/class.export.php:187
+msgid "You do not have permission to download this export file."
+msgstr "U heeft geen toestemming om dit exportbestand te downloaden."
+
+#: include/admin/class.export.php:195
+msgid ""
+"The export download link is invalid or has expired. Please run the export "
+"again."
+msgstr ""
+"De downloadlink voor de export is ongeldig of is verlopen. Voer de export "
+"opnieuw uit."
+
+#: include/admin/class.export.php:201
+msgid "The requested export file has expired. Please run the export again."
+msgstr "Het aangevraagde exportbestand is verlopen. Voer de export opnieuw uit."
+
+#: include/admin/class.group_admin.php:185
+#: include/admin/class.group_admin.php:189
 msgid "The groups have been sorted alphabetically."
 msgstr "De groepen zijn alfabetisch gesorteerd."
 
-#: include/admin/class.group_admin.php:188
-#: include/admin/class.group_admin.php:209
+#: include/admin/class.group_admin.php:197
+#: include/admin/class.group_admin.php:217
+#: include/admin/class.group_admin.php:237
 msgid "The label cannot be empty."
 msgstr "Het label kan niet leeg zijn."
 
-#: include/admin/class.group_admin.php:192
+#: include/admin/class.group_admin.php:201
+#: include/admin/class.group_admin.php:221
 #. translators: %s is the tag group label
 #, php-format
 msgid ""
@@ -142,25 +160,35 @@ msgstr ""
 "Een taggroep met het label '%s' bestaat al, of het label is niet veranderd. "
 "Kies een andere of ga terug."
 
-#: include/admin/class.group_admin.php:197
+#: include/admin/class.group_admin.php:206
 #. translators: %s is the tag group label
 #, php-format
 msgid "A new tag group with the label '%s' has been created!"
 msgstr "Een nieuwe taggroep met het label '%s' is aangemaakt!"
 
-#: include/admin/class.group_admin.php:216
+#: include/admin/class.group_admin.php:226
+#. translators: %s is the tag group label
+#, php-format
+msgid ""
+"A new parent group with the label '%s' has been created at the bottom of "
+"the table!"
+msgstr ""
+"Er is een nieuwe bovenliggende groep met het label '%s' aan de onderkant "
+"van de tabel gemaakt!"
+
+#: include/admin/class.group_admin.php:244
 #. translators: %s is the tag group label
 #, php-format
 msgid "A tag group with the label '%s' already exists."
 msgstr "Een taggroep met het label '%s' bestaat al."
 
-#: include/admin/class.group_admin.php:229
+#: include/admin/class.group_admin.php:257
 #. translators: %s is the tag group label
 #, php-format
 msgid "The tag group with the label '%s' has been saved!"
 msgstr "De taggroep met het label '%s' is opgeslagen!"
 
-#: include/admin/class.group_admin.php:236
+#: include/admin/class.group_admin.php:264
 #. translators: %1$s is the group ID, %2$s is the group label
 #, php-format
 msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
@@ -314,18 +342,22 @@ msgid "Licences"
 msgstr "Licenties"
 
 #: include/admin/class.settings.php:422
+#: include/admin/class.settings_ajax.php:42
 msgid "Transients"
 msgstr "Transiënten"
 
-#: include/admin/class.settings.php:423, fuzzy
+#: include/admin/class.settings.php:423
+#: include/admin/class.settings_ajax.php:43, fuzzy
 msgid "Database"
 msgstr "Database"
 
 #: include/admin/class.settings.php:424
+#: include/admin/class.settings_ajax.php:44
 msgid "Filesystem"
 msgstr "Bestandssysteem"
 
-#: include/admin/class.settings.php:425, fuzzy
+#: include/admin/class.settings.php:425
+#: include/admin/class.settings_ajax.php:45, fuzzy
 msgid "WP Object Cache"
 msgstr "WP Object Cache"
 
@@ -581,6 +613,19 @@ msgstr "Groepen sorteren in term meta"
 msgid "Checking the tag names"
 msgstr "De tag namen controleren"
 
+#: include/admin/class.settings_ajax.php:48
+#: views/admin/settings_troubleshooting_system.view.php:126, fuzzy
+msgid "Cache"
+msgstr "Cache"
+
+#: include/admin/class.settings_ajax.php:48
+msgid "(1000x read, 100x write)"
+msgstr "(1000x gelezen, 100x geschreven)"
+
+#: include/admin/class.settings_ajax.php:63
+msgid "ineffective"
+msgstr "ineffectief"
+
 #: include/admin/class.setup_wizard.php:94
 #: views/admin/setup_wizard_start.view.php:12, fuzzy
 msgid "Start"
@@ -633,7 +678,7 @@ msgstr "De plugin %1$s vereist WordPress %2$s om goed te functioneren."
 msgid "Please upgrade WordPress and then try again."
 msgstr "Werk WordPress bij en probeer het opnieuw."
 
-#: include/helpers/class.groups.php:182
+#: include/helpers/class.groups.php:189
 #: views/admin/edit_tag_main.view.php:8
 #: views/admin/new_tag_from_list.view.php:5
 #: views/partials/quick_edit_tag.view.php:7
@@ -1551,31 +1596,27 @@ msgstr "Controleren..."
 msgid "Show the Response"
 msgstr "Toon de reactie"
 
-#: views/admin/settings_troubleshooting_system.view.php:72
+#: views/admin/settings_troubleshooting_system.view.php:73
 msgid "passed"
 msgstr "geslaagd"
 
-#: views/admin/settings_troubleshooting_system.view.php:98
+#: views/admin/settings_troubleshooting_system.view.php:99
 msgid "failed"
 msgstr "mislukt"
 
-#: views/admin/settings_troubleshooting_system.view.php:105, fuzzy
+#: views/admin/settings_troubleshooting_system.view.php:106, fuzzy
 msgid "Benchmarks"
 msgstr "Benchmarks"
 
-#: views/admin/settings_troubleshooting_system.view.php:125, fuzzy
-msgid "Cache"
-msgstr "Cache"
-
-#: views/admin/settings_troubleshooting_system.view.php:127
+#: views/admin/settings_troubleshooting_system.view.php:128
 msgid "Tag groups pro only"
 msgstr "Taggroepen alleen pro"
 
-#: views/admin/settings_troubleshooting_system.view.php:152, fuzzy
+#: views/admin/settings_troubleshooting_system.view.php:153, fuzzy
 msgid "Server"
 msgstr "Server"
 
-#: views/admin/settings_troubleshooting_system.view.php:188
+#: views/admin/settings_troubleshooting_system.view.php:189
 msgid "Constants"
 msgstr "Constanten"
 
