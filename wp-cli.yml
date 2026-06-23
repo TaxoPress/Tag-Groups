@@ -1,0 +1,5 @@
+command:
+  allow-root: true
+
+i18n make-pot:
+  exclude: dist,vendor,node_modules,tests

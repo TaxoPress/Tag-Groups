@@ -1,0 +1,1861 @@
+# Copyright (C) 2026 TaxoPress
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tag Groups 2.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/project\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-15T12:41:40+00:00\n"
+"PO-Revision-Date: 2026-06-22 16:18+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: tag-groups\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: tag-groups.php:4
+#: include/admin/class.admin.php:229
+#: views/admin/edit_tag_main.view.php:2
+#: views/admin/new_tag_from_list.view.php:2
+#. Plugin Name of the plugin
+msgid "Tag Groups"
+msgstr "گروه‌های برچسب"
+
+#: tag-groups.php:5, fuzzy
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/tag-groups/"
+msgstr "https://wordpress.org/plugins/tag-groups/"
+
+#: tag-groups.php:6
+#. Description of the plugin
+msgid ""
+"Tag Groups allows you to organize your WordPress taxonomy terms and show "
+"them in clouds, tabs, accordions, tables, lists and much more."
+msgstr ""
+"گروه‌های برچسب به شما اجازه می‌دهد تا اصطلاحات طبقه‌بندی وردپرس خود را "
+"سازماندهی کنید و آن‌ها را در ابرها، زبانه‌ها، آکاردئون‌ها، جداول، لیست‌ها و "
+"موارد دیگر نمایش دهید."
+
+#: tag-groups.php:7
+#. Author of the plugin
+msgid "TaxoPress"
+msgstr "TaxoPress"
+
+#: tag-groups.php:8, fuzzy
+#. Author URI of the plugin
+msgid "https://taxopress.com"
+msgstr "https://taxopress.com"
+
+#: include/admin/class.admin.php:22
+msgid "Home"
+msgstr "خانه"
+
+#: include/admin/class.admin.php:26
+#: include/admin/class.settings.php:827
+#: include/admin/class.setup_wizard.php:98
+msgid "Taxonomies"
+msgstr "طبقه‌بندی‌ها"
+
+#: include/admin/class.admin.php:33
+msgid "Front End"
+msgstr "رابط کاربری"
+
+#: include/admin/class.admin.php:40
+msgid "Back End"
+msgstr "پشتیبانی"
+
+#: include/admin/class.admin.php:47
+#: include/admin/class.settings.php:935
+#: views/admin/onboarding.view.php:1
+msgid "First Steps"
+msgstr "اولین مراحل"
+
+#: include/admin/class.admin.php:54
+#: include/admin/class.settings.php:940
+msgid "Setup Wizard"
+msgstr "راهنمای تنظیمات"
+
+#: include/admin/class.admin.php:61
+#: include/admin/class.admin.php:1013
+#: views/admin/settings_front_end_shortcodes.view.php:95
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: include/admin/class.admin.php:91
+msgid "Tag Group Admin"
+msgstr "مدیر گروه برچسب"
+
+#: include/admin/class.admin.php:457
+msgid "The term has been removed from all groups."
+msgstr "اصطلاح از همه گروه‌ها حذف شده است."
+
+#: include/admin/class.admin.php:588
+msgid "Edit this item inline"
+msgstr "این مورد را به صورت آنلاین ویرایش کنید"
+
+#: include/admin/class.admin.php:590
+msgid "Quick&nbsp;Edit"
+msgstr "ویرایش سریع&nbsp;"
+
+#: include/admin/class.admin.php:1067
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid ""
+"Please <a %s>click here to run the migration routines</a> to make sure we "
+"have migrated all tags."
+msgstr ""
+"لطفاً <a %s>اینجا کلیک کنید تا روال‌های مهاجرت را اجرا کنید</a> تا مطمئن "
+"شوید که همه برچسب‌ها منتقل شده‌اند."
+
+#: include/admin/class.export.php:146
+msgid ""
+"Your settings/groups and your terms have been exported. Please download the "
+"resulting files with right-click or ctrl-click:"
+msgstr ""
+"تنظیمات/گروه‌های شما و اصطلاحات شما صادر شده‌اند. لطفاً فایل‌های نتیجه را "
+"با کلیک راست یا ctrl-click دانلود کنید:"
+
+#: include/admin/class.export.php:153
+msgid "Writing of the exported settings failed."
+msgstr "نوشتن تنظیمات صادر شده ناموفق بود."
+
+#: include/admin/class.export.php:187
+msgid "You do not have permission to download this export file."
+msgstr "شما اجازه دانلود این فایل صادراتی را ندارید."
+
+#: include/admin/class.export.php:195
+msgid ""
+"The export download link is invalid or has expired. Please run the export "
+"again."
+msgstr ""
+"لینک دانلود صادرات نامعتبر است یا منقضی شده است. لطفاً دوباره صادرات را "
+"انجام دهید."
+
+#: include/admin/class.export.php:201
+msgid "The requested export file has expired. Please run the export again."
+msgstr "فایل صادراتی درخواستی منقضی شده است. لطفاً دوباره صادرات را انجام دهید."
+
+#: include/admin/class.group_admin.php:185
+#: include/admin/class.group_admin.php:189
+msgid "The groups have been sorted alphabetically."
+msgstr "گروه‌ها به ترتیب حروف الفبا مرتب شده‌اند."
+
+#: include/admin/class.group_admin.php:197
+#: include/admin/class.group_admin.php:217
+#: include/admin/class.group_admin.php:237
+msgid "The label cannot be empty."
+msgstr "برچسب نمی‌تواند خالی باشد."
+
+#: include/admin/class.group_admin.php:201
+#: include/admin/class.group_admin.php:221
+#. translators: %s is the tag group label
+#, php-format
+msgid ""
+"A tag group with the label '%s' already exists, or the label has not "
+"changed. Please choose another one or go back."
+msgstr ""
+"گروه برچسب با برچسب '%s' قبلاً وجود دارد، یا برچسب تغییر نکرده است. لطفاً "
+"یکی دیگر را انتخاب کنید یا به عقب برگردید."
+
+#: include/admin/class.group_admin.php:206
+#. translators: %s is the tag group label
+#, php-format
+msgid "A new tag group with the label '%s' has been created!"
+msgstr "یک گروه برچسب جدید با برچسب '%s' ایجاد شده است!"
+
+#: include/admin/class.group_admin.php:226
+#. translators: %s is the tag group label
+#, php-format
+msgid ""
+"A new parent group with the label '%s' has been created at the bottom of "
+"the table!"
+msgstr "یک گروه والد جدید با برچسب '%s' در انتهای جدول ایجاد شده است!"
+
+#: include/admin/class.group_admin.php:244
+#. translators: %s is the tag group label
+#, php-format
+msgid "A tag group with the label '%s' already exists."
+msgstr "گروه برچسب با برچسب '%s' قبلاً وجود دارد."
+
+#: include/admin/class.group_admin.php:257
+#. translators: %s is the tag group label
+#, php-format
+msgid "The tag group with the label '%s' has been saved!"
+msgstr "گروه برچسب با برچسب '%s' ذخیره شد!"
+
+#: include/admin/class.group_admin.php:264
+#. translators: %1$s is the group ID, %2$s is the group label
+#, php-format
+msgid "A tag group with the id %1$s and the label '%2$s' has been deleted."
+msgstr "گروه برچسب با شناسه %1$s و برچسب '%2$s' حذف شد."
+
+#: include/admin/class.import.php:81
+msgid "Error uploading the file."
+msgstr "خطا در بارگذاری فایل."
+
+#: include/admin/class.import.php:108
+msgid "Error reading the file."
+msgstr "خطا در خواندن فایل."
+
+#: include/admin/class.import.php:146
+#: include/admin/class.import.php:194
+msgid "Error parsing the file."
+msgstr "خطا در تجزیه فایل."
+
+#: include/admin/class.import.php:165
+#: include/admin/class.import.php:267
+msgid "date unknown"
+msgstr "تاریخ ناشناخته"
+
+#: include/admin/class.import.php:171
+#. translators: 1: Filename, 2: Plugin version, 3: Export file creation date.
+#, php-format
+msgid ""
+"Your settings and groups have been imported from the file %1$s (created "
+"with plugin version %2$s on %3$s)."
+msgstr ""
+"تنظیمات و گروه‌های شما از فایل %1$s (ایجاد شده با نسخه افزونه %2$s در %3$s) "
+"وارد شده‌اند."
+
+#: include/admin/class.import.php:177
+#. translators: %d is the number of options
+#, php-format
+msgid "%d option was added or changed."
+msgid_plural "%d options were added or changed."
+msgstr[0] "%d گزینه اضافه یا تغییر یافت."
+msgstr[1] ""
+
+#: include/admin/class.import.php:273
+#. translators: 1: Filename, 2: Plugin version, 3: Export file creation date.
+#, php-format
+msgid ""
+"Your terms have been imported from the file %1$s (created with plugin "
+"version %2$s on %3$s)."
+msgstr "شرایط شما از فایل %1$s (ایجاد شده با نسخه افزونه %2$s در %3$s) وارد شده‌اند."
+
+#: include/admin/class.import.php:279
+#. translators: %d is the number of terms processed
+#, php-format
+msgid "We processed %d term."
+msgid_plural "We processed %d terms."
+msgstr[0] "ما %d عبارت پردازش کردیم."
+msgstr[1] ""
+
+#: include/admin/class.import.php:281
+#. translators: %d is the number of terms saved
+#, php-format
+msgid "We saved %d term."
+msgid_plural "We saved %d terms."
+msgstr[0] "ما %d عبارت را ذخیره کردیم."
+msgstr[1] ""
+
+#: include/admin/class.import.php:283
+#. translators: %d is the number of terms updated
+#, php-format
+msgid "The group info of %d term was updated."
+msgid_plural "The group info of %d terms was updated."
+msgstr[0] "اطلاعات گروه %d عبارت به‌روز شد."
+msgstr[1] ""
+
+#: include/admin/class.settings.php:151
+#: include/admin/class.settings.php:858
+#: views/admin/tag_groups_admin.view.php:26
+#: views/admin/tag_groups_admin.view.php:39
+msgid "Filters"
+msgstr "فیلترها"
+
+#: include/admin/class.settings.php:153
+#: include/admin/class.settings.php:958
+msgid "Gutenberg"
+msgstr "گوتنبرگ"
+
+#: include/admin/class.settings.php:156
+#: include/admin/class.settings.php:965
+msgid "Multilingual"
+msgstr "چند زبانه"
+
+#: include/admin/class.settings.php:238
+#: include/admin/class.settings.php:832
+#: views/admin/settings_front_end_shortcodes.view.php:9
+msgid "Shortcodes"
+msgstr "کدهای کوتاه"
+
+#: include/admin/class.settings.php:239
+#: include/admin/class.settings.php:846
+msgid "Themes and Appearance"
+msgstr "تم‌ها و ظاهر"
+
+#: include/admin/class.settings.php:265
+msgid "remove"
+msgstr "حذف"
+
+#: include/admin/class.settings.php:265
+msgid "(recommended)"
+msgstr "(توصیه شده)"
+
+#: include/admin/class.settings.php:266
+msgid "keep"
+msgstr "نگه‌داری"
+
+#: include/admin/class.settings.php:267
+msgid "use unfiltered_html filter"
+msgstr "استفاده از فیلتر unfiltered_html"
+
+#: include/admin/class.settings.php:317
+#: include/admin/class.settings.php:945
+msgid "First Aid"
+msgstr "کمک‌های اولیه"
+
+#: include/admin/class.settings.php:318, fuzzy
+msgid "REST API"
+msgstr "REST API"
+
+#: include/admin/class.settings.php:319
+#: include/admin/class.settings.php:873
+msgid "System Information"
+msgstr "اطلاعات سیستم"
+
+#: include/admin/class.settings.php:320
+#: include/admin/class.settings.php:887
+msgid "Debugging"
+msgstr "اشکال‌زدایی"
+
+#: include/admin/class.settings.php:321
+#: include/admin/class.settings.php:863
+msgid "Export/Import"
+msgstr "صادرات/واردات"
+
+#: include/admin/class.settings.php:322
+#: include/admin/class.settings.php:868
+msgid "Reset"
+msgstr "بازنشانی"
+
+#: include/admin/class.settings.php:324
+msgid "Licences"
+msgstr "مجوزها"
+
+#: include/admin/class.settings.php:422
+#: include/admin/class.settings_ajax.php:42
+msgid "Transients"
+msgstr "موقتی‌ها"
+
+#: include/admin/class.settings.php:423
+#: include/admin/class.settings_ajax.php:43
+msgid "Database"
+msgstr "پایگاه داده"
+
+#: include/admin/class.settings.php:424
+#: include/admin/class.settings_ajax.php:44
+msgid "Filesystem"
+msgstr "سیستم فایل"
+
+#: include/admin/class.settings.php:425
+#: include/admin/class.settings_ajax.php:45
+msgid "WP Object Cache"
+msgstr "کش شیء WP"
+
+#: include/admin/class.settings.php:548
+#: include/admin/class.settings.php:604
+#: include/admin/class.settings.php:642
+#: include/admin/class.settings.php:676
+#: include/admin/class.settings.php:691
+#: include/admin/class.settings.php:704
+#: include/admin/class.settings.php:717
+#: include/admin/class.settings.php:786
+msgid "Your settings have been saved."
+msgstr "تنظیمات شما ذخیره شده‌اند."
+
+#: include/admin/class.settings.php:566
+msgid "Your settings has been saved."
+msgstr "تنظیمات شما ذخیره شده است."
+
+#: include/admin/class.settings.php:584
+msgid "All groups have been deleted and assignments reset."
+msgstr "تمام گروه‌ها حذف شده و انتساب‌ها بازنشانی شده است."
+
+#: include/admin/class.settings.php:733
+msgid "The filter on the tags page has been reset to show all tags."
+msgstr "فیلتر در صفحه برچسب‌ها بازنشانی شده تا تمامی برچسب‌ها نمایش داده شوند."
+
+#: include/admin/class.settings.php:829
+msgid "tag groups"
+msgstr "گروه برچسب"
+
+#: include/admin/class.settings.php:835
+#: include/admin/class.settings.php:849
+#: include/admin/class.settings.php:904
+msgid "tag cloud"
+msgstr "ابر برچسب"
+
+#: include/admin/class.settings.php:836
+msgid "group info"
+msgstr "اطلاعات گروه"
+
+#: include/admin/class.settings.php:837
+msgid "sidebar widget"
+msgstr "ویجت نوار کناری"
+
+#: include/admin/class.settings.php:838
+msgid "accordion"
+msgstr "اکاردئون"
+
+#: include/admin/class.settings.php:839
+msgid "tabs"
+msgstr "زبانک‌ها"
+
+#: include/admin/class.settings.php:840
+msgid "alphabetical"
+msgstr "حروف الفبا"
+
+#: include/admin/class.settings.php:841
+msgid "post list"
+msgstr "لیست پست‌ها"
+
+#: include/admin/class.settings.php:853
+msgid "colors"
+msgstr "رنگ‌ها"
+
+#: include/admin/class.settings.php:854
+msgid "tag description"
+msgstr "شرح برچسب"
+
+#: include/admin/class.settings.php:860
+#: include/admin/class.settings.php:952
+msgid "tag filter"
+msgstr "فیلتر برچسب"
+
+#: include/admin/class.settings.php:860
+msgid "post filter"
+msgstr "فیلتر پست"
+
+#: include/admin/class.settings.php:865
+msgid "backup"
+msgstr "پشتیبان‌گیری"
+
+#: include/admin/class.settings.php:870
+msgid "remove plugin"
+msgstr "حذف پلاگین"
+
+#: include/admin/class.settings.php:870
+msgid "remove data"
+msgstr "حذف داده‌ها"
+
+#: include/admin/class.settings.php:870
+msgid "delete groups"
+msgstr "حذف گروه‌ها"
+
+#: include/admin/class.settings.php:876
+#: include/admin/class.settings.php:890
+msgid "debugging"
+msgstr "اشکال‌زدایی"
+
+#: include/admin/class.settings.php:877
+msgid "PHP Version"
+msgstr "نسخه PHP"
+
+#: include/admin/class.settings.php:878
+#: views/admin/settings_troubleshooting_system.view.php:21
+msgid "Ajax Test"
+msgstr "آزمون Ajax"
+
+#: include/admin/class.settings.php:879
+#: include/admin/class.settings.php:891
+#: include/admin/class.settings.php:948
+msgid "troubleshooting"
+msgstr "رفع اشکال"
+
+#: include/admin/class.settings.php:880
+msgid "benchmarks"
+msgstr "معیارها"
+
+#: include/admin/class.settings.php:881
+msgid "speed test"
+msgstr "آزمون سرعت"
+
+#: include/admin/class.settings.php:882
+#: include/admin/class.settings.php:892
+msgid "error"
+msgstr "خطا"
+
+#: include/admin/class.settings.php:883
+#: include/admin/class.settings.php:893
+msgid "testing"
+msgstr "آزمایشی"
+
+#: include/admin/class.settings.php:894
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:950
+msgid "help"
+msgstr "راهنما"
+
+#: include/admin/class.settings.php:898
+msgid "Tag Groups Pro"
+msgstr "گروه‌های برچسب حرفه‌ای"
+
+#: include/admin/class.settings.php:901
+msgid "upgrade"
+msgstr "ارتقاء"
+
+#: include/admin/class.settings.php:902
+msgid "more groups"
+msgstr "گروه‌های بیشتر"
+
+#: include/admin/class.settings.php:903
+msgid "posts"
+msgstr "پست‌ها"
+
+#: include/admin/class.settings.php:905
+msgid "filter"
+msgstr "فیلتر"
+
+#: include/admin/class.settings.php:906
+msgid "animated"
+msgstr "متحرک"
+
+#: include/admin/class.settings.php:907
+msgid "searchable"
+msgstr "قابل جستجو"
+
+#: include/admin/class.settings.php:915
+msgid "Info"
+msgstr "اطلاعات"
+
+#: include/admin/class.settings.php:918
+msgid "author"
+msgstr "نویسنده"
+
+#: include/admin/class.settings.php:919
+msgid "version"
+msgstr "نسخه"
+
+#: include/admin/class.settings.php:920
+msgid "contact"
+msgstr "تماس"
+
+#: include/admin/class.settings.php:921
+msgid "about"
+msgstr "درباره"
+
+#: include/admin/class.settings.php:925
+msgid "Licenses"
+msgstr "مجوزها"
+
+#: include/admin/class.settings.php:927
+msgid "Credits"
+msgstr "اعتبارها"
+
+#: include/admin/class.settings.php:930
+msgid "Development News"
+msgstr "اخبار توسعه"
+
+#: include/admin/class.settings.php:932
+msgid "blog"
+msgstr "وبلاگ"
+
+#: include/admin/class.settings.php:932
+msgid "updates"
+msgstr "به‌روزرسانی‌ها"
+
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:942
+msgid "getting started"
+msgstr "شروع کار"
+
+#: include/admin/class.settings.php:937
+#: include/admin/class.settings.php:942
+msgid "introduction"
+msgstr "معرفی"
+
+#: include/admin/class.settings.php:942
+msgid "sample"
+msgstr "نمونه"
+
+#: include/admin/class.settings.php:949
+msgid "migrate"
+msgstr "انتقال"
+
+#: include/admin/class.settings.php:951
+msgid "problem"
+msgstr "مشکل"
+
+#: include/admin/class.settings.php:960
+msgid "live block preview"
+msgstr "پیش‌نمایش بلاک زنده"
+
+#: include/admin/class.settings.php:967
+msgid "translation"
+msgstr "ترجمه"
+
+#: include/admin/class.settings.php:998
+msgid "Migrating the term meta"
+msgstr "انتقال متا ترم"
+
+#: include/admin/class.settings.php:999
+msgid "Fixing incorrect tag groups"
+msgstr "رفع گروه‌های برچسب نادرست"
+
+#: include/admin/class.settings.php:1000
+msgid "Fixing incorrect groups in term meta"
+msgstr "رفع گروه‌های نادرست در متا ترم"
+
+#: include/admin/class.settings.php:1001
+msgid "Sorting groups in term meta"
+msgstr "مرتب‌سازی گروه‌ها در متا ترم"
+
+#: include/admin/class.settings.php:1002
+msgid "Checking the tag names"
+msgstr "بررسی نام‌های برچسب"
+
+#: include/admin/class.settings_ajax.php:48
+#: views/admin/settings_troubleshooting_system.view.php:126
+msgid "Cache"
+msgstr "کش"
+
+#: include/admin/class.settings_ajax.php:48
+msgid "(1000x read, 100x write)"
+msgstr "(1000 بار خوانده شده، 100 بار نوشته شده)"
+
+#: include/admin/class.settings_ajax.php:63
+msgid "ineffective"
+msgstr "غیرموثر"
+
+#: include/admin/class.setup_wizard.php:94
+#: views/admin/setup_wizard_start.view.php:12
+msgid "Start"
+msgstr "شروع"
+
+#: include/admin/class.setup_wizard.php:102
+msgid "Sample Content"
+msgstr "محتوای نمونه"
+
+#: include/admin/class.setup_wizard.php:122
+msgid "Sample Group A"
+msgstr "گروه نمونه A"
+
+#: include/admin/class.setup_wizard.php:123
+msgid "Sample Group B"
+msgstr "گروه نمونه B"
+
+#: include/admin/class.setup_wizard.php:124
+msgid "Sample Group C"
+msgstr "گروه نمونه C"
+
+#: include/admin/class.setup_wizard.php:140
+msgid "First Sample Tag"
+msgstr "اولین برچسب نمونه"
+
+#: include/admin/class.setup_wizard.php:141
+msgid "Second Sample Tag"
+msgstr "برچسب نمونه دوم"
+
+#: include/admin/class.setup_wizard.php:142
+msgid "Third Sample Tag"
+msgstr "برچسب نمونه سوم"
+
+#: include/admin/class.setup_wizard.php:160
+msgid "Create a draft sample page with Gutenberg blocks."
+msgstr "یک صفحه نمونه پیش‌نویس با بلوک‌های گوتنبرگ ایجاد کنید."
+
+#: include/admin/class.setup_wizard.php:162
+msgid "Create a draft sample page with shortcodes."
+msgstr "یک صفحه نمونه پیش‌نویس با کدکوتاه‌ها ایجاد کنید."
+
+#: include/class.loader.php:160
+#. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
+#, php-format
+msgid "The plugin %1$s requires WordPress %2$s to function properly."
+msgstr "افزونه %1$s به WordPress %2$s برای عملکرد صحیح نیاز دارد."
+
+#: include/class.loader.php:160
+#. translators: %1$s is the plugin name, %2$s is the minimum WordPress version
+msgid "Please upgrade WordPress and then try again."
+msgstr "لطفاً WordPress را به‌روزرسانی کنید و سپس دوباره تلاش کنید."
+
+#: include/helpers/class.groups.php:189
+#: views/admin/edit_tag_main.view.php:8
+#: views/admin/new_tag_from_list.view.php:5
+#: views/partials/quick_edit_tag.view.php:7
+msgid "not assigned"
+msgstr "تخصیص داده نشده"
+
+#: includes-core/TagGroupsCoreAdmin.php:70
+#. translators: %1$s and %2$s are opening and closing anchor tags for the upgrade link
+#, php-format
+msgid ""
+"You're using Tag Groups Free. The Pro version has more features and "
+"support. %1$sUpgrade to Pro%2$s"
+msgstr ""
+"شما از گروه‌های برچسب رایگان استفاده می‌کنید. نسخه Pro ویژگی‌ها و پشتیبانی "
+"بیشتری دارد. %1$sارتقا به Pro%2$s"
+
+#: includes-core/TagGroupsCoreAdmin.php:98
+#: includes-core/TagGroupsCoreAdmin.php:142
+msgid "Upgrade to Pro"
+msgstr "به نسخه پرو ارتقا دهید"
+
+#: includes-core/TagGroupsCoreAdmin.php:115
+msgid "Upgrade to Tag Groups Pro"
+msgstr "به نسخه پرو گروه‌های برچسب ارتقا دهید"
+
+#: includes-core/TagGroupsCoreAdmin.php:120
+msgid "Enhance the power of Tag Groups with the Pro version:"
+msgstr "قدرت گروه‌های برچسب را با نسخه پرو تقویت کنید:"
+
+#: includes-core/TagGroupsCoreAdmin.php:123
+msgid "21 Shortcodes"
+msgstr "۲۱ کدکوتاه"
+
+#: includes-core/TagGroupsCoreAdmin.php:124
+msgid "18 Gutenberg Blocks"
+msgstr "۱۸ بلوک گوتنبرگ"
+
+#: includes-core/TagGroupsCoreAdmin.php:125
+msgid "Table Tag Cloud"
+msgstr "ابر برچسب جدول"
+
+#: includes-core/TagGroupsCoreAdmin.php:126
+msgid "Simple Tag Cloud"
+msgstr "ابر برچسب ساده"
+
+#: includes-core/TagGroupsCoreAdmin.php:127
+msgid "Shuffle Box"
+msgstr "جعبه تصادفی"
+
+#: includes-core/TagGroupsCoreAdmin.php:128
+msgid "Caching"
+msgstr "کش"
+
+#: includes-core/TagGroupsCoreAdmin.php:129
+msgid "Multiple Groups Per Tag"
+msgstr "گروه‌های متعدد در هر برچسب"
+
+#: includes-core/TagGroupsCoreAdmin.php:130
+msgid "Tag Cloud Search"
+msgstr "جستجوی ابر برچسب"
+
+#: includes-core/TagGroupsCoreAdmin.php:131
+msgid "Toggle Post Filter"
+msgstr "فیلتر پست را تغییر دهید"
+
+#: includes-core/TagGroupsCoreAdmin.php:132
+msgid "Dynamic Post Filter"
+msgstr "فیلتر پست دینامیک"
+
+#: includes-core/TagGroupsCoreAdmin.php:133
+msgid "Post List"
+msgstr "لیست پست‌ها"
+
+#: includes-core/TagGroupsCoreAdmin.php:134
+msgid "Tag Meta Box"
+msgstr "جعبه متا برچسب"
+
+#: includes-core/TagGroupsCoreAdmin.php:135
+msgid "Post Tags in Groups"
+msgstr "برچسب‌های پست در گروه‌ها"
+
+#: includes-core/TagGroupsCoreAdmin.php:136
+msgid "Permissions"
+msgstr "مجوزها"
+
+#: includes-core/TagGroupsCoreAdmin.php:137
+msgid "Default Groups"
+msgstr "گروه‌های پیش‌فرض"
+
+#: includes-core/TagGroupsCoreAdmin.php:138
+msgid "WooCommerce Attributes"
+msgstr "ویژگی‌های WooCommerce"
+
+#: includes-core/TagGroupsCoreAdmin.php:139
+msgid "Parent Group Level"
+msgstr "سطح گروه والد"
+
+#: includes-core/TagGroupsCoreAdmin.php:149
+msgid "Need Tag Groups Support?"
+msgstr "نیاز به پشتیبانی از گروه‌های برچسب دارید؟"
+
+#: includes-core/TagGroupsCoreAdmin.php:154
+msgid "If you need help or have a new feature request, let us know."
+msgstr "اگر به کمک نیاز دارید یا درخواست ویژگی جدیدی دارید، به ما اطلاع دهید."
+
+#: includes-core/TagGroupsCoreAdmin.php:156
+msgid "Request Support"
+msgstr "درخواست پشتیبانی"
+
+#: includes-core/TagGroupsCoreAdmin.php:165
+msgid "Detailed documentation is also available on the plugin website."
+msgstr "مستندات دقیق نیز در وب‌سایت پلاگین موجود است."
+
+#: includes-core/TagGroupsCoreAdmin.php:167
+msgid "View Knowledge Base"
+msgstr "مشاهده پایگاه دانش"
+
+#: tag-groups.php:177
+msgid "The free Tag Groups plugin cannot be active together with Tag Groups Pro."
+msgstr ""
+"پلاگین رایگان گروه‌های برچسب نمی‌تواند به‌طور همزمان با Tag Groups Pro فعال "
+"باشد."
+
+#: tag-groups.php:177
+msgid "more information"
+msgstr "اطلاعات بیشتر"
+
+#: views/admin/edit_tag_main.view.php:31
+msgid "Edit tag groups"
+msgstr "ویرایش گروه‌های برچسب"
+
+#: views/admin/edit_tag_main.view.php:31
+msgid "Clicking will leave this page without saving."
+msgstr "کلیک کردن این صفحه را بدون ذخیره ترک خواهد کرد."
+
+#: views/admin/onboarding.view.php:3
+#. translators: %s is the plugin name
+#, php-format
+msgid "Welcome to %s!"
+msgstr "به %s خوش آمدید!"
+
+#: views/admin/onboarding.view.php:4
+#. translators: %s is the plugin name
+msgid ""
+"The plugin is ready for use. If you need some assistance, we can walk you "
+"through the basic steps."
+msgstr ""
+"پلاگین آماده استفاده است. اگر به کمکی نیاز دارید، می‌توانیم شما را در مراحل "
+"اولیه راهنمایی کنیم."
+
+#: views/admin/onboarding.view.php:6
+msgid "Start the Setup Wizard"
+msgstr "شروع راه‌انداز نصب"
+
+#: views/admin/onboarding.view.php:10
+msgid "Or click here if you prefer to do it on your own."
+msgstr "یا اینجا کلیک کنید اگر ترجیح می‌دهید خودتان این کار را انجام دهید."
+
+#: views/admin/onboarding.view.php:13
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid ""
+"Go to the <span class=\"dashicons dashicons-tag\"></span>&nbsp;Tag Groups "
+"<a %s>taxonomy settings</a> and <b>select the taxonomy</b> (tag type) of "
+"your tags. In most cases just leave the default: Tags (post_tag)."
+msgstr ""
+"به تنظیمات <a %s>taxonomy</a> گروه‌های <span class=\"dashicons "
+"dashicons-tag\"></span>&nbsp;تگ بروید و <b>taxonomy</b> (نوع تگ) تگ‌های خود "
+"را انتخاب کنید. در اکثر موارد فقط پیش‌فرض را ترک کنید: Tags (post_tag)."
+
+#: views/admin/onboarding.view.php:14
+#. translators: %s is the href attribute with URL
+msgid "Go to the tag groups admin page and <b>create some groups</b>."
+msgstr "به صفحه مدیریت گروه‌های تگ بروید و <b>چند گروه ایجاد کنید</b>."
+
+#: views/admin/onboarding.view.php:14
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "You can find these pages listed on your <a %s>Tag Groups home page</a>."
+msgstr "می‌توانید این صفحات را در <a %s>صفحه اصلی گروه‌های تگ</a> پیدا کنید."
+
+#: views/admin/onboarding.view.php:15
+#. translators: %s is the href attribute with URL
+msgid "Go to your tags and <b>assign them to these groups</b>."
+msgstr "به تگ‌های خود بروید و <b>آن‌ها را به این گروه‌ها اختصاص دهید</b>."
+
+#: views/admin/post_filter.view.php:3
+msgid "Filter by tag group"
+msgstr "فیلتر بر اساس گروه تگ"
+
+#: views/admin/sample_page.view.php:2
+#: views/admin/sample_page_gutenberg.view.php:3
+#. translators: %s is the author display name
+#, php-format
+msgid ""
+"%s created this sample page in the Setup Wizard of the <b>Tag Groups</b> "
+"plugin. You can safely edit and delete it or keep it for future reference."
+msgstr ""
+"%s این صفحه نمونه را در ویزارد تنظیمات افزونه <b>گروه‌های تگ</b> ایجاد کرد. "
+"می‌توانید آن را با خیال راحت ویرایش و حذف کنید یا برای مراجعه در آینده نگه "
+"دارید."
+
+#: views/admin/sample_page.view.php:6
+msgid ""
+"The following shortcodes use a variety of parameters so that you can get an "
+"idea of the options. Feel free to generate a new sample page with more "
+"features after upgrading the plugin."
+msgstr ""
+"کدهای کوتاه زیر از مجموعه‌ای از پارامترها استفاده می‌کنند تا بتوانید "
+"ایده‌ای از گزینه‌ها بگیرید. پس از به‌روزرسانی افزونه، احساس راحتی کنید که "
+"یک صفحه نمونه جدید با ویژگی‌های بیشتر ایجاد کنید."
+
+#: views/admin/sample_page.view.php:10
+#: views/admin/sample_page_gutenberg.view.php:21
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Please find links to the documentation in the <a %s>Tag Groups settings</a>."
+msgstr "لطفاً لینک‌های مستندات را در <a %s>تنظیمات گروه‌های تگ</a> پیدا کنید."
+
+#: views/admin/sample_page.view.php:14
+#: views/admin/sample_page_gutenberg.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:11
+msgid "Tabbed Tag Cloud"
+msgstr "ابر تگ زبانه‌ای"
+
+#: views/admin/sample_page.view.php:20
+#: views/admin/sample_page_gutenberg.view.php:40
+msgid "Accordion Tag Cloud"
+msgstr "ابر تگ آکاردئونی"
+
+#: views/admin/sample_page.view.php:26
+#: views/admin/sample_page_gutenberg.view.php:50
+#: views/admin/settings_front_end_shortcodes.view.php:44
+msgid "Alphabetical Tag Cloud"
+msgstr "ابر تگ الفبایی"
+
+#: views/admin/sample_page.view.php:32
+#: views/admin/sample_page_gutenberg.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:33
+msgid "Tag List"
+msgstr "لیست تگ"
+
+#: views/admin/sample_page.view.php:38
+#: views/admin/sample_page_gutenberg.view.php:70
+#: views/admin/settings_front_end_shortcodes.view.php:55
+msgid "Alphabetical Tag Index"
+msgstr "فهرست تگ الفبایی"
+
+#: views/admin/sample_page_gutenberg.view.php:9
+msgid ""
+"The following blocks use a variety of parameters so that you can get an "
+"idea of the options. Feel free to generate a new sample page with more "
+"features after upgrading the plugin."
+msgstr ""
+"بلوک‌های زیر از مجموعه‌ای از پارامترها استفاده می‌کنند تا بتوانید ایده‌ای "
+"از گزینه‌ها بگیرید. پس از به‌روزرسانی افزونه، احساس راحتی کنید که یک صفحه "
+"نمونه جدید با ویژگی‌های بیشتر ایجاد کنید."
+
+#: views/admin/sample_page_gutenberg.view.php:15
+msgid ""
+"This page was created while you had the Gutenberg editor enabled. Therefore "
+"the features only display while Gutenberg is active."
+msgstr ""
+"این صفحه در حالی ایجاد شد که ویرایشگر گوتنبرگ فعال بود. بنابراین ویژگی‌ها "
+"فقط در حین فعال بودن گوتنبرگ نمایش داده می‌شوند."
+
+#: views/admin/settings_back_end_filters.view.php:9
+msgid "Display filter on the \"Posts\" screen."
+msgstr "نمایش فیلتر در صفحه \"پست‌ها\"."
+
+#: views/admin/settings_back_end_filters.view.php:10
+msgid ""
+"Add a pull-down menu to the filters above the list of posts. If you filter "
+"posts by tag groups, then only items will be shown that have tags (terms) "
+"in that particular group. This feature can be turned off so that the menu "
+"won't obstruct your screen if you use a high number of groups. May not work "
+"with all taxonomies."
+msgstr ""
+"یک منوی کشویی به فیلترها در بالای لیست پست‌ها اضافه کنید. اگر پست‌ها را بر "
+"اساس گروه‌های تگ فیلتر کنید، فقط مواردی نمایش داده می‌شود که در آن گروه خاص "
+"تگ (شرایط) دارند. این ویژگی می‌تواند غیر فعال شود تا منو مانع دید شما نشود "
+"اگر از تعداد زیادی گروه استفاده می‌کنید. ممکن است با همه taxonomies کار "
+"نکند."
+
+#: views/admin/settings_back_end_filters.view.php:17
+msgid "Display filter on the \"Tags\" screen."
+msgstr "نمایش فیلتر در صفحه \"تگ‌ها\"."
+
+#: views/admin/settings_back_end_filters.view.php:18
+msgid ""
+"Add a filter to the list of tags. Disable it here if it conflicts with "
+"other plugins or themes."
+msgstr ""
+"یک فیلتر به لیست تگ‌ها اضافه کنید. اگر با سایر افزونه‌ها یا قالب‌ها تداخل "
+"دارد، آن را در اینجا غیرفعال کنید."
+
+#: views/admin/settings_back_end_filters.view.php:23
+#: views/admin/settings_back_end_gutenberg.view.php:15
+#: views/admin/settings_back_end_multilingual.view.php:15
+#: views/admin/settings_front_end_shortcodes.view.php:116
+#: views/admin/settings_rest_api.view.php:23
+#: views/admin/settings_tools_reset.view.php:24
+msgid "Save Settings"
+msgstr "ذخیره تنظیمات"
+
+#: views/admin/settings_back_end_gutenberg.view.php:9
+msgid "Gutenberg block preview"
+msgstr "پیش‌نمایش بلوک گوتنبرگ"
+
+#: views/admin/settings_back_end_gutenberg.view.php:10
+msgid ""
+"Some blocks can show an approximate preview in the Gutenberg editor. If you "
+"deactivate this option, then all blocks will show a static icon with text."
+msgstr ""
+"برخی بلوک‌ها می‌توانند پیش‌نمایش تقریبی را در ویرایشگر گوتنبرگ نشان دهند. "
+"اگر این گزینه را غیرفعال کنید، تمام بلوک‌ها یک آیکون ثابت با متن را نشان "
+"خواهند داد."
+
+#: views/admin/settings_back_end_multilingual.view.php:9
+msgid "Keep groups of translations in sync"
+msgstr "گروه‌های ترجمه را همگام نگه‌دارید"
+
+#: views/admin/settings_back_end_multilingual.view.php:10
+msgid ""
+"If you activate this option, we try to sync the groups across all language "
+"versions of a tag when you save it. Deactivate it to set groups "
+"independently."
+msgstr ""
+"اگر این گزینه را فعال کنید، ما سعی می‌کنیم گروه‌ها را در تمام نسخه‌های "
+"زبانی یک برچسب هنگام ذخیره‌سازی همگام کنیم. آن را غیرفعال کنید تا گروه‌ها "
+"به‌طور مستقل تنظیم شوند."
+
+#: views/admin/settings_front_end_shortcodes.view.php:4
+msgid ""
+"All Tag Groups features are available as Gutenberg blocks. You can also use "
+"shortcodes."
+msgstr ""
+"تمام ویژگی‌های گروه‌های برچسب به‌عنوان بلوک‌های گوتنبرگ در دسترس هستند. شما "
+"همچنین می‌توانید از shortcode ها استفاده کنید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:8
+msgid "Click on the features for more information."
+msgstr "برای اطلاعات بیشتر روی ویژگی‌ها کلیک کنید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:15
+msgid "Display the tags in a tabbed tag cloud."
+msgstr "برچسب‌ها را در یک ابر برچسب با تب‌های جداگانه نمایش دهید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:16
+#: views/admin/settings_front_end_shortcodes.view.php:27
+#: views/admin/settings_front_end_shortcodes.view.php:38
+#: views/admin/settings_front_end_shortcodes.view.php:49
+#: views/admin/settings_front_end_shortcodes.view.php:60
+#: views/admin/settings_front_end_shortcodes.view.php:71
+#: views/admin/settings_front_end_shortcodes.view.php:84
+#: views/admin/settings_front_end_shortcodes.view.php:89
+msgid "Example"
+msgstr "مثال"
+
+#: views/admin/settings_front_end_shortcodes.view.php:18
+#: views/admin/settings_front_end_shortcodes.view.php:29
+#: views/admin/settings_front_end_shortcodes.view.php:40
+#: views/admin/settings_front_end_shortcodes.view.php:51
+#: views/admin/settings_front_end_shortcodes.view.php:62
+#: views/admin/settings_front_end_shortcodes.view.php:73
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: views/admin/settings_front_end_shortcodes.view.php:19
+#: views/admin/settings_front_end_shortcodes.view.php:30
+#: views/admin/settings_front_end_shortcodes.view.php:41
+#: views/admin/settings_front_end_shortcodes.view.php:52
+#: views/admin/settings_front_end_shortcodes.view.php:63
+#: views/admin/settings_front_end_shortcodes.view.php:74
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Please find the parameters in the <a %s>documentation</a>."
+msgstr "لطفاً پارامترها را در <a %s>مستندات</a> پیدا کنید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:22
+msgid "Accordion"
+msgstr "آکاردئون"
+
+#: views/admin/settings_front_end_shortcodes.view.php:26
+msgid "Display the tags in an accordion."
+msgstr "برچسب‌ها را در یک آکاردئون نمایش دهید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:37
+msgid "Display the tags in lists under tag groups."
+msgstr "برچسب‌ها را در لیست‌ها زیر گروه‌های برچسب نمایش دهید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:48
+msgid "Display the tags in tabbed tag cloud with first letters as tabs."
+msgstr "برچسب‌ها را در ابر برچسب تب‌دار با حروف اولیه به‌عنوان تب‌ها نمایش دهید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:48
+#: views/admin/settings_front_end_shortcodes.view.php:59
+msgid "(Not tested with right-to-left languages.)"
+msgstr "(با زبان‌های راست‌به‌چپ آزمایش نشده است.)"
+
+#: views/admin/settings_front_end_shortcodes.view.php:59
+msgid "Display the tags in a list with first letters as heading."
+msgstr "برچسب‌ها را در یک لیست با حروف اولیه به‌عنوان عنوان نمایش دهید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:67
+msgid "Group Information"
+msgstr "اطلاعات گروه"
+
+#: views/admin/settings_front_end_shortcodes.view.php:70
+msgid "Display information about tag groups."
+msgstr "اطلاعات مربوط به گروه‌های برچسب را نمایش دهید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:82
+msgid ""
+"The function <b>tag_groups_cloud</b> accepts the same parameters as the "
+"[tag_groups_cloud] shortcode, except for those that determine tabs and "
+"styling."
+msgstr ""
+"تابع <b>tag_groups_cloud</b> همان پارامترها را به‌عنوان shortcode "
+"[tag_groups_cloud] می‌پذیرد، به جز پارامترهایی که تب‌ها و سبک‌دهی را تعیین "
+"می‌کنند."
+
+#: views/admin/settings_front_end_shortcodes.view.php:83
+msgid "By default it returns a string with the html for a tabbed tag cloud."
+msgstr "به‌طور پیش‌فرض، یک رشته حاوی HTML برای یک ابر تگ تب‌دار برمی‌گرداند."
+
+#: views/admin/settings_front_end_shortcodes.view.php:88
+msgid ""
+"If the optional second parameter is set to 'true', the function returns a "
+"multidimensional array containing tag groups and tags."
+msgstr ""
+"اگر پارامتر دوم اختیاری روی 'true' تنظیم شود، این تابع یک آرایه چندبعدی "
+"حاوی گروه‌های تگ و تگ‌ها برمی‌گرداند."
+
+#: views/admin/settings_front_end_shortcodes.view.php:102
+msgid "Enable shortcode in sidebar widgets (if not visible anyway)."
+msgstr ""
+"فعال‌سازی shortcode در ویجت‌های نوار کناری (اگر به هر حال قابل مشاهده "
+"نیستند)."
+
+#: views/admin/settings_front_end_shortcodes.view.php:108
+msgid "Always load shortcode scripts."
+msgstr "همیشه اسکریپت‌های shortcode را بارگذاری کنید."
+
+#: views/admin/settings_front_end_shortcodes.view.php:109
+#: views/admin/settings_front_end_themes.view.php:9
+#: views/admin/settings_home.view.php:8
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Click for more information"
+msgstr "برای اطلاعات بیشتر کلیک کنید"
+
+#: views/admin/settings_front_end_shortcodes.view.php:112
+msgid ""
+"Turn off to load the scripts only on posts and pages where a shortcode "
+"appears."
+msgstr ""
+"خاموش کنید تا اسکریپت‌ها فقط در پست‌ها و صفحاتی که یک shortcode ظاهر می‌شود "
+"بارگذاری شوند."
+
+#: views/admin/settings_front_end_shortcodes.view.php:113
+msgid "Turn on if you use these shortcodes in widgets."
+msgstr "در صورتی که این shortcode ها را در ویجت‌ها استفاده می‌کنید، روشن کنید."
+
+#: views/admin/settings_front_end_themes.view.php:8
+msgid ""
+"Here you can choose a theme for the Tabbed Tag Cloud and the Accordion Tag "
+"Cloud."
+msgstr "اینجا می‌توانید یک تم برای ابر تگ تب‌دار و ابر تگ آکاردئونی انتخاب کنید."
+
+#: views/admin/settings_front_end_themes.view.php:14
+msgid ""
+"New themes can be created with the <a "
+"href=\"http://jqueryui.com/themeroller/\" target=\"_blank\">jQuery UI "
+"ThemeRoller</a>:"
+msgstr ""
+"تم‌های جدید را می‌توان با <a href=\"http://jqueryui.com/themeroller/\" "
+"target=\"_blank\">jQuery UI ThemeRoller</a> ایجاد کرد:"
+
+#: views/admin/settings_front_end_themes.view.php:16
+msgid ""
+"On the page \"Theme Roller\" you can customize all features or pick one set "
+"from the gallery. Finish with the \"download\" button."
+msgstr ""
+"در صفحه \"Theme Roller\" می‌توانید تمام ویژگی‌ها را سفارشی کنید یا یک "
+"مجموعه از گالری انتخاب کنید. با دکمه \"دانلود\" تمام کنید."
+
+#: views/admin/settings_front_end_themes.view.php:17
+msgid ""
+"On the next page (\"Download Builder\") you will need to select the version "
+"1.12.x and the components \"Widget\", \"Accordion\" and \"Tabs\". Make sure "
+"that before downloading you enter at the bottom as \"CSS Scope\" "
+"<b>.tag-groups-cloud</b> (including the dot)."
+msgstr ""
+"در صفحه بعدی (\"Download Builder\") باید نسخه 1.12.x و مؤلفه‌های "
+"\"Widget\"، \"Accordion\" و \"Tabs\" را انتخاب کنید. اطمینان حاصل کنید که "
+"قبل از دانلود، در پایین به عنوان \"CSS Scope\" <b>.Tag-Groups</b> (شامل "
+"نقطه) وارد کرده‌اید."
+
+#: views/admin/settings_front_end_themes.view.php:18
+msgid ""
+"Then you unpack the downloaded zip file. You will need the \"images\" "
+"folder and the \"jquery-ui.theme.min.css\" file."
+msgstr ""
+"سپس فایل zip دانلود شده را استخراج می‌کنید. به \"images\" و فایل "
+"\"jquery-ui.theme.min.css\" نیاز دارید."
+
+#: views/admin/settings_front_end_themes.view.php:19
+msgid ""
+"Create a new folder inside your <i>wp-content/uploads</i> folder (for "
+"example \"my-theme\") and copy there these two items."
+msgstr ""
+"یک پوشه جدید در پوشه <i>wp-content/uploads</i> خود ایجاد کنید (برای مثال "
+"\"my-theme\") و این دو مورد را در آن کپی کنید."
+
+#: views/admin/settings_front_end_themes.view.php:20
+msgid "Enter the name of this new folder (for example \"my-theme\") below."
+msgstr "نام این پوشه جدید را (برای مثال \"my-theme\") در زیر وارد کنید."
+
+#: views/admin/settings_front_end_themes.view.php:42
+msgid "own theme"
+msgstr "تم شخصی"
+
+#: views/admin/settings_front_end_themes.view.php:52
+msgid "Don't load a theme."
+msgstr "تمی بارگذاری نکنید."
+
+#: views/admin/settings_front_end_themes.view.php:52
+msgid ""
+"Here you can turn off jQuery UI themes if your WordPress theme brings its "
+"own jQuery UI theme, in order to avoid conflicts."
+msgstr ""
+"اینجا می‌توانید تم‌های jQuery UI را خاموش کنید اگر تم WordPress شما تم "
+"jQuery UI خود را به همراه داشته باشد، تا از تداخل جلوگیری شود."
+
+#: views/admin/settings_front_end_themes.view.php:57
+msgid "Further options"
+msgstr "گزینه‌های بیشتر"
+
+#: views/admin/settings_front_end_themes.view.php:65
+msgid "Use jQuery.  (Default is on. Other plugins might override this setting.)"
+msgstr ""
+"از jQuery استفاده کنید. (پیش‌فرض روشن است. ممکن است افزونه‌های دیگر این "
+"تنظیم را override کنند.)"
+
+#: views/admin/settings_front_end_themes.view.php:73
+msgid "Tabs triggered by hovering mouse pointer (without clicking)."
+msgstr "تب‌ها با حرکت نشانگر ماوس فعال می‌شوند (بدون کلیک)."
+
+#: views/admin/settings_front_end_themes.view.php:80
+msgid "Collapsible tabs (toggle open/close)."
+msgstr "تب‌های قابل جمع شدن (تغییر وضعیت باز/بسته)."
+
+#: views/admin/settings_front_end_themes.view.php:83
+msgid "HTML in tag description:"
+msgstr "HTML در توضیحات برچسب:"
+
+#: views/admin/settings_front_end_themes.view.php:91
+msgid ""
+"By default the description appears in a tooltip when you hover the mouse "
+"over a tag in a tag cloud."
+msgstr ""
+"به طور پیش‌فرض توضیحات در یک راهنما زمانی که ماوس را بر روی یک برچسب در ابر "
+"برچسب‌ها قرار می‌دهید، نمایش داده می‌شود."
+
+#: views/admin/settings_front_end_themes.view.php:91
+msgid ""
+"If you don't trust all users of your site, remove the HTML or use a plugin "
+"to give the unfiltered_html capability only to users you trust."
+msgstr ""
+"اگر به تمامی کاربران سایت خود اعتماد ندارید، HTML را حذف کنید یا از یک "
+"افزونه استفاده کنید تا قابلیت unfiltered_html تنها به کاربرانی که به آن‌ها "
+"اعتماد دارید، داده شود."
+
+#: views/admin/settings_front_end_themes.view.php:97
+msgid "Save Theme Options"
+msgstr "ذخیره گزینه‌های تم"
+
+#: views/admin/settings_help.view.php:3
+msgid "Search for settings"
+msgstr "جستجو برای تنظیمات"
+
+#: views/admin/settings_help.view.php:3
+msgid "Search for setting pages. Type a space to show all settings."
+msgstr ""
+"جستجو برای صفحات تنظیمات. یک فاصله تایپ کنید تا تمامی تنظیمات نمایش داده "
+"شوند."
+
+#: views/admin/settings_help.view.php:6
+msgid "Search Results"
+msgstr "نتایج جستجو"
+
+#: views/admin/settings_help.view.php:8
+msgid "Nothing found"
+msgstr "هیچ چیزی پیدا نشد"
+
+#: views/admin/settings_home.view.php:2
+msgid "Active Taxonomies"
+msgstr "taxonomies فعال"
+
+#: views/admin/settings_home.view.php:11
+msgid "Group Statistics"
+msgstr "آمار گروه"
+
+#: views/admin/settings_home.view.php:13
+msgid "for the selected language"
+msgstr "برای زبان انتخاب شده"
+
+#: views/admin/settings_home.view.php:23
+#: views/admin/settings_taxonomies.view.php:33
+msgid "go to tag group administration"
+msgstr "به مدیریت گروه برچسب بروید"
+
+#: views/admin/settings_rest_api.view.php:9
+msgid "Enable Tag Groups Public API Access"
+msgstr "فعال کردن دسترسی عمومی به API گروه‌های برچسب"
+
+#: views/admin/settings_rest_api.view.php:10
+msgid "Enable public access to tag groups endpoint /wp-json/tag-groups/v1/groups/."
+msgstr ""
+"فعال کردن دسترسی عمومی به نقطه پایانی گروه‌های برچسب "
+"/wp-json/tag-groups/v1/groups/."
+
+#: views/admin/settings_rest_api.view.php:17
+msgid "Enable Terms Public API Access"
+msgstr "فعال کردن دسترسی عمومی به API شرایط"
+
+#: views/admin/settings_rest_api.view.php:18
+msgid "Enable public access to terms endpoint /wp-json/tag-groups/v1/terms/."
+msgstr "فعال کردن دسترسی عمومی به نقطه پایانی شرایط /wp-json/tag-groups/v1/terms/."
+
+#: views/admin/settings_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use Tag Groups:"
+msgstr "taxonomies را انتخاب کنید که می‌خواهید از Tag-Groups استفاده کنید:"
+
+#: views/admin/settings_taxonomies.view.php:5
+#: views/admin/setup_wizard_taxonomies.view.php:5
+msgid ""
+"The default texonomy is <b>Tags (post_tag)</b>. Please note that the tag "
+"clouds might not work with all taxonomies and that some taxonomies listed "
+"here may not be accessible in the admin backend. If you don't understand "
+"what is going on here, just leave the default."
+msgstr ""
+"taxonomies پیش‌فرض <b>Tags (post_tag)</b> است. لطفاً توجه داشته باشید که "
+"ابر برچسب‌ها ممکن است با تمامی taxonomies کار نکنند و برخی از taxonomies "
+"ذکر شده در اینجا ممکن است در قسمت مدیریت قابل دسترسی نباشند. اگر نمی‌دانید "
+"اینجا چه می‌گذرد، فقط گزینه پیش‌فرض را رها کنید."
+
+#: views/admin/settings_taxonomies.view.php:6
+msgid ""
+"<b>Please deselect taxonomies that you don't use. Using several taxonomies "
+"for the same post type or hierarchical taxonomies (like categories) is "
+"experimental and not supported.</b>"
+msgstr ""
+"<b>لطفاً taxonomies که استفاده نمی‌کنید را حذف کنید. استفاده از چندین "
+"taxonomy برای یک نوع پست یا taxonomies سلسله‌مراتبی (مانند دسته‌ها) آزمایشی "
+"است و پشتیبانی نمی‌شود.</b>"
+
+#: views/admin/settings_taxonomies.view.php:7
+msgid "To see the post type, hover your mouse over the option."
+msgstr "برای مشاهده نوع پست، ماوس خود را بر روی گزینه نگه دارید."
+
+#: views/admin/settings_taxonomies.view.php:8
+msgid ""
+"If you use a custom taxonomy, make sure that the attribute \"Public\" is "
+"set to \"true\" and \"Hierarchical\" to \"false\"."
+msgstr ""
+"اگر از یک taxonomy سفارشی استفاده می‌کنید، اطمینان حاصل کنید که ویژگی "
+"\"Public\" به \"true\" و \"Hierarchical\" به \"false\" تنظیم شده باشد."
+
+#: views/admin/settings_taxonomies.view.php:15
+msgid ""
+"Show hierarchical taxonomies. Not all Tag Groups features will work with "
+"these taxonomies."
+msgstr ""
+"نمایش taxonomies سلسله‌مراتبی. همه ویژگی‌های گروه‌های برچسب با این "
+"taxonomies کار نخواهند کرد."
+
+#: views/admin/settings_taxonomies.view.php:54
+msgid "Save Taxonomies"
+msgstr "ذخیره Taxonomies"
+
+#: views/admin/settings_tools_export_import.view.php:4
+msgid "Export"
+msgstr "صادر کردن"
+
+#: views/admin/settings_tools_export_import.view.php:4
+msgid ""
+"Use this button to export all Tag Groups settings and groups and all terms "
+"that are assigned to a group into files."
+msgstr ""
+"از این دکمه برای صادرات تمام تنظیمات و گروه‌های Tag Groups و تمام اصطلاحاتی "
+"که به یک گروه اختصاص یافته‌اند، به فایل‌ها استفاده کنید."
+
+#: views/admin/settings_tools_export_import.view.php:4
+msgid ""
+"You can import both files separately. Category hierarchy won't be saved. "
+"When you restore terms that were deleted, they receive new IDs and you must "
+"assign them to posts again. Exporting cannot substitute a backup."
+msgstr ""
+"شما می‌توانید هر دو فایل را به صورت جداگانه وارد کنید. سلسله‌مراتب "
+"دسته‌بندی ذخیره نخواهد شد. وقتی اصطلاحاتی که حذف شده‌اند را بازیابی "
+"می‌کنید، آنها شناسه‌های جدیدی دریافت می‌کنند و شما باید دوباره آنها را به "
+"پست‌ها اختصاص دهید. صادرات نمی‌تواند جایگزین یک پشتیبان باشد."
+
+#: views/admin/settings_tools_export_import.view.php:7
+msgid "Export Files"
+msgstr "فایل‌های صادراتی"
+
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "Import"
+msgstr "وارد کردن"
+
+#: views/admin/settings_tools_export_import.view.php:13
+msgid ""
+"Below you can import previously exported settings/groups or terms from a "
+"file."
+msgstr ""
+"در زیر می‌توانید تنظیمات/گروه‌ها یا اصطلاحات قبلاً صادر شده را از یک فایل "
+"وارد کنید."
+
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "It is recommended to back up the database of your site before proceeding."
+msgstr "توصیه می‌شود قبل از ادامه، از پایگاه داده سایت خود پشتیبان تهیه کنید."
+
+#: views/admin/settings_tools_export_import.view.php:13
+msgid "Please import the settings before the terms."
+msgstr "لطفاً قبل از اصطلاحات، تنظیمات را وارد کنید."
+
+#: views/admin/settings_tools_export_import.view.php:17
+msgid "Import File"
+msgstr "فایل واردات"
+
+#: views/admin/settings_tools_reset.view.php:4
+msgid ""
+"Use this button to delete all tag groups and assignments. Your tags will "
+"not be changed. Check the checkbox to confirm."
+msgstr ""
+"از این دکمه برای حذف تمام گروه‌های برچسب و انتساب‌ها استفاده کنید. "
+"برچسب‌های شما تغییر نخواهند کرد. برای تأیید، کادر را علامت‌گذاری کنید."
+
+#: views/admin/settings_tools_reset.view.php:5
+msgid ""
+"Please keep in mind that the tag assignments cannot be recovered by the "
+"export/import function."
+msgstr ""
+"لطفاً به خاطر داشته باشید که انتساب‌های برچسب نمی‌توانند توسط تابع "
+"صادرات/واردات بازیابی شوند."
+
+#: views/admin/settings_tools_reset.view.php:7
+msgid "I know what I am doing."
+msgstr "من می‌دانم چه کار می‌کنم."
+
+#: views/admin/settings_tools_reset.view.php:10
+msgid "Delete Groups"
+msgstr "حذف گروه‌ها"
+
+#: views/admin/settings_tools_reset.view.php:13
+msgid "Delete Settings and Groups"
+msgstr "حذف تنظیمات و گروه‌ها"
+
+#: views/admin/settings_tools_reset.view.php:21
+msgid "Delete all groups and settings when uninstalling the plugin."
+msgstr "حذف تمام گروه‌ها و تنظیمات هنگام حذف افزونه."
+
+#: views/admin/settings_troubleshooting_debug.view.php:7
+msgid "Debug mode is on."
+msgstr "حالت اشکال‌زدایی فعال است."
+
+#: views/admin/settings_troubleshooting_debug.view.php:15
+msgid "Verbose logging is enabled with CM_DEBUG."
+msgstr "ثبت گزارش دقیق با CM_DEBUG فعال شده است."
+
+#: views/admin/settings_troubleshooting_debug.view.php:17
+msgid "Verbose logging is on."
+msgstr "ثبت گزارش دقیق فعال است."
+
+#: views/admin/settings_troubleshooting_debug.view.php:19
+msgid "Turn off "
+msgstr "خاموش کردن "
+
+#: views/admin/settings_troubleshooting_debug.view.php:24
+msgid "Verbose logging is off."
+msgstr "ثبت گزارش دقیق غیرفعال است."
+
+#: views/admin/settings_troubleshooting_debug.view.php:26
+msgid "Turn on"
+msgstr "فعال کردن"
+
+#: views/admin/settings_troubleshooting_debug.view.php:31
+msgid "Debug mode is off."
+msgstr "حالت اشکال‌زدایی غیرفعال است."
+
+#: views/admin/settings_troubleshooting_debug.view.php:40
+#. translators: %s is the href attribute with URL
+#, php-format
+msgid "Learn more <a %s>about debugging</a>."
+msgstr "بیشتر بدانید <a %s>در مورد اشکال‌زدایی</a>."
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
+msgid "Migrate tags to the new format of Tag Groups."
+msgstr "برچسب‌ها را به فرمت جدید گروه‌های برچسب منتقل کنید."
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:8
+msgid ""
+"The plugin automatically migrates tags to the new format and tries to keep "
+"track of changes. There may, however, be cases where other components made "
+"unnoticed changes. You might also need to manually migrate tags after you "
+"enabled a taxonomy that already contained untracked tags."
+msgstr ""
+"این افزونه به‌طور خودکار برچسب‌ها را به فرمت جدید منتقل می‌کند و سعی می‌کند "
+"تغییرات را پیگیری کند. با این حال، ممکن است مواردی وجود داشته باشد که دیگر "
+"اجزا تغییرات غیرقابل مشاهده‌ای ایجاد کرده‌اند. شما همچنین ممکن است نیاز "
+"داشته باشید که برچسب‌ها را به‌صورت دستی بعد از فعال کردن یک طبقه‌بندی که "
+"قبلاً برچسب‌های غیرقابل پیگیری داشت، منتقل کنید."
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:9
+msgid "Migrate"
+msgstr "انتقال"
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:17
+msgid ""
+"Running the maintenance can solve issues that you encounter during "
+"filtering by tag groups."
+msgstr ""
+"اجرای نگهداری می‌تواند مشکلاتی را که در حین فیلتر کردن با گروه‌های برچسب با "
+"آن‌ها مواجه می‌شوید حل کند."
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:18
+msgid "Maintenance"
+msgstr "نگهداری"
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
+msgid "Reset the filter on the tags page to show all tags."
+msgstr "فیلتر را در صفحه برچسب‌ها بازنشانی کنید تا تمام برچسب‌ها نمایش داده شوند."
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:24
+msgid ""
+"Use it if a JavaScript error disables the filter menu. Note that it is "
+"still recommended to find out the cause of the error."
+msgstr ""
+"از آن استفاده کنید اگر یک خطای JavaScript منوی فیلتر را غیرفعال کند. توجه "
+"داشته باشید که هنوز توصیه می‌شود علت خطا را پیدا کنید."
+
+#: views/admin/settings_troubleshooting_first_aid.view.php:27
+#: views/partials/admin_footer.view.php:3
+msgid "Reset Tag Filter"
+msgstr "بازنشانی فیلتر برچسب"
+
+#: views/admin/settings_troubleshooting_process.view.php:5
+msgid "Please stay on this page until all processes have finished."
+msgstr "لطفاً تا پایان تمام فرآیندها در این صفحه بمانید."
+
+#: views/admin/settings_troubleshooting_process.view.php:10
+msgid "There have been errors."
+msgstr "خطاهایی رخ داده است."
+
+#: views/admin/settings_troubleshooting_process.view.php:12
+#: views/admin/settings_troubleshooting_process.view.php:19
+msgid "Continue"
+msgstr "ادامه"
+
+#: views/admin/settings_troubleshooting_process.view.php:17
+msgid "Finished!"
+msgstr "تمام شد!"
+
+#: views/admin/settings_troubleshooting_process.view.php:24
+msgid "The following terms cannot be used:"
+msgstr "شرایط زیر نمی‌تواند استفاده شود:"
+
+#: views/admin/settings_troubleshooting_process.view.php:128
+msgid "Number of processed items: "
+msgstr "تعداد موارد پردازش شده: "
+
+#: views/admin/settings_troubleshooting_process.view.php:130
+msgid "Number of changed items: "
+msgstr "تعداد موارد تغییر یافته: "
+
+#: views/admin/settings_troubleshooting_system.view.php:5
+msgid "WordPress Version"
+msgstr "نسخه WordPress"
+
+#: views/admin/settings_troubleshooting_system.view.php:8
+msgid "Site URL"
+msgstr "آدرس سایت"
+
+#: views/admin/settings_troubleshooting_system.view.php:11
+msgid "Home URL"
+msgstr "آدرس صفحه اصلی"
+
+#: views/admin/settings_troubleshooting_system.view.php:15
+msgid "Active Theme"
+msgstr "قالب فعال"
+
+#: views/admin/settings_troubleshooting_system.view.php:17
+msgid "Version"
+msgstr "نسخه"
+
+#: views/admin/settings_troubleshooting_system.view.php:23
+msgid "Checking..."
+msgstr "در حال بررسی..."
+
+#: views/admin/settings_troubleshooting_system.view.php:26
+msgid "Show the Response"
+msgstr "نمایش پاسخ"
+
+#: views/admin/settings_troubleshooting_system.view.php:73
+msgid "passed"
+msgstr "موفق"
+
+#: views/admin/settings_troubleshooting_system.view.php:99
+msgid "failed"
+msgstr "ناموفق"
+
+#: views/admin/settings_troubleshooting_system.view.php:106
+msgid "Benchmarks"
+msgstr "معیارها"
+
+#: views/admin/settings_troubleshooting_system.view.php:128
+msgid "Tag groups pro only"
+msgstr "گروه‌های برچسب فقط برای حرفه‌ای‌ها"
+
+#: views/admin/settings_troubleshooting_system.view.php:153
+msgid "Server"
+msgstr "سرور"
+
+#: views/admin/settings_troubleshooting_system.view.php:189
+msgid "Constants"
+msgstr "ثوابت"
+
+#: views/admin/setup_wizard_finished.view.php:3
+msgid "Well done!"
+msgstr "آفرین!"
+
+#: views/admin/setup_wizard_finished.view.php:6
+msgid "Now go the Tag Group Administration."
+msgstr "حالا به مدیریت گروه‌های برچسب بروید."
+
+#: views/admin/setup_wizard_finished.view.php:10
+msgid "Or preview the sample page here."
+msgstr "یا می‌توانید صفحه نمونه را در اینجا پیش‌نمایش کنید."
+
+#: views/admin/setup_wizard_finished.view.php:14
+#. translators: %1$s and %2$s are href attributes with URLs
+#, php-format
+msgid ""
+"Or go to the <a %1$s>Tag Groups settings</a> or visit the <a "
+"%2$s>documentation</a>."
+msgstr ""
+"یا به <a %1$s>تنظیمات گروه‌های برچسب</a> بروید یا به <a %2$s>مستندات</a> "
+"مراجعه کنید."
+
+#: views/admin/setup_wizard_finished.view.php:16
+#. translators: %1$s and %2$s are href attributes with URLs
+#, php-format
+msgid ""
+"Now go to the <a %1$s>Tag Groups settings</a>, or visit the <a "
+"%2$s>documentation</a>."
+msgstr ""
+"اکنون به <a %1$s>تنظیمات گروه‌های برچسب</a> بروید، یا به <a "
+"%2$s>مستندات</a> مراجعه کنید."
+
+#: views/admin/setup_wizard_finished.view.php:19
+msgid ""
+"If you need to launch the Setup Wizard again, you can find it in the "
+"settings. Just enter \"wizard\" in the search field."
+msgstr ""
+"اگر نیاز به راه‌اندازی مجدد Wizard تنظیمات دارید، می‌توانید آن را در "
+"تنظیمات پیدا کنید. فقط عبارت \"wizard\" را در فیلد جستجو وارد کنید."
+
+#: views/admin/setup_wizard_finished.view.php:21
+msgid "Happy tagging!"
+msgstr "برچسب‌گذاری خوشحال!"
+
+#: views/admin/setup_wizard_header.view.php:1
+msgid "Tag Groups Setup Wizard"
+msgstr "Wizard تنظیم گروه‌های برچسب"
+
+#: views/admin/setup_wizard_sample_content.view.php:3
+msgid ""
+"Now you are ready to create your own tag groups. If you prefer to start out "
+"from a sample, we will create for you three groups and three tags. You can "
+"play around with them, rename or delete them."
+msgstr ""
+"اکنون آماده‌اید تا گروه‌های برچسب خود را ایجاد کنید. اگر ترجیح می‌دهید از "
+"یک نمونه شروع کنید، ما برای شما سه گروه و سه برچسب ایجاد خواهیم کرد. "
+"می‌توانید با آن‌ها کار کنید، نام آن‌ها را تغییر دهید یا حذف کنید."
+
+#: views/admin/setup_wizard_sample_content.view.php:8
+msgid "Create sample groups:"
+msgstr "ایجاد گروه‌های نمونه:"
+
+#: views/admin/setup_wizard_sample_content.view.php:16
+msgid "Create sample tags in these groups:"
+msgstr "ایجاد برچسب‌های نمونه در این گروه‌ها:"
+
+#: views/admin/setup_wizard_sample_content.view.php:34
+#: views/admin/setup_wizard_taxonomies.view.php:33
+msgid "Next Step"
+msgstr "مرحله بعدی"
+
+#: views/admin/setup_wizard_start.view.php:3
+msgid ""
+"On the following pages we will guide you through the basic settings that "
+"you need for the most common features."
+msgstr ""
+"در صفحات بعدی شما را در تنظیمات پایه‌ای که برای رایج‌ترین ویژگی‌ها نیاز "
+"دارید راهنمایی خواهیم کرد."
+
+#: views/admin/setup_wizard_start.view.php:4
+msgid ""
+"You can later make changes or fine-tune the details in the Tag Groups "
+"settings."
+msgstr ""
+"شما می‌توانید بعداً تغییرات یا تنظیمات دقیق‌تری در تنظیمات گروه‌های برچسب "
+"انجام دهید."
+
+#: views/admin/setup_wizard_start.view.php:4
+msgid "(show me the menu)"
+msgstr "(منو را به من نشان بده)"
+
+#: views/admin/setup_wizard_start.view.php:5
+msgid ""
+"Feel free to abort the Setup Wizard any time and continue on your own path. "
+"You can also launch it again at a later time."
+msgstr ""
+"به راحتی می‌توانید هر زمان که خواستید Wizard تنظیمات را متوقف کرده و به "
+"مسیر خود ادامه دهید. همچنین می‌توانید آن را در زمان دیگری دوباره راه‌اندازی "
+"کنید."
+
+#: views/admin/setup_wizard_start.view.php:7
+msgid "The wizard will offer more options after upgrading to premium."
+msgstr "این ویژوال بیشتر گزینه‌ها را پس از ارتقاء به نسخه پریمیوم ارائه خواهد داد."
+
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "Choose the taxonomies for which you want to use tag groups."
+msgstr "گروه‌های برچسب را برای استفاده انتخاب کنید."
+
+#: views/admin/setup_wizard_taxonomies.view.php:2
+msgid "In most cases the default taxonomy <b>Tags (post_tag)</b> will do the job."
+msgstr ""
+"در بیشتر موارد، مالیات پیش‌فرض <b>Tags (post_tag)</b> کار را انجام خواهد "
+"داد."
+
+#: views/admin/setup_wizard_taxonomies.view.php:22
+msgid "post type"
+msgstr "post type"
+
+#: views/admin/setup_wizard_taxonomies.view.php:30
+msgid "You will find more options in the Tag Groups settings."
+msgstr "شما گزینه‌های بیشتری را در تنظیمات گروه‌های برچسب پیدا خواهید کرد."
+
+#: views/admin/tag_groups_admin.view.php:3
+msgid "Tag Group Administration"
+msgstr "مدیریت گروه‌های برچسب"
+
+#: views/admin/tag_groups_admin.view.php:10
+msgid "Filter by label"
+msgstr "فیلتر بر اساس برچسب"
+
+#: views/admin/tag_groups_admin.view.php:22
+#: views/admin/tag_groups_admin.view.php:35
+msgid "Tag Group name"
+msgstr "نام گروه برچسب"
+
+#: views/admin/tag_groups_admin.view.php:24
+#: views/admin/tag_groups_admin.view.php:37
+msgid "Number of assigned tags"
+msgstr "تعداد برچسب‌های اختصاص داده شده"
+
+#: views/admin/tag_groups_admin.view.php:28
+#: views/admin/tag_groups_admin.view.php:41
+msgid "Actions"
+msgstr "عملیات"
+
+#: views/admin/tag_groups_admin.view.php:29
+#: views/admin/tag_groups_admin.view.php:42
+msgid "Change order"
+msgstr "تغییر ترتیب"
+
+#: views/admin/tag_groups_admin.view.php:30
+#: views/admin/tag_groups_admin.view.php:43
+msgid "Group ID"
+msgstr "شناسه گروه"
+
+#: views/admin/tag_groups_admin.view.php:63
+msgid "Edit"
+msgstr "ویرایش"
+
+#: views/admin/tag_groups_admin.view.php:64
+msgid "Create"
+msgstr "ایجاد"
+
+#: views/admin/tag_groups_admin.view.php:65
+msgid "new"
+msgstr "جدید"
+
+#: views/admin/tag_groups_admin.view.php:66
+msgid "label"
+msgstr "برچسب"
+
+#: views/admin/tag_groups_admin.view.php:67
+msgid "Delete this group."
+msgstr "این گروه را حذف کنید."
+
+#: views/admin/tag_groups_admin.view.php:68
+msgid "Create a new group below."
+msgstr "یک گروه جدید در زیر ایجاد کنید."
+
+#: views/admin/tag_groups_admin.view.php:69
+msgid "Add New Tag Group"
+msgstr "اضافه کردن گروه برچسب جدید"
+
+#: views/admin/tag_groups_admin.view.php:70
+msgid "move up"
+msgstr "بالا ببرید"
+
+#: views/admin/tag_groups_admin.view.php:71
+msgid "move down"
+msgstr "پایین ببرید"
+
+#: views/admin/tag_groups_admin.view.php:72
+msgid "reload"
+msgstr "بارگذاری مجدد"
+
+#: views/admin/tag_groups_admin.view.php:73
+msgid "next page"
+msgstr "صفحه بعدی"
+
+#: views/admin/tag_groups_admin.view.php:74
+msgid "previous page"
+msgstr "صفحه قبلی"
+
+#: views/admin/tag_groups_admin.view.php:75
+msgid "go to page:"
+msgstr "برو به صفحه:"
+
+#: views/admin/tag_groups_admin.view.php:76
+msgid "Show posts"
+msgstr "نمایش پست‌ها"
+
+#: views/admin/tag_groups_admin.view.php:77
+msgid "Show tags"
+msgstr "نمایش برچسب‌ها"
+
+#: views/admin/tag_groups_admin.view.php:168
+msgid "Do you really want to delete this tag group?"
+msgstr "آیا واقعاً می‌خواهید این گروه برچسب را حذف کنید؟"
+
+#: views/partials/admin_feed_fallback.view.php:2
+#. translators: %1$s is the href attribute with URL, %2$s is the link text
+#, php-format
+msgid "Please visit <a %1$s>%2$s</a>."
+msgstr "لطفاً به <a %1$s>%2$s</a> مراجعه کنید."
+
+#: views/partials/admin_feed_footer.view.php:3
+msgid "Read more"
+msgstr "بیشتر بخوانید"
+
+#: views/partials/admin_footer_rating.view.php:4
+#. translators: 1: Opening TaxoPress link tag, 2: Closing link tag, 3: Plugin version.
+#, php-format
+msgid "Thanks for using Tag Groups | %1$sTaxoPress.com%2$s | Version %3$s"
+msgstr ""
+"از اینکه از گروه‌های برچسب استفاده می‌کنید سپاسگزاریم | "
+"%1$sTaxoPress.com%2$s | نسخه %3$s"
+
+#: views/partials/bulk_admin_footer.view.php:10
+#: views/partials/bulk_admin_footer.view.php:11
+msgid "Assign to"
+msgstr "اختصاص دادن به"
+
+#: views/partials/filter_admin_footer.view.php:23
+msgid "Filter off"
+msgstr "فیلتر خاموش"
+
+#: views/partials/language_notice.view.php:2
+msgid "Please select one of the languages above to see the correct tag groups!"
+msgstr ""
+"لطفاً یکی از زبان‌های بالا را انتخاب کنید تا گروه‌های برچسب صحیح را مشاهده "
+"کنید!"
+
+#: views/partials/quick_edit_tag.view.php:3
+msgid "Groups"
+msgstr "گروه‌ها"

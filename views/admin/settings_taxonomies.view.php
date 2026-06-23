@@ -8,8 +8,8 @@
     <p><?php _e('If you use a custom taxonomy, make sure that the attribute "Public" is set to "true" and "Hierarchical" to "false".', 'tag-groups') ?></p>
   </div>
   <div class="chatty-mango-settings-container">
-    <form method="POST" action="<?php echo esc_url($_SERVER['REQUEST_URI']) ?>">
-      <?php echo wp_nonce_field('tag-groups-taxonomy', 'tag-groups-taxonomy-nonce', true, false) ?>
+    <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
+      <?php echo wp_nonce_field('tag-groups-taxonomy', 'tag-groups-taxonomy-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
       <ul>
         <p><input id="tg_advanced_options_checkbox" type="checkbox" value=1 autocomplete="off" />
           <label for="tg_advanced_options_checkbox"><?php _e('Show hierarchical taxonomies. Not all Tag Groups features will work with these taxonomies.', 'tag-groups') ?></label></p>
@@ -26,13 +26,16 @@
         </script>
         <p>&nbsp;</p>
         <?php foreach ($public_taxonomies as $taxonomy) : ?>
-          <li<?php if (is_taxonomy_hierarchical($taxonomy)) : ?> class="tg_advanced_options_items" style="display:none;" <?php endif; ?>>
-            <input type="checkbox" name="taxonomies[]" autocomplete="off" id="<?php echo $taxonomy ?>" value="<?php echo $taxonomy ?>" <?php if (in_array($taxonomy, $enabled_taxonomies)) : ?> checked />&nbsp;<a href="<?php echo TagGroups_Taxonomy::get_tag_group_admin_url($taxonomy) ?>" title="<?php _e('go to tag group administration', 'tag-groups') ?>"><span class="dashicons dashicons-index-card tg_no_underline"></span></a>
-          <?php else : ?>
+          <li<?php if (is_taxonomy_hierarchical($taxonomy)) :
+                ?> class="tg_advanced_options_items" style="display:none;" <?php 
+             endif; ?>>
+            <input type="checkbox" name="taxonomies[]" autocomplete="off" id="<?php echo esc_attr($taxonomy) ?>" value="<?php echo esc_attr($taxonomy) ?>" <?php if (in_array($taxonomy, $enabled_taxonomies)) :
+                ?> checked />&nbsp;<a href="<?php echo esc_url(TagGroups_Taxonomy::get_tag_group_admin_url($taxonomy)) ?>" title="<?php _e('go to tag group administration', 'tag-groups') ?>"><span class="dashicons dashicons-index-card tg_no_underline"></span></a>
+                                                                              <?php else : ?>
             />&nbsp;<span class="dashicons dashicons-index-card tg_no_underline tg_faded"></span>
-          <?php endif; ?>
-          <label for="<?php echo $taxonomy ?>" class="tg_unhide_trigger">
-              <?php echo TagGroups_Taxonomy::get_name_from_slug( $taxonomy ) ?> (<?php echo $taxonomy ?>)
+                                                                              <?php endif; ?>
+          <label for="<?php echo esc_attr($taxonomy) ?>" class="tg_unhide_trigger">
+              <?php echo esc_html(TagGroups_Taxonomy::get_name_from_slug($taxonomy)) ?> (<?php echo esc_html($taxonomy) ?>)
             </label>
           </li>
         <?php endforeach; ?>

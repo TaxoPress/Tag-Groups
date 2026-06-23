@@ -7,7 +7,8 @@
 * @license     GPL-3.0+
 */
 
-if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, Squiz.Scope.MethodScope.Missing, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+if (!class_exists('TagGroups_Shortcode_Info')) {
     class TagGroups_Shortcode_Info extends TagGroups_Shortcode_Common
     {
         /**
@@ -19,21 +20,22 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
          * @param array $atts
          * @return string
          */
-        function tag_groups_info( $atts = array() )
+        function tag_groups_info($atts = array())
         {
             $this->init();
             global  $tag_group_groups ;
             $this->shortcode_id = 'tag_groups_info';
-            if ( is_array( $atts ) ) {
-                asort( $atts );
+            if (is_array($atts)) {
+                asort($atts);
             }
-            $cache_key = md5( 'tag_groups_info' . serialize( $atts ) );
+            // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize
+            $cache_key = md5('tag_groups_info' . serialize($atts));
             // check for a cached version (premium plugin)
-            $html = apply_filters( 'tag_groups_hook_cache_get', false, $cache_key );
-            if ( $html ) {
+            $html = apply_filters('tag_groups_hook_cache_get', false, $cache_key);
+            if ($html) {
                 return $html;
             }
-            extract( shortcode_atts( array(
+            extract(shortcode_atts(array(
                 'do_not_cache' => false,
                 'info'         => 'number_of_tags',
                 'group_id'     => 'all',
@@ -42,16 +44,16 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
                 'taxonomy'     => null,
                 'target'       => '_self',
                 'link_pattern' => '{slug}',
-            ), $atts ) );
+            ), $atts));
             
-            if ( !empty($div_id) ) {
+            if (!empty($div_id)) {
                 $id_string = ' id="' . $html_id . '"';
             } else {
                 $id_string = '';
             }
             
             
-            if ( !empty($html_class) ) {
+            if (!empty($html_class)) {
                 $class_string = ' class="' . $html_class . '"';
             } else {
                 $class_string = '';
@@ -59,7 +61,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
             
             $this->get_taxonomies();
             
-            if ( 'all' == $group_id ) {
+            if ('all' == $group_id) {
                 $term_groups = $tag_group_groups->get_group_ids_by_position();
                 $output = $this->render_table(
                     $id_string,
@@ -69,8 +71,8 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
                     $target,
                     $link_pattern
                 );
-            } elseif ( strpos( $group_id, ',' ) !== false ) {
-                $term_groups = array_map( 'intval', explode( ',', $group_id ) );
+            } elseif (strpos($group_id, ',') !== false) {
+                $term_groups = array_map('intval', explode(',', $group_id));
                 $output = $this->render_table(
                     $id_string,
                     $class_string,
@@ -90,9 +92,9 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
                 );
             }
             
-            if ( !$this->attributes->do_not_cache ) {
+            if (!$this->attributes->do_not_cache) {
                 // create a cached version (premium plugin)
-                do_action( 'tag_groups_hook_cache_set', $this->cache_key, $html );
+                do_action('tag_groups_hook_cache_set', $this->cache_key, $html);
             }
             return $output;
         }
@@ -115,19 +117,18 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
             $info,
             $target,
             $link_pattern
-        )
-        {
+        ) {
             
             $output = '<table' . $id_string . $class_string . '>';
-            foreach ( $term_groups as $term_group ) {
-                $tg_group = new TagGroups_Group( $term_group );
+            foreach ($term_groups as $term_group) {
+                $tg_group = new TagGroups_Group($term_group);
                 
-                if ( !$tg_group->exists() ) {
-                    TagGroups_Error::verbose_log( '[Tag Groups] Unknown group ID in "tag_groups_info": %s', $term_group );
+                if (!$tg_group->exists()) {
+                    TagGroups_Error::verbose_log('[Tag Groups] Unknown group ID in "tag_groups_info": %s', $term_group);
                     continue;
                 }
                 
-                switch ( $info ) {
+                switch ($info) {
                     case 'label':
                         $output .= '<tr>
             <td class="tag-groups-td-label" data-group-id="' . $term_group . '">';
@@ -136,6 +137,20 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
             </tr>';
                         break;
                     case 'link':
+                        if (TagGroups_Utilities::is_premium_plan()) {
+                            $path = str_replace('{id}', (int) $term_group, $link_pattern);
+                            $slug = sanitize_title($tg_group->get_label());
+                            $path = str_replace('{slug}', $slug, $path);
+
+                            $output .= '<tr>
+              <td class="tag-groups-td-label" data-group-id="' . $term_group . '">';
+                            $output .= '<a' . $id_string . $class_string . ' href="' . site_url($path) . '" target="' . $target . '">';
+                            $output .= $tg_group->get_label();
+                            $output .= '</a>';
+                            $output .= '</td>
+              </tr>';
+                        }
+
                         break;
                     case 'number_of_tags':
                     default:
@@ -144,7 +159,7 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
                         $output .= $tg_group->get_label();
                         $output .= '</td>
             <td class="tag-groups-td-number">';
-                        $output .= (int) $tg_group->get_number_of_terms( $this->taxonomies );
+                        $output .= (int) $tg_group->get_number_of_terms($this->taxonomies);
                         $output .= '</td>
             </tr>';
                         break;
@@ -172,35 +187,43 @@ if ( !class_exists( 'TagGroups_Shortcode_Info' ) ) {
             $info,
             $target,
             $link_pattern
-        )
-        {
+        ) {
             
             $output = '';
-            $tg_group = new TagGroups_Group( $group_id );
+            $tg_group = new TagGroups_Group($group_id);
             
-            if ( !$tg_group->exists() ) {
-                TagGroups_Error::verbose_log( '[Tag Groups] Unknown group ID in "tag_groups_info": %s', $group_id );
+            if (!$tg_group->exists()) {
+                TagGroups_Error::verbose_log('[Tag Groups] Unknown group ID in "tag_groups_info": %s', $group_id);
                 return '';
             }
             
-            switch ( $info ) {
+            switch ($info) {
                 case 'label':
                     $output .= '<span' . $id_string . $class_string . '>';
                     $output .= $tg_group->get_label();
                     $output .= '</span>';
                     break;
                 case 'link':
+                    if (TagGroups_Utilities::is_premium_plan()) {
+                        $path = str_replace('{id}', (int) $group_id, $link_pattern);
+                        $slug = sanitize_title($tg_group->get_label());
+                        $path = str_replace('{slug}', $slug, $path);
+
+                        $output .= '<a' . $id_string . $class_string . ' href="' . site_url($path) . '" target="' . $target . '">';
+                        $output .= $tg_group->get_label();
+                        $output .= '</a>';
+                    }
+
                     break;
                 case 'number_of_tags':
                 default:
                     $output .= '<span' . $id_string . $class_string . '>';
-                    $output .= (int) $tg_group->get_number_of_terms( $this->taxonomies );
+                    $output .= (int) $tg_group->get_number_of_terms($this->taxonomies);
                     $output .= '</span>';
                     break;
             }
             return $output;
         }
-    
     }
     // class
 }

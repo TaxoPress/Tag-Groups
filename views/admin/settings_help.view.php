@@ -1,16 +1,16 @@
 <div id="tg_setting_help_search">
   <div class="tg-settings-search-area">
-    <label for="tg_setting_help_search_field"></label><input id="tg_setting_help_search_field" placeholder="<?php _e( 'Search for settings', 'tag-groups' ) ?>" autocomplete="off"  title="<?php _e( 'Search for setting pages. Type a space to show all settings.', 'tag-groups' ) ?>">
+    <label for="tg_setting_help_search_field"></label><input id="tg_setting_help_search_field" placeholder="<?php _e('Search for settings', 'tag-groups') ?>" autocomplete="off"  title="<?php _e('Search for setting pages. Type a space to show all settings.', 'tag-groups') ?>">
   </div>
   <div id="tg_setting_help_search_results" style="display:none;">
-    <h2><?php _e( 'Search Results', 'tag-groups' ) ?></h2>
+    <h2><?php _e('Search Results', 'tag-groups') ?></h2>
     <div class="chatty-mango-settings-columns tg_setting_help_search_results_inner">
-      <h4 id="tg_setting_help_nothing_found" style="display:none"><?php _e( 'Nothing found', 'tag-groups' ) ?></h4>
-      <?php foreach ( $topics as $tab => $atts ) :
-        $keywords = strtolower( implode( ',', $atts['keywords'] ) ) . ',' . strtolower( $atts['title'] ) . ',' . $tab;
-        ?>
-        <div id="tg_topic_' . $tab . '" class="tg_settings_topic" data-keywords="<?php echo esc_html( $keywords) ?>">
-          <h4><span class="dashicons dashicons-arrow-right-alt tg_no_underline"></span>&nbsp; <a href="<?php echo admin_url( 'admin.php?page=' . $atts['page'] . '&active-tab=' . $tab ) ?>"><?php echo $atts['title'] ?></a></h4>
+      <h4 id="tg_setting_help_nothing_found" style="display:none"><?php _e('Nothing found', 'tag-groups') ?></h4>
+      <?php foreach ($topics as $tab => $atts) :
+            $keywords = strtolower(implode(',', $atts['keywords'])) . ',' . strtolower($atts['title']) . ',' . $tab;
+            ?>
+        <div id="tg_topic_' . $tab . '" class="tg_settings_topic" data-keywords="<?php echo esc_attr($keywords) ?>">
+          <h4><span class="dashicons dashicons-arrow-right-alt tg_no_underline"></span>&nbsp; <a href="<?php echo esc_url(admin_url('admin.php?page=' . esc_attr($atts['page']) . '&active-tab=' . esc_attr($tab))) ?>"><?php echo esc_html($atts['title']) ?></a></h4>
         </div>
       <?php endforeach; ?>
     </div>
