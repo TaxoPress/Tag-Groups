@@ -14,4 +14,6 @@ jobs:
       contents: write
     uses: publishpress/github-workflows/.github/workflows/deploy-free.yml@v3
     needs: [code-check]
-    secrets: inherit
+    secrets:
+      SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+      SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
