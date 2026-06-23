@@ -10,30 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  debug-secrets:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Log available secrets
-        run: |
-          echo "Checking secrets availability..."
-          if [ -z "$SVN_USERNAME" ]; then
-            echo "❌ SVN_USERNAME is NOT set"
-          else
-            echo "✓ SVN_USERNAME is set (length: ${#SVN_USERNAME})"
-          fi
-          if [ -z "$SVN_PASSWORD" ]; then
-            echo "❌ SVN_PASSWORD is NOT set"
-          else
-            echo "✓ SVN_PASSWORD is set (length: ${#SVN_PASSWORD})"
-          fi
-          echo "All available secrets:"
-          env | grep -i svn || echo "No SVN-related env vars found"
-        env:
-          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-
   deploy-assets:
-    needs: [debug-secrets]
     uses: publishpress/github-workflows/.github/workflows/deploy-free-assets.yml@v3
     secrets:
       SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
