@@ -380,16 +380,15 @@ if (!class_exists('TagGroups_Admin')) {
             if (!in_array($action, $allowed_actions)) {
                 return;
             }
-            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Bulk action processing
+
+            check_admin_referer('bulk-tags');
+
             if (isset($_REQUEST['delete_tags'])) {
-                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.NonceVerification.Recommended -- Sanitized below
-                $term_ids = $_REQUEST['delete_tags'];
+                $term_ids = array_map('intval', (array) wp_unslash($_REQUEST['delete_tags']));
             }
 
-            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Bulk action processing
             if (isset($_REQUEST['term-group-top'])) {
-                // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Bulk action processing
-                $term_group = (int) $_REQUEST['term-group-top'];
+                $term_group = (int) sanitize_text_field(wp_unslash($_REQUEST['term-group-top']));
             } else {
                 return;
             }
