@@ -388,7 +388,7 @@ if (!class_exists('TagGroups_Admin')) {
             }
 
             if (isset($_REQUEST['term-group-top'])) {
-                $term_group = (int) wp_unslash($_REQUEST['term-group-top']);
+                $term_group = (int) sanitize_text_field(wp_unslash($_REQUEST['term-group-top']));
             } else {
                 return;
             }
