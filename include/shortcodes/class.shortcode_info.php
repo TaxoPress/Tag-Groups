@@ -46,18 +46,20 @@ if (!class_exists('TagGroups_Shortcode_Info')) {
                 'link_pattern' => '{slug}',
             ), $atts));
             
-            if (!empty($div_id)) {
-                $id_string = ' id="' . $html_id . '"';
+            if (!empty($html_id)) {
+                $id_string = ' id="' . esc_attr(sanitize_html_class($html_id)) . '"';
             } else {
                 $id_string = '';
             }
             
             
             if (!empty($html_class)) {
-                $class_string = ' class="' . $html_class . '"';
+                $class_string = ' class="' . esc_attr(TagGroups_Shortcode_Statics::sanitize_html_classes($html_class)) . '"';
             } else {
                 $class_string = '';
             }
+
+            $target = TagGroups_Shortcode_Statics::sanitize_link_target($target);
             
             $this->get_taxonomies();
             
@@ -144,7 +146,7 @@ if (!class_exists('TagGroups_Shortcode_Info')) {
 
                             $output .= '<tr>
               <td class="tag-groups-td-label" data-group-id="' . $term_group . '">';
-                            $output .= '<a' . $id_string . $class_string . ' href="' . site_url($path) . '" target="' . $target . '">';
+                            $output .= '<a' . $id_string . $class_string . ' href="' . esc_url(site_url($path)) . '" target="' . esc_attr($target) . '">';
                             $output .= $tg_group->get_label();
                             $output .= '</a>';
                             $output .= '</td>
@@ -209,7 +211,7 @@ if (!class_exists('TagGroups_Shortcode_Info')) {
                         $slug = sanitize_title($tg_group->get_label());
                         $path = str_replace('{slug}', $slug, $path);
 
-                        $output .= '<a' . $id_string . $class_string . ' href="' . site_url($path) . '" target="' . $target . '">';
+                        $output .= '<a' . $id_string . $class_string . ' href="' . esc_url(site_url($path)) . '" target="' . esc_attr($target) . '">';
                         $output .= $tg_group->get_label();
                         $output .= '</a>';
                     }
