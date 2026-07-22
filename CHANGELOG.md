@@ -1,6 +1,12 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+[2.2.1] - 22 July, 2026
+
+- Fixed: Missing Gutenberg build assets cause editor 404s, #291
+- Fixed: Stored Shortcode Attribute at include/shortcodes/class.shortcode_info, #289
+- Fixed: Missing Nonce State Change in class.admin, #287
+
 [2.2.0] - 23 June, 2026
 
 - Update: Free / Pro plugin structure to match PublishPress, #247
