@@ -69,10 +69,14 @@ function chatty_mango_tag_groups_editor_assets()
         'gutenbergSettings' => admin_url('admin.php?page=tag-groups-settings-back-end&active-tab=gutenberg')
     );
     $block_asset_url = TAG_GROUPS_PLUGIN_URL;
+    $block_asset_path = TAG_GROUPS_PLUGIN_ABSOLUTE_PATH;
 
     if (defined('TAG_GROUPS_LOADED_BY_PRO') && TAG_GROUPS_LOADED_BY_PRO && defined('TAG_GROUPS_PRO_ABSPATH') && defined('TAG_GROUPS_PRO_URL')) {
         $block_asset_url = TAG_GROUPS_PRO_URL;
+        $block_asset_path = TAG_GROUPS_PRO_ABSPATH;
     }
+    $block_script_path = $block_asset_path . '/build/index.js';
+    $block_style_path = $block_asset_path . '/build/index.css';
 // Scripts.
     if (! empty($screen->base) && 'widgets' == $screen->base) {
         // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
@@ -82,23 +86,27 @@ function chatty_mango_tag_groups_editor_assets()
         //   plugins_url( 'build/index.js', dirname( __FILE__ ) ),
         //    array( 'lodash', 'react', 'react-dom', 'wp-api-fetch', 'wp-components', 'wp-element', 'wp-polyfill', 'wp-url', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-edit-widgets' )
         // );
-    } else {
+    } elseif (file_exists($block_script_path)) {
         wp_enqueue_script(
             'chatty-mango_tag-groups-block-js', // Handle.
             $block_asset_url . '/build/index.js',
-            array( 'lodash', 'react', 'react-dom', 'wp-api-fetch', 'wp-components', 'wp-element', 'wp-polyfill', 'wp-url', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor' )
+            array( 'lodash', 'react', 'react-dom', 'wp-api-fetch', 'wp-components', 'wp-element', 'wp-polyfill', 'wp-url', 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor' ),
+            TAG_GROUPS_VERSION
         );
+        wp_localize_script('chatty-mango_tag-groups-block-js', 'ChattyMangoTagGroupsGlobal', $args);
     }
 
-    wp_localize_script('chatty-mango_tag-groups-block-js', 'ChattyMangoTagGroupsGlobal', $args);
 // Styles.
-    wp_enqueue_style(
-        'chatty-mango_tag-groups-block-editor-css', // Handle.
-        $block_asset_url . '/build/index.css', // Block editor CSS.
-        array( 'wp-edit-blocks' )
-        // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
-        // , $dependencies['version']
-    );
+    if (file_exists($block_style_path)) {
+        wp_enqueue_style(
+            'chatty-mango_tag-groups-block-editor-css', // Handle.
+            $block_asset_url . '/build/index.css', // Block editor CSS.
+            array( 'wp-edit-blocks' ),
+            TAG_GROUPS_VERSION
+            // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
+            // , $dependencies['version']
+        );
+    }
     if (function_exists('wp_get_jed_locale_data')) {
         $locale_data = wp_get_jed_locale_data('tag-groups');
     } elseif (function_exists('gutenberg_get_jed_locale_data')) {

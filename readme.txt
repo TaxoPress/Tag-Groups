@@ -3,7 +3,7 @@ Contributors: stevejburge, andergmartins, olatechpro, ojopaul
 Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
 Tested up to: 7.0
-Stable tag: 2.2.0
+Stable tag: 2.2.1
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -125,6 +125,25 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 
 
 == Changelog ==
+
+[2.2.1] - 22 July, 2026
+
+- Fixed: Missing Gutenberg build assets cause editor 404s, #291
+- Fixed: Stored Shortcode Attribute at include/shortcodes/class.shortcode_info, #289
+- Fixed: Missing Nonce State Change in class.admin, #287
+
+[2.2.0] - 23 June, 2026
+
+- Update: Free / Pro plugin structure to match PublishPress, #247
+- Added: Translations for Arabic, Czech, Danish, Dutch, Filipino, Finnish, French, German, Greek, Hebrew, Indonesian, Italian, Japanese, Korean, Polish, Romanian, Russian, Spanish, Swedish, Thai, Turkish, Vietnamese, and Yoruba.
+- Fixed: Improved sanitization of tag_groups_task in the tg_ajax_manage_groups AJAX handler. Thanks to Juyaz for the report.
+
+
+
+[2.1.2] - 21 April, 2026
+
+- Fixed: call_user_func_array(): Argument #1 ($callback) must be a valid callback #241
+- Fixed: Caching issue with meta box #240
 
 The full changelog can be found on [GitHub](https://github.com/TaxoPress/Tag-Groups/blob/master/CHANGELOG.md).
 
