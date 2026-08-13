@@ -32,6 +32,13 @@
     "require-dev": {
         "publishpress/dev-workspace": "^1.3"
     },
+    "scripts": {
+        "build": [
+            "vendor/publishpress/dev-workspace/scripts/run.sh bash vendor/publishpress/dev-workspace/scripts/install-node-deps.sh /project wp-scripts webpack webpack-cli",
+            "@build:js",
+            "@pack:zip"
+        ]
+    },
     "extra": {
         "plugin-slug": "tag-groups",
         "plugin-name": "tag-groups",
