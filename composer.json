@@ -35,7 +35,7 @@
     "scripts": {
         "build": [
             "vendor/publishpress/dev-workspace/scripts/run.sh bash vendor/publishpress/dev-workspace/scripts/install-node-deps.sh /project wp-scripts webpack webpack-cli",
-            "@build:js",
+            "vendor/publishpress/dev-workspace/scripts/run.sh npm run build",
             "@pack:zip"
         ]
     },
