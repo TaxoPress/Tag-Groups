@@ -11,9 +11,7 @@
     <form method="POST" action="<?php /* phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized */ echo isset($_SERVER['REQUEST_URI']) ? esc_url(wp_unslash($_SERVER['REQUEST_URI'])) : ''; ?>">
       <?php echo wp_nonce_field('tag-groups-taxonomy', 'tag-groups-taxonomy-nonce', true, false); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
       <p>
-        <input id="tg_enable_groups" type="checkbox" name="tag_group_enable_groups" autocomplete="off" value="1" <?php if ($tag_group_enable_groups) :
-            ?> checked<?php 
-         endif; ?> />
+        <input id="tg_enable_groups" type="checkbox" name="tag_group_enable_groups" autocomplete="off" value="1" <?php checked($tag_group_enable_groups); ?> />
         <label for="tg_enable_groups"><?php _e('Enable Groups feature', 'tag-groups') ?></label>
       </p>
       <p><?php _e('Disable this option to hide the Tag Group Admin screens in the WordPress admin.', 'tag-groups') ?></p>
@@ -40,8 +38,6 @@
                 ?> checked />
               <?php if ($tag_group_enable_groups) : ?>
                 &nbsp;<a href="<?php echo esc_url(TagGroups_Taxonomy::get_tag_group_admin_url($taxonomy)) ?>" title="<?php _e('go to tag group administration', 'tag-groups') ?>"><span class="dashicons dashicons-index-card tg_no_underline"></span></a>
-              <?php else : ?>
-                &nbsp;<span class="dashicons dashicons-index-card tg_no_underline tg_faded"></span>
               <?php endif; ?>
                                                                               <?php else : ?>
             />&nbsp;<span class="dashicons dashicons-index-card tg_no_underline tg_faded"></span>
