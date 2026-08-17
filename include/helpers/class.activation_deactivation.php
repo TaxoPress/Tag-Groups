@@ -111,9 +111,10 @@ if (! class_exists('TagGroups_Activation_Deactivation')) {
                         continue;
                     }
 
-                    @unlink($file->getPathname());
+                    wp_delete_file($file->getPathname());
                 }
 
+                // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_rmdir -- Removes a known empty local cache directory during deactivation; filesystem credentials cannot be requested here.
                 @rmdir(WP_CONTENT_DIR . '/chatty-mango/cache');
             }
 

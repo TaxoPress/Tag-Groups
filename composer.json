@@ -20,7 +20,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
             "automattic/jetpack-autoloader": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "composer/installers": true
         },
         "process-timeout": 0
     },
@@ -31,6 +32,13 @@
     },
     "require-dev": {
         "publishpress/dev-workspace": "^1.3"
+    },
+    "scripts": {
+        "build": [
+            "vendor/publishpress/dev-workspace/scripts/run.sh bash vendor/publishpress/dev-workspace/scripts/install-node-deps.sh /project wp-scripts webpack webpack-cli",
+            "vendor/publishpress/dev-workspace/scripts/run.sh npm run build",
+            "@pack:zip"
+        ]
     },
     "extra": {
         "plugin-slug": "tag-groups",
