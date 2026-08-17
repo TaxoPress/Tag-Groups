@@ -171,7 +171,7 @@ if (!class_exists('TagGroups_Admin')) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for WPML translation context
                 $trid = (int) $_GET['trid'];
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for WPML translation context
-                $taxonomy = sanitize_title($_GET['taxonomy']);
+                $taxonomy = sanitize_title(wp_unslash($_GET['taxonomy']));
                 $translations = apply_filters('wpml_get_element_translations', null, $trid, "tax_{$taxonomy}");
                 $default_lang = apply_filters('wpml_default_language', null);
                 if (!empty($default_lang) && is_array($translations) && isset($translations[$default_lang])) {
@@ -254,7 +254,7 @@ if (!class_exists('TagGroups_Admin')) {
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for taxonomy display
             if (!empty($_REQUEST['taxonomy'])) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only operation for taxonomy display
-                $taxonomy = sanitize_title($_REQUEST['taxonomy']);
+                $taxonomy = sanitize_title(wp_unslash($_REQUEST['taxonomy']));
             } else {
                 return '';
             }
@@ -291,7 +291,7 @@ if (!class_exists('TagGroups_Admin')) {
             }
 
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Read-only operation for column sorting
-            if (isset($_GET['order']) && strtoupper($_GET['order']) == 'DESC') {
+            if (isset($_GET['order']) && strtoupper(sanitize_key(wp_unslash($_GET['order']))) == 'DESC') {
                 $order = "DESC";
             } else {
                 $order = 'ASC';
@@ -339,7 +339,7 @@ if (!class_exists('TagGroups_Admin')) {
                     $term_filter = (int) $_GET['term-filter'];
         // We need to remove the term-filter piece, or it will stay forever
                     // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized, WordPress.Security.ValidatedSanitizedInput.InputNotValidated -- URL manipulation
-                    $sendback = remove_query_arg(array( 'term-filter' ), $_SERVER['REQUEST_URI']);
+                    $sendback = remove_query_arg(array( 'term-filter' ), wp_unslash($_SERVER['REQUEST_URI']));
                 }
 
 
@@ -743,7 +743,7 @@ if (!class_exists('TagGroups_Admin')) {
         public static function add_admin_footer_rating_text($text)
         {
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Read-only check for admin page
-            if (empty($_GET['page']) || strpos($_GET['page'], 'tag-groups') !== 0) {
+            if (empty($_GET['page']) || strpos(sanitize_key(wp_unslash($_GET['page'])), 'tag-groups') !== 0) {
                 return $text;
             }
 
@@ -765,7 +765,7 @@ if (!class_exists('TagGroups_Admin')) {
         {
             $screen = get_current_screen();
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Read-only check for admin page
-            if (empty($_GET['page']) || strpos($_GET['page'], 'tag-groups') !== 0) {
+            if (empty($_GET['page']) || strpos(sanitize_key(wp_unslash($_GET['page'])), 'tag-groups') !== 0) {
             /* Tooltip doesn't work well in Gutenberg sidebar */
                 // phpcs:ignore Squiz.PHP.CommentedOutCode.Found
                 // if ( ( empty( $_GET['page'] ) || strpos( $_GET['page'], 'tag-groups' ) !== 0 ) &&
@@ -792,11 +792,11 @@ if (!class_exists('TagGroups_Admin')) {
             }
             $enabled_taxonomies = TagGroups_Taxonomy::get_enabled_taxonomies();
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter display
-            $post_type = (isset($_GET['post_type']) ? sanitize_title($_GET['post_type']) : 'post');
+            $post_type = (isset($_GET['post_type']) ? sanitize_title(wp_unslash($_GET['post_type'])) : 'post');
             if (count(array_intersect($enabled_taxonomies, get_object_taxonomies($post_type)))) {
                 $term_groups = $tag_group_groups->get_all_term_group_label();
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter display
-                $current_term_group = (isset($_GET['tg_filter_posts_value']) ? sanitize_text_field($_GET['tg_filter_posts_value']) : '');
+                $current_term_group = (isset($_GET['tg_filter_posts_value']) ? sanitize_text_field(wp_unslash($_GET['tg_filter_posts_value'])) : '');
                 $view = new TagGroups_View('admin/post_filter');
                 $view->set(array(
                     'current_term_group' => $current_term_group,
@@ -831,7 +831,7 @@ if (!class_exists('TagGroups_Admin')) {
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter application
             if (isset($_GET['post_type'])) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only filter application
-                $post_type = sanitize_title($_GET['post_type']);
+                $post_type = sanitize_title(wp_unslash($_GET['post_type']));
             } else {
                 $post_type = 'post';
             }
@@ -913,7 +913,7 @@ if (!class_exists('TagGroups_Admin')) {
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- AJAX handler
             if (isset($_REQUEST['url'])) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- AJAX handler
-                $url = esc_url_raw($_REQUEST['url']);
+                $url = esc_url_raw(wp_unslash($_REQUEST['url']));
             } else {
                 $url = '';
             }

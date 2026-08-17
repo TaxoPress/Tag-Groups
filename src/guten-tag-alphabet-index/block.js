@@ -11,7 +11,7 @@
 
 import '../editor.css';
 
-import Select from 'react-select';
+import Select from '../components/tag-groups-select';
 import HeadingToolbar from '../components/heading-toolbar';
 import TagGroupsServerSideRender from '../components/tag-groups-render';
 
@@ -276,7 +276,7 @@ class editFunction extends Component {
               onChange={(option) => {
                 if (option) setAttributes({ orderby: option.value });
               }}
-              value={orderby && typeof orderby === 'string' ? orderby : 'name'}
+              value={typeof orderby === 'string' ? orderby : ''}
               options={optionsOrderby}
             />
             {orderby !== 'random' && (
@@ -295,9 +295,9 @@ class editFunction extends Component {
                     if (option) setAttributes({ order: option.value });
                   }}
                   value={
-                    order && typeof order === 'string'
+                    typeof order === 'string'
                       ? order.toUpperCase()
-                      : 'ASC'
+                      : ''
                   }
                   options={optionsOrder}
                 />
@@ -453,9 +453,9 @@ class editFunction extends Component {
                 if (option) setAttributes({ link_target: option.value });
               }}
               value={
-                link_target && typeof link_target === 'string'
+                typeof link_target === 'string'
                   ? link_target
-                  : '_self'
+                  : ''
               }
               options={optionsTarget}
             />

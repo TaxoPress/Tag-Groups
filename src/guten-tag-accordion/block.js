@@ -11,7 +11,7 @@
 
 import '../editor.css';
 
-import Select from 'react-select';
+import Select from '../components/tag-groups-select';
 import TagGroupsServerSideRender from '../components/tag-groups-render';
 
 import TagGroupsHelp from '../components/tag-groups-help';
@@ -306,7 +306,7 @@ class tagGroupsAccordionCloudParameters extends Component {
               onChange={(option) => {
                 if (option) setAttributes({ orderby: option.value });
               }}
-              value={orderby && typeof orderby === 'string' ? orderby : 'name'}
+              value={typeof orderby === 'string' ? orderby : ''}
               options={optionsOrderby}
             />
             {orderby !== 'random' && (
@@ -325,9 +325,9 @@ class tagGroupsAccordionCloudParameters extends Component {
                     if (option) setAttributes({ order: option.value });
                   }}
                   value={
-                    order && typeof order === 'string'
+                    typeof order === 'string'
                       ? order.toUpperCase()
-                      : 'ASC'
+                      : ''
                   }
                   options={optionsOrder}
                 />
@@ -540,9 +540,9 @@ class tagGroupsAccordionCloudParameters extends Component {
                 if (option) setAttributes({ link_target: option.value });
               }}
               value={
-                link_target && typeof link_target === 'string'
+                typeof link_target === 'string'
                   ? link_target
-                  : '_self'
+                  : ''
               }
               options={optionsTarget}
             />
@@ -691,7 +691,7 @@ class tagGroupsAccordionCloudParameters extends Component {
                   onChange={(option) => {
                     if (option) setAttributes({ active: option.value });
                   }}
-                  value={active < 0 ? 0 : active}
+                  value={active}
                   options={getActiveGroupsOptions(this)}
                 />
               </div>
@@ -709,7 +709,7 @@ class tagGroupsAccordionCloudParameters extends Component {
               onChange={(option) => {
                 if (option) setAttributes({ heightstyle: option.value });
               }}
-              value={heightstyle ? heightstyle : 'content'}
+              value={heightstyle}
               options={[
                 { value: 'auto', label: __('Adjust to heighest panel.') },
                 { value: 'fill', label: __('Fill parent element.') },
