@@ -76,13 +76,8 @@ if (! class_exists('TagGroups_Process')) {
 
             if (! $error) {
                 switch ($task) {
-                    case 'migratetermmeta':
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           $affected = TagGroups_Term_Meta_Tools::convert_to_term_meta(false, $offset, $length);
-
-
-                        break;
                     case 'fixgroups':
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   $affected = TagGroups_Group_Tools::check_fix_groups(false, $offset, $length);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  $affected = TagGroups_Group_Tools::check_fix_groups(false, $offset, $length);
 
 
                         break;
@@ -132,8 +127,6 @@ if (! class_exists('TagGroups_Process')) {
         {
 
             switch ($task) {
-                case 'migratetermmeta':
-                    return TagGroups_Term_Meta_Tools::convert_to_term_meta(true);
                 case 'fixgroups':
                     return TagGroups_Group_Tools::check_fix_groups(true);
                 break;

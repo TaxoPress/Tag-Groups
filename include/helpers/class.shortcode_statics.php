@@ -14,7 +14,7 @@ if (! class_exists('TagGroups_Shortcode_Statics')) {
     {
           /**
            * Register the shortcodes with WordPress
-           * 
+           *
            * @param void
            * @return void
            */
@@ -62,6 +62,18 @@ if (! class_exists('TagGroups_Shortcode_Statics')) {
          */
             $object_TagGroups_Shortcode_Info = new TagGroups_Shortcode_Info();
             add_shortcode('tag_groups_info', array( $object_TagGroups_Shortcode_Info, 'tag_groups_info' ));
+        /**
+         * Tag cloud that combines tags from selected groups
+         */
+            $object_TagGroups_Shortcode_Simple = new TagGroups_Shortcode_Simple();
+            add_shortcode('tag_groups_simple_cloud', array( $object_TagGroups_Shortcode_Simple, 'tag_groups_simple_cloud' ));
+            add_shortcode('tag_groups_combined_cloud', array( $object_TagGroups_Shortcode_Simple, 'tag_groups_simple_cloud' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/tag-groups-premium-cloud-combined', array(
+                        'attributes'      => TagGroups_Shortcode_Simple::$serverside_render_attributes,
+                        'render_callback' => array( $object_TagGroups_Shortcode_Simple, 'tag_groups_simple_cloud' ),
+                ));
+            }
 /**
          * Tags listed under group names
          */
@@ -71,6 +83,28 @@ if (! class_exists('TagGroups_Shortcode_Statics')) {
                 register_block_type('chatty-mango/tag-groups-tag-list', array(
                         'attributes'      => TagGroups_Shortcode_Tag_List::$serverside_render_attributes,
                         'render_callback' => array( $object_TagGroups_Shortcode_Tag_List, 'tag_groups_tag_list' ),
+                ));
+            }
+        /**
+         * Tag cloud displayed as a table
+         */
+            $object_TagGroups_Shortcode_Table = new TagGroups_Shortcode_Table();
+            add_shortcode('tag_groups_table', array( $object_TagGroups_Shortcode_Table, 'tag_groups_table' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/tag-groups-premium-cloud-table', array(
+                        'attributes'      => TagGroups_Shortcode_Table::$serverside_render_attributes,
+                        'render_callback' => array( $object_TagGroups_Shortcode_Table, 'tag_groups_table' ),
+                ));
+            }
+        /**
+         * Filterable shuffle-box tag cloud
+         */
+            $object_TagGroups_Shortcode_Shuffle_Box = new TagGroups_Shortcode_Shuffle_Box();
+            add_shortcode('tag_groups_shuffle_box', array( $object_TagGroups_Shortcode_Shuffle_Box, 'tag_groups_shuffle_box' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/tag-groups-premium-shuffle-box', array(
+                        'attributes'      => TagGroups_Shortcode_Shuffle_Box::$serverside_render_attributes,
+                        'render_callback' => array( $object_TagGroups_Shortcode_Shuffle_Box, 'tag_groups_shuffle_box' ),
                 ));
             }
 
@@ -85,11 +119,117 @@ if (! class_exists('TagGroups_Shortcode_Statics')) {
                         'render_callback' => array( $object_TagGroups_Shortcode_Alphabetical_Index, 'tag_groups_alphabetical_index' ),
                 ));
             }
+        /**
+         * Static list of posts filtered by tag groups
+         */
+            $object_TagGroups_Shortcode_Post_List = new TagGroups_Shortcode_Post_List();
+            add_shortcode('tag_groups_post_list', array( $object_TagGroups_Shortcode_Post_List, 'tag_groups_post_list' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/tag-groups-premium-post-filter', array(
+                        'attributes'      => TagGroups_Shortcode_Post_List::$serverside_render_attributes,
+                        'render_callback' => array( $object_TagGroups_Shortcode_Post_List, 'tag_groups_post_list' ),
+                ));
+            }
+
+        /**
+         * Toggle Post Filter
+         */
+            $object_TagGroups_Shortcode_TPF = new TagGroups_Shortcode_TPF();
+            add_shortcode('tag_groups_tpf_menu', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_menu' ));
+            add_shortcode('tag_groups_dpf_toggle_menu', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_dpf_toggle_menu' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/chatty-mango-tpf-menu', array(
+                        'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_menu,
+                        'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_menu' ),
+                ));
+                $tpf_menu_variants = array(
+                    'chatty-mango/chatty-mango-tpf-menu-horizontal',
+                    'chatty-mango/chatty-mango-tpf-menu-vertical',
+                    'chatty-mango/chatty-mango-tpf-menu-buttons',
+                    'chatty-mango/chatty-mango-tpf-menu-vertical-buttons',
+                    'chatty-mango/chatty-mango-tpf-menu-vertical-toggles',
+                    'chatty-mango/chatty-mango-tpf-menu-slider',
+                    'chatty-mango/chatty-mango-tpf-menu-slider-buttons',
+                );
+                foreach ($tpf_menu_variants as $tpf_menu_variant) {
+                    register_block_type($tpf_menu_variant, array(
+                            'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_menu,
+                            'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_menu' ),
+                    ));
+                }
+                register_block_type('chatty-mango/chatty-mango-guten-dpfwt-menu', array(
+                        'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_menu_legacy,
+                        'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_dpf_toggle_menu' ),
+                ));
+            }
+
+            add_shortcode('tag_groups_tpf_body', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_body' ));
+            add_shortcode('tag_groups_dpf_toggle_body', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_dpf_toggle_body' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/chatty-mango-guten-dpfwt-body', array(
+                        'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_body,
+                        'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_body' ),
+                ));
+            }
+
+            add_shortcode('tag_groups_tpf_messages', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_messages' ));
+            add_shortcode('tag_groups_dpf_toggle_messages', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_dpf_toggle_messages' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/chatty-mango-guten-dpfwt-messages', array(
+                        'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_messages,
+                        'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_messages' ),
+                ));
+            }
+
+            add_shortcode('tag_groups_tpf_reset', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_reset' ));
+            add_shortcode('tag_groups_dpf_toggle_reset', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_dpf_toggle_reset' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/chatty-mango-guten-dpfwt-reset', array(
+                        'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_reset,
+                        'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_reset' ),
+                ));
+            }
+
+            add_shortcode('tag_groups_tpf_slider_button', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_slider_button' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/chatty-mango-tpf-slider-button', array(
+                        'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_slider_button,
+                        'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_slider_button' ),
+                ));
+            }
+
+            add_shortcode('tag_groups_tpf_order_menu', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_order_menu' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/chatty-mango-tpf-order-menu', array(
+                        'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_order_menu,
+                        'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_order_menu' ),
+                ));
+            }
+
+            add_shortcode('tag_groups_tpf_text_search', array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_text_search' ));
+            if (function_exists('register_block_type')) {
+                register_block_type('chatty-mango/chatty-mango-tpf-text-search', array(
+                        'attributes'      => TagGroups_Shortcode_TPF::$serverside_render_attributes_text_search,
+                        'render_callback' => array( $object_TagGroups_Shortcode_TPF, 'tag_groups_tpf_text_search' ),
+                ));
+            }
+        }
+
+      /**
+       * Register Ajax handlers for frontend features.
+       *
+       * @return void
+       */
+        static function register_backend()
+        {
+            $object_TagGroups_Shortcode_TPF_AJAX = new TagGroups_Shortcode_TPF_AJAX();
+            add_action('wp_ajax_nopriv_tg_ajax_tpf_get_posts', array( $object_TagGroups_Shortcode_TPF_AJAX, 'tg_ajax_tpf_get_posts' ));
+            add_action('wp_ajax_tg_ajax_tpf_get_posts', array( $object_TagGroups_Shortcode_TPF_AJAX, 'tg_ajax_tpf_get_posts' ));
         }
 
       /**
        * Makes sure that shortcodes work in text widgets.
-       * 
+       *
        * @param void
        * @return void
        */

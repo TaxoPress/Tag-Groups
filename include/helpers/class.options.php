@@ -27,7 +27,7 @@ if (! class_exists('TagGroups_Options')) {
 
       /**
        * allowed tags and attributes for sanitizing HTML
-       * 
+       *
        * requires PHP 5.6.0
        */
         public const ALLOWED_HTML = array(
@@ -225,7 +225,7 @@ if (! class_exists('TagGroups_Options')) {
             'export' => false,
             'type'   => self::INTEGER
             );
-      
+
           /**
            * Deprecated after 0.36 - don't export
            */
@@ -246,10 +246,10 @@ if (! class_exists('TagGroups_Options')) {
             );
             $available_options['tag_group_server_side_render'] = array(
             'origin' => self::TAG_GROUPS_PLUGIN,
-            'export' => true,
+            'export' => false,
             'type'    => self::INTEGER
             );
-      
+
           /**
            * deprecated
            */
@@ -528,7 +528,7 @@ if (! class_exists('TagGroups_Options')) {
             if (substr($option_name, 0, strlen('term_group_labels_')) == 'term_group_labels_') {
                 if (is_array($value)) {
                     $sanitized_value = $value;
-              
+
                     array_walk_recursive($sanitized_value, function (&$value) {
                         $value = sanitize_text_field($value);
                     });
@@ -557,7 +557,7 @@ if (! class_exists('TagGroups_Options')) {
                     case self::STRING_HTML:
                         $sanitized_value = self::wp_kses($value);
                         break;
-          
+
                     case self::ARRAY_OF_INTEGERS:
                         if (! self::array_or_log($value, $option_name)) {
                             return false;
@@ -577,7 +577,7 @@ if (! class_exists('TagGroups_Options')) {
                         }
 
                         $sanitized_value = $value;
-            
+
                         array_walk_recursive($sanitized_value, function (&$value) {
                             $value = sanitize_text_field($value);
                         });
@@ -591,7 +591,7 @@ if (! class_exists('TagGroups_Options')) {
                         }
 
                         $sanitized_value = $value;
-            
+
                         array_walk_recursive($sanitized_value, function (&$value) {
                             $value = TagGroups_Options::wp_kses($value);
                         });
@@ -610,7 +610,7 @@ if (! class_exists('TagGroups_Options')) {
             if ($sanitized_value !== $value && ! ( $available_options[ $option_name ]['type'] == self::INTEGER && $value == $sanitized_value )) {
                 TagGroups_Error::verbose_log('[Tag Groups] Sanitizing changed the value for %s: %s->%s', $option_name, $value, $sanitized_value);
             }
-      
+
             return $sanitized_value;
         }
 
@@ -626,11 +626,11 @@ if (! class_exists('TagGroups_Options')) {
         {
 
             $option_name = (string) $option_name;
-      
+
             if (substr($option_name, 0, strlen('term_group_labels_')) == 'term_group_labels_') {
                 if (is_array($value)) {
                     $sanitized_value = $value;
-              
+
                     array_walk_recursive($sanitized_value, function (&$value) {
                         $value = sanitize_text_field($value);
                     });
@@ -672,14 +672,14 @@ if (! class_exists('TagGroups_Options')) {
                     case self::STRING_HTML:
                         $sanitized_value = self::wp_kses($value);
                         break;
-          
+
                     case self::ARRAY_OF_INTEGERS:
                         if (! self::array_or_log($value, $option_name)) {
                             return false;
                         }
 
                         $sanitized_value = $value;
-            
+
                         array_walk_recursive($sanitized_value, function (&$value) {
                             $value = (int) $value;
                         });
@@ -692,7 +692,7 @@ if (! class_exists('TagGroups_Options')) {
                         }
 
                         $sanitized_value = $value;
-            
+
                         array_walk_recursive($sanitized_value, function (&$value) {
                             $value = sanitize_text_field($value);
                         });
@@ -704,7 +704,7 @@ if (! class_exists('TagGroups_Options')) {
                         }
 
                         $sanitized_value = $value;
-            
+
                         array_walk_recursive($sanitized_value, function (&$value) {
                             $value = TagGroups_Options::wp_kses($value);
                         });
@@ -753,7 +753,7 @@ if (! class_exists('TagGroups_Options')) {
 
       /**
        * intval to be used with array_walk_recursive
-       * 
+       *
        * to avoid PHP Warning: intval() expects parameter 2 to be int, because array_walk_recursive sends the key as second parameter, but intval expects second parameter to be a integer
        *
        * @deprecated 1.40.2

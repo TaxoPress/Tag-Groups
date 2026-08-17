@@ -50,11 +50,7 @@ function chatty_mango_tag_groups_editor_assets()
 
 
     $screen = get_current_screen();
-    if (is_object($screen) && property_exists($screen, 'base') && 'post' != $screen->base) {
-        $server_side_render = false;
-    } else {
-        $server_side_render = !!TagGroups_Options::get_option('tag_group_server_side_render', 1);
-    }
+    $server_side_render = is_object($screen) && property_exists($screen, 'base') && 'post' === $screen->base;
 
     // make some data available
     $args = array(
@@ -63,10 +59,10 @@ function chatty_mango_tag_groups_editor_assets()
         'siteLang'          => '',  // for future use
         'pluginUrl'         => TAG_GROUPS_PLUGIN_URL,
         'hasPremium'        => TagGroups_Utilities::is_premium_plan(),
+        'templates'         => class_exists('TagGroups_Templates') ? (new TagGroups_Templates())->get() : array(),
         'serverSideRender'  => $server_side_render,
         'collapsible'       => TagGroups_Options::get_option('tag_group_collapsible', 0),
-        'mouseover'         => TagGroups_Options::get_option('tag_group_mouseover', 0),
-        'gutenbergSettings' => admin_url('admin.php?page=tag-groups-settings-features&active-tab=gutenberg')
+        'mouseover'         => TagGroups_Options::get_option('tag_group_mouseover', 0)
     );
     $block_asset_url = TAG_GROUPS_PLUGIN_URL;
     $block_asset_path = TAG_GROUPS_PLUGIN_ABSOLUTE_PATH;
@@ -115,7 +111,7 @@ function chatty_mango_tag_groups_editor_assets()
         $locale_data = [];
     // Ensure it doesn't break if neither function exists
     }
-    
+
     wp_add_inline_script('wp-i18n', 'wp.i18n.setLocaleData( ' . wp_json_encode($locale_data) . ' );');
 }
 // phpcs:ignore Squiz.PHP.CommentedOutCode.Found

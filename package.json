@@ -1,6 +1,6 @@
 {
   "name": "chatty-mango-guten-tag",
-  "version": "1.0.0",
+  "version": "2.2.14",
   "private": true,
   "scripts": {
     "build": "wp-scripts build",

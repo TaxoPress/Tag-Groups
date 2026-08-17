@@ -3,7 +3,7 @@ Contributors: stevejburge, andergmartins, olatechpro, ojopaul
 Tags: tags, tag cloud, tabs, accordion, taxonomy, tag, woocommerce tags, Woocommerce categories, Tabbed Tag Cloud, Tag List, Accordion Tag Cloud, Alphabetical Tags, Alphabetical Tag Cloud, Alphabetical Tag Index, Post List, Post Filter
 Requires at least: 4.9
 Tested up to: 7.0
-Stable tag: 2.2.2
+Stable tag: 2.2.14
 Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -21,17 +21,17 @@ The Free version of the Tag Groups plugin comes with the following features. All
 * **Tag List:** Tags appear in columns, sorted into groups. [View demos](https://demo.taxopress.com/tag-list/).
 * **Tabbed Tag Cloud:** A tag cloud where tags are sorted into groups that appear in tabs. [View demos](https://demo.taxopress.com/tabbed-tag-cloud/).
 * **Accordion Tag Cloud:** A tag cloud where tags are sorted into vertically stacked accordion groups. [View demos](https://demo.taxopress.com/accordion-tab-cloud/).
-* **Alphabetical Tag Cloud:** Tags are sorted alphabetically by first letter under tabs. [View demos](https://demo.taxopress.com/alphabetical-tabs/).
-* **Alphabetical Tag Index:** Tag appear in columns, sorted alphabetically by first letter. [View demos](https://demo.taxopress.com/alphabetical-index/).
-* **Post List:** Display posts with a specific tag or in a particular tag group. [View demos](https://demo.taxopress.com/post-list/).
-
-The Pro version of the Tag Groups plugin also has these extra features:
-
 * **Tag Cloud:** This is an advanced version of a traditional Tag Cloud, with many customization options. [View demos](https://demo.taxopress.com/cloud/).
 * **Table Tag Cloud:** This feature organizes tags in a table, with groups as headers. [View demos](https://demo.taxopress.com/table-tag-cloud/).
 * **Shuffle Box:** This is a tag cloud that allows you to filter the tags by their names or by their tag groups. [View demos](https://demo.taxopress.com/shuffle-box/).
+* **Alphabetical Tag Cloud:** Tags are sorted alphabetically by first letter under tabs. [View demos](https://demo.taxopress.com/alphabetical-tabs/).
+* **Alphabetical Tag Index:** Tag appear in columns, sorted alphabetically by first letter. [View demos](https://demo.taxopress.com/alphabetical-index/).
+* **Post List:** Display posts with a specific tag or in a particular tag group. [View demos](https://demo.taxopress.com/post-list/).
+* **Toggle Post Filter:** Let visitors filter posts with tag menus, message fields, reset buttons, text search, sliders, and order controls. [View demos](https://demo.taxopress.com/post-filter-tags-menu/).
+
+The Pro version of the Tag Groups plugin also has these extra features:
+
 * **Tag Cloud Search**: Add a search box to any of our static tag displays: Cloud, Tabs, Accordion, or Table. [View demos](https://demo.taxopress.com/tag-cloud-search/).
-* **Toggle Post Filter**: This allows users to dynamically search for posts that have tags they choose. [View demos](https://demo.taxopress.com/post-filter-tags-menu/).
 * **Dynamic Post Filter**: This aallows users to dynamically search for posts via a dropdown menu showing tags. [View demos](https://demo.taxopress.com/post-filter-dropdown-menu/).
 
 ## Tag Groups Pro ##
@@ -115,7 +115,7 @@ Please use one of the shortcodes or Gutenberg blocks that come with the Tag Grou
 == Screenshots ==
 
 1. This is an advanced version of a traditional Tag Cloud, with many customization options.
-2. The Alphabetical Tag Index shows tag in columns, sorted alphabetically by first letter. 
+2. The Alphabetical Tag Index shows tag in columns, sorted alphabetically by first letter.
 3. The Accordion Tag Cloud is tag cloud where tags are sorted into vertically stacked accordion groups.
 4. The Tabbed Tag Cloud is tag cloud where tags are sorted into groups that appear in tabs.
 5. The Tag Groups plugin allows you to organize terms in groups.
