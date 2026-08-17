@@ -52,6 +52,15 @@ if (! class_exists('TagGroups_Cron')) {
            * Task to check if the automatic migrations have completed
            */
             add_action('tag_groups_check_migrations_done', array( 'TagGroups_Cron_Handlers', 'tag_groups_check_migrations_done' ));
+            add_action('tag_groups_check_if_migrations_done', array( 'TagGroups_Cron_Handlers', 'tag_groups_check_if_migrations_done' ));
+  /**
+           * Task to migrate posts to the post meta structure required by Post List
+           */
+            add_action('tag_groups_run_post_migration', array( 'TagGroups_Cron_Handlers', 'run_post_migration' ));
+  /**
+           * Task to repair stale post meta after term or taxonomy changes
+           */
+            add_action('tag_groups_run_fixing_post_meta', array( 'TagGroups_Cron_Handlers', 'fix_all_incorrect_post_terms' ));
   /**
            * Task to clear the transient cache tag_groups_group_terms
            */

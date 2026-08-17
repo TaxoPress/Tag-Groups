@@ -24,7 +24,7 @@ if (! class_exists('TagGroups_Enqueue')) {
        */
         public function wp_enqueue_scripts()
         {
-      
+
             if (is_admin()) {
                 return;
             }
@@ -54,6 +54,25 @@ if (! class_exists('TagGroups_Enqueue')) {
             wp_enqueue_style('tag-groups-css-frontend-theme');
 
             $this->enqueue_frontend_css();
+
+            global $post;
+            $content = is_a($post, 'WP_Post') ? $post->post_content : '';
+
+            if ($this->content_uses_table_tag_cloud($content)) {
+                $this->enqueue_table_tag_cloud_assets();
+            }
+
+            if ($this->content_uses_shuffle_box($content)) {
+                $this->enqueue_shuffle_box_assets();
+            }
+
+            if ($this->content_uses_post_list($content)) {
+                $this->enqueue_post_list_assets();
+            }
+
+            if ($this->content_uses_toggle_post_filter($content)) {
+                $this->enqueue_toggle_post_filter_assets();
+            }
         }
 
       /**
@@ -67,13 +86,13 @@ if (! class_exists('TagGroups_Enqueue')) {
 
             if (strpos($where, 'tag-groups-settings') !== false) {
                 wp_enqueue_script('jquery');
-        
+
                 wp_enqueue_script('jquery-ui-core');
-        
+
                 wp_enqueue_script('jquery-ui-accordion');
 
                 wp_enqueue_script('jquery-ui-tabs');
-        
+
                 wp_enqueue_script('jquery-ui-tooltip');
 
                 wp_register_style('tag-groups-css-backend-structure', TAG_GROUPS_PLUGIN_URL . '/assets/css/jquery-ui.structure.min.css', array(), TAG_GROUPS_VERSION);
@@ -105,7 +124,7 @@ if (! class_exists('TagGroups_Enqueue')) {
 
                 wp_enqueue_style('pp-wordpress-banners-style', TAG_GROUPS_PLUGIN_URL . $banners_vendor_url . $banners_style_path, false, TAG_GROUPS_VERSION);
 
-        
+
                 $this->load_sumoselect_css();
             } elseif (strpos($where, '_page_tag-groups') !== false) {
                 if (defined('WP_DEBUG') && WP_DEBUG) {
@@ -129,7 +148,7 @@ if (! class_exists('TagGroups_Enqueue')) {
                 wp_enqueue_script('jquery-ui-core');
 
                 wp_enqueue_script('jquery-ui-accordion');
-        
+
                 wp_enqueue_script('jquery-ui-tooltip');
             } elseif (strpos($where, 'edit-tags.php') !== false || strpos($where, 'term.php') !== false || strpos($where, 'edit.php') !== false) {
                 if (defined('WP_DEBUG') && WP_DEBUG) {
@@ -215,14 +234,16 @@ if (! class_exists('TagGroups_Enqueue')) {
             wp_enqueue_script('jquery-ui-tabs');
 
             wp_enqueue_script('jquery-ui-accordion');
-        
+
             wp_enqueue_script('jquery-ui-tooltip');
 
             $this->load_theme_css();
 
-            if (! is_admin()) {
-                $this->enqueue_frontend_css();
-            }
+            wp_enqueue_style('tag-groups-css-frontend-structure');
+
+            wp_enqueue_style('tag-groups-css-frontend-theme');
+
+            $this->enqueue_frontend_css();
 
           /**
            * load the JS
@@ -234,6 +255,11 @@ if (! class_exists('TagGroups_Enqueue')) {
             }
 
             wp_enqueue_script('tag-groups-js-frontend');
+
+            $this->enqueue_table_tag_cloud_assets();
+            $this->enqueue_shuffle_box_assets();
+            $this->enqueue_post_list_assets();
+            $this->enqueue_toggle_post_filter_assets();
         }
 
       /**
@@ -251,6 +277,177 @@ if (! class_exists('TagGroups_Enqueue')) {
             }
 
             wp_enqueue_style('tag-groups-css-frontend');
+        }
+
+      /**
+       * Returns whether the content uses the simple tag cloud.
+       *
+       * @param string $content
+       * @return bool
+       */
+        private function content_uses_simple_tag_cloud($content)
+        {
+            return is_string($content) && (
+                has_shortcode($content, 'tag_groups_simple_cloud') ||
+                has_shortcode($content, 'tag_groups_combined_cloud') ||
+                strpos($content, '<!-- wp:chatty-mango/tag-groups-premium-cloud-combined') !== false
+            );
+        }
+
+      /**
+       * Returns whether the content uses the table tag cloud.
+       *
+       * @param string $content
+       * @return bool
+       */
+        private function content_uses_table_tag_cloud($content)
+        {
+            return is_string($content) && (
+                has_shortcode($content, 'tag_groups_table') ||
+                strpos($content, '<!-- wp:chatty-mango/tag-groups-premium-cloud-table') !== false
+            );
+        }
+
+      /**
+       * Returns whether the content uses the shuffle box.
+       *
+       * @param string $content
+       * @return bool
+       */
+        private function content_uses_shuffle_box($content)
+        {
+            return is_string($content) && (
+                has_shortcode($content, 'tag_groups_shuffle_box') ||
+                strpos($content, '<!-- wp:chatty-mango/tag-groups-premium-shuffle-box') !== false
+            );
+        }
+
+      /**
+       * Returns whether the content uses the post list.
+       *
+       * @param string $content
+       * @return bool
+       */
+        private function content_uses_post_list($content)
+        {
+            return is_string($content) && (
+                has_shortcode($content, 'tag_groups_post_list') ||
+                strpos($content, '<!-- wp:chatty-mango/tag-groups-premium-post-filter') !== false
+            );
+        }
+
+      /**
+       * Returns whether the content uses the toggle post filter feature family.
+       *
+       * @param string $content
+       * @return bool
+       */
+        private function content_uses_toggle_post_filter($content)
+        {
+            return is_string($content) && (
+                has_shortcode($content, 'tag_groups_tpf_menu') ||
+                has_shortcode($content, 'tag_groups_dpf_toggle_menu') ||
+                has_shortcode($content, 'tag_groups_tpf_body') ||
+                has_shortcode($content, 'tag_groups_dpf_toggle_body') ||
+                has_shortcode($content, 'tag_groups_tpf_messages') ||
+                has_shortcode($content, 'tag_groups_dpf_toggle_messages') ||
+                has_shortcode($content, 'tag_groups_tpf_reset') ||
+                has_shortcode($content, 'tag_groups_dpf_toggle_reset') ||
+                has_shortcode($content, 'tag_groups_tpf_slider_button') ||
+                has_shortcode($content, 'tag_groups_tpf_order_menu') ||
+                has_shortcode($content, 'tag_groups_tpf_text_search') ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-tpf-menu') !== false ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-tpf-menu-') !== false ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-guten-dpfwt-menu') !== false ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-guten-dpfwt-body') !== false ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-guten-dpfwt-messages') !== false ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-guten-dpfwt-reset') !== false ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-tpf-slider-button') !== false ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-tpf-order-menu') !== false ||
+                strpos($content, '<!-- wp:chatty-mango/chatty-mango-tpf-text-search') !== false
+            );
+        }
+
+      /**
+       * Enqueue assets for the table tag cloud.
+       *
+       * @return void
+       */
+        private function enqueue_table_tag_cloud_assets()
+        {
+            wp_register_style('tag-groups-basictable-css', TAG_GROUPS_PLUGIN_URL . '/assets/css/basictable.css', array(), TAG_GROUPS_VERSION);
+            wp_enqueue_style('tag-groups-basictable-css');
+
+            wp_register_script('tag-groups-basictable-js', TAG_GROUPS_PLUGIN_URL . '/assets/js/jquery.basictable.min.js', array( 'jquery' ), TAG_GROUPS_VERSION);
+            wp_enqueue_script('tag-groups-basictable-js');
+        }
+
+      /**
+       * Enqueue assets for the shuffle box.
+       *
+       * @return void
+       */
+        private function enqueue_shuffle_box_assets()
+        {
+            wp_register_style('tag-groups-shuffle-box-css', TAG_GROUPS_PLUGIN_URL . '/assets/css/shuffle-box.css', array(), TAG_GROUPS_VERSION);
+            wp_enqueue_style('tag-groups-shuffle-box-css');
+
+            wp_register_script('tag-groups-isotope-js', TAG_GROUPS_PLUGIN_URL . '/assets/js/isotope.pkgd.min.js', array( 'jquery' ), TAG_GROUPS_VERSION);
+            wp_enqueue_script('tag-groups-isotope-js');
+
+            if (defined('WP_DEBUG') && WP_DEBUG) {
+                wp_register_script('tag-groups-shuffle-box-js', TAG_GROUPS_PLUGIN_URL . '/assets/js/shuffle-box.js', array( 'jquery', 'tag-groups-isotope-js' ), TAG_GROUPS_VERSION);
+            } else {
+                wp_register_script('tag-groups-shuffle-box-js', TAG_GROUPS_PLUGIN_URL . '/assets/js/shuffle-box.min.js', array( 'jquery', 'tag-groups-isotope-js' ), TAG_GROUPS_VERSION);
+            }
+
+            wp_enqueue_script('tag-groups-shuffle-box-js');
+        }
+
+      /**
+       * Enqueue styles for the post list feature.
+       *
+       * @return void
+       */
+        private function enqueue_post_list_assets()
+        {
+            wp_register_style('tag-groups-post-list-css', TAG_GROUPS_PLUGIN_URL . '/assets/css/post-list.css', array(), TAG_GROUPS_VERSION);
+            wp_enqueue_style('tag-groups-post-list-css');
+        }
+
+      /**
+       * Enqueue assets for the toggle post filter feature family.
+       *
+       * @return void
+       */
+        private function enqueue_toggle_post_filter_assets()
+        {
+            wp_enqueue_script('jquery');
+            wp_enqueue_script('jquery-ui-core');
+            wp_enqueue_script('jquery-ui-accordion');
+            wp_enqueue_script('jquery-masonry');
+            wp_enqueue_script('imagesloaded');
+            wp_enqueue_style('dashicons');
+
+            if (defined('WP_DEBUG') && WP_DEBUG) {
+                wp_register_script('tag-groups-tpf-js', TAG_GROUPS_PLUGIN_URL . '/assets/js/tpf.js', array( 'jquery', 'jquery-ui-core' ), TAG_GROUPS_VERSION);
+            } else {
+                wp_register_script('tag-groups-tpf-js', TAG_GROUPS_PLUGIN_URL . '/assets/js/tpf.min.js', array( 'jquery', 'jquery-ui-core' ), TAG_GROUPS_VERSION);
+            }
+
+            wp_enqueue_script('tag-groups-tpf-js');
+
+            wp_register_script('tag-groups-jnoty-js', TAG_GROUPS_PLUGIN_URL . '/assets/js/jnoty.min.js', array( 'jquery' ), TAG_GROUPS_VERSION);
+            wp_enqueue_script('tag-groups-jnoty-js');
+
+            wp_register_style('tag-groups-jnoty-css', TAG_GROUPS_PLUGIN_URL . '/assets/css/jnoty.min.css', array(), TAG_GROUPS_VERSION);
+            wp_enqueue_style('tag-groups-jnoty-css');
+
+            wp_register_script('tag-groups-sumoselect-js', TAG_GROUPS_PLUGIN_URL . '/assets/js/jquery.sumoselect.min.js', array( 'jquery' ), TAG_GROUPS_VERSION);
+            wp_enqueue_script('tag-groups-sumoselect-js');
+
+            wp_register_style('tag-groups-sumoselect-css', TAG_GROUPS_PLUGIN_URL . '/assets/css/sumoselect.min.css', array(), TAG_GROUPS_VERSION);
+            wp_enqueue_style('tag-groups-sumoselect-css');
         }
 
 

@@ -24,7 +24,7 @@ if (!class_exists('TagGroups_Loader')) {
         {
             $this->plugin_path = $plugin_path;
         }
-        
+
         /**
          * Provide objects that we'll need frequently
          *
@@ -33,12 +33,15 @@ if (!class_exists('TagGroups_Loader')) {
          */
         public function provide_globals()
         {
-            global  $tag_group_groups, $tag_group_terms ;
+            global  $tag_group_groups, $tag_group_terms, $tag_group_posts ;
             $tag_group_groups = new TagGroups_Groups();
             $tag_group_terms = new TagGroups_Terms();
+            if (class_exists('TagGroups_Posts')) {
+                $tag_group_posts = new TagGroups_Posts();
+            }
             return $this;
         }
-        
+
         /**
          * Makes all required classes available through an autoloader
          *
@@ -52,7 +55,7 @@ if (!class_exists('TagGroups_Loader')) {
                 if (strpos($class_name, 'TagGroups_') !== 0) {
                     return;
                 }
-                    
+
                 if (class_exists($class_name)) {
                     return;
                 }
@@ -73,7 +76,7 @@ if (!class_exists('TagGroups_Loader')) {
                 /**
                                          * We need to make all strings lower-case for different filesystems
                                          */
-                    
+
                     if (file_exists($this->plugin_path . $dir . 'class.' . strtolower($class_name) . '.php')) {
                         include_once $this->plugin_path . $dir . 'class.' . strtolower($class_name) . '.php';
                         return;
@@ -82,7 +85,7 @@ if (!class_exists('TagGroups_Loader')) {
             });
             return $this;
         }
-        
+
         /**
          * whether the installed version is newer than the latest recorded in the database
          *
@@ -92,7 +95,7 @@ if (!class_exists('TagGroups_Loader')) {
         {
             return version_compare($this->get_version(), $this->get_saved_version(), '>');
         }
-        
+
         /**
          * Gets the version number of the installed files
          *
@@ -103,7 +106,7 @@ if (!class_exists('TagGroups_Loader')) {
             $this->set_version();
             return TAG_GROUPS_VERSION;
         }
-        
+
         /**
          * Gets the latest recorded version number
          *
@@ -113,7 +116,7 @@ if (!class_exists('TagGroups_Loader')) {
         {
             return TagGroups_Options::get_option('tag_group_base_version', '1.0');
         }
-        
+
         /**
          * Sets the version from the plugin main file
          *
@@ -134,10 +137,10 @@ if (!class_exists('TagGroups_Loader')) {
             } else {
                 $version = '1.0';
             }
-            
+
             define('TAG_GROUPS_VERSION', $version);
         }
-        
+
         /**
          * Check if WordPress meets the minimum version
          *
@@ -153,7 +156,7 @@ if (!class_exists('TagGroups_Loader')) {
     /**
                  * Check the minimum WP version
                  */
-            
+
             if (version_compare($wp_version, TAG_GROUPS_MINIMUM_VERSION_WP, '<')) {
                 TagGroups_Error::log('[Tag Groups] Insufficient WordPress version for Tag Groups plugin.');
                 /* translators: %1$s is the plugin name, %2$s is the minimum WordPress version */
@@ -161,7 +164,7 @@ if (!class_exists('TagGroups_Loader')) {
                 return;
             }
         }
-        
+
         /**
          * adds all hooks
          *
@@ -178,10 +181,10 @@ if (!class_exists('TagGroups_Loader')) {
             } else {
                 $tag_groups_hooks->not_is_admin();
             }
-            
+
             return $this;
         }
-        
+
         /**
          * registers the shortcodes with Gutenberg blocks
          *
@@ -199,9 +202,10 @@ if (!class_exists('TagGroups_Loader')) {
             include_once $this->plugin_path . '/src/init.php';
     // Register shortcodes also for admin so that we can remove them with strip_shortcodes in Ajax call
             TagGroups_Shortcode_Statics::register();
+            TagGroups_Shortcode_Statics::register_backend();
             return $this;
         }
-        
+
         /**
          * registers the REST API
          *
@@ -213,7 +217,7 @@ if (!class_exists('TagGroups_Loader')) {
             TagGroups_REST_API::register_hook();
             return $this;
         }
-        
+
         /**
          * Loads text domain for internationalization
          */
@@ -234,7 +238,7 @@ if (!class_exists('TagGroups_Loader')) {
                 }
             }
         }
-        
+
         /**
          * registers the CRON routines
          *

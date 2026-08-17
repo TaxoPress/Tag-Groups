@@ -1,10 +1,62 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+[2.2.14] - 17 August, 2026
+
+- Changed: Split Toggle Post Filter into its own shortcode table and show shortcode values in selectable input fields.
+
+[2.2.13] - 17 August, 2026
+
+- Changed: Correct the Shortcodes table so the Groups column is only checked for features that stop working without custom groups.
+
+[2.2.12] - 17 August, 2026
+
+- Changed: Add a Groups column to the Shortcodes table and mark features that require tags to be organized into groups.
+
+[2.2.11] - 17 August, 2026
+
+- Removed: The Gutenberg editor notice that suggested transforming blocks into shortcode blocks.
+
+[2.2.10] - 17 August, 2026
+
+- Added: Register separate Toggle Post Filter layout blocks in the Gutenberg inserter while keeping the legacy menu block for existing content.
+
+[2.2.9] - 17 August, 2026
+
+- Changed: List the Toggle Post Filter layout variants individually on the Features screen.
+
+[2.2.8] - 17 August, 2026
+
+- Added: Move the remaining Toggle Post Filter helper parts, including Text Search, into the free plugin.
+
+[2.2.7] - 17 August, 2026
+
+- Added: Move Toggle Post Filter menu layouts and order controls into the free plugin.
+
+[2.2.6] - 17 August, 2026
+
+- Added: Move Post List into the free plugin.
+
+[2.2.6] - 17 August, 2026
+
+- Added: Move Post List into the free plugin.
+
+[2.2.5] - 17 August, 2026
+
+- Added: Move Tag Cloud, Table Tag Cloud, and Shuffle Box into the free plugin.
+
+[2.2.4] - 17 August, 2026
+
+- Removed: The Gutenberg tab and its old block-preview settings flow from the Features screen.
+
+[2.2.3] - 17 August, 2026
+
+- Changed: Widen the shortcode column and rename the documentation column on the Shortcodes table.
+
 [2.2.2] - 17 August, 2026
 
-- Fixed: Gutenberg block is broken, #313
-- Fixed: Gutenberg settings have broken formatting, #308
+- Changed: Rename the admin menu label from Settings to Tools.
+- Removed: Obsolete manual maintenance and shortcode UI from the admin screens.
 
 [2.2.1] - 22 July, 2026
 
@@ -72,7 +124,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update: Translation Updates for Tag Groups PRO v2.0.6 ES-FR-IT, #164
 
 [2.0.6] - 16 Jan 2025
-- Improved: Added Filter Button to the Tags screen, #138 
+- Improved: Added Filter Button to the Tags screen, #138
 - Improved: Allow users to disable large modal from metabox, #100
 - Update: Update buttons on Tags Groups Admin screen, #133
 - Update: Replace X icon in metabox screen, #104

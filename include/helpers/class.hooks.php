@@ -53,7 +53,7 @@ if (!class_exists('TagGroups_Hooks')) {
          */
         public function root_all()
         {
-            global  $tag_group_terms ;
+            global  $tag_group_terms, $tag_group_posts ;
             /**
              * enable internationalization
              */
@@ -74,6 +74,10 @@ if (!class_exists('TagGroups_Hooks')) {
                 10,
                 3
             );
+            if (is_object($tag_group_posts)) {
+                add_action('save_post', array( $tag_group_posts, 'maybe_process_post' ), 100, 2);
+            }
+            add_action('purge_post_list_transients', array( 'TagGroups_Transients', 'purge_post_list_transients' ), 10, 2);
         }
 
         /**
@@ -107,10 +111,14 @@ if (!class_exists('TagGroups_Hooks')) {
              * After a term has changed its groups, we must update the array of terms per group.
              */
             add_action('tag_groups_groups_of_term_saved', array( 'TagGroups_Group_Save_Handlers', 'schedule_clear_tag_groups_group_terms' ), 11);
+            add_action('tag_groups_groups_of_term_saved', array( 'TagGroups_Post_Meta_Tools', 'update_post_meta_for_term' ), 10, 2);
+            add_action('tag_groups_groups_of_term_saved', array( 'TagGroups_Post_Save_Handlers', 'clear_tag_groups_post_terms' ), 11);
             /**
              * After a term has been deleted, we might have to update the object cache
              */
             add_action('delete_term', array( 'TagGroups_Group_Save_Handlers', 'schedule_clear_tag_groups_group_terms' ), 20);
+            add_action('delete_term', array( 'TagGroups_Post_Save_Handlers', 'clear_tag_groups_post_terms' ), 10);
+            add_action('delete_term', array( 'TagGroups_Post_Save_Handlers', 'schedule_fix_all_incorrect_post_terms' ), 11);
             /**
              * After a term has been edited, we need to refresh some transients
              */
@@ -151,6 +159,8 @@ if (!class_exists('TagGroups_Hooks')) {
              * After a term group has been deleted, we must update the tag meta with the groups.
              */
             add_action('tag_groups_term_group_deleted', array( 'TagGroups_Term_Meta_Tools', 'remove_missing_groups' ));
+            add_action('tag_groups_term_group_deleted', array( 'TagGroups_Post_Save_Handlers', 'clear_tag_groups_post_terms' ));
+            add_action('tag_groups_term_group_deleted', array( 'TagGroups_Post_Save_Handlers', 'schedule_fix_all_incorrect_post_terms' ));
             /**
              * #### Taxonomies
              */
@@ -158,6 +168,7 @@ if (!class_exists('TagGroups_Hooks')) {
              * After the taxonomies have been changed, we check if we must migrate all newly enabled tags.
              */
             add_action('tag_groups_taxonomies_saved', array( 'TagGroups_Cron_Handlers', 'maybe_schedule_term_migration' ), 10);
+            add_action('tag_groups_taxonomies_saved', array( 'TagGroups_Post_Save_Handlers', 'schedule_fix_all_incorrect_post_terms' ), 11);
             /**
              * Rendering a shortcode for the Gutenberg block editor
              */

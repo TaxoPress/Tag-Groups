@@ -1,95 +1,257 @@
+<?php
+$shortcode_features = array(
+    array(
+        'title'         => __('Tabbed Tag Cloud', 'tag-groups'),
+        'description'   => __('Display the tags in a tabbed tag cloud.', 'tag-groups'),
+        'requires_groups' => true,
+        'shortcode'     => '[tag_groups_cloud]',
+        'documentation' => 'https://taxopress.com/docs/tabbed-tag-cloud-shortcode-parameters/',
+    ),
+    array(
+        'title'         => __('Accordion', 'tag-groups'),
+        'description'   => __('Display the tags in an accordion.', 'tag-groups'),
+        'requires_groups' => true,
+        'shortcode'     => '[tag_groups_accordion]',
+        'documentation' => 'https://taxopress.com/docs/accordion-tag-cloud-shortcode-parameters/',
+    ),
+    array(
+        'title'         => __('Tag List', 'tag-groups'),
+        'description'   => __('Display the tags in lists under tag groups.', 'tag-groups'),
+        'requires_groups' => true,
+        'shortcode'     => '[tag_groups_tag_list]',
+        'documentation' => 'https://taxopress.com/docs/tag-list-shortcode-parameters/',
+    ),
+    array(
+        'title'         => __('Alphabetical Tag Cloud', 'tag-groups'),
+        'description'   => __('Display the tags in tabbed tag cloud with first letters as tabs.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_alphabet_tabs]',
+        'documentation' => 'https://taxopress.com/docs/alphabetical-tag-cloud-shortcode-parameters/',
+    ),
+    array(
+        'title'         => __('Alphabetical Tag Index', 'tag-groups'),
+        'description'   => __('Display the tags in a list with first letters as heading.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_alphabetical_index]',
+        'documentation' => 'https://taxopress.com/docs/alphabetical-tag-cloud-shortcode-parameters/',
+    ),
+);
+
+if (!TagGroups_Utilities::is_premium_plan()) {
+    $shortcode_features[] = array(
+        'title'         => __('Tag Cloud', 'tag-groups'),
+        'description'   => __('Display the tags from multiple groups in one tag cloud.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_simple_cloud]',
+        'documentation' => 'https://taxopress.com/docs/combined-tag-cloud-parameters/',
+    );
+    $shortcode_features[] = array(
+        'title'         => __('Table Tag Cloud', 'tag-groups'),
+        'description'   => __('Display the tags in a table, sorted into columns under the groups.', 'tag-groups'),
+        'requires_groups' => true,
+        'shortcode'     => '[tag_groups_table]',
+        'documentation' => 'https://taxopress.com/docs/table-tag-cloud-parameters/',
+    );
+    $shortcode_features[] = array(
+        'title'         => __('Shuffle Box', 'tag-groups'),
+        'description'   => __('Display a tag cloud that visitors can filter by group and by name.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_shuffle_box]',
+        'documentation' => 'https://taxopress.com/docs/shuffle-box-parameters/',
+    );
+    $shortcode_features[] = array(
+        'title'         => __('Post List', 'tag-groups'),
+        'description'   => __('Display a static list of posts that matches the selected tag groups.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_post_list]',
+        'documentation' => 'https://taxopress.com/docs/post-list-parameters/',
+    );
+    $toggle_post_filter_features = array(
+        array(
+        'title'         => __('Toggle Post Filter: Menu', 'tag-groups'),
+        'description'   => __('Display a horizontal tag menu for building the post filter.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_menu layout=wide]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter: Vertical Menu', 'tag-groups'),
+        'description'   => __('Display a vertical checkbox-style menu for building the post filter.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_menu layout=plain]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter: Buttons', 'tag-groups'),
+        'description'   => __('Display the filter controls as horizontal buttons.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_menu layout=wide_button]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter: Vertical Buttons', 'tag-groups'),
+        'description'   => __('Display the filter controls as vertical buttons.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_menu layout=button]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter: Vertical Toggles', 'tag-groups'),
+        'description'   => __('Display the filter controls as vertical toggle switches.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_menu layout=classic]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter: Slider Menu', 'tag-groups'),
+        'description'   => __('Display the filter controls in a slider menu. Use slider_right for a right-side slider.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_menu layout=slider_left]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter: Slider With Buttons', 'tag-groups'),
+        'description'   => __('Display the slider menu with tag-style buttons. Use slider_right_tags for a right-side slider.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_menu layout=slider_left_tags]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter - Posts', 'tag-groups'),
+        'description'   => __('Display the posts that match the selected tags in the filter.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_body]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter - Message Field', 'tag-groups'),
+        'description'   => __('Display the result count and filter messages for the post filter.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_messages]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter - Reset Button', 'tag-groups'),
+        'description'   => __('Display a button that clears the selected tags in the filter.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_reset]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter - Text Search', 'tag-groups'),
+        'description'   => __('Display a separate text search field for the toggle post filter.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_text_search]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter - Slider Button', 'tag-groups'),
+        'description'   => __('Display the button that opens slider-based filter layouts.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_slider_button]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+        array(
+        'title'         => __('Toggle Post Filter - Order Menu', 'tag-groups'),
+        'description'   => __('Display menus that let visitors reorder the filtered posts.', 'tag-groups'),
+        'requires_groups' => false,
+        'shortcode'     => '[tag_groups_tpf_order_menu]',
+        'documentation' => 'https://taxopress.com/docs/toggle-post-filter-parameters/',
+        ),
+    );
+} else {
+    $toggle_post_filter_features = array();
+}
+
+$render_shortcode_table = function ($features) {
+    if (empty($features)) {
+        return;
+    }
+    ?>
+    <table class="widefat fixed striped">
+      <thead>
+        <tr>
+          <th style="width: 18%;"><?php _e('Title', 'tag-groups') ?></th>
+          <th style="width: 31%;"><?php _e('Description', 'tag-groups') ?></th>
+          <th style="width: 7%; text-align: center;"><?php _e('Groups', 'tag-groups') ?></th>
+          <th style="width: 30%;"><?php _e('Shortcode', 'tag-groups') ?></th>
+          <th style="width: 14%;"><?php _e('Find Out More', 'tag-groups') ?></th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($features as $shortcode_feature) : ?>
+          <tr>
+            <td><?php echo esc_html($shortcode_feature['title']) ?></td>
+            <td><?php echo esc_html($shortcode_feature['description']) ?></td>
+            <td style="text-align: center;">
+              <?php if (!empty($shortcode_feature['requires_groups'])) : ?>
+                <span class="dashicons dashicons-yes-alt" aria-hidden="true"></span>
+                <span class="screen-reader-text"><?php _e('Requires groups', 'tag-groups') ?></span>
+              <?php endif; ?>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="tg-shortcode-input"
+                readonly="readonly"
+                value="<?php echo esc_attr($shortcode_feature['shortcode']) ?>"
+                onclick="this.select();"
+                onfocus="this.select();"
+              />
+            </td>
+            <td>
+              <a href="<?php echo esc_url($shortcode_feature['documentation']) ?>" target="_blank" rel="noopener noreferrer">
+                <?php _e('Documentation', 'tag-groups') ?>
+              </a>
+            </td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+    <?php
+};
+?>
 <div class="tg_settings_tabs_content box-tg-accordion">
+  <style>
+    .tg-shortcode-input {
+      width: 100%;
+      min-height: 38px;
+      padding: 8px 12px;
+      border: 1px solid #8c8f94;
+      border-radius: 0;
+      background: #f6f7f7;
+      box-shadow: none;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .tg-shortcode-input[readonly] {
+      color: #1d2327;
+      cursor: text;
+    }
+  </style>
 
   <p>
     <?php _e('All Tag Groups features are available as Gutenberg blocks. You can also use shortcodes.', 'tag-groups') ?>
   </p>
 
   <p>&nbsp;</p>
-  <p><?php _e('Click on the features for more information.', 'tag-groups') ?></p>
   <h3><?php _e('Shortcodes', 'tag-groups') ?></h3>
-  <div class="tg_admin_accordion">
-  <h4><span class="dashicons dashicons-visibility"></span> <?php _e('Tabbed Tag Cloud', 'tag-groups') ?></h4>
-    <div>
-      <img src="<?php echo esc_url(TAG_GROUPS_PLUGIN_URL) ?>/assets/images/features/tabbed-tag-cloud.png" style="float:right">
-      <h4>[tag_groups_cloud]</h4>
-      <p><?php _e('Display the tags in a tabbed tag cloud.', 'tag-groups') ?></p>
-      <h4><?php _e('Example', 'tag-groups') ?></h4>
-      <p>[tag_groups_cloud smallest=9 largest=30 include=1,2,10]</p>
-      <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php /* translators: %s is the href attribute with URL */ echo wp_kses_post(sprintf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tabbed-tag-cloud-shortcode-parameters/" target="_blank"')); ?></p>
-    </div>
+  <?php $render_shortcode_table($shortcode_features); ?>
 
-    <h4><span class="dashicons dashicons-menu"></span> <?php _e('Accordion', 'tag-groups') ?></h4>
-    <div>
-      <img src="<?php echo esc_url(TAG_GROUPS_PLUGIN_URL) ?>/assets/images/features/accordion-tag-cloud.png" style="float:right">
-      <h4>[tag_groups_accordion]</h4>
-      <p><?php _e('Display the tags in an accordion.', 'tag-groups') ?></p>
-      <h4><?php _e('Example', 'tag-groups') ?></h4>
-      <p>[tag_groups_accordion smallest=9 largest=30 include=1,2,10]</p>
-      <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php echo wp_kses_post(sprintf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/accordion-tag-cloud-shortcode-parameters/" target="_blank"')); ?></p>
-    </div>
+  <?php if (!empty($toggle_post_filter_features)) : ?>
+    <p>&nbsp;</p>
+    <h3><?php _e('Toggle Post Filter', 'tag-groups') ?></h3>
+    <?php $render_shortcode_table($toggle_post_filter_features); ?>
+  <?php endif; ?>
 
-    <h4><span class="dashicons dashicons-tag"></span> <?php _e('Tag List', 'tag-groups') ?></h4>
-    <div>
-      <img src="<?php echo esc_url(TAG_GROUPS_PLUGIN_URL) ?>/assets/images/features/tag-list.png" style="float:right">
-      <h4>[tag_groups_tag_list]</h4>
-      <p><?php _e('Display the tags in lists under tag groups.', 'tag-groups') ?></p>
-      <h4><?php _e('Example', 'tag-groups') ?></h4>
-      <p>[tag_groups_tag_list column_count=2 keep_together=0 include=1,2,10]</p>
-      <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php echo wp_kses_post(sprintf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tag-list-shortcode-parameters/" target="_blank"')); ?></p>
+  <?php if (!empty($premium_shortcode_info)) : ?>
+    <p>&nbsp;</p>
+    <div class="tg_admin_accordion">
+      <?php echo wp_kses_post($premium_shortcode_info) ?>
     </div>
-
-    <h4><span class="dashicons dashicons-text"></span> <?php _e('Alphabetical Tag Cloud', 'tag-groups') ?></h4>
-    <div>
-      <img src="<?php echo esc_url(TAG_GROUPS_PLUGIN_URL) ?>/assets/images/features/alphabetical-tag-cloud.png" style="float:right">
-      <h4>[tag_groups_alphabet_tabs]</h4>
-      <p><?php _e('Display the tags in tabbed tag cloud with first letters as tabs.', 'tag-groups') ?> <?php _e('(Not tested with right-to-left languages.)', 'tag-groups') ?></p>
-      <h4><?php _e('Example', 'tag-groups') ?></h4>
-      <p>[tag_groups_alphabet_tabs exclude_letters="äöü"]</p>
-      <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php printf(esc_html__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/alphabetical-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
-    </div>
-
-    <h4><span class="dashicons dashicons-text"></span> <?php _e('Alphabetical Tag Index', 'tag-groups') ?></h4>
-    <div>
-      <img src="<?php echo esc_url(TAG_GROUPS_PLUGIN_URL) ?>/assets/images/features/alphabetical-tag-index.png" style="float:right">
-      <h4>[tag_groups_alphabetical_index]</h4>
-      <p><?php _e('Display the tags in a list with first letters as heading.', 'tag-groups') ?> <?php _e('(Not tested with right-to-left languages.)', 'tag-groups') ?></p>
-      <h4><?php _e('Example', 'tag-groups') ?></h4>
-      <p>[tag_groups_alphabetical_index column_count=2 keep_together=0]</p>
-      <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php printf(esc_html__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/alphabetical-tag-cloud-shortcode-parameters/" target="_blank"') ?></p>
-    </div>
-    <?php echo wp_kses_post($premium_shortcode_info) ?>
-
-    <h4><span class="dashicons dashicons-info"></span> <?php _e('Group Information', 'tag-groups') ?></h4>
-    <div>
-      <h4>[tag_groups_info]</h4>
-      <p><?php _e('Display information about tag groups.', 'tag-groups') ?></p>
-      <h4><?php _e('Example', 'tag-groups') ?></h4>
-      <p>[tag_groups_info group_id="all"]</p>
-      <h4><?php _e('Parameters', 'tag-groups') ?></h4>
-      <p><?php echo wp_kses_post(sprintf(__('Please find the parameters in the <a %s>documentation</a>.', 'tag-groups'), 'href="https://taxopress.com/docs/tag-groups-info-shortcode-parameters/" target="_blank"')); ?></p>
-    </div>
-  </div>
-
-  <h3>PHP</h3>
-  <div class="tg_admin_accordion">
-  <h4><span class="dashicons dashicons-cloud"></span> tag_groups_cloud()</h4>
-    <div>
-      <p><?php _e('The function <b>tag_groups_cloud</b> accepts the same parameters as the [tag_groups_cloud] shortcode, except for those that determine tabs and styling.', 'tag-groups') ?></p>
-      <p><?php _e('By default it returns a string with the html for a tabbed tag cloud.', 'tag-groups') ?></p>
-      <h4><?php _e('Example', 'tag-groups') ?></h4>
-
-      <p><code><?php echo esc_html(htmlentities("<?php if ( function_exists( 'tag_groups_cloud' ) ) echo tag_groups_cloud( array( 'include' => '1,2,5,6' ) ) ?>")) ?></code></p>
-      <p>&nbsp;</p>
-      <p><?php _e('If the optional second parameter is set to \'true\', the function returns a multidimensional array containing tag groups and tags.', 'tag-groups') ?></p>
-      <h4><?php _e('Example', 'tag-groups') ?></h4>
-      <p><code><?php echo esc_html(htmlentities("<?php if ( function_exists( 'tag_groups_cloud' ) ) print_r( tag_groups_cloud( array( 'orderby' => 'count', 'order' => 'DESC' ), true ) ) ?>")) ?></code></p>
-    </div>
-  </div>
+  <?php endif; ?>
 
   <!-- begin Tag Groups plugin -->
   <script>

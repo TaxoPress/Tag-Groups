@@ -1,0 +1,6 @@
+/*!
+ * Last modified: 2021/06/14 10:53:08
+ * jQuery Basic Table
+ * Author: Jerry Low
+ * modified by: Christoph Amthor
+ */table.bt{border:none}table.bt tbody th,table.bt thead{display:none}table.bt tbody td,table.bt tfoot td,table.bt tfoot th{border:none;display:block;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;vertical-align:top}table.bt tbody td::before,table.bt tfoot td::before,table.bt tfoot th::before{content:attr(data-th) ": ";display:inline-block;-webkit-flex-shrink:0;-ms-flex-shrink:0;flex-shrink:0;font-weight:700;width:8em}table.bt tbody td.bt-hide,table.bt tfoot td.bt-hide,table.bt tfoot th.bt-hide{display:none}table.bt tbody td .bt-content,table.bt tfoot td .bt-content,table.bt tfoot th .bt-content{vertical-align:top;padding-left:10px}.bt-wrapper.active{max-height:310px;overflow:auto;-webkit-overflow-scrolling:touch}table.bt.bt--no-header tbody td::before,table.bt.bt--no-header tfoot td::before{display:none}

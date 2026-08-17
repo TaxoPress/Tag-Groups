@@ -60,7 +60,6 @@ const {
   pluginUrl,
   hasPremium,
   serverSideRender,
-  gutenbergSettings,
 } = ChattyMangoTagGroupsGlobal;
 
 const helpUrl = '';

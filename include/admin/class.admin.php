@@ -65,7 +65,7 @@ if (!class_exists('TagGroups_Admin')) {
                 'function' => array( 'TagGroups_Setup_Wizard', 'settings_page_setup_wizard' ),
             ),
                 11  => array(
-                    'title'    => __('Settings', 'tag-groups'),
+                    'title'    => __('Tools', 'tag-groups'),
                     'slug'     => 'tag-groups-settings-general',
                     'parent'   => 'tag-groups-settings',
                     'user_can' => 'manage_options',
@@ -470,8 +470,8 @@ if (!class_exists('TagGroups_Admin')) {
                     break;
                 default:
                     // Need to show a message?
-                 
-                
+
+
                     exit;
                 break;
             }
@@ -1058,21 +1058,7 @@ if (!class_exists('TagGroups_Admin')) {
             $view->render();
         }
 
-        /**
-         * Recommend to run the migration
-         *
-         * @since 1.24.0
-         *
-         * @param  void
-         * @return void
-         */
-        // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps -- Legacy method naming
-        public static function recommend_to_run_migration()
-        {
-            /* translators: %s is the href attribute with URL */
-            TagGroups_Admin_Notice::add('info', sprintf(__('Please <a %s>click here to run the migration routines</a> to make sure we have migrated all tags.', 'tag-groups'), 'href="' . admin_url('admin.php?page=tag-groups-settings-general&process-tasks=migratetermmeta&task-set-name=Migration') . '"'));
-        }
     }
     // class
-    
+
 }

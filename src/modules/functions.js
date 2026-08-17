@@ -16,11 +16,43 @@ export const optionsOrder = [
   { value: 'DESC', label: __('Descending') },
 ];
 
+export const optionsOrderbyPosts = [
+  { value: 'author', label: __('Author') },
+  { value: 'date', label: __('Date') },
+  { value: 'modified', label: __('Modified') },
+  { value: 'title', label: __('Title') },
+  { value: 'comment_count', label: __('Comment count') },
+];
+
 export const optionsTarget = [
   { value: '_self', label: '_self' },
   { value: '_blank', label: '_blank' },
   { value: '_parent', label: '_parent' },
   { value: '_top', label: '_top' },
+];
+
+export const optionsLayoutMode = [
+  { value: 'fitRows', label: 'fitRows' },
+  { value: 'masonry', label: 'masonry' },
+  { value: 'vertical', label: 'vertical' },
+];
+
+export const optionsTextSearch = [
+  { value: 0, label: 'off' },
+  { value: 1, label: 'on enter' },
+  { value: 2, label: 'on enter or timed' },
+];
+
+export const optionsTheme = [
+  { value: '', label: 'none' },
+  { value: 'light', label: 'light' },
+  { value: 'dark', label: 'dark' },
+];
+
+export const optionsAccordion = [
+  { value: 0, label: __('off') },
+  { value: 1, label: __('on click') },
+  { value: 2, label: __('on mouseover') },
 ];
 
 export function getIncludeOptions(_this) {
@@ -153,6 +185,30 @@ function getGroupById(allGroups, id) {
   return { termgroup: -1, label: 'error' };
 }
 
+export function getInitialGroupOptions(_this) {
+  let optionsInitialGroup = [];
+
+  if (_this.props.attributes.show_filter_all_groups) {
+    optionsInitialGroup.push({ value: -1, label: __('All Groups') });
+  }
+
+  if (_this.state.groups && _this.state.groups.length > 0) {
+    _this.state.groups.forEach((group) => {
+      if (
+        (_this.state.selectedInclude.length === 0 && group.term_group) ||
+        _this.state.selectedInclude.indexOf(group.term_group) > -1
+      ) {
+        optionsInitialGroup.push({
+          value: group.term_group,
+          label: group.label,
+        });
+      }
+    });
+  }
+
+  return optionsInitialGroup;
+}
+
 export function renderTabs(_this) {
   const { active, collapsible, mouseover } = _this.props.attributes;
 
@@ -191,4 +247,45 @@ export function renderAccordion(_this) {
   setTimeout(() => {
     jQuery('#' + _this.state.uniqueId).accordion(options);
   }, 1000);
+}
+
+export function renderIsotope(_this) {
+  const { initial_group, layout_mode } = _this.props.attributes;
+
+  setTimeout(() => {
+    let cmShuffleBoxGrid = jQuery(
+      '#' + _this.state.uniqueId + '_inner_container'
+    ).isotope({
+      layoutMode: layout_mode,
+    });
+
+    if (initial_group) {
+      jQuery('#' + _this.state.uniqueId)
+        .find('.cm-shuffle-box-button-' + initial_group)
+        .addClass('cm-shuffle-box-button-active');
+      jQuery('#' + _this.state.uniqueId)
+        .find(
+          '.cm-shuffle-box-button:not(.cm-shuffle-box-button-' +
+            initial_group +
+            ')'
+        )
+        .removeClass('cm-shuffle-box-button-active');
+
+      cmShuffleBoxGrid.isotope();
+    }
+  }, 1000);
+}
+
+export function encodeTemplate(template) {
+  return btoa(encodeURIComponent(template));
+}
+
+export function decodeTemplate(source) {
+  let base64Decoded;
+  try {
+    base64Decoded = atob(source);
+  } catch (error) {
+    return source;
+  }
+  return decodeURIComponent(base64Decoded);
 }

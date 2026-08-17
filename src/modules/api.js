@@ -90,3 +90,53 @@ function htmlDecode(input) {
   e.innerHTML = input;
   return e.childNodes.length === 0 ? '' : e.childNodes[0].nodeValue;
 }
+
+/**
+ * Loading static taxonomies (core REST API endpoint)
+ */
+export function getAllTaxonomiesFromApi(_this) {
+  apiFetch({ path: _this.allTaxonomiesEndPoint })
+    .then((allTaxonomies) => {
+      if (allTaxonomies) {
+        _this.setState({ allTaxonomies });
+      }
+    })
+    .catch((error) => {
+      if (_this.isStillMounted && fetchRequest === _this.currentFetchRequest) {
+        _this.setState({
+          response: {
+            error: true,
+            errorMsg: error.message,
+          },
+        });
+      }
+    });
+}
+
+/**
+ * Loading Terms (own REST API endpoint)
+ */
+export function getAllTermsFromApi(_this) {
+  var termsEndPoint = _this.termsEndPoint + '?taxonomy=public&short=1';
+
+  if (_this.props.attributes.allTaxonomies) {
+    termsEndPoint += '&taxonomy=' + _this.props.attributes.allTaxonomies;
+  }
+
+  apiFetch({ path: termsEndPoint })
+    .then((allTerms) => {
+      if (allTerms) {
+        _this.setState({ allTerms });
+      }
+    })
+    .catch((error) => {
+      if (_this.isStillMounted && fetchRequest === _this.currentFetchRequest) {
+        _this.setState({
+          response: {
+            error: true,
+            errorMsg: error.message,
+          },
+        });
+      }
+    });
+}

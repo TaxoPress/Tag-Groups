@@ -47,15 +47,18 @@ if (!class_exists('TagGroups_Settings')) {
          */
         public static function get_active_tab($tabs)
         {
-
+            $tab_keys = array_keys($tabs);
+            $default_tab = reset($tab_keys);
             // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only tab selection
             if (isset($_GET['active-tab'])) {
                 // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only tab selection
-                return sanitize_title(wp_unslash($_GET['active-tab']));
-            } else {
-                $keys = array_keys($tabs);
-                return reset($keys);
+                $requested_tab = sanitize_title(wp_unslash($_GET['active-tab']));
+                if (in_array($requested_tab, $tab_keys, true)) {
+                    return $requested_tab;
+                }
             }
+
+            return $default_tab;
         }
 
         /**
@@ -114,7 +117,7 @@ if (!class_exists('TagGroups_Settings')) {
             exit;
         }
 
-        
+
         /**
          * renders a settings page: home
          *
@@ -201,9 +204,6 @@ if (!class_exists('TagGroups_Settings')) {
             $back_end_tabs = array();
             $back_end_tabs = apply_filters('tag_groups_settings_back_end_tabs', $back_end_tabs);
             $back_end_tabs['filters'] = __('Filters', 'tag-groups');
-            if (TagGroups_Gutenberg::is_gutenberg_active()) {
-                $back_end_tabs['gutenberg'] = __('Gutenberg', 'tag-groups');
-            }
             if (TagGroups_WPML::is_multilingual()) {
                 $back_end_tabs['multilingual'] = __('Multilingual', 'tag-groups');
             }
@@ -230,10 +230,8 @@ if (!class_exists('TagGroups_Settings')) {
                              */
                             $premium_shortcode_info = apply_filters('tag_groups_hook_shortcodes', '');
                             $view = new TagGroups_View('admin/settings_front_end_shortcodes');
-                            $gutenberg_documentation_link = '';
                             $view->set(array(
-                                'premium_shortcode_info'       => $premium_shortcode_info,
-                                'gutenberg_documentation_link' => $gutenberg_documentation_link,
+                                'premium_shortcode_info' => $premium_shortcode_info,
                             ));
                             $view->render();
                             break;
@@ -262,14 +260,6 @@ if (!class_exists('TagGroups_Settings')) {
                                 'tag_group_collapsible'              => $tag_group_collapsible,
                                 'tag_group_html_description'         => $tag_group_html_description,
                                 'tag_group_html_description_options' => $tag_group_html_description_options,
-                            ));
-                            $view->render();
-                            break;
-                        case 'gutenberg':
-                            $tag_group_server_side_render = TagGroups_Options::get_option('tag_group_server_side_render', 1);
-                            $view = new TagGroups_View('admin/settings_back_end_gutenberg');
-                            $view->set(array(
-                                'tag_group_server_side_render' => $tag_group_server_side_render,
                             ));
                             $view->render();
                             break;
@@ -359,26 +349,25 @@ if (!class_exists('TagGroups_Settings')) {
                         case 'first-aid':
                             if (
                                 !empty($_POST['process-tasks']) &&
-                                !empty($_POST['nonce']) && 
+                                !empty($_POST['nonce']) &&
                                 wp_verify_nonce(sanitize_key(wp_unslash($_POST['nonce'])), 'tag-groups-first-aid-nonce')
                             ) {
                                 self::add_html_process();
                             } else {
                                 $view = new TagGroups_View('admin/settings_troubleshooting_first_aid');
-                                $view->set('tasks_migration', 'migratetermmeta');
                                 $view->set('tasks_maintenance', 'fixgroups,fixmissinggroups,sortgroups');
                                 $view->set('tag_group_show_filter_tags', TagGroups_Options::get_option('tag_group_show_filter_tags', 0));
                                 $view->render();
                             }
 
                             break;
-                
+
                         case 'licences':
                             if (class_exists('TagGroups_Premium_Settings') && method_exists('TagGroups_Premium_Settings', 'settings_page_licence')) {
                                 TagGroups_Premium_Settings::settings_page_licence();
                             }
-                
-                
+
+
                             break;
 
                         case 'rest-api':
@@ -556,7 +545,7 @@ if (!class_exists('TagGroups_Settings')) {
                     if (!current_user_can('manage_options')) {
                         wp_die("Capability check failed");
                     }
-                    
+
                     $group_public_api_access = ( isset($_POST['group_public_api_access']) ? 1 : 0 );
                     TagGroups_Options::update_option('tag_group_enable_group_public_api_access', $group_public_api_access);
 
@@ -687,19 +676,6 @@ if (!class_exists('TagGroups_Settings')) {
                     TagGroups_Options::update_option('tag_group_show_filter', $show_filter_posts);
                     $show_filter_tags = ( isset($_POST['filter_tags']) ? 1 : 0 );
                     TagGroups_Options::update_option('tag_group_show_filter_tags', $show_filter_tags);
-                    TagGroups_Admin_Notice::add('success', __('Your settings have been saved.', 'tag-groups'));
-                    break;
-                case 'gutenberg':
-                    // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Nonce verification
-                    if (!isset($_POST['tag-groups-gutenberg-nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['tag-groups-gutenberg-nonce'])), 'tag-groups-gutenberg')) {
-                        die("Security check");
-                    }
-                    // Make sure that only administrators can save settings
-                    if (!current_user_can('manage_options')) {
-                        wp_die("Capability check failed");
-                    }
-                    $tag_group_server_side_render = ( isset($_POST['tag_group_server_side_render']) ? 1 : 0 );
-                    TagGroups_Options::update_option('tag_group_server_side_render', $tag_group_server_side_render);
                     TagGroups_Admin_Notice::add('success', __('Your settings have been saved.', 'tag-groups'));
                     break;
                 case 'multilingual':
@@ -904,8 +880,6 @@ if (!class_exists('TagGroups_Settings')) {
                 __('filter', 'tag-groups'),
                 __('animated', 'tag-groups'),
                 __('searchable', 'tag-groups'),
-                'Shuffle Box',
-                'Toggle Post Filter',
                 'Dynamic Post Filter',
                 'WooCommerce'
                 ),
@@ -952,13 +926,6 @@ if (!class_exists('TagGroups_Settings')) {
                 ),
             ),
             );
-            if (TagGroups_Gutenberg::is_gutenberg_active()) {
-                $topics['gutenberg'] = array(
-                    'title'    => __('Gutenberg', 'tag-groups'),
-                    'page'     => 'tag-groups-settings-features',
-                    'keywords' => array( __('live block preview', 'tag-groups') ),
-                );
-            }
             if (TagGroups_WPML::is_multilingual()) {
                 $topics['multilingual'] = array(
                     'title'    => __('Multilingual', 'tag-groups'),
@@ -994,7 +961,6 @@ if (!class_exists('TagGroups_Settings')) {
         public static function add_html_process()
         {
             $tasks_whitelist = array(
-                'migratetermmeta'  => __('Migrating the term meta', 'tag-groups'),
                 'fixgroups'        => __('Fixing incorrect tag groups', 'tag-groups'),
                 'fixmissinggroups' => __('Fixing incorrect groups in term meta', 'tag-groups'),
                 'sortgroups'       => __('Sorting groups in term meta', 'tag-groups'),
