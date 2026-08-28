@@ -135,7 +135,8 @@ _e('Tag groups pro only', 'tag-groups');
         ?>",
         data: {
           action: "tg_ajax_benchmark",
-          task: "cache"
+          task: "cache",
+          nonce: <?php echo wp_json_encode(wp_create_nonce('tag_groups_cache_benchmark')); ?>
         },
         method: "post",
         dataType: 'text',
