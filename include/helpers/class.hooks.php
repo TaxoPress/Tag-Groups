@@ -84,6 +84,7 @@ if (!class_exists('TagGroups_Hooks')) {
         public function is_admin()
         {
             add_action('admin_init', array( $this, 'admin_init' ));
+            add_action('wp_ajax_tg_ajax_benchmark', array( 'TagGroups_Settings_Ajax', 'ajax_benchmark' ));
             add_action('admin_menu', array( 'TagGroups_Admin', 'register_menus' ));
             add_action('admin_menu', array( 'TagGroups_Admin', 'remove_submenus' ), 1000000000);
             add_action('admin_enqueue_scripts', array( $this->enqueue, 'admin_enqueue_scripts' ));
@@ -330,7 +331,6 @@ if (!class_exists('TagGroups_Hooks')) {
              * Registers Ajax handlers to manage groups on Tag Group Admin page
              */
             add_action('wp_ajax_tg_ajax_manage_groups', array( 'TagGroups_Group_Admin', 'ajax_manage_groups' ));
-            add_action('wp_ajax_tg_ajax_benchmark', array( 'TagGroups_Settings_Ajax', 'ajax_benchmark' ));
         }
 
         /**
