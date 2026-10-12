@@ -844,6 +844,20 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
         }
 
         /**
+         * Loads data that a tag style needs for all tags at once, before the tags are rendered
+         *
+         * @return void
+         */
+        public function prime_tag_style_caches()
+        {
+            if (empty($this->attributes->tag_style) || 'image-cards' !== $this->attributes->tag_style || empty($this->tags) || !is_array($this->tags)) {
+                return;
+            }
+
+            TagGroups_Term_Image::prime_caches(wp_list_pluck($this->tags, 'term_id'));
+        }
+
+        /**
          * Extra class, inline style and inner HTML for a single tag, required by some tag styles
          *
          * The heat style shows popularity as color intensity: --tg-heat is 0 (least posts) to 100 (most posts).

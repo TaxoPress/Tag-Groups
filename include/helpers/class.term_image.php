@@ -42,6 +42,40 @@ if (!class_exists('TagGroups_Term_Image')) {
         }
 
         /**
+         * Loads the attachments of several tags, with their meta data, in one query
+         *
+         * Call this before rendering many tags, so get_id() and get_html() don't query each attachment separately.
+         *
+         * @param int[] $term_ids
+         * @return void
+         */
+        public static function prime_caches($term_ids)
+        {
+            $attachment_ids = array();
+            foreach ($term_ids as $term_id) {
+                $attachment_id = (int) get_term_meta((int) $term_id, self::META_KEY, true);
+                if ($attachment_id > 0) {
+                    $attachment_ids[ $attachment_id ] = $attachment_id;
+                }
+            }
+
+            if (empty($attachment_ids)) {
+                return;
+            }
+
+            // get_posts() caches the posts and, by default, their meta data
+            get_posts(array(
+                'post__in'               => array_values($attachment_ids),
+                'post_type'              => 'attachment',
+                'post_status'            => 'inherit',
+                'posts_per_page'         => count($attachment_ids),
+                'no_found_rows'          => true,
+                'update_post_term_cache' => false,
+                'suppress_filters'       => true,
+            ));
+        }
+
+        /**
          * Saves or removes the image of a tag
          *
          * @param int $term_id

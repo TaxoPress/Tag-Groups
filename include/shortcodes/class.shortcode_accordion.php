@@ -311,6 +311,7 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
             }
 
             $this->determine_min_max();
+            $this->prime_tag_style_caches();
             $html = '';
             for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
                 if (!isset($this->tag_group_data[$i])) {
