@@ -100,7 +100,12 @@ var TagGroupsSearchPanel = {
         byHref[link.href].count = Math.max(byHref[link.href].count, count);
         continue;
       }
-      var tag = { name: label.textContent.trim(), href: link.href, count: count };
+      var tag = {
+        name: label.textContent.trim(),
+        href: link.href,
+        target: link.getAttribute('target') || '',
+        count: count,
+      };
       byHref[link.href] = tag;
       list.push(tag);
     }
@@ -111,6 +116,13 @@ var TagGroupsSearchPanel = {
     var link = document.createElement('a');
     link.className = 'tag-groups-search-chip';
     link.href = tag.href;
+    // keep the cloud's link_target
+    if (tag.target) {
+      link.target = tag.target;
+      if ('_blank' === tag.target) {
+        link.rel = 'noopener';
+      }
+    }
     var position = query ? tag.name.toLowerCase().indexOf(query) : -1;
     if (position < 0) {
       link.textContent = tag.name;
