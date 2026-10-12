@@ -311,6 +311,7 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
             }
 
             $this->determine_min_max();
+            $this->prime_tag_style_caches();
             $html = '';
             for ($i = $this->start_group; $i <= $tag_group_groups->get_max_position(); $i++) {
                 if (!isset($this->tag_group_data[$i])) {
@@ -413,7 +414,7 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
                     }
                     $tag_link = $this->get_tag_link($tag, $i);
                     $font_size = $this->font_size($post_count, $this->min_max[$this->tag_group_data[$i]['term_group']]['min'], $this->min_max[$this->tag_group_data[$i]['term_group']]['max']);
-                    $tag_style_markup = $this->get_tag_style_markup($post_count, $this->min_max[$this->tag_group_data[$i]['term_group']]['min'], $this->min_max[$this->tag_group_data[$i]['term_group']]['max']);
+                    $tag_style_markup = $this->get_tag_style_markup($post_count, $this->min_max[$this->tag_group_data[$i]['term_group']]['min'], $this->min_max[$this->tag_group_data[$i]['term_group']]['max'], $tag->term_id);
                     $font_size_separator = ( $this->attributes->adjust_separator_size ? $font_size : $this->attributes->separator_size );
                     if ($this->count_amount > 0 && !empty($this->attributes->separator)) {
                         $html_tags .= '<span style="font-size:' . $font_size_separator . 'px">' . $this->attributes->separator . '</span> ';
@@ -481,6 +482,7 @@ if (!class_exists('TagGroups_Shortcode_Accordion')) {
                      * @param string $this->shortcode_id
                      * @return string
                      */
+                    $html_tags .= $tag_style_markup['before'];
                     $html_tags .= apply_filters(
                         'tag_groups_cloud_tag_outer',
                         '<span class="tag-groups-label" style="font-size:' . $font_size . 'px">' . $inner_html . '</span>',
