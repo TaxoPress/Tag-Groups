@@ -202,11 +202,17 @@ if (!class_exists('TagGroups_Icon_Field')) {
     // The "Add New Tag" form is sent with Ajax and reused, so clear the picker after a tag was added
     if (window.jQuery) {
       jQuery(document).ajaxSuccess(function (event, xhr, settings) {
-        if (settings && 'string' === typeof settings.data && settings.data.indexOf('action=add-tag') !== -1) {
-          var picker = document.querySelector('#addtag .tag-groups-icon-picker');
-          if (picker && picker.tagGroupsReset) {
-            picker.tagGroupsReset();
-          }
+        if (!settings || 'string' !== typeof settings.data || settings.data.indexOf('action=add-tag') === -1) {
+          return;
+        }
+        // Errors such as a duplicate name also arrive as a successful response; WordPress keeps the form then
+        var response = xhr && 'string' === typeof xhr.responseText ? xhr.responseText : '';
+        if (response.indexOf('<wp_error') !== -1 || response.indexOf('<term') === -1) {
+          return;
+        }
+        var picker = document.querySelector('#addtag .tag-groups-icon-picker');
+        if (picker && picker.tagGroupsReset) {
+          picker.tagGroupsReset();
         }
       });
     }
