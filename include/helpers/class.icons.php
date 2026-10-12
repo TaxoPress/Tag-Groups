@@ -5,7 +5,7 @@
  * @license     GPL-3.0+
  */
 
-// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Icons')) {
     /**
      * Icons that can be assigned to tags
@@ -19,7 +19,7 @@ if (!class_exists('TagGroups_Icons')) {
         /**
          * Term meta key of the icon
          */
-        const META_KEY = '_tg_icon';
+        public const META_KEY = '_tg_icon';
 
         /**
          * @var array|null key => array( label, viewBox, path )

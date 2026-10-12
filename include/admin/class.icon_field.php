@@ -5,7 +5,7 @@
  * @license     GPL-3.0+
  */
 
-// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps
+// phpcs:disable PSR1.Classes.ClassDeclaration.MissingNamespace, Squiz.Classes.ValidClassName.NotCamelCaps, PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 if (!class_exists('TagGroups_Icon_Field')) {
     /**
      * Icon picker on the "Add New Tag" and "Edit Tag" screens
@@ -15,8 +15,8 @@ if (!class_exists('TagGroups_Icon_Field')) {
         /**
          * Nonce action and field name
          */
-        const NONCE_ACTION = 'tag_groups_save_icon';
-        const NONCE_NAME = 'tag_groups_icon_nonce';
+        public const NONCE_ACTION = 'tag_groups_save_icon';
+        public const NONCE_NAME = 'tag_groups_icon_nonce';
 
         /**
          * @var bool whether the picker CSS and JS were printed

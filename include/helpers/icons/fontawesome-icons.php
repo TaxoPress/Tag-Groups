@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Icons for tags: a curated subset of Font Awesome Free 6.7.1, embedded as SVG.
  *

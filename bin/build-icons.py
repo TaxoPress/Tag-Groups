@@ -59,7 +59,7 @@ for prefix, style, names in (('fas', 'solid', SOLID), ('far', 'regular', REGULAR
 def php(s):
     return "'" + s.replace('\\', '\\\\').replace("'", "\\'") + "'"
 
-lines = ["<?php", "/**",
+lines = ["<?php", "", "/**",
  " * Icons for tags: a curated subset of Font Awesome Free 6.7.1, embedded as SVG.",
  " *",
  " * Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com",
