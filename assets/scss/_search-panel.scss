@@ -7,8 +7,9 @@
 	--tg-search-bg: transparent;
 	display: grid;
 	gap: 0.75em;
-	max-width: 36em;
-	margin: 0 0 1.25em;
+	/* only vertical margins and no width, so the theme's content width and centering still apply */
+	margin-block: 0 1.25em;
+	box-sizing: border-box;
 	padding: 1em;
 	border: 1px solid var(--tg-search-border);
 	border-radius: 10px;
