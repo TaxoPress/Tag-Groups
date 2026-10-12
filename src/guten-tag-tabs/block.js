@@ -11,6 +11,8 @@
 
 import '../editor.css';
 
+import '../../assets/scss/_tag-styles.scss';
+
 import Select from '../components/tag-groups-select';
 
 import TagGroupsServerSideRender from '../components/tag-groups-render';

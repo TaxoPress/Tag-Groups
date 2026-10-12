@@ -864,7 +864,8 @@ if (!class_exists('TagGroups_Shortcode_Common')) {
                 return $markup;
             }
 
-            $heat = ( $max > $min ) ? (int) round(($count - $min) * 100 / ($max - $min)) : 100;
+            // like font_size(): with no range (single tag, equal counts) every tag gets the coldest value
+            $heat = ( $max > $min ) ? (int) round(($count - $min) * 100 / ($max - $min)) : 0;
             $heat = max(0, min(100, $heat));
 
             $markup['style'] = ';--tg-heat:' . $heat;
